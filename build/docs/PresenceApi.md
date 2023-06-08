@@ -7,8 +7,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeletePresenceDefinition0**](PresenceApi.html#deletepresencedefinition0) | **DELETE** /api/v2/presence/definitions/{definitionId} | Delete a Presence Definition |
 | [**DeletePresenceSource**](PresenceApi.html#deletepresencesource) | **DELETE** /api/v2/presence/sources/{sourceId} | Delete a Presence Source |
 | [**DeletePresencedefinition**](PresenceApi.html#deletepresencedefinition) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
+| [**GetPresenceDefinition0**](PresenceApi.html#getpresencedefinition0) | **GET** /api/v2/presence/definitions/{definitionId} | Get a Presence Definition |
+| [**GetPresenceDefinitions0**](PresenceApi.html#getpresencedefinitions0) | **GET** /api/v2/presence/definitions | Get a list of Presence Definitions |
 | [**GetPresenceSettings**](PresenceApi.html#getpresencesettings) | **GET** /api/v2/presence/settings | Get the presence settings |
 | [**GetPresenceSource**](PresenceApi.html#getpresencesource) | **GET** /api/v2/presence/sources/{sourceId} | Get a Presence Source |
 | [**GetPresenceSources**](PresenceApi.html#getpresencesources) | **GET** /api/v2/presence/sources | Get a list of Presence Sources |
@@ -20,14 +23,81 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserPresencesPurecloud**](PresenceApi.html#getuserpresencespurecloud) | **GET** /api/v2/users/{userId}/presences/purecloud | Get a user&#39;s Genesys Cloud presence. |
 | [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
 | [**PatchUserPresencesPurecloud**](PresenceApi.html#patchuserpresencespurecloud) | **PATCH** /api/v2/users/{userId}/presences/purecloud | Patch a Genesys Cloud user&#39;s presence |
+| [**PostPresenceDefinitions0**](PresenceApi.html#postpresencedefinitions0) | **POST** /api/v2/presence/definitions | Create a Presence Definition |
 | [**PostPresenceSources**](PresenceApi.html#postpresencesources) | **POST** /api/v2/presence/sources | Create a Presence Source |
 | [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
+| [**PutPresenceDefinition0**](PresenceApi.html#putpresencedefinition0) | **PUT** /api/v2/presence/definitions/{definitionId} | Update a Presence Definition |
 | [**PutPresenceSettings**](PresenceApi.html#putpresencesettings) | **PUT** /api/v2/presence/settings | Update the presence settings |
 | [**PutPresenceSource**](PresenceApi.html#putpresencesource) | **PUT** /api/v2/presence/sources/{sourceId} | Update a Presence Source |
 | [**PutPresenceUserPrimarysource**](PresenceApi.html#putpresenceuserprimarysource) | **PUT** /api/v2/presence/users/{userId}/primarysource | Update a user&#39;s Primary Presence Source |
 | [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
 | [**PutUsersPresencesBulk**](PresenceApi.html#putuserspresencesbulk) | **PUT** /api/v2/users/presences/bulk | Update bulk user Presences |
 {: class="table table-striped"}
+
+<a name="deletepresencedefinition0"></a>
+
+## void DeletePresenceDefinition0 (string definitionId)
+
+
+
+Delete a Presence Definition
+
+
+
+Requires ANY permissions: 
+
+* presence:presenceDefinition:delete
+* presence:presenceDefinition:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeletePresenceDefinition0Example
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var definitionId = definitionId_example;  // string | Presence Definition ID
+
+            try
+            { 
+                // Delete a Presence Definition
+                apiInstance.DeletePresenceDefinition0(definitionId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.DeletePresenceDefinition0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **definitionId** | **string**| Presence Definition ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletepresencesource"></a>
 
@@ -157,6 +227,138 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getpresencedefinition0"></a>
+
+## [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html) GetPresenceDefinition0 (string definitionId)
+
+
+
+Get a Presence Definition
+
+
+
+Requires ALL permissions: 
+
+* presence:presenceDefinition:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetPresenceDefinition0Example
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var definitionId = definitionId_example;  // string | Presence Definition ID
+
+            try
+            { 
+                // Get a Presence Definition
+                OrganizationPresenceDefinition result = apiInstance.GetPresenceDefinition0(definitionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetPresenceDefinition0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **definitionId** | **string**| Presence Definition ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html)
+
+<a name="getpresencedefinitions0"></a>
+
+## [**OrganizationPresenceDefinitionEntityListing**](OrganizationPresenceDefinitionEntityListing.html) GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null)
+
+
+
+Get a list of Presence Definitions
+
+
+
+Requires ALL permissions: 
+
+* presence:presenceDefinition:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetPresenceDefinitions0Example
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var deactivated = deactivated_example;  // string | Deactivated query can be TRUE or FALSE (optional)  (default to "false")
+            var divisionId = new List<string>(); // List<string> | One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional) 
+
+            try
+            { 
+                // Get a list of Presence Definitions
+                OrganizationPresenceDefinitionEntityListing result = apiInstance.GetPresenceDefinitions0(deactivated, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetPresenceDefinitions0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deactivated** | **string**| Deactivated query can be TRUE or FALSE | [optional] [default to "false"] |
+| **divisionId** | [**List<string>**](string.html)| One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OrganizationPresenceDefinitionEntityListing**](OrganizationPresenceDefinitionEntityListing.html)
 
 <a name="getpresencesettings"></a>
 
@@ -881,6 +1083,71 @@ namespace Example
 
 [**UserPresence**](UserPresence.html)
 
+<a name="postpresencedefinitions0"></a>
+
+## [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html) PostPresenceDefinitions0 (OrganizationPresenceDefinition body)
+
+
+
+Create a Presence Definition
+
+
+
+Requires ALL permissions: 
+
+* presence:presenceDefinition:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostPresenceDefinitions0Example
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var body = new OrganizationPresenceDefinition(); // OrganizationPresenceDefinition | The Presence Definition to create
+
+            try
+            { 
+                // Create a Presence Definition
+                OrganizationPresenceDefinition result = apiInstance.PostPresenceDefinitions0(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.PostPresenceDefinitions0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html)| The Presence Definition to create |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html)
+
 <a name="postpresencesources"></a>
 
 ## [**Source**](Source.html) PostPresenceSources (Source body)
@@ -1010,6 +1277,73 @@ namespace Example
 ### Return type
 
 [**OrganizationPresence**](OrganizationPresence.html)
+
+<a name="putpresencedefinition0"></a>
+
+## [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html) PutPresenceDefinition0 (string definitionId, OrganizationPresenceDefinition body)
+
+
+
+Update a Presence Definition
+
+
+
+Requires ALL permissions: 
+
+* presence:presenceDefinition:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutPresenceDefinition0Example
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var definitionId = definitionId_example;  // string | Presence Definition ID
+            var body = new OrganizationPresenceDefinition(); // OrganizationPresenceDefinition | The updated Presence Definition
+
+            try
+            { 
+                // Update a Presence Definition
+                OrganizationPresenceDefinition result = apiInstance.PutPresenceDefinition0(definitionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.PutPresenceDefinition0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **definitionId** | **string**| Presence Definition ID |  |
+| **body** | [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html)| The updated Presence Definition |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html)
 
 <a name="putpresencesettings"></a>
 

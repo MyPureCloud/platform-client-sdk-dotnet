@@ -19,6 +19,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationswhatsappintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Delete a WhatsApp messaging integration |
 | [**DeleteConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#deleteconversationsmessagingsupportedcontentsupportedcontentid) | **DELETE** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
 | [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
+| [**GetAnalyticsConversationsAggregatesJob**](ConversationsApi.html#getanalyticsconversationsaggregatesjob) | **GET** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Get status for async query for conversation aggregates |
+| [**GetAnalyticsConversationsAggregatesJobResults**](ConversationsApi.html#getanalyticsconversationsaggregatesjobresults) | **GET** /api/v2/analytics/conversations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsConversationsDetails**](ConversationsApi.html#getanalyticsconversationsdetails) | **GET** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
 | [**GetAnalyticsConversationsDetailsJob**](ConversationsApi.html#getanalyticsconversationsdetailsjob) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
 | [**GetAnalyticsConversationsDetailsJobResults**](ConversationsApi.html#getanalyticsconversationsdetailsjobresults) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async details job |
@@ -93,6 +95,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsScreenshareParticipantCommunicationWrapup**](ConversationsApi.html#getconversationsscreenshareparticipantcommunicationwrapup) | **GET** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
 | [**GetConversationsSettings**](ConversationsApi.html#getconversationssettings) | **GET** /api/v2/conversations/settings | Get Settings |
 | [**GetConversationsSocialParticipantCommunicationWrapup**](ConversationsApi.html#getconversationssocialparticipantcommunicationwrapup) | **GET** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsVideoDetails**](ConversationsApi.html#getconversationsvideodetails) | **GET** /api/v2/conversations/videos/{conferenceId}/details | Get video conference details (e.g. the current number of active participants). |
 | [**GetConversationsVideoParticipantCommunicationWrapup**](ConversationsApi.html#getconversationsvideoparticipantcommunicationwrapup) | **GET** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
@@ -132,6 +135,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#patchconversationsmessagingsupportedcontentsupportedcontentid) | **PATCH** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
 | [**PatchConversationsSettings**](ConversationsApi.html#patchconversationssettings) | **PATCH** /api/v2/conversations/settings | Update Settings |
 | [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
+| [**PostAnalyticsConversationsActivityQuery**](ConversationsApi.html#postanalyticsconversationsactivityquery) | **POST** /api/v2/analytics/conversations/activity/query | Query for conversation activity observations |
+| [**PostAnalyticsConversationsAggregatesJobs**](ConversationsApi.html#postanalyticsconversationsaggregatesjobs) | **POST** /api/v2/analytics/conversations/aggregates/jobs | Query for conversation aggregates asynchronously |
 | [**PostAnalyticsConversationsAggregatesQuery**](ConversationsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
 | [**PostAnalyticsConversationsDetailsJobs**](ConversationsApi.html#postanalyticsconversationsdetailsjobs) | **POST** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
@@ -177,6 +182,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessageCommunicationTyping**](ConversationsApi.html#postconversationsmessagecommunicationtyping) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing | Send message typing event |
 | [**PostConversationsMessageMessagesBulk**](ConversationsApi.html#postconversationsmessagemessagesbulk) | **POST** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
 | [**PostConversationsMessageParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsmessageparticipantcommunicationwrapup) | **POST** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsMessageParticipantMonitor**](ConversationsApi.html#postconversationsmessageparticipantmonitor) | **POST** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostConversationsMessageParticipantReplace**](ConversationsApi.html#postconversationsmessageparticipantreplace) | **POST** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsMessages**](ConversationsApi.html#postconversationsmessages) | **POST** /api/v2/conversations/messages | Create an outbound messaging conversation. |
 | [**PostConversationsMessagesAgentless**](ConversationsApi.html#postconversationsmessagesagentless) | **POST** /api/v2/conversations/messages/agentless | Send an agentless outbound message |
@@ -990,6 +996,138 @@ namespace Example
 ### Return type
 
 [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html)
+
+<a name="getanalyticsconversationsaggregatesjob"></a>
+
+## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsConversationsAggregatesJob (string jobId)
+
+
+
+Get status for async query for conversation aggregates
+
+
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsConversationsAggregatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for conversation aggregates
+                AsyncQueryStatus result = apiInstance.GetAnalyticsConversationsAggregatesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetAnalyticsConversationsAggregatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+<a name="getanalyticsconversationsaggregatesjobresults"></a>
+
+## [**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse.html) GetAnalyticsConversationsAggregatesJobResults (string jobId, string cursor = null)
+
+
+
+Fetch a page of results for an async aggregates query
+
+
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsConversationsAggregatesJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Cursor token to retrieve next page (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async aggregates query
+                ConversationAsyncAggregateQueryResponse result = apiInstance.GetAnalyticsConversationsAggregatesJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetAnalyticsConversationsAggregatesJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse.html)
 
 <a name="getanalyticsconversationsdetails"></a>
 
@@ -5903,6 +6041,71 @@ namespace Example
 
 [**AssignedWrapupCode**](AssignedWrapupCode.html)
 
+<a name="getconversationsvideodetails"></a>
+
+## [**VideoConferenceDetails**](VideoConferenceDetails.html) GetConversationsVideoDetails (string conferenceId)
+
+
+
+Get video conference details (e.g. the current number of active participants).
+
+
+
+Requires ANY permissions: 
+
+* video:video:access
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsVideoDetailsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conferenceId = conferenceId_example;  // string | conferenceId
+
+            try
+            { 
+                // Get video conference details (e.g. the current number of active participants).
+                VideoConferenceDetails result = apiInstance.GetConversationsVideoDetails(conferenceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsVideoDetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conferenceId** | **string**| conferenceId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VideoConferenceDetails**](VideoConferenceDetails.html)
+
 <a name="getconversationsvideoparticipantcommunicationwrapup"></a>
 
 ## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
@@ -8552,6 +8755,140 @@ namespace Example
 ### Return type
 
 [**PropertyIndexRequest**](PropertyIndexRequest.html)
+
+<a name="postanalyticsconversationsactivityquery"></a>
+
+## [**ConversationActivityResponse**](ConversationActivityResponse.html) PostAnalyticsConversationsActivityQuery (ConversationActivityQuery body, int? pageSize = null, int? pageNumber = null)
+
+
+
+Query for conversation activity observations
+
+
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsConversationsActivityQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new ConversationActivityQuery(); // ConversationActivityQuery | query
+            var pageSize = 56;  // int? | The desired page size (optional) 
+            var pageNumber = 56;  // int? | The desired page number (optional) 
+
+            try
+            { 
+                // Query for conversation activity observations
+                ConversationActivityResponse result = apiInstance.PostAnalyticsConversationsActivityQuery(body, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostAnalyticsConversationsActivityQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConversationActivityQuery**](ConversationActivityQuery.html)| query |  |
+| **pageSize** | **int?**| The desired page size | [optional]  |
+| **pageNumber** | **int?**| The desired page number | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationActivityResponse**](ConversationActivityResponse.html)
+
+<a name="postanalyticsconversationsaggregatesjobs"></a>
+
+## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsConversationsAggregatesJobs (ConversationAsyncAggregationQuery body)
+
+
+
+Query for conversation aggregates asynchronously
+
+
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsConversationsAggregatesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new ConversationAsyncAggregationQuery(); // ConversationAsyncAggregationQuery | query
+
+            try
+            { 
+                // Query for conversation aggregates asynchronously
+                AsyncQueryResponse result = apiInstance.PostAnalyticsConversationsAggregatesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostAnalyticsConversationsAggregatesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConversationAsyncAggregationQuery**](ConversationAsyncAggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
 
 <a name="postanalyticsconversationsaggregatesquery"></a>
 
@@ -11578,6 +11915,72 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postconversationsmessageparticipantmonitor"></a>
+
+## void PostConversationsMessageParticipantMonitor (string conversationId, string participantId)
+
+
+
+Listen in on the conversation from the point of view of a given participant.
+
+
+
+Requires ANY permissions: 
+
+* conversation:message:monitor
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageParticipantMonitorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            { 
+                // Listen in on the conversation from the point of view of a given participant.
+                apiInstance.PostConversationsMessageParticipantMonitor(conversationId, participantId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageParticipantMonitor: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
 ### Return type

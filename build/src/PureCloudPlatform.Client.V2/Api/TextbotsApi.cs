@@ -29,6 +29,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>BotSearchResponseEntityListing</returns>
         
+        
         BotSearchResponseEntityListing GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
 
         /// <summary>
@@ -44,6 +45,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>ApiResponse of BotSearchResponseEntityListing</returns>
         
+        
         ApiResponse<BotSearchResponseEntityListing> GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
 
         /// <summary>
@@ -56,6 +58,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
         /// <param name="turnRequest"></param>
         /// <returns>TextBotFlowTurnResponse</returns>
+        
         
         TextBotFlowTurnResponse PostTextbotsBotflowsSessionTurns (string sessionId, TextBotFlowTurnRequest turnRequest);
 
@@ -70,6 +73,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="turnRequest"></param>
         /// <returns>ApiResponse of TextBotFlowTurnResponse</returns>
         
+        
         ApiResponse<TextBotFlowTurnResponse> PostTextbotsBotflowsSessionTurnsWithHttpInfo (string sessionId, TextBotFlowTurnRequest turnRequest);
 
         /// <summary>
@@ -81,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
         /// <returns>TextBotFlowLaunchResponse</returns>
+        
         
         TextBotFlowLaunchResponse PostTextbotsBotflowsSessions (TextBotFlowLaunchRequest launchRequest);
 
@@ -94,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="launchRequest"></param>
         /// <returns>ApiResponse of TextBotFlowLaunchResponse</returns>
         
+        
         ApiResponse<TextBotFlowLaunchResponse> PostTextbotsBotflowsSessionsWithHttpInfo (TextBotFlowLaunchRequest launchRequest);
 
         /// <summary>
@@ -106,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="postTextRequest"></param>
         /// <returns>PostTextResponse</returns>
         
+        
         PostTextResponse PostTextbotsBotsExecute (PostTextRequest postTextRequest);
 
         /// <summary>
@@ -117,6 +124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postTextRequest"></param>
         /// <returns>ApiResponse of PostTextResponse</returns>
+        
         
         ApiResponse<PostTextResponse> PostTextbotsBotsExecuteWithHttpInfo (PostTextRequest postTextRequest);
 
@@ -137,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>Task of BotSearchResponseEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<BotSearchResponseEntityListing> GetTextbotsBotsSearchAsync (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
 
         /// <summary>
@@ -152,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotSearchResponseEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null);
 
         /// <summary>
@@ -164,6 +174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
         /// <param name="turnRequest"></param>
         /// <returns>Task of TextBotFlowTurnResponse</returns>
+        
         
         System.Threading.Tasks.Task<TextBotFlowTurnResponse> PostTextbotsBotflowsSessionTurnsAsync (string sessionId, TextBotFlowTurnRequest turnRequest);
 
@@ -178,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="turnRequest"></param>
         /// <returns>Task of ApiResponse (TextBotFlowTurnResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TextBotFlowTurnResponse>> PostTextbotsBotflowsSessionTurnsAsyncWithHttpInfo (string sessionId, TextBotFlowTurnRequest turnRequest);
 
         /// <summary>
@@ -189,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
         /// <returns>Task of TextBotFlowLaunchResponse</returns>
+        
         
         System.Threading.Tasks.Task<TextBotFlowLaunchResponse> PostTextbotsBotflowsSessionsAsync (TextBotFlowLaunchRequest launchRequest);
 
@@ -202,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="launchRequest"></param>
         /// <returns>Task of ApiResponse (TextBotFlowLaunchResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TextBotFlowLaunchResponse>> PostTextbotsBotflowsSessionsAsyncWithHttpInfo (TextBotFlowLaunchRequest launchRequest);
 
         /// <summary>
@@ -214,6 +228,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="postTextRequest"></param>
         /// <returns>Task of PostTextResponse</returns>
         
+        
         System.Threading.Tasks.Task<PostTextResponse> PostTextbotsBotsExecuteAsync (PostTextRequest postTextRequest);
 
         /// <summary>
@@ -225,6 +240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postTextRequest"></param>
         /// <returns>Task of ApiResponse (PostTextResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<PostTextResponse>> PostTextbotsBotsExecuteAsyncWithHttpInfo (PostTextRequest postTextRequest);
 
@@ -330,6 +346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>BotSearchResponseEntityListing</returns>
         
+        
         public BotSearchResponseEntityListing GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
         {
              ApiResponse<BotSearchResponseEntityListing> localVarResponse = GetTextbotsBotsSearchWithHttpInfo(botType, botName, botId, pageSize);
@@ -345,6 +362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botId">Bot IDs (optional)</param>
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>ApiResponse of BotSearchResponseEntityListing</returns>
+        
         
         public ApiResponse< BotSearchResponseEntityListing > GetTextbotsBotsSearchWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
         { 
@@ -432,6 +450,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>Task of BotSearchResponseEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<BotSearchResponseEntityListing> GetTextbotsBotsSearchAsync (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
         {
              ApiResponse<BotSearchResponseEntityListing> localVarResponse = await GetTextbotsBotsSearchAsyncWithHttpInfo(botType, botName, botId, pageSize);
@@ -448,6 +467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botId">Bot IDs (optional)</param>
         /// <param name="pageSize">The maximum results to return (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotSearchResponseEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
         { 
@@ -534,6 +554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="turnRequest"></param>
         /// <returns>TextBotFlowTurnResponse</returns>
         
+        
         public TextBotFlowTurnResponse PostTextbotsBotflowsSessionTurns (string sessionId, TextBotFlowTurnRequest turnRequest)
         {
              ApiResponse<TextBotFlowTurnResponse> localVarResponse = PostTextbotsBotflowsSessionTurnsWithHttpInfo(sessionId, turnRequest);
@@ -547,6 +568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
         /// <param name="turnRequest"></param>
         /// <returns>ApiResponse of TextBotFlowTurnResponse</returns>
+        
         
         public ApiResponse< TextBotFlowTurnResponse > PostTextbotsBotflowsSessionTurnsWithHttpInfo (string sessionId, TextBotFlowTurnRequest turnRequest)
         { 
@@ -641,6 +663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="turnRequest"></param>
         /// <returns>Task of TextBotFlowTurnResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TextBotFlowTurnResponse> PostTextbotsBotflowsSessionTurnsAsync (string sessionId, TextBotFlowTurnRequest turnRequest)
         {
              ApiResponse<TextBotFlowTurnResponse> localVarResponse = await PostTextbotsBotflowsSessionTurnsAsyncWithHttpInfo(sessionId, turnRequest);
@@ -655,6 +678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
         /// <param name="turnRequest"></param>
         /// <returns>Task of ApiResponse (TextBotFlowTurnResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TextBotFlowTurnResponse>> PostTextbotsBotflowsSessionTurnsAsyncWithHttpInfo (string sessionId, TextBotFlowTurnRequest turnRequest)
         { 
@@ -751,6 +775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="launchRequest"></param>
         /// <returns>TextBotFlowLaunchResponse</returns>
         
+        
         public TextBotFlowLaunchResponse PostTextbotsBotflowsSessions (TextBotFlowLaunchRequest launchRequest)
         {
              ApiResponse<TextBotFlowLaunchResponse> localVarResponse = PostTextbotsBotflowsSessionsWithHttpInfo(launchRequest);
@@ -763,6 +788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
         /// <returns>ApiResponse of TextBotFlowLaunchResponse</returns>
+        
         
         public ApiResponse< TextBotFlowLaunchResponse > PostTextbotsBotflowsSessionsWithHttpInfo (TextBotFlowLaunchRequest launchRequest)
         { 
@@ -852,6 +878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="launchRequest"></param>
         /// <returns>Task of TextBotFlowLaunchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TextBotFlowLaunchResponse> PostTextbotsBotflowsSessionsAsync (TextBotFlowLaunchRequest launchRequest)
         {
              ApiResponse<TextBotFlowLaunchResponse> localVarResponse = await PostTextbotsBotflowsSessionsAsyncWithHttpInfo(launchRequest);
@@ -865,6 +892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="launchRequest"></param>
         /// <returns>Task of ApiResponse (TextBotFlowLaunchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TextBotFlowLaunchResponse>> PostTextbotsBotflowsSessionsAsyncWithHttpInfo (TextBotFlowLaunchRequest launchRequest)
         { 
@@ -956,6 +984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="postTextRequest"></param>
         /// <returns>PostTextResponse</returns>
         
+        
         public PostTextResponse PostTextbotsBotsExecute (PostTextRequest postTextRequest)
         {
              ApiResponse<PostTextResponse> localVarResponse = PostTextbotsBotsExecuteWithHttpInfo(postTextRequest);
@@ -968,6 +997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postTextRequest"></param>
         /// <returns>ApiResponse of PostTextResponse</returns>
+        
         
         public ApiResponse< PostTextResponse > PostTextbotsBotsExecuteWithHttpInfo (PostTextRequest postTextRequest)
         { 
@@ -1057,6 +1087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="postTextRequest"></param>
         /// <returns>Task of PostTextResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<PostTextResponse> PostTextbotsBotsExecuteAsync (PostTextRequest postTextRequest)
         {
              ApiResponse<PostTextResponse> localVarResponse = await PostTextbotsBotsExecuteAsyncWithHttpInfo(postTextRequest);
@@ -1070,6 +1101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postTextRequest"></param>
         /// <returns>Task of ApiResponse (PostTextResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PostTextResponse>> PostTextbotsBotsExecuteAsyncWithHttpInfo (PostTextRequest postTextRequest)
         { 

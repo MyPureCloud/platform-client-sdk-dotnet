@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <returns></returns>
         
+        
         void DeleteMobiledevice (string deviceId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteMobiledeviceWithHttpInfo (string deviceId);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <returns>UserDevice</returns>
         
+        
         UserDevice GetMobiledevice (string deviceId);
 
         /// <summary>
@@ -61,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>ApiResponse of UserDevice</returns>
+        
         
         ApiResponse<UserDevice> GetMobiledeviceWithHttpInfo (string deviceId);
 
@@ -76,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>DirectoryUserDevicesListing</returns>
         
+        
         DirectoryUserDevicesListing GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -90,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>ApiResponse of DirectoryUserDevicesListing</returns>
         
+        
         ApiResponse<DirectoryUserDevicesListing> GetMobiledevicesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -102,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Device</param>
         /// <returns>UserDevice</returns>
         
+        
         UserDevice PostMobiledevices (UserDevice body);
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>ApiResponse of UserDevice</returns>
+        
         
         ApiResponse<UserDevice> PostMobiledevicesWithHttpInfo (UserDevice body);
 
@@ -127,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Device (optional)</param>
         /// <returns>UserDevice</returns>
         
+        
         UserDevice PutMobiledevice (string deviceId, UserDevice body = null);
 
         /// <summary>
@@ -139,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>ApiResponse of UserDevice</returns>
+        
         
         ApiResponse<UserDevice> PutMobiledeviceWithHttpInfo (string deviceId, UserDevice body = null);
 
@@ -156,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteMobiledeviceAsync (string deviceId);
 
         /// <summary>
@@ -167,6 +178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMobiledeviceAsyncWithHttpInfo (string deviceId);
 
@@ -180,6 +192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of UserDevice</returns>
         
+        
         System.Threading.Tasks.Task<UserDevice> GetMobiledeviceAsync (string deviceId);
 
         /// <summary>
@@ -191,6 +204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserDevice>> GetMobiledeviceAsyncWithHttpInfo (string deviceId);
 
@@ -206,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>Task of DirectoryUserDevicesListing</returns>
         
+        
         System.Threading.Tasks.Task<DirectoryUserDevicesListing> GetMobiledevicesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -220,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DirectoryUserDevicesListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DirectoryUserDevicesListing>> GetMobiledevicesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -232,6 +248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Device</param>
         /// <returns>Task of UserDevice</returns>
         
+        
         System.Threading.Tasks.Task<UserDevice> PostMobiledevicesAsync (UserDevice body);
 
         /// <summary>
@@ -243,6 +260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserDevice>> PostMobiledevicesAsyncWithHttpInfo (UserDevice body);
 
@@ -257,6 +275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Device (optional)</param>
         /// <returns>Task of UserDevice</returns>
         
+        
         System.Threading.Tasks.Task<UserDevice> PutMobiledeviceAsync (string deviceId, UserDevice body = null);
 
         /// <summary>
@@ -269,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserDevice>> PutMobiledeviceAsyncWithHttpInfo (string deviceId, UserDevice body = null);
 
@@ -371,6 +391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <returns></returns>
         
+        
         public void DeleteMobiledevice (string deviceId)
         {
              DeleteMobiledeviceWithHttpInfo(deviceId);
@@ -382,6 +403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteMobiledeviceWithHttpInfo (string deviceId)
         { 
@@ -466,6 +488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteMobiledeviceAsync (string deviceId)
         {
              await DeleteMobiledeviceAsyncWithHttpInfo(deviceId);
@@ -478,6 +501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMobiledeviceAsyncWithHttpInfo (string deviceId)
         { 
@@ -564,6 +588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <returns>UserDevice</returns>
         
+        
         public UserDevice GetMobiledevice (string deviceId)
         {
              ApiResponse<UserDevice> localVarResponse = GetMobiledeviceWithHttpInfo(deviceId);
@@ -576,6 +601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>ApiResponse of UserDevice</returns>
+        
         
         public ApiResponse< UserDevice > GetMobiledeviceWithHttpInfo (string deviceId)
         { 
@@ -660,6 +686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of UserDevice</returns>
         
+        
         public async System.Threading.Tasks.Task<UserDevice> GetMobiledeviceAsync (string deviceId)
         {
              ApiResponse<UserDevice> localVarResponse = await GetMobiledeviceAsyncWithHttpInfo(deviceId);
@@ -673,6 +700,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserDevice>> GetMobiledeviceAsyncWithHttpInfo (string deviceId)
         { 
@@ -761,6 +789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>DirectoryUserDevicesListing</returns>
         
+        
         public DirectoryUserDevicesListing GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<DirectoryUserDevicesListing> localVarResponse = GetMobiledevicesWithHttpInfo(pageSize, pageNumber, sortOrder);
@@ -775,6 +804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>ApiResponse of DirectoryUserDevicesListing</returns>
+        
         
         public ApiResponse< DirectoryUserDevicesListing > GetMobiledevicesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -860,6 +890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>Task of DirectoryUserDevicesListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DirectoryUserDevicesListing> GetMobiledevicesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<DirectoryUserDevicesListing> localVarResponse = await GetMobiledevicesAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
@@ -875,6 +906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DirectoryUserDevicesListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DirectoryUserDevicesListing>> GetMobiledevicesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -959,6 +991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Device</param>
         /// <returns>UserDevice</returns>
         
+        
         public UserDevice PostMobiledevices (UserDevice body)
         {
              ApiResponse<UserDevice> localVarResponse = PostMobiledevicesWithHttpInfo(body);
@@ -971,6 +1004,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>ApiResponse of UserDevice</returns>
+        
         
         public ApiResponse< UserDevice > PostMobiledevicesWithHttpInfo (UserDevice body)
         { 
@@ -1060,6 +1094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Device</param>
         /// <returns>Task of UserDevice</returns>
         
+        
         public async System.Threading.Tasks.Task<UserDevice> PostMobiledevicesAsync (UserDevice body)
         {
              ApiResponse<UserDevice> localVarResponse = await PostMobiledevicesAsyncWithHttpInfo(body);
@@ -1073,6 +1108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserDevice>> PostMobiledevicesAsyncWithHttpInfo (UserDevice body)
         { 
@@ -1165,6 +1201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Device (optional)</param>
         /// <returns>UserDevice</returns>
         
+        
         public UserDevice PutMobiledevice (string deviceId, UserDevice body = null)
         {
              ApiResponse<UserDevice> localVarResponse = PutMobiledeviceWithHttpInfo(deviceId, body);
@@ -1178,6 +1215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>ApiResponse of UserDevice</returns>
+        
         
         public ApiResponse< UserDevice > PutMobiledeviceWithHttpInfo (string deviceId, UserDevice body = null)
         { 
@@ -1269,6 +1307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Device (optional)</param>
         /// <returns>Task of UserDevice</returns>
         
+        
         public async System.Threading.Tasks.Task<UserDevice> PutMobiledeviceAsync (string deviceId, UserDevice body = null)
         {
              ApiResponse<UserDevice> localVarResponse = await PutMobiledeviceAsyncWithHttpInfo(deviceId, body);
@@ -1283,6 +1322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserDevice>> PutMobiledeviceAsyncWithHttpInfo (string deviceId, UserDevice body = null)
         { 

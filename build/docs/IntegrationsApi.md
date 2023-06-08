@@ -38,6 +38,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsSpeechLexBotAlias**](IntegrationsApi.html#getintegrationsspeechlexbotalias) | **GET** /api/v2/integrations/speech/lex/bot/alias/{aliasId} | Get details about a Lex bot alias |
 | [**GetIntegrationsSpeechLexBotBotIdAliases**](IntegrationsApi.html#getintegrationsspeechlexbotbotidaliases) | **GET** /api/v2/integrations/speech/lex/bot/{botId}/aliases | Get a list of aliases for a bot in the customer&#39;s AWS accounts |
 | [**GetIntegrationsSpeechLexBots**](IntegrationsApi.html#getintegrationsspeechlexbots) | **GET** /api/v2/integrations/speech/lex/bots | Get a list of Lex bots in the customers&#39; AWS accounts |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBot**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbot) | **GET** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId} | Get a Nuance bot in the specified Integration |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotjob) | **GET** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId} | Get the status of an asynchronous Nuance bot GET job |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotjobresults) | **GET** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results | Get the result of an asynchronous Nuance bot GET job |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBots**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbots) | **GET** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots | Get a list of Nuance bots available in the specified Integration |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotsjob) | **GET** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId} | Get the status of an asynchronous Nuance bots GET job |
+| [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotsjobresults) | **GET** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results | Get the result of an asynchronous Nuance bots GET job |
 | [**GetIntegrationsSpeechTtsEngine**](IntegrationsApi.html#getintegrationsspeechttsengine) | **GET** /api/v2/integrations/speech/tts/engines/{engineId} | Get details about a TTS engine |
 | [**GetIntegrationsSpeechTtsEngineVoice**](IntegrationsApi.html#getintegrationsspeechttsenginevoice) | **GET** /api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId} | Get details about a specific voice for a TTS engine |
 | [**GetIntegrationsSpeechTtsEngineVoices**](IntegrationsApi.html#getintegrationsspeechttsenginevoices) | **GET** /api/v2/integrations/speech/tts/engines/{engineId}/voices | Get a list of voices for a TTS engine |
@@ -59,9 +65,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostIntegrationsActions**](IntegrationsApi.html#postintegrationsactions) | **POST** /api/v2/integrations/actions | Create a new Action |
 | [**PostIntegrationsActionsDrafts**](IntegrationsApi.html#postintegrationsactionsdrafts) | **POST** /api/v2/integrations/actions/drafts | Create a new Draft |
 | [**PostIntegrationsCredentials**](IntegrationsApi.html#postintegrationscredentials) | **POST** /api/v2/integrations/credentials | Create a set of credentials |
+| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs**](IntegrationsApi.html#postintegrationsspeechnuancenuanceintegrationidbotjobs) | **POST** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs | Get a Nuance bot in the specified Integration asynchronously |
+| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](IntegrationsApi.html#postintegrationsspeechnuancenuanceintegrationidbotsjobs) | **POST** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs | Get a list of Nuance bots in the specified Integration asynchronously |
+| [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**](IntegrationsApi.html#postintegrationsspeechnuancenuanceintegrationidbotslaunchvalidate) | **POST** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate | Try out a single credential for a Nuance bot to know if the secret is correct |
 | [**PutIntegrationConfigCurrent**](IntegrationsApi.html#putintegrationconfigcurrent) | **PUT** /api/v2/integrations/{integrationId}/config/current | Update integration configuration. |
 | [**PutIntegrationsBotconnectorIntegrationIdBots**](IntegrationsApi.html#putintegrationsbotconnectorintegrationidbots) | **PUT** /api/v2/integrations/botconnector/{integrationId}/bots | Set a list of botConnector bots plus versions for this integration |
 | [**PutIntegrationsCredential**](IntegrationsApi.html#putintegrationscredential) | **PUT** /api/v2/integrations/credentials/{credentialId} | Update a set of credentials |
+| [**PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**](IntegrationsApi.html#putintegrationsspeechnuancenuanceintegrationidbotslaunchsettings) | **PUT** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings | Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration |
 | [**PutIntegrationsSpeechTtsSettings**](IntegrationsApi.html#putintegrationsspeechttssettings) | **PUT** /api/v2/integrations/speech/tts/settings | Update TTS settings for an org |
 {: class="table table-striped"}
 
@@ -2220,6 +2230,422 @@ namespace Example
 
 [**LexBotEntityListing**](LexBotEntityListing.html)
 
+<a name="getintegrationsspeechnuancenuanceintegrationidbot"></a>
+
+## [**NuanceBot**](NuanceBot.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBot (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
+
+
+
+Get a Nuance bot in the specified Integration
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechNuanceNuanceIntegrationIdBotExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var botId = botId_example;  // string | The Nuance bot ID to get
+            var expand = new List<string>(); // List<string> | expand (optional) 
+            var targetChannel = targetChannel_example;  // string | targetChannel (optional) 
+
+            try
+            { 
+                // Get a Nuance bot in the specified Integration
+                NuanceBot result = apiInstance.GetIntegrationsSpeechNuanceNuanceIntegrationIdBot(nuanceIntegrationId, botId, expand, targetChannel);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechNuanceNuanceIntegrationIdBot: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **botId** | **string**| The Nuance bot ID to get |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional] <br />**Values**: variables, transferNodes, channels, locales |
+| **targetChannel** | **string**| targetChannel | [optional] <br />**Values**: digital, voice |
+{: class="table table-striped"}
+
+### Return type
+
+[**NuanceBot**](NuanceBot.html)
+
+<a name="getintegrationsspeechnuancenuanceintegrationidbotjob"></a>
+
+## [**AsyncJob**](AsyncJob.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob (string nuanceIntegrationId, string botId, string jobId)
+
+
+
+Get the status of an asynchronous Nuance bot GET job
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var botId = botId_example;  // string | The Nuance bot ID
+            var jobId = jobId_example;  // string | The asynchronous job ID
+
+            try
+            { 
+                // Get the status of an asynchronous Nuance bot GET job
+                AsyncJob result = apiInstance.GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob(nuanceIntegrationId, botId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **botId** | **string**| The Nuance bot ID |  |
+| **jobId** | **string**| The asynchronous job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncJob**](AsyncJob.html)
+
+<a name="getintegrationsspeechnuancenuanceintegrationidbotjobresults"></a>
+
+## [**NuanceBot**](NuanceBot.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults (string nuanceIntegrationId, string botId, string jobId)
+
+
+
+Get the result of an asynchronous Nuance bot GET job
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var botId = botId_example;  // string | The Nuance bot ID
+            var jobId = jobId_example;  // string | The asynchronous job ID
+
+            try
+            { 
+                // Get the result of an asynchronous Nuance bot GET job
+                NuanceBot result = apiInstance.GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults(nuanceIntegrationId, botId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **botId** | **string**| The Nuance bot ID |  |
+| **jobId** | **string**| The asynchronous job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**NuanceBot**](NuanceBot.html)
+
+<a name="getintegrationsspeechnuancenuanceintegrationidbots"></a>
+
+## [**NuanceBotEntityListing**](NuanceBotEntityListing.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBots (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
+
+
+
+Get a list of Nuance bots available in the specified Integration
+
+If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var onlyRegisteredBots = true;  // bool? | Limit bots to the ones configured for Genesys Cloud usage (optional)  (default to true)
+
+            try
+            { 
+                // Get a list of Nuance bots available in the specified Integration
+                NuanceBotEntityListing result = apiInstance.GetIntegrationsSpeechNuanceNuanceIntegrationIdBots(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechNuanceNuanceIntegrationIdBots: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **onlyRegisteredBots** | **bool?**| Limit bots to the ones configured for Genesys Cloud usage | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+[**NuanceBotEntityListing**](NuanceBotEntityListing.html)
+
+<a name="getintegrationsspeechnuancenuanceintegrationidbotsjob"></a>
+
+## [**AsyncJob**](AsyncJob.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob (string nuanceIntegrationId, string jobId)
+
+
+
+Get the status of an asynchronous Nuance bots GET job
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var jobId = jobId_example;  // string | The asynchronous job ID
+
+            try
+            { 
+                // Get the status of an asynchronous Nuance bots GET job
+                AsyncJob result = apiInstance.GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob(nuanceIntegrationId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **jobId** | **string**| The asynchronous job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncJob**](AsyncJob.html)
+
+<a name="getintegrationsspeechnuancenuanceintegrationidbotsjobresults"></a>
+
+## [**NuanceBotEntityListing**](NuanceBotEntityListing.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults (string nuanceIntegrationId, string jobId)
+
+
+
+Get the result of an asynchronous Nuance bots GET job
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var jobId = jobId_example;  // string | The asynchronous job ID
+
+            try
+            { 
+                // Get the result of an asynchronous Nuance bots GET job
+                NuanceBotEntityListing result = apiInstance.GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults(nuanceIntegrationId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **jobId** | **string**| The asynchronous job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**NuanceBotEntityListing**](NuanceBotEntityListing.html)
+
 <a name="getintegrationsspeechttsengine"></a>
 
 ## [**TtsEngineEntity**](TtsEngineEntity.html) GetIntegrationsSpeechTtsEngine (string engineId, bool? includeVoices = null)
@@ -3646,6 +4072,214 @@ namespace Example
 
 [**CredentialInfo**](CredentialInfo.html)
 
+<a name="postintegrationsspeechnuancenuanceintegrationidbotjobs"></a>
+
+## [**AsyncJob**](AsyncJob.html) PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null)
+
+
+
+Get a Nuance bot in the specified Integration asynchronously
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var botId = botId_example;  // string | The Nuance bot ID
+            var expand = new List<string>(); // List<string> | expand (optional) 
+            var body = body_example;  // string | targetChannel (optional) 
+
+            try
+            { 
+                // Get a Nuance bot in the specified Integration asynchronously
+                AsyncJob result = apiInstance.PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs(nuanceIntegrationId, botId, expand, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **botId** | **string**| The Nuance bot ID |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional] <br />**Values**: variables, transferNodes, channels, locales |
+| **body** | **string**| targetChannel | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncJob**](AsyncJob.html)
+
+<a name="postintegrationsspeechnuancenuanceintegrationidbotsjobs"></a>
+
+## [**AsyncJob**](AsyncJob.html) PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
+
+
+
+Get a list of Nuance bots in the specified Integration asynchronously
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var onlyRegisteredBots = true;  // bool? | Limit bots to the ones configured for Genesys Cloud usage (optional)  (default to true)
+
+            try
+            { 
+                // Get a list of Nuance bots in the specified Integration asynchronously
+                AsyncJob result = apiInstance.PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **onlyRegisteredBots** | **bool?**| Limit bots to the ones configured for Genesys Cloud usage | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncJob**](AsyncJob.html)
+
+<a name="postintegrationsspeechnuancenuanceintegrationidbotslaunchvalidate"></a>
+
+## void PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate (string nuanceIntegrationId, BotExecutionConfiguration settings)
+
+
+
+Try out a single credential for a Nuance bot to know if the secret is correct
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var settings = new BotExecutionConfiguration(); // BotExecutionConfiguration | 
+
+            try
+            { 
+                // Try out a single credential for a Nuance bot to know if the secret is correct
+                apiInstance.PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate(nuanceIntegrationId, settings);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **settings** | [**BotExecutionConfiguration**](BotExecutionConfiguration.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="putintegrationconfigcurrent"></a>
 
 ## [**IntegrationConfiguration**](IntegrationConfiguration.html) PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null)
@@ -3844,6 +4478,72 @@ namespace Example
 ### Return type
 
 [**CredentialInfo**](CredentialInfo.html)
+
+<a name="putintegrationsspeechnuancenuanceintegrationidbotslaunchsettings"></a>
+
+## void PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings (string nuanceIntegrationId, NuanceBotLaunchSettings settings)
+
+
+
+Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
+
+
+
+Requires ANY permissions: 
+
+* integrations:integration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var nuanceIntegrationId = nuanceIntegrationId_example;  // string | The integration ID for this group of bots
+            var settings = new NuanceBotLaunchSettings(); // NuanceBotLaunchSettings | 
+
+            try
+            { 
+                // Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
+                apiInstance.PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings(nuanceIntegrationId, settings);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
+| **settings** | [**NuanceBotLaunchSettings**](NuanceBotLaunchSettings.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="putintegrationsspeechttssettings"></a>
 

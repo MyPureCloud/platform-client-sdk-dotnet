@@ -24,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **DELETE** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
 | [**DeleteRoutingUserUtilization**](RoutingApi.html#deleteroutinguserutilization) | **DELETE** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**DeleteRoutingUtilization**](RoutingApi.html#deleteroutingutilization) | **DELETE** /api/v2/routing/utilization | Delete the organization-wide max utilization settings and revert to the system default. |
+| [**DeleteRoutingUtilizationTag**](RoutingApi.html#deleteroutingutilizationtag) | **DELETE** /api/v2/routing/utilization/tags/{tagId} | Delete an utilization tag |
 | [**DeleteRoutingWrapupcode**](RoutingApi.html#deleteroutingwrapupcode) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
 | [**DeleteUserRoutinglanguage**](RoutingApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
 | [**DeleteUserRoutingskill**](RoutingApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
@@ -78,6 +79,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingSmsPhonenumbers**](RoutingApi.html#getroutingsmsphonenumbers) | **GET** /api/v2/routing/sms/phonenumbers | Get a list of provisioned phone numbers. |
 | [**GetRoutingUserUtilization**](RoutingApi.html#getroutinguserutilization) | **GET** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**GetRoutingUtilization**](RoutingApi.html#getroutingutilization) | **GET** /api/v2/routing/utilization | Get the organization-wide max utilization settings. |
+| [**GetRoutingUtilizationTag**](RoutingApi.html#getroutingutilizationtag) | **GET** /api/v2/routing/utilization/tags/{tagId} | Get details about this utilization tag |
+| [**GetRoutingUtilizationTagAgents**](RoutingApi.html#getroutingutilizationtagagents) | **GET** /api/v2/routing/utilization/tags/{tagId}/agents | Get list of agent ids associated with a utilization tag |
+| [**GetRoutingUtilizationTags**](RoutingApi.html#getroutingutilizationtags) | **GET** /api/v2/routing/utilization/tags | Get list of utilization tags |
 | [**GetRoutingWrapupcode**](RoutingApi.html#getroutingwrapupcode) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
 | [**GetRoutingWrapupcodes**](RoutingApi.html#getroutingwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
 | [**GetUserQueues**](RoutingApi.html#getuserqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
@@ -100,6 +104,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserRoutinglanguagesBulk**](RoutingApi.html#patchuserroutinglanguagesbulk) | **PATCH** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
 | [**PatchUserRoutingskillsBulk**](RoutingApi.html#patchuserroutingskillsbulk) | **PATCH** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
 | [**PostAnalyticsQueuesObservationsQuery**](RoutingApi.html#postanalyticsqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostAnalyticsRoutingActivityQuery**](RoutingApi.html#postanalyticsroutingactivityquery) | **POST** /api/v2/analytics/routing/activity/query | Query for user activity observations |
 | [**PostRoutingAssessments**](RoutingApi.html#postroutingassessments) | **POST** /api/v2/routing/assessments | Create a benefit assessment. |
 | [**PostRoutingAssessmentsJobs**](RoutingApi.html#postroutingassessmentsjobs) | **POST** /api/v2/routing/assessments/jobs | Create a benefit assessment job. |
 | [**PostRoutingEmailDomainRoutes**](RoutingApi.html#postroutingemaildomainroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
@@ -118,6 +123,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingSkills**](RoutingApi.html#postroutingskills) | **POST** /api/v2/routing/skills | Create Skill |
 | [**PostRoutingSmsAddresses**](RoutingApi.html#postroutingsmsaddresses) | **POST** /api/v2/routing/sms/addresses | Provision an Address for SMS |
 | [**PostRoutingSmsPhonenumbers**](RoutingApi.html#postroutingsmsphonenumbers) | **POST** /api/v2/routing/sms/phonenumbers | Provision a phone number for SMS |
+| [**PostRoutingSmsPhonenumbersImport**](RoutingApi.html#postroutingsmsphonenumbersimport) | **POST** /api/v2/routing/sms/phonenumbers/import | Imports a phone number for SMS |
+| [**PostRoutingUtilizationTags**](RoutingApi.html#postroutingutilizationtags) | **POST** /api/v2/routing/utilization/tags | Create an utilization tag |
 | [**PostRoutingWrapupcodes**](RoutingApi.html#postroutingwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
 | [**PostUserRoutinglanguages**](RoutingApi.html#postuserroutinglanguages) | **POST** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
 | [**PostUserRoutingskills**](RoutingApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
@@ -1221,6 +1228,72 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingutilizationtag"></a>
+
+## void DeleteRoutingUtilizationTag (string tagId, bool? forceDelete = null)
+
+
+
+Delete an utilization tag
+
+
+
+Requires ALL permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingUtilizationTagExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var tagId = tagId_example;  // string | Utilization Tag ID
+            var forceDelete = true;  // bool? | Remove all tag usages (if found) without warning (optional)  (default to false)
+
+            try
+            { 
+                // Delete an utilization tag
+                apiInstance.DeleteRoutingUtilizationTag(tagId, forceDelete);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingUtilizationTag: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tagId** | **string**| Utilization Tag ID |  |
+| **forceDelete** | **bool?**| Remove all tag usages (if found) without warning | [optional] [default to false] |
+{: class="table table-striped"}
 
 ### Return type
 
@@ -4906,6 +4979,207 @@ This endpoint does require any parameters.
 
 [**Utilization**](Utilization.html)
 
+<a name="getroutingutilizationtag"></a>
+
+## [**UtilizationTag**](UtilizationTag.html) GetRoutingUtilizationTag (string tagId)
+
+
+
+Get details about this utilization tag
+
+
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUtilizationTagExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var tagId = tagId_example;  // string | Utilization Tag ID
+
+            try
+            { 
+                // Get details about this utilization tag
+                UtilizationTag result = apiInstance.GetRoutingUtilizationTag(tagId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingUtilizationTag: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tagId** | **string**| Utilization Tag ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UtilizationTag**](UtilizationTag.html)
+
+<a name="getroutingutilizationtagagents"></a>
+
+## **List&lt;Object&gt;** GetRoutingUtilizationTagAgents (string tagId)
+
+
+
+Get list of agent ids associated with a utilization tag
+
+
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUtilizationTagAgentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var tagId = tagId_example;  // string | Utilization Tag ID
+
+            try
+            { 
+                // Get list of agent ids associated with a utilization tag
+                List<Object> result = apiInstance.GetRoutingUtilizationTagAgents(tagId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingUtilizationTagAgents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tagId** | **string**| Utilization Tag ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**List<Object>**
+
+<a name="getroutingutilizationtags"></a>
+
+## [**UtilizationTagEntityListing**](UtilizationTagEntityListing.html) GetRoutingUtilizationTags (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+
+
+
+Get list of utilization tags
+
+
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUtilizationTagsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Sort order by name (optional)  (default to ascending)
+            var name = name_example;  // string | Utilization tag's name (Wildcard is supported, e.g., 'tag1*') (optional) 
+
+            try
+            { 
+                // Get list of utilization tags
+                UtilizationTagEntityListing result = apiInstance.GetRoutingUtilizationTags(pageSize, pageNumber, sortOrder, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingUtilizationTags: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Sort order by name | [optional] [default to ascending]<br />**Values**: ascending, descending |
+| **name** | **string**| Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UtilizationTagEntityListing**](UtilizationTagEntityListing.html)
+
 <a name="getroutingwrapupcode"></a>
 
 ## [**WrapupCode**](WrapupCode.html) GetRoutingWrapupcode (string codeId)
@@ -6420,6 +6694,75 @@ namespace Example
 
 [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
+<a name="postanalyticsroutingactivityquery"></a>
+
+## [**RoutingActivityResponse**](RoutingActivityResponse.html) PostAnalyticsRoutingActivityQuery (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null)
+
+
+
+Query for user activity observations
+
+
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsRoutingActivityQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new RoutingActivityQuery(); // RoutingActivityQuery | query
+            var pageSize = 56;  // int? | The desired page size (optional) 
+            var pageNumber = 56;  // int? | The desired page number (optional) 
+
+            try
+            { 
+                // Query for user activity observations
+                RoutingActivityResponse result = apiInstance.PostAnalyticsRoutingActivityQuery(body, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostAnalyticsRoutingActivityQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RoutingActivityQuery**](RoutingActivityQuery.html)| query |  |
+| **pageSize** | **int?**| The desired page size | [optional]  |
+| **pageNumber** | **int?**| The desired page number | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingActivityResponse**](RoutingActivityResponse.html)
+
 <a name="postroutingassessments"></a>
 
 ## [**BenefitAssessment**](BenefitAssessment.html) PostRoutingAssessments (CreateBenefitAssessmentRequest body = null)
@@ -7608,6 +7951,136 @@ namespace Example
 ### Return type
 
 [**SmsPhoneNumber**](SmsPhoneNumber.html)
+
+<a name="postroutingsmsphonenumbersimport"></a>
+
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) PostRoutingSmsPhonenumbersImport (SmsPhoneNumberImport body)
+
+
+
+Imports a phone number for SMS
+
+
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:byoImport
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingSmsPhonenumbersImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new SmsPhoneNumberImport(); // SmsPhoneNumberImport | SmsPhoneNumber
+
+            try
+            { 
+                // Imports a phone number for SMS
+                SmsPhoneNumber result = apiInstance.PostRoutingSmsPhonenumbersImport(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingSmsPhonenumbersImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SmsPhoneNumberImport**](SmsPhoneNumberImport.html)| SmsPhoneNumber |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SmsPhoneNumber**](SmsPhoneNumber.html)
+
+<a name="postroutingutilizationtags"></a>
+
+## [**UtilizationTag**](UtilizationTag.html) PostRoutingUtilizationTags (CreateUtilizationTagRequest body)
+
+
+
+Create an utilization tag
+
+
+
+Requires ALL permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingUtilizationTagsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new CreateUtilizationTagRequest(); // CreateUtilizationTagRequest | UtilizationTag
+
+            try
+            { 
+                // Create an utilization tag
+                UtilizationTag result = apiInstance.PostRoutingUtilizationTags(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingUtilizationTags: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateUtilizationTagRequest**](CreateUtilizationTagRequest.html)| UtilizationTag |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UtilizationTag**](UtilizationTag.html)
 
 <a name="postroutingwrapupcodes"></a>
 

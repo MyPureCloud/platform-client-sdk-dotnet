@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns></returns>
         
+        
         void DeleteOauthClient (string clientId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteOauthClientWithHttpInfo (string clientId);
 
@@ -51,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthAuthorization</returns>
         
+        
         OAuthAuthorization GetOauthAuthorization (string clientId, string acceptLanguage = null);
 
         /// <summary>
@@ -64,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthAuthorization</returns>
         
+        
         ApiResponse<OAuthAuthorization> GetOauthAuthorizationWithHttpInfo (string clientId, string acceptLanguage = null);
 
         /// <summary>
@@ -75,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthAuthorizationListing</returns>
+        
         
         OAuthAuthorizationListing GetOauthAuthorizations (string acceptLanguage = null);
 
@@ -88,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthAuthorizationListing</returns>
         
+        
         ApiResponse<OAuthAuthorizationListing> GetOauthAuthorizationsWithHttpInfo (string acceptLanguage = null);
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>OAuthClient</returns>
         
+        
         OAuthClient GetOauthClient (string clientId);
 
         /// <summary>
@@ -111,6 +118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of OAuthClient</returns>
+        
         
         ApiResponse<OAuthClient> GetOauthClientWithHttpInfo (string clientId);
 
@@ -125,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiUsageQueryResult</returns>
         
+        
         ApiUsageQueryResult GetOauthClientUsageQueryResult (string executionId, string clientId);
 
         /// <summary>
@@ -137,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
         
         ApiResponse<ApiUsageQueryResult> GetOauthClientUsageQueryResultWithHttpInfo (string executionId, string clientId);
 
@@ -151,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         UsageExecutionResult GetOauthClientUsageSummary (string clientId, string days = null);
 
         /// <summary>
@@ -164,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
+        
         ApiResponse<UsageExecutionResult> GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null);
 
         /// <summary>
@@ -175,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OAuthClientEntityListing</returns>
         
+        
         OAuthClientEntityListing GetOauthClients ();
 
         /// <summary>
@@ -185,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OAuthClientEntityListing</returns>
+        
         
         ApiResponse<OAuthClientEntityListing> GetOauthClientsWithHttpInfo ();
 
@@ -199,6 +213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>OAuthScope</returns>
         
+        
         OAuthScope GetOauthScope (string scopeId, string acceptLanguage = null);
 
         /// <summary>
@@ -212,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthScope</returns>
         
+        
         ApiResponse<OAuthScope> GetOauthScopeWithHttpInfo (string scopeId, string acceptLanguage = null);
 
         /// <summary>
@@ -223,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthScopeListing</returns>
+        
         
         OAuthScopeListing GetOauthScopes (string acceptLanguage = null);
 
@@ -236,6 +253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthScopeListing</returns>
         
+        
         ApiResponse<OAuthScopeListing> GetOauthScopesWithHttpInfo (string acceptLanguage = null);
 
         /// <summary>
@@ -248,6 +266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>OAuthClient</returns>
         
+        
         OAuthClient PostOauthClientSecret (string clientId);
 
         /// <summary>
@@ -259,6 +278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of OAuthClient</returns>
+        
         
         ApiResponse<OAuthClient> PostOauthClientSecretWithHttpInfo (string clientId);
 
@@ -273,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -286,6 +307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
+        
         ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -298,6 +320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
         
+        
         OAuthClient PostOauthClients (OAuthClientRequest body);
 
         /// <summary>
@@ -309,6 +332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
+        
         
         ApiResponse<OAuthClient> PostOauthClientsWithHttpInfo (OAuthClientRequest body);
 
@@ -323,6 +347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
         
+        
         OAuthClient PutOauthClient (string clientId, OAuthClientRequest body);
 
         /// <summary>
@@ -335,6 +360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
+        
         
         ApiResponse<OAuthClient> PutOauthClientWithHttpInfo (string clientId, OAuthClientRequest body);
 
@@ -352,6 +378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteOauthClientAsync (string clientId);
 
         /// <summary>
@@ -363,6 +390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOauthClientAsyncWithHttpInfo (string clientId);
 
@@ -377,6 +405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthAuthorization</returns>
         
+        
         System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId, string acceptLanguage = null);
 
         /// <summary>
@@ -390,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthAuthorization)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId, string acceptLanguage = null);
 
         /// <summary>
@@ -401,6 +431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthAuthorizationListing</returns>
+        
         
         System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync (string acceptLanguage = null);
 
@@ -414,6 +445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthAuthorizationListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo (string acceptLanguage = null);
 
         /// <summary>
@@ -426,6 +458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of OAuthClient</returns>
         
+        
         System.Threading.Tasks.Task<OAuthClient> GetOauthClientAsync (string clientId);
 
         /// <summary>
@@ -437,6 +470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetOauthClientAsyncWithHttpInfo (string clientId);
 
@@ -451,6 +485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
+        
         System.Threading.Tasks.Task<ApiUsageQueryResult> GetOauthClientUsageQueryResultAsync (string executionId, string clientId);
 
         /// <summary>
@@ -463,6 +498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetOauthClientUsageQueryResultAsyncWithHttpInfo (string executionId, string clientId);
 
@@ -477,6 +513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         System.Threading.Tasks.Task<UsageExecutionResult> GetOauthClientUsageSummaryAsync (string clientId, string days = null);
 
         /// <summary>
@@ -490,6 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null);
 
         /// <summary>
@@ -501,6 +539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OAuthClientEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<OAuthClientEntityListing> GetOauthClientsAsync ();
 
         /// <summary>
@@ -511,6 +550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OAuthClientEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> GetOauthClientsAsyncWithHttpInfo ();
 
@@ -525,6 +565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthScope</returns>
         
+        
         System.Threading.Tasks.Task<OAuthScope> GetOauthScopeAsync (string scopeId, string acceptLanguage = null);
 
         /// <summary>
@@ -538,6 +579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthScope)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthScope>> GetOauthScopeAsyncWithHttpInfo (string scopeId, string acceptLanguage = null);
 
         /// <summary>
@@ -549,6 +591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthScopeListing</returns>
+        
         
         System.Threading.Tasks.Task<OAuthScopeListing> GetOauthScopesAsync (string acceptLanguage = null);
 
@@ -562,6 +605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthScopeListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthScopeListing>> GetOauthScopesAsyncWithHttpInfo (string acceptLanguage = null);
 
         /// <summary>
@@ -574,6 +618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of OAuthClient</returns>
         
+        
         System.Threading.Tasks.Task<OAuthClient> PostOauthClientSecretAsync (string clientId);
 
         /// <summary>
@@ -585,6 +630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientSecretAsyncWithHttpInfo (string clientId);
 
@@ -599,6 +645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -612,6 +659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -624,6 +672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
         
+        
         System.Threading.Tasks.Task<OAuthClient> PostOauthClientsAsync (OAuthClientRequest body);
 
         /// <summary>
@@ -635,6 +684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientsAsyncWithHttpInfo (OAuthClientRequest body);
 
@@ -649,6 +699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
         
+        
         System.Threading.Tasks.Task<OAuthClient> PutOauthClientAsync (string clientId, OAuthClientRequest body);
 
         /// <summary>
@@ -661,6 +712,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutOauthClientAsyncWithHttpInfo (string clientId, OAuthClientRequest body);
 
@@ -763,6 +815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns></returns>
         
+        
         public void DeleteOauthClient (string clientId)
         {
              DeleteOauthClientWithHttpInfo(clientId);
@@ -774,6 +827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteOauthClientWithHttpInfo (string clientId)
         { 
@@ -858,6 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteOauthClientAsync (string clientId)
         {
              await DeleteOauthClientAsyncWithHttpInfo(clientId);
@@ -870,6 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOauthClientAsyncWithHttpInfo (string clientId)
         { 
@@ -957,6 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthAuthorization</returns>
         
+        
         public OAuthAuthorization GetOauthAuthorization (string clientId, string acceptLanguage = null)
         {
              ApiResponse<OAuthAuthorization> localVarResponse = GetOauthAuthorizationWithHttpInfo(clientId, acceptLanguage);
@@ -970,6 +1027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">The ID of client</param>
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthAuthorization</returns>
+        
         
         public ApiResponse< OAuthAuthorization > GetOauthAuthorizationWithHttpInfo (string clientId, string acceptLanguage = null)
         { 
@@ -1056,6 +1114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthAuthorization</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthAuthorization> GetOauthAuthorizationAsync (string clientId, string acceptLanguage = null)
         {
              ApiResponse<OAuthAuthorization> localVarResponse = await GetOauthAuthorizationAsyncWithHttpInfo(clientId, acceptLanguage);
@@ -1070,6 +1129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">The ID of client</param>
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthAuthorization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorization>> GetOauthAuthorizationAsyncWithHttpInfo (string clientId, string acceptLanguage = null)
         { 
@@ -1157,6 +1217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthAuthorizationListing</returns>
         
+        
         public OAuthAuthorizationListing GetOauthAuthorizations (string acceptLanguage = null)
         {
              ApiResponse<OAuthAuthorizationListing> localVarResponse = GetOauthAuthorizationsWithHttpInfo(acceptLanguage);
@@ -1169,6 +1230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthAuthorizationListing</returns>
+        
         
         public ApiResponse< OAuthAuthorizationListing > GetOauthAuthorizationsWithHttpInfo (string acceptLanguage = null)
         { 
@@ -1250,6 +1312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthAuthorizationListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthAuthorizationListing> GetOauthAuthorizationsAsync (string acceptLanguage = null)
         {
              ApiResponse<OAuthAuthorizationListing> localVarResponse = await GetOauthAuthorizationsAsyncWithHttpInfo(acceptLanguage);
@@ -1263,6 +1326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceptLanguage">The language in which to display the client descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthAuthorizationListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo (string acceptLanguage = null)
         { 
@@ -1345,6 +1409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>OAuthClient</returns>
         
+        
         public OAuthClient GetOauthClient (string clientId)
         {
              ApiResponse<OAuthClient> localVarResponse = GetOauthClientWithHttpInfo(clientId);
@@ -1357,6 +1422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of OAuthClient</returns>
+        
         
         public ApiResponse< OAuthClient > GetOauthClientWithHttpInfo (string clientId)
         { 
@@ -1441,6 +1507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of OAuthClient</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthClient> GetOauthClientAsync (string clientId)
         {
              ApiResponse<OAuthClient> localVarResponse = await GetOauthClientAsyncWithHttpInfo(clientId);
@@ -1454,6 +1521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetOauthClientAsyncWithHttpInfo (string clientId)
         { 
@@ -1541,6 +1609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiUsageQueryResult</returns>
         
+        
         public ApiUsageQueryResult GetOauthClientUsageQueryResult (string executionId, string clientId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = GetOauthClientUsageQueryResultWithHttpInfo(executionId, clientId);
@@ -1554,6 +1623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
         
         public ApiResponse< ApiUsageQueryResult > GetOauthClientUsageQueryResultWithHttpInfo (string executionId, string clientId)
         { 
@@ -1643,6 +1713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
+        
         public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetOauthClientUsageQueryResultAsync (string executionId, string clientId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = await GetOauthClientUsageQueryResultAsyncWithHttpInfo(executionId, clientId);
@@ -1657,6 +1728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetOauthClientUsageQueryResultAsyncWithHttpInfo (string executionId, string clientId)
         { 
@@ -1749,6 +1821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         public UsageExecutionResult GetOauthClientUsageSummary (string clientId, string days = null)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = GetOauthClientUsageSummaryWithHttpInfo(clientId, days);
@@ -1762,6 +1835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
         
         public ApiResponse< UsageExecutionResult > GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null)
         { 
@@ -1848,6 +1922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         public async System.Threading.Tasks.Task<UsageExecutionResult> GetOauthClientUsageSummaryAsync (string clientId, string days = null)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await GetOauthClientUsageSummaryAsyncWithHttpInfo(clientId, days);
@@ -1862,6 +1937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null)
         { 
@@ -1948,6 +2024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OAuthClientEntityListing</returns>
         
+        
         public OAuthClientEntityListing GetOauthClients ()
         {
              ApiResponse<OAuthClientEntityListing> localVarResponse = GetOauthClientsWithHttpInfo();
@@ -1959,6 +2036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OAuthClientEntityListing</returns>
+        
         
         public ApiResponse< OAuthClientEntityListing > GetOauthClientsWithHttpInfo ()
         { 
@@ -2038,6 +2116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OAuthClientEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthClientEntityListing> GetOauthClientsAsync ()
         {
              ApiResponse<OAuthClientEntityListing> localVarResponse = await GetOauthClientsAsyncWithHttpInfo();
@@ -2050,6 +2129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OAuthClientEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> GetOauthClientsAsyncWithHttpInfo ()
         { 
@@ -2132,6 +2212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>OAuthScope</returns>
         
+        
         public OAuthScope GetOauthScope (string scopeId, string acceptLanguage = null)
         {
              ApiResponse<OAuthScope> localVarResponse = GetOauthScopeWithHttpInfo(scopeId, acceptLanguage);
@@ -2145,6 +2226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scopeId">Scope ID</param>
         /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthScope</returns>
+        
         
         public ApiResponse< OAuthScope > GetOauthScopeWithHttpInfo (string scopeId, string acceptLanguage = null)
         { 
@@ -2231,6 +2313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthScope</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthScope> GetOauthScopeAsync (string scopeId, string acceptLanguage = null)
         {
              ApiResponse<OAuthScope> localVarResponse = await GetOauthScopeAsyncWithHttpInfo(scopeId, acceptLanguage);
@@ -2245,6 +2328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scopeId">Scope ID</param>
         /// <param name="acceptLanguage">The language with which to display the scope description. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthScope)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthScope>> GetOauthScopeAsyncWithHttpInfo (string scopeId, string acceptLanguage = null)
         { 
@@ -2332,6 +2416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>OAuthScopeListing</returns>
         
+        
         public OAuthScopeListing GetOauthScopes (string acceptLanguage = null)
         {
              ApiResponse<OAuthScopeListing> localVarResponse = GetOauthScopesWithHttpInfo(acceptLanguage);
@@ -2344,6 +2429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>ApiResponse of OAuthScopeListing</returns>
+        
         
         public ApiResponse< OAuthScopeListing > GetOauthScopesWithHttpInfo (string acceptLanguage = null)
         { 
@@ -2425,6 +2511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of OAuthScopeListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthScopeListing> GetOauthScopesAsync (string acceptLanguage = null)
         {
              ApiResponse<OAuthScopeListing> localVarResponse = await GetOauthScopesAsyncWithHttpInfo(acceptLanguage);
@@ -2438,6 +2525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceptLanguage">The language with which to display the scope descriptions. (optional, default to "en-us")</param>
         /// <returns>Task of ApiResponse (OAuthScopeListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthScopeListing>> GetOauthScopesAsyncWithHttpInfo (string acceptLanguage = null)
         { 
@@ -2520,6 +2608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>OAuthClient</returns>
         
+        
         public OAuthClient PostOauthClientSecret (string clientId)
         {
              ApiResponse<OAuthClient> localVarResponse = PostOauthClientSecretWithHttpInfo(clientId);
@@ -2532,6 +2621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of OAuthClient</returns>
+        
         
         public ApiResponse< OAuthClient > PostOauthClientSecretWithHttpInfo (string clientId)
         { 
@@ -2616,6 +2706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of OAuthClient</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthClient> PostOauthClientSecretAsync (string clientId)
         {
              ApiResponse<OAuthClient> localVarResponse = await PostOauthClientSecretAsyncWithHttpInfo(clientId);
@@ -2629,6 +2720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientSecretAsyncWithHttpInfo (string clientId)
         { 
@@ -2716,6 +2808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         public UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostOauthClientUsageQueryWithHttpInfo(clientId, body);
@@ -2729,6 +2822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
         
         public ApiResponse< UsageExecutionResult > PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
@@ -2823,6 +2917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         public async System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostOauthClientUsageQueryAsyncWithHttpInfo(clientId, body);
@@ -2837,6 +2932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
@@ -2933,6 +3029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
         
+        
         public OAuthClient PostOauthClients (OAuthClientRequest body)
         {
              ApiResponse<OAuthClient> localVarResponse = PostOauthClientsWithHttpInfo(body);
@@ -2945,6 +3042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
+        
         
         public ApiResponse< OAuthClient > PostOauthClientsWithHttpInfo (OAuthClientRequest body)
         { 
@@ -3034,6 +3132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthClient> PostOauthClientsAsync (OAuthClientRequest body)
         {
              ApiResponse<OAuthClient> localVarResponse = await PostOauthClientsAsyncWithHttpInfo(body);
@@ -3047,6 +3146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostOauthClientsAsyncWithHttpInfo (OAuthClientRequest body)
         { 
@@ -3139,6 +3239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
         
+        
         public OAuthClient PutOauthClient (string clientId, OAuthClientRequest body)
         {
              ApiResponse<OAuthClient> localVarResponse = PutOauthClientWithHttpInfo(clientId, body);
@@ -3152,6 +3253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
+        
         
         public ApiResponse< OAuthClient > PutOauthClientWithHttpInfo (string clientId, OAuthClientRequest body)
         { 
@@ -3246,6 +3348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
         
+        
         public async System.Threading.Tasks.Task<OAuthClient> PutOauthClientAsync (string clientId, OAuthClientRequest body)
         {
              ApiResponse<OAuthClient> localVarResponse = await PutOauthClientAsyncWithHttpInfo(clientId, body);
@@ -3260,6 +3363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutOauthClientAsyncWithHttpInfo (string clientId, OAuthClientRequest body)
         { 

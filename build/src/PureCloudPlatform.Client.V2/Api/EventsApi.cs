@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>BatchEventResponse</returns>
         
+        
         BatchEventResponse PostEventsConversations (BatchConversationEventRequest body);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>ApiResponse of BatchEventResponse</returns>
+        
         
         ApiResponse<BatchEventResponse> PostEventsConversationsWithHttpInfo (BatchConversationEventRequest body);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>BatchEventResponse</returns>
         
+        
         BatchEventResponse PostEventsUsersPresence (BatchUserPresenceEventRequest body);
 
         /// <summary>
@@ -61,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>ApiResponse of BatchEventResponse</returns>
+        
         
         ApiResponse<BatchEventResponse> PostEventsUsersPresenceWithHttpInfo (BatchUserPresenceEventRequest body);
 
@@ -74,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>BatchEventResponse</returns>
         
+        
         BatchEventResponse PostEventsUsersRoutingstatus (BatchUserRoutingStatusEventRequest body);
 
         /// <summary>
@@ -85,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>ApiResponse of BatchEventResponse</returns>
+        
         
         ApiResponse<BatchEventResponse> PostEventsUsersRoutingstatusWithHttpInfo (BatchUserRoutingStatusEventRequest body);
 
@@ -102,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>Task of BatchEventResponse</returns>
         
+        
         System.Threading.Tasks.Task<BatchEventResponse> PostEventsConversationsAsync (BatchConversationEventRequest body);
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsConversationsAsyncWithHttpInfo (BatchConversationEventRequest body);
 
@@ -126,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>Task of BatchEventResponse</returns>
         
+        
         System.Threading.Tasks.Task<BatchEventResponse> PostEventsUsersPresenceAsync (BatchUserPresenceEventRequest body);
 
         /// <summary>
@@ -137,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsUsersPresenceAsyncWithHttpInfo (BatchUserPresenceEventRequest body);
 
@@ -150,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>Task of BatchEventResponse</returns>
         
+        
         System.Threading.Tasks.Task<BatchEventResponse> PostEventsUsersRoutingstatusAsync (BatchUserRoutingStatusEventRequest body);
 
         /// <summary>
@@ -161,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsUsersRoutingstatusAsyncWithHttpInfo (BatchUserRoutingStatusEventRequest body);
 
@@ -263,6 +275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>BatchEventResponse</returns>
         
+        
         public BatchEventResponse PostEventsConversations (BatchConversationEventRequest body)
         {
              ApiResponse<BatchEventResponse> localVarResponse = PostEventsConversationsWithHttpInfo(body);
@@ -275,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>ApiResponse of BatchEventResponse</returns>
+        
         
         public ApiResponse< BatchEventResponse > PostEventsConversationsWithHttpInfo (BatchConversationEventRequest body)
         { 
@@ -364,6 +378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>Task of BatchEventResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BatchEventResponse> PostEventsConversationsAsync (BatchConversationEventRequest body)
         {
              ApiResponse<BatchEventResponse> localVarResponse = await PostEventsConversationsAsyncWithHttpInfo(body);
@@ -377,6 +392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsConversationsAsyncWithHttpInfo (BatchConversationEventRequest body)
         { 
@@ -468,6 +484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>BatchEventResponse</returns>
         
+        
         public BatchEventResponse PostEventsUsersPresence (BatchUserPresenceEventRequest body)
         {
              ApiResponse<BatchEventResponse> localVarResponse = PostEventsUsersPresenceWithHttpInfo(body);
@@ -480,6 +497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>ApiResponse of BatchEventResponse</returns>
+        
         
         public ApiResponse< BatchEventResponse > PostEventsUsersPresenceWithHttpInfo (BatchUserPresenceEventRequest body)
         { 
@@ -569,6 +587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>Task of BatchEventResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BatchEventResponse> PostEventsUsersPresenceAsync (BatchUserPresenceEventRequest body)
         {
              ApiResponse<BatchEventResponse> localVarResponse = await PostEventsUsersPresenceAsyncWithHttpInfo(body);
@@ -582,6 +601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsUsersPresenceAsyncWithHttpInfo (BatchUserPresenceEventRequest body)
         { 
@@ -673,6 +693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>BatchEventResponse</returns>
         
+        
         public BatchEventResponse PostEventsUsersRoutingstatus (BatchUserRoutingStatusEventRequest body)
         {
              ApiResponse<BatchEventResponse> localVarResponse = PostEventsUsersRoutingstatusWithHttpInfo(body);
@@ -685,6 +706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>ApiResponse of BatchEventResponse</returns>
+        
         
         public ApiResponse< BatchEventResponse > PostEventsUsersRoutingstatusWithHttpInfo (BatchUserRoutingStatusEventRequest body)
         { 
@@ -774,6 +796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">batchRequest</param>
         /// <returns>Task of BatchEventResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BatchEventResponse> PostEventsUsersRoutingstatusAsync (BatchUserRoutingStatusEventRequest body)
         {
              ApiResponse<BatchEventResponse> localVarResponse = await PostEventsUsersRoutingstatusAsyncWithHttpInfo(body);
@@ -787,6 +810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">batchRequest</param>
         /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsUsersRoutingstatusAsyncWithHttpInfo (BatchUserRoutingStatusEventRequest body)
         { 

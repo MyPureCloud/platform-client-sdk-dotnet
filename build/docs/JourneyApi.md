@@ -12,6 +12,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteJourneyOutcome**](JourneyApi.html#deletejourneyoutcome) | **DELETE** /api/v2/journey/outcomes/{outcomeId} | Delete an outcome. |
 | [**DeleteJourneyOutcomesPredictor**](JourneyApi.html#deletejourneyoutcomespredictor) | **DELETE** /api/v2/journey/outcomes/predictors/{predictorId} | Delete an outcome predictor. |
 | [**DeleteJourneySegment**](JourneyApi.html#deletejourneysegment) | **DELETE** /api/v2/journey/segments/{segmentId} | Delete a segment. |
+| [**GetAnalyticsJourneysAggregatesJob**](JourneyApi.html#getanalyticsjourneysaggregatesjob) | **GET** /api/v2/analytics/journeys/aggregates/jobs/{jobId} | Get status for async query for journey aggregates |
+| [**GetAnalyticsJourneysAggregatesJobResults**](JourneyApi.html#getanalyticsjourneysaggregatesjobresults) | **GET** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetJourneyActionmap**](JourneyApi.html#getjourneyactionmap) | **GET** /api/v2/journey/actionmaps/{actionMapId} | Retrieve a single action map. |
 | [**GetJourneyActionmaps**](JourneyApi.html#getjourneyactionmaps) | **GET** /api/v2/journey/actionmaps | Retrieve all action maps. |
 | [**GetJourneyActionmapsEstimatesJob**](JourneyApi.html#getjourneyactionmapsestimatesjob) | **GET** /api/v2/journey/actionmaps/estimates/jobs/{jobId} | Get status of job. |
@@ -20,24 +22,31 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyActiontargets**](JourneyApi.html#getjourneyactiontargets) | **GET** /api/v2/journey/actiontargets | Retrieve all action targets. |
 | [**GetJourneyActiontemplate**](JourneyApi.html#getjourneyactiontemplate) | **GET** /api/v2/journey/actiontemplates/{actionTemplateId} | Retrieve a single action template. |
 | [**GetJourneyActiontemplates**](JourneyApi.html#getjourneyactiontemplates) | **GET** /api/v2/journey/actiontemplates | Retrieve all action templates. |
+| [**GetJourneyCustomerCustomerIdSessions**](JourneyApi.html#getjourneycustomercustomeridsessions) | **GET** /api/v2/journey/customers/{customerIdType}/{customerId}/sessions | Retrieve all sessions for a given customer. |
 | [**GetJourneyOutcome**](JourneyApi.html#getjourneyoutcome) | **GET** /api/v2/journey/outcomes/{outcomeId} | Retrieve a single outcome. |
 | [**GetJourneyOutcomes**](JourneyApi.html#getjourneyoutcomes) | **GET** /api/v2/journey/outcomes | Retrieve all outcomes. |
+| [**GetJourneyOutcomesAttributionsJob**](JourneyApi.html#getjourneyoutcomesattributionsjob) | **GET** /api/v2/journey/outcomes/attributions/jobs/{jobId} | Get job status. |
+| [**GetJourneyOutcomesAttributionsJobResults**](JourneyApi.html#getjourneyoutcomesattributionsjobresults) | **GET** /api/v2/journey/outcomes/attributions/jobs/{jobId}/results | Get outcome attribution entities from completed job. |
 | [**GetJourneyOutcomesPredictor**](JourneyApi.html#getjourneyoutcomespredictor) | **GET** /api/v2/journey/outcomes/predictors/{predictorId} | Retrieve a single outcome predictor. |
 | [**GetJourneyOutcomesPredictors**](JourneyApi.html#getjourneyoutcomespredictors) | **GET** /api/v2/journey/outcomes/predictors | Retrieve all outcome predictors. |
 | [**GetJourneySegment**](JourneyApi.html#getjourneysegment) | **GET** /api/v2/journey/segments/{segmentId} | Retrieve a single segment. |
 | [**GetJourneySegments**](JourneyApi.html#getjourneysegments) | **GET** /api/v2/journey/segments | Retrieve all segments. |
 | [**GetJourneySession**](JourneyApi.html#getjourneysession) | **GET** /api/v2/journey/sessions/{sessionId} | Retrieve a single session. |
+| [**GetJourneySessionEvents**](JourneyApi.html#getjourneysessionevents) | **GET** /api/v2/journey/sessions/{sessionId}/events | Retrieve all events for a given session. |
 | [**GetJourneySessionOutcomescores**](JourneyApi.html#getjourneysessionoutcomescores) | **GET** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
+| [**GetJourneySessionSegments**](JourneyApi.html#getjourneysessionsegments) | **GET** /api/v2/journey/sessions/{sessionId}/segments | Retrieve segment assignments by session ID. |
 | [**PatchJourneyActionmap**](JourneyApi.html#patchjourneyactionmap) | **PATCH** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
 | [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **PATCH** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
 | [**PatchJourneyActiontemplate**](JourneyApi.html#patchjourneyactiontemplate) | **PATCH** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
 | [**PatchJourneyOutcome**](JourneyApi.html#patchjourneyoutcome) | **PATCH** /api/v2/journey/outcomes/{outcomeId} | Update an outcome. |
 | [**PatchJourneySegment**](JourneyApi.html#patchjourneysegment) | **PATCH** /api/v2/journey/segments/{segmentId} | Update a segment. |
+| [**PostAnalyticsJourneysAggregatesJobs**](JourneyApi.html#postanalyticsjourneysaggregatesjobs) | **POST** /api/v2/analytics/journeys/aggregates/jobs | Query for journey aggregates asynchronously |
 | [**PostAnalyticsJourneysAggregatesQuery**](JourneyApi.html#postanalyticsjourneysaggregatesquery) | **POST** /api/v2/analytics/journeys/aggregates/query | Query for journey aggregates |
 | [**PostJourneyActionmaps**](JourneyApi.html#postjourneyactionmaps) | **POST** /api/v2/journey/actionmaps | Create an action map. |
 | [**PostJourneyActionmapsEstimatesJobs**](JourneyApi.html#postjourneyactionmapsestimatesjobs) | **POST** /api/v2/journey/actionmaps/estimates/jobs | Query for estimates |
 | [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **POST** /api/v2/journey/actiontemplates | Create a single action template. |
 | [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **POST** /api/v2/journey/outcomes | Create an outcome. |
+| [**PostJourneyOutcomesAttributionsJobs**](JourneyApi.html#postjourneyoutcomesattributionsjobs) | **POST** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
 | [**PostJourneyOutcomesPredictors**](JourneyApi.html#postjourneyoutcomespredictors) | **POST** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
 | [**PostJourneySegments**](JourneyApi.html#postjourneysegments) | **POST** /api/v2/journey/segments | Create a segment. |
 {: class="table table-striped"}
@@ -363,6 +372,138 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getanalyticsjourneysaggregatesjob"></a>
+
+## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsJourneysAggregatesJob (string jobId)
+
+
+
+Get status for async query for journey aggregates
+
+
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsJourneysAggregatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for journey aggregates
+                AsyncQueryStatus result = apiInstance.GetAnalyticsJourneysAggregatesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetAnalyticsJourneysAggregatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+<a name="getanalyticsjourneysaggregatesjobresults"></a>
+
+## [**JourneyAsyncAggregateQueryResponse**](JourneyAsyncAggregateQueryResponse.html) GetAnalyticsJourneysAggregatesJobResults (string jobId, string cursor = null)
+
+
+
+Fetch a page of results for an async aggregates query
+
+
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsJourneysAggregatesJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Cursor token to retrieve next page (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async aggregates query
+                JourneyAsyncAggregateQueryResponse result = apiInstance.GetAnalyticsJourneysAggregatesJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetAnalyticsJourneysAggregatesJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyAsyncAggregateQueryResponse**](JourneyAsyncAggregateQueryResponse.html)
 
 <a name="getjourneyactionmap"></a>
 
@@ -912,6 +1053,77 @@ namespace Example
 
 [**ActionTemplateListing**](ActionTemplateListing.html)
 
+<a name="getjourneycustomercustomeridsessions"></a>
+
+## [**SessionListing**](SessionListing.html) GetJourneyCustomerCustomerIdSessions (string customerIdType, string customerId, string pageSize = null, string after = null)
+
+
+
+Retrieve all sessions for a given customer.
+
+
+
+Requires ANY permissions: 
+
+* journey:session:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyCustomerCustomerIdSessionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var customerIdType = customerIdType_example;  // string | Type of ID used to identify customer (e.g. email, cookie, and phone).
+            var customerId = customerId_example;  // string | Primary identifier of the customer in the source of the session.
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+
+            try
+            { 
+                // Retrieve all sessions for a given customer.
+                SessionListing result = apiInstance.GetJourneyCustomerCustomerIdSessions(customerIdType, customerId, pageSize, after);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyCustomerCustomerIdSessions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **customerIdType** | **string**| Type of ID used to identify customer (e.g. email, cookie, and phone). |  |
+| **customerId** | **string**| Primary identifier of the customer in the source of the session. |  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SessionListing**](SessionListing.html)
+
 <a name="getjourneyoutcome"></a>
 
 ## [**Outcome**](Outcome.html) GetJourneyOutcome (string outcomeId)
@@ -1051,6 +1263,136 @@ namespace Example
 ### Return type
 
 [**OutcomeListing**](OutcomeListing.html)
+
+<a name="getjourneyoutcomesattributionsjob"></a>
+
+## [**OutcomeAttributionJobStateResponse**](OutcomeAttributionJobStateResponse.html) GetJourneyOutcomesAttributionsJob (string jobId)
+
+
+
+Get job status.
+
+
+
+Requires ALL permissions: 
+
+* journey:outcomeAttributionJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyOutcomesAttributionsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var jobId = jobId_example;  // string | ID of the job.
+
+            try
+            { 
+                // Get job status.
+                OutcomeAttributionJobStateResponse result = apiInstance.GetJourneyOutcomesAttributionsJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyOutcomesAttributionsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| ID of the job. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutcomeAttributionJobStateResponse**](OutcomeAttributionJobStateResponse.html)
+
+<a name="getjourneyoutcomesattributionsjobresults"></a>
+
+## [**OutcomeAttributionResponseListing**](OutcomeAttributionResponseListing.html) GetJourneyOutcomesAttributionsJobResults (string jobId)
+
+
+
+Get outcome attribution entities from completed job.
+
+
+
+Requires ALL permissions: 
+
+* journey:outcomeAttribution:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyOutcomesAttributionsJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var jobId = jobId_example;  // string | ID of the job.
+
+            try
+            { 
+                // Get outcome attribution entities from completed job.
+                OutcomeAttributionResponseListing result = apiInstance.GetJourneyOutcomesAttributionsJobResults(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyOutcomesAttributionsJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| ID of the job. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutcomeAttributionResponseListing**](OutcomeAttributionResponseListing.html)
 
 <a name="getjourneyoutcomespredictor"></a>
 
@@ -1385,6 +1727,75 @@ namespace Example
 
 [**Session**](Session.html)
 
+<a name="getjourneysessionevents"></a>
+
+## [**EventListing**](EventListing.html) GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null)
+
+
+
+Retrieve all events for a given session.
+
+
+
+Requires ANY permissions: 
+
+* journey:event:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneySessionEventsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var sessionId = sessionId_example;  // string | System-generated UUID that represents the session the event is a part of.
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+
+            try
+            { 
+                // Retrieve all events for a given session.
+                EventListing result = apiInstance.GetJourneySessionEvents(sessionId, pageSize, after);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneySessionEvents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| System-generated UUID that represents the session the event is a part of. |  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EventListing**](EventListing.html)
+
 <a name="getjourneysessionoutcomescores"></a>
 
 ## [**OutcomeScoresResult**](OutcomeScoresResult.html) GetJourneySessionOutcomescores (string sessionId)
@@ -1449,6 +1860,79 @@ namespace Example
 ### Return type
 
 [**OutcomeScoresResult**](OutcomeScoresResult.html)
+
+<a name="getjourneysessionsegments"></a>
+
+## [**SegmentAssignmentListing**](SegmentAssignmentListing.html) GetJourneySessionSegments (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null)
+
+
+
+Retrieve segment assignments by session ID.
+
+
+
+Requires ANY permissions: 
+
+* journey:segmentassignment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneySessionSegmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var sessionId = sessionId_example;  // string | ID of the session to query for segment assignments.
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var segmentScope = segmentScope_example;  // string | Scope to filter on. If not specified, both session-scoped and customer-scoped assignments are returned. (optional) 
+            var assignmentState = assignmentState_example;  // string | Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional) 
+
+            try
+            { 
+                // Retrieve segment assignments by session ID.
+                SegmentAssignmentListing result = apiInstance.GetJourneySessionSegments(sessionId, pageSize, after, segmentScope, assignmentState);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneySessionSegments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| ID of the session to query for segment assignments. |  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **segmentScope** | **string**| Scope to filter on. If not specified, both session-scoped and customer-scoped assignments are returned. | [optional] <br />**Values**: Session, Customer |
+| **assignmentState** | **string**| Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. | [optional] <br />**Values**: Assigned, Unassigned |
+{: class="table table-striped"}
+
+### Return type
+
+[**SegmentAssignmentListing**](SegmentAssignmentListing.html)
 
 <a name="patchjourneyactionmap"></a>
 
@@ -1785,6 +2269,71 @@ namespace Example
 
 [**JourneySegment**](JourneySegment.html)
 
+<a name="postanalyticsjourneysaggregatesjobs"></a>
+
+## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsJourneysAggregatesJobs (JourneyAsyncAggregationQuery body)
+
+
+
+Query for journey aggregates asynchronously
+
+
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsJourneysAggregatesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var body = new JourneyAsyncAggregationQuery(); // JourneyAsyncAggregationQuery | query
+
+            try
+            { 
+                // Query for journey aggregates asynchronously
+                AsyncQueryResponse result = apiInstance.PostAnalyticsJourneysAggregatesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostAnalyticsJourneysAggregatesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**JourneyAsyncAggregationQuery**](JourneyAsyncAggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
+
 <a name="postanalyticsjourneysaggregatesquery"></a>
 
 ## [**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse.html) PostAnalyticsJourneysAggregatesQuery (JourneyAggregationQuery body)
@@ -2109,6 +2658,71 @@ namespace Example
 ### Return type
 
 [**Outcome**](Outcome.html)
+
+<a name="postjourneyoutcomesattributionsjobs"></a>
+
+## [**OutcomeAttributionAsyncResponse**](OutcomeAttributionAsyncResponse.html) PostJourneyOutcomesAttributionsJobs (OutcomeAttributionListing body = null)
+
+
+
+Create Outcome Attributions
+
+
+
+Requires ANY permissions: 
+
+* journey:outcomeAttributionJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyOutcomesAttributionsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var body = new OutcomeAttributionListing(); // OutcomeAttributionListing | outcome attribution request (optional) 
+
+            try
+            { 
+                // Create Outcome Attributions
+                OutcomeAttributionAsyncResponse result = apiInstance.PostJourneyOutcomesAttributionsJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyOutcomesAttributionsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OutcomeAttributionListing**](OutcomeAttributionListing.html)| outcome attribution request | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutcomeAttributionAsyncResponse**](OutcomeAttributionAsyncResponse.html)
 
 <a name="postjourneyoutcomespredictors"></a>
 

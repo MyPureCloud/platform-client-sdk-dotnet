@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="alertId">Alert ID</param>
         /// <returns></returns>
         
+        
         void DeleteAlertingInteractionstatsAlert (string alertId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteAlertingInteractionstatsAlertWithHttpInfo (string alertId);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns></returns>
         
+        
         void DeleteAlertingInteractionstatsRule (string ruleId);
 
         /// <summary>
@@ -62,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteAlertingInteractionstatsRuleWithHttpInfo (string ruleId);
 
         /// <summary>
@@ -73,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ActiveAlertCount</returns>
         
+        
         ActiveAlertCount GetAlertingAlertsActive ();
 
         /// <summary>
@@ -83,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ActiveAlertCount</returns>
+        
         
         ApiResponse<ActiveAlertCount> GetAlertingAlertsActiveWithHttpInfo ();
 
@@ -97,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsAlert</returns>
         
+        
         InteractionStatsAlert GetAlertingInteractionstatsAlert (string alertId, List<string> expand = null);
 
         /// <summary>
@@ -110,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsAlert</returns>
         
+        
         ApiResponse<InteractionStatsAlert> GetAlertingInteractionstatsAlertWithHttpInfo (string alertId, List<string> expand = null);
 
         /// <summary>
@@ -121,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsAlertContainer</returns>
+        
         
         InteractionStatsAlertContainer GetAlertingInteractionstatsAlerts (List<string> expand = null);
 
@@ -134,6 +143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsAlertContainer</returns>
         
+        
         ApiResponse<InteractionStatsAlertContainer> GetAlertingInteractionstatsAlertsWithHttpInfo (List<string> expand = null);
 
         /// <summary>
@@ -145,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UnreadMetric</returns>
         
+        
         UnreadMetric GetAlertingInteractionstatsAlertsUnread ();
 
         /// <summary>
@@ -155,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UnreadMetric</returns>
+        
         
         ApiResponse<UnreadMetric> GetAlertingInteractionstatsAlertsUnreadWithHttpInfo ();
 
@@ -169,6 +181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
         
+        
         InteractionStatsRule GetAlertingInteractionstatsRule (string ruleId, List<string> expand = null);
 
         /// <summary>
@@ -182,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
         
+        
         ApiResponse<InteractionStatsRule> GetAlertingInteractionstatsRuleWithHttpInfo (string ruleId, List<string> expand = null);
 
         /// <summary>
@@ -194,6 +208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRuleContainer</returns>
         
+        
         InteractionStatsRuleContainer GetAlertingInteractionstatsRules (List<string> expand = null);
 
         /// <summary>
@@ -205,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRuleContainer</returns>
+        
         
         ApiResponse<InteractionStatsRuleContainer> GetAlertingInteractionstatsRulesWithHttpInfo (List<string> expand = null);
 
@@ -219,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
         
+        
         InteractionStatsRule PostAlertingInteractionstatsRules (InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
@@ -231,6 +248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
+        
         
         ApiResponse<InteractionStatsRule> PostAlertingInteractionstatsRulesWithHttpInfo (InteractionStatsRule body, List<string> expand = null);
 
@@ -246,6 +264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UnreadStatus</returns>
         
+        
         UnreadStatus PutAlertingInteractionstatsAlert (string alertId, UnreadStatus body, List<string> expand = null);
 
         /// <summary>
@@ -259,6 +278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UnreadStatus</returns>
+        
         
         ApiResponse<UnreadStatus> PutAlertingInteractionstatsAlertWithHttpInfo (string alertId, UnreadStatus body, List<string> expand = null);
 
@@ -274,6 +294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
         
+        
         InteractionStatsRule PutAlertingInteractionstatsRule (string ruleId, InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
@@ -287,6 +308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
+        
         
         ApiResponse<InteractionStatsRule> PutAlertingInteractionstatsRuleWithHttpInfo (string ruleId, InteractionStatsRule body, List<string> expand = null);
 
@@ -304,6 +326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteAlertingInteractionstatsAlertAsync (string alertId);
 
         /// <summary>
@@ -315,6 +338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId);
 
@@ -328,6 +352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteAlertingInteractionstatsRuleAsync (string ruleId);
 
         /// <summary>
@@ -340,6 +365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId);
 
         /// <summary>
@@ -351,6 +377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ActiveAlertCount</returns>
         
+        
         System.Threading.Tasks.Task<ActiveAlertCount> GetAlertingAlertsActiveAsync ();
 
         /// <summary>
@@ -361,6 +388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ActiveAlertCount)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ActiveAlertCount>> GetAlertingAlertsActiveAsyncWithHttpInfo ();
 
@@ -375,6 +403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsAlert</returns>
         
+        
         System.Threading.Tasks.Task<InteractionStatsAlert> GetAlertingInteractionstatsAlertAsync (string alertId, List<string> expand = null);
 
         /// <summary>
@@ -388,6 +417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsAlert)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlert>> GetAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId, List<string> expand = null);
 
         /// <summary>
@@ -399,6 +429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsAlertContainer</returns>
+        
         
         System.Threading.Tasks.Task<InteractionStatsAlertContainer> GetAlertingInteractionstatsAlertsAsync (List<string> expand = null);
 
@@ -412,6 +443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsAlertContainer)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlertContainer>> GetAlertingInteractionstatsAlertsAsyncWithHttpInfo (List<string> expand = null);
 
         /// <summary>
@@ -423,6 +455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UnreadMetric</returns>
         
+        
         System.Threading.Tasks.Task<UnreadMetric> GetAlertingInteractionstatsAlertsUnreadAsync ();
 
         /// <summary>
@@ -433,6 +466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UnreadMetric)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UnreadMetric>> GetAlertingInteractionstatsAlertsUnreadAsyncWithHttpInfo ();
 
@@ -447,6 +481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
         
+        
         System.Threading.Tasks.Task<InteractionStatsRule> GetAlertingInteractionstatsRuleAsync (string ruleId, List<string> expand = null);
 
         /// <summary>
@@ -460,6 +495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId, List<string> expand = null);
 
         /// <summary>
@@ -472,6 +508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRuleContainer</returns>
         
+        
         System.Threading.Tasks.Task<InteractionStatsRuleContainer> GetAlertingInteractionstatsRulesAsync (List<string> expand = null);
 
         /// <summary>
@@ -483,6 +520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRuleContainer)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRuleContainer>> GetAlertingInteractionstatsRulesAsyncWithHttpInfo (List<string> expand = null);
 
@@ -497,6 +535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
         
+        
         System.Threading.Tasks.Task<InteractionStatsRule> PostAlertingInteractionstatsRulesAsync (InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
@@ -509,6 +548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PostAlertingInteractionstatsRulesAsyncWithHttpInfo (InteractionStatsRule body, List<string> expand = null);
 
@@ -524,6 +564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UnreadStatus</returns>
         
+        
         System.Threading.Tasks.Task<UnreadStatus> PutAlertingInteractionstatsAlertAsync (string alertId, UnreadStatus body, List<string> expand = null);
 
         /// <summary>
@@ -537,6 +578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UnreadStatus)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UnreadStatus>> PutAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId, UnreadStatus body, List<string> expand = null);
 
@@ -552,6 +594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
         
+        
         System.Threading.Tasks.Task<InteractionStatsRule> PutAlertingInteractionstatsRuleAsync (string ruleId, InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
@@ -565,6 +608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PutAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId, InteractionStatsRule body, List<string> expand = null);
 
@@ -667,6 +711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="alertId">Alert ID</param>
         /// <returns></returns>
         
+        
         public void DeleteAlertingInteractionstatsAlert (string alertId)
         {
              DeleteAlertingInteractionstatsAlertWithHttpInfo(alertId);
@@ -678,6 +723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteAlertingInteractionstatsAlertWithHttpInfo (string alertId)
         { 
@@ -762,6 +808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteAlertingInteractionstatsAlertAsync (string alertId)
         {
              await DeleteAlertingInteractionstatsAlertAsyncWithHttpInfo(alertId);
@@ -774,6 +821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId)
         { 
@@ -860,6 +908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns></returns>
         
+        
         public void DeleteAlertingInteractionstatsRule (string ruleId)
         {
              DeleteAlertingInteractionstatsRuleWithHttpInfo(ruleId);
@@ -871,6 +920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteAlertingInteractionstatsRuleWithHttpInfo (string ruleId)
         { 
@@ -955,6 +1005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteAlertingInteractionstatsRuleAsync (string ruleId)
         {
              await DeleteAlertingInteractionstatsRuleAsyncWithHttpInfo(ruleId);
@@ -967,6 +1018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId)
         { 
@@ -1052,6 +1104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ActiveAlertCount</returns>
         
+        
         public ActiveAlertCount GetAlertingAlertsActive ()
         {
              ApiResponse<ActiveAlertCount> localVarResponse = GetAlertingAlertsActiveWithHttpInfo();
@@ -1063,6 +1116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ActiveAlertCount</returns>
+        
         
         public ApiResponse< ActiveAlertCount > GetAlertingAlertsActiveWithHttpInfo ()
         { 
@@ -1142,6 +1196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ActiveAlertCount</returns>
         
+        
         public async System.Threading.Tasks.Task<ActiveAlertCount> GetAlertingAlertsActiveAsync ()
         {
              ApiResponse<ActiveAlertCount> localVarResponse = await GetAlertingAlertsActiveAsyncWithHttpInfo();
@@ -1154,6 +1209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ActiveAlertCount)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActiveAlertCount>> GetAlertingAlertsActiveAsyncWithHttpInfo ()
         { 
@@ -1236,6 +1292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsAlert</returns>
         
+        
         public InteractionStatsAlert GetAlertingInteractionstatsAlert (string alertId, List<string> expand = null)
         {
              ApiResponse<InteractionStatsAlert> localVarResponse = GetAlertingInteractionstatsAlertWithHttpInfo(alertId, expand);
@@ -1249,6 +1306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsAlert</returns>
+        
         
         public ApiResponse< InteractionStatsAlert > GetAlertingInteractionstatsAlertWithHttpInfo (string alertId, List<string> expand = null)
         { 
@@ -1335,6 +1393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsAlert</returns>
         
+        
         public async System.Threading.Tasks.Task<InteractionStatsAlert> GetAlertingInteractionstatsAlertAsync (string alertId, List<string> expand = null)
         {
              ApiResponse<InteractionStatsAlert> localVarResponse = await GetAlertingInteractionstatsAlertAsyncWithHttpInfo(alertId, expand);
@@ -1349,6 +1408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsAlert)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlert>> GetAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId, List<string> expand = null)
         { 
@@ -1436,6 +1496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsAlertContainer</returns>
         
+        
         public InteractionStatsAlertContainer GetAlertingInteractionstatsAlerts (List<string> expand = null)
         {
              ApiResponse<InteractionStatsAlertContainer> localVarResponse = GetAlertingInteractionstatsAlertsWithHttpInfo(expand);
@@ -1448,6 +1509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsAlertContainer</returns>
+        
         
         public ApiResponse< InteractionStatsAlertContainer > GetAlertingInteractionstatsAlertsWithHttpInfo (List<string> expand = null)
         { 
@@ -1529,6 +1591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsAlertContainer</returns>
         
+        
         public async System.Threading.Tasks.Task<InteractionStatsAlertContainer> GetAlertingInteractionstatsAlertsAsync (List<string> expand = null)
         {
              ApiResponse<InteractionStatsAlertContainer> localVarResponse = await GetAlertingInteractionstatsAlertsAsyncWithHttpInfo(expand);
@@ -1542,6 +1605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsAlertContainer)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlertContainer>> GetAlertingInteractionstatsAlertsAsyncWithHttpInfo (List<string> expand = null)
         { 
@@ -1623,6 +1687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UnreadMetric</returns>
         
+        
         public UnreadMetric GetAlertingInteractionstatsAlertsUnread ()
         {
              ApiResponse<UnreadMetric> localVarResponse = GetAlertingInteractionstatsAlertsUnreadWithHttpInfo();
@@ -1634,6 +1699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UnreadMetric</returns>
+        
         
         public ApiResponse< UnreadMetric > GetAlertingInteractionstatsAlertsUnreadWithHttpInfo ()
         { 
@@ -1713,6 +1779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UnreadMetric</returns>
         
+        
         public async System.Threading.Tasks.Task<UnreadMetric> GetAlertingInteractionstatsAlertsUnreadAsync ()
         {
              ApiResponse<UnreadMetric> localVarResponse = await GetAlertingInteractionstatsAlertsUnreadAsyncWithHttpInfo();
@@ -1725,6 +1792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UnreadMetric)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UnreadMetric>> GetAlertingInteractionstatsAlertsUnreadAsyncWithHttpInfo ()
         { 
@@ -1807,6 +1875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
         
+        
         public InteractionStatsRule GetAlertingInteractionstatsRule (string ruleId, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = GetAlertingInteractionstatsRuleWithHttpInfo(ruleId, expand);
@@ -1820,6 +1889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
+        
         
         public ApiResponse< InteractionStatsRule > GetAlertingInteractionstatsRuleWithHttpInfo (string ruleId, List<string> expand = null)
         { 
@@ -1906,6 +1976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
         
+        
         public async System.Threading.Tasks.Task<InteractionStatsRule> GetAlertingInteractionstatsRuleAsync (string ruleId, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = await GetAlertingInteractionstatsRuleAsyncWithHttpInfo(ruleId, expand);
@@ -1920,6 +1991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId, List<string> expand = null)
         { 
@@ -2007,6 +2079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRuleContainer</returns>
         
+        
         public InteractionStatsRuleContainer GetAlertingInteractionstatsRules (List<string> expand = null)
         {
              ApiResponse<InteractionStatsRuleContainer> localVarResponse = GetAlertingInteractionstatsRulesWithHttpInfo(expand);
@@ -2019,6 +2092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRuleContainer</returns>
+        
         
         public ApiResponse< InteractionStatsRuleContainer > GetAlertingInteractionstatsRulesWithHttpInfo (List<string> expand = null)
         { 
@@ -2100,6 +2174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRuleContainer</returns>
         
+        
         public async System.Threading.Tasks.Task<InteractionStatsRuleContainer> GetAlertingInteractionstatsRulesAsync (List<string> expand = null)
         {
              ApiResponse<InteractionStatsRuleContainer> localVarResponse = await GetAlertingInteractionstatsRulesAsyncWithHttpInfo(expand);
@@ -2113,6 +2188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRuleContainer)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRuleContainer>> GetAlertingInteractionstatsRulesAsyncWithHttpInfo (List<string> expand = null)
         { 
@@ -2196,6 +2272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
         
+        
         public InteractionStatsRule PostAlertingInteractionstatsRules (InteractionStatsRule body, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = PostAlertingInteractionstatsRulesWithHttpInfo(body, expand);
@@ -2209,6 +2286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
+        
         
         public ApiResponse< InteractionStatsRule > PostAlertingInteractionstatsRulesWithHttpInfo (InteractionStatsRule body, List<string> expand = null)
         { 
@@ -2300,6 +2378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
         
+        
         public async System.Threading.Tasks.Task<InteractionStatsRule> PostAlertingInteractionstatsRulesAsync (InteractionStatsRule body, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = await PostAlertingInteractionstatsRulesAsyncWithHttpInfo(body, expand);
@@ -2314,6 +2393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PostAlertingInteractionstatsRulesAsyncWithHttpInfo (InteractionStatsRule body, List<string> expand = null)
         { 
@@ -2408,6 +2488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UnreadStatus</returns>
         
+        
         public UnreadStatus PutAlertingInteractionstatsAlert (string alertId, UnreadStatus body, List<string> expand = null)
         {
              ApiResponse<UnreadStatus> localVarResponse = PutAlertingInteractionstatsAlertWithHttpInfo(alertId, body, expand);
@@ -2422,6 +2503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UnreadStatus</returns>
+        
         
         public ApiResponse< UnreadStatus > PutAlertingInteractionstatsAlertWithHttpInfo (string alertId, UnreadStatus body, List<string> expand = null)
         { 
@@ -2518,6 +2600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UnreadStatus</returns>
         
+        
         public async System.Threading.Tasks.Task<UnreadStatus> PutAlertingInteractionstatsAlertAsync (string alertId, UnreadStatus body, List<string> expand = null)
         {
              ApiResponse<UnreadStatus> localVarResponse = await PutAlertingInteractionstatsAlertAsyncWithHttpInfo(alertId, body, expand);
@@ -2533,6 +2616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UnreadStatus)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UnreadStatus>> PutAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId, UnreadStatus body, List<string> expand = null)
         { 
@@ -2632,6 +2716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
         
+        
         public InteractionStatsRule PutAlertingInteractionstatsRule (string ruleId, InteractionStatsRule body, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = PutAlertingInteractionstatsRuleWithHttpInfo(ruleId, body, expand);
@@ -2646,6 +2731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
+        
         
         public ApiResponse< InteractionStatsRule > PutAlertingInteractionstatsRuleWithHttpInfo (string ruleId, InteractionStatsRule body, List<string> expand = null)
         { 
@@ -2742,6 +2828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
         
+        
         public async System.Threading.Tasks.Task<InteractionStatsRule> PutAlertingInteractionstatsRuleAsync (string ruleId, InteractionStatsRule body, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = await PutAlertingInteractionstatsRuleAsyncWithHttpInfo(ruleId, body, expand);
@@ -2757,6 +2844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PutAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId, InteractionStatsRule body, List<string> expand = null)
         { 

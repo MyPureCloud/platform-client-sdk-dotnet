@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns></returns>
         
+        
         void DeleteWidgetsDeployment (string deploymentId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWidgetsDeploymentWithHttpInfo (string deploymentId);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>WidgetDeployment</returns>
         
+        
         WidgetDeployment GetWidgetsDeployment (string deploymentId);
 
         /// <summary>
@@ -62,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
         
+        
         ApiResponse<WidgetDeployment> GetWidgetsDeploymentWithHttpInfo (string deploymentId);
 
         /// <summary>
@@ -73,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WidgetDeploymentEntityListing</returns>
         
+        
         WidgetDeploymentEntityListing GetWidgetsDeployments ();
 
         /// <summary>
@@ -83,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WidgetDeploymentEntityListing</returns>
+        
         
         ApiResponse<WidgetDeploymentEntityListing> GetWidgetsDeploymentsWithHttpInfo ();
 
@@ -96,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>WidgetDeployment</returns>
         
+        
         WidgetDeployment PostWidgetsDeployments (WidgetDeployment body);
 
         /// <summary>
@@ -107,6 +114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
+        
         
         ApiResponse<WidgetDeployment> PostWidgetsDeploymentsWithHttpInfo (WidgetDeployment body);
 
@@ -121,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>WidgetDeployment</returns>
         
+        
         WidgetDeployment PutWidgetsDeployment (string deploymentId, WidgetDeployment body);
 
         /// <summary>
@@ -133,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
+        
         
         ApiResponse<WidgetDeployment> PutWidgetsDeploymentWithHttpInfo (string deploymentId, WidgetDeployment body);
 
@@ -150,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWidgetsDeploymentAsync (string deploymentId);
 
         /// <summary>
@@ -161,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWidgetsDeploymentAsyncWithHttpInfo (string deploymentId);
 
@@ -174,6 +186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of WidgetDeployment</returns>
         
+        
         System.Threading.Tasks.Task<WidgetDeployment> GetWidgetsDeploymentAsync (string deploymentId);
 
         /// <summary>
@@ -186,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> GetWidgetsDeploymentAsyncWithHttpInfo (string deploymentId);
 
         /// <summary>
@@ -197,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WidgetDeploymentEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<WidgetDeploymentEntityListing> GetWidgetsDeploymentsAsync ();
 
         /// <summary>
@@ -207,6 +222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WidgetDeploymentEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WidgetDeploymentEntityListing>> GetWidgetsDeploymentsAsyncWithHttpInfo ();
 
@@ -220,6 +236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of WidgetDeployment</returns>
         
+        
         System.Threading.Tasks.Task<WidgetDeployment> PostWidgetsDeploymentsAsync (WidgetDeployment body);
 
         /// <summary>
@@ -231,6 +248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> PostWidgetsDeploymentsAsyncWithHttpInfo (WidgetDeployment body);
 
@@ -245,6 +263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of WidgetDeployment</returns>
         
+        
         System.Threading.Tasks.Task<WidgetDeployment> PutWidgetsDeploymentAsync (string deploymentId, WidgetDeployment body);
 
         /// <summary>
@@ -257,6 +276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> PutWidgetsDeploymentAsyncWithHttpInfo (string deploymentId, WidgetDeployment body);
 
@@ -359,6 +379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns></returns>
         
+        
         public void DeleteWidgetsDeployment (string deploymentId)
         {
              DeleteWidgetsDeploymentWithHttpInfo(deploymentId);
@@ -370,6 +391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWidgetsDeploymentWithHttpInfo (string deploymentId)
         { 
@@ -454,6 +476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWidgetsDeploymentAsync (string deploymentId)
         {
              await DeleteWidgetsDeploymentAsyncWithHttpInfo(deploymentId);
@@ -466,6 +489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWidgetsDeploymentAsyncWithHttpInfo (string deploymentId)
         { 
@@ -552,6 +576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>WidgetDeployment</returns>
         
+        
         public WidgetDeployment GetWidgetsDeployment (string deploymentId)
         {
              ApiResponse<WidgetDeployment> localVarResponse = GetWidgetsDeploymentWithHttpInfo(deploymentId);
@@ -564,6 +589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
+        
         
         public ApiResponse< WidgetDeployment > GetWidgetsDeploymentWithHttpInfo (string deploymentId)
         { 
@@ -648,6 +674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of WidgetDeployment</returns>
         
+        
         public async System.Threading.Tasks.Task<WidgetDeployment> GetWidgetsDeploymentAsync (string deploymentId)
         {
              ApiResponse<WidgetDeployment> localVarResponse = await GetWidgetsDeploymentAsyncWithHttpInfo(deploymentId);
@@ -661,6 +688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> GetWidgetsDeploymentAsyncWithHttpInfo (string deploymentId)
         { 
@@ -746,6 +774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WidgetDeploymentEntityListing</returns>
         
+        
         public WidgetDeploymentEntityListing GetWidgetsDeployments ()
         {
              ApiResponse<WidgetDeploymentEntityListing> localVarResponse = GetWidgetsDeploymentsWithHttpInfo();
@@ -757,6 +786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WidgetDeploymentEntityListing</returns>
+        
         
         public ApiResponse< WidgetDeploymentEntityListing > GetWidgetsDeploymentsWithHttpInfo ()
         { 
@@ -836,6 +866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WidgetDeploymentEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WidgetDeploymentEntityListing> GetWidgetsDeploymentsAsync ()
         {
              ApiResponse<WidgetDeploymentEntityListing> localVarResponse = await GetWidgetsDeploymentsAsyncWithHttpInfo();
@@ -848,6 +879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WidgetDeploymentEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WidgetDeploymentEntityListing>> GetWidgetsDeploymentsAsyncWithHttpInfo ()
         { 
@@ -929,6 +961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>WidgetDeployment</returns>
         
+        
         public WidgetDeployment PostWidgetsDeployments (WidgetDeployment body)
         {
              ApiResponse<WidgetDeployment> localVarResponse = PostWidgetsDeploymentsWithHttpInfo(body);
@@ -941,6 +974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
+        
         
         public ApiResponse< WidgetDeployment > PostWidgetsDeploymentsWithHttpInfo (WidgetDeployment body)
         { 
@@ -1030,6 +1064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of WidgetDeployment</returns>
         
+        
         public async System.Threading.Tasks.Task<WidgetDeployment> PostWidgetsDeploymentsAsync (WidgetDeployment body)
         {
              ApiResponse<WidgetDeployment> localVarResponse = await PostWidgetsDeploymentsAsyncWithHttpInfo(body);
@@ -1043,6 +1078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> PostWidgetsDeploymentsAsyncWithHttpInfo (WidgetDeployment body)
         { 
@@ -1135,6 +1171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>WidgetDeployment</returns>
         
+        
         public WidgetDeployment PutWidgetsDeployment (string deploymentId, WidgetDeployment body)
         {
              ApiResponse<WidgetDeployment> localVarResponse = PutWidgetsDeploymentWithHttpInfo(deploymentId, body);
@@ -1148,6 +1185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WidgetDeployment</returns>
+        
         
         public ApiResponse< WidgetDeployment > PutWidgetsDeploymentWithHttpInfo (string deploymentId, WidgetDeployment body)
         { 
@@ -1242,6 +1280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of WidgetDeployment</returns>
         
+        
         public async System.Threading.Tasks.Task<WidgetDeployment> PutWidgetsDeploymentAsync (string deploymentId, WidgetDeployment body)
         {
              ApiResponse<WidgetDeployment> localVarResponse = await PutWidgetsDeploymentAsyncWithHttpInfo(deploymentId, body);
@@ -1256,6 +1295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Widget Config Id</param>
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WidgetDeployment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WidgetDeployment>> PutWidgetsDeploymentAsyncWithHttpInfo (string deploymentId, WidgetDeployment body)
         { 

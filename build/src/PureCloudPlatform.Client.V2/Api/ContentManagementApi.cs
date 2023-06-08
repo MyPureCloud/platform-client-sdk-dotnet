@@ -27,6 +27,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns></returns>
         
+        
         void DeleteContentmanagementDocument (string documentId, bool? _override = null);
 
         /// <summary>
@@ -40,6 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteContentmanagementDocumentWithHttpInfo (string documentId, bool? _override = null);
 
         /// <summary>
@@ -51,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
         /// <returns></returns>
+        
         
         void DeleteContentmanagementShare (string shareId);
 
@@ -64,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="shareId">Share ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteContentmanagementShareWithHttpInfo (string shareId);
 
         /// <summary>
@@ -76,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status ID</param>
         /// <returns></returns>
         
+        
         void DeleteContentmanagementStatusStatusId (string statusId);
 
         /// <summary>
@@ -87,6 +92,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteContentmanagementStatusStatusIdWithHttpInfo (string statusId);
 
@@ -101,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns></returns>
         
+        
         void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null);
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteContentmanagementWorkspaceWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
 
@@ -127,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
         
+        
         void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId);
 
         /// <summary>
@@ -139,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId);
 
@@ -153,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <returns></returns>
         
+        
         void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId);
 
         /// <summary>
@@ -165,6 +176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId);
 
@@ -179,6 +191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Document</returns>
         
+        
         Document GetContentmanagementDocument (string documentId, List<string> expand = null);
 
         /// <summary>
@@ -191,6 +204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Document</returns>
+        
         
         ApiResponse<Document> GetContentmanagementDocumentWithHttpInfo (string documentId, List<string> expand = null);
 
@@ -210,6 +224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>DocumentAuditEntityListing</returns>
         
+        
         DocumentAuditEntityListing GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -228,6 +243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>ApiResponse of DocumentAuditEntityListing</returns>
         
+        
         ApiResponse<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -242,6 +258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>DownloadResponse</returns>
         
+        
         DownloadResponse GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null);
 
         /// <summary>
@@ -255,6 +272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
+        
         
         ApiResponse<DownloadResponse> GetContentmanagementDocumentContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
 
@@ -274,6 +292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>DocumentEntityListing</returns>
         [Obsolete]
+        
         DocumentEntityListing GetContentmanagementDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -292,6 +311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
         [Obsolete]
+        
         ApiResponse<DocumentEntityListing> GetContentmanagementDocumentsWithHttpInfo (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -308,6 +328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>QueryResults</returns>
+        
         
         QueryResults GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
@@ -326,6 +347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
         
+        
         ApiResponse<QueryResults> GetContentmanagementQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -337,6 +359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>SecurityProfile</returns>
+        
         
         SecurityProfile GetContentmanagementSecurityprofile (string securityProfileId);
 
@@ -350,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>ApiResponse of SecurityProfile</returns>
         
+        
         ApiResponse<SecurityProfile> GetContentmanagementSecurityprofileWithHttpInfo (string securityProfileId);
 
         /// <summary>
@@ -361,6 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SecurityProfileEntityListing</returns>
         
+        
         SecurityProfileEntityListing GetContentmanagementSecurityprofiles ();
 
         /// <summary>
@@ -371,6 +396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SecurityProfileEntityListing</returns>
+        
         
         ApiResponse<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesWithHttpInfo ();
 
@@ -385,6 +411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Share</returns>
         
+        
         Share GetContentmanagementShare (string shareId, List<string> expand = null);
 
         /// <summary>
@@ -397,6 +424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Share</returns>
+        
         
         ApiResponse<Share> GetContentmanagementShareWithHttpInfo (string shareId, List<string> expand = null);
 
@@ -414,6 +442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>SharedResponse</returns>
         
+        
         SharedResponse GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
@@ -430,6 +459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of SharedResponse</returns>
         
+        
         ApiResponse<SharedResponse> GetContentmanagementSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
@@ -444,6 +474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ShareEntityListing</returns>
+        
         
         ShareEntityListing GetContentmanagementShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null);
 
@@ -460,6 +491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ShareEntityListing</returns>
         
+        
         ApiResponse<ShareEntityListing> GetContentmanagementSharesWithHttpInfo (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -472,6 +504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>CommandStatusEntityListing</returns>
+        
         
         CommandStatusEntityListing GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null);
 
@@ -486,6 +519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of CommandStatusEntityListing</returns>
         
+        
         ApiResponse<CommandStatusEntityListing> GetContentmanagementStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -497,6 +531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status ID</param>
         /// <returns>CommandStatus</returns>
+        
         
         CommandStatus GetContentmanagementStatusStatusId (string statusId);
 
@@ -510,6 +545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of CommandStatus</returns>
         
+        
         ApiResponse<CommandStatus> GetContentmanagementStatusStatusIdWithHttpInfo (string statusId);
 
         /// <summary>
@@ -521,6 +557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Usage</returns>
         
+        
         Usage GetContentmanagementUsage ();
 
         /// <summary>
@@ -531,6 +568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Usage</returns>
+        
         
         ApiResponse<Usage> GetContentmanagementUsageWithHttpInfo ();
 
@@ -545,6 +583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Workspace</returns>
         
+        
         Workspace GetContentmanagementWorkspace (string workspaceId, List<string> expand = null);
 
         /// <summary>
@@ -557,6 +596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
+        
         
         ApiResponse<Workspace> GetContentmanagementWorkspaceWithHttpInfo (string workspaceId, List<string> expand = null);
 
@@ -575,6 +615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>DocumentEntityListing</returns>
         
+        
         DocumentEntityListing GetContentmanagementWorkspaceDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -592,6 +633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
         
+        
         ApiResponse<DocumentEntityListing> GetContentmanagementWorkspaceDocumentsWithHttpInfo (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -606,6 +648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceMember</returns>
         
+        
         WorkspaceMember GetContentmanagementWorkspaceMember (string workspaceId, string memberId, List<string> expand = null);
 
         /// <summary>
@@ -619,6 +662,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
+        
         
         ApiResponse<WorkspaceMember> GetContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, List<string> expand = null);
 
@@ -635,6 +679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceMemberEntityListing</returns>
         
+        
         WorkspaceMemberEntityListing GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -650,6 +695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
         
+        
         ApiResponse<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -664,6 +710,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValue</returns>
         
+        
         TagValue GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, List<string> expand = null);
 
         /// <summary>
@@ -677,6 +724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
+        
         
         ApiResponse<TagValue> GetContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, List<string> expand = null);
 
@@ -694,6 +742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValueEntityListing</returns>
         
+        
         TagValueEntityListing GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -710,6 +759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
         
+        
         ApiResponse<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -724,6 +774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="access">Requested access level. (optional)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceEntityListing</returns>
+        
         
         WorkspaceEntityListing GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null);
 
@@ -740,6 +791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
         
+        
         ApiResponse<WorkspaceEntityListing> GetContentmanagementWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null);
 
         /// <summary>
@@ -752,6 +804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>QueryResults</returns>
         
+        
         QueryResults PostContentmanagementAuditquery (ContentQueryRequest body);
 
         /// <summary>
@@ -763,6 +816,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>ApiResponse of QueryResults</returns>
+        
         
         ApiResponse<QueryResults> PostContentmanagementAuditqueryWithHttpInfo (ContentQueryRequest body);
 
@@ -779,6 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Document</returns>
         
+        
         Document PostContentmanagementDocument (string documentId, DocumentUpdate body, string expand = null, bool? _override = null);
 
         /// <summary>
@@ -794,6 +849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
         
+        
         ApiResponse<Document> PostContentmanagementDocumentWithHttpInfo (string documentId, DocumentUpdate body, string expand = null, bool? _override = null);
 
         /// <summary>
@@ -808,6 +864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ReplaceResponse</returns>
         
+        
         ReplaceResponse PostContentmanagementDocumentContent (string documentId, ReplaceRequest body, bool? _override = null);
 
         /// <summary>
@@ -821,6 +878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of ReplaceResponse</returns>
+        
         
         ApiResponse<ReplaceResponse> PostContentmanagementDocumentContentWithHttpInfo (string documentId, ReplaceRequest body, bool? _override = null);
 
@@ -837,6 +895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Document</returns>
         
+        
         Document PostContentmanagementDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
@@ -852,6 +911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
         
+        
         ApiResponse<Document> PostContentmanagementDocumentsWithHttpInfo (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
@@ -864,6 +924,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>QueryResults</returns>
+        
         
         QueryResults PostContentmanagementQuery (QueryRequest body, string expand = null);
 
@@ -878,6 +939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
         
+        
         ApiResponse<QueryResults> PostContentmanagementQueryWithHttpInfo (QueryRequest body, string expand = null);
 
         /// <summary>
@@ -890,6 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>CreateShareResponse</returns>
         
+        
         CreateShareResponse PostContentmanagementShares (CreateShareRequest body);
 
         /// <summary>
@@ -901,6 +964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>ApiResponse of CreateShareResponse</returns>
+        
         
         ApiResponse<CreateShareResponse> PostContentmanagementSharesWithHttpInfo (CreateShareRequest body);
 
@@ -915,6 +979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">tag</param>
         /// <returns>TagValue</returns>
         
+        
         TagValue PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body);
 
         /// <summary>
@@ -927,6 +992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>ApiResponse of TagValue</returns>
+        
         
         ApiResponse<TagValue> PostContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, TagValue body);
 
@@ -942,6 +1008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValueEntityListing</returns>
         
+        
         TagValueEntityListing PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null);
 
         /// <summary>
@@ -956,6 +1023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
         
+        
         ApiResponse<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body, List<string> expand = null);
 
         /// <summary>
@@ -968,6 +1036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
         
+        
         Workspace PostContentmanagementWorkspaces (WorkspaceCreate body);
 
         /// <summary>
@@ -979,6 +1048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
+        
         
         ApiResponse<Workspace> PostContentmanagementWorkspacesWithHttpInfo (WorkspaceCreate body);
 
@@ -993,6 +1063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
         
+        
         Workspace PutContentmanagementWorkspace (string workspaceId, Workspace body);
 
         /// <summary>
@@ -1005,6 +1076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
+        
         
         ApiResponse<Workspace> PutContentmanagementWorkspaceWithHttpInfo (string workspaceId, Workspace body);
 
@@ -1020,6 +1092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace Member</param>
         /// <returns>WorkspaceMember</returns>
         
+        
         WorkspaceMember PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body);
 
         /// <summary>
@@ -1033,6 +1106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace Member</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
+        
         
         ApiResponse<WorkspaceMember> PutContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body);
 
@@ -1048,6 +1122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>TagValue</returns>
         
+        
         TagValue PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body);
 
         /// <summary>
@@ -1061,6 +1136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of TagValue</returns>
+        
         
         ApiResponse<TagValue> PutContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, TagValue body);
 
@@ -1079,6 +1155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteContentmanagementDocumentAsync (string documentId, bool? _override = null);
 
         /// <summary>
@@ -1092,6 +1169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementDocumentAsyncWithHttpInfo (string documentId, bool? _override = null);
 
         /// <summary>
@@ -1103,6 +1181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteContentmanagementShareAsync (string shareId);
 
@@ -1116,6 +1195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementShareAsyncWithHttpInfo (string shareId);
 
         /// <summary>
@@ -1128,6 +1208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteContentmanagementStatusStatusIdAsync (string statusId);
 
         /// <summary>
@@ -1139,6 +1220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementStatusStatusIdAsyncWithHttpInfo (string statusId);
 
@@ -1153,6 +1235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteContentmanagementWorkspaceAsync (string workspaceId, string moveChildrenToWorkspaceId = null);
 
         /// <summary>
@@ -1165,6 +1248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
 
@@ -1179,6 +1263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId);
 
         /// <summary>
@@ -1191,6 +1276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId);
 
@@ -1205,6 +1291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId);
 
         /// <summary>
@@ -1217,6 +1304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId);
 
@@ -1231,6 +1319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Document</returns>
         
+        
         System.Threading.Tasks.Task<Document> GetContentmanagementDocumentAsync (string documentId, List<string> expand = null);
 
         /// <summary>
@@ -1243,6 +1332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Document>> GetContentmanagementDocumentAsyncWithHttpInfo (string documentId, List<string> expand = null);
 
@@ -1262,6 +1352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>Task of DocumentAuditEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1280,6 +1371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>Task of ApiResponse (DocumentAuditEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetContentmanagementDocumentAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1294,6 +1386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
         
+        
         System.Threading.Tasks.Task<DownloadResponse> GetContentmanagementDocumentContentAsync (string documentId, string disposition = null, string contentType = null);
 
         /// <summary>
@@ -1307,6 +1400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
 
@@ -1326,6 +1420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>Task of DocumentEntityListing</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<DocumentEntityListing> GetContentmanagementDocumentsAsync (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1344,6 +1439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetContentmanagementDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1360,6 +1456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of QueryResults</returns>
+        
         
         System.Threading.Tasks.Task<QueryResults> GetContentmanagementQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
@@ -1378,6 +1475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetContentmanagementQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -1389,6 +1487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of SecurityProfile</returns>
+        
         
         System.Threading.Tasks.Task<SecurityProfile> GetContentmanagementSecurityprofileAsync (string securityProfileId);
 
@@ -1402,6 +1501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of ApiResponse (SecurityProfile)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetContentmanagementSecurityprofileAsyncWithHttpInfo (string securityProfileId);
 
         /// <summary>
@@ -1413,6 +1513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SecurityProfileEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesAsync ();
 
         /// <summary>
@@ -1423,6 +1524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SecurityProfileEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetContentmanagementSecurityprofilesAsyncWithHttpInfo ();
 
@@ -1437,6 +1539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Share</returns>
         
+        
         System.Threading.Tasks.Task<Share> GetContentmanagementShareAsync (string shareId, List<string> expand = null);
 
         /// <summary>
@@ -1449,6 +1552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Share)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Share>> GetContentmanagementShareAsyncWithHttpInfo (string shareId, List<string> expand = null);
 
@@ -1466,6 +1570,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of SharedResponse</returns>
         
+        
         System.Threading.Tasks.Task<SharedResponse> GetContentmanagementSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
@@ -1482,6 +1587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (SharedResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SharedResponse>> GetContentmanagementSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
@@ -1496,6 +1602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ShareEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<ShareEntityListing> GetContentmanagementSharesAsync (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null);
 
@@ -1512,6 +1619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetContentmanagementSharesAsyncWithHttpInfo (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1524,6 +1632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of CommandStatusEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<CommandStatusEntityListing> GetContentmanagementStatusAsync (int? pageSize = null, int? pageNumber = null);
 
@@ -1538,6 +1647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (CommandStatusEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetContentmanagementStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1549,6 +1659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of CommandStatus</returns>
+        
         
         System.Threading.Tasks.Task<CommandStatus> GetContentmanagementStatusStatusIdAsync (string statusId);
 
@@ -1562,6 +1673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse (CommandStatus)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetContentmanagementStatusStatusIdAsyncWithHttpInfo (string statusId);
 
         /// <summary>
@@ -1573,6 +1685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Usage</returns>
         
+        
         System.Threading.Tasks.Task<Usage> GetContentmanagementUsageAsync ();
 
         /// <summary>
@@ -1583,6 +1696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Usage)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Usage>> GetContentmanagementUsageAsyncWithHttpInfo ();
 
@@ -1597,6 +1711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Workspace</returns>
         
+        
         System.Threading.Tasks.Task<Workspace> GetContentmanagementWorkspaceAsync (string workspaceId, List<string> expand = null);
 
         /// <summary>
@@ -1609,6 +1724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Workspace>> GetContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, List<string> expand = null);
 
@@ -1627,6 +1743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>Task of DocumentEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<DocumentEntityListing> GetContentmanagementWorkspaceDocumentsAsync (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1644,6 +1761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetContentmanagementWorkspaceDocumentsAsyncWithHttpInfo (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1658,6 +1776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceMember</returns>
         
+        
         System.Threading.Tasks.Task<WorkspaceMember> GetContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, List<string> expand = null);
 
         /// <summary>
@@ -1671,6 +1790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, List<string> expand = null);
 
@@ -1687,6 +1807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -1702,6 +1823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetContentmanagementWorkspaceMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -1716,6 +1838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValue</returns>
         
+        
         System.Threading.Tasks.Task<TagValue> GetContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, List<string> expand = null);
 
         /// <summary>
@@ -1729,6 +1852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TagValue>> GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, List<string> expand = null);
 
@@ -1746,6 +1870,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -1762,6 +1887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -1776,6 +1902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="access">Requested access level. (optional)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<WorkspaceEntityListing> GetContentmanagementWorkspacesAsync (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null);
 
@@ -1792,6 +1919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetContentmanagementWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null);
 
         /// <summary>
@@ -1804,6 +1932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of QueryResults</returns>
         
+        
         System.Threading.Tasks.Task<QueryResults> PostContentmanagementAuditqueryAsync (ContentQueryRequest body);
 
         /// <summary>
@@ -1815,6 +1944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementAuditqueryAsyncWithHttpInfo (ContentQueryRequest body);
 
@@ -1831,6 +1961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of Document</returns>
         
+        
         System.Threading.Tasks.Task<Document> PostContentmanagementDocumentAsync (string documentId, DocumentUpdate body, string expand = null, bool? _override = null);
 
         /// <summary>
@@ -1846,6 +1977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentAsyncWithHttpInfo (string documentId, DocumentUpdate body, string expand = null, bool? _override = null);
 
         /// <summary>
@@ -1860,6 +1992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ReplaceResponse</returns>
         
+        
         System.Threading.Tasks.Task<ReplaceResponse> PostContentmanagementDocumentContentAsync (string documentId, ReplaceRequest body, bool? _override = null);
 
         /// <summary>
@@ -1873,6 +2006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, ReplaceRequest body, bool? _override = null);
 
@@ -1889,6 +2023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of Document</returns>
         
+        
         System.Threading.Tasks.Task<Document> PostContentmanagementDocumentsAsync (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
@@ -1904,6 +2039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentsAsyncWithHttpInfo (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
@@ -1916,6 +2052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of QueryResults</returns>
+        
         
         System.Threading.Tasks.Task<QueryResults> PostContentmanagementQueryAsync (QueryRequest body, string expand = null);
 
@@ -1930,6 +2067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementQueryAsyncWithHttpInfo (QueryRequest body, string expand = null);
 
         /// <summary>
@@ -1942,6 +2080,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of CreateShareResponse</returns>
         
+        
         System.Threading.Tasks.Task<CreateShareResponse> PostContentmanagementSharesAsync (CreateShareRequest body);
 
         /// <summary>
@@ -1953,6 +2092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostContentmanagementSharesAsyncWithHttpInfo (CreateShareRequest body);
 
@@ -1967,6 +2107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">tag</param>
         /// <returns>Task of TagValue</returns>
         
+        
         System.Threading.Tasks.Task<TagValue> PostContentmanagementWorkspaceTagvaluesAsync (string workspaceId, TagValue body);
 
         /// <summary>
@@ -1979,6 +2120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TagValue>> PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body);
 
@@ -1994,6 +2136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryAsync (string workspaceId, TagQueryRequest body, List<string> expand = null);
 
         /// <summary>
@@ -2008,6 +2151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body, List<string> expand = null);
 
         /// <summary>
@@ -2020,6 +2164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
         
+        
         System.Threading.Tasks.Task<Workspace> PostContentmanagementWorkspacesAsync (WorkspaceCreate body);
 
         /// <summary>
@@ -2031,6 +2176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Workspace>> PostContentmanagementWorkspacesAsyncWithHttpInfo (WorkspaceCreate body);
 
@@ -2045,6 +2191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
         
+        
         System.Threading.Tasks.Task<Workspace> PutContentmanagementWorkspaceAsync (string workspaceId, Workspace body);
 
         /// <summary>
@@ -2057,6 +2204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Workspace>> PutContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, Workspace body);
 
@@ -2072,6 +2220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace Member</param>
         /// <returns>Task of WorkspaceMember</returns>
         
+        
         System.Threading.Tasks.Task<WorkspaceMember> PutContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, WorkspaceMember body);
 
         /// <summary>
@@ -2085,6 +2234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace Member</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body);
 
@@ -2100,6 +2250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Task of TagValue</returns>
         
+        
         System.Threading.Tasks.Task<TagValue> PutContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, TagValue body);
 
         /// <summary>
@@ -2113,6 +2264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TagValue>> PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body);
 
@@ -2216,6 +2368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns></returns>
         
+        
         public void DeleteContentmanagementDocument (string documentId, bool? _override = null)
         {
              DeleteContentmanagementDocumentWithHttpInfo(documentId, _override);
@@ -2228,6 +2381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteContentmanagementDocumentWithHttpInfo (string documentId, bool? _override = null)
         { 
@@ -2314,6 +2468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteContentmanagementDocumentAsync (string documentId, bool? _override = null)
         {
              await DeleteContentmanagementDocumentAsyncWithHttpInfo(documentId, _override);
@@ -2327,6 +2482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementDocumentAsyncWithHttpInfo (string documentId, bool? _override = null)
         { 
@@ -2414,6 +2570,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="shareId">Share ID</param>
         /// <returns></returns>
         
+        
         public void DeleteContentmanagementShare (string shareId)
         {
              DeleteContentmanagementShareWithHttpInfo(shareId);
@@ -2425,6 +2582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteContentmanagementShareWithHttpInfo (string shareId)
         { 
@@ -2509,6 +2667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteContentmanagementShareAsync (string shareId)
         {
              await DeleteContentmanagementShareAsyncWithHttpInfo(shareId);
@@ -2521,6 +2680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementShareAsyncWithHttpInfo (string shareId)
         { 
@@ -2607,6 +2767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status ID</param>
         /// <returns></returns>
         
+        
         public void DeleteContentmanagementStatusStatusId (string statusId)
         {
              DeleteContentmanagementStatusStatusIdWithHttpInfo(statusId);
@@ -2618,6 +2779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteContentmanagementStatusStatusIdWithHttpInfo (string statusId)
         { 
@@ -2702,6 +2864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteContentmanagementStatusStatusIdAsync (string statusId)
         {
              await DeleteContentmanagementStatusStatusIdAsyncWithHttpInfo(statusId);
@@ -2714,6 +2877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementStatusStatusIdAsyncWithHttpInfo (string statusId)
         { 
@@ -2801,6 +2965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns></returns>
         
+        
         public void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
              DeleteContentmanagementWorkspaceWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
@@ -2813,6 +2978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteContentmanagementWorkspaceWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
         { 
@@ -2899,6 +3065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceAsync (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
              await DeleteContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
@@ -2912,6 +3079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
         { 
@@ -3000,6 +3168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
         
+        
         public void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId)
         {
              DeleteContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId);
@@ -3012,6 +3181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId)
         { 
@@ -3101,6 +3271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId)
         {
              await DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId);
@@ -3114,6 +3285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId)
         { 
@@ -3206,6 +3378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <returns></returns>
         
+        
         public void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId)
         {
              DeleteContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId);
@@ -3218,6 +3391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId)
         { 
@@ -3307,6 +3481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId)
         {
              await DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId);
@@ -3320,6 +3495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId)
         { 
@@ -3412,6 +3588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Document</returns>
         
+        
         public Document GetContentmanagementDocument (string documentId, List<string> expand = null)
         {
              ApiResponse<Document> localVarResponse = GetContentmanagementDocumentWithHttpInfo(documentId, expand);
@@ -3425,6 +3602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Document</returns>
+        
         
         public ApiResponse< Document > GetContentmanagementDocumentWithHttpInfo (string documentId, List<string> expand = null)
         { 
@@ -3511,6 +3689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Document</returns>
         
+        
         public async System.Threading.Tasks.Task<Document> GetContentmanagementDocumentAsync (string documentId, List<string> expand = null)
         {
              ApiResponse<Document> localVarResponse = await GetContentmanagementDocumentAsyncWithHttpInfo(documentId, expand);
@@ -3525,6 +3704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Document>> GetContentmanagementDocumentAsyncWithHttpInfo (string documentId, List<string> expand = null)
         { 
@@ -3618,6 +3798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>DocumentAuditEntityListing</returns>
         
+        
         public DocumentAuditEntityListing GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DocumentAuditEntityListing> localVarResponse = GetContentmanagementDocumentAuditsWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
@@ -3636,6 +3817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>ApiResponse of DocumentAuditEntityListing</returns>
+        
         
         public ApiResponse< DocumentAuditEntityListing > GetContentmanagementDocumentAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         { 
@@ -3732,6 +3914,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>Task of DocumentAuditEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DocumentAuditEntityListing> localVarResponse = await GetContentmanagementDocumentAuditsAsyncWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
@@ -3751,6 +3934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>Task of ApiResponse (DocumentAuditEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetContentmanagementDocumentAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         { 
@@ -3845,6 +4029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>DownloadResponse</returns>
         
+        
         public DownloadResponse GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null)
         {
              ApiResponse<DownloadResponse> localVarResponse = GetContentmanagementDocumentContentWithHttpInfo(documentId, disposition, contentType);
@@ -3859,6 +4044,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
+        
         
         public ApiResponse< DownloadResponse > GetContentmanagementDocumentContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         { 
@@ -3947,6 +4133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<DownloadResponse> GetContentmanagementDocumentContentAsync (string documentId, string disposition = null, string contentType = null)
         {
              ApiResponse<DownloadResponse> localVarResponse = await GetContentmanagementDocumentContentAsyncWithHttpInfo(documentId, disposition, contentType);
@@ -3962,6 +4149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         { 
@@ -4056,6 +4244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>DocumentEntityListing</returns>
         [Obsolete]
+        
         public DocumentEntityListing GetContentmanagementDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DocumentEntityListing> localVarResponse = GetContentmanagementDocumentsWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
@@ -4075,6 +4264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
         [Obsolete]
+        
         public ApiResponse< DocumentEntityListing > GetContentmanagementDocumentsWithHttpInfo (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'workspaceId' is set
@@ -4170,6 +4360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>Task of DocumentEntityListing</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<DocumentEntityListing> GetContentmanagementDocumentsAsync (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DocumentEntityListing> localVarResponse = await GetContentmanagementDocumentsAsyncWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
@@ -4190,6 +4381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetContentmanagementDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'workspaceId' is set
@@ -4286,6 +4478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>QueryResults</returns>
         
+        
         public QueryResults GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<QueryResults> localVarResponse = GetContentmanagementQueryWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
@@ -4303,6 +4496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
+        
         
         public ApiResponse< QueryResults > GetContentmanagementQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         { 
@@ -4397,6 +4591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of QueryResults</returns>
         
+        
         public async System.Threading.Tasks.Task<QueryResults> GetContentmanagementQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<QueryResults> localVarResponse = await GetContentmanagementQueryAsyncWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
@@ -4415,6 +4610,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetContentmanagementQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         { 
@@ -4506,6 +4702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>SecurityProfile</returns>
         
+        
         public SecurityProfile GetContentmanagementSecurityprofile (string securityProfileId)
         {
              ApiResponse<SecurityProfile> localVarResponse = GetContentmanagementSecurityprofileWithHttpInfo(securityProfileId);
@@ -4518,6 +4715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>ApiResponse of SecurityProfile</returns>
+        
         
         public ApiResponse< SecurityProfile > GetContentmanagementSecurityprofileWithHttpInfo (string securityProfileId)
         { 
@@ -4602,6 +4800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of SecurityProfile</returns>
         
+        
         public async System.Threading.Tasks.Task<SecurityProfile> GetContentmanagementSecurityprofileAsync (string securityProfileId)
         {
              ApiResponse<SecurityProfile> localVarResponse = await GetContentmanagementSecurityprofileAsyncWithHttpInfo(securityProfileId);
@@ -4615,6 +4814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of ApiResponse (SecurityProfile)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetContentmanagementSecurityprofileAsyncWithHttpInfo (string securityProfileId)
         { 
@@ -4700,6 +4900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SecurityProfileEntityListing</returns>
         
+        
         public SecurityProfileEntityListing GetContentmanagementSecurityprofiles ()
         {
              ApiResponse<SecurityProfileEntityListing> localVarResponse = GetContentmanagementSecurityprofilesWithHttpInfo();
@@ -4711,6 +4912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SecurityProfileEntityListing</returns>
+        
         
         public ApiResponse< SecurityProfileEntityListing > GetContentmanagementSecurityprofilesWithHttpInfo ()
         { 
@@ -4790,6 +4992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SecurityProfileEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesAsync ()
         {
              ApiResponse<SecurityProfileEntityListing> localVarResponse = await GetContentmanagementSecurityprofilesAsyncWithHttpInfo();
@@ -4802,6 +5005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SecurityProfileEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetContentmanagementSecurityprofilesAsyncWithHttpInfo ()
         { 
@@ -4884,6 +5088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Share</returns>
         
+        
         public Share GetContentmanagementShare (string shareId, List<string> expand = null)
         {
              ApiResponse<Share> localVarResponse = GetContentmanagementShareWithHttpInfo(shareId, expand);
@@ -4897,6 +5102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Share</returns>
+        
         
         public ApiResponse< Share > GetContentmanagementShareWithHttpInfo (string shareId, List<string> expand = null)
         { 
@@ -4983,6 +5189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Share</returns>
         
+        
         public async System.Threading.Tasks.Task<Share> GetContentmanagementShareAsync (string shareId, List<string> expand = null)
         {
              ApiResponse<Share> localVarResponse = await GetContentmanagementShareAsyncWithHttpInfo(shareId, expand);
@@ -4997,6 +5204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Share)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Share>> GetContentmanagementShareAsyncWithHttpInfo (string shareId, List<string> expand = null)
         { 
@@ -5088,6 +5296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>SharedResponse</returns>
         
+        
         public SharedResponse GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
              ApiResponse<SharedResponse> localVarResponse = GetContentmanagementSharedSharedIdWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
@@ -5104,6 +5313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of SharedResponse</returns>
+        
         
         public ApiResponse< SharedResponse > GetContentmanagementSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         { 
@@ -5196,6 +5406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of SharedResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<SharedResponse> GetContentmanagementSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
              ApiResponse<SharedResponse> localVarResponse = await GetContentmanagementSharedSharedIdAsyncWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
@@ -5213,6 +5424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (SharedResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SharedResponse>> GetContentmanagementSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         { 
@@ -5306,6 +5518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ShareEntityListing</returns>
         
+        
         public ShareEntityListing GetContentmanagementShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ShareEntityListing> localVarResponse = GetContentmanagementSharesWithHttpInfo(entityId, expand, pageSize, pageNumber);
@@ -5321,6 +5534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ShareEntityListing</returns>
+        
         
         public ApiResponse< ShareEntityListing > GetContentmanagementSharesWithHttpInfo (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
         { 
@@ -5408,6 +5622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ShareEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ShareEntityListing> GetContentmanagementSharesAsync (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ShareEntityListing> localVarResponse = await GetContentmanagementSharesAsyncWithHttpInfo(entityId, expand, pageSize, pageNumber);
@@ -5424,6 +5639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetContentmanagementSharesAsyncWithHttpInfo (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
         { 
@@ -5510,6 +5726,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>CommandStatusEntityListing</returns>
         
+        
         public CommandStatusEntityListing GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<CommandStatusEntityListing> localVarResponse = GetContentmanagementStatusWithHttpInfo(pageSize, pageNumber);
@@ -5523,6 +5740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of CommandStatusEntityListing</returns>
+        
         
         public ApiResponse< CommandStatusEntityListing > GetContentmanagementStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -5606,6 +5824,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of CommandStatusEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<CommandStatusEntityListing> GetContentmanagementStatusAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<CommandStatusEntityListing> localVarResponse = await GetContentmanagementStatusAsyncWithHttpInfo(pageSize, pageNumber);
@@ -5620,6 +5839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (CommandStatusEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetContentmanagementStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -5703,6 +5923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>CommandStatus</returns>
         
+        
         public CommandStatus GetContentmanagementStatusStatusId (string statusId)
         {
              ApiResponse<CommandStatus> localVarResponse = GetContentmanagementStatusStatusIdWithHttpInfo(statusId);
@@ -5715,6 +5936,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of CommandStatus</returns>
+        
         
         public ApiResponse< CommandStatus > GetContentmanagementStatusStatusIdWithHttpInfo (string statusId)
         { 
@@ -5799,6 +6021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of CommandStatus</returns>
         
+        
         public async System.Threading.Tasks.Task<CommandStatus> GetContentmanagementStatusStatusIdAsync (string statusId)
         {
              ApiResponse<CommandStatus> localVarResponse = await GetContentmanagementStatusStatusIdAsyncWithHttpInfo(statusId);
@@ -5812,6 +6035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse (CommandStatus)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetContentmanagementStatusStatusIdAsyncWithHttpInfo (string statusId)
         { 
@@ -5897,6 +6121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Usage</returns>
         
+        
         public Usage GetContentmanagementUsage ()
         {
              ApiResponse<Usage> localVarResponse = GetContentmanagementUsageWithHttpInfo();
@@ -5908,6 +6133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Usage</returns>
+        
         
         public ApiResponse< Usage > GetContentmanagementUsageWithHttpInfo ()
         { 
@@ -5987,6 +6213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Usage</returns>
         
+        
         public async System.Threading.Tasks.Task<Usage> GetContentmanagementUsageAsync ()
         {
              ApiResponse<Usage> localVarResponse = await GetContentmanagementUsageAsyncWithHttpInfo();
@@ -5999,6 +6226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Usage)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Usage>> GetContentmanagementUsageAsyncWithHttpInfo ()
         { 
@@ -6081,6 +6309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Workspace</returns>
         
+        
         public Workspace GetContentmanagementWorkspace (string workspaceId, List<string> expand = null)
         {
              ApiResponse<Workspace> localVarResponse = GetContentmanagementWorkspaceWithHttpInfo(workspaceId, expand);
@@ -6094,6 +6323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
+        
         
         public ApiResponse< Workspace > GetContentmanagementWorkspaceWithHttpInfo (string workspaceId, List<string> expand = null)
         { 
@@ -6180,6 +6410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Workspace</returns>
         
+        
         public async System.Threading.Tasks.Task<Workspace> GetContentmanagementWorkspaceAsync (string workspaceId, List<string> expand = null)
         {
              ApiResponse<Workspace> localVarResponse = await GetContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, expand);
@@ -6194,6 +6425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Workspace>> GetContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, List<string> expand = null)
         { 
@@ -6286,6 +6518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>DocumentEntityListing</returns>
         
+        
         public DocumentEntityListing GetContentmanagementWorkspaceDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DocumentEntityListing> localVarResponse = GetContentmanagementWorkspaceDocumentsWithHttpInfo(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder);
@@ -6303,6 +6536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
+        
         
         public ApiResponse< DocumentEntityListing > GetContentmanagementWorkspaceDocumentsWithHttpInfo (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
@@ -6397,6 +6631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>Task of DocumentEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DocumentEntityListing> GetContentmanagementWorkspaceDocumentsAsync (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DocumentEntityListing> localVarResponse = await GetContentmanagementWorkspaceDocumentsAsyncWithHttpInfo(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder);
@@ -6415,6 +6650,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to "ascending")</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetContentmanagementWorkspaceDocumentsAsyncWithHttpInfo (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
@@ -6508,6 +6744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceMember</returns>
         
+        
         public WorkspaceMember GetContentmanagementWorkspaceMember (string workspaceId, string memberId, List<string> expand = null)
         {
              ApiResponse<WorkspaceMember> localVarResponse = GetContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId, expand);
@@ -6522,6 +6759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
+        
         
         public ApiResponse< WorkspaceMember > GetContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, List<string> expand = null)
         { 
@@ -6613,6 +6851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceMember</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkspaceMember> GetContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, List<string> expand = null)
         {
              ApiResponse<WorkspaceMember> localVarResponse = await GetContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId, expand);
@@ -6628,6 +6867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, List<string> expand = null)
         { 
@@ -6723,6 +6963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceMemberEntityListing</returns>
         
+        
         public WorkspaceMemberEntityListing GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<WorkspaceMemberEntityListing> localVarResponse = GetContentmanagementWorkspaceMembersWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
@@ -6738,6 +6979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
+        
         
         public ApiResponse< WorkspaceMemberEntityListing > GetContentmanagementWorkspaceMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         { 
@@ -6828,6 +7070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<WorkspaceMemberEntityListing> localVarResponse = await GetContentmanagementWorkspaceMembersAsyncWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
@@ -6844,6 +7087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetContentmanagementWorkspaceMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         { 
@@ -6935,6 +7179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValue</returns>
         
+        
         public TagValue GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, List<string> expand = null)
         {
              ApiResponse<TagValue> localVarResponse = GetContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId, expand);
@@ -6949,6 +7194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
+        
         
         public ApiResponse< TagValue > GetContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, List<string> expand = null)
         { 
@@ -7040,6 +7286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValue</returns>
         
+        
         public async System.Threading.Tasks.Task<TagValue> GetContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, List<string> expand = null)
         {
              ApiResponse<TagValue> localVarResponse = await GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId, expand);
@@ -7055,6 +7302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TagValue>> GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, List<string> expand = null)
         { 
@@ -7151,6 +7399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValueEntityListing</returns>
         
+        
         public TagValueEntityListing GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = GetContentmanagementWorkspaceTagvaluesWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
@@ -7167,6 +7416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
+        
         
         public ApiResponse< TagValueEntityListing > GetContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         { 
@@ -7259,6 +7509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = await GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
@@ -7276,6 +7527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         { 
@@ -7369,6 +7621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceEntityListing</returns>
         
+        
         public WorkspaceEntityListing GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
         {
              ApiResponse<WorkspaceEntityListing> localVarResponse = GetContentmanagementWorkspacesWithHttpInfo(pageSize, pageNumber, access, expand);
@@ -7384,6 +7637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="access">Requested access level. (optional)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
+        
         
         public ApiResponse< WorkspaceEntityListing > GetContentmanagementWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
         { 
@@ -7471,6 +7725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkspaceEntityListing> GetContentmanagementWorkspacesAsync (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
         {
              ApiResponse<WorkspaceEntityListing> localVarResponse = await GetContentmanagementWorkspacesAsyncWithHttpInfo(pageSize, pageNumber, access, expand);
@@ -7487,6 +7742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="access">Requested access level. (optional)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetContentmanagementWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
         { 
@@ -7572,6 +7828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>QueryResults</returns>
         
+        
         public QueryResults PostContentmanagementAuditquery (ContentQueryRequest body)
         {
              ApiResponse<QueryResults> localVarResponse = PostContentmanagementAuditqueryWithHttpInfo(body);
@@ -7584,6 +7841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>ApiResponse of QueryResults</returns>
+        
         
         public ApiResponse< QueryResults > PostContentmanagementAuditqueryWithHttpInfo (ContentQueryRequest body)
         { 
@@ -7673,6 +7931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of QueryResults</returns>
         
+        
         public async System.Threading.Tasks.Task<QueryResults> PostContentmanagementAuditqueryAsync (ContentQueryRequest body)
         {
              ApiResponse<QueryResults> localVarResponse = await PostContentmanagementAuditqueryAsyncWithHttpInfo(body);
@@ -7686,6 +7945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementAuditqueryAsyncWithHttpInfo (ContentQueryRequest body)
         { 
@@ -7780,6 +8040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Document</returns>
         
+        
         public Document PostContentmanagementDocument (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
         {
              ApiResponse<Document> localVarResponse = PostContentmanagementDocumentWithHttpInfo(documentId, body, expand, _override);
@@ -7795,6 +8056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
+        
         
         public ApiResponse< Document > PostContentmanagementDocumentWithHttpInfo (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
         { 
@@ -7893,6 +8155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of Document</returns>
         
+        
         public async System.Threading.Tasks.Task<Document> PostContentmanagementDocumentAsync (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
         {
              ApiResponse<Document> localVarResponse = await PostContentmanagementDocumentAsyncWithHttpInfo(documentId, body, expand, _override);
@@ -7909,6 +8172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentAsyncWithHttpInfo (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
         { 
@@ -8009,6 +8273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ReplaceResponse</returns>
         
+        
         public ReplaceResponse PostContentmanagementDocumentContent (string documentId, ReplaceRequest body, bool? _override = null)
         {
              ApiResponse<ReplaceResponse> localVarResponse = PostContentmanagementDocumentContentWithHttpInfo(documentId, body, _override);
@@ -8023,6 +8288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of ReplaceResponse</returns>
+        
         
         public ApiResponse< ReplaceResponse > PostContentmanagementDocumentContentWithHttpInfo (string documentId, ReplaceRequest body, bool? _override = null)
         { 
@@ -8119,6 +8385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ReplaceResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ReplaceResponse> PostContentmanagementDocumentContentAsync (string documentId, ReplaceRequest body, bool? _override = null)
         {
              ApiResponse<ReplaceResponse> localVarResponse = await PostContentmanagementDocumentContentAsyncWithHttpInfo(documentId, body, _override);
@@ -8134,6 +8401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, ReplaceRequest body, bool? _override = null)
         { 
@@ -8234,6 +8502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Document</returns>
         
+        
         public Document PostContentmanagementDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
         {
              ApiResponse<Document> localVarResponse = PostContentmanagementDocumentsWithHttpInfo(body, copySource, moveSource, _override);
@@ -8249,6 +8518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
+        
         
         public ApiResponse< Document > PostContentmanagementDocumentsWithHttpInfo (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
         { 
@@ -8344,6 +8614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of Document</returns>
         
+        
         public async System.Threading.Tasks.Task<Document> PostContentmanagementDocumentsAsync (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
         {
              ApiResponse<Document> localVarResponse = await PostContentmanagementDocumentsAsyncWithHttpInfo(body, copySource, moveSource, _override);
@@ -8360,6 +8631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentsAsyncWithHttpInfo (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
         { 
@@ -8455,6 +8727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>QueryResults</returns>
         
+        
         public QueryResults PostContentmanagementQuery (QueryRequest body, string expand = null)
         {
              ApiResponse<QueryResults> localVarResponse = PostContentmanagementQueryWithHttpInfo(body, expand);
@@ -8468,6 +8741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
+        
         
         public ApiResponse< QueryResults > PostContentmanagementQueryWithHttpInfo (QueryRequest body, string expand = null)
         { 
@@ -8559,6 +8833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of QueryResults</returns>
         
+        
         public async System.Threading.Tasks.Task<QueryResults> PostContentmanagementQueryAsync (QueryRequest body, string expand = null)
         {
              ApiResponse<QueryResults> localVarResponse = await PostContentmanagementQueryAsyncWithHttpInfo(body, expand);
@@ -8573,6 +8848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementQueryAsyncWithHttpInfo (QueryRequest body, string expand = null)
         { 
@@ -8665,6 +8941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>CreateShareResponse</returns>
         
+        
         public CreateShareResponse PostContentmanagementShares (CreateShareRequest body)
         {
              ApiResponse<CreateShareResponse> localVarResponse = PostContentmanagementSharesWithHttpInfo(body);
@@ -8677,6 +8954,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>ApiResponse of CreateShareResponse</returns>
+        
         
         public ApiResponse< CreateShareResponse > PostContentmanagementSharesWithHttpInfo (CreateShareRequest body)
         { 
@@ -8766,6 +9044,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of CreateShareResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<CreateShareResponse> PostContentmanagementSharesAsync (CreateShareRequest body)
         {
              ApiResponse<CreateShareResponse> localVarResponse = await PostContentmanagementSharesAsyncWithHttpInfo(body);
@@ -8779,6 +9058,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostContentmanagementSharesAsyncWithHttpInfo (CreateShareRequest body)
         { 
@@ -8871,6 +9151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">tag</param>
         /// <returns>TagValue</returns>
         
+        
         public TagValue PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body)
         {
              ApiResponse<TagValue> localVarResponse = PostContentmanagementWorkspaceTagvaluesWithHttpInfo(workspaceId, body);
@@ -8884,6 +9165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>ApiResponse of TagValue</returns>
+        
         
         public ApiResponse< TagValue > PostContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, TagValue body)
         { 
@@ -8978,6 +9260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">tag</param>
         /// <returns>Task of TagValue</returns>
         
+        
         public async System.Threading.Tasks.Task<TagValue> PostContentmanagementWorkspaceTagvaluesAsync (string workspaceId, TagValue body)
         {
              ApiResponse<TagValue> localVarResponse = await PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo(workspaceId, body);
@@ -8992,6 +9275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body)
         { 
@@ -9090,6 +9374,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValueEntityListing</returns>
         
+        
         public TagValueEntityListing PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo(workspaceId, body, expand);
@@ -9104,6 +9389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
+        
         
         public ApiResponse< TagValueEntityListing > PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body, List<string> expand = null)
         { 
@@ -9200,6 +9486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryAsync (string workspaceId, TagQueryRequest body, List<string> expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = await PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo(workspaceId, body, expand);
@@ -9215,6 +9502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body, List<string> expand = null)
         { 
@@ -9312,6 +9600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
         
+        
         public Workspace PostContentmanagementWorkspaces (WorkspaceCreate body)
         {
              ApiResponse<Workspace> localVarResponse = PostContentmanagementWorkspacesWithHttpInfo(body);
@@ -9324,6 +9613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
+        
         
         public ApiResponse< Workspace > PostContentmanagementWorkspacesWithHttpInfo (WorkspaceCreate body)
         { 
@@ -9413,6 +9703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
         
+        
         public async System.Threading.Tasks.Task<Workspace> PostContentmanagementWorkspacesAsync (WorkspaceCreate body)
         {
              ApiResponse<Workspace> localVarResponse = await PostContentmanagementWorkspacesAsyncWithHttpInfo(body);
@@ -9426,6 +9717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PostContentmanagementWorkspacesAsyncWithHttpInfo (WorkspaceCreate body)
         { 
@@ -9518,6 +9810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
         
+        
         public Workspace PutContentmanagementWorkspace (string workspaceId, Workspace body)
         {
              ApiResponse<Workspace> localVarResponse = PutContentmanagementWorkspaceWithHttpInfo(workspaceId, body);
@@ -9531,6 +9824,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
+        
         
         public ApiResponse< Workspace > PutContentmanagementWorkspaceWithHttpInfo (string workspaceId, Workspace body)
         { 
@@ -9625,6 +9919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
         
+        
         public async System.Threading.Tasks.Task<Workspace> PutContentmanagementWorkspaceAsync (string workspaceId, Workspace body)
         {
              ApiResponse<Workspace> localVarResponse = await PutContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, body);
@@ -9639,6 +9934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PutContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, Workspace body)
         { 
@@ -9737,6 +10033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace Member</param>
         /// <returns>WorkspaceMember</returns>
         
+        
         public WorkspaceMember PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body)
         {
              ApiResponse<WorkspaceMember> localVarResponse = PutContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId, body);
@@ -9751,6 +10048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace Member</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
+        
         
         public ApiResponse< WorkspaceMember > PutContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body)
         { 
@@ -9850,6 +10148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace Member</param>
         /// <returns>Task of WorkspaceMember</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkspaceMember> PutContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, WorkspaceMember body)
         {
              ApiResponse<WorkspaceMember> localVarResponse = await PutContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId, body);
@@ -9865,6 +10164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace Member</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body)
         { 
@@ -9968,6 +10268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>TagValue</returns>
         
+        
         public TagValue PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body)
         {
              ApiResponse<TagValue> localVarResponse = PutContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId, body);
@@ -9982,6 +10283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of TagValue</returns>
+        
         
         public ApiResponse< TagValue > PutContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, TagValue body)
         { 
@@ -10081,6 +10383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Workspace</param>
         /// <returns>Task of TagValue</returns>
         
+        
         public async System.Threading.Tasks.Task<TagValue> PutContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, TagValue body)
         {
              ApiResponse<TagValue> localVarResponse = await PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId, body);
@@ -10096,6 +10399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body)
         { 

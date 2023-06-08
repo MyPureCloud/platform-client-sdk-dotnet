@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTeamMembers**](TeamsApi.html#getteammembers) | **GET** /api/v2/teams/{teamId}/members | Get team membership |
 | [**GetTeams**](TeamsApi.html#getteams) | **GET** /api/v2/teams | Get Team listing |
 | [**PatchTeam**](TeamsApi.html#patchteam) | **PATCH** /api/v2/teams/{teamId} | Update team |
+| [**PostAnalyticsTeamsActivityQuery**](TeamsApi.html#postanalyticsteamsactivityquery) | **POST** /api/v2/analytics/teams/activity/query | Query for team activity observations |
 | [**PostTeamMembers**](TeamsApi.html#postteammembers) | **POST** /api/v2/teams/{teamId}/members | Add team members |
 | [**PostTeams**](TeamsApi.html#postteams) | **POST** /api/v2/teams | Create a team |
 | [**PostTeamsSearch**](TeamsApi.html#postteamssearch) | **POST** /api/v2/teams/search | Search resources. |
@@ -425,6 +426,75 @@ namespace Example
 ### Return type
 
 [**Team**](Team.html)
+
+<a name="postanalyticsteamsactivityquery"></a>
+
+## [**TeamActivityResponse**](TeamActivityResponse.html) PostAnalyticsTeamsActivityQuery (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
+
+
+
+Query for team activity observations
+
+
+
+Requires ANY permissions: 
+
+* analytics:teamObservation:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsTeamsActivityQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TeamsApi();
+            var body = new TeamActivityQuery(); // TeamActivityQuery | query
+            var pageSize = 56;  // int? | The desired page size (optional) 
+            var pageNumber = 56;  // int? | The desired page number (optional) 
+
+            try
+            { 
+                // Query for team activity observations
+                TeamActivityResponse result = apiInstance.PostAnalyticsTeamsActivityQuery(body, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeamsApi.PostAnalyticsTeamsActivityQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TeamActivityQuery**](TeamActivityQuery.html)| query |  |
+| **pageSize** | **int?**| The desired page size | [optional]  |
+| **pageNumber** | **int?**| The desired page number | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TeamActivityResponse**](TeamActivityResponse.html)
 
 <a name="postteammembers"></a>
 

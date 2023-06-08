@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns></returns>
         [Obsolete]
+        
         void DeleteWebchatDeployment (string deploymentId);
 
         /// <summary>
@@ -38,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         ApiResponse<Object> DeleteWebchatDeploymentWithHttpInfo (string deploymentId);
 
         /// <summary>
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns></returns>
+        
         
         void DeleteWebchatGuestConversationMember (string conversationId, string memberId);
 
@@ -64,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteWebchatGuestConversationMemberWithHttpInfo (string conversationId, string memberId);
 
         /// <summary>
@@ -75,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
+        
         void DeleteWebchatSettings ();
 
         /// <summary>
@@ -85,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWebchatSettingsWithHttpInfo ();
 
@@ -98,6 +104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>WebChatDeployment</returns>
         [Obsolete]
+        
         WebChatDeployment GetWebchatDeployment (string deploymentId);
 
         /// <summary>
@@ -110,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>ApiResponse of WebChatDeployment</returns>
         [Obsolete]
+        
         ApiResponse<WebChatDeployment> GetWebchatDeploymentWithHttpInfo (string deploymentId);
 
         /// <summary>
@@ -121,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WebChatDeploymentEntityListing</returns>
         [Obsolete]
+        
         WebChatDeploymentEntityListing GetWebchatDeployments ();
 
         /// <summary>
@@ -132,6 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WebChatDeploymentEntityListing</returns>
         [Obsolete]
+        
         ApiResponse<WebChatDeploymentEntityListing> GetWebchatDeploymentsWithHttpInfo ();
 
         /// <summary>
@@ -144,6 +154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>WebChatGuestMediaRequest</returns>
+        
         
         WebChatGuestMediaRequest GetWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId);
 
@@ -158,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequest</returns>
         
+        
         ApiResponse<WebChatGuestMediaRequest> GetWebchatGuestConversationMediarequestWithHttpInfo (string conversationId, string mediaRequestId);
 
         /// <summary>
@@ -170,6 +182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <returns>WebChatGuestMediaRequestEntityList</returns>
         
+        
         WebChatGuestMediaRequestEntityList GetWebchatGuestConversationMediarequests (string conversationId);
 
         /// <summary>
@@ -181,6 +194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequestEntityList</returns>
+        
         
         ApiResponse<WebChatGuestMediaRequestEntityList> GetWebchatGuestConversationMediarequestsWithHttpInfo (string conversationId);
 
@@ -195,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>WebChatMemberInfo</returns>
         
+        
         WebChatMemberInfo GetWebchatGuestConversationMember (string conversationId, string memberId);
 
         /// <summary>
@@ -207,6 +222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>ApiResponse of WebChatMemberInfo</returns>
+        
         
         ApiResponse<WebChatMemberInfo> GetWebchatGuestConversationMemberWithHttpInfo (string conversationId, string memberId);
 
@@ -223,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeDisconnectedMembers">If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)</param>
         /// <returns>WebChatMemberInfoEntityList</returns>
         
+        
         WebChatMemberInfoEntityList GetWebchatGuestConversationMembers (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null);
 
         /// <summary>
@@ -238,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeDisconnectedMembers">If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)</param>
         /// <returns>ApiResponse of WebChatMemberInfoEntityList</returns>
         
+        
         ApiResponse<WebChatMemberInfoEntityList> GetWebchatGuestConversationMembersWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null);
 
         /// <summary>
@@ -251,6 +269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">messageId</param>
         /// <returns>WebChatMessage</returns>
         
+        
         WebChatMessage GetWebchatGuestConversationMessage (string conversationId, string messageId);
 
         /// <summary>
@@ -263,6 +282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>ApiResponse of WebChatMessage</returns>
+        
         
         ApiResponse<WebChatMessage> GetWebchatGuestConversationMessageWithHttpInfo (string conversationId, string messageId);
 
@@ -280,6 +300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>WebChatMessageEntityList</returns>
         
+        
         WebChatMessageEntityList GetWebchatGuestConversationMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
 
         /// <summary>
@@ -296,6 +317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>ApiResponse of WebChatMessageEntityList</returns>
         
+        
         ApiResponse<WebChatMessageEntityList> GetWebchatGuestConversationMessagesWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
 
         /// <summary>
@@ -307,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WebChatSettings</returns>
         
+        
         WebChatSettings GetWebchatSettings ();
 
         /// <summary>
@@ -317,6 +340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WebChatSettings</returns>
+        
         
         ApiResponse<WebChatSettings> GetWebchatSettingsWithHttpInfo ();
 
@@ -332,6 +356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request</param>
         /// <returns>WebChatGuestMediaRequest</returns>
         
+        
         WebChatGuestMediaRequest PatchWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body);
 
         /// <summary>
@@ -346,6 +371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequest</returns>
         
+        
         ApiResponse<WebChatGuestMediaRequest> PatchWebchatGuestConversationMediarequestWithHttpInfo (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body);
 
         /// <summary>
@@ -358,6 +384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>WebChatDeployment</returns>
         [Obsolete]
+        
         WebChatDeployment PostWebchatDeployments (WebChatDeployment body);
 
         /// <summary>
@@ -370,6 +397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WebChatDeployment</returns>
         [Obsolete]
+        
         ApiResponse<WebChatDeployment> PostWebchatDeploymentsWithHttpInfo (WebChatDeployment body);
 
         /// <summary>
@@ -383,6 +411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <param name="body">Message</param>
         /// <returns>WebChatMessage</returns>
+        
         
         WebChatMessage PostWebchatGuestConversationMemberMessages (string conversationId, string memberId, CreateWebChatMessageRequest body);
 
@@ -398,6 +427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Message</param>
         /// <returns>ApiResponse of WebChatMessage</returns>
         
+        
         ApiResponse<WebChatMessage> PostWebchatGuestConversationMemberMessagesWithHttpInfo (string conversationId, string memberId, CreateWebChatMessageRequest body);
 
         /// <summary>
@@ -410,6 +440,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>WebChatTyping</returns>
+        
         
         WebChatTyping PostWebchatGuestConversationMemberTyping (string conversationId, string memberId);
 
@@ -424,6 +455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>ApiResponse of WebChatTyping</returns>
         
+        
         ApiResponse<WebChatTyping> PostWebchatGuestConversationMemberTypingWithHttpInfo (string conversationId, string memberId);
 
         /// <summary>
@@ -436,6 +468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CreateConversationRequest</param>
         /// <returns>CreateWebChatConversationResponse</returns>
         
+        
         CreateWebChatConversationResponse PostWebchatGuestConversations (CreateWebChatConversationRequest body);
 
         /// <summary>
@@ -447,6 +480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CreateConversationRequest</param>
         /// <returns>ApiResponse of CreateWebChatConversationResponse</returns>
+        
         
         ApiResponse<CreateWebChatConversationResponse> PostWebchatGuestConversationsWithHttpInfo (CreateWebChatConversationRequest body);
 
@@ -461,6 +495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>WebChatDeployment</returns>
         [Obsolete]
+        
         WebChatDeployment PutWebchatDeployment (string deploymentId, WebChatDeployment body);
 
         /// <summary>
@@ -474,6 +509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WebChatDeployment</returns>
         [Obsolete]
+        
         ApiResponse<WebChatDeployment> PutWebchatDeploymentWithHttpInfo (string deploymentId, WebChatDeployment body);
 
         /// <summary>
@@ -486,6 +522,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">webChatSettings</param>
         /// <returns>WebChatSettings</returns>
         
+        
         WebChatSettings PutWebchatSettings (WebChatSettings body);
 
         /// <summary>
@@ -497,6 +534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>ApiResponse of WebChatSettings</returns>
+        
         
         ApiResponse<WebChatSettings> PutWebchatSettingsWithHttpInfo (WebChatSettings body);
 
@@ -514,6 +552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task DeleteWebchatDeploymentAsync (string deploymentId);
 
         /// <summary>
@@ -526,6 +565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebchatDeploymentAsyncWithHttpInfo (string deploymentId);
 
         /// <summary>
@@ -538,6 +578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteWebchatGuestConversationMemberAsync (string conversationId, string memberId);
 
@@ -552,6 +593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebchatGuestConversationMemberAsyncWithHttpInfo (string conversationId, string memberId);
 
         /// <summary>
@@ -563,6 +605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWebchatSettingsAsync ();
 
         /// <summary>
@@ -573,6 +616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebchatSettingsAsyncWithHttpInfo ();
 
@@ -586,6 +630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>Task of WebChatDeployment</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<WebChatDeployment> GetWebchatDeploymentAsync (string deploymentId);
 
         /// <summary>
@@ -598,6 +643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>Task of ApiResponse (WebChatDeployment)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatDeployment>> GetWebchatDeploymentAsyncWithHttpInfo (string deploymentId);
 
         /// <summary>
@@ -609,6 +655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WebChatDeploymentEntityListing</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<WebChatDeploymentEntityListing> GetWebchatDeploymentsAsync ();
 
         /// <summary>
@@ -620,6 +667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WebChatDeploymentEntityListing)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatDeploymentEntityListing>> GetWebchatDeploymentsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -632,6 +680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>Task of WebChatGuestMediaRequest</returns>
+        
         
         System.Threading.Tasks.Task<WebChatGuestMediaRequest> GetWebchatGuestConversationMediarequestAsync (string conversationId, string mediaRequestId);
 
@@ -646,6 +695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequest)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequest>> GetWebchatGuestConversationMediarequestAsyncWithHttpInfo (string conversationId, string mediaRequestId);
 
         /// <summary>
@@ -658,6 +708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of WebChatGuestMediaRequestEntityList</returns>
         
+        
         System.Threading.Tasks.Task<WebChatGuestMediaRequestEntityList> GetWebchatGuestConversationMediarequestsAsync (string conversationId);
 
         /// <summary>
@@ -669,6 +720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequestEntityList)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequestEntityList>> GetWebchatGuestConversationMediarequestsAsyncWithHttpInfo (string conversationId);
 
@@ -683,6 +735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>Task of WebChatMemberInfo</returns>
         
+        
         System.Threading.Tasks.Task<WebChatMemberInfo> GetWebchatGuestConversationMemberAsync (string conversationId, string memberId);
 
         /// <summary>
@@ -695,6 +748,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>Task of ApiResponse (WebChatMemberInfo)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WebChatMemberInfo>> GetWebchatGuestConversationMemberAsyncWithHttpInfo (string conversationId, string memberId);
 
@@ -711,6 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeDisconnectedMembers">If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)</param>
         /// <returns>Task of WebChatMemberInfoEntityList</returns>
         
+        
         System.Threading.Tasks.Task<WebChatMemberInfoEntityList> GetWebchatGuestConversationMembersAsync (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null);
 
         /// <summary>
@@ -726,6 +781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeDisconnectedMembers">If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (WebChatMemberInfoEntityList)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatMemberInfoEntityList>> GetWebchatGuestConversationMembersAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null);
 
         /// <summary>
@@ -739,6 +795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">messageId</param>
         /// <returns>Task of WebChatMessage</returns>
         
+        
         System.Threading.Tasks.Task<WebChatMessage> GetWebchatGuestConversationMessageAsync (string conversationId, string messageId);
 
         /// <summary>
@@ -751,6 +808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>Task of ApiResponse (WebChatMessage)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> GetWebchatGuestConversationMessageAsyncWithHttpInfo (string conversationId, string messageId);
 
@@ -768,6 +826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>Task of WebChatMessageEntityList</returns>
         
+        
         System.Threading.Tasks.Task<WebChatMessageEntityList> GetWebchatGuestConversationMessagesAsync (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
 
         /// <summary>
@@ -784,6 +843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (WebChatMessageEntityList)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatMessageEntityList>> GetWebchatGuestConversationMessagesAsyncWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null);
 
         /// <summary>
@@ -795,6 +855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WebChatSettings</returns>
         
+        
         System.Threading.Tasks.Task<WebChatSettings> GetWebchatSettingsAsync ();
 
         /// <summary>
@@ -805,6 +866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WebChatSettings)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WebChatSettings>> GetWebchatSettingsAsyncWithHttpInfo ();
 
@@ -820,6 +882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request</param>
         /// <returns>Task of WebChatGuestMediaRequest</returns>
         
+        
         System.Threading.Tasks.Task<WebChatGuestMediaRequest> PatchWebchatGuestConversationMediarequestAsync (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body);
 
         /// <summary>
@@ -834,6 +897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequest)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequest>> PatchWebchatGuestConversationMediarequestAsyncWithHttpInfo (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body);
 
         /// <summary>
@@ -846,6 +910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of WebChatDeployment</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<WebChatDeployment> PostWebchatDeploymentsAsync (WebChatDeployment body);
 
         /// <summary>
@@ -858,6 +923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WebChatDeployment)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatDeployment>> PostWebchatDeploymentsAsyncWithHttpInfo (WebChatDeployment body);
 
         /// <summary>
@@ -871,6 +937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <param name="body">Message</param>
         /// <returns>Task of WebChatMessage</returns>
+        
         
         System.Threading.Tasks.Task<WebChatMessage> PostWebchatGuestConversationMemberMessagesAsync (string conversationId, string memberId, CreateWebChatMessageRequest body);
 
@@ -886,6 +953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Message</param>
         /// <returns>Task of ApiResponse (WebChatMessage)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> PostWebchatGuestConversationMemberMessagesAsyncWithHttpInfo (string conversationId, string memberId, CreateWebChatMessageRequest body);
 
         /// <summary>
@@ -898,6 +966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>Task of WebChatTyping</returns>
+        
         
         System.Threading.Tasks.Task<WebChatTyping> PostWebchatGuestConversationMemberTypingAsync (string conversationId, string memberId);
 
@@ -912,6 +981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>Task of ApiResponse (WebChatTyping)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatTyping>> PostWebchatGuestConversationMemberTypingAsyncWithHttpInfo (string conversationId, string memberId);
 
         /// <summary>
@@ -924,6 +994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CreateConversationRequest</param>
         /// <returns>Task of CreateWebChatConversationResponse</returns>
         
+        
         System.Threading.Tasks.Task<CreateWebChatConversationResponse> PostWebchatGuestConversationsAsync (CreateWebChatConversationRequest body);
 
         /// <summary>
@@ -935,6 +1006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CreateConversationRequest</param>
         /// <returns>Task of ApiResponse (CreateWebChatConversationResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<CreateWebChatConversationResponse>> PostWebchatGuestConversationsAsyncWithHttpInfo (CreateWebChatConversationRequest body);
 
@@ -949,6 +1021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of WebChatDeployment</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<WebChatDeployment> PutWebchatDeploymentAsync (string deploymentId, WebChatDeployment body);
 
         /// <summary>
@@ -962,6 +1035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WebChatDeployment)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<WebChatDeployment>> PutWebchatDeploymentAsyncWithHttpInfo (string deploymentId, WebChatDeployment body);
 
         /// <summary>
@@ -974,6 +1048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">webChatSettings</param>
         /// <returns>Task of WebChatSettings</returns>
         
+        
         System.Threading.Tasks.Task<WebChatSettings> PutWebchatSettingsAsync (WebChatSettings body);
 
         /// <summary>
@@ -985,6 +1060,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>Task of ApiResponse (WebChatSettings)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WebChatSettings>> PutWebchatSettingsAsyncWithHttpInfo (WebChatSettings body);
 
@@ -1087,6 +1163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns></returns>
         [Obsolete]
+        
         public void DeleteWebchatDeployment (string deploymentId)
         {
              DeleteWebchatDeploymentWithHttpInfo(deploymentId);
@@ -1099,6 +1176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         public ApiResponse<Object> DeleteWebchatDeploymentWithHttpInfo (string deploymentId)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -1182,6 +1260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task DeleteWebchatDeploymentAsync (string deploymentId)
         {
              await DeleteWebchatDeploymentAsyncWithHttpInfo(deploymentId);
@@ -1195,6 +1274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebchatDeploymentAsyncWithHttpInfo (string deploymentId)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -1281,6 +1361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns></returns>
         
+        
         public void DeleteWebchatGuestConversationMember (string conversationId, string memberId)
         {
              DeleteWebchatGuestConversationMemberWithHttpInfo(conversationId, memberId);
@@ -1293,6 +1374,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWebchatGuestConversationMemberWithHttpInfo (string conversationId, string memberId)
         { 
@@ -1381,6 +1463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWebchatGuestConversationMemberAsync (string conversationId, string memberId)
         {
              await DeleteWebchatGuestConversationMemberAsyncWithHttpInfo(conversationId, memberId);
@@ -1394,6 +1477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebchatGuestConversationMemberAsyncWithHttpInfo (string conversationId, string memberId)
         { 
@@ -1483,6 +1567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
+        
         public void DeleteWebchatSettings ()
         {
              DeleteWebchatSettingsWithHttpInfo();
@@ -1493,6 +1578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWebchatSettingsWithHttpInfo ()
         { 
@@ -1572,6 +1658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWebchatSettingsAsync ()
         {
              await DeleteWebchatSettingsAsyncWithHttpInfo();
@@ -1583,6 +1670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebchatSettingsAsyncWithHttpInfo ()
         { 
@@ -1664,6 +1752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>WebChatDeployment</returns>
         [Obsolete]
+        
         public WebChatDeployment GetWebchatDeployment (string deploymentId)
         {
              ApiResponse<WebChatDeployment> localVarResponse = GetWebchatDeploymentWithHttpInfo(deploymentId);
@@ -1677,6 +1766,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>ApiResponse of WebChatDeployment</returns>
         [Obsolete]
+        
         public ApiResponse< WebChatDeployment > GetWebchatDeploymentWithHttpInfo (string deploymentId)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -1760,6 +1850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>Task of WebChatDeployment</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<WebChatDeployment> GetWebchatDeploymentAsync (string deploymentId)
         {
              ApiResponse<WebChatDeployment> localVarResponse = await GetWebchatDeploymentAsyncWithHttpInfo(deploymentId);
@@ -1774,6 +1865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">Deployment Id</param>
         /// <returns>Task of ApiResponse (WebChatDeployment)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<WebChatDeployment>> GetWebchatDeploymentAsyncWithHttpInfo (string deploymentId)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -1858,6 +1950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WebChatDeploymentEntityListing</returns>
         [Obsolete]
+        
         public WebChatDeploymentEntityListing GetWebchatDeployments ()
         {
              ApiResponse<WebChatDeploymentEntityListing> localVarResponse = GetWebchatDeploymentsWithHttpInfo();
@@ -1870,6 +1963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WebChatDeploymentEntityListing</returns>
         [Obsolete]
+        
         public ApiResponse< WebChatDeploymentEntityListing > GetWebchatDeploymentsWithHttpInfo ()
         { 
 
@@ -1948,6 +2042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WebChatDeploymentEntityListing</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<WebChatDeploymentEntityListing> GetWebchatDeploymentsAsync ()
         {
              ApiResponse<WebChatDeploymentEntityListing> localVarResponse = await GetWebchatDeploymentsAsyncWithHttpInfo();
@@ -1961,6 +2056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WebChatDeploymentEntityListing)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<WebChatDeploymentEntityListing>> GetWebchatDeploymentsAsyncWithHttpInfo ()
         { 
 
@@ -2042,6 +2138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>WebChatGuestMediaRequest</returns>
         
+        
         public WebChatGuestMediaRequest GetWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId)
         {
              ApiResponse<WebChatGuestMediaRequest> localVarResponse = GetWebchatGuestConversationMediarequestWithHttpInfo(conversationId, mediaRequestId);
@@ -2055,6 +2152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequest</returns>
+        
         
         public ApiResponse< WebChatGuestMediaRequest > GetWebchatGuestConversationMediarequestWithHttpInfo (string conversationId, string mediaRequestId)
         { 
@@ -2143,6 +2241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>Task of WebChatGuestMediaRequest</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatGuestMediaRequest> GetWebchatGuestConversationMediarequestAsync (string conversationId, string mediaRequestId)
         {
              ApiResponse<WebChatGuestMediaRequest> localVarResponse = await GetWebchatGuestConversationMediarequestAsyncWithHttpInfo(conversationId, mediaRequestId);
@@ -2157,6 +2256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequest)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequest>> GetWebchatGuestConversationMediarequestAsyncWithHttpInfo (string conversationId, string mediaRequestId)
         { 
@@ -2247,6 +2347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <returns>WebChatGuestMediaRequestEntityList</returns>
         
+        
         public WebChatGuestMediaRequestEntityList GetWebchatGuestConversationMediarequests (string conversationId)
         {
              ApiResponse<WebChatGuestMediaRequestEntityList> localVarResponse = GetWebchatGuestConversationMediarequestsWithHttpInfo(conversationId);
@@ -2259,6 +2360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequestEntityList</returns>
+        
         
         public ApiResponse< WebChatGuestMediaRequestEntityList > GetWebchatGuestConversationMediarequestsWithHttpInfo (string conversationId)
         { 
@@ -2342,6 +2444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of WebChatGuestMediaRequestEntityList</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatGuestMediaRequestEntityList> GetWebchatGuestConversationMediarequestsAsync (string conversationId)
         {
              ApiResponse<WebChatGuestMediaRequestEntityList> localVarResponse = await GetWebchatGuestConversationMediarequestsAsyncWithHttpInfo(conversationId);
@@ -2355,6 +2458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequestEntityList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequestEntityList>> GetWebchatGuestConversationMediarequestsAsyncWithHttpInfo (string conversationId)
         { 
@@ -2441,6 +2545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>WebChatMemberInfo</returns>
         
+        
         public WebChatMemberInfo GetWebchatGuestConversationMember (string conversationId, string memberId)
         {
              ApiResponse<WebChatMemberInfo> localVarResponse = GetWebchatGuestConversationMemberWithHttpInfo(conversationId, memberId);
@@ -2454,6 +2559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>ApiResponse of WebChatMemberInfo</returns>
+        
         
         public ApiResponse< WebChatMemberInfo > GetWebchatGuestConversationMemberWithHttpInfo (string conversationId, string memberId)
         { 
@@ -2542,6 +2648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>Task of WebChatMemberInfo</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatMemberInfo> GetWebchatGuestConversationMemberAsync (string conversationId, string memberId)
         {
              ApiResponse<WebChatMemberInfo> localVarResponse = await GetWebchatGuestConversationMemberAsyncWithHttpInfo(conversationId, memberId);
@@ -2556,6 +2663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>Task of ApiResponse (WebChatMemberInfo)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatMemberInfo>> GetWebchatGuestConversationMemberAsyncWithHttpInfo (string conversationId, string memberId)
         { 
@@ -2649,6 +2757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeDisconnectedMembers">If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)</param>
         /// <returns>WebChatMemberInfoEntityList</returns>
         
+        
         public WebChatMemberInfoEntityList GetWebchatGuestConversationMembers (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null)
         {
              ApiResponse<WebChatMemberInfoEntityList> localVarResponse = GetWebchatGuestConversationMembersWithHttpInfo(conversationId, pageSize, pageNumber, excludeDisconnectedMembers);
@@ -2664,6 +2773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number to return, or omitted for the first page. (optional, default to 1)</param>
         /// <param name="excludeDisconnectedMembers">If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)</param>
         /// <returns>ApiResponse of WebChatMemberInfoEntityList</returns>
+        
         
         public ApiResponse< WebChatMemberInfoEntityList > GetWebchatGuestConversationMembersWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null)
         { 
@@ -2753,6 +2863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeDisconnectedMembers">If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)</param>
         /// <returns>Task of WebChatMemberInfoEntityList</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatMemberInfoEntityList> GetWebchatGuestConversationMembersAsync (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null)
         {
              ApiResponse<WebChatMemberInfoEntityList> localVarResponse = await GetWebchatGuestConversationMembersAsyncWithHttpInfo(conversationId, pageSize, pageNumber, excludeDisconnectedMembers);
@@ -2769,6 +2880,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The page number to return, or omitted for the first page. (optional, default to 1)</param>
         /// <param name="excludeDisconnectedMembers">If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (WebChatMemberInfoEntityList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatMemberInfoEntityList>> GetWebchatGuestConversationMembersAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null)
         { 
@@ -2858,6 +2970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">messageId</param>
         /// <returns>WebChatMessage</returns>
         
+        
         public WebChatMessage GetWebchatGuestConversationMessage (string conversationId, string messageId)
         {
              ApiResponse<WebChatMessage> localVarResponse = GetWebchatGuestConversationMessageWithHttpInfo(conversationId, messageId);
@@ -2871,6 +2984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>ApiResponse of WebChatMessage</returns>
+        
         
         public ApiResponse< WebChatMessage > GetWebchatGuestConversationMessageWithHttpInfo (string conversationId, string messageId)
         { 
@@ -2959,6 +3073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">messageId</param>
         /// <returns>Task of WebChatMessage</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatMessage> GetWebchatGuestConversationMessageAsync (string conversationId, string messageId)
         {
              ApiResponse<WebChatMessage> localVarResponse = await GetWebchatGuestConversationMessageAsyncWithHttpInfo(conversationId, messageId);
@@ -2973,6 +3088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
         /// <returns>Task of ApiResponse (WebChatMessage)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> GetWebchatGuestConversationMessageAsyncWithHttpInfo (string conversationId, string messageId)
         { 
@@ -3067,6 +3183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>WebChatMessageEntityList</returns>
         
+        
         public WebChatMessageEntityList GetWebchatGuestConversationMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
         {
              ApiResponse<WebChatMessageEntityList> localVarResponse = GetWebchatGuestConversationMessagesWithHttpInfo(conversationId, after, before, sortOrder, maxResults);
@@ -3083,6 +3200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>ApiResponse of WebChatMessageEntityList</returns>
+        
         
         public ApiResponse< WebChatMessageEntityList > GetWebchatGuestConversationMessagesWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
         { 
@@ -3174,6 +3292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>Task of WebChatMessageEntityList</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatMessageEntityList> GetWebchatGuestConversationMessagesAsync (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
         {
              ApiResponse<WebChatMessageEntityList> localVarResponse = await GetWebchatGuestConversationMessagesAsyncWithHttpInfo(conversationId, after, before, sortOrder, maxResults);
@@ -3191,6 +3310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="maxResults">Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (WebChatMessageEntityList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatMessageEntityList>> GetWebchatGuestConversationMessagesAsyncWithHttpInfo (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
         { 
@@ -3279,6 +3399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WebChatSettings</returns>
         
+        
         public WebChatSettings GetWebchatSettings ()
         {
              ApiResponse<WebChatSettings> localVarResponse = GetWebchatSettingsWithHttpInfo();
@@ -3290,6 +3411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WebChatSettings</returns>
+        
         
         public ApiResponse< WebChatSettings > GetWebchatSettingsWithHttpInfo ()
         { 
@@ -3369,6 +3491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WebChatSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatSettings> GetWebchatSettingsAsync ()
         {
              ApiResponse<WebChatSettings> localVarResponse = await GetWebchatSettingsAsyncWithHttpInfo();
@@ -3381,6 +3504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WebChatSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatSettings>> GetWebchatSettingsAsyncWithHttpInfo ()
         { 
@@ -3464,6 +3588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request</param>
         /// <returns>WebChatGuestMediaRequest</returns>
         
+        
         public WebChatGuestMediaRequest PatchWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
         {
              ApiResponse<WebChatGuestMediaRequest> localVarResponse = PatchWebchatGuestConversationMediarequestWithHttpInfo(conversationId, mediaRequestId, body);
@@ -3478,6 +3603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequest</returns>
+        
         
         public ApiResponse< WebChatGuestMediaRequest > PatchWebchatGuestConversationMediarequestWithHttpInfo (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
         { 
@@ -3576,6 +3702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request</param>
         /// <returns>Task of WebChatGuestMediaRequest</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatGuestMediaRequest> PatchWebchatGuestConversationMediarequestAsync (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
         {
              ApiResponse<WebChatGuestMediaRequest> localVarResponse = await PatchWebchatGuestConversationMediarequestAsyncWithHttpInfo(conversationId, mediaRequestId, body);
@@ -3591,6 +3718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequest)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequest>> PatchWebchatGuestConversationMediarequestAsyncWithHttpInfo (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
         { 
@@ -3691,6 +3819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>WebChatDeployment</returns>
         [Obsolete]
+        
         public WebChatDeployment PostWebchatDeployments (WebChatDeployment body)
         {
              ApiResponse<WebChatDeployment> localVarResponse = PostWebchatDeploymentsWithHttpInfo(body);
@@ -3704,6 +3833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WebChatDeployment</returns>
         [Obsolete]
+        
         public ApiResponse< WebChatDeployment > PostWebchatDeploymentsWithHttpInfo (WebChatDeployment body)
         { 
             // verify the required parameter 'body' is set
@@ -3792,6 +3922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of WebChatDeployment</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<WebChatDeployment> PostWebchatDeploymentsAsync (WebChatDeployment body)
         {
              ApiResponse<WebChatDeployment> localVarResponse = await PostWebchatDeploymentsAsyncWithHttpInfo(body);
@@ -3806,6 +3937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WebChatDeployment)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<WebChatDeployment>> PostWebchatDeploymentsAsyncWithHttpInfo (WebChatDeployment body)
         { 
             // verify the required parameter 'body' is set
@@ -3898,6 +4030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Message</param>
         /// <returns>WebChatMessage</returns>
         
+        
         public WebChatMessage PostWebchatGuestConversationMemberMessages (string conversationId, string memberId, CreateWebChatMessageRequest body)
         {
              ApiResponse<WebChatMessage> localVarResponse = PostWebchatGuestConversationMemberMessagesWithHttpInfo(conversationId, memberId, body);
@@ -3912,6 +4045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <param name="body">Message</param>
         /// <returns>ApiResponse of WebChatMessage</returns>
+        
         
         public ApiResponse< WebChatMessage > PostWebchatGuestConversationMemberMessagesWithHttpInfo (string conversationId, string memberId, CreateWebChatMessageRequest body)
         { 
@@ -4010,6 +4144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Message</param>
         /// <returns>Task of WebChatMessage</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatMessage> PostWebchatGuestConversationMemberMessagesAsync (string conversationId, string memberId, CreateWebChatMessageRequest body)
         {
              ApiResponse<WebChatMessage> localVarResponse = await PostWebchatGuestConversationMemberMessagesAsyncWithHttpInfo(conversationId, memberId, body);
@@ -4025,6 +4160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <param name="body">Message</param>
         /// <returns>Task of ApiResponse (WebChatMessage)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatMessage>> PostWebchatGuestConversationMemberMessagesAsyncWithHttpInfo (string conversationId, string memberId, CreateWebChatMessageRequest body)
         { 
@@ -4126,6 +4262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>WebChatTyping</returns>
         
+        
         public WebChatTyping PostWebchatGuestConversationMemberTyping (string conversationId, string memberId)
         {
              ApiResponse<WebChatTyping> localVarResponse = PostWebchatGuestConversationMemberTypingWithHttpInfo(conversationId, memberId);
@@ -4139,6 +4276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>ApiResponse of WebChatTyping</returns>
+        
         
         public ApiResponse< WebChatTyping > PostWebchatGuestConversationMemberTypingWithHttpInfo (string conversationId, string memberId)
         { 
@@ -4227,6 +4365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">memberId</param>
         /// <returns>Task of WebChatTyping</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatTyping> PostWebchatGuestConversationMemberTypingAsync (string conversationId, string memberId)
         {
              ApiResponse<WebChatTyping> localVarResponse = await PostWebchatGuestConversationMemberTypingAsyncWithHttpInfo(conversationId, memberId);
@@ -4241,6 +4380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="memberId">memberId</param>
         /// <returns>Task of ApiResponse (WebChatTyping)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatTyping>> PostWebchatGuestConversationMemberTypingAsyncWithHttpInfo (string conversationId, string memberId)
         { 
@@ -4331,6 +4471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CreateConversationRequest</param>
         /// <returns>CreateWebChatConversationResponse</returns>
         
+        
         public CreateWebChatConversationResponse PostWebchatGuestConversations (CreateWebChatConversationRequest body)
         {
              ApiResponse<CreateWebChatConversationResponse> localVarResponse = PostWebchatGuestConversationsWithHttpInfo(body);
@@ -4343,6 +4484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CreateConversationRequest</param>
         /// <returns>ApiResponse of CreateWebChatConversationResponse</returns>
+        
         
         public ApiResponse< CreateWebChatConversationResponse > PostWebchatGuestConversationsWithHttpInfo (CreateWebChatConversationRequest body)
         { 
@@ -4425,6 +4567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CreateConversationRequest</param>
         /// <returns>Task of CreateWebChatConversationResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<CreateWebChatConversationResponse> PostWebchatGuestConversationsAsync (CreateWebChatConversationRequest body)
         {
              ApiResponse<CreateWebChatConversationResponse> localVarResponse = await PostWebchatGuestConversationsAsyncWithHttpInfo(body);
@@ -4438,6 +4581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CreateConversationRequest</param>
         /// <returns>Task of ApiResponse (CreateWebChatConversationResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CreateWebChatConversationResponse>> PostWebchatGuestConversationsAsyncWithHttpInfo (CreateWebChatConversationRequest body)
         { 
@@ -4523,6 +4667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>WebChatDeployment</returns>
         [Obsolete]
+        
         public WebChatDeployment PutWebchatDeployment (string deploymentId, WebChatDeployment body)
         {
              ApiResponse<WebChatDeployment> localVarResponse = PutWebchatDeploymentWithHttpInfo(deploymentId, body);
@@ -4537,6 +4682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>ApiResponse of WebChatDeployment</returns>
         [Obsolete]
+        
         public ApiResponse< WebChatDeployment > PutWebchatDeploymentWithHttpInfo (string deploymentId, WebChatDeployment body)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -4630,6 +4776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of WebChatDeployment</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<WebChatDeployment> PutWebchatDeploymentAsync (string deploymentId, WebChatDeployment body)
         {
              ApiResponse<WebChatDeployment> localVarResponse = await PutWebchatDeploymentAsyncWithHttpInfo(deploymentId, body);
@@ -4645,6 +4792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Deployment</param>
         /// <returns>Task of ApiResponse (WebChatDeployment)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<WebChatDeployment>> PutWebchatDeploymentAsyncWithHttpInfo (string deploymentId, WebChatDeployment body)
         { 
             // verify the required parameter 'deploymentId' is set
@@ -4740,6 +4888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">webChatSettings</param>
         /// <returns>WebChatSettings</returns>
         
+        
         public WebChatSettings PutWebchatSettings (WebChatSettings body)
         {
              ApiResponse<WebChatSettings> localVarResponse = PutWebchatSettingsWithHttpInfo(body);
@@ -4752,6 +4901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>ApiResponse of WebChatSettings</returns>
+        
         
         public ApiResponse< WebChatSettings > PutWebchatSettingsWithHttpInfo (WebChatSettings body)
         { 
@@ -4841,6 +4991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">webChatSettings</param>
         /// <returns>Task of WebChatSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<WebChatSettings> PutWebchatSettingsAsync (WebChatSettings body)
         {
              ApiResponse<WebChatSettings> localVarResponse = await PutWebchatSettingsAsyncWithHttpInfo(body);
@@ -4854,6 +5005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>Task of ApiResponse (WebChatSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebChatSettings>> PutWebchatSettingsAsyncWithHttpInfo (WebChatSettings body)
         { 

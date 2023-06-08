@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns></returns>
         
+        
         void DeleteGroup (string groupId);
 
         /// <summary>
@@ -38,7 +39,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteGroupWithHttpInfo (string groupId);
+
+        /// <summary>
+        /// Remove dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns></returns>
+        
+        /// Preview Endpoint
+        void DeleteGroupDynamicsettings (string groupId);
+
+        /// <summary>
+        /// Remove dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<Object> DeleteGroupDynamicsettingsWithHttpInfo (string groupId);
 
         /// <summary>
         /// Remove members
@@ -50,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Object</returns>
+        
         
         Object DeleteGroupMembers (string groupId, string ids);
 
@@ -64,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>ApiResponse of Object</returns>
         
+        
         ApiResponse<Object> DeleteGroupMembersWithHttpInfo (string groupId, string ids);
 
         /// <summary>
@@ -76,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>FieldConfig</returns>
         [Obsolete]
+        
         FieldConfig GetFieldconfig (string type);
 
         /// <summary>
@@ -88,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>ApiResponse of FieldConfig</returns>
         [Obsolete]
+        
         ApiResponse<FieldConfig> GetFieldconfigWithHttpInfo (string type);
 
         /// <summary>
@@ -99,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Group</returns>
+        
         
         Group GetGroup (string groupId);
 
@@ -112,7 +145,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Group</returns>
         
+        
         ApiResponse<Group> GetGroupWithHttpInfo (string groupId);
+
+        /// <summary>
+        /// Get dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>DynamicGroupDefinition</returns>
+        
+        /// Preview Endpoint
+        DynamicGroupDefinition GetGroupDynamicsettings (string groupId);
+
+        /// <summary>
+        /// Get dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of DynamicGroupDefinition</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<DynamicGroupDefinition> GetGroupDynamicsettingsWithHttpInfo (string groupId);
 
         /// <summary>
         /// Get all individuals associated with the group
@@ -123,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>UserEntityListing</returns>
+        
         
         UserEntityListing GetGroupIndividuals (string groupId);
 
@@ -135,6 +196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
+        
         
         ApiResponse<UserEntityListing> GetGroupIndividualsWithHttpInfo (string groupId);
 
@@ -152,6 +214,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UserEntityListing</returns>
         
+        
         UserEntityListing GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -168,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         
+        
         ApiResponse<UserEntityListing> GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -181,6 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>GroupProfile</returns>
         [Obsolete]
+        
         GroupProfile GetGroupProfile (string groupId, string fields = null);
 
         /// <summary>
@@ -194,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>ApiResponse of GroupProfile</returns>
         [Obsolete]
+        
         ApiResponse<GroupProfile> GetGroupProfileWithHttpInfo (string groupId, string fields = null);
 
         /// <summary>
@@ -209,6 +275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>GroupEntityListing</returns>
+        
         
         GroupEntityListing GetGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
@@ -226,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of GroupEntityListing</returns>
         
+        
         ApiResponse<GroupEntityListing> GetGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
@@ -239,6 +307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
         
+        
         GroupsSearchResponse GetGroupsSearch (string q64, List<string> expand = null);
 
         /// <summary>
@@ -251,6 +320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
+        
         
         ApiResponse<GroupsSearchResponse> GetGroupsSearchWithHttpInfo (string q64, List<string> expand = null);
 
@@ -268,6 +338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>GroupProfileEntityListing</returns>
         [Obsolete]
+        
         GroupProfileEntityListing GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
@@ -284,6 +355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of GroupProfileEntityListing</returns>
         [Obsolete]
+        
         ApiResponse<GroupProfileEntityListing> GetProfilesGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
@@ -296,6 +368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>Object</returns>
+        
         
         Object PostGroupMembers (string groupId, GroupMembersUpdate body);
 
@@ -310,6 +383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Add members</param>
         /// <returns>ApiResponse of Object</returns>
         
+        
         ApiResponse<Object> PostGroupMembersWithHttpInfo (string groupId, GroupMembersUpdate body);
 
         /// <summary>
@@ -321,6 +395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Group</returns>
+        
         
         Group PostGroups (GroupCreate body);
 
@@ -334,7 +409,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group</param>
         /// <returns>ApiResponse of Group</returns>
         
+        
         ApiResponse<Group> PostGroupsWithHttpInfo (GroupCreate body);
+
+        /// <summary>
+        /// Preview the number of users selected for a dynamic group definition query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Group query to preview</param>
+        /// <returns>DynamicGroupQueryPreview</returns>
+        [Obsolete]
+        /// Preview Endpoint
+        DynamicGroupQueryPreview PostGroupsDynamicsettingsPreview (DynamicGroupQuery body);
+
+        /// <summary>
+        /// Preview the number of users selected for a dynamic group definition query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Group query to preview</param>
+        /// <returns>ApiResponse of DynamicGroupQueryPreview</returns>
+        [Obsolete]
+        /// Preview Endpoint
+        ApiResponse<DynamicGroupQueryPreview> PostGroupsDynamicsettingsPreviewWithHttpInfo (DynamicGroupQuery body);
 
         /// <summary>
         /// Search groups
@@ -345,6 +447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>GroupsSearchResponse</returns>
+        
         
         GroupsSearchResponse PostGroupsSearch (GroupSearchRequest body);
 
@@ -357,6 +460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
+        
         
         ApiResponse<GroupsSearchResponse> PostGroupsSearchWithHttpInfo (GroupSearchRequest body);
 
@@ -371,6 +475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group (optional)</param>
         /// <returns>Group</returns>
         
+        
         Group PutGroup (string groupId, GroupUpdate body = null);
 
         /// <summary>
@@ -384,7 +489,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group (optional)</param>
         /// <returns>ApiResponse of Group</returns>
         
+        
         ApiResponse<Group> PutGroupWithHttpInfo (string groupId, GroupUpdate body = null);
+
+        /// <summary>
+        /// Create / Update dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Create/Update dynamic groups</param>
+        /// <returns></returns>
+        
+        /// Preview Endpoint
+        void PutGroupDynamicsettings (string groupId, DynamicGroupQuery body);
+
+        /// <summary>
+        /// Create / Update dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Create/Update dynamic groups</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<Object> PutGroupDynamicsettingsWithHttpInfo (string groupId, DynamicGroupQuery body);
 
         #endregion Synchronous Operations
 
@@ -400,6 +534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteGroupAsync (string groupId);
 
         /// <summary>
@@ -412,7 +547,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupAsyncWithHttpInfo (string groupId);
+
+        /// <summary>
+        /// Remove dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of void</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task DeleteGroupDynamicsettingsAsync (string groupId);
+
+        /// <summary>
+        /// Remove dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupDynamicsettingsAsyncWithHttpInfo (string groupId);
 
         /// <summary>
         /// Remove members
@@ -424,6 +586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of Object</returns>
+        
         
         System.Threading.Tasks.Task<Object> DeleteGroupMembersAsync (string groupId, string ids);
 
@@ -438,6 +601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupMembersAsyncWithHttpInfo (string groupId, string ids);
 
         /// <summary>
@@ -450,6 +614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of FieldConfig</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<FieldConfig> GetFieldconfigAsync (string type);
 
         /// <summary>
@@ -462,6 +627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of ApiResponse (FieldConfig)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type);
 
         /// <summary>
@@ -473,6 +639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of Group</returns>
+        
         
         System.Threading.Tasks.Task<Group> GetGroupAsync (string groupId);
 
@@ -486,7 +653,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId);
+
+        /// <summary>
+        /// Get dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of DynamicGroupDefinition</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<DynamicGroupDefinition> GetGroupDynamicsettingsAsync (string groupId);
+
+        /// <summary>
+        /// Get dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse (DynamicGroupDefinition)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<DynamicGroupDefinition>> GetGroupDynamicsettingsAsyncWithHttpInfo (string groupId);
 
         /// <summary>
         /// Get all individuals associated with the group
@@ -497,6 +691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of UserEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserEntityListing> GetGroupIndividualsAsync (string groupId);
 
@@ -509,6 +704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIndividualsAsyncWithHttpInfo (string groupId);
 
@@ -526,6 +722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UserEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserEntityListing> GetGroupMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -542,6 +739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -555,6 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>Task of GroupProfile</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<GroupProfile> GetGroupProfileAsync (string groupId, string fields = null);
 
         /// <summary>
@@ -568,6 +767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>Task of ApiResponse (GroupProfile)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<GroupProfile>> GetGroupProfileAsyncWithHttpInfo (string groupId, string fields = null);
 
         /// <summary>
@@ -583,6 +783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of GroupEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<GroupEntityListing> GetGroupsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
@@ -600,6 +801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
@@ -613,6 +815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of GroupsSearchResponse</returns>
         
+        
         System.Threading.Tasks.Task<GroupsSearchResponse> GetGroupsSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
@@ -625,6 +828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetGroupsSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
 
@@ -642,6 +846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of GroupProfileEntityListing</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<GroupProfileEntityListing> GetProfilesGroupsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
@@ -658,6 +863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (GroupProfileEntityListing)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<GroupProfileEntityListing>> GetProfilesGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
@@ -670,6 +876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>Task of Object</returns>
+        
         
         System.Threading.Tasks.Task<Object> PostGroupMembersAsync (string groupId, GroupMembersUpdate body);
 
@@ -684,6 +891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Add members</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body);
 
         /// <summary>
@@ -695,6 +903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Task of Group</returns>
+        
         
         System.Threading.Tasks.Task<Group> PostGroupsAsync (GroupCreate body);
 
@@ -708,7 +917,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group</param>
         /// <returns>Task of ApiResponse (Group)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (GroupCreate body);
+
+        /// <summary>
+        /// Preview the number of users selected for a dynamic group definition query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Group query to preview</param>
+        /// <returns>Task of DynamicGroupQueryPreview</returns>
+        [Obsolete]
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<DynamicGroupQueryPreview> PostGroupsDynamicsettingsPreviewAsync (DynamicGroupQuery body);
+
+        /// <summary>
+        /// Preview the number of users selected for a dynamic group definition query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Group query to preview</param>
+        /// <returns>Task of ApiResponse (DynamicGroupQueryPreview)</returns>
+        [Obsolete]
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<DynamicGroupQueryPreview>> PostGroupsDynamicsettingsPreviewAsyncWithHttpInfo (DynamicGroupQuery body);
 
         /// <summary>
         /// Search groups
@@ -719,6 +955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of GroupsSearchResponse</returns>
+        
         
         System.Threading.Tasks.Task<GroupsSearchResponse> PostGroupsSearchAsync (GroupSearchRequest body);
 
@@ -731,6 +968,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostGroupsSearchAsyncWithHttpInfo (GroupSearchRequest body);
 
@@ -745,6 +983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group (optional)</param>
         /// <returns>Task of Group</returns>
         
+        
         System.Threading.Tasks.Task<Group> PutGroupAsync (string groupId, GroupUpdate body = null);
 
         /// <summary>
@@ -758,7 +997,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group (optional)</param>
         /// <returns>Task of ApiResponse (Group)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Group>> PutGroupAsyncWithHttpInfo (string groupId, GroupUpdate body = null);
+
+        /// <summary>
+        /// Create / Update dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Create/Update dynamic groups</param>
+        /// <returns>Task of void</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task PutGroupDynamicsettingsAsync (string groupId, DynamicGroupQuery body);
+
+        /// <summary>
+        /// Create / Update dynamic group definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Create/Update dynamic groups</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutGroupDynamicsettingsAsyncWithHttpInfo (string groupId, DynamicGroupQuery body);
 
         #endregion Asynchronous Operations
 
@@ -859,6 +1127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns></returns>
         
+        
         public void DeleteGroup (string groupId)
         {
              DeleteGroupWithHttpInfo(groupId);
@@ -870,6 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteGroupWithHttpInfo (string groupId)
         { 
@@ -954,6 +1224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteGroupAsync (string groupId)
         {
              await DeleteGroupAsyncWithHttpInfo(groupId);
@@ -966,6 +1237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupAsyncWithHttpInfo (string groupId)
         { 
@@ -1046,12 +1318,210 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Remove dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns></returns>
+        
+        /// Preview Endpoint
+        public void DeleteGroupDynamicsettings (string groupId)
+        {
+             DeleteGroupDynamicsettingsWithHttpInfo(groupId);
+        }
+
+        /// <summary>
+        /// Remove dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse<Object> DeleteGroupDynamicsettingsWithHttpInfo (string groupId)
+        { 
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupDynamicsettings");
+
+            var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupDynamicsettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupDynamicsettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Remove dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of void</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task DeleteGroupDynamicsettingsAsync (string groupId)
+        {
+             await DeleteGroupDynamicsettingsAsyncWithHttpInfo(groupId);
+
+        }
+
+        /// <summary>
+        /// Remove dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupDynamicsettingsAsyncWithHttpInfo (string groupId)
+        { 
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupDynamicsettings");
+            
+
+            var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupDynamicsettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupDynamicsettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Remove members 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Object</returns>
+        
         
         public Object DeleteGroupMembers (string groupId, string ids)
         {
@@ -1066,6 +1536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>ApiResponse of Object</returns>
+        
         
         public ApiResponse< Object > DeleteGroupMembersWithHttpInfo (string groupId, string ids)
         { 
@@ -1155,6 +1626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of Object</returns>
         
+        
         public async System.Threading.Tasks.Task<Object> DeleteGroupMembersAsync (string groupId, string ids)
         {
              ApiResponse<Object> localVarResponse = await DeleteGroupMembersAsyncWithHttpInfo(groupId, ids);
@@ -1169,6 +1641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupMembersAsyncWithHttpInfo (string groupId, string ids)
         { 
@@ -1260,6 +1733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>FieldConfig</returns>
         [Obsolete]
+        
         public FieldConfig GetFieldconfig (string type)
         {
              ApiResponse<FieldConfig> localVarResponse = GetFieldconfigWithHttpInfo(type);
@@ -1273,6 +1747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>ApiResponse of FieldConfig</returns>
         [Obsolete]
+        
         public ApiResponse< FieldConfig > GetFieldconfigWithHttpInfo (string type)
         { 
             // verify the required parameter 'type' is set
@@ -1356,6 +1831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of FieldConfig</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<FieldConfig> GetFieldconfigAsync (string type)
         {
              ApiResponse<FieldConfig> localVarResponse = await GetFieldconfigAsyncWithHttpInfo(type);
@@ -1370,6 +1846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of ApiResponse (FieldConfig)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type)
         { 
             // verify the required parameter 'type' is set
@@ -1455,6 +1932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Group</returns>
         
+        
         public Group GetGroup (string groupId)
         {
              ApiResponse<Group> localVarResponse = GetGroupWithHttpInfo(groupId);
@@ -1467,6 +1945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Group</returns>
+        
         
         public ApiResponse< Group > GetGroupWithHttpInfo (string groupId)
         { 
@@ -1551,6 +2030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of Group</returns>
         
+        
         public async System.Threading.Tasks.Task<Group> GetGroupAsync (string groupId)
         {
              ApiResponse<Group> localVarResponse = await GetGroupAsyncWithHttpInfo(groupId);
@@ -1564,6 +2044,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId)
         { 
@@ -1644,11 +2125,211 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>DynamicGroupDefinition</returns>
+        
+        /// Preview Endpoint
+        public DynamicGroupDefinition GetGroupDynamicsettings (string groupId)
+        {
+             ApiResponse<DynamicGroupDefinition> localVarResponse = GetGroupDynamicsettingsWithHttpInfo(groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of DynamicGroupDefinition</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< DynamicGroupDefinition > GetGroupDynamicsettingsWithHttpInfo (string groupId)
+        { 
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupDynamicsettings");
+
+            var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupDynamicsettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupDynamicsettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DynamicGroupDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (DynamicGroupDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DynamicGroupDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of DynamicGroupDefinition</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<DynamicGroupDefinition> GetGroupDynamicsettingsAsync (string groupId)
+        {
+             ApiResponse<DynamicGroupDefinition> localVarResponse = await GetGroupDynamicsettingsAsyncWithHttpInfo(groupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse (DynamicGroupDefinition)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<DynamicGroupDefinition>> GetGroupDynamicsettingsAsyncWithHttpInfo (string groupId)
+        { 
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupDynamicsettings");
+            
+
+            var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupDynamicsettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupDynamicsettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DynamicGroupDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (DynamicGroupDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DynamicGroupDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get all individuals associated with the group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>UserEntityListing</returns>
+        
         
         public UserEntityListing GetGroupIndividuals (string groupId)
         {
@@ -1662,6 +2343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
+        
         
         public ApiResponse< UserEntityListing > GetGroupIndividualsWithHttpInfo (string groupId)
         { 
@@ -1746,6 +2428,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of UserEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserEntityListing> GetGroupIndividualsAsync (string groupId)
         {
              ApiResponse<UserEntityListing> localVarResponse = await GetGroupIndividualsAsyncWithHttpInfo(groupId);
@@ -1759,6 +2442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIndividualsAsyncWithHttpInfo (string groupId)
         { 
@@ -1849,6 +2533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UserEntityListing</returns>
         
+        
         public UserEntityListing GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<UserEntityListing> localVarResponse = GetGroupMembersWithHttpInfo(groupId, pageSize, pageNumber, sortOrder, expand);
@@ -1865,6 +2550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
+        
         
         public ApiResponse< UserEntityListing > GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         { 
@@ -1957,6 +2643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UserEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserEntityListing> GetGroupMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<UserEntityListing> localVarResponse = await GetGroupMembersAsyncWithHttpInfo(groupId, pageSize, pageNumber, sortOrder, expand);
@@ -1974,6 +2661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         { 
@@ -2065,6 +2753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>GroupProfile</returns>
         [Obsolete]
+        
         public GroupProfile GetGroupProfile (string groupId, string fields = null)
         {
              ApiResponse<GroupProfile> localVarResponse = GetGroupProfileWithHttpInfo(groupId, fields);
@@ -2079,6 +2768,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>ApiResponse of GroupProfile</returns>
         [Obsolete]
+        
         public ApiResponse< GroupProfile > GetGroupProfileWithHttpInfo (string groupId, string fields = null)
         { 
             // verify the required parameter 'groupId' is set
@@ -2164,6 +2854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>Task of GroupProfile</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<GroupProfile> GetGroupProfileAsync (string groupId, string fields = null)
         {
              ApiResponse<GroupProfile> localVarResponse = await GetGroupProfileAsyncWithHttpInfo(groupId, fields);
@@ -2179,6 +2870,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>Task of ApiResponse (GroupProfile)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<GroupProfile>> GetGroupProfileAsyncWithHttpInfo (string groupId, string fields = null)
         { 
             // verify the required parameter 'groupId' is set
@@ -2269,6 +2961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>GroupEntityListing</returns>
         
+        
         public GroupEntityListing GetGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         {
              ApiResponse<GroupEntityListing> localVarResponse = GetGroupsWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder);
@@ -2285,6 +2978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of GroupEntityListing</returns>
+        
         
         public ApiResponse< GroupEntityListing > GetGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         { 
@@ -2374,6 +3068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of GroupEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<GroupEntityListing> GetGroupsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         {
              ApiResponse<GroupEntityListing> localVarResponse = await GetGroupsAsyncWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder);
@@ -2391,6 +3086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         { 
@@ -2478,6 +3174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
         
+        
         public GroupsSearchResponse GetGroupsSearch (string q64, List<string> expand = null)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = GetGroupsSearchWithHttpInfo(q64, expand);
@@ -2491,6 +3188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
+        
         
         public ApiResponse< GroupsSearchResponse > GetGroupsSearchWithHttpInfo (string q64, List<string> expand = null)
         { 
@@ -2577,6 +3275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of GroupsSearchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<GroupsSearchResponse> GetGroupsSearchAsync (string q64, List<string> expand = null)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = await GetGroupsSearchAsyncWithHttpInfo(q64, expand);
@@ -2591,6 +3290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetGroupsSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         { 
@@ -2682,6 +3382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>GroupProfileEntityListing</returns>
         [Obsolete]
+        
         public GroupProfileEntityListing GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         {
              ApiResponse<GroupProfileEntityListing> localVarResponse = GetProfilesGroupsWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder);
@@ -2699,6 +3400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of GroupProfileEntityListing</returns>
         [Obsolete]
+        
         public ApiResponse< GroupProfileEntityListing > GetProfilesGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         { 
 
@@ -2787,6 +3489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of GroupProfileEntityListing</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<GroupProfileEntityListing> GetProfilesGroupsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         {
              ApiResponse<GroupProfileEntityListing> localVarResponse = await GetProfilesGroupsAsyncWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder);
@@ -2805,6 +3508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (GroupProfileEntityListing)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<GroupProfileEntityListing>> GetProfilesGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         { 
 
@@ -2891,6 +3595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Add members</param>
         /// <returns>Object</returns>
         
+        
         public Object PostGroupMembers (string groupId, GroupMembersUpdate body)
         {
              ApiResponse<Object> localVarResponse = PostGroupMembersWithHttpInfo(groupId, body);
@@ -2904,6 +3609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>ApiResponse of Object</returns>
+        
         
         public ApiResponse< Object > PostGroupMembersWithHttpInfo (string groupId, GroupMembersUpdate body)
         { 
@@ -2998,6 +3704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Add members</param>
         /// <returns>Task of Object</returns>
         
+        
         public async System.Threading.Tasks.Task<Object> PostGroupMembersAsync (string groupId, GroupMembersUpdate body)
         {
              ApiResponse<Object> localVarResponse = await PostGroupMembersAsyncWithHttpInfo(groupId, body);
@@ -3012,6 +3719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body)
         { 
@@ -3108,6 +3816,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group</param>
         /// <returns>Group</returns>
         
+        
         public Group PostGroups (GroupCreate body)
         {
              ApiResponse<Group> localVarResponse = PostGroupsWithHttpInfo(body);
@@ -3120,6 +3829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>ApiResponse of Group</returns>
+        
         
         public ApiResponse< Group > PostGroupsWithHttpInfo (GroupCreate body)
         { 
@@ -3209,6 +3919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group</param>
         /// <returns>Task of Group</returns>
         
+        
         public async System.Threading.Tasks.Task<Group> PostGroupsAsync (GroupCreate body)
         {
              ApiResponse<Group> localVarResponse = await PostGroupsAsyncWithHttpInfo(body);
@@ -3222,6 +3933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Task of ApiResponse (Group)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (GroupCreate body)
         { 
@@ -3307,11 +4019,221 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Preview the number of users selected for a dynamic group definition query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Group query to preview</param>
+        /// <returns>DynamicGroupQueryPreview</returns>
+        [Obsolete]
+        /// Preview Endpoint
+        public DynamicGroupQueryPreview PostGroupsDynamicsettingsPreview (DynamicGroupQuery body)
+        {
+             ApiResponse<DynamicGroupQueryPreview> localVarResponse = PostGroupsDynamicsettingsPreviewWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Preview the number of users selected for a dynamic group definition query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Group query to preview</param>
+        /// <returns>ApiResponse of DynamicGroupQueryPreview</returns>
+        [Obsolete]
+        /// Preview Endpoint
+        public ApiResponse< DynamicGroupQueryPreview > PostGroupsDynamicsettingsPreviewWithHttpInfo (DynamicGroupQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupsDynamicsettingsPreview");
+
+            var localVarPath = "/api/v2/groups/dynamicsettings/preview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupsDynamicsettingsPreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupsDynamicsettingsPreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DynamicGroupQueryPreview>(localVarStatusCode,
+                localVarHeaders,
+                (DynamicGroupQueryPreview) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DynamicGroupQueryPreview)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Preview the number of users selected for a dynamic group definition query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Group query to preview</param>
+        /// <returns>Task of DynamicGroupQueryPreview</returns>
+        [Obsolete]
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<DynamicGroupQueryPreview> PostGroupsDynamicsettingsPreviewAsync (DynamicGroupQuery body)
+        {
+             ApiResponse<DynamicGroupQueryPreview> localVarResponse = await PostGroupsDynamicsettingsPreviewAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Preview the number of users selected for a dynamic group definition query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Group query to preview</param>
+        /// <returns>Task of ApiResponse (DynamicGroupQueryPreview)</returns>
+        [Obsolete]
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<DynamicGroupQueryPreview>> PostGroupsDynamicsettingsPreviewAsyncWithHttpInfo (DynamicGroupQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupsDynamicsettingsPreview");
+            
+
+            var localVarPath = "/api/v2/groups/dynamicsettings/preview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupsDynamicsettingsPreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupsDynamicsettingsPreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DynamicGroupQueryPreview>(localVarStatusCode,
+                localVarHeaders,
+                (DynamicGroupQueryPreview) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DynamicGroupQueryPreview)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Search groups 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>GroupsSearchResponse</returns>
+        
         
         public GroupsSearchResponse PostGroupsSearch (GroupSearchRequest body)
         {
@@ -3325,6 +4247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
+        
         
         public ApiResponse< GroupsSearchResponse > PostGroupsSearchWithHttpInfo (GroupSearchRequest body)
         { 
@@ -3414,6 +4337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of GroupsSearchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<GroupsSearchResponse> PostGroupsSearchAsync (GroupSearchRequest body)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = await PostGroupsSearchAsyncWithHttpInfo(body);
@@ -3427,6 +4351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostGroupsSearchAsyncWithHttpInfo (GroupSearchRequest body)
         { 
@@ -3519,6 +4444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group (optional)</param>
         /// <returns>Group</returns>
         
+        
         public Group PutGroup (string groupId, GroupUpdate body = null)
         {
              ApiResponse<Group> localVarResponse = PutGroupWithHttpInfo(groupId, body);
@@ -3532,6 +4458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Group (optional)</param>
         /// <returns>ApiResponse of Group</returns>
+        
         
         public ApiResponse< Group > PutGroupWithHttpInfo (string groupId, GroupUpdate body = null)
         { 
@@ -3623,6 +4550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group (optional)</param>
         /// <returns>Task of Group</returns>
         
+        
         public async System.Threading.Tasks.Task<Group> PutGroupAsync (string groupId, GroupUpdate body = null)
         {
              ApiResponse<Group> localVarResponse = await PutGroupAsyncWithHttpInfo(groupId, body);
@@ -3637,6 +4565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Group (optional)</param>
         /// <returns>Task of ApiResponse (Group)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Group>> PutGroupAsyncWithHttpInfo (string groupId, GroupUpdate body = null)
         { 
@@ -3716,6 +4645,226 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Group>(localVarStatusCode,
                 localVarHeaders,
                 (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create / Update dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Create/Update dynamic groups</param>
+        /// <returns></returns>
+        
+        /// Preview Endpoint
+        public void PutGroupDynamicsettings (string groupId, DynamicGroupQuery body)
+        {
+             PutGroupDynamicsettingsWithHttpInfo(groupId, body);
+        }
+
+        /// <summary>
+        /// Create / Update dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Create/Update dynamic groups</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse<Object> PutGroupDynamicsettingsWithHttpInfo (string groupId, DynamicGroupQuery body)
+        { 
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PutGroupDynamicsettings");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PutGroupDynamicsettings");
+
+            var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupDynamicsettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupDynamicsettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create / Update dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Create/Update dynamic groups</param>
+        /// <returns>Task of void</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task PutGroupDynamicsettingsAsync (string groupId, DynamicGroupQuery body)
+        {
+             await PutGroupDynamicsettingsAsyncWithHttpInfo(groupId, body);
+
+        }
+
+        /// <summary>
+        /// Create / Update dynamic group definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Create/Update dynamic groups</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutGroupDynamicsettingsAsyncWithHttpInfo (string groupId, DynamicGroupQuery body)
+        { 
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PutGroupDynamicsettings");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PutGroupDynamicsettings");
+            
+
+            var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupDynamicsettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupDynamicsettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns></returns>
         
+        
         void DeleteNotificationsChannelSubscriptions (string channelId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteNotificationsChannelSubscriptionsWithHttpInfo (string channelId);
 
@@ -51,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>AvailableTopicEntityListing</returns>
         
+        
         AvailableTopicEntityListing GetNotificationsAvailabletopics (List<string> expand = null, bool? includePreview = null);
 
         /// <summary>
@@ -64,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
         
+        
         ApiResponse<AvailableTopicEntityListing> GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null, bool? includePreview = null);
 
         /// <summary>
@@ -75,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ChannelTopicEntityListing</returns>
+        
         
         ChannelTopicEntityListing GetNotificationsChannelSubscriptions (string channelId);
 
@@ -88,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         
+        
         ApiResponse<ChannelTopicEntityListing> GetNotificationsChannelSubscriptionsWithHttpInfo (string channelId);
 
         /// <summary>
@@ -99,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>ChannelEntityListing</returns>
+        
         
         ChannelEntityListing GetNotificationsChannels (string includechannels = null);
 
@@ -112,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>ApiResponse of ChannelEntityListing</returns>
         
+        
         ApiResponse<ChannelEntityListing> GetNotificationsChannelsWithHttpInfo (string includechannels = null);
 
         /// <summary>
@@ -124,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns></returns>
         
+        
         void HeadNotificationsChannel (string channelId);
 
         /// <summary>
@@ -135,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> HeadNotificationsChannelWithHttpInfo (string channelId);
 
@@ -150,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ChannelTopicEntityListing</returns>
         
+        
         ChannelTopicEntityListing PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
@@ -164,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         
+        
         ApiResponse<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
@@ -175,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Channel</returns>
         
+        
         Channel PostNotificationsChannels ();
 
         /// <summary>
@@ -185,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Channel</returns>
+        
         
         ApiResponse<Channel> PostNotificationsChannelsWithHttpInfo ();
 
@@ -200,6 +214,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ChannelTopicEntityListing</returns>
         
+        
         ChannelTopicEntityListing PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
@@ -213,6 +228,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
+        
         
         ApiResponse<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
@@ -230,6 +246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteNotificationsChannelSubscriptionsAsync (string channelId);
 
         /// <summary>
@@ -241,6 +258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId);
 
@@ -255,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>Task of AvailableTopicEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<AvailableTopicEntityListing> GetNotificationsAvailabletopicsAsync (List<string> expand = null, bool? includePreview = null);
 
         /// <summary>
@@ -268,6 +287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null, bool? includePreview = null);
 
         /// <summary>
@@ -279,6 +299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<ChannelTopicEntityListing> GetNotificationsChannelSubscriptionsAsync (string channelId);
 
@@ -292,6 +313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId);
 
         /// <summary>
@@ -303,6 +325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ChannelEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<ChannelEntityListing> GetNotificationsChannelsAsync (string includechannels = null);
 
@@ -316,6 +339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo (string includechannels = null);
 
         /// <summary>
@@ -328,6 +352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task HeadNotificationsChannelAsync (string channelId);
 
         /// <summary>
@@ -339,6 +364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> HeadNotificationsChannelAsyncWithHttpInfo (string channelId);
 
@@ -354,6 +380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
@@ -368,6 +395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
@@ -379,6 +407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Channel</returns>
         
+        
         System.Threading.Tasks.Task<Channel> PostNotificationsChannelsAsync ();
 
         /// <summary>
@@ -389,6 +418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Channel)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Channel>> PostNotificationsChannelsAsyncWithHttpInfo ();
 
@@ -404,6 +434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
@@ -417,6 +448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
@@ -519,6 +551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns></returns>
         
+        
         public void DeleteNotificationsChannelSubscriptions (string channelId)
         {
              DeleteNotificationsChannelSubscriptionsWithHttpInfo(channelId);
@@ -530,6 +563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteNotificationsChannelSubscriptionsWithHttpInfo (string channelId)
         { 
@@ -614,6 +648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteNotificationsChannelSubscriptionsAsync (string channelId)
         {
              await DeleteNotificationsChannelSubscriptionsAsyncWithHttpInfo(channelId);
@@ -626,6 +661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId)
         { 
@@ -713,6 +749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>AvailableTopicEntityListing</returns>
         
+        
         public AvailableTopicEntityListing GetNotificationsAvailabletopics (List<string> expand = null, bool? includePreview = null)
         {
              ApiResponse<AvailableTopicEntityListing> localVarResponse = GetNotificationsAvailabletopicsWithHttpInfo(expand, includePreview);
@@ -726,6 +763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
+        
         
         public ApiResponse< AvailableTopicEntityListing > GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null, bool? includePreview = null)
         { 
@@ -809,6 +847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>Task of AvailableTopicEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<AvailableTopicEntityListing> GetNotificationsAvailabletopicsAsync (List<string> expand = null, bool? includePreview = null)
         {
              ApiResponse<AvailableTopicEntityListing> localVarResponse = await GetNotificationsAvailabletopicsAsyncWithHttpInfo(expand, includePreview);
@@ -823,6 +862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="includePreview">Whether or not to include Preview topics (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null, bool? includePreview = null)
         { 
@@ -906,6 +946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>ChannelTopicEntityListing</returns>
         
+        
         public ChannelTopicEntityListing GetNotificationsChannelSubscriptions (string channelId)
         {
              ApiResponse<ChannelTopicEntityListing> localVarResponse = GetNotificationsChannelSubscriptionsWithHttpInfo(channelId);
@@ -918,6 +959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
+        
         
         public ApiResponse< ChannelTopicEntityListing > GetNotificationsChannelSubscriptionsWithHttpInfo (string channelId)
         { 
@@ -1002,6 +1044,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ChannelTopicEntityListing> GetNotificationsChannelSubscriptionsAsync (string channelId)
         {
              ApiResponse<ChannelTopicEntityListing> localVarResponse = await GetNotificationsChannelSubscriptionsAsyncWithHttpInfo(channelId);
@@ -1015,6 +1058,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId)
         { 
@@ -1101,6 +1145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>ChannelEntityListing</returns>
         
+        
         public ChannelEntityListing GetNotificationsChannels (string includechannels = null)
         {
              ApiResponse<ChannelEntityListing> localVarResponse = GetNotificationsChannelsWithHttpInfo(includechannels);
@@ -1113,6 +1158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>ApiResponse of ChannelEntityListing</returns>
+        
         
         public ApiResponse< ChannelEntityListing > GetNotificationsChannelsWithHttpInfo (string includechannels = null)
         { 
@@ -1194,6 +1240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ChannelEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ChannelEntityListing> GetNotificationsChannelsAsync (string includechannels = null)
         {
              ApiResponse<ChannelEntityListing> localVarResponse = await GetNotificationsChannelsAsyncWithHttpInfo(includechannels);
@@ -1207,6 +1254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo (string includechannels = null)
         { 
@@ -1289,6 +1337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns></returns>
         
+        
         public void HeadNotificationsChannel (string channelId)
         {
              HeadNotificationsChannelWithHttpInfo(channelId);
@@ -1300,6 +1349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> HeadNotificationsChannelWithHttpInfo (string channelId)
         { 
@@ -1384,6 +1434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task HeadNotificationsChannelAsync (string channelId)
         {
              await HeadNotificationsChannelAsyncWithHttpInfo(channelId);
@@ -1396,6 +1447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadNotificationsChannelAsyncWithHttpInfo (string channelId)
         { 
@@ -1484,6 +1536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ChannelTopicEntityListing</returns>
         
+        
         public ChannelTopicEntityListing PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         {
              ApiResponse<ChannelTopicEntityListing> localVarResponse = PostNotificationsChannelSubscriptionsWithHttpInfo(channelId, body, ignoreErrors);
@@ -1498,6 +1551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
+        
         
         public ApiResponse< ChannelTopicEntityListing > PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         { 
@@ -1594,6 +1648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         {
              ApiResponse<ChannelTopicEntityListing> localVarResponse = await PostNotificationsChannelSubscriptionsAsyncWithHttpInfo(channelId, body, ignoreErrors);
@@ -1609,6 +1664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         { 
@@ -1705,6 +1761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Channel</returns>
         
+        
         public Channel PostNotificationsChannels ()
         {
              ApiResponse<Channel> localVarResponse = PostNotificationsChannelsWithHttpInfo();
@@ -1716,6 +1773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Channel</returns>
+        
         
         public ApiResponse< Channel > PostNotificationsChannelsWithHttpInfo ()
         { 
@@ -1795,6 +1853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Channel</returns>
         
+        
         public async System.Threading.Tasks.Task<Channel> PostNotificationsChannelsAsync ()
         {
              ApiResponse<Channel> localVarResponse = await PostNotificationsChannelsAsyncWithHttpInfo();
@@ -1807,6 +1866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Channel)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Channel>> PostNotificationsChannelsAsyncWithHttpInfo ()
         { 
@@ -1890,6 +1950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ChannelTopicEntityListing</returns>
         
+        
         public ChannelTopicEntityListing PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         {
              ApiResponse<ChannelTopicEntityListing> localVarResponse = PutNotificationsChannelSubscriptionsWithHttpInfo(channelId, body, ignoreErrors);
@@ -1904,6 +1965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
+        
         
         public ApiResponse< ChannelTopicEntityListing > PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         { 
@@ -2000,6 +2062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         {
              ApiResponse<ChannelTopicEntityListing> localVarResponse = await PutNotificationsChannelSubscriptionsAsyncWithHttpInfo(channelId, body, ignoreErrors);
@@ -2015,6 +2078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         { 

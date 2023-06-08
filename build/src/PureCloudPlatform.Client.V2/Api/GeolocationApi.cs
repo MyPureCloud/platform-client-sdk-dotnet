@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GeolocationSettings</returns>
         
+        
         GeolocationSettings GetGeolocationsSettings ();
 
         /// <summary>
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GeolocationSettings</returns>
+        
         
         ApiResponse<GeolocationSettings> GetGeolocationsSettingsWithHttpInfo ();
 
@@ -49,6 +51,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Geolocation</returns>
         
+        
         Geolocation GetUserGeolocation (string userId, string clientId);
 
         /// <summary>
@@ -62,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>ApiResponse of Geolocation</returns>
         
+        
         ApiResponse<Geolocation> GetUserGeolocationWithHttpInfo (string userId, string clientId);
 
         /// <summary>
@@ -74,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation settings</param>
         /// <returns>GeolocationSettings</returns>
         
+        
         GeolocationSettings PatchGeolocationsSettings (GeolocationSettings body);
 
         /// <summary>
@@ -85,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Geolocation settings</param>
         /// <returns>ApiResponse of GeolocationSettings</returns>
+        
         
         ApiResponse<GeolocationSettings> PatchGeolocationsSettingsWithHttpInfo (GeolocationSettings body);
 
@@ -100,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Geolocation</returns>
         
+        
         Geolocation PatchUserGeolocation (string userId, string clientId, Geolocation body);
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
+        
         
         ApiResponse<Geolocation> PatchUserGeolocationWithHttpInfo (string userId, string clientId, Geolocation body);
 
@@ -129,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GeolocationSettings</returns>
         
+        
         System.Threading.Tasks.Task<GeolocationSettings> GetGeolocationsSettingsAsync ();
 
         /// <summary>
@@ -139,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo ();
 
@@ -153,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Task of Geolocation</returns>
         
+        
         System.Threading.Tasks.Task<Geolocation> GetUserGeolocationAsync (string userId, string clientId);
 
         /// <summary>
@@ -166,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserGeolocationAsyncWithHttpInfo (string userId, string clientId);
 
         /// <summary>
@@ -178,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation settings</param>
         /// <returns>Task of GeolocationSettings</returns>
         
+        
         System.Threading.Tasks.Task<GeolocationSettings> PatchGeolocationsSettingsAsync (GeolocationSettings body);
 
         /// <summary>
@@ -189,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Geolocation settings</param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchGeolocationsSettingsAsyncWithHttpInfo (GeolocationSettings body);
 
@@ -204,6 +218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Task of Geolocation</returns>
         
+        
         System.Threading.Tasks.Task<Geolocation> PatchUserGeolocationAsync (string userId, string clientId, Geolocation body);
 
         /// <summary>
@@ -217,6 +232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body);
 
@@ -318,6 +334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GeolocationSettings</returns>
         
+        
         public GeolocationSettings GetGeolocationsSettings ()
         {
              ApiResponse<GeolocationSettings> localVarResponse = GetGeolocationsSettingsWithHttpInfo();
@@ -329,6 +346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GeolocationSettings</returns>
+        
         
         public ApiResponse< GeolocationSettings > GetGeolocationsSettingsWithHttpInfo ()
         { 
@@ -408,6 +426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GeolocationSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<GeolocationSettings> GetGeolocationsSettingsAsync ()
         {
              ApiResponse<GeolocationSettings> localVarResponse = await GetGeolocationsSettingsAsyncWithHttpInfo();
@@ -420,6 +439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo ()
         { 
@@ -502,6 +522,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Geolocation</returns>
         
+        
         public Geolocation GetUserGeolocation (string userId, string clientId)
         {
              ApiResponse<Geolocation> localVarResponse = GetUserGeolocationWithHttpInfo(userId, clientId);
@@ -515,6 +536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>ApiResponse of Geolocation</returns>
+        
         
         public ApiResponse< Geolocation > GetUserGeolocationWithHttpInfo (string userId, string clientId)
         { 
@@ -604,6 +626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Task of Geolocation</returns>
         
+        
         public async System.Threading.Tasks.Task<Geolocation> GetUserGeolocationAsync (string userId, string clientId)
         {
              ApiResponse<Geolocation> localVarResponse = await GetUserGeolocationAsyncWithHttpInfo(userId, clientId);
@@ -618,6 +641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserGeolocationAsyncWithHttpInfo (string userId, string clientId)
         { 
@@ -709,6 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation settings</param>
         /// <returns>GeolocationSettings</returns>
         
+        
         public GeolocationSettings PatchGeolocationsSettings (GeolocationSettings body)
         {
              ApiResponse<GeolocationSettings> localVarResponse = PatchGeolocationsSettingsWithHttpInfo(body);
@@ -721,6 +746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Geolocation settings</param>
         /// <returns>ApiResponse of GeolocationSettings</returns>
+        
         
         public ApiResponse< GeolocationSettings > PatchGeolocationsSettingsWithHttpInfo (GeolocationSettings body)
         { 
@@ -810,6 +836,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation settings</param>
         /// <returns>Task of GeolocationSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<GeolocationSettings> PatchGeolocationsSettingsAsync (GeolocationSettings body)
         {
              ApiResponse<GeolocationSettings> localVarResponse = await PatchGeolocationsSettingsAsyncWithHttpInfo(body);
@@ -823,6 +850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Geolocation settings</param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchGeolocationsSettingsAsyncWithHttpInfo (GeolocationSettings body)
         { 
@@ -916,6 +944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Geolocation</returns>
         
+        
         public Geolocation PatchUserGeolocation (string userId, string clientId, Geolocation body)
         {
              ApiResponse<Geolocation> localVarResponse = PatchUserGeolocationWithHttpInfo(userId, clientId, body);
@@ -930,6 +959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
+        
         
         public ApiResponse< Geolocation > PatchUserGeolocationWithHttpInfo (string userId, string clientId, Geolocation body)
         { 
@@ -1029,6 +1059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Task of Geolocation</returns>
         
+        
         public async System.Threading.Tasks.Task<Geolocation> PatchUserGeolocationAsync (string userId, string clientId, Geolocation body)
         {
              ApiResponse<Geolocation> localVarResponse = await PatchUserGeolocationAsyncWithHttpInfo(userId, clientId, body);
@@ -1044,6 +1075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body)
         { 

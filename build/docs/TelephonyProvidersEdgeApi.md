@@ -51,6 +51,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesExtension**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesextension) | **GET** /api/v2/telephony/providers/edges/extensions/{extensionId} | Get an extension by ID. |
 | [**GetTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesextensionpool) | **GET** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Get an extension pool by ID |
 | [**GetTelephonyProvidersEdgesExtensionpools**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesextensionpools) | **GET** /api/v2/telephony/providers/edges/extensionpools | Get a listing of extension pools |
+| [**GetTelephonyProvidersEdgesExtensionpoolsDivisionviews**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesextensionpoolsdivisionviews) | **GET** /api/v2/telephony/providers/edges/extensionpools/divisionviews | Get a pageable list of basic extension pool objects filterable by query parameters. |
 | [**GetTelephonyProvidersEdgesExtensions**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesextensions) | **GET** /api/v2/telephony/providers/edges/extensions | Get a listing of extensions |
 | [**GetTelephonyProvidersEdgesLine**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesline) | **GET** /api/v2/telephony/providers/edges/lines/{lineId} | Get a Line by ID |
 | [**GetTelephonyProvidersEdgesLinebasesetting**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgeslinebasesetting) | **GET** /api/v2/telephony/providers/edges/linebasesettings/{lineBaseId} | Get a line base settings object by ID |
@@ -3046,6 +3047,85 @@ namespace Example
 ### Return type
 
 [**ExtensionPoolEntityListing**](ExtensionPoolEntityListing.html)
+
+<a name="gettelephonyprovidersedgesextensionpoolsdivisionviews"></a>
+
+## [**ExtensionPoolDivisionViewEntityListing**](ExtensionPoolDivisionViewEntityListing.html) GetTelephonyProvidersEdgesExtensionpoolsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+
+
+
+Get a pageable list of basic extension pool objects filterable by query parameters.
+
+This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+
+
+Requires ALL permissions: 
+
+* telephony:extensionPool:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
+            var id = new List<string>(); // List<string> | ID of the Extension Pools to filter by. (optional) 
+            var name = name_example;  // string | Name of the Extension Pools to filter by. (optional) 
+            var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
+
+            try
+            { 
+                // Get a pageable list of basic extension pool objects filterable by query parameters.
+                ExtensionPoolDivisionViewEntityListing result = apiInstance.GetTelephonyProvidersEdgesExtensionpoolsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesExtensionpoolsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
+| **id** | [**List<string>**](string.html)| ID of the Extension Pools to filter by. | [optional]  |
+| **name** | **string**| Name of the Extension Pools to filter by. | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| List of divisionIds on which to filter. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExtensionPoolDivisionViewEntityListing**](ExtensionPoolDivisionViewEntityListing.html)
 
 <a name="gettelephonyprovidersedgesextensions"></a>
 

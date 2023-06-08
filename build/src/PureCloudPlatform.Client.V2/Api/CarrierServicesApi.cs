@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Phone number in E164 format</param>
         /// <returns>EmergencyLocation</returns>
         
+        
         EmergencyLocation GetCarrierservicesIntegrationsEmergencylocationsMe (string phoneNumber);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Phone number in E164 format</param>
         /// <returns>ApiResponse of EmergencyLocation</returns>
+        
         
         ApiResponse<EmergencyLocation> GetCarrierservicesIntegrationsEmergencylocationsMeWithHttpInfo (string phoneNumber);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>EmergencyLocation</returns>
         
+        
         EmergencyLocation PostCarrierservicesIntegrationsEmergencylocationsMe (EmergencyLocation body = null);
 
         /// <summary>
@@ -61,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of EmergencyLocation</returns>
+        
         
         ApiResponse<EmergencyLocation> PostCarrierservicesIntegrationsEmergencylocationsMeWithHttpInfo (EmergencyLocation body = null);
 
@@ -78,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Phone number in E164 format</param>
         /// <returns>Task of EmergencyLocation</returns>
         
+        
         System.Threading.Tasks.Task<EmergencyLocation> GetCarrierservicesIntegrationsEmergencylocationsMeAsync (string phoneNumber);
 
         /// <summary>
@@ -89,6 +94,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Phone number in E164 format</param>
         /// <returns>Task of ApiResponse (EmergencyLocation)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EmergencyLocation>> GetCarrierservicesIntegrationsEmergencylocationsMeAsyncWithHttpInfo (string phoneNumber);
 
@@ -102,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of EmergencyLocation</returns>
         
+        
         System.Threading.Tasks.Task<EmergencyLocation> PostCarrierservicesIntegrationsEmergencylocationsMeAsync (EmergencyLocation body = null);
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (EmergencyLocation)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EmergencyLocation>> PostCarrierservicesIntegrationsEmergencylocationsMeAsyncWithHttpInfo (EmergencyLocation body = null);
 
@@ -215,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Phone number in E164 format</param>
         /// <returns>EmergencyLocation</returns>
         
+        
         public EmergencyLocation GetCarrierservicesIntegrationsEmergencylocationsMe (string phoneNumber)
         {
              ApiResponse<EmergencyLocation> localVarResponse = GetCarrierservicesIntegrationsEmergencylocationsMeWithHttpInfo(phoneNumber);
@@ -227,6 +236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Phone number in E164 format</param>
         /// <returns>ApiResponse of EmergencyLocation</returns>
+        
         
         public ApiResponse< EmergencyLocation > GetCarrierservicesIntegrationsEmergencylocationsMeWithHttpInfo (string phoneNumber)
         { 
@@ -311,6 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneNumber">Phone number in E164 format</param>
         /// <returns>Task of EmergencyLocation</returns>
         
+        
         public async System.Threading.Tasks.Task<EmergencyLocation> GetCarrierservicesIntegrationsEmergencylocationsMeAsync (string phoneNumber)
         {
              ApiResponse<EmergencyLocation> localVarResponse = await GetCarrierservicesIntegrationsEmergencylocationsMeAsyncWithHttpInfo(phoneNumber);
@@ -324,6 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Phone number in E164 format</param>
         /// <returns>Task of ApiResponse (EmergencyLocation)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmergencyLocation>> GetCarrierservicesIntegrationsEmergencylocationsMeAsyncWithHttpInfo (string phoneNumber)
         { 
@@ -410,6 +422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>EmergencyLocation</returns>
         
+        
         public EmergencyLocation PostCarrierservicesIntegrationsEmergencylocationsMe (EmergencyLocation body = null)
         {
              ApiResponse<EmergencyLocation> localVarResponse = PostCarrierservicesIntegrationsEmergencylocationsMeWithHttpInfo(body);
@@ -422,6 +435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of EmergencyLocation</returns>
+        
         
         public ApiResponse< EmergencyLocation > PostCarrierservicesIntegrationsEmergencylocationsMeWithHttpInfo (EmergencyLocation body = null)
         { 
@@ -508,6 +522,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of EmergencyLocation</returns>
         
+        
         public async System.Threading.Tasks.Task<EmergencyLocation> PostCarrierservicesIntegrationsEmergencylocationsMeAsync (EmergencyLocation body = null)
         {
              ApiResponse<EmergencyLocation> localVarResponse = await PostCarrierservicesIntegrationsEmergencylocationsMeAsyncWithHttpInfo(body);
@@ -521,6 +536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (EmergencyLocation)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmergencyLocation>> PostCarrierservicesIntegrationsEmergencylocationsMeAsyncWithHttpInfo (EmergencyLocation body = null)
         { 

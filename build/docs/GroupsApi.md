@@ -8,9 +8,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteGroup**](GroupsApi.html#deletegroup) | **DELETE** /api/v2/groups/{groupId} | Delete group |
+| [**DeleteGroupDynamicsettings**](GroupsApi.html#deletegroupdynamicsettings) | **DELETE** /api/v2/groups/{groupId}/dynamicsettings | Remove dynamic group definition |
 | [**DeleteGroupMembers**](GroupsApi.html#deletegroupmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
 | [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetGroup**](GroupsApi.html#getgroup) | **GET** /api/v2/groups/{groupId} | Get group |
+| [**GetGroupDynamicsettings**](GroupsApi.html#getgroupdynamicsettings) | **GET** /api/v2/groups/{groupId}/dynamicsettings | Get dynamic group definition |
 | [**GetGroupIndividuals**](GroupsApi.html#getgroupindividuals) | **GET** /api/v2/groups/{groupId}/individuals | Get all individuals associated with the group |
 | [**GetGroupMembers**](GroupsApi.html#getgroupmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members, includes individuals, owners, and dynamically included people |
 | [**GetGroupProfile**](GroupsApi.html#getgroupprofile) | **GET** /api/v2/groups/{groupId}/profile | Get group profile |
@@ -19,8 +21,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProfilesGroups**](GroupsApi.html#getprofilesgroups) | **GET** /api/v2/profiles/groups | Get group profile listing |
 | [**PostGroupMembers**](GroupsApi.html#postgroupmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
 | [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
+| [**PostGroupsDynamicsettingsPreview**](GroupsApi.html#postgroupsdynamicsettingspreview) | **POST** /api/v2/groups/dynamicsettings/preview | Preview the number of users selected for a dynamic group definition query |
 | [**PostGroupsSearch**](GroupsApi.html#postgroupssearch) | **POST** /api/v2/groups/search | Search groups |
 | [**PutGroup**](GroupsApi.html#putgroup) | **PUT** /api/v2/groups/{groupId} | Update group |
+| [**PutGroupDynamicsettings**](GroupsApi.html#putgroupdynamicsettings) | **PUT** /api/v2/groups/{groupId}/dynamicsettings | Create / Update dynamic group definition |
 {: class="table table-striped"}
 
 <a name="deletegroup"></a>
@@ -69,6 +73,70 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling GroupsApi.DeleteGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletegroupdynamicsettings"></a>
+
+## void DeleteGroupDynamicsettings (string groupId)
+
+
+
+Remove dynamic group definition
+
+
+
+Requires ANY permissions: 
+
+* directory:group:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteGroupDynamicsettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GroupsApi();
+            var groupId = groupId_example;  // string | Group ID
+
+            try
+            { 
+                // Remove dynamic group definition
+                apiInstance.DeleteGroupDynamicsettings(groupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.DeleteGroupDynamicsettings: " + e.Message );
             }
         }
     }
@@ -280,6 +348,71 @@ namespace Example
 ### Return type
 
 [**Group**](Group.html)
+
+<a name="getgroupdynamicsettings"></a>
+
+## [**DynamicGroupDefinition**](DynamicGroupDefinition.html) GetGroupDynamicsettings (string groupId)
+
+
+
+Get dynamic group definition
+
+
+
+Requires ANY permissions: 
+
+* directory:group:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGroupDynamicsettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GroupsApi();
+            var groupId = groupId_example;  // string | Group ID
+
+            try
+            { 
+                // Get dynamic group definition
+                DynamicGroupDefinition result = apiInstance.GetGroupDynamicsettings(groupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.GetGroupDynamicsettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DynamicGroupDefinition**](DynamicGroupDefinition.html)
 
 <a name="getgroupindividuals"></a>
 
@@ -828,6 +961,71 @@ namespace Example
 
 [**Group**](Group.html)
 
+<a name="postgroupsdynamicsettingspreview"></a>
+
+## [**DynamicGroupQueryPreview**](DynamicGroupQueryPreview.html) PostGroupsDynamicsettingsPreview (DynamicGroupQuery body)
+
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
+Preview the number of users selected for a dynamic group definition query
+
+
+
+Requires ANY permissions: 
+
+* directory:group:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGroupsDynamicsettingsPreviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GroupsApi();
+            var body = new DynamicGroupQuery(); // DynamicGroupQuery | Group query to preview
+
+            try
+            { 
+                // Preview the number of users selected for a dynamic group definition query
+                DynamicGroupQueryPreview result = apiInstance.PostGroupsDynamicsettingsPreview(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.PostGroupsDynamicsettingsPreview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DynamicGroupQuery**](DynamicGroupQuery.html)| Group query to preview |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DynamicGroupQueryPreview**](DynamicGroupQueryPreview.html)
+
 <a name="postgroupssearch"></a>
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostGroupsSearch (GroupSearchRequest body)
@@ -958,4 +1156,70 @@ namespace Example
 ### Return type
 
 [**Group**](Group.html)
+
+<a name="putgroupdynamicsettings"></a>
+
+## void PutGroupDynamicsettings (string groupId, DynamicGroupQuery body)
+
+
+
+Create / Update dynamic group definition
+
+
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutGroupDynamicsettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GroupsApi();
+            var groupId = groupId_example;  // string | Group ID
+            var body = new DynamicGroupQuery(); // DynamicGroupQuery | Create/Update dynamic groups
+
+            try
+            { 
+                // Create / Update dynamic group definition
+                apiInstance.PutGroupDynamicsettings(groupId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.PutGroupDynamicsettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+| **body** | [**DynamicGroupQuery**](DynamicGroupQuery.html)| Create/Update dynamic groups |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 

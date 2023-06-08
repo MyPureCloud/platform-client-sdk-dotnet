@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetVoicemailSearch**](SearchApi.html#getvoicemailsearch) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
 | [**PostAnalyticsConversationsTranscriptsQuery**](SearchApi.html#postanalyticsconversationstranscriptsquery) | **POST** /api/v2/analytics/conversations/transcripts/query | Search resources. |
 | [**PostConversationsParticipantsAttributesSearch**](SearchApi.html#postconversationsparticipantsattributessearch) | **POST** /api/v2/conversations/participants/attributes/search | Search conversations |
+| [**PostDocumentationAllSearch**](SearchApi.html#postdocumentationallsearch) | **POST** /api/v2/documentation/all/search | Search all documents |
 | [**PostDocumentationGknSearch**](SearchApi.html#postdocumentationgknsearch) | **POST** /api/v2/documentation/gkn/search | Search gkn documentation |
 | [**PostDocumentationSearch**](SearchApi.html#postdocumentationsearch) | **POST** /api/v2/documentation/search | Search documentation |
 | [**PostGroupsSearch**](SearchApi.html#postgroupssearch) | **POST** /api/v2/groups/search | Search groups |
@@ -27,6 +28,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSpeechandtextanalyticsTranscriptsSearch**](SearchApi.html#postspeechandtextanalyticstranscriptssearch) | **POST** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
 | [**PostTeamsSearch**](SearchApi.html#postteamssearch) | **POST** /api/v2/teams/search | Search resources. |
 | [**PostUsersSearch**](SearchApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
+| [**PostUsersSearchConversationTarget**](SearchApi.html#postuserssearchconversationtarget) | **POST** /api/v2/users/search/conversation/target | Search users as conversation targets |
+| [**PostUsersSearchQueuemembersManage**](SearchApi.html#postuserssearchqueuemembersmanage) | **POST** /api/v2/users/search/queuemembers/manage | Search manage queue member |
 | [**PostUsersSearchTeamsAssign**](SearchApi.html#postuserssearchteamsassign) | **POST** /api/v2/users/search/teams/assign | Search users assigned to teams |
 | [**PostVoicemailSearch**](SearchApi.html#postvoicemailsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
 {: class="table table-striped"}
@@ -682,6 +685,64 @@ namespace Example
 
 [**JsonCursorSearchResponse**](JsonCursorSearchResponse.html)
 
+<a name="postdocumentationallsearch"></a>
+
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostDocumentationAllSearch (DocumentationV2SearchRequest body)
+
+
+
+Search all documents
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostDocumentationAllSearchExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new SearchApi();
+            var body = new DocumentationV2SearchRequest(); // DocumentationV2SearchRequest | Search request options
+
+            try
+            { 
+                // Search all documents
+                JsonNodeSearchResponse result = apiInstance.PostDocumentationAllSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostDocumentationAllSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DocumentationV2SearchRequest**](DocumentationV2SearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+
 <a name="postdocumentationgknsearch"></a>
 
 ## [**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) PostDocumentationGknSearch (GKNDocumentationSearchRequest body)
@@ -1305,6 +1366,137 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling SearchApi.PostUsersSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="postuserssearchconversationtarget"></a>
+
+## [**UsersSearchResponse**](UsersSearchResponse.html) PostUsersSearchConversationTarget (UserSearchRequest body)
+
+
+
+Search users as conversation targets
+
+
+
+Requires ANY permissions: 
+
+* conversation:communication:target
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersSearchConversationTargetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new UserSearchRequest(); // UserSearchRequest | Search request options
+
+            try
+            { 
+                // Search users as conversation targets
+                UsersSearchResponse result = apiInstance.PostUsersSearchConversationTarget(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostUsersSearchConversationTarget: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="postuserssearchqueuemembersmanage"></a>
+
+## [**UsersSearchResponse**](UsersSearchResponse.html) PostUsersSearchQueuemembersManage (UserSearchRequest body)
+
+
+
+Search manage queue member
+
+
+
+Requires ANY permissions: 
+
+* routing:queueMember:manage
+* routing:queue:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersSearchQueuemembersManageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new UserSearchRequest(); // UserSearchRequest | Search request options
+
+            try
+            { 
+                // Search manage queue member
+                UsersSearchResponse result = apiInstance.PostUsersSearchQueuemembersManage(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostUsersSearchQueuemembersManage: " + e.Message );
             }
         }
     }

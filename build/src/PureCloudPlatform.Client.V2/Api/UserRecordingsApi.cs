@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <returns></returns>
         
+        
         void DeleteUserrecording (string recordingId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteUserrecordingWithHttpInfo (string recordingId);
 
@@ -51,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecording</returns>
         
+        
         UserRecording GetUserrecording (string recordingId, List<string> expand = null);
 
         /// <summary>
@@ -63,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
+        
         
         ApiResponse<UserRecording> GetUserrecordingWithHttpInfo (string recordingId, List<string> expand = null);
 
@@ -78,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>DownloadResponse</returns>
         
+        
         DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null);
 
         /// <summary>
@@ -91,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
+        
         
         ApiResponse<DownloadResponse> GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null, bool? async = null);
 
@@ -106,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecordingEntityListing</returns>
         
+        
         UserRecordingEntityListing GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -120,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecordingEntityListing</returns>
         
+        
         ApiResponse<UserRecordingEntityListing> GetUserrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -131,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>FaxSummary</returns>
         
+        
         FaxSummary GetUserrecordingsSummary ();
 
         /// <summary>
@@ -141,6 +150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of FaxSummary</returns>
+        
         
         ApiResponse<FaxSummary> GetUserrecordingsSummaryWithHttpInfo ();
 
@@ -156,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecording</returns>
         
+        
         UserRecording PutUserrecording (string recordingId, UserRecording body, List<string> expand = null);
 
         /// <summary>
@@ -169,6 +180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
+        
         
         ApiResponse<UserRecording> PutUserrecordingWithHttpInfo (string recordingId, UserRecording body, List<string> expand = null);
 
@@ -186,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteUserrecordingAsync (string recordingId);
 
         /// <summary>
@@ -197,6 +210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserrecordingAsyncWithHttpInfo (string recordingId);
 
@@ -211,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecording</returns>
         
+        
         System.Threading.Tasks.Task<UserRecording> GetUserrecordingAsync (string recordingId, List<string> expand = null);
 
         /// <summary>
@@ -223,6 +238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetUserrecordingAsyncWithHttpInfo (string recordingId, List<string> expand = null);
 
@@ -238,6 +254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
         
+        
         System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null, bool? async = null);
 
         /// <summary>
@@ -251,6 +268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null, bool? async = null);
 
@@ -266,6 +284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecordingEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserRecordingEntityListing> GetUserrecordingsAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -280,6 +299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecordingEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
@@ -291,6 +311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of FaxSummary</returns>
         
+        
         System.Threading.Tasks.Task<FaxSummary> GetUserrecordingsSummaryAsync ();
 
         /// <summary>
@@ -301,6 +322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetUserrecordingsSummaryAsyncWithHttpInfo ();
 
@@ -316,6 +338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecording</returns>
         
+        
         System.Threading.Tasks.Task<UserRecording> PutUserrecordingAsync (string recordingId, UserRecording body, List<string> expand = null);
 
         /// <summary>
@@ -329,6 +352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutUserrecordingAsyncWithHttpInfo (string recordingId, UserRecording body, List<string> expand = null);
 
@@ -431,6 +455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <returns></returns>
         
+        
         public void DeleteUserrecording (string recordingId)
         {
              DeleteUserrecordingWithHttpInfo(recordingId);
@@ -442,6 +467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteUserrecordingWithHttpInfo (string recordingId)
         { 
@@ -526,6 +552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteUserrecordingAsync (string recordingId)
         {
              await DeleteUserrecordingAsyncWithHttpInfo(recordingId);
@@ -538,6 +565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserrecordingAsyncWithHttpInfo (string recordingId)
         { 
@@ -625,6 +653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecording</returns>
         
+        
         public UserRecording GetUserrecording (string recordingId, List<string> expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = GetUserrecordingWithHttpInfo(recordingId, expand);
@@ -638,6 +667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
+        
         
         public ApiResponse< UserRecording > GetUserrecordingWithHttpInfo (string recordingId, List<string> expand = null)
         { 
@@ -724,6 +754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecording</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRecording> GetUserrecordingAsync (string recordingId, List<string> expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = await GetUserrecordingAsyncWithHttpInfo(recordingId, expand);
@@ -738,6 +769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetUserrecordingAsyncWithHttpInfo (string recordingId, List<string> expand = null)
         { 
@@ -827,6 +859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>DownloadResponse</returns>
         
+        
         public DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null)
         {
              ApiResponse<DownloadResponse> localVarResponse = GetUserrecordingMediaWithHttpInfo(recordingId, formatId, async);
@@ -841,6 +874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
+        
         
         public ApiResponse< DownloadResponse > GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null, bool? async = null)
         { 
@@ -929,6 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null, bool? async = null)
         {
              ApiResponse<DownloadResponse> localVarResponse = await GetUserrecordingMediaAsyncWithHttpInfo(recordingId, formatId, async);
@@ -944,6 +979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null, bool? async = null)
         { 
@@ -1034,6 +1070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecordingEntityListing</returns>
         
+        
         public UserRecordingEntityListing GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<UserRecordingEntityListing> localVarResponse = GetUserrecordingsWithHttpInfo(pageSize, pageNumber, expand);
@@ -1048,6 +1085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecordingEntityListing</returns>
+        
         
         public ApiResponse< UserRecordingEntityListing > GetUserrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         { 
@@ -1133,6 +1171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecordingEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRecordingEntityListing> GetUserrecordingsAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<UserRecordingEntityListing> localVarResponse = await GetUserrecordingsAsyncWithHttpInfo(pageSize, pageNumber, expand);
@@ -1148,6 +1187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecordingEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         { 
@@ -1231,6 +1271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>FaxSummary</returns>
         
+        
         public FaxSummary GetUserrecordingsSummary ()
         {
              ApiResponse<FaxSummary> localVarResponse = GetUserrecordingsSummaryWithHttpInfo();
@@ -1242,6 +1283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of FaxSummary</returns>
+        
         
         public ApiResponse< FaxSummary > GetUserrecordingsSummaryWithHttpInfo ()
         { 
@@ -1321,6 +1363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of FaxSummary</returns>
         
+        
         public async System.Threading.Tasks.Task<FaxSummary> GetUserrecordingsSummaryAsync ()
         {
              ApiResponse<FaxSummary> localVarResponse = await GetUserrecordingsSummaryAsyncWithHttpInfo();
@@ -1333,6 +1376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetUserrecordingsSummaryAsyncWithHttpInfo ()
         { 
@@ -1416,6 +1460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecording</returns>
         
+        
         public UserRecording PutUserrecording (string recordingId, UserRecording body, List<string> expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = PutUserrecordingWithHttpInfo(recordingId, body, expand);
@@ -1430,6 +1475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
+        
         
         public ApiResponse< UserRecording > PutUserrecordingWithHttpInfo (string recordingId, UserRecording body, List<string> expand = null)
         { 
@@ -1526,6 +1572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecording</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRecording> PutUserrecordingAsync (string recordingId, UserRecording body, List<string> expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = await PutUserrecordingAsyncWithHttpInfo(recordingId, body, expand);
@@ -1541,6 +1588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutUserrecordingAsyncWithHttpInfo (string recordingId, UserRecording body, List<string> expand = null)
         { 

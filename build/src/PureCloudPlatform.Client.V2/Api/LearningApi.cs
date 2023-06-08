@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns></returns>
         
+        
         void DeleteLearningAssignment (string assignmentId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteLearningAssignmentWithHttpInfo (string assignmentId);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns></returns>
         
+        
         void DeleteLearningModule (string moduleId);
 
         /// <summary>
@@ -61,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteLearningModuleWithHttpInfo (string moduleId);
 
@@ -75,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>LearningAssignment</returns>
         
+        
         LearningAssignment GetLearningAssignment (string assignmentId, List<string> expand = null);
 
         /// <summary>
@@ -87,6 +92,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
+        
         
         ApiResponse<LearningAssignment> GetLearningAssignmentWithHttpInfo (string assignmentId, List<string> expand = null);
 
@@ -114,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
         
+        
         LearningAssignmentsDomainEntity GetLearningAssignments (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
@@ -140,6 +147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
         
+        
         ApiResponse<LearningAssignmentsDomainEntity> GetLearningAssignmentsWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
@@ -164,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
+        
         
         LearningAssignmentsDomainEntity GetLearningAssignmentsMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
@@ -190,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
         
+        
         ApiResponse<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
@@ -202,6 +212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>LearningModule</returns>
+        
         
         LearningModule GetLearningModule (string moduleId, List<string> expand = null);
 
@@ -216,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>ApiResponse of LearningModule</returns>
         
+        
         ApiResponse<LearningModule> GetLearningModuleWithHttpInfo (string moduleId, List<string> expand = null);
 
         /// <summary>
@@ -228,6 +240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="jobId">The ID of the learning module job</param>
         /// <returns>LearningModuleJobResponse</returns>
+        
         
         LearningModuleJobResponse GetLearningModuleJob (string moduleId, string jobId);
 
@@ -242,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the learning module job</param>
         /// <returns>ApiResponse of LearningModuleJobResponse</returns>
         
+        
         ApiResponse<LearningModuleJobResponse> GetLearningModuleJobWithHttpInfo (string moduleId, string jobId);
 
         /// <summary>
@@ -254,6 +268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>LearningModuleRule</returns>
         
+        
         LearningModuleRule GetLearningModuleRule (string moduleId);
 
         /// <summary>
@@ -265,6 +280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>ApiResponse of LearningModuleRule</returns>
+        
         
         ApiResponse<LearningModuleRule> GetLearningModuleRuleWithHttpInfo (string moduleId);
 
@@ -280,6 +296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>LearningModule</returns>
         
+        
         LearningModule GetLearningModuleVersion (string moduleId, string versionId, List<string> expand = null);
 
         /// <summary>
@@ -293,6 +310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of learning module</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>ApiResponse of LearningModule</returns>
+        
         
         ApiResponse<LearningModule> GetLearningModuleVersionWithHttpInfo (string moduleId, string versionId, List<string> expand = null);
 
@@ -315,6 +333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <returns>LearningModulesDomainEntityListing</returns>
         
+        
         LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null);
 
         /// <summary>
@@ -336,6 +355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <returns>ApiResponse of LearningModulesDomainEntityListing</returns>
         
+        
         ApiResponse<LearningModulesDomainEntityListing> GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null);
 
         /// <summary>
@@ -353,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>AssignedLearningModuleDomainEntityListing</returns>
+        
         
         AssignedLearningModuleDomainEntityListing GetLearningModulesAssignments (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
 
@@ -372,6 +393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>ApiResponse of AssignedLearningModuleDomainEntityListing</returns>
         
+        
         ApiResponse<AssignedLearningModuleDomainEntityListing> GetLearningModulesAssignmentsWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
 
         /// <summary>
@@ -384,6 +406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coverArtId">Key identifier for the cover art</param>
         /// <returns>LearningModuleCoverArtResponse</returns>
         
+        
         LearningModuleCoverArtResponse GetLearningModulesCoverartCoverArtId (string coverArtId);
 
         /// <summary>
@@ -395,6 +418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coverArtId">Key identifier for the cover art</param>
         /// <returns>ApiResponse of LearningModuleCoverArtResponse</returns>
+        
         
         ApiResponse<LearningModuleCoverArtResponse> GetLearningModulesCoverartCoverArtIdWithHttpInfo (string coverArtId);
 
@@ -409,6 +433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>LearningAssignment</returns>
         
+        
         LearningAssignment PatchLearningAssignment (string assignmentId, LearningAssignmentUpdate body = null);
 
         /// <summary>
@@ -421,6 +446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
+        
         
         ApiResponse<LearningAssignment> PatchLearningAssignmentWithHttpInfo (string assignmentId, LearningAssignmentUpdate body = null);
 
@@ -435,6 +461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning assignment reschedule model (optional)</param>
         /// <returns>LearningAssignment</returns>
         
+        
         LearningAssignment PatchLearningAssignmentReschedule (string assignmentId, LearningAssignmentReschedule body = null);
 
         /// <summary>
@@ -448,6 +475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning assignment reschedule model (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
         
+        
         ApiResponse<LearningAssignment> PatchLearningAssignmentRescheduleWithHttpInfo (string assignmentId, LearningAssignmentReschedule body = null);
 
         /// <summary>
@@ -459,6 +487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Assessment form and answers to score</param>
         /// <returns>AssessmentScoringSet</returns>
+        
         
         AssessmentScoringSet PostLearningAssessmentsScoring (LearningAssessmentScoringRequest body);
 
@@ -472,6 +501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Assessment form and answers to score</param>
         /// <returns>ApiResponse of AssessmentScoringSet</returns>
         
+        
         ApiResponse<AssessmentScoringSet> PostLearningAssessmentsScoringWithHttpInfo (LearningAssessmentScoringRequest body);
 
         /// <summary>
@@ -483,6 +513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>LearningAssignment</returns>
+        
         
         LearningAssignment PostLearningAssignmentReassign (string assignmentId);
 
@@ -496,6 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
         
+        
         ApiResponse<LearningAssignment> PostLearningAssignmentReassignWithHttpInfo (string assignmentId);
 
         /// <summary>
@@ -507,6 +539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>LearningAssignment</returns>
+        
         
         LearningAssignment PostLearningAssignmentReset (string assignmentId);
 
@@ -520,6 +553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
         
+        
         ApiResponse<LearningAssignment> PostLearningAssignmentResetWithHttpInfo (string assignmentId);
 
         /// <summary>
@@ -531,6 +565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Learning Assignment to be created (optional)</param>
         /// <returns>LearningAssignment</returns>
+        
         
         LearningAssignment PostLearningAssignments (LearningAssignmentCreate body = null);
 
@@ -544,6 +579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be created (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
         
+        
         ApiResponse<LearningAssignment> PostLearningAssignmentsWithHttpInfo (LearningAssignmentCreate body = null);
 
         /// <summary>
@@ -555,6 +591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>LearningAssignmentAggregateResponse</returns>
+        
         
         LearningAssignmentAggregateResponse PostLearningAssignmentsAggregatesQuery (LearningAssignmentAggregateParam body);
 
@@ -568,6 +605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>ApiResponse of LearningAssignmentAggregateResponse</returns>
         
+        
         ApiResponse<LearningAssignmentAggregateResponse> PostLearningAssignmentsAggregatesQueryWithHttpInfo (LearningAssignmentAggregateParam body);
 
         /// <summary>
@@ -579,6 +617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The learning assignments to be created (optional)</param>
         /// <returns>LearningAssignmentBulkAddResponse</returns>
+        
         
         LearningAssignmentBulkAddResponse PostLearningAssignmentsBulkadd (List<LearningAssignmentItem> body = null);
 
@@ -592,6 +631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning assignments to be created (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentBulkAddResponse</returns>
         
+        
         ApiResponse<LearningAssignmentBulkAddResponse> PostLearningAssignmentsBulkaddWithHttpInfo (List<LearningAssignmentItem> body = null);
 
         /// <summary>
@@ -604,6 +644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>LearningAssignmentBulkRemoveResponse</returns>
         
+        
         LearningAssignmentBulkRemoveResponse PostLearningAssignmentsBulkremove (List<string> body = null);
 
         /// <summary>
@@ -615,6 +656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentBulkRemoveResponse</returns>
+        
         
         ApiResponse<LearningAssignmentBulkRemoveResponse> PostLearningAssignmentsBulkremoveWithHttpInfo (List<string> body = null);
 
@@ -629,6 +671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module job request</param>
         /// <returns>LearningModuleJobResponse</returns>
         
+        
         LearningModuleJobResponse PostLearningModuleJobs (string moduleId, LearningModuleJobRequest body);
 
         /// <summary>
@@ -642,6 +685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module job request</param>
         /// <returns>ApiResponse of LearningModuleJobResponse</returns>
         
+        
         ApiResponse<LearningModuleJobResponse> PostLearningModuleJobsWithHttpInfo (string moduleId, LearningModuleJobRequest body);
 
         /// <summary>
@@ -653,6 +697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>LearningModulePublishResponse</returns>
+        
         
         LearningModulePublishResponse PostLearningModulePublish (string moduleId);
 
@@ -666,6 +711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>ApiResponse of LearningModulePublishResponse</returns>
         
+        
         ApiResponse<LearningModulePublishResponse> PostLearningModulePublishWithHttpInfo (string moduleId);
 
         /// <summary>
@@ -678,6 +724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module to be created</param>
         /// <returns>LearningModule</returns>
         
+        
         LearningModule PostLearningModules (LearningModuleRequest body);
 
         /// <summary>
@@ -689,6 +736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The learning module to be created</param>
         /// <returns>ApiResponse of LearningModule</returns>
+        
         
         ApiResponse<LearningModule> PostLearningModulesWithHttpInfo (LearningModuleRequest body);
 
@@ -704,6 +752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to fetch users</param>
         /// <returns>LearningAssignmentUserListing</returns>
         
+        
         LearningAssignmentUserListing PostLearningRulesQuery (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body);
 
         /// <summary>
@@ -718,6 +767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to fetch users</param>
         /// <returns>ApiResponse of LearningAssignmentUserListing</returns>
         
+        
         ApiResponse<LearningAssignmentUserListing> PostLearningRulesQueryWithHttpInfo (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body);
 
         /// <summary>
@@ -730,6 +780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The slot search request</param>
         /// <returns>LearningScheduleSlotsQueryResponse</returns>
         
+        
         LearningScheduleSlotsQueryResponse PostLearningScheduleslotsQuery (LearningScheduleSlotsQueryRequest body);
 
         /// <summary>
@@ -741,6 +792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>ApiResponse of LearningScheduleSlotsQueryResponse</returns>
+        
         
         ApiResponse<LearningScheduleSlotsQueryResponse> PostLearningScheduleslotsQueryWithHttpInfo (LearningScheduleSlotsQueryRequest body);
 
@@ -755,6 +807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module to be updated</param>
         /// <returns>LearningModule</returns>
         
+        
         LearningModule PutLearningModule (string moduleId, LearningModuleRequest body);
 
         /// <summary>
@@ -767,6 +820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module to be updated</param>
         /// <returns>ApiResponse of LearningModule</returns>
+        
         
         ApiResponse<LearningModule> PutLearningModuleWithHttpInfo (string moduleId, LearningModuleRequest body);
 
@@ -781,6 +835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to be updated</param>
         /// <returns>LearningModuleRule</returns>
         
+        
         LearningModuleRule PutLearningModuleRule (string moduleId, LearningModuleRule body);
 
         /// <summary>
@@ -793,6 +848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
         /// <returns>ApiResponse of LearningModuleRule</returns>
+        
         
         ApiResponse<LearningModuleRule> PutLearningModuleRuleWithHttpInfo (string moduleId, LearningModuleRule body);
 
@@ -810,6 +866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteLearningAssignmentAsync (string assignmentId);
 
         /// <summary>
@@ -821,6 +878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLearningAssignmentAsyncWithHttpInfo (string assignmentId);
 
@@ -834,6 +892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteLearningModuleAsync (string moduleId);
 
         /// <summary>
@@ -845,6 +904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLearningModuleAsyncWithHttpInfo (string moduleId);
 
@@ -859,6 +919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         System.Threading.Tasks.Task<LearningAssignment> GetLearningAssignmentAsync (string assignmentId, List<string> expand = null);
 
         /// <summary>
@@ -871,6 +932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> GetLearningAssignmentAsyncWithHttpInfo (string assignmentId, List<string> expand = null);
 
@@ -898,6 +960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
         
+        
         System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
@@ -924,6 +987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
@@ -948,6 +1012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
+        
         
         System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
@@ -974,6 +1039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null);
 
         /// <summary>
@@ -986,6 +1052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of LearningModule</returns>
+        
         
         System.Threading.Tasks.Task<LearningModule> GetLearningModuleAsync (string moduleId, List<string> expand = null);
 
@@ -1000,6 +1067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (LearningModule)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningModule>> GetLearningModuleAsyncWithHttpInfo (string moduleId, List<string> expand = null);
 
         /// <summary>
@@ -1012,6 +1080,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="jobId">The ID of the learning module job</param>
         /// <returns>Task of LearningModuleJobResponse</returns>
+        
         
         System.Threading.Tasks.Task<LearningModuleJobResponse> GetLearningModuleJobAsync (string moduleId, string jobId);
 
@@ -1026,6 +1095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the learning module job</param>
         /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> GetLearningModuleJobAsyncWithHttpInfo (string moduleId, string jobId);
 
         /// <summary>
@@ -1038,6 +1108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of LearningModuleRule</returns>
         
+        
         System.Threading.Tasks.Task<LearningModuleRule> GetLearningModuleRuleAsync (string moduleId);
 
         /// <summary>
@@ -1049,6 +1120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of ApiResponse (LearningModuleRule)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningModuleRule>> GetLearningModuleRuleAsyncWithHttpInfo (string moduleId);
 
@@ -1064,6 +1136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of LearningModule</returns>
         
+        
         System.Threading.Tasks.Task<LearningModule> GetLearningModuleVersionAsync (string moduleId, string versionId, List<string> expand = null);
 
         /// <summary>
@@ -1077,6 +1150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of learning module</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (LearningModule)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningModule>> GetLearningModuleVersionAsyncWithHttpInfo (string moduleId, string versionId, List<string> expand = null);
 
@@ -1099,6 +1173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <returns>Task of LearningModulesDomainEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null);
 
         /// <summary>
@@ -1120,6 +1195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <returns>Task of ApiResponse (LearningModulesDomainEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null);
 
         /// <summary>
@@ -1137,6 +1213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of AssignedLearningModuleDomainEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<AssignedLearningModuleDomainEntityListing> GetLearningModulesAssignmentsAsync (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
 
@@ -1156,6 +1233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (AssignedLearningModuleDomainEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AssignedLearningModuleDomainEntityListing>> GetLearningModulesAssignmentsAsyncWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
 
         /// <summary>
@@ -1168,6 +1246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coverArtId">Key identifier for the cover art</param>
         /// <returns>Task of LearningModuleCoverArtResponse</returns>
         
+        
         System.Threading.Tasks.Task<LearningModuleCoverArtResponse> GetLearningModulesCoverartCoverArtIdAsync (string coverArtId);
 
         /// <summary>
@@ -1179,6 +1258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coverArtId">Key identifier for the cover art</param>
         /// <returns>Task of ApiResponse (LearningModuleCoverArtResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningModuleCoverArtResponse>> GetLearningModulesCoverartCoverArtIdAsyncWithHttpInfo (string coverArtId);
 
@@ -1193,6 +1273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         System.Threading.Tasks.Task<LearningAssignment> PatchLearningAssignmentAsync (string assignmentId, LearningAssignmentUpdate body = null);
 
         /// <summary>
@@ -1205,6 +1286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningAssignmentAsyncWithHttpInfo (string assignmentId, LearningAssignmentUpdate body = null);
 
@@ -1219,6 +1301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning assignment reschedule model (optional)</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         System.Threading.Tasks.Task<LearningAssignment> PatchLearningAssignmentRescheduleAsync (string assignmentId, LearningAssignmentReschedule body = null);
 
         /// <summary>
@@ -1232,6 +1315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning assignment reschedule model (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningAssignmentRescheduleAsyncWithHttpInfo (string assignmentId, LearningAssignmentReschedule body = null);
 
         /// <summary>
@@ -1243,6 +1327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Assessment form and answers to score</param>
         /// <returns>Task of AssessmentScoringSet</returns>
+        
         
         System.Threading.Tasks.Task<AssessmentScoringSet> PostLearningAssessmentsScoringAsync (LearningAssessmentScoringRequest body);
 
@@ -1256,6 +1341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Assessment form and answers to score</param>
         /// <returns>Task of ApiResponse (AssessmentScoringSet)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AssessmentScoringSet>> PostLearningAssessmentsScoringAsyncWithHttpInfo (LearningAssessmentScoringRequest body);
 
         /// <summary>
@@ -1267,6 +1353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of LearningAssignment</returns>
+        
         
         System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentReassignAsync (string assignmentId);
 
@@ -1280,6 +1367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentReassignAsyncWithHttpInfo (string assignmentId);
 
         /// <summary>
@@ -1291,6 +1379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of LearningAssignment</returns>
+        
         
         System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentResetAsync (string assignmentId);
 
@@ -1304,6 +1393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentResetAsyncWithHttpInfo (string assignmentId);
 
         /// <summary>
@@ -1315,6 +1405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Learning Assignment to be created (optional)</param>
         /// <returns>Task of LearningAssignment</returns>
+        
         
         System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentsAsync (LearningAssignmentCreate body = null);
 
@@ -1328,6 +1419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be created (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentsAsyncWithHttpInfo (LearningAssignmentCreate body = null);
 
         /// <summary>
@@ -1339,6 +1431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of LearningAssignmentAggregateResponse</returns>
+        
         
         System.Threading.Tasks.Task<LearningAssignmentAggregateResponse> PostLearningAssignmentsAggregatesQueryAsync (LearningAssignmentAggregateParam body);
 
@@ -1352,6 +1445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of ApiResponse (LearningAssignmentAggregateResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignmentAggregateResponse>> PostLearningAssignmentsAggregatesQueryAsyncWithHttpInfo (LearningAssignmentAggregateParam body);
 
         /// <summary>
@@ -1363,6 +1457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The learning assignments to be created (optional)</param>
         /// <returns>Task of LearningAssignmentBulkAddResponse</returns>
+        
         
         System.Threading.Tasks.Task<LearningAssignmentBulkAddResponse> PostLearningAssignmentsBulkaddAsync (List<LearningAssignmentItem> body = null);
 
@@ -1376,6 +1471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning assignments to be created (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentBulkAddResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkAddResponse>> PostLearningAssignmentsBulkaddAsyncWithHttpInfo (List<LearningAssignmentItem> body = null);
 
         /// <summary>
@@ -1388,6 +1484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>Task of LearningAssignmentBulkRemoveResponse</returns>
         
+        
         System.Threading.Tasks.Task<LearningAssignmentBulkRemoveResponse> PostLearningAssignmentsBulkremoveAsync (List<string> body = null);
 
         /// <summary>
@@ -1399,6 +1496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentBulkRemoveResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkRemoveResponse>> PostLearningAssignmentsBulkremoveAsyncWithHttpInfo (List<string> body = null);
 
@@ -1413,6 +1511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module job request</param>
         /// <returns>Task of LearningModuleJobResponse</returns>
         
+        
         System.Threading.Tasks.Task<LearningModuleJobResponse> PostLearningModuleJobsAsync (string moduleId, LearningModuleJobRequest body);
 
         /// <summary>
@@ -1426,6 +1525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module job request</param>
         /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> PostLearningModuleJobsAsyncWithHttpInfo (string moduleId, LearningModuleJobRequest body);
 
         /// <summary>
@@ -1437,6 +1537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of LearningModulePublishResponse</returns>
+        
         
         System.Threading.Tasks.Task<LearningModulePublishResponse> PostLearningModulePublishAsync (string moduleId);
 
@@ -1450,6 +1551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of ApiResponse (LearningModulePublishResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningModulePublishResponse>> PostLearningModulePublishAsyncWithHttpInfo (string moduleId);
 
         /// <summary>
@@ -1462,6 +1564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module to be created</param>
         /// <returns>Task of LearningModule</returns>
         
+        
         System.Threading.Tasks.Task<LearningModule> PostLearningModulesAsync (LearningModuleRequest body);
 
         /// <summary>
@@ -1473,6 +1576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The learning module to be created</param>
         /// <returns>Task of ApiResponse (LearningModule)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningModule>> PostLearningModulesAsyncWithHttpInfo (LearningModuleRequest body);
 
@@ -1488,6 +1592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to fetch users</param>
         /// <returns>Task of LearningAssignmentUserListing</returns>
         
+        
         System.Threading.Tasks.Task<LearningAssignmentUserListing> PostLearningRulesQueryAsync (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body);
 
         /// <summary>
@@ -1502,6 +1607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to fetch users</param>
         /// <returns>Task of ApiResponse (LearningAssignmentUserListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LearningAssignmentUserListing>> PostLearningRulesQueryAsyncWithHttpInfo (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body);
 
         /// <summary>
@@ -1514,6 +1620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The slot search request</param>
         /// <returns>Task of LearningScheduleSlotsQueryResponse</returns>
         
+        
         System.Threading.Tasks.Task<LearningScheduleSlotsQueryResponse> PostLearningScheduleslotsQueryAsync (LearningScheduleSlotsQueryRequest body);
 
         /// <summary>
@@ -1525,6 +1632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>Task of ApiResponse (LearningScheduleSlotsQueryResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningScheduleSlotsQueryResponse>> PostLearningScheduleslotsQueryAsyncWithHttpInfo (LearningScheduleSlotsQueryRequest body);
 
@@ -1539,6 +1647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module to be updated</param>
         /// <returns>Task of LearningModule</returns>
         
+        
         System.Threading.Tasks.Task<LearningModule> PutLearningModuleAsync (string moduleId, LearningModuleRequest body);
 
         /// <summary>
@@ -1551,6 +1660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module to be updated</param>
         /// <returns>Task of ApiResponse (LearningModule)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningModule>> PutLearningModuleAsyncWithHttpInfo (string moduleId, LearningModuleRequest body);
 
@@ -1565,6 +1675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to be updated</param>
         /// <returns>Task of LearningModuleRule</returns>
         
+        
         System.Threading.Tasks.Task<LearningModuleRule> PutLearningModuleRuleAsync (string moduleId, LearningModuleRule body);
 
         /// <summary>
@@ -1577,6 +1688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
         /// <returns>Task of ApiResponse (LearningModuleRule)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LearningModuleRule>> PutLearningModuleRuleAsyncWithHttpInfo (string moduleId, LearningModuleRule body);
 
@@ -1679,6 +1791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns></returns>
         
+        
         public void DeleteLearningAssignment (string assignmentId)
         {
              DeleteLearningAssignmentWithHttpInfo(assignmentId);
@@ -1690,6 +1803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteLearningAssignmentWithHttpInfo (string assignmentId)
         { 
@@ -1774,6 +1888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteLearningAssignmentAsync (string assignmentId)
         {
              await DeleteLearningAssignmentAsyncWithHttpInfo(assignmentId);
@@ -1786,6 +1901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLearningAssignmentAsyncWithHttpInfo (string assignmentId)
         { 
@@ -1872,6 +1988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns></returns>
         
+        
         public void DeleteLearningModule (string moduleId)
         {
              DeleteLearningModuleWithHttpInfo(moduleId);
@@ -1883,6 +2000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteLearningModuleWithHttpInfo (string moduleId)
         { 
@@ -1967,6 +2085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteLearningModuleAsync (string moduleId)
         {
              await DeleteLearningModuleAsyncWithHttpInfo(moduleId);
@@ -1979,6 +2098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLearningModuleAsyncWithHttpInfo (string moduleId)
         { 
@@ -2066,6 +2186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>LearningAssignment</returns>
         
+        
         public LearningAssignment GetLearningAssignment (string assignmentId, List<string> expand = null)
         {
              ApiResponse<LearningAssignment> localVarResponse = GetLearningAssignmentWithHttpInfo(assignmentId, expand);
@@ -2079,6 +2200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
+        
         
         public ApiResponse< LearningAssignment > GetLearningAssignmentWithHttpInfo (string assignmentId, List<string> expand = null)
         { 
@@ -2165,6 +2287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignment> GetLearningAssignmentAsync (string assignmentId, List<string> expand = null)
         {
              ApiResponse<LearningAssignment> localVarResponse = await GetLearningAssignmentAsyncWithHttpInfo(assignmentId, expand);
@@ -2179,6 +2302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> GetLearningAssignmentAsyncWithHttpInfo (string assignmentId, List<string> expand = null)
         { 
@@ -2280,6 +2404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
         
+        
         public LearningAssignmentsDomainEntity GetLearningAssignments (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         {
              ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = GetLearningAssignmentsWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, userId, types, states, expand);
@@ -2306,6 +2431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
+        
         
         public ApiResponse< LearningAssignmentsDomainEntity > GetLearningAssignmentsWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         { 
@@ -2415,6 +2541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         {
              ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = await GetLearningAssignmentsAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, userId, types, states, expand);
@@ -2442,6 +2569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         { 
@@ -2551,6 +2679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
         
+        
         public LearningAssignmentsDomainEntity GetLearningAssignmentsMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         {
              ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = GetLearningAssignmentsMeWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, types, states, expand);
@@ -2576,6 +2705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
+        
         
         public ApiResponse< LearningAssignmentsDomainEntity > GetLearningAssignmentsMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         { 
@@ -2683,6 +2813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         {
              ApiResponse<LearningAssignmentsDomainEntity> localVarResponse = await GetLearningAssignmentsMeAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, types, states, expand);
@@ -2709,6 +2840,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
         { 
@@ -2805,6 +2937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>LearningModule</returns>
         
+        
         public LearningModule GetLearningModule (string moduleId, List<string> expand = null)
         {
              ApiResponse<LearningModule> localVarResponse = GetLearningModuleWithHttpInfo(moduleId, expand);
@@ -2818,6 +2951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>ApiResponse of LearningModule</returns>
+        
         
         public ApiResponse< LearningModule > GetLearningModuleWithHttpInfo (string moduleId, List<string> expand = null)
         { 
@@ -2904,6 +3038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of LearningModule</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModule> GetLearningModuleAsync (string moduleId, List<string> expand = null)
         {
              ApiResponse<LearningModule> localVarResponse = await GetLearningModuleAsyncWithHttpInfo(moduleId, expand);
@@ -2918,6 +3053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (LearningModule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModule>> GetLearningModuleAsyncWithHttpInfo (string moduleId, List<string> expand = null)
         { 
@@ -3006,6 +3142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the learning module job</param>
         /// <returns>LearningModuleJobResponse</returns>
         
+        
         public LearningModuleJobResponse GetLearningModuleJob (string moduleId, string jobId)
         {
              ApiResponse<LearningModuleJobResponse> localVarResponse = GetLearningModuleJobWithHttpInfo(moduleId, jobId);
@@ -3019,6 +3156,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="jobId">The ID of the learning module job</param>
         /// <returns>ApiResponse of LearningModuleJobResponse</returns>
+        
         
         public ApiResponse< LearningModuleJobResponse > GetLearningModuleJobWithHttpInfo (string moduleId, string jobId)
         { 
@@ -3108,6 +3246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the learning module job</param>
         /// <returns>Task of LearningModuleJobResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModuleJobResponse> GetLearningModuleJobAsync (string moduleId, string jobId)
         {
              ApiResponse<LearningModuleJobResponse> localVarResponse = await GetLearningModuleJobAsyncWithHttpInfo(moduleId, jobId);
@@ -3122,6 +3261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="jobId">The ID of the learning module job</param>
         /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> GetLearningModuleJobAsyncWithHttpInfo (string moduleId, string jobId)
         { 
@@ -3213,6 +3353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>LearningModuleRule</returns>
         
+        
         public LearningModuleRule GetLearningModuleRule (string moduleId)
         {
              ApiResponse<LearningModuleRule> localVarResponse = GetLearningModuleRuleWithHttpInfo(moduleId);
@@ -3225,6 +3366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>ApiResponse of LearningModuleRule</returns>
+        
         
         public ApiResponse< LearningModuleRule > GetLearningModuleRuleWithHttpInfo (string moduleId)
         { 
@@ -3309,6 +3451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of LearningModuleRule</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModuleRule> GetLearningModuleRuleAsync (string moduleId)
         {
              ApiResponse<LearningModuleRule> localVarResponse = await GetLearningModuleRuleAsyncWithHttpInfo(moduleId);
@@ -3322,6 +3465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of ApiResponse (LearningModuleRule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModuleRule>> GetLearningModuleRuleAsyncWithHttpInfo (string moduleId)
         { 
@@ -3410,6 +3554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>LearningModule</returns>
         
+        
         public LearningModule GetLearningModuleVersion (string moduleId, string versionId, List<string> expand = null)
         {
              ApiResponse<LearningModule> localVarResponse = GetLearningModuleVersionWithHttpInfo(moduleId, versionId, expand);
@@ -3424,6 +3569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of learning module</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>ApiResponse of LearningModule</returns>
+        
         
         public ApiResponse< LearningModule > GetLearningModuleVersionWithHttpInfo (string moduleId, string versionId, List<string> expand = null)
         { 
@@ -3515,6 +3661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of LearningModule</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModule> GetLearningModuleVersionAsync (string moduleId, string versionId, List<string> expand = null)
         {
              ApiResponse<LearningModule> localVarResponse = await GetLearningModuleVersionAsyncWithHttpInfo(moduleId, versionId, expand);
@@ -3530,6 +3677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of learning module</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (LearningModule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModule>> GetLearningModuleVersionAsyncWithHttpInfo (string moduleId, string versionId, List<string> expand = null)
         { 
@@ -3631,6 +3779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <returns>LearningModulesDomainEntityListing</returns>
         
+        
         public LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
         {
              ApiResponse<LearningModulesDomainEntityListing> localVarResponse = GetLearningModulesWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses);
@@ -3652,6 +3801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <returns>ApiResponse of LearningModulesDomainEntityListing</returns>
+        
         
         public ApiResponse< LearningModulesDomainEntityListing > GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
         { 
@@ -3751,6 +3901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <returns>Task of LearningModulesDomainEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
         {
              ApiResponse<LearningModulesDomainEntityListing> localVarResponse = await GetLearningModulesAsyncWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses);
@@ -3773,6 +3924,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <returns>Task of ApiResponse (LearningModulesDomainEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
         { 
@@ -3870,6 +4022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>AssignedLearningModuleDomainEntityListing</returns>
         
+        
         public AssignedLearningModuleDomainEntityListing GetLearningModulesAssignments (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
         {
              ApiResponse<AssignedLearningModuleDomainEntityListing> localVarResponse = GetLearningModulesAssignmentsWithHttpInfo(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand);
@@ -3888,6 +4041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>ApiResponse of AssignedLearningModuleDomainEntityListing</returns>
+        
         
         public ApiResponse< AssignedLearningModuleDomainEntityListing > GetLearningModulesAssignmentsWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
         { 
@@ -3984,6 +4138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of AssignedLearningModuleDomainEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<AssignedLearningModuleDomainEntityListing> GetLearningModulesAssignmentsAsync (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
         {
              ApiResponse<AssignedLearningModuleDomainEntityListing> localVarResponse = await GetLearningModulesAssignmentsAsyncWithHttpInfo(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand);
@@ -4003,6 +4158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (AssignedLearningModuleDomainEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AssignedLearningModuleDomainEntityListing>> GetLearningModulesAssignmentsAsyncWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
         { 
@@ -4095,6 +4251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coverArtId">Key identifier for the cover art</param>
         /// <returns>LearningModuleCoverArtResponse</returns>
         
+        
         public LearningModuleCoverArtResponse GetLearningModulesCoverartCoverArtId (string coverArtId)
         {
              ApiResponse<LearningModuleCoverArtResponse> localVarResponse = GetLearningModulesCoverartCoverArtIdWithHttpInfo(coverArtId);
@@ -4107,6 +4264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coverArtId">Key identifier for the cover art</param>
         /// <returns>ApiResponse of LearningModuleCoverArtResponse</returns>
+        
         
         public ApiResponse< LearningModuleCoverArtResponse > GetLearningModulesCoverartCoverArtIdWithHttpInfo (string coverArtId)
         { 
@@ -4191,6 +4349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coverArtId">Key identifier for the cover art</param>
         /// <returns>Task of LearningModuleCoverArtResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModuleCoverArtResponse> GetLearningModulesCoverartCoverArtIdAsync (string coverArtId)
         {
              ApiResponse<LearningModuleCoverArtResponse> localVarResponse = await GetLearningModulesCoverartCoverArtIdAsyncWithHttpInfo(coverArtId);
@@ -4204,6 +4363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coverArtId">Key identifier for the cover art</param>
         /// <returns>Task of ApiResponse (LearningModuleCoverArtResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModuleCoverArtResponse>> GetLearningModulesCoverartCoverArtIdAsyncWithHttpInfo (string coverArtId)
         { 
@@ -4291,6 +4451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>LearningAssignment</returns>
         
+        
         public LearningAssignment PatchLearningAssignment (string assignmentId, LearningAssignmentUpdate body = null)
         {
              ApiResponse<LearningAssignment> localVarResponse = PatchLearningAssignmentWithHttpInfo(assignmentId, body);
@@ -4304,6 +4465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
+        
         
         public ApiResponse< LearningAssignment > PatchLearningAssignmentWithHttpInfo (string assignmentId, LearningAssignmentUpdate body = null)
         { 
@@ -4395,6 +4557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignment> PatchLearningAssignmentAsync (string assignmentId, LearningAssignmentUpdate body = null)
         {
              ApiResponse<LearningAssignment> localVarResponse = await PatchLearningAssignmentAsyncWithHttpInfo(assignmentId, body);
@@ -4409,6 +4572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="body">The Learning Assignment to be updated (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningAssignmentAsyncWithHttpInfo (string assignmentId, LearningAssignmentUpdate body = null)
         { 
@@ -4502,6 +4666,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning assignment reschedule model (optional)</param>
         /// <returns>LearningAssignment</returns>
         
+        
         public LearningAssignment PatchLearningAssignmentReschedule (string assignmentId, LearningAssignmentReschedule body = null)
         {
              ApiResponse<LearningAssignment> localVarResponse = PatchLearningAssignmentRescheduleWithHttpInfo(assignmentId, body);
@@ -4515,6 +4680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="body">The Learning assignment reschedule model (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
+        
         
         public ApiResponse< LearningAssignment > PatchLearningAssignmentRescheduleWithHttpInfo (string assignmentId, LearningAssignmentReschedule body = null)
         { 
@@ -4606,6 +4772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning assignment reschedule model (optional)</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignment> PatchLearningAssignmentRescheduleAsync (string assignmentId, LearningAssignmentReschedule body = null)
         {
              ApiResponse<LearningAssignment> localVarResponse = await PatchLearningAssignmentRescheduleAsyncWithHttpInfo(assignmentId, body);
@@ -4620,6 +4787,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="body">The Learning assignment reschedule model (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningAssignmentRescheduleAsyncWithHttpInfo (string assignmentId, LearningAssignmentReschedule body = null)
         { 
@@ -4712,6 +4880,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Assessment form and answers to score</param>
         /// <returns>AssessmentScoringSet</returns>
         
+        
         public AssessmentScoringSet PostLearningAssessmentsScoring (LearningAssessmentScoringRequest body)
         {
              ApiResponse<AssessmentScoringSet> localVarResponse = PostLearningAssessmentsScoringWithHttpInfo(body);
@@ -4724,6 +4893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Assessment form and answers to score</param>
         /// <returns>ApiResponse of AssessmentScoringSet</returns>
+        
         
         public ApiResponse< AssessmentScoringSet > PostLearningAssessmentsScoringWithHttpInfo (LearningAssessmentScoringRequest body)
         { 
@@ -4813,6 +4983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Assessment form and answers to score</param>
         /// <returns>Task of AssessmentScoringSet</returns>
         
+        
         public async System.Threading.Tasks.Task<AssessmentScoringSet> PostLearningAssessmentsScoringAsync (LearningAssessmentScoringRequest body)
         {
              ApiResponse<AssessmentScoringSet> localVarResponse = await PostLearningAssessmentsScoringAsyncWithHttpInfo(body);
@@ -4826,6 +4997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Assessment form and answers to score</param>
         /// <returns>Task of ApiResponse (AssessmentScoringSet)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AssessmentScoringSet>> PostLearningAssessmentsScoringAsyncWithHttpInfo (LearningAssessmentScoringRequest body)
         { 
@@ -4917,6 +5089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>LearningAssignment</returns>
         
+        
         public LearningAssignment PostLearningAssignmentReassign (string assignmentId)
         {
              ApiResponse<LearningAssignment> localVarResponse = PostLearningAssignmentReassignWithHttpInfo(assignmentId);
@@ -4929,6 +5102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
+        
         
         public ApiResponse< LearningAssignment > PostLearningAssignmentReassignWithHttpInfo (string assignmentId)
         { 
@@ -5013,6 +5187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentReassignAsync (string assignmentId)
         {
              ApiResponse<LearningAssignment> localVarResponse = await PostLearningAssignmentReassignAsyncWithHttpInfo(assignmentId);
@@ -5026,6 +5201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentReassignAsyncWithHttpInfo (string assignmentId)
         { 
@@ -5112,6 +5288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>LearningAssignment</returns>
         
+        
         public LearningAssignment PostLearningAssignmentReset (string assignmentId)
         {
              ApiResponse<LearningAssignment> localVarResponse = PostLearningAssignmentResetWithHttpInfo(assignmentId);
@@ -5124,6 +5301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
+        
         
         public ApiResponse< LearningAssignment > PostLearningAssignmentResetWithHttpInfo (string assignmentId)
         { 
@@ -5208,6 +5386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentResetAsync (string assignmentId)
         {
              ApiResponse<LearningAssignment> localVarResponse = await PostLearningAssignmentResetAsyncWithHttpInfo(assignmentId);
@@ -5221,6 +5400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignmentId">The Learning Assignment ID</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentResetAsyncWithHttpInfo (string assignmentId)
         { 
@@ -5307,6 +5487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be created (optional)</param>
         /// <returns>LearningAssignment</returns>
         
+        
         public LearningAssignment PostLearningAssignments (LearningAssignmentCreate body = null)
         {
              ApiResponse<LearningAssignment> localVarResponse = PostLearningAssignmentsWithHttpInfo(body);
@@ -5319,6 +5500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Learning Assignment to be created (optional)</param>
         /// <returns>ApiResponse of LearningAssignment</returns>
+        
         
         public ApiResponse< LearningAssignment > PostLearningAssignmentsWithHttpInfo (LearningAssignmentCreate body = null)
         { 
@@ -5405,6 +5587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Learning Assignment to be created (optional)</param>
         /// <returns>Task of LearningAssignment</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignment> PostLearningAssignmentsAsync (LearningAssignmentCreate body = null)
         {
              ApiResponse<LearningAssignment> localVarResponse = await PostLearningAssignmentsAsyncWithHttpInfo(body);
@@ -5418,6 +5601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Learning Assignment to be created (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentsAsyncWithHttpInfo (LearningAssignmentCreate body = null)
         { 
@@ -5505,6 +5689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>LearningAssignmentAggregateResponse</returns>
         
+        
         public LearningAssignmentAggregateResponse PostLearningAssignmentsAggregatesQuery (LearningAssignmentAggregateParam body)
         {
              ApiResponse<LearningAssignmentAggregateResponse> localVarResponse = PostLearningAssignmentsAggregatesQueryWithHttpInfo(body);
@@ -5517,6 +5702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>ApiResponse of LearningAssignmentAggregateResponse</returns>
+        
         
         public ApiResponse< LearningAssignmentAggregateResponse > PostLearningAssignmentsAggregatesQueryWithHttpInfo (LearningAssignmentAggregateParam body)
         { 
@@ -5606,6 +5792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of LearningAssignmentAggregateResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignmentAggregateResponse> PostLearningAssignmentsAggregatesQueryAsync (LearningAssignmentAggregateParam body)
         {
              ApiResponse<LearningAssignmentAggregateResponse> localVarResponse = await PostLearningAssignmentsAggregatesQueryAsyncWithHttpInfo(body);
@@ -5619,6 +5806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of ApiResponse (LearningAssignmentAggregateResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentAggregateResponse>> PostLearningAssignmentsAggregatesQueryAsyncWithHttpInfo (LearningAssignmentAggregateParam body)
         { 
@@ -5710,6 +5898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning assignments to be created (optional)</param>
         /// <returns>LearningAssignmentBulkAddResponse</returns>
         
+        
         public LearningAssignmentBulkAddResponse PostLearningAssignmentsBulkadd (List<LearningAssignmentItem> body = null)
         {
              ApiResponse<LearningAssignmentBulkAddResponse> localVarResponse = PostLearningAssignmentsBulkaddWithHttpInfo(body);
@@ -5722,6 +5911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The learning assignments to be created (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentBulkAddResponse</returns>
+        
         
         public ApiResponse< LearningAssignmentBulkAddResponse > PostLearningAssignmentsBulkaddWithHttpInfo (List<LearningAssignmentItem> body = null)
         { 
@@ -5808,6 +5998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning assignments to be created (optional)</param>
         /// <returns>Task of LearningAssignmentBulkAddResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignmentBulkAddResponse> PostLearningAssignmentsBulkaddAsync (List<LearningAssignmentItem> body = null)
         {
              ApiResponse<LearningAssignmentBulkAddResponse> localVarResponse = await PostLearningAssignmentsBulkaddAsyncWithHttpInfo(body);
@@ -5821,6 +6012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The learning assignments to be created (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentBulkAddResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkAddResponse>> PostLearningAssignmentsBulkaddAsyncWithHttpInfo (List<LearningAssignmentItem> body = null)
         { 
@@ -5908,6 +6100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>LearningAssignmentBulkRemoveResponse</returns>
         
+        
         public LearningAssignmentBulkRemoveResponse PostLearningAssignmentsBulkremove (List<string> body = null)
         {
              ApiResponse<LearningAssignmentBulkRemoveResponse> localVarResponse = PostLearningAssignmentsBulkremoveWithHttpInfo(body);
@@ -5920,6 +6113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentBulkRemoveResponse</returns>
+        
         
         public ApiResponse< LearningAssignmentBulkRemoveResponse > PostLearningAssignmentsBulkremoveWithHttpInfo (List<string> body = null)
         { 
@@ -6006,6 +6200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>Task of LearningAssignmentBulkRemoveResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignmentBulkRemoveResponse> PostLearningAssignmentsBulkremoveAsync (List<string> body = null)
         {
              ApiResponse<LearningAssignmentBulkRemoveResponse> localVarResponse = await PostLearningAssignmentsBulkremoveAsyncWithHttpInfo(body);
@@ -6019,6 +6214,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The IDs of the learning assignments to be removed (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentBulkRemoveResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkRemoveResponse>> PostLearningAssignmentsBulkremoveAsyncWithHttpInfo (List<string> body = null)
         { 
@@ -6107,6 +6303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module job request</param>
         /// <returns>LearningModuleJobResponse</returns>
         
+        
         public LearningModuleJobResponse PostLearningModuleJobs (string moduleId, LearningModuleJobRequest body)
         {
              ApiResponse<LearningModuleJobResponse> localVarResponse = PostLearningModuleJobsWithHttpInfo(moduleId, body);
@@ -6120,6 +6317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module job request</param>
         /// <returns>ApiResponse of LearningModuleJobResponse</returns>
+        
         
         public ApiResponse< LearningModuleJobResponse > PostLearningModuleJobsWithHttpInfo (string moduleId, LearningModuleJobRequest body)
         { 
@@ -6214,6 +6412,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module job request</param>
         /// <returns>Task of LearningModuleJobResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModuleJobResponse> PostLearningModuleJobsAsync (string moduleId, LearningModuleJobRequest body)
         {
              ApiResponse<LearningModuleJobResponse> localVarResponse = await PostLearningModuleJobsAsyncWithHttpInfo(moduleId, body);
@@ -6228,6 +6427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module job request</param>
         /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> PostLearningModuleJobsAsyncWithHttpInfo (string moduleId, LearningModuleJobRequest body)
         { 
@@ -6324,6 +6524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>LearningModulePublishResponse</returns>
         
+        
         public LearningModulePublishResponse PostLearningModulePublish (string moduleId)
         {
              ApiResponse<LearningModulePublishResponse> localVarResponse = PostLearningModulePublishWithHttpInfo(moduleId);
@@ -6336,6 +6537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>ApiResponse of LearningModulePublishResponse</returns>
+        
         
         public ApiResponse< LearningModulePublishResponse > PostLearningModulePublishWithHttpInfo (string moduleId)
         { 
@@ -6420,6 +6622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of LearningModulePublishResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModulePublishResponse> PostLearningModulePublishAsync (string moduleId)
         {
              ApiResponse<LearningModulePublishResponse> localVarResponse = await PostLearningModulePublishAsyncWithHttpInfo(moduleId);
@@ -6433,6 +6636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <returns>Task of ApiResponse (LearningModulePublishResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModulePublishResponse>> PostLearningModulePublishAsyncWithHttpInfo (string moduleId)
         { 
@@ -6519,6 +6723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module to be created</param>
         /// <returns>LearningModule</returns>
         
+        
         public LearningModule PostLearningModules (LearningModuleRequest body)
         {
              ApiResponse<LearningModule> localVarResponse = PostLearningModulesWithHttpInfo(body);
@@ -6531,6 +6736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The learning module to be created</param>
         /// <returns>ApiResponse of LearningModule</returns>
+        
         
         public ApiResponse< LearningModule > PostLearningModulesWithHttpInfo (LearningModuleRequest body)
         { 
@@ -6620,6 +6826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module to be created</param>
         /// <returns>Task of LearningModule</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModule> PostLearningModulesAsync (LearningModuleRequest body)
         {
              ApiResponse<LearningModule> localVarResponse = await PostLearningModulesAsyncWithHttpInfo(body);
@@ -6633,6 +6840,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The learning module to be created</param>
         /// <returns>Task of ApiResponse (LearningModule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModule>> PostLearningModulesAsyncWithHttpInfo (LearningModuleRequest body)
         { 
@@ -6726,6 +6934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to fetch users</param>
         /// <returns>LearningAssignmentUserListing</returns>
         
+        
         public LearningAssignmentUserListing PostLearningRulesQuery (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body)
         {
              ApiResponse<LearningAssignmentUserListing> localVarResponse = PostLearningRulesQueryWithHttpInfo(pageSize, pageNumber, body);
@@ -6740,6 +6949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="body">The learning module rule to fetch users</param>
         /// <returns>ApiResponse of LearningAssignmentUserListing</returns>
+        
         
         public ApiResponse< LearningAssignmentUserListing > PostLearningRulesQueryWithHttpInfo (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body)
         { 
@@ -6839,6 +7049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to fetch users</param>
         /// <returns>Task of LearningAssignmentUserListing</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningAssignmentUserListing> PostLearningRulesQueryAsync (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body)
         {
              ApiResponse<LearningAssignmentUserListing> localVarResponse = await PostLearningRulesQueryAsyncWithHttpInfo(pageSize, pageNumber, body);
@@ -6854,6 +7065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="body">The learning module rule to fetch users</param>
         /// <returns>Task of ApiResponse (LearningAssignmentUserListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentUserListing>> PostLearningRulesQueryAsyncWithHttpInfo (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body)
         { 
@@ -6955,6 +7167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The slot search request</param>
         /// <returns>LearningScheduleSlotsQueryResponse</returns>
         
+        
         public LearningScheduleSlotsQueryResponse PostLearningScheduleslotsQuery (LearningScheduleSlotsQueryRequest body)
         {
              ApiResponse<LearningScheduleSlotsQueryResponse> localVarResponse = PostLearningScheduleslotsQueryWithHttpInfo(body);
@@ -6967,6 +7180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>ApiResponse of LearningScheduleSlotsQueryResponse</returns>
+        
         
         public ApiResponse< LearningScheduleSlotsQueryResponse > PostLearningScheduleslotsQueryWithHttpInfo (LearningScheduleSlotsQueryRequest body)
         { 
@@ -7056,6 +7270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The slot search request</param>
         /// <returns>Task of LearningScheduleSlotsQueryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningScheduleSlotsQueryResponse> PostLearningScheduleslotsQueryAsync (LearningScheduleSlotsQueryRequest body)
         {
              ApiResponse<LearningScheduleSlotsQueryResponse> localVarResponse = await PostLearningScheduleslotsQueryAsyncWithHttpInfo(body);
@@ -7069,6 +7284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>Task of ApiResponse (LearningScheduleSlotsQueryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningScheduleSlotsQueryResponse>> PostLearningScheduleslotsQueryAsyncWithHttpInfo (LearningScheduleSlotsQueryRequest body)
         { 
@@ -7161,6 +7377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module to be updated</param>
         /// <returns>LearningModule</returns>
         
+        
         public LearningModule PutLearningModule (string moduleId, LearningModuleRequest body)
         {
              ApiResponse<LearningModule> localVarResponse = PutLearningModuleWithHttpInfo(moduleId, body);
@@ -7174,6 +7391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module to be updated</param>
         /// <returns>ApiResponse of LearningModule</returns>
+        
         
         public ApiResponse< LearningModule > PutLearningModuleWithHttpInfo (string moduleId, LearningModuleRequest body)
         { 
@@ -7268,6 +7486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module to be updated</param>
         /// <returns>Task of LearningModule</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModule> PutLearningModuleAsync (string moduleId, LearningModuleRequest body)
         {
              ApiResponse<LearningModule> localVarResponse = await PutLearningModuleAsyncWithHttpInfo(moduleId, body);
@@ -7282,6 +7501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module to be updated</param>
         /// <returns>Task of ApiResponse (LearningModule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModule>> PutLearningModuleAsyncWithHttpInfo (string moduleId, LearningModuleRequest body)
         { 
@@ -7379,6 +7599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to be updated</param>
         /// <returns>LearningModuleRule</returns>
         
+        
         public LearningModuleRule PutLearningModuleRule (string moduleId, LearningModuleRule body)
         {
              ApiResponse<LearningModuleRule> localVarResponse = PutLearningModuleRuleWithHttpInfo(moduleId, body);
@@ -7392,6 +7613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
         /// <returns>ApiResponse of LearningModuleRule</returns>
+        
         
         public ApiResponse< LearningModuleRule > PutLearningModuleRuleWithHttpInfo (string moduleId, LearningModuleRule body)
         { 
@@ -7486,6 +7708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The learning module rule to be updated</param>
         /// <returns>Task of LearningModuleRule</returns>
         
+        
         public async System.Threading.Tasks.Task<LearningModuleRule> PutLearningModuleRuleAsync (string moduleId, LearningModuleRule body)
         {
              ApiResponse<LearningModuleRule> localVarResponse = await PutLearningModuleRuleAsyncWithHttpInfo(moduleId, body);
@@ -7500,6 +7723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
         /// <returns>Task of ApiResponse (LearningModuleRule)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LearningModuleRule>> PutLearningModuleRuleAsyncWithHttpInfo (string moduleId, LearningModuleRule body)
         { 

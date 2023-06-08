@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingAssessment (string assessmentId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingAssessmentWithHttpInfo (string assessmentId);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingEmailDomain (string domainId);
 
         /// <summary>
@@ -61,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingEmailDomainWithHttpInfo (string domainId);
 
@@ -75,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingEmailDomainRoute (string domainName, string routeId);
 
         /// <summary>
@@ -88,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId);
 
         /// <summary>
@@ -99,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns></returns>
+        
         
         void DeleteRoutingEmailOutboundDomain (string domainId);
 
@@ -112,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteRoutingEmailOutboundDomainWithHttpInfo (string domainId);
 
         /// <summary>
@@ -123,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns></returns>
+        
         
         void DeleteRoutingLanguage (string languageId);
 
@@ -136,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteRoutingLanguageWithHttpInfo (string languageId);
 
         /// <summary>
@@ -148,6 +158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingPredictor (string predictorId);
 
         /// <summary>
@@ -159,6 +170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingPredictorWithHttpInfo (string predictorId);
 
@@ -173,6 +185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingQueue (string queueId, bool? forceDelete = null);
 
         /// <summary>
@@ -185,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingQueueWithHttpInfo (string queueId, bool? forceDelete = null);
 
@@ -199,6 +213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingQueueMember (string queueId, string memberId);
 
         /// <summary>
@@ -211,6 +226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingQueueMemberWithHttpInfo (string queueId, string memberId);
 
@@ -225,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
         [Obsolete]
+        
         void DeleteRoutingQueueUser (string queueId, string memberId);
 
         /// <summary>
@@ -238,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         ApiResponse<Object> DeleteRoutingQueueUserWithHttpInfo (string queueId, string memberId);
 
         /// <summary>
@@ -250,6 +268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns></returns>
+        
         
         void DeleteRoutingQueueWrapupcode (string queueId, string codeId);
 
@@ -264,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Code ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteRoutingQueueWrapupcodeWithHttpInfo (string queueId, string codeId);
 
         /// <summary>
@@ -275,6 +295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
+        
         void DeleteRoutingSettings ();
 
         /// <summary>
@@ -285,6 +306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingSettingsWithHttpInfo ();
 
@@ -298,6 +320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">Skill ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingSkill (string skillId);
 
         /// <summary>
@@ -309,6 +332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingSkillWithHttpInfo (string skillId);
 
@@ -322,6 +346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingSkillgroup (string skillGroupId);
 
         /// <summary>
@@ -333,6 +358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingSkillgroupWithHttpInfo (string skillGroupId);
 
@@ -346,6 +372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingSmsAddress (string addressId);
 
         /// <summary>
@@ -357,6 +384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingSmsAddressWithHttpInfo (string addressId);
 
@@ -370,6 +398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingSmsPhonenumber (string addressId);
 
         /// <summary>
@@ -381,6 +410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string addressId);
 
@@ -394,6 +424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns></returns>
         
+        
         void DeleteRoutingUserUtilization (string userId);
 
         /// <summary>
@@ -406,6 +437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteRoutingUserUtilizationWithHttpInfo (string userId);
 
         /// <summary>
@@ -416,6 +448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
+        
         
         void DeleteRoutingUtilization ();
 
@@ -428,7 +461,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteRoutingUtilizationWithHttpInfo ();
+
+        /// <summary>
+        /// Delete an utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
+        /// <returns></returns>
+        
+        /// Preview Endpoint
+        void DeleteRoutingUtilizationTag (string tagId, bool? forceDelete = null);
+
+        /// <summary>
+        /// Delete an utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<Object> DeleteRoutingUtilizationTagWithHttpInfo (string tagId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete wrap-up code
@@ -439,6 +501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns></returns>
+        
         
         void DeleteRoutingWrapupcode (string codeId);
 
@@ -451,6 +514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteRoutingWrapupcodeWithHttpInfo (string codeId);
 
@@ -465,6 +529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <returns></returns>
         
+        
         void DeleteUserRoutinglanguage (string userId, string languageId);
 
         /// <summary>
@@ -477,6 +542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="languageId">languageId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteUserRoutinglanguageWithHttpInfo (string userId, string languageId);
 
@@ -491,6 +557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns></returns>
         
+        
         void DeleteUserRoutingskill (string userId, string skillId);
 
         /// <summary>
@@ -504,6 +571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId);
 
         /// <summary>
@@ -516,6 +584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>BenefitAssessment</returns>
         
+        
         BenefitAssessment GetRoutingAssessment (string assessmentId);
 
         /// <summary>
@@ -527,6 +596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>ApiResponse of BenefitAssessment</returns>
+        
         
         ApiResponse<BenefitAssessment> GetRoutingAssessmentWithHttpInfo (string assessmentId);
 
@@ -544,6 +614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>AssessmentListing</returns>
         
+        
         AssessmentListing GetRoutingAssessments (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
 
         /// <summary>
@@ -560,6 +631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>ApiResponse of AssessmentListing</returns>
         
+        
         ApiResponse<AssessmentListing> GetRoutingAssessmentsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
 
         /// <summary>
@@ -571,6 +643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Benefit Assessment Job ID</param>
         /// <returns>BenefitAssessmentJob</returns>
+        
         
         BenefitAssessmentJob GetRoutingAssessmentsJob (string jobId);
 
@@ -584,6 +657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Benefit Assessment Job ID</param>
         /// <returns>ApiResponse of BenefitAssessmentJob</returns>
         
+        
         ApiResponse<BenefitAssessmentJob> GetRoutingAssessmentsJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -595,6 +669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
         /// <returns>AssessmentJobListing</returns>
+        
         
         AssessmentJobListing GetRoutingAssessmentsJobs (List<string> divisionId = null);
 
@@ -608,6 +683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
         /// <returns>ApiResponse of AssessmentJobListing</returns>
         
+        
         ApiResponse<AssessmentJobListing> GetRoutingAssessmentsJobsWithHttpInfo (List<string> divisionId = null);
 
         /// <summary>
@@ -619,6 +695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AvailableMediaTypeEntityListing</returns>
         
+        
         AvailableMediaTypeEntityListing GetRoutingAvailablemediatypes ();
 
         /// <summary>
@@ -629,6 +706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AvailableMediaTypeEntityListing</returns>
+        
         
         ApiResponse<AvailableMediaTypeEntityListing> GetRoutingAvailablemediatypesWithHttpInfo ();
 
@@ -642,6 +720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>InboundDomain</returns>
         
+        
         InboundDomain GetRoutingEmailDomain (string domainId);
 
         /// <summary>
@@ -653,6 +732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of InboundDomain</returns>
+        
         
         ApiResponse<InboundDomain> GetRoutingEmailDomainWithHttpInfo (string domainId);
 
@@ -667,6 +747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>InboundRoute</returns>
         
+        
         InboundRoute GetRoutingEmailDomainRoute (string domainName, string routeId);
 
         /// <summary>
@@ -679,6 +760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of InboundRoute</returns>
+        
         
         ApiResponse<InboundRoute> GetRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId);
 
@@ -695,6 +777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>InboundRouteEntityListing</returns>
         
+        
         InboundRouteEntityListing GetRoutingEmailDomainRoutes (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null);
 
         /// <summary>
@@ -709,6 +792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
+        
         
         ApiResponse<InboundRouteEntityListing> GetRoutingEmailDomainRoutesWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null);
 
@@ -725,6 +809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>InboundDomainEntityListing</returns>
         
+        
         InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
 
         /// <summary>
@@ -740,6 +825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
         
+        
         ApiResponse<InboundDomainEntityListing> GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
 
         /// <summary>
@@ -751,6 +837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>OutboundDomain</returns>
+        
         
         OutboundDomain GetRoutingEmailOutboundDomain (string domainId);
 
@@ -764,6 +851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of OutboundDomain</returns>
         
+        
         ApiResponse<OutboundDomain> GetRoutingEmailOutboundDomainWithHttpInfo (string domainId);
 
         /// <summary>
@@ -775,6 +863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>EmailOutboundDomainResult</returns>
+        
         
         EmailOutboundDomainResult GetRoutingEmailOutboundDomainActivation (string domainId);
 
@@ -788,6 +877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
+        
         ApiResponse<EmailOutboundDomainResult> GetRoutingEmailOutboundDomainActivationWithHttpInfo (string domainId);
 
         /// <summary>
@@ -799,6 +889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>OutboundDomain</returns>
+        
         
         OutboundDomain GetRoutingEmailOutboundDomainSearch (string domainId);
 
@@ -812,6 +903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of OutboundDomain</returns>
         
+        
         ApiResponse<OutboundDomain> GetRoutingEmailOutboundDomainSearchWithHttpInfo (string domainId);
 
         /// <summary>
@@ -823,6 +915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>OutboundDomainEntityListing</returns>
+        
         
         OutboundDomainEntityListing GetRoutingEmailOutboundDomains (string filter = null);
 
@@ -836,6 +929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>ApiResponse of OutboundDomainEntityListing</returns>
         
+        
         ApiResponse<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsWithHttpInfo (string filter = null);
 
         /// <summary>
@@ -847,6 +941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EmailSetup</returns>
         
+        
         EmailSetup GetRoutingEmailSetup ();
 
         /// <summary>
@@ -857,6 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EmailSetup</returns>
+        
         
         ApiResponse<EmailSetup> GetRoutingEmailSetupWithHttpInfo ();
 
@@ -870,6 +966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Language</returns>
         
+        
         Language GetRoutingLanguage (string languageId);
 
         /// <summary>
@@ -881,6 +978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Language</returns>
+        
         
         ApiResponse<Language> GetRoutingLanguageWithHttpInfo (string languageId);
 
@@ -898,6 +996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>LanguageEntityListing</returns>
         
+        
         LanguageEntityListing GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -914,6 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
         
+        
         ApiResponse<LanguageEntityListing> GetRoutingLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -926,6 +1026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recipientId">Recipient ID</param>
         /// <returns>Recipient</returns>
         
+        
         Recipient GetRoutingMessageRecipient (string recipientId);
 
         /// <summary>
@@ -937,6 +1038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recipientId">Recipient ID</param>
         /// <returns>ApiResponse of Recipient</returns>
+        
         
         ApiResponse<Recipient> GetRoutingMessageRecipientWithHttpInfo (string recipientId);
 
@@ -952,6 +1054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>RecipientListing</returns>
         
+        
         RecipientListing GetRoutingMessageRecipients (string messengerType = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -966,6 +1069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of RecipientListing</returns>
         
+        
         ApiResponse<RecipientListing> GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -978,6 +1082,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Predictor</returns>
         
+        
         Predictor GetRoutingPredictor (string predictorId);
 
         /// <summary>
@@ -989,6 +1094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>ApiResponse of Predictor</returns>
+        
         
         ApiResponse<Predictor> GetRoutingPredictorWithHttpInfo (string predictorId);
 
@@ -1003,6 +1109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="modelId">Model ID</param>
         /// <returns>PredictorModelFeatureListing</returns>
         
+        
         PredictorModelFeatureListing GetRoutingPredictorModelFeatures (string predictorId, string modelId);
 
         /// <summary>
@@ -1016,6 +1123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="modelId">Model ID</param>
         /// <returns>ApiResponse of PredictorModelFeatureListing</returns>
         
+        
         ApiResponse<PredictorModelFeatureListing> GetRoutingPredictorModelFeaturesWithHttpInfo (string predictorId, string modelId);
 
         /// <summary>
@@ -1028,6 +1136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>PredictorModels</returns>
         
+        
         PredictorModels GetRoutingPredictorModels (string predictorId);
 
         /// <summary>
@@ -1039,6 +1148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>ApiResponse of PredictorModels</returns>
+        
         
         ApiResponse<PredictorModels> GetRoutingPredictorModelsWithHttpInfo (string predictorId);
 
@@ -1056,6 +1166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>PredictorListing</returns>
         
+        
         PredictorListing GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
 
         /// <summary>
@@ -1072,6 +1183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>ApiResponse of PredictorListing</returns>
         
+        
         ApiResponse<PredictorListing> GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
 
         /// <summary>
@@ -1084,6 +1196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>List&lt;KeyPerformanceIndicator&gt;</returns>
+        
         
         List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null);
 
@@ -1098,6 +1211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
         
+        
         ApiResponse<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
@@ -1110,6 +1224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <returns>Queue</returns>
         
+        
         Queue GetRoutingQueue (string queueId);
 
         /// <summary>
@@ -1121,6 +1236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <returns>ApiResponse of Queue</returns>
+        
         
         ApiResponse<Queue> GetRoutingQueueWithHttpInfo (string queueId);
 
@@ -1135,6 +1251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
         /// <returns>ComparisonPeriod</returns>
         
+        
         ComparisonPeriod GetRoutingQueueComparisonperiod (string queueId, string comparisonPeriodId);
 
         /// <summary>
@@ -1148,6 +1265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
         /// <returns>ApiResponse of ComparisonPeriod</returns>
         
+        
         ApiResponse<ComparisonPeriod> GetRoutingQueueComparisonperiodWithHttpInfo (string queueId, string comparisonPeriodId);
 
         /// <summary>
@@ -1160,6 +1278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue id</param>
         /// <returns>ComparisonPeriodListing</returns>
         
+        
         ComparisonPeriodListing GetRoutingQueueComparisonperiods (string queueId);
 
         /// <summary>
@@ -1171,6 +1290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue id</param>
         /// <returns>ApiResponse of ComparisonPeriodListing</returns>
+        
         
         ApiResponse<ComparisonPeriodListing> GetRoutingQueueComparisonperiodsWithHttpInfo (string queueId);
 
@@ -1185,6 +1305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>EstimatedWaitTimePredictions</returns>
         
+        
         EstimatedWaitTimePredictions GetRoutingQueueEstimatedwaittime (string queueId, string conversationId = null);
 
         /// <summary>
@@ -1197,6 +1318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queueId</param>
         /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
+        
         
         ApiResponse<EstimatedWaitTimePredictions> GetRoutingQueueEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null);
 
@@ -1211,6 +1333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">mediaType</param>
         /// <returns>EstimatedWaitTimePredictions</returns>
         
+        
         EstimatedWaitTimePredictions GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType);
 
         /// <summary>
@@ -1223,6 +1346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
         /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
+        
         
         ApiResponse<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo (string queueId, string mediaType);
 
@@ -1248,6 +1372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <returns>QueueMemberEntityListing</returns>
         
+        
         QueueMemberEntityListing GetRoutingQueueMembers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null);
 
         /// <summary>
@@ -1272,6 +1397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
         
+        
         ApiResponse<QueueMemberEntityListing> GetRoutingQueueMembersWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null);
 
         /// <summary>
@@ -1295,6 +1421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         QueueMemberEntityListingV1 GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
@@ -1318,6 +1445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>ApiResponse of QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         ApiResponse<QueueMemberEntityListingV1> GetRoutingQueueUsersWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
@@ -1332,6 +1460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>WrapupCodeEntityListing</returns>
         
+        
         WrapupCodeEntityListing GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1345,6 +1474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        
         
         ApiResponse<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
 
@@ -1365,6 +1495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>QueueEntityListing</returns>
         
+        
         QueueEntityListing GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null);
 
         /// <summary>
@@ -1384,6 +1515,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
         
+        
         ApiResponse<QueueEntityListing> GetRoutingQueuesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null);
 
         /// <summary>
@@ -1401,6 +1533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Queue ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>QueueEntityListing</returns>
+        
         
         QueueEntityListing GetRoutingQueuesDivisionviews (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
@@ -1420,6 +1553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
         
+        
         ApiResponse<QueueEntityListing> GetRoutingQueuesDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1434,6 +1568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>QueueEntityListing</returns>
         
+        
         QueueEntityListing GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -1447,6 +1582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
+        
         
         ApiResponse<QueueEntityListing> GetRoutingQueuesDivisionviewsAllWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -1463,6 +1599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Note: results are sorted by name. (optional, default to asc)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         UserQueueEntityListing GetRoutingQueuesMe (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null);
 
         /// <summary>
@@ -1478,6 +1615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Note: results are sorted by name. (optional, default to asc)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
         
+        
         ApiResponse<UserQueueEntityListing> GetRoutingQueuesMeWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null);
 
         /// <summary>
@@ -1488,6 +1626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RoutingSettings</returns>
+        
         
         RoutingSettings GetRoutingSettings ();
 
@@ -1500,6 +1639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RoutingSettings</returns>
         
+        
         ApiResponse<RoutingSettings> GetRoutingSettingsWithHttpInfo ();
 
         /// <summary>
@@ -1510,6 +1650,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ContactCenterSettings</returns>
+        
         
         ContactCenterSettings GetRoutingSettingsContactcenter ();
 
@@ -1522,6 +1663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ContactCenterSettings</returns>
         
+        
         ApiResponse<ContactCenterSettings> GetRoutingSettingsContactcenterWithHttpInfo ();
 
         /// <summary>
@@ -1533,6 +1675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TranscriptionSettings</returns>
         
+        
         TranscriptionSettings GetRoutingSettingsTranscription ();
 
         /// <summary>
@@ -1543,6 +1686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TranscriptionSettings</returns>
+        
         
         ApiResponse<TranscriptionSettings> GetRoutingSettingsTranscriptionWithHttpInfo ();
 
@@ -1556,6 +1700,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">Skill ID</param>
         /// <returns>RoutingSkill</returns>
         
+        
         RoutingSkill GetRoutingSkill (string skillId);
 
         /// <summary>
@@ -1567,6 +1712,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>ApiResponse of RoutingSkill</returns>
+        
         
         ApiResponse<RoutingSkill> GetRoutingSkillWithHttpInfo (string skillId);
 
@@ -1580,6 +1726,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>SkillGroup</returns>
         
+        
         SkillGroup GetRoutingSkillgroup (string skillGroupId);
 
         /// <summary>
@@ -1591,6 +1738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>ApiResponse of SkillGroup</returns>
+        
         
         ApiResponse<SkillGroup> GetRoutingSkillgroupWithHttpInfo (string skillGroupId);
 
@@ -1608,6 +1756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>SkillGroupMemberEntityListing</returns>
         
+        
         SkillGroupMemberEntityListing GetRoutingSkillgroupMembers (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null);
 
         /// <summary>
@@ -1624,6 +1773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>ApiResponse of SkillGroupMemberEntityListing</returns>
         
+        
         ApiResponse<SkillGroupMemberEntityListing> GetRoutingSkillgroupMembersWithHttpInfo (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null);
 
         /// <summary>
@@ -1637,6 +1787,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>SkillGroupMemberDivisionList</returns>
         
+        
         SkillGroupMemberDivisionList GetRoutingSkillgroupMembersDivisions (string skillGroupId, string expand = null);
 
         /// <summary>
@@ -1649,6 +1800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>ApiResponse of SkillGroupMemberDivisionList</returns>
+        
         
         ApiResponse<SkillGroupMemberDivisionList> GetRoutingSkillgroupMembersDivisionsWithHttpInfo (string skillGroupId, string expand = null);
 
@@ -1665,6 +1817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <returns>SkillGroupEntityListing</returns>
         
+        
         SkillGroupEntityListing GetRoutingSkillgroups (int? pageSize = null, string name = null, string after = null, string before = null);
 
         /// <summary>
@@ -1679,6 +1832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item (optional)</param>
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <returns>ApiResponse of SkillGroupEntityListing</returns>
+        
         
         ApiResponse<SkillGroupEntityListing> GetRoutingSkillgroupsWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null);
 
@@ -1695,6 +1849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>SkillEntityListing</returns>
         
+        
         SkillEntityListing GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -1710,6 +1865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of SkillEntityListing</returns>
         
+        
         ApiResponse<SkillEntityListing> GetRoutingSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -1722,6 +1878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns>SmsAddress</returns>
         
+        
         SmsAddress GetRoutingSmsAddress (string addressId);
 
         /// <summary>
@@ -1733,6 +1890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>ApiResponse of SmsAddress</returns>
+        
         
         ApiResponse<SmsAddress> GetRoutingSmsAddressWithHttpInfo (string addressId);
 
@@ -1747,6 +1905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>SmsAddressEntityListing</returns>
         
+        
         SmsAddressEntityListing GetRoutingSmsAddresses (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1759,6 +1918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of SmsAddressEntityListing</returns>
+        
         
         ApiResponse<SmsAddressEntityListing> GetRoutingSmsAddressesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
@@ -1778,6 +1938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressRequirement">This indicates whether the phone number requires to have an Address registered. (optional)</param>
         /// <returns>SMSAvailablePhoneNumberEntityListing</returns>
         
+        
         SMSAvailablePhoneNumberEntityListing GetRoutingSmsAvailablephonenumbers (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null);
 
         /// <summary>
@@ -1796,6 +1957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressRequirement">This indicates whether the phone number requires to have an Address registered. (optional)</param>
         /// <returns>ApiResponse of SMSAvailablePhoneNumberEntityListing</returns>
         
+        
         ApiResponse<SMSAvailablePhoneNumberEntityListing> GetRoutingSmsAvailablephonenumbersWithHttpInfo (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null);
 
         /// <summary>
@@ -1809,6 +1971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>SmsPhoneNumber</returns>
         
+        
         SmsPhoneNumber GetRoutingSmsPhonenumber (string addressId, string expand = null);
 
         /// <summary>
@@ -1821,6 +1984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
         
         ApiResponse<SmsPhoneNumber> GetRoutingSmsPhonenumberWithHttpInfo (string addressId, string expand = null);
 
@@ -1843,6 +2007,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>SmsPhoneNumberEntityListing</returns>
         
+        
         SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null);
 
         /// <summary>
@@ -1864,6 +2029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumberEntityListing</returns>
         
+        
         ApiResponse<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null);
 
         /// <summary>
@@ -1875,6 +2041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>AgentMaxUtilization</returns>
+        
         
         AgentMaxUtilization GetRoutingUserUtilization (string userId);
 
@@ -1888,6 +2055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of AgentMaxUtilization</returns>
         
+        
         ApiResponse<AgentMaxUtilization> GetRoutingUserUtilizationWithHttpInfo (string userId);
 
         /// <summary>
@@ -1898,6 +2066,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Utilization</returns>
+        
         
         Utilization GetRoutingUtilization ();
 
@@ -1910,7 +2079,92 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Utilization</returns>
         
+        
         ApiResponse<Utilization> GetRoutingUtilizationWithHttpInfo ();
+
+        /// <summary>
+        /// Get details about this utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        UtilizationTag GetRoutingUtilizationTag (string tagId);
+
+        /// <summary>
+        /// Get details about this utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>ApiResponse of UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<UtilizationTag> GetRoutingUtilizationTagWithHttpInfo (string tagId);
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>List&lt;Object&gt;</returns>
+        
+        /// Preview Endpoint
+        List<Object> GetRoutingUtilizationTagAgents (string tagId);
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<List<Object>> GetRoutingUtilizationTagAgentsWithHttpInfo (string tagId);
+
+        /// <summary>
+        /// Get list of utilization tags
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
+        /// <returns>UtilizationTagEntityListing</returns>
+        
+        /// Preview Endpoint
+        UtilizationTagEntityListing GetRoutingUtilizationTags (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+
+        /// <summary>
+        /// Get list of utilization tags
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
+        /// <returns>ApiResponse of UtilizationTagEntityListing</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<UtilizationTagEntityListing> GetRoutingUtilizationTagsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get details about this wrap-up code.
@@ -1921,6 +2175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>WrapupCode</returns>
+        
         
         WrapupCode GetRoutingWrapupcode (string codeId);
 
@@ -1933,6 +2188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>ApiResponse of WrapupCode</returns>
+        
         
         ApiResponse<WrapupCode> GetRoutingWrapupcodeWithHttpInfo (string codeId);
 
@@ -1952,6 +2208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>WrapupCodeEntityListing</returns>
         
+        
         WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1970,6 +2227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
         
+        
         ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1985,6 +2243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
+        
         
         UserQueueEntityListing GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
@@ -2002,6 +2261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
         
+        
         ApiResponse<UserQueueEntityListing> GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
@@ -2016,6 +2276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserLanguageEntityListing</returns>
+        
         
         UserLanguageEntityListing GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -2032,6 +2293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserLanguageEntityListing</returns>
         
+        
         ApiResponse<UserLanguageEntityListing> GetUserRoutinglanguagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -2046,6 +2308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserSkillEntityListing</returns>
+        
         
         UserSkillEntityListing GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -2062,6 +2325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
         
+        
         ApiResponse<UserSkillEntityListing> GetUserRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -2076,6 +2340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next page (optional)</param>
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>UserSkillGroupEntityListing</returns>
+        
         
         UserSkillGroupEntityListing GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null);
 
@@ -2092,6 +2357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>ApiResponse of UserSkillGroupEntityListing</returns>
         
+        
         ApiResponse<UserSkillGroupEntityListing> GetUserSkillgroupsWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
@@ -2104,6 +2370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">Conversation Attributes</param>
         /// <returns>RoutingConversationAttributesResponse</returns>
+        
         
         RoutingConversationAttributesResponse PatchRoutingConversation (string conversationId, RoutingConversationAttributesRequest body);
 
@@ -2118,6 +2385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Conversation Attributes</param>
         /// <returns>ApiResponse of RoutingConversationAttributesResponse</returns>
         
+        
         ApiResponse<RoutingConversationAttributesResponse> PatchRoutingConversationWithHttpInfo (string conversationId, RoutingConversationAttributesRequest body);
 
         /// <summary>
@@ -2130,6 +2398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">Domain settings</param>
         /// <returns>InboundDomain</returns>
+        
         
         InboundDomain PatchRoutingEmailDomain (string domainId, InboundDomainPatchRequest body);
 
@@ -2144,6 +2413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>ApiResponse of InboundDomain</returns>
         
+        
         ApiResponse<InboundDomain> PatchRoutingEmailDomainWithHttpInfo (string domainId, InboundDomainPatchRequest body);
 
         /// <summary>
@@ -2156,6 +2426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">Domain settings</param>
         /// <returns>InboundDomain</returns>
+        
         
         InboundDomain PatchRoutingEmailDomainValidate (string domainId, InboundDomainPatchRequest body);
 
@@ -2170,6 +2441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>ApiResponse of InboundDomain</returns>
         
+        
         ApiResponse<InboundDomain> PatchRoutingEmailDomainValidateWithHttpInfo (string domainId, InboundDomainPatchRequest body);
 
         /// <summary>
@@ -2183,6 +2455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Predictor</returns>
         
+        
         Predictor PatchRoutingPredictor (string predictorId, PatchPredictorRequest body = null);
 
         /// <summary>
@@ -2195,6 +2468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Predictor</returns>
+        
         
         ApiResponse<Predictor> PatchRoutingPredictorWithHttpInfo (string predictorId, PatchPredictorRequest body = null);
 
@@ -2210,6 +2484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns></returns>
         
+        
         void PatchRoutingQueueMember (string queueId, string memberId, QueueMember body);
 
         /// <summary>
@@ -2224,6 +2499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body);
 
         /// <summary>
@@ -2237,6 +2513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>QueueMemberEntityListing</returns>
         
+        
         QueueMemberEntityListing PatchRoutingQueueMembers (string queueId, List<QueueMember> body);
 
         /// <summary>
@@ -2249,6 +2526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        
         
         ApiResponse<QueueMemberEntityListing> PatchRoutingQueueMembersWithHttpInfo (string queueId, List<QueueMember> body);
 
@@ -2264,6 +2542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns></returns>
         [Obsolete]
+        
         void PatchRoutingQueueUser (string queueId, string memberId, QueueMember body);
 
         /// <summary>
@@ -2278,6 +2557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         ApiResponse<Object> PatchRoutingQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body);
 
         /// <summary>
@@ -2291,6 +2571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         QueueMemberEntityListingV1 PatchRoutingQueueUsers (string queueId, List<QueueMember> body);
 
         /// <summary>
@@ -2304,6 +2585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>ApiResponse of QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         ApiResponse<QueueMemberEntityListingV1> PatchRoutingQueueUsersWithHttpInfo (string queueId, List<QueueMember> body);
 
         /// <summary>
@@ -2316,6 +2598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact Center Settings</param>
         /// <returns></returns>
         
+        
         void PatchRoutingSettingsContactcenter (ContactCenterSettings body);
 
         /// <summary>
@@ -2327,6 +2610,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact Center Settings</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PatchRoutingSettingsContactcenterWithHttpInfo (ContactCenterSettings body);
 
@@ -2341,6 +2625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Update skill groups</param>
         /// <returns>SkillGroup</returns>
         
+        
         SkillGroup PatchRoutingSkillgroup (string skillGroupId, SkillGroup body);
 
         /// <summary>
@@ -2353,6 +2638,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="body">Update skill groups</param>
         /// <returns>ApiResponse of SkillGroup</returns>
+        
         
         ApiResponse<SkillGroup> PatchRoutingSkillgroupWithHttpInfo (string skillGroupId, SkillGroup body);
 
@@ -2368,6 +2654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>UserQueue</returns>
         
+        
         UserQueue PatchUserQueue (string queueId, string userId, UserQueue body);
 
         /// <summary>
@@ -2381,6 +2668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of UserQueue</returns>
+        
         
         ApiResponse<UserQueue> PatchUserQueueWithHttpInfo (string queueId, string userId, UserQueue body);
 
@@ -2396,6 +2684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         UserQueueEntityListing PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
@@ -2409,6 +2698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User Queues</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        
         
         ApiResponse<UserQueueEntityListing> PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
@@ -2424,6 +2714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserRoutingLanguage</returns>
         
+        
         UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
@@ -2438,6 +2729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
         
+        
         ApiResponse<UserRoutingLanguage> PatchUserRoutinglanguageWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
@@ -2450,6 +2742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>UserLanguageEntityListing</returns>
+        
         
         UserLanguageEntityListing PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body);
 
@@ -2464,6 +2757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserLanguageEntityListing</returns>
         
+        
         ApiResponse<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkWithHttpInfo (string userId, List<UserRoutingLanguagePost> body);
 
         /// <summary>
@@ -2476,6 +2770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserSkillEntityListing</returns>
+        
         
         UserSkillEntityListing PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body);
 
@@ -2490,6 +2785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
         
+        
         ApiResponse<UserSkillEntityListing> PatchUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
@@ -2501,6 +2797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>QueueObservationQueryResponse</returns>
+        
         
         QueueObservationQueryResponse PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body);
 
@@ -2514,7 +2811,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of QueueObservationQueryResponse</returns>
         
+        
         ApiResponse<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryWithHttpInfo (QueueObservationQuery body);
+
+        /// <summary>
+        /// Query for user activity observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>RoutingActivityResponse</returns>
+        
+        /// Preview Endpoint
+        RoutingActivityResponse PostAnalyticsRoutingActivityQuery (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Query for user activity observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>ApiResponse of RoutingActivityResponse</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<RoutingActivityResponse> PostAnalyticsRoutingActivityQueryWithHttpInfo (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Create a benefit assessment.
@@ -2525,6 +2853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>BenefitAssessment</returns>
+        
         
         BenefitAssessment PostRoutingAssessments (CreateBenefitAssessmentRequest body = null);
 
@@ -2538,6 +2867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of BenefitAssessment</returns>
         
+        
         ApiResponse<BenefitAssessment> PostRoutingAssessmentsWithHttpInfo (CreateBenefitAssessmentRequest body = null);
 
         /// <summary>
@@ -2550,6 +2880,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>BenefitAssessmentJob</returns>
         
+        
         BenefitAssessmentJob PostRoutingAssessmentsJobs (CreateBenefitAssessmentJobRequest body = null);
 
         /// <summary>
@@ -2561,6 +2892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of BenefitAssessmentJob</returns>
+        
         
         ApiResponse<BenefitAssessmentJob> PostRoutingAssessmentsJobsWithHttpInfo (CreateBenefitAssessmentJobRequest body = null);
 
@@ -2575,6 +2907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
         
+        
         InboundRoute PostRoutingEmailDomainRoutes (string domainName, InboundRoute body);
 
         /// <summary>
@@ -2587,6 +2920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
+        
         
         ApiResponse<InboundRoute> PostRoutingEmailDomainRoutesWithHttpInfo (string domainName, InboundRoute body);
 
@@ -2601,6 +2935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TestMessage (optional)</param>
         /// <returns>TestMessage</returns>
         
+        
         TestMessage PostRoutingEmailDomainTestconnection (string domainId, TestMessage body = null);
 
         /// <summary>
@@ -2614,6 +2949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TestMessage (optional)</param>
         /// <returns>ApiResponse of TestMessage</returns>
         
+        
         ApiResponse<TestMessage> PostRoutingEmailDomainTestconnectionWithHttpInfo (string domainId, TestMessage body = null);
 
         /// <summary>
@@ -2625,6 +2961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>InboundDomain</returns>
+        
         
         InboundDomain PostRoutingEmailDomains (InboundDomain body);
 
@@ -2638,6 +2975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of InboundDomain</returns>
         
+        
         ApiResponse<InboundDomain> PostRoutingEmailDomainsWithHttpInfo (InboundDomain body);
 
         /// <summary>
@@ -2649,6 +2987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
+        
         
         EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomain body);
 
@@ -2662,6 +3001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
+        
         ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomain body);
 
         /// <summary>
@@ -2673,6 +3013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
+        
         
         EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomain body);
 
@@ -2686,6 +3027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
+        
         ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomain body);
 
         /// <summary>
@@ -2697,6 +3039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
         /// <returns>Language</returns>
+        
         
         Language PostRoutingLanguages (Language body);
 
@@ -2710,6 +3053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
         
+        
         ApiResponse<Language> PostRoutingLanguagesWithHttpInfo (Language body);
 
         /// <summary>
@@ -2722,6 +3066,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Predictor</returns>
         
+        
         Predictor PostRoutingPredictors (CreatePredictorRequest body = null);
 
         /// <summary>
@@ -2733,6 +3078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Predictor</returns>
+        
         
         ApiResponse<Predictor> PostRoutingPredictorsWithHttpInfo (CreatePredictorRequest body = null);
 
@@ -2748,6 +3094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns></returns>
         
+        
         void PostRoutingQueueMembers (string queueId, List<WritableEntity> body, bool? delete = null);
 
         /// <summary>
@@ -2761,6 +3108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PostRoutingQueueMembersWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null);
 
@@ -2776,6 +3124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns></returns>
         [Obsolete]
+        
         void PostRoutingQueueUsers (string queueId, List<WritableEntity> body, bool? delete = null);
 
         /// <summary>
@@ -2790,6 +3139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         ApiResponse<Object> PostRoutingQueueUsersWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null);
 
         /// <summary>
@@ -2802,6 +3152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
+        
         
         List<WrapupCode> PostRoutingQueueWrapupcodes (string queueId, List<WrapUpCodeReference> body);
 
@@ -2816,6 +3167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of wrapup codes</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
         
+        
         ApiResponse<List<WrapupCode>> PostRoutingQueueWrapupcodesWithHttpInfo (string queueId, List<WrapUpCodeReference> body);
 
         /// <summary>
@@ -2828,6 +3180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
         
+        
         Queue PostRoutingQueues (CreateQueueRequest body);
 
         /// <summary>
@@ -2839,6 +3192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
+        
         
         ApiResponse<Queue> PostRoutingQueuesWithHttpInfo (CreateQueueRequest body);
 
@@ -2853,6 +3207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
         
+        
         void PostRoutingSkillgroupMembersDivisions (string skillGroupId, SkillGroupMemberDivisions body = null);
 
         /// <summary>
@@ -2866,6 +3221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostRoutingSkillgroupMembersDivisionsWithHttpInfo (string skillGroupId, SkillGroupMemberDivisions body = null);
 
         /// <summary>
@@ -2877,6 +3233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
         /// <returns>SkillGroup</returns>
+        
         
         SkillGroup PostRoutingSkillgroups (SkillGroup body);
 
@@ -2890,6 +3247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Create skill group</param>
         /// <returns>ApiResponse of SkillGroup</returns>
         
+        
         ApiResponse<SkillGroup> PostRoutingSkillgroupsWithHttpInfo (SkillGroup body);
 
         /// <summary>
@@ -2901,6 +3259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Skill</param>
         /// <returns>RoutingSkill</returns>
+        
         
         RoutingSkill PostRoutingSkills (RoutingSkill body);
 
@@ -2914,6 +3273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of RoutingSkill</returns>
         
+        
         ApiResponse<RoutingSkill> PostRoutingSkillsWithHttpInfo (RoutingSkill body);
 
         /// <summary>
@@ -2925,6 +3285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
         /// <returns>SmsAddress</returns>
+        
         
         SmsAddress PostRoutingSmsAddresses (SmsAddressProvision body);
 
@@ -2938,6 +3299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsAddress</param>
         /// <returns>ApiResponse of SmsAddress</returns>
         
+        
         ApiResponse<SmsAddress> PostRoutingSmsAddressesWithHttpInfo (SmsAddressProvision body);
 
         /// <summary>
@@ -2949,6 +3311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>SmsPhoneNumber</returns>
+        
         
         SmsPhoneNumber PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body);
 
@@ -2962,7 +3325,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
         
+        
         ApiResponse<SmsPhoneNumber> PostRoutingSmsPhonenumbersWithHttpInfo (SmsPhoneNumberProvision body);
+
+        /// <summary>
+        /// Imports a phone number for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>SmsPhoneNumber</returns>
+        
+        /// Preview Endpoint
+        SmsPhoneNumber PostRoutingSmsPhonenumbersImport (SmsPhoneNumberImport body);
+
+        /// <summary>
+        /// Imports a phone number for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<SmsPhoneNumber> PostRoutingSmsPhonenumbersImportWithHttpInfo (SmsPhoneNumberImport body);
+
+        /// <summary>
+        /// Create an utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationTag</param>
+        /// <returns>UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        UtilizationTag PostRoutingUtilizationTags (CreateUtilizationTagRequest body);
+
+        /// <summary>
+        /// Create an utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationTag</param>
+        /// <returns>ApiResponse of UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<UtilizationTag> PostRoutingUtilizationTagsWithHttpInfo (CreateUtilizationTagRequest body);
 
         /// <summary>
         /// Create a wrap-up code
@@ -2973,6 +3389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WrapupCode</param>
         /// <returns>WrapupCode</returns>
+        
         
         WrapupCode PostRoutingWrapupcodes (WrapupCodeRequest body);
 
@@ -2985,6 +3402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WrapupCode</param>
         /// <returns>ApiResponse of WrapupCode</returns>
+        
         
         ApiResponse<WrapupCode> PostRoutingWrapupcodesWithHttpInfo (WrapupCodeRequest body);
 
@@ -2999,6 +3417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserRoutingLanguage</returns>
         
+        
         UserRoutingLanguage PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body);
 
         /// <summary>
@@ -3011,6 +3430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        
         
         ApiResponse<UserRoutingLanguage> PostUserRoutinglanguagesWithHttpInfo (string userId, UserRoutingLanguagePost body);
 
@@ -3025,6 +3445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         
+        
         UserRoutingSkill PostUserRoutingskills (string userId, UserRoutingSkillPost body);
 
         /// <summary>
@@ -3037,6 +3458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
+        
         
         ApiResponse<UserRoutingSkill> PostUserRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body);
 
@@ -3052,6 +3474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
         
+        
         InboundRoute PutRoutingEmailDomainRoute (string domainName, string routeId, InboundRoute body);
 
         /// <summary>
@@ -3066,6 +3489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
         
+        
         ApiResponse<InboundRoute> PutRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId, InboundRoute body);
 
         /// <summary>
@@ -3078,6 +3502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
+        
         EmailOutboundDomainResult PutRoutingEmailOutboundDomainActivation (string domainId);
 
         /// <summary>
@@ -3089,6 +3514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
+        
         
         ApiResponse<EmailOutboundDomainResult> PutRoutingEmailOutboundDomainActivationWithHttpInfo (string domainId);
 
@@ -3103,6 +3529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Recipient</returns>
         
+        
         Recipient PutRoutingMessageRecipient (string recipientId, Recipient body);
 
         /// <summary>
@@ -3115,6 +3542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recipientId">Recipient ID</param>
         /// <param name="body">Recipient</param>
         /// <returns>ApiResponse of Recipient</returns>
+        
         
         ApiResponse<Recipient> PutRoutingMessageRecipientWithHttpInfo (string recipientId, Recipient body);
 
@@ -3129,6 +3557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
         
+        
         Queue PutRoutingQueue (string queueId, QueueRequest body);
 
         /// <summary>
@@ -3142,6 +3571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
         
+        
         ApiResponse<Queue> PutRoutingQueueWithHttpInfo (string queueId, QueueRequest body);
 
         /// <summary>
@@ -3153,6 +3583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization Settings</param>
         /// <returns>RoutingSettings</returns>
+        
         
         RoutingSettings PutRoutingSettings (RoutingSettings body);
 
@@ -3166,6 +3597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization Settings</param>
         /// <returns>ApiResponse of RoutingSettings</returns>
         
+        
         ApiResponse<RoutingSettings> PutRoutingSettingsWithHttpInfo (RoutingSettings body);
 
         /// <summary>
@@ -3178,6 +3610,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization Settings</param>
         /// <returns>TranscriptionSettings</returns>
         
+        
         TranscriptionSettings PutRoutingSettingsTranscription (TranscriptionSettings body);
 
         /// <summary>
@@ -3189,6 +3622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization Settings</param>
         /// <returns>ApiResponse of TranscriptionSettings</returns>
+        
         
         ApiResponse<TranscriptionSettings> PutRoutingSettingsTranscriptionWithHttpInfo (TranscriptionSettings body);
 
@@ -3203,6 +3637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>SmsPhoneNumber</returns>
         
+        
         SmsPhoneNumber PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body);
 
         /// <summary>
@@ -3215,6 +3650,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
         
         ApiResponse<SmsPhoneNumber> PutRoutingSmsPhonenumberWithHttpInfo (string addressId, SmsPhoneNumber body);
 
@@ -3229,6 +3665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>AgentMaxUtilization</returns>
         
+        
         AgentMaxUtilization PutRoutingUserUtilization (string userId, Utilization body);
 
         /// <summary>
@@ -3242,6 +3679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>ApiResponse of AgentMaxUtilization</returns>
         
+        
         ApiResponse<AgentMaxUtilization> PutRoutingUserUtilizationWithHttpInfo (string userId, Utilization body);
 
         /// <summary>
@@ -3254,6 +3692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Utilization</returns>
         
+        
         Utilization PutRoutingUtilization (Utilization body);
 
         /// <summary>
@@ -3265,6 +3704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
         /// <returns>ApiResponse of Utilization</returns>
+        
         
         ApiResponse<Utilization> PutRoutingUtilizationWithHttpInfo (Utilization body);
 
@@ -3279,6 +3719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">WrapupCode</param>
         /// <returns>WrapupCode</returns>
         
+        
         WrapupCode PutRoutingWrapupcode (string codeId, WrapupCodeRequest body);
 
         /// <summary>
@@ -3291,6 +3732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>ApiResponse of WrapupCode</returns>
+        
         
         ApiResponse<WrapupCode> PutRoutingWrapupcodeWithHttpInfo (string codeId, WrapupCodeRequest body);
 
@@ -3306,6 +3748,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         
+        
         UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
@@ -3320,6 +3763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
         
+        
         ApiResponse<UserRoutingSkill> PutUserRoutingskillWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
@@ -3333,6 +3777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserSkillEntityListing</returns>
         
+        
         UserSkillEntityListing PutUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
@@ -3345,6 +3790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        
         
         ApiResponse<UserSkillEntityListing> PutUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
 
@@ -3362,6 +3808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingAssessmentAsync (string assessmentId);
 
         /// <summary>
@@ -3373,6 +3820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingAssessmentAsyncWithHttpInfo (string assessmentId);
 
@@ -3386,6 +3834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingEmailDomainAsync (string domainId);
 
         /// <summary>
@@ -3397,6 +3846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainAsyncWithHttpInfo (string domainId);
 
@@ -3411,6 +3861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingEmailDomainRouteAsync (string domainName, string routeId);
 
         /// <summary>
@@ -3424,6 +3875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId);
 
         /// <summary>
@@ -3435,6 +3887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteRoutingEmailOutboundDomainAsync (string domainId);
 
@@ -3448,6 +3901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId);
 
         /// <summary>
@@ -3459,6 +3913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteRoutingLanguageAsync (string languageId);
 
@@ -3472,6 +3927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingLanguageAsyncWithHttpInfo (string languageId);
 
         /// <summary>
@@ -3484,6 +3940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingPredictorAsync (string predictorId);
 
         /// <summary>
@@ -3495,6 +3952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingPredictorAsyncWithHttpInfo (string predictorId);
 
@@ -3509,6 +3967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingQueueAsync (string queueId, bool? forceDelete = null);
 
         /// <summary>
@@ -3521,6 +3980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
 
@@ -3535,6 +3995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingQueueMemberAsync (string queueId, string memberId);
 
         /// <summary>
@@ -3547,6 +4008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId);
 
@@ -3561,6 +4023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task DeleteRoutingQueueUserAsync (string queueId, string memberId);
 
         /// <summary>
@@ -3574,6 +4037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId);
 
         /// <summary>
@@ -3586,6 +4050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteRoutingQueueWrapupcodeAsync (string queueId, string codeId);
 
@@ -3600,6 +4065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId);
 
         /// <summary>
@@ -3611,6 +4077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingSettingsAsync ();
 
         /// <summary>
@@ -3621,6 +4088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSettingsAsyncWithHttpInfo ();
 
@@ -3634,6 +4102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingSkillAsync (string skillId);
 
         /// <summary>
@@ -3645,6 +4114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillAsyncWithHttpInfo (string skillId);
 
@@ -3658,6 +4128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingSkillgroupAsync (string skillGroupId);
 
         /// <summary>
@@ -3669,6 +4140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillgroupAsyncWithHttpInfo (string skillGroupId);
 
@@ -3682,6 +4154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingSmsAddressAsync (string addressId);
 
         /// <summary>
@@ -3693,6 +4166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsAddressAsyncWithHttpInfo (string addressId);
 
@@ -3706,6 +4180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string addressId);
 
         /// <summary>
@@ -3717,6 +4192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId);
 
@@ -3730,6 +4206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteRoutingUserUtilizationAsync (string userId);
 
         /// <summary>
@@ -3742,6 +4219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUserUtilizationAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -3752,6 +4230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteRoutingUtilizationAsync ();
 
@@ -3764,7 +4243,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Delete an utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task DeleteRoutingUtilizationTagAsync (string tagId, bool? forceDelete = null);
+
+        /// <summary>
+        /// Delete an utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationTagAsyncWithHttpInfo (string tagId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete wrap-up code
@@ -3775,6 +4283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteRoutingWrapupcodeAsync (string codeId);
 
@@ -3787,6 +4296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingWrapupcodeAsyncWithHttpInfo (string codeId);
 
@@ -3801,6 +4311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteUserRoutinglanguageAsync (string userId, string languageId);
 
         /// <summary>
@@ -3813,6 +4324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="languageId">languageId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId);
 
@@ -3827,6 +4339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId);
 
         /// <summary>
@@ -3840,6 +4353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId);
 
         /// <summary>
@@ -3852,6 +4366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>Task of BenefitAssessment</returns>
         
+        
         System.Threading.Tasks.Task<BenefitAssessment> GetRoutingAssessmentAsync (string assessmentId);
 
         /// <summary>
@@ -3863,6 +4378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>Task of ApiResponse (BenefitAssessment)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BenefitAssessment>> GetRoutingAssessmentAsyncWithHttpInfo (string assessmentId);
 
@@ -3880,6 +4396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>Task of AssessmentListing</returns>
         
+        
         System.Threading.Tasks.Task<AssessmentListing> GetRoutingAssessmentsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
 
         /// <summary>
@@ -3896,6 +4413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>Task of ApiResponse (AssessmentListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AssessmentListing>> GetRoutingAssessmentsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
 
         /// <summary>
@@ -3907,6 +4425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Benefit Assessment Job ID</param>
         /// <returns>Task of BenefitAssessmentJob</returns>
+        
         
         System.Threading.Tasks.Task<BenefitAssessmentJob> GetRoutingAssessmentsJobAsync (string jobId);
 
@@ -3920,6 +4439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Benefit Assessment Job ID</param>
         /// <returns>Task of ApiResponse (BenefitAssessmentJob)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> GetRoutingAssessmentsJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -3931,6 +4451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
         /// <returns>Task of AssessmentJobListing</returns>
+        
         
         System.Threading.Tasks.Task<AssessmentJobListing> GetRoutingAssessmentsJobsAsync (List<string> divisionId = null);
 
@@ -3944,6 +4465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
         /// <returns>Task of ApiResponse (AssessmentJobListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AssessmentJobListing>> GetRoutingAssessmentsJobsAsyncWithHttpInfo (List<string> divisionId = null);
 
         /// <summary>
@@ -3955,6 +4477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AvailableMediaTypeEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<AvailableMediaTypeEntityListing> GetRoutingAvailablemediatypesAsync ();
 
         /// <summary>
@@ -3965,6 +4488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AvailableMediaTypeEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AvailableMediaTypeEntityListing>> GetRoutingAvailablemediatypesAsyncWithHttpInfo ();
 
@@ -3978,6 +4502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of InboundDomain</returns>
         
+        
         System.Threading.Tasks.Task<InboundDomain> GetRoutingEmailDomainAsync (string domainId);
 
         /// <summary>
@@ -3989,6 +4514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetRoutingEmailDomainAsyncWithHttpInfo (string domainId);
 
@@ -4003,6 +4529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>Task of InboundRoute</returns>
         
+        
         System.Threading.Tasks.Task<InboundRoute> GetRoutingEmailDomainRouteAsync (string domainName, string routeId);
 
         /// <summary>
@@ -4015,6 +4542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId);
 
@@ -4031,6 +4559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>Task of InboundRouteEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<InboundRouteEntityListing> GetRoutingEmailDomainRoutesAsync (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null);
 
         /// <summary>
@@ -4045,6 +4574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetRoutingEmailDomainRoutesAsyncWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null);
 
@@ -4061,6 +4591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>Task of InboundDomainEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
 
         /// <summary>
@@ -4076,6 +4607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
 
         /// <summary>
@@ -4087,6 +4619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of OutboundDomain</returns>
+        
         
         System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainAsync (string domainId);
 
@@ -4100,6 +4633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (OutboundDomain)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId);
 
         /// <summary>
@@ -4111,6 +4645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
+        
         
         System.Threading.Tasks.Task<EmailOutboundDomainResult> GetRoutingEmailOutboundDomainActivationAsync (string domainId);
 
@@ -4124,6 +4659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> GetRoutingEmailOutboundDomainActivationAsyncWithHttpInfo (string domainId);
 
         /// <summary>
@@ -4135,6 +4671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of OutboundDomain</returns>
+        
         
         System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainSearchAsync (string domainId);
 
@@ -4148,6 +4685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (OutboundDomain)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainSearchAsyncWithHttpInfo (string domainId);
 
         /// <summary>
@@ -4159,6 +4697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>Task of OutboundDomainEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (string filter = null);
 
@@ -4172,6 +4711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>Task of ApiResponse (OutboundDomainEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (string filter = null);
 
         /// <summary>
@@ -4183,6 +4723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EmailSetup</returns>
         
+        
         System.Threading.Tasks.Task<EmailSetup> GetRoutingEmailSetupAsync ();
 
         /// <summary>
@@ -4193,6 +4734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EmailSetup)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EmailSetup>> GetRoutingEmailSetupAsyncWithHttpInfo ();
 
@@ -4206,6 +4748,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of Language</returns>
         
+        
         System.Threading.Tasks.Task<Language> GetRoutingLanguageAsync (string languageId);
 
         /// <summary>
@@ -4217,6 +4760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Language>> GetRoutingLanguageAsyncWithHttpInfo (string languageId);
 
@@ -4234,6 +4778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of LanguageEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<LanguageEntityListing> GetRoutingLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -4250,6 +4795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetRoutingLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -4262,6 +4808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recipientId">Recipient ID</param>
         /// <returns>Task of Recipient</returns>
         
+        
         System.Threading.Tasks.Task<Recipient> GetRoutingMessageRecipientAsync (string recipientId);
 
         /// <summary>
@@ -4273,6 +4820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recipientId">Recipient ID</param>
         /// <returns>Task of ApiResponse (Recipient)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Recipient>> GetRoutingMessageRecipientAsyncWithHttpInfo (string recipientId);
 
@@ -4288,6 +4836,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of RecipientListing</returns>
         
+        
         System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (string messengerType = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -4302,6 +4851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (RecipientListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -4314,6 +4864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of Predictor</returns>
         
+        
         System.Threading.Tasks.Task<Predictor> GetRoutingPredictorAsync (string predictorId);
 
         /// <summary>
@@ -4325,6 +4876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of ApiResponse (Predictor)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Predictor>> GetRoutingPredictorAsyncWithHttpInfo (string predictorId);
 
@@ -4339,6 +4891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="modelId">Model ID</param>
         /// <returns>Task of PredictorModelFeatureListing</returns>
         
+        
         System.Threading.Tasks.Task<PredictorModelFeatureListing> GetRoutingPredictorModelFeaturesAsync (string predictorId, string modelId);
 
         /// <summary>
@@ -4352,6 +4905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="modelId">Model ID</param>
         /// <returns>Task of ApiResponse (PredictorModelFeatureListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PredictorModelFeatureListing>> GetRoutingPredictorModelFeaturesAsyncWithHttpInfo (string predictorId, string modelId);
 
         /// <summary>
@@ -4364,6 +4918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of PredictorModels</returns>
         
+        
         System.Threading.Tasks.Task<PredictorModels> GetRoutingPredictorModelsAsync (string predictorId);
 
         /// <summary>
@@ -4375,6 +4930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of ApiResponse (PredictorModels)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<PredictorModels>> GetRoutingPredictorModelsAsyncWithHttpInfo (string predictorId);
 
@@ -4392,6 +4948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>Task of PredictorListing</returns>
         
+        
         System.Threading.Tasks.Task<PredictorListing> GetRoutingPredictorsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
 
         /// <summary>
@@ -4408,6 +4965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (PredictorListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
 
         /// <summary>
@@ -4420,6 +4978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>Task of List&lt;KeyPerformanceIndicator&gt;</returns>
+        
         
         System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null, List<string> expand = null);
 
@@ -4434,6 +4993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
@@ -4446,6 +5006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of Queue</returns>
         
+        
         System.Threading.Tasks.Task<Queue> GetRoutingQueueAsync (string queueId);
 
         /// <summary>
@@ -4457,6 +5018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Queue>> GetRoutingQueueAsyncWithHttpInfo (string queueId);
 
@@ -4471,6 +5033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
         /// <returns>Task of ComparisonPeriod</returns>
         
+        
         System.Threading.Tasks.Task<ComparisonPeriod> GetRoutingQueueComparisonperiodAsync (string queueId, string comparisonPeriodId);
 
         /// <summary>
@@ -4484,6 +5047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
         /// <returns>Task of ApiResponse (ComparisonPeriod)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ComparisonPeriod>> GetRoutingQueueComparisonperiodAsyncWithHttpInfo (string queueId, string comparisonPeriodId);
 
         /// <summary>
@@ -4496,6 +5060,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue id</param>
         /// <returns>Task of ComparisonPeriodListing</returns>
         
+        
         System.Threading.Tasks.Task<ComparisonPeriodListing> GetRoutingQueueComparisonperiodsAsync (string queueId);
 
         /// <summary>
@@ -4507,6 +5072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue id</param>
         /// <returns>Task of ApiResponse (ComparisonPeriodListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ComparisonPeriodListing>> GetRoutingQueueComparisonperiodsAsyncWithHttpInfo (string queueId);
 
@@ -4521,6 +5087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Task of EstimatedWaitTimePredictions</returns>
         
+        
         System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetRoutingQueueEstimatedwaittimeAsync (string queueId, string conversationId = null);
 
         /// <summary>
@@ -4533,6 +5100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queueId</param>
         /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null);
 
@@ -4547,6 +5115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">mediaType</param>
         /// <returns>Task of EstimatedWaitTimePredictions</returns>
         
+        
         System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeAsync (string queueId, string mediaType);
 
         /// <summary>
@@ -4559,6 +5128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
         /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo (string queueId, string mediaType);
 
@@ -4584,6 +5154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<QueueMemberEntityListing> GetRoutingQueueMembersAsync (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null);
 
         /// <summary>
@@ -4608,6 +5179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetRoutingQueueMembersAsyncWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null);
 
         /// <summary>
@@ -4631,6 +5203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<QueueMemberEntityListingV1> GetRoutingQueueUsersAsync (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
@@ -4654,6 +5227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListingV1)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListingV1>> GetRoutingQueueUsersAsyncWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
@@ -4668,6 +5242,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesAsync (string queueId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -4681,6 +5256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
 
@@ -4701,6 +5277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null);
 
         /// <summary>
@@ -4720,6 +5297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null);
 
         /// <summary>
@@ -4737,6 +5315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Queue ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
@@ -4756,6 +5335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4770,6 +5350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of QueueEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAllAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -4783,6 +5364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -4799,6 +5381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Note: results are sorted by name. (optional, default to asc)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserQueueEntityListing> GetRoutingQueuesMeAsync (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null);
 
         /// <summary>
@@ -4814,6 +5397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Note: results are sorted by name. (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetRoutingQueuesMeAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null);
 
         /// <summary>
@@ -4824,6 +5408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RoutingSettings</returns>
+        
         
         System.Threading.Tasks.Task<RoutingSettings> GetRoutingSettingsAsync ();
 
@@ -4836,6 +5421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RoutingSettings)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<RoutingSettings>> GetRoutingSettingsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -4846,6 +5432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ContactCenterSettings</returns>
+        
         
         System.Threading.Tasks.Task<ContactCenterSettings> GetRoutingSettingsContactcenterAsync ();
 
@@ -4858,6 +5445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ContactCenterSettings)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ContactCenterSettings>> GetRoutingSettingsContactcenterAsyncWithHttpInfo ();
 
         /// <summary>
@@ -4869,6 +5457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of TranscriptionSettings</returns>
         
+        
         System.Threading.Tasks.Task<TranscriptionSettings> GetRoutingSettingsTranscriptionAsync ();
 
         /// <summary>
@@ -4879,6 +5468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (TranscriptionSettings)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TranscriptionSettings>> GetRoutingSettingsTranscriptionAsyncWithHttpInfo ();
 
@@ -4892,6 +5482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of RoutingSkill</returns>
         
+        
         System.Threading.Tasks.Task<RoutingSkill> GetRoutingSkillAsync (string skillId);
 
         /// <summary>
@@ -4903,6 +5494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetRoutingSkillAsyncWithHttpInfo (string skillId);
 
@@ -4916,6 +5508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>Task of SkillGroup</returns>
         
+        
         System.Threading.Tasks.Task<SkillGroup> GetRoutingSkillgroupAsync (string skillGroupId);
 
         /// <summary>
@@ -4927,6 +5520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>Task of ApiResponse (SkillGroup)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SkillGroup>> GetRoutingSkillgroupAsyncWithHttpInfo (string skillGroupId);
 
@@ -4944,6 +5538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of SkillGroupMemberEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SkillGroupMemberEntityListing> GetRoutingSkillgroupMembersAsync (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null);
 
         /// <summary>
@@ -4960,6 +5555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of ApiResponse (SkillGroupMemberEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SkillGroupMemberEntityListing>> GetRoutingSkillgroupMembersAsyncWithHttpInfo (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null);
 
         /// <summary>
@@ -4973,6 +5569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of SkillGroupMemberDivisionList</returns>
         
+        
         System.Threading.Tasks.Task<SkillGroupMemberDivisionList> GetRoutingSkillgroupMembersDivisionsAsync (string skillGroupId, string expand = null);
 
         /// <summary>
@@ -4985,6 +5582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of ApiResponse (SkillGroupMemberDivisionList)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SkillGroupMemberDivisionList>> GetRoutingSkillgroupMembersDivisionsAsyncWithHttpInfo (string skillGroupId, string expand = null);
 
@@ -5001,6 +5599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <returns>Task of SkillGroupEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SkillGroupEntityListing> GetRoutingSkillgroupsAsync (int? pageSize = null, string name = null, string after = null, string before = null);
 
         /// <summary>
@@ -5015,6 +5614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item (optional)</param>
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <returns>Task of ApiResponse (SkillGroupEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SkillGroupEntityListing>> GetRoutingSkillgroupsAsyncWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null);
 
@@ -5031,6 +5631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of SkillEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SkillEntityListing> GetRoutingSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -5046,6 +5647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetRoutingSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -5058,6 +5660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of SmsAddress</returns>
         
+        
         System.Threading.Tasks.Task<SmsAddress> GetRoutingSmsAddressAsync (string addressId);
 
         /// <summary>
@@ -5069,6 +5672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of ApiResponse (SmsAddress)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SmsAddress>> GetRoutingSmsAddressAsyncWithHttpInfo (string addressId);
 
@@ -5083,6 +5687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of SmsAddressEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SmsAddressEntityListing> GetRoutingSmsAddressesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -5095,6 +5700,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (SmsAddressEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SmsAddressEntityListing>> GetRoutingSmsAddressesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
@@ -5114,6 +5720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressRequirement">This indicates whether the phone number requires to have an Address registered. (optional)</param>
         /// <returns>Task of SMSAvailablePhoneNumberEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SMSAvailablePhoneNumberEntityListing> GetRoutingSmsAvailablephonenumbersAsync (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null);
 
         /// <summary>
@@ -5132,6 +5739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressRequirement">This indicates whether the phone number requires to have an Address registered. (optional)</param>
         /// <returns>Task of ApiResponse (SMSAvailablePhoneNumberEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SMSAvailablePhoneNumberEntityListing>> GetRoutingSmsAvailablephonenumbersAsyncWithHttpInfo (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null);
 
         /// <summary>
@@ -5145,6 +5753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
+        
         System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string addressId, string expand = null);
 
         /// <summary>
@@ -5157,6 +5766,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, string expand = null);
 
@@ -5179,6 +5789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>Task of SmsPhoneNumberEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null);
 
         /// <summary>
@@ -5200,6 +5811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumberEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null);
 
         /// <summary>
@@ -5211,6 +5823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of AgentMaxUtilization</returns>
+        
         
         System.Threading.Tasks.Task<AgentMaxUtilization> GetRoutingUserUtilizationAsync (string userId);
 
@@ -5224,6 +5837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -5234,6 +5848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Utilization</returns>
+        
         
         System.Threading.Tasks.Task<Utilization> GetRoutingUtilizationAsync ();
 
@@ -5246,7 +5861,92 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Utilization)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Utilization>> GetRoutingUtilizationAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get details about this utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>Task of UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<UtilizationTag> GetRoutingUtilizationTagAsync (string tagId);
+
+        /// <summary>
+        /// Get details about this utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>Task of ApiResponse (UtilizationTag)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<UtilizationTag>> GetRoutingUtilizationTagAsyncWithHttpInfo (string tagId);
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<List<Object>> GetRoutingUtilizationTagAgentsAsync (string tagId);
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetRoutingUtilizationTagAgentsAsyncWithHttpInfo (string tagId);
+
+        /// <summary>
+        /// Get list of utilization tags
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
+        /// <returns>Task of UtilizationTagEntityListing</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<UtilizationTagEntityListing> GetRoutingUtilizationTagsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+
+        /// <summary>
+        /// Get list of utilization tags
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
+        /// <returns>Task of ApiResponse (UtilizationTagEntityListing)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<UtilizationTagEntityListing>> GetRoutingUtilizationTagsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get details about this wrap-up code.
@@ -5257,6 +5957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of WrapupCode</returns>
+        
         
         System.Threading.Tasks.Task<WrapupCode> GetRoutingWrapupcodeAsync (string codeId);
 
@@ -5269,6 +5970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetRoutingWrapupcodeAsyncWithHttpInfo (string codeId);
 
@@ -5288,6 +5990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -5306,6 +6009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -5321,6 +6025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserQueueEntityListing> GetUserQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
@@ -5338,6 +6043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
@@ -5352,6 +6058,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserLanguageEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserLanguageEntityListing> GetUserRoutinglanguagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -5368,6 +6075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> GetUserRoutinglanguagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -5382,6 +6090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserSkillEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserSkillEntityListing> GetUserRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -5398,6 +6107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -5412,6 +6122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next page (optional)</param>
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>Task of UserSkillGroupEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserSkillGroupEntityListing> GetUserSkillgroupsAsync (string userId, int? pageSize = null, string after = null, string before = null);
 
@@ -5428,6 +6139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>Task of ApiResponse (UserSkillGroupEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserSkillGroupEntityListing>> GetUserSkillgroupsAsyncWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
@@ -5440,6 +6152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">Conversation Attributes</param>
         /// <returns>Task of RoutingConversationAttributesResponse</returns>
+        
         
         System.Threading.Tasks.Task<RoutingConversationAttributesResponse> PatchRoutingConversationAsync (string conversationId, RoutingConversationAttributesRequest body);
 
@@ -5454,6 +6167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Conversation Attributes</param>
         /// <returns>Task of ApiResponse (RoutingConversationAttributesResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<RoutingConversationAttributesResponse>> PatchRoutingConversationAsyncWithHttpInfo (string conversationId, RoutingConversationAttributesRequest body);
 
         /// <summary>
@@ -5466,6 +6180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">Domain settings</param>
         /// <returns>Task of InboundDomain</returns>
+        
         
         System.Threading.Tasks.Task<InboundDomain> PatchRoutingEmailDomainAsync (string domainId, InboundDomainPatchRequest body);
 
@@ -5480,6 +6195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body);
 
         /// <summary>
@@ -5492,6 +6208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">Domain settings</param>
         /// <returns>Task of InboundDomain</returns>
+        
         
         System.Threading.Tasks.Task<InboundDomain> PatchRoutingEmailDomainValidateAsync (string domainId, InboundDomainPatchRequest body);
 
@@ -5506,6 +6223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainValidateAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body);
 
         /// <summary>
@@ -5519,6 +6237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Predictor</returns>
         
+        
         System.Threading.Tasks.Task<Predictor> PatchRoutingPredictorAsync (string predictorId, PatchPredictorRequest body = null);
 
         /// <summary>
@@ -5531,6 +6250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Predictor)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Predictor>> PatchRoutingPredictorAsyncWithHttpInfo (string predictorId, PatchPredictorRequest body = null);
 
@@ -5546,6 +6266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PatchRoutingQueueMemberAsync (string queueId, string memberId, QueueMember body);
 
         /// <summary>
@@ -5560,6 +6281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
 
         /// <summary>
@@ -5573,6 +6295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<QueueMemberEntityListing> PatchRoutingQueueMembersAsync (string queueId, List<QueueMember> body);
 
         /// <summary>
@@ -5585,6 +6308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchRoutingQueueMembersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
 
@@ -5600,6 +6324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task PatchRoutingQueueUserAsync (string queueId, string memberId, QueueMember body);
 
         /// <summary>
@@ -5614,6 +6339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
 
         /// <summary>
@@ -5627,6 +6353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>Task of QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<QueueMemberEntityListingV1> PatchRoutingQueueUsersAsync (string queueId, List<QueueMember> body);
 
         /// <summary>
@@ -5640,6 +6367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListingV1)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListingV1>> PatchRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
 
         /// <summary>
@@ -5652,6 +6380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact Center Settings</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PatchRoutingSettingsContactcenterAsync (ContactCenterSettings body);
 
         /// <summary>
@@ -5663,6 +6392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact Center Settings</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingSettingsContactcenterAsyncWithHttpInfo (ContactCenterSettings body);
 
@@ -5677,6 +6407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Update skill groups</param>
         /// <returns>Task of SkillGroup</returns>
         
+        
         System.Threading.Tasks.Task<SkillGroup> PatchRoutingSkillgroupAsync (string skillGroupId, SkillGroup body);
 
         /// <summary>
@@ -5689,6 +6420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="body">Update skill groups</param>
         /// <returns>Task of ApiResponse (SkillGroup)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SkillGroup>> PatchRoutingSkillgroupAsyncWithHttpInfo (string skillGroupId, SkillGroup body);
 
@@ -5704,6 +6436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of UserQueue</returns>
         
+        
         System.Threading.Tasks.Task<UserQueue> PatchUserQueueAsync (string queueId, string userId, UserQueue body);
 
         /// <summary>
@@ -5717,6 +6450,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (UserQueue)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserQueueAsyncWithHttpInfo (string queueId, string userId, UserQueue body);
 
@@ -5732,6 +6466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserQueuesAsync (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
@@ -5745,6 +6480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User Queues</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
@@ -5760,6 +6496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserRoutingLanguage</returns>
         
+        
         System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
@@ -5774,6 +6511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PatchUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
@@ -5786,6 +6524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of UserLanguageEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkAsync (string userId, List<UserRoutingLanguagePost> body);
 
@@ -5800,6 +6539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> PatchUserRoutinglanguagesBulkAsyncWithHttpInfo (string userId, List<UserRoutingLanguagePost> body);
 
         /// <summary>
@@ -5812,6 +6552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserSkillEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserSkillEntityListing> PatchUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body);
 
@@ -5826,6 +6567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PatchUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
@@ -5837,6 +6579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of QueueObservationQueryResponse</returns>
+        
         
         System.Threading.Tasks.Task<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (QueueObservationQuery body);
 
@@ -5850,7 +6593,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (QueueObservationQueryResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<QueueObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (QueueObservationQuery body);
+
+        /// <summary>
+        /// Query for user activity observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>Task of RoutingActivityResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<RoutingActivityResponse> PostAnalyticsRoutingActivityQueryAsync (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Query for user activity observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>Task of ApiResponse (RoutingActivityResponse)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<RoutingActivityResponse>> PostAnalyticsRoutingActivityQueryAsyncWithHttpInfo (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Create a benefit assessment.
@@ -5861,6 +6635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of BenefitAssessment</returns>
+        
         
         System.Threading.Tasks.Task<BenefitAssessment> PostRoutingAssessmentsAsync (CreateBenefitAssessmentRequest body = null);
 
@@ -5874,6 +6649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (BenefitAssessment)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BenefitAssessment>> PostRoutingAssessmentsAsyncWithHttpInfo (CreateBenefitAssessmentRequest body = null);
 
         /// <summary>
@@ -5886,6 +6662,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of BenefitAssessmentJob</returns>
         
+        
         System.Threading.Tasks.Task<BenefitAssessmentJob> PostRoutingAssessmentsJobsAsync (CreateBenefitAssessmentJobRequest body = null);
 
         /// <summary>
@@ -5897,6 +6674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (BenefitAssessmentJob)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> PostRoutingAssessmentsJobsAsyncWithHttpInfo (CreateBenefitAssessmentJobRequest body = null);
 
@@ -5911,6 +6689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
         
+        
         System.Threading.Tasks.Task<InboundRoute> PostRoutingEmailDomainRoutesAsync (string domainName, InboundRoute body);
 
         /// <summary>
@@ -5923,6 +6702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostRoutingEmailDomainRoutesAsyncWithHttpInfo (string domainName, InboundRoute body);
 
@@ -5937,6 +6717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TestMessage (optional)</param>
         /// <returns>Task of TestMessage</returns>
         
+        
         System.Threading.Tasks.Task<TestMessage> PostRoutingEmailDomainTestconnectionAsync (string domainId, TestMessage body = null);
 
         /// <summary>
@@ -5950,6 +6731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TestMessage (optional)</param>
         /// <returns>Task of ApiResponse (TestMessage)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TestMessage>> PostRoutingEmailDomainTestconnectionAsyncWithHttpInfo (string domainId, TestMessage body = null);
 
         /// <summary>
@@ -5961,6 +6743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>Task of InboundDomain</returns>
+        
         
         System.Threading.Tasks.Task<InboundDomain> PostRoutingEmailDomainsAsync (InboundDomain body);
 
@@ -5974,6 +6757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PostRoutingEmailDomainsAsyncWithHttpInfo (InboundDomain body);
 
         /// <summary>
@@ -5985,6 +6769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
+        
         
         System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomain body);
 
@@ -5998,6 +6783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomain body);
 
         /// <summary>
@@ -6009,6 +6795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
+        
         
         System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomain body);
 
@@ -6022,6 +6809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomain body);
 
         /// <summary>
@@ -6033,6 +6821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
         /// <returns>Task of Language</returns>
+        
         
         System.Threading.Tasks.Task<Language> PostRoutingLanguagesAsync (Language body);
 
@@ -6046,6 +6835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Language>> PostRoutingLanguagesAsyncWithHttpInfo (Language body);
 
         /// <summary>
@@ -6058,6 +6848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Predictor</returns>
         
+        
         System.Threading.Tasks.Task<Predictor> PostRoutingPredictorsAsync (CreatePredictorRequest body = null);
 
         /// <summary>
@@ -6069,6 +6860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Predictor)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Predictor>> PostRoutingPredictorsAsyncWithHttpInfo (CreatePredictorRequest body = null);
 
@@ -6084,6 +6876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostRoutingQueueMembersAsync (string queueId, List<WritableEntity> body, bool? delete = null);
 
         /// <summary>
@@ -6097,6 +6890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostRoutingQueueMembersAsyncWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null);
 
@@ -6112,6 +6906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task PostRoutingQueueUsersAsync (string queueId, List<WritableEntity> body, bool? delete = null);
 
         /// <summary>
@@ -6126,6 +6921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null);
 
         /// <summary>
@@ -6138,6 +6934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        
         
         System.Threading.Tasks.Task<List<WrapupCode>> PostRoutingQueueWrapupcodesAsync (string queueId, List<WrapUpCodeReference> body);
 
@@ -6152,6 +6949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, List<WrapUpCodeReference> body);
 
         /// <summary>
@@ -6164,6 +6962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
         
+        
         System.Threading.Tasks.Task<Queue> PostRoutingQueuesAsync (CreateQueueRequest body);
 
         /// <summary>
@@ -6175,6 +6974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Queue>> PostRoutingQueuesAsyncWithHttpInfo (CreateQueueRequest body);
 
@@ -6189,6 +6989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostRoutingSkillgroupMembersDivisionsAsync (string skillGroupId, SkillGroupMemberDivisions body = null);
 
         /// <summary>
@@ -6202,6 +7003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostRoutingSkillgroupMembersDivisionsAsyncWithHttpInfo (string skillGroupId, SkillGroupMemberDivisions body = null);
 
         /// <summary>
@@ -6213,6 +7015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
         /// <returns>Task of SkillGroup</returns>
+        
         
         System.Threading.Tasks.Task<SkillGroup> PostRoutingSkillgroupsAsync (SkillGroup body);
 
@@ -6226,6 +7029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Create skill group</param>
         /// <returns>Task of ApiResponse (SkillGroup)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SkillGroup>> PostRoutingSkillgroupsAsyncWithHttpInfo (SkillGroup body);
 
         /// <summary>
@@ -6237,6 +7041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Skill</param>
         /// <returns>Task of RoutingSkill</returns>
+        
         
         System.Threading.Tasks.Task<RoutingSkill> PostRoutingSkillsAsync (RoutingSkill body);
 
@@ -6250,6 +7055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (RoutingSkill)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PostRoutingSkillsAsyncWithHttpInfo (RoutingSkill body);
 
         /// <summary>
@@ -6261,6 +7067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
         /// <returns>Task of SmsAddress</returns>
+        
         
         System.Threading.Tasks.Task<SmsAddress> PostRoutingSmsAddressesAsync (SmsAddressProvision body);
 
@@ -6274,6 +7081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsAddress</param>
         /// <returns>Task of ApiResponse (SmsAddress)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SmsAddress>> PostRoutingSmsAddressesAsyncWithHttpInfo (SmsAddressProvision body);
 
         /// <summary>
@@ -6285,6 +7093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of SmsPhoneNumber</returns>
+        
         
         System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersAsync (SmsPhoneNumberProvision body);
 
@@ -6298,7 +7107,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAsyncWithHttpInfo (SmsPhoneNumberProvision body);
+
+        /// <summary>
+        /// Imports a phone number for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>Task of SmsPhoneNumber</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersImportAsync (SmsPhoneNumberImport body);
+
+        /// <summary>
+        /// Imports a phone number for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersImportAsyncWithHttpInfo (SmsPhoneNumberImport body);
+
+        /// <summary>
+        /// Create an utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationTag</param>
+        /// <returns>Task of UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<UtilizationTag> PostRoutingUtilizationTagsAsync (CreateUtilizationTagRequest body);
+
+        /// <summary>
+        /// Create an utilization tag
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationTag</param>
+        /// <returns>Task of ApiResponse (UtilizationTag)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<UtilizationTag>> PostRoutingUtilizationTagsAsyncWithHttpInfo (CreateUtilizationTagRequest body);
 
         /// <summary>
         /// Create a wrap-up code
@@ -6309,6 +7171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of WrapupCode</returns>
+        
         
         System.Threading.Tasks.Task<WrapupCode> PostRoutingWrapupcodesAsync (WrapupCodeRequest body);
 
@@ -6321,6 +7184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PostRoutingWrapupcodesAsyncWithHttpInfo (WrapupCodeRequest body);
 
@@ -6335,6 +7199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserRoutingLanguage</returns>
         
+        
         System.Threading.Tasks.Task<UserRoutingLanguage> PostUserRoutinglanguagesAsync (string userId, UserRoutingLanguagePost body);
 
         /// <summary>
@@ -6347,6 +7212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PostUserRoutinglanguagesAsyncWithHttpInfo (string userId, UserRoutingLanguagePost body);
 
@@ -6361,6 +7227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         
+        
         System.Threading.Tasks.Task<UserRoutingSkill> PostUserRoutingskillsAsync (string userId, UserRoutingSkillPost body);
 
         /// <summary>
@@ -6373,6 +7240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body);
 
@@ -6388,6 +7256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
         
+        
         System.Threading.Tasks.Task<InboundRoute> PutRoutingEmailDomainRouteAsync (string domainName, string routeId, InboundRoute body);
 
         /// <summary>
@@ -6402,6 +7271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body);
 
         /// <summary>
@@ -6414,6 +7284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
+        
         System.Threading.Tasks.Task<EmailOutboundDomainResult> PutRoutingEmailOutboundDomainActivationAsync (string domainId);
 
         /// <summary>
@@ -6425,6 +7296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PutRoutingEmailOutboundDomainActivationAsyncWithHttpInfo (string domainId);
 
@@ -6439,6 +7311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Task of Recipient</returns>
         
+        
         System.Threading.Tasks.Task<Recipient> PutRoutingMessageRecipientAsync (string recipientId, Recipient body);
 
         /// <summary>
@@ -6451,6 +7324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recipientId">Recipient ID</param>
         /// <param name="body">Recipient</param>
         /// <returns>Task of ApiResponse (Recipient)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Recipient>> PutRoutingMessageRecipientAsyncWithHttpInfo (string recipientId, Recipient body);
 
@@ -6465,6 +7339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
         
+        
         System.Threading.Tasks.Task<Queue> PutRoutingQueueAsync (string queueId, QueueRequest body);
 
         /// <summary>
@@ -6478,6 +7353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Queue>> PutRoutingQueueAsyncWithHttpInfo (string queueId, QueueRequest body);
 
         /// <summary>
@@ -6489,6 +7365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization Settings</param>
         /// <returns>Task of RoutingSettings</returns>
+        
         
         System.Threading.Tasks.Task<RoutingSettings> PutRoutingSettingsAsync (RoutingSettings body);
 
@@ -6502,6 +7379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization Settings</param>
         /// <returns>Task of ApiResponse (RoutingSettings)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<RoutingSettings>> PutRoutingSettingsAsyncWithHttpInfo (RoutingSettings body);
 
         /// <summary>
@@ -6514,6 +7392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization Settings</param>
         /// <returns>Task of TranscriptionSettings</returns>
         
+        
         System.Threading.Tasks.Task<TranscriptionSettings> PutRoutingSettingsTranscriptionAsync (TranscriptionSettings body);
 
         /// <summary>
@@ -6525,6 +7404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization Settings</param>
         /// <returns>Task of ApiResponse (TranscriptionSettings)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TranscriptionSettings>> PutRoutingSettingsTranscriptionAsyncWithHttpInfo (TranscriptionSettings body);
 
@@ -6539,6 +7419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
+        
         System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string addressId, SmsPhoneNumber body);
 
         /// <summary>
@@ -6551,6 +7432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, SmsPhoneNumber body);
 
@@ -6565,6 +7447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Task of AgentMaxUtilization</returns>
         
+        
         System.Threading.Tasks.Task<AgentMaxUtilization> PutRoutingUserUtilizationAsync (string userId, Utilization body);
 
         /// <summary>
@@ -6578,6 +7461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, Utilization body);
 
         /// <summary>
@@ -6590,6 +7474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Task of Utilization</returns>
         
+        
         System.Threading.Tasks.Task<Utilization> PutRoutingUtilizationAsync (Utilization body);
 
         /// <summary>
@@ -6601,6 +7486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
         /// <returns>Task of ApiResponse (Utilization)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Utilization>> PutRoutingUtilizationAsyncWithHttpInfo (Utilization body);
 
@@ -6615,6 +7501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of WrapupCode</returns>
         
+        
         System.Threading.Tasks.Task<WrapupCode> PutRoutingWrapupcodeAsync (string codeId, WrapupCodeRequest body);
 
         /// <summary>
@@ -6627,6 +7514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PutRoutingWrapupcodeAsyncWithHttpInfo (string codeId, WrapupCodeRequest body);
 
@@ -6642,6 +7530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         
+        
         System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
@@ -6656,6 +7545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserRoutingskillAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
@@ -6669,6 +7559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserSkillEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserSkillEntityListing> PutUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
@@ -6681,6 +7572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PutUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
 
@@ -6783,6 +7675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingAssessment (string assessmentId)
         {
              DeleteRoutingAssessmentWithHttpInfo(assessmentId);
@@ -6794,6 +7687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingAssessmentWithHttpInfo (string assessmentId)
         { 
@@ -6878,6 +7772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingAssessmentAsync (string assessmentId)
         {
              await DeleteRoutingAssessmentAsyncWithHttpInfo(assessmentId);
@@ -6890,6 +7785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingAssessmentAsyncWithHttpInfo (string assessmentId)
         { 
@@ -6976,6 +7872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingEmailDomain (string domainId)
         {
              DeleteRoutingEmailDomainWithHttpInfo(domainId);
@@ -6987,6 +7884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingEmailDomainWithHttpInfo (string domainId)
         { 
@@ -7071,6 +7969,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingEmailDomainAsync (string domainId)
         {
              await DeleteRoutingEmailDomainAsyncWithHttpInfo(domainId);
@@ -7083,6 +7982,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainAsyncWithHttpInfo (string domainId)
         { 
@@ -7170,6 +8070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingEmailDomainRoute (string domainName, string routeId)
         {
              DeleteRoutingEmailDomainRouteWithHttpInfo(domainName, routeId);
@@ -7182,6 +8083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId)
         { 
@@ -7271,6 +8173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingEmailDomainRouteAsync (string domainName, string routeId)
         {
              await DeleteRoutingEmailDomainRouteAsyncWithHttpInfo(domainName, routeId);
@@ -7284,6 +8187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId)
         { 
@@ -7375,6 +8279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingEmailOutboundDomain (string domainId)
         {
              DeleteRoutingEmailOutboundDomainWithHttpInfo(domainId);
@@ -7386,6 +8291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingEmailOutboundDomainWithHttpInfo (string domainId)
         { 
@@ -7470,6 +8376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingEmailOutboundDomainAsync (string domainId)
         {
              await DeleteRoutingEmailOutboundDomainAsyncWithHttpInfo(domainId);
@@ -7482,6 +8389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId)
         { 
@@ -7568,6 +8476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingLanguage (string languageId)
         {
              DeleteRoutingLanguageWithHttpInfo(languageId);
@@ -7579,6 +8488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingLanguageWithHttpInfo (string languageId)
         { 
@@ -7663,6 +8573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingLanguageAsync (string languageId)
         {
              await DeleteRoutingLanguageAsyncWithHttpInfo(languageId);
@@ -7675,6 +8586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingLanguageAsyncWithHttpInfo (string languageId)
         { 
@@ -7761,6 +8673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingPredictor (string predictorId)
         {
              DeleteRoutingPredictorWithHttpInfo(predictorId);
@@ -7772,6 +8685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingPredictorWithHttpInfo (string predictorId)
         { 
@@ -7856,6 +8770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingPredictorAsync (string predictorId)
         {
              await DeleteRoutingPredictorAsyncWithHttpInfo(predictorId);
@@ -7868,6 +8783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingPredictorAsyncWithHttpInfo (string predictorId)
         { 
@@ -7955,6 +8871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingQueue (string queueId, bool? forceDelete = null)
         {
              DeleteRoutingQueueWithHttpInfo(queueId, forceDelete);
@@ -7967,6 +8884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingQueueWithHttpInfo (string queueId, bool? forceDelete = null)
         { 
@@ -8053,6 +8971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingQueueAsync (string queueId, bool? forceDelete = null)
         {
              await DeleteRoutingQueueAsyncWithHttpInfo(queueId, forceDelete);
@@ -8066,6 +8985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null)
         { 
@@ -8154,6 +9074,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingQueueMember (string queueId, string memberId)
         {
              DeleteRoutingQueueMemberWithHttpInfo(queueId, memberId);
@@ -8166,6 +9087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingQueueMemberWithHttpInfo (string queueId, string memberId)
         { 
@@ -8255,6 +9177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingQueueMemberAsync (string queueId, string memberId)
         {
              await DeleteRoutingQueueMemberAsyncWithHttpInfo(queueId, memberId);
@@ -8268,6 +9191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId)
         { 
@@ -8360,6 +9284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
         [Obsolete]
+        
         public void DeleteRoutingQueueUser (string queueId, string memberId)
         {
              DeleteRoutingQueueUserWithHttpInfo(queueId, memberId);
@@ -8373,6 +9298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         public ApiResponse<Object> DeleteRoutingQueueUserWithHttpInfo (string queueId, string memberId)
         { 
             // verify the required parameter 'queueId' is set
@@ -8461,6 +9387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task DeleteRoutingQueueUserAsync (string queueId, string memberId)
         {
              await DeleteRoutingQueueUserAsyncWithHttpInfo(queueId, memberId);
@@ -8475,6 +9402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId)
         { 
             // verify the required parameter 'queueId' is set
@@ -8566,6 +9494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Code ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingQueueWrapupcode (string queueId, string codeId)
         {
              DeleteRoutingQueueWrapupcodeWithHttpInfo(queueId, codeId);
@@ -8578,6 +9507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingQueueWrapupcodeWithHttpInfo (string queueId, string codeId)
         { 
@@ -8667,6 +9597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingQueueWrapupcodeAsync (string queueId, string codeId)
         {
              await DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo(queueId, codeId);
@@ -8680,6 +9611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId)
         { 
@@ -8770,6 +9702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
+        
         public void DeleteRoutingSettings ()
         {
              DeleteRoutingSettingsWithHttpInfo();
@@ -8780,6 +9713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingSettingsWithHttpInfo ()
         { 
@@ -8859,6 +9793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingSettingsAsync ()
         {
              await DeleteRoutingSettingsAsyncWithHttpInfo();
@@ -8870,6 +9805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSettingsAsyncWithHttpInfo ()
         { 
@@ -8951,6 +9887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">Skill ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingSkill (string skillId)
         {
              DeleteRoutingSkillWithHttpInfo(skillId);
@@ -8962,6 +9899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingSkillWithHttpInfo (string skillId)
         { 
@@ -9046,6 +9984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingSkillAsync (string skillId)
         {
              await DeleteRoutingSkillAsyncWithHttpInfo(skillId);
@@ -9058,6 +9997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillAsyncWithHttpInfo (string skillId)
         { 
@@ -9144,6 +10084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingSkillgroup (string skillGroupId)
         {
              DeleteRoutingSkillgroupWithHttpInfo(skillGroupId);
@@ -9155,6 +10096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingSkillgroupWithHttpInfo (string skillGroupId)
         { 
@@ -9239,6 +10181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingSkillgroupAsync (string skillGroupId)
         {
              await DeleteRoutingSkillgroupAsyncWithHttpInfo(skillGroupId);
@@ -9251,6 +10194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillgroupAsyncWithHttpInfo (string skillGroupId)
         { 
@@ -9337,6 +10281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingSmsAddress (string addressId)
         {
              DeleteRoutingSmsAddressWithHttpInfo(addressId);
@@ -9348,6 +10293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingSmsAddressWithHttpInfo (string addressId)
         { 
@@ -9432,6 +10378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingSmsAddressAsync (string addressId)
         {
              await DeleteRoutingSmsAddressAsyncWithHttpInfo(addressId);
@@ -9444,6 +10391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsAddressAsyncWithHttpInfo (string addressId)
         { 
@@ -9530,6 +10478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingSmsPhonenumber (string addressId)
         {
              DeleteRoutingSmsPhonenumberWithHttpInfo(addressId);
@@ -9541,6 +10490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingSmsPhonenumberWithHttpInfo (string addressId)
         { 
@@ -9625,6 +10575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingSmsPhonenumberAsync (string addressId)
         {
              await DeleteRoutingSmsPhonenumberAsyncWithHttpInfo(addressId);
@@ -9637,6 +10588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId)
         { 
@@ -9723,6 +10675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingUserUtilization (string userId)
         {
              DeleteRoutingUserUtilizationWithHttpInfo(userId);
@@ -9734,6 +10687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingUserUtilizationWithHttpInfo (string userId)
         { 
@@ -9818,6 +10772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingUserUtilizationAsync (string userId)
         {
              await DeleteRoutingUserUtilizationAsyncWithHttpInfo(userId);
@@ -9830,6 +10785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUserUtilizationAsyncWithHttpInfo (string userId)
         { 
@@ -9915,6 +10871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
+        
         public void DeleteRoutingUtilization ()
         {
              DeleteRoutingUtilizationWithHttpInfo();
@@ -9925,6 +10882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingUtilizationWithHttpInfo ()
         { 
@@ -10004,6 +10962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingUtilizationAsync ()
         {
              await DeleteRoutingUtilizationAsyncWithHttpInfo();
@@ -10015,6 +10974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationAsyncWithHttpInfo ()
         { 
@@ -10090,11 +11050,215 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Delete an utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
+        /// <returns></returns>
+        
+        /// Preview Endpoint
+        public void DeleteRoutingUtilizationTag (string tagId, bool? forceDelete = null)
+        {
+             DeleteRoutingUtilizationTagWithHttpInfo(tagId, forceDelete);
+        }
+
+        /// <summary>
+        /// Delete an utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse<Object> DeleteRoutingUtilizationTagWithHttpInfo (string tagId, bool? forceDelete = null)
+        { 
+            // verify the required parameter 'tagId' is set
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->DeleteRoutingUtilizationTag");
+
+            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
+
+            // Query params
+            if (forceDelete != null) localVarQueryParams.Add(new Tuple<string, string>("forceDelete", this.Configuration.ApiClient.ParameterToString(forceDelete)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationTag: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task DeleteRoutingUtilizationTagAsync (string tagId, bool? forceDelete = null)
+        {
+             await DeleteRoutingUtilizationTagAsyncWithHttpInfo(tagId, forceDelete);
+
+        }
+
+        /// <summary>
+        /// Delete an utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationTagAsyncWithHttpInfo (string tagId, bool? forceDelete = null)
+        { 
+            // verify the required parameter 'tagId' is set
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->DeleteRoutingUtilizationTag");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
+
+            // Query params
+            if (forceDelete != null) localVarQueryParams.Add(new Tuple<string, string>("forceDelete", this.Configuration.ApiClient.ParameterToString(forceDelete)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationTag: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Delete wrap-up code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns></returns>
+        
         
         public void DeleteRoutingWrapupcode (string codeId)
         {
@@ -10107,6 +11271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingWrapupcodeWithHttpInfo (string codeId)
         { 
@@ -10191,6 +11356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingWrapupcodeAsync (string codeId)
         {
              await DeleteRoutingWrapupcodeAsyncWithHttpInfo(codeId);
@@ -10203,6 +11369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingWrapupcodeAsyncWithHttpInfo (string codeId)
         { 
@@ -10290,6 +11457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <returns></returns>
         
+        
         public void DeleteUserRoutinglanguage (string userId, string languageId)
         {
              DeleteUserRoutinglanguageWithHttpInfo(userId, languageId);
@@ -10302,6 +11470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="languageId">languageId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteUserRoutinglanguageWithHttpInfo (string userId, string languageId)
         { 
@@ -10391,6 +11560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteUserRoutinglanguageAsync (string userId, string languageId)
         {
              await DeleteUserRoutinglanguageAsyncWithHttpInfo(userId, languageId);
@@ -10404,6 +11574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="languageId">languageId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId)
         { 
@@ -10496,6 +11667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns></returns>
         
+        
         public void DeleteUserRoutingskill (string userId, string skillId)
         {
              DeleteUserRoutingskillWithHttpInfo(userId, skillId);
@@ -10508,6 +11680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId)
         { 
@@ -10597,6 +11770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId)
         {
              await DeleteUserRoutingskillAsyncWithHttpInfo(userId, skillId);
@@ -10610,6 +11784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId)
         { 
@@ -10701,6 +11876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>BenefitAssessment</returns>
         
+        
         public BenefitAssessment GetRoutingAssessment (string assessmentId)
         {
              ApiResponse<BenefitAssessment> localVarResponse = GetRoutingAssessmentWithHttpInfo(assessmentId);
@@ -10713,6 +11889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>ApiResponse of BenefitAssessment</returns>
+        
         
         public ApiResponse< BenefitAssessment > GetRoutingAssessmentWithHttpInfo (string assessmentId)
         { 
@@ -10797,6 +11974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>Task of BenefitAssessment</returns>
         
+        
         public async System.Threading.Tasks.Task<BenefitAssessment> GetRoutingAssessmentAsync (string assessmentId)
         {
              ApiResponse<BenefitAssessment> localVarResponse = await GetRoutingAssessmentAsyncWithHttpInfo(assessmentId);
@@ -10810,6 +11988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">Benefit Assessment ID</param>
         /// <returns>Task of ApiResponse (BenefitAssessment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BenefitAssessment>> GetRoutingAssessmentAsyncWithHttpInfo (string assessmentId)
         { 
@@ -10900,6 +12079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>AssessmentListing</returns>
         
+        
         public AssessmentListing GetRoutingAssessments (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
         {
              ApiResponse<AssessmentListing> localVarResponse = GetRoutingAssessmentsWithHttpInfo(before, after, limit, pageSize, queueId);
@@ -10916,6 +12096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>ApiResponse of AssessmentListing</returns>
+        
         
         public ApiResponse< AssessmentListing > GetRoutingAssessmentsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
         { 
@@ -11005,6 +12186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>Task of AssessmentListing</returns>
         
+        
         public async System.Threading.Tasks.Task<AssessmentListing> GetRoutingAssessmentsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
         {
              ApiResponse<AssessmentListing> localVarResponse = await GetRoutingAssessmentsAsyncWithHttpInfo(before, after, limit, pageSize, queueId);
@@ -11022,6 +12204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Queue ID(s) to filter assessments by. (optional)</param>
         /// <returns>Task of ApiResponse (AssessmentListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AssessmentListing>> GetRoutingAssessmentsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
         { 
@@ -11108,6 +12291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Benefit Assessment Job ID</param>
         /// <returns>BenefitAssessmentJob</returns>
         
+        
         public BenefitAssessmentJob GetRoutingAssessmentsJob (string jobId)
         {
              ApiResponse<BenefitAssessmentJob> localVarResponse = GetRoutingAssessmentsJobWithHttpInfo(jobId);
@@ -11120,6 +12304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Benefit Assessment Job ID</param>
         /// <returns>ApiResponse of BenefitAssessmentJob</returns>
+        
         
         public ApiResponse< BenefitAssessmentJob > GetRoutingAssessmentsJobWithHttpInfo (string jobId)
         { 
@@ -11204,6 +12389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Benefit Assessment Job ID</param>
         /// <returns>Task of BenefitAssessmentJob</returns>
         
+        
         public async System.Threading.Tasks.Task<BenefitAssessmentJob> GetRoutingAssessmentsJobAsync (string jobId)
         {
              ApiResponse<BenefitAssessmentJob> localVarResponse = await GetRoutingAssessmentsJobAsyncWithHttpInfo(jobId);
@@ -11217,6 +12403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Benefit Assessment Job ID</param>
         /// <returns>Task of ApiResponse (BenefitAssessmentJob)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> GetRoutingAssessmentsJobAsyncWithHttpInfo (string jobId)
         { 
@@ -11303,6 +12490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
         /// <returns>AssessmentJobListing</returns>
         
+        
         public AssessmentJobListing GetRoutingAssessmentsJobs (List<string> divisionId = null)
         {
              ApiResponse<AssessmentJobListing> localVarResponse = GetRoutingAssessmentsJobsWithHttpInfo(divisionId);
@@ -11315,6 +12503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
         /// <returns>ApiResponse of AssessmentJobListing</returns>
+        
         
         public ApiResponse< AssessmentJobListing > GetRoutingAssessmentsJobsWithHttpInfo (List<string> divisionId = null)
         { 
@@ -11396,6 +12585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
         /// <returns>Task of AssessmentJobListing</returns>
         
+        
         public async System.Threading.Tasks.Task<AssessmentJobListing> GetRoutingAssessmentsJobsAsync (List<string> divisionId = null)
         {
              ApiResponse<AssessmentJobListing> localVarResponse = await GetRoutingAssessmentsJobsAsyncWithHttpInfo(divisionId);
@@ -11409,6 +12599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID(s) to filter assessment jobs by. (optional)</param>
         /// <returns>Task of ApiResponse (AssessmentJobListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AssessmentJobListing>> GetRoutingAssessmentsJobsAsyncWithHttpInfo (List<string> divisionId = null)
         { 
@@ -11490,6 +12681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AvailableMediaTypeEntityListing</returns>
         
+        
         public AvailableMediaTypeEntityListing GetRoutingAvailablemediatypes ()
         {
              ApiResponse<AvailableMediaTypeEntityListing> localVarResponse = GetRoutingAvailablemediatypesWithHttpInfo();
@@ -11501,6 +12693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AvailableMediaTypeEntityListing</returns>
+        
         
         public ApiResponse< AvailableMediaTypeEntityListing > GetRoutingAvailablemediatypesWithHttpInfo ()
         { 
@@ -11580,6 +12773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AvailableMediaTypeEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<AvailableMediaTypeEntityListing> GetRoutingAvailablemediatypesAsync ()
         {
              ApiResponse<AvailableMediaTypeEntityListing> localVarResponse = await GetRoutingAvailablemediatypesAsyncWithHttpInfo();
@@ -11592,6 +12786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AvailableMediaTypeEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AvailableMediaTypeEntityListing>> GetRoutingAvailablemediatypesAsyncWithHttpInfo ()
         { 
@@ -11673,6 +12868,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>InboundDomain</returns>
         
+        
         public InboundDomain GetRoutingEmailDomain (string domainId)
         {
              ApiResponse<InboundDomain> localVarResponse = GetRoutingEmailDomainWithHttpInfo(domainId);
@@ -11685,6 +12881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of InboundDomain</returns>
+        
         
         public ApiResponse< InboundDomain > GetRoutingEmailDomainWithHttpInfo (string domainId)
         { 
@@ -11769,6 +12966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of InboundDomain</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundDomain> GetRoutingEmailDomainAsync (string domainId)
         {
              ApiResponse<InboundDomain> localVarResponse = await GetRoutingEmailDomainAsyncWithHttpInfo(domainId);
@@ -11782,6 +12980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetRoutingEmailDomainAsyncWithHttpInfo (string domainId)
         { 
@@ -11869,6 +13068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>InboundRoute</returns>
         
+        
         public InboundRoute GetRoutingEmailDomainRoute (string domainName, string routeId)
         {
              ApiResponse<InboundRoute> localVarResponse = GetRoutingEmailDomainRouteWithHttpInfo(domainName, routeId);
@@ -11882,6 +13082,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of InboundRoute</returns>
+        
         
         public ApiResponse< InboundRoute > GetRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId)
         { 
@@ -11971,6 +13172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <returns>Task of InboundRoute</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundRoute> GetRoutingEmailDomainRouteAsync (string domainName, string routeId)
         {
              ApiResponse<InboundRoute> localVarResponse = await GetRoutingEmailDomainRouteAsyncWithHttpInfo(domainName, routeId);
@@ -11985,6 +13187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId)
         { 
@@ -12079,6 +13282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>InboundRouteEntityListing</returns>
         
+        
         public InboundRouteEntityListing GetRoutingEmailDomainRoutes (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
         {
              ApiResponse<InboundRouteEntityListing> localVarResponse = GetRoutingEmailDomainRoutesWithHttpInfo(domainName, pageSize, pageNumber, pattern);
@@ -12094,6 +13298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
+        
         
         public ApiResponse< InboundRouteEntityListing > GetRoutingEmailDomainRoutesWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
         { 
@@ -12184,6 +13389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>Task of InboundRouteEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundRouteEntityListing> GetRoutingEmailDomainRoutesAsync (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
         {
              ApiResponse<InboundRouteEntityListing> localVarResponse = await GetRoutingEmailDomainRoutesAsyncWithHttpInfo(domainName, pageSize, pageNumber, pattern);
@@ -12200,6 +13406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetRoutingEmailDomainRoutesAsyncWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
         { 
@@ -12292,6 +13499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>InboundDomainEntityListing</returns>
         
+        
         public InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
         {
              ApiResponse<InboundDomainEntityListing> localVarResponse = GetRoutingEmailDomainsWithHttpInfo(pageSize, pageNumber, excludeStatus, filter);
@@ -12307,6 +13515,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
+        
         
         public ApiResponse< InboundDomainEntityListing > GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
         { 
@@ -12394,6 +13603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>Task of InboundDomainEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
         {
              ApiResponse<InboundDomainEntityListing> localVarResponse = await GetRoutingEmailDomainsAsyncWithHttpInfo(pageSize, pageNumber, excludeStatus, filter);
@@ -12410,6 +13620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
         { 
@@ -12495,6 +13706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>OutboundDomain</returns>
         
+        
         public OutboundDomain GetRoutingEmailOutboundDomain (string domainId)
         {
              ApiResponse<OutboundDomain> localVarResponse = GetRoutingEmailOutboundDomainWithHttpInfo(domainId);
@@ -12507,6 +13719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of OutboundDomain</returns>
+        
         
         public ApiResponse< OutboundDomain > GetRoutingEmailOutboundDomainWithHttpInfo (string domainId)
         { 
@@ -12591,6 +13804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of OutboundDomain</returns>
         
+        
         public async System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainAsync (string domainId)
         {
              ApiResponse<OutboundDomain> localVarResponse = await GetRoutingEmailOutboundDomainAsyncWithHttpInfo(domainId);
@@ -12604,6 +13818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (OutboundDomain)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId)
         { 
@@ -12690,6 +13905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
+        
         public EmailOutboundDomainResult GetRoutingEmailOutboundDomainActivation (string domainId)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = GetRoutingEmailOutboundDomainActivationWithHttpInfo(domainId);
@@ -12702,6 +13918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
+        
         
         public ApiResponse< EmailOutboundDomainResult > GetRoutingEmailOutboundDomainActivationWithHttpInfo (string domainId)
         { 
@@ -12786,6 +14003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
+        
         public async System.Threading.Tasks.Task<EmailOutboundDomainResult> GetRoutingEmailOutboundDomainActivationAsync (string domainId)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = await GetRoutingEmailOutboundDomainActivationAsyncWithHttpInfo(domainId);
@@ -12799,6 +14017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> GetRoutingEmailOutboundDomainActivationAsyncWithHttpInfo (string domainId)
         { 
@@ -12885,6 +14104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>OutboundDomain</returns>
         
+        
         public OutboundDomain GetRoutingEmailOutboundDomainSearch (string domainId)
         {
              ApiResponse<OutboundDomain> localVarResponse = GetRoutingEmailOutboundDomainSearchWithHttpInfo(domainId);
@@ -12897,6 +14117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of OutboundDomain</returns>
+        
         
         public ApiResponse< OutboundDomain > GetRoutingEmailOutboundDomainSearchWithHttpInfo (string domainId)
         { 
@@ -12981,6 +14202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of OutboundDomain</returns>
         
+        
         public async System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainSearchAsync (string domainId)
         {
              ApiResponse<OutboundDomain> localVarResponse = await GetRoutingEmailOutboundDomainSearchAsyncWithHttpInfo(domainId);
@@ -12994,6 +14216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (OutboundDomain)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainSearchAsyncWithHttpInfo (string domainId)
         { 
@@ -13080,6 +14303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>OutboundDomainEntityListing</returns>
         
+        
         public OutboundDomainEntityListing GetRoutingEmailOutboundDomains (string filter = null)
         {
              ApiResponse<OutboundDomainEntityListing> localVarResponse = GetRoutingEmailOutboundDomainsWithHttpInfo(filter);
@@ -13092,6 +14316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>ApiResponse of OutboundDomainEntityListing</returns>
+        
         
         public ApiResponse< OutboundDomainEntityListing > GetRoutingEmailOutboundDomainsWithHttpInfo (string filter = null)
         { 
@@ -13173,6 +14398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>Task of OutboundDomainEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (string filter = null)
         {
              ApiResponse<OutboundDomainEntityListing> localVarResponse = await GetRoutingEmailOutboundDomainsAsyncWithHttpInfo(filter);
@@ -13186,6 +14412,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Optional search filter (optional)</param>
         /// <returns>Task of ApiResponse (OutboundDomainEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (string filter = null)
         { 
@@ -13267,6 +14494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EmailSetup</returns>
         
+        
         public EmailSetup GetRoutingEmailSetup ()
         {
              ApiResponse<EmailSetup> localVarResponse = GetRoutingEmailSetupWithHttpInfo();
@@ -13278,6 +14506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EmailSetup</returns>
+        
         
         public ApiResponse< EmailSetup > GetRoutingEmailSetupWithHttpInfo ()
         { 
@@ -13357,6 +14586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EmailSetup</returns>
         
+        
         public async System.Threading.Tasks.Task<EmailSetup> GetRoutingEmailSetupAsync ()
         {
              ApiResponse<EmailSetup> localVarResponse = await GetRoutingEmailSetupAsyncWithHttpInfo();
@@ -13369,6 +14599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EmailSetup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmailSetup>> GetRoutingEmailSetupAsyncWithHttpInfo ()
         { 
@@ -13450,6 +14681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Language</returns>
         
+        
         public Language GetRoutingLanguage (string languageId)
         {
              ApiResponse<Language> localVarResponse = GetRoutingLanguageWithHttpInfo(languageId);
@@ -13462,6 +14694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Language</returns>
+        
         
         public ApiResponse< Language > GetRoutingLanguageWithHttpInfo (string languageId)
         { 
@@ -13546,6 +14779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of Language</returns>
         
+        
         public async System.Threading.Tasks.Task<Language> GetRoutingLanguageAsync (string languageId)
         {
              ApiResponse<Language> localVarResponse = await GetRoutingLanguageAsyncWithHttpInfo(languageId);
@@ -13559,6 +14793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Language>> GetRoutingLanguageAsyncWithHttpInfo (string languageId)
         { 
@@ -13649,6 +14884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>LanguageEntityListing</returns>
         
+        
         public LanguageEntityListing GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
         {
              ApiResponse<LanguageEntityListing> localVarResponse = GetRoutingLanguagesWithHttpInfo(pageSize, pageNumber, sortOrder, name, id);
@@ -13665,6 +14901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
+        
         
         public ApiResponse< LanguageEntityListing > GetRoutingLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
         { 
@@ -13754,6 +14991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of LanguageEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<LanguageEntityListing> GetRoutingLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
         {
              ApiResponse<LanguageEntityListing> localVarResponse = await GetRoutingLanguagesAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name, id);
@@ -13771,6 +15009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetRoutingLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
         { 
@@ -13857,6 +15096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recipientId">Recipient ID</param>
         /// <returns>Recipient</returns>
         
+        
         public Recipient GetRoutingMessageRecipient (string recipientId)
         {
              ApiResponse<Recipient> localVarResponse = GetRoutingMessageRecipientWithHttpInfo(recipientId);
@@ -13869,6 +15109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recipientId">Recipient ID</param>
         /// <returns>ApiResponse of Recipient</returns>
+        
         
         public ApiResponse< Recipient > GetRoutingMessageRecipientWithHttpInfo (string recipientId)
         { 
@@ -13953,6 +15194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recipientId">Recipient ID</param>
         /// <returns>Task of Recipient</returns>
         
+        
         public async System.Threading.Tasks.Task<Recipient> GetRoutingMessageRecipientAsync (string recipientId)
         {
              ApiResponse<Recipient> localVarResponse = await GetRoutingMessageRecipientAsyncWithHttpInfo(recipientId);
@@ -13966,6 +15208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recipientId">Recipient ID</param>
         /// <returns>Task of ApiResponse (Recipient)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Recipient>> GetRoutingMessageRecipientAsyncWithHttpInfo (string recipientId)
         { 
@@ -14054,6 +15297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>RecipientListing</returns>
         
+        
         public RecipientListing GetRoutingMessageRecipients (string messengerType = null, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<RecipientListing> localVarResponse = GetRoutingMessageRecipientsWithHttpInfo(messengerType, pageSize, pageNumber);
@@ -14068,6 +15312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of RecipientListing</returns>
+        
         
         public ApiResponse< RecipientListing > GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null)
         { 
@@ -14153,6 +15398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of RecipientListing</returns>
         
+        
         public async System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (string messengerType = null, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<RecipientListing> localVarResponse = await GetRoutingMessageRecipientsAsyncWithHttpInfo(messengerType, pageSize, pageNumber);
@@ -14168,6 +15414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (RecipientListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null)
         { 
@@ -14252,6 +15499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Predictor</returns>
         
+        
         public Predictor GetRoutingPredictor (string predictorId)
         {
              ApiResponse<Predictor> localVarResponse = GetRoutingPredictorWithHttpInfo(predictorId);
@@ -14264,6 +15512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>ApiResponse of Predictor</returns>
+        
         
         public ApiResponse< Predictor > GetRoutingPredictorWithHttpInfo (string predictorId)
         { 
@@ -14348,6 +15597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of Predictor</returns>
         
+        
         public async System.Threading.Tasks.Task<Predictor> GetRoutingPredictorAsync (string predictorId)
         {
              ApiResponse<Predictor> localVarResponse = await GetRoutingPredictorAsyncWithHttpInfo(predictorId);
@@ -14361,6 +15611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of ApiResponse (Predictor)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Predictor>> GetRoutingPredictorAsyncWithHttpInfo (string predictorId)
         { 
@@ -14448,6 +15699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="modelId">Model ID</param>
         /// <returns>PredictorModelFeatureListing</returns>
         
+        
         public PredictorModelFeatureListing GetRoutingPredictorModelFeatures (string predictorId, string modelId)
         {
              ApiResponse<PredictorModelFeatureListing> localVarResponse = GetRoutingPredictorModelFeaturesWithHttpInfo(predictorId, modelId);
@@ -14461,6 +15713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <param name="modelId">Model ID</param>
         /// <returns>ApiResponse of PredictorModelFeatureListing</returns>
+        
         
         public ApiResponse< PredictorModelFeatureListing > GetRoutingPredictorModelFeaturesWithHttpInfo (string predictorId, string modelId)
         { 
@@ -14550,6 +15803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="modelId">Model ID</param>
         /// <returns>Task of PredictorModelFeatureListing</returns>
         
+        
         public async System.Threading.Tasks.Task<PredictorModelFeatureListing> GetRoutingPredictorModelFeaturesAsync (string predictorId, string modelId)
         {
              ApiResponse<PredictorModelFeatureListing> localVarResponse = await GetRoutingPredictorModelFeaturesAsyncWithHttpInfo(predictorId, modelId);
@@ -14564,6 +15818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <param name="modelId">Model ID</param>
         /// <returns>Task of ApiResponse (PredictorModelFeatureListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PredictorModelFeatureListing>> GetRoutingPredictorModelFeaturesAsyncWithHttpInfo (string predictorId, string modelId)
         { 
@@ -14655,6 +15910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>PredictorModels</returns>
         
+        
         public PredictorModels GetRoutingPredictorModels (string predictorId)
         {
              ApiResponse<PredictorModels> localVarResponse = GetRoutingPredictorModelsWithHttpInfo(predictorId);
@@ -14667,6 +15923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>ApiResponse of PredictorModels</returns>
+        
         
         public ApiResponse< PredictorModels > GetRoutingPredictorModelsWithHttpInfo (string predictorId)
         { 
@@ -14751,6 +16008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of PredictorModels</returns>
         
+        
         public async System.Threading.Tasks.Task<PredictorModels> GetRoutingPredictorModelsAsync (string predictorId)
         {
              ApiResponse<PredictorModels> localVarResponse = await GetRoutingPredictorModelsAsyncWithHttpInfo(predictorId);
@@ -14764,6 +16022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of ApiResponse (PredictorModels)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PredictorModels>> GetRoutingPredictorModelsAsyncWithHttpInfo (string predictorId)
         { 
@@ -14854,6 +16113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>PredictorListing</returns>
         
+        
         public PredictorListing GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
         {
              ApiResponse<PredictorListing> localVarResponse = GetRoutingPredictorsWithHttpInfo(before, after, limit, pageSize, queueId);
@@ -14870,6 +16130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>ApiResponse of PredictorListing</returns>
+        
         
         public ApiResponse< PredictorListing > GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
         { 
@@ -14959,6 +16220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>Task of PredictorListing</returns>
         
+        
         public async System.Threading.Tasks.Task<PredictorListing> GetRoutingPredictorsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
         {
              ApiResponse<PredictorListing> localVarResponse = await GetRoutingPredictorsAsyncWithHttpInfo(before, after, limit, pageSize, queueId);
@@ -14976,6 +16238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (PredictorListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
         { 
@@ -15063,6 +16326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>List&lt;KeyPerformanceIndicator&gt;</returns>
         
+        
         public List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
         {
              ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo(kpiGroup, expand);
@@ -15076,6 +16340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
+        
         
         public ApiResponse< List<KeyPerformanceIndicator> > GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null)
         { 
@@ -15159,6 +16424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>Task of List&lt;KeyPerformanceIndicator&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null, List<string> expand = null)
         {
              ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = await GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo(kpiGroup, expand);
@@ -15173,6 +16439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null)
         { 
@@ -15256,6 +16523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <returns>Queue</returns>
         
+        
         public Queue GetRoutingQueue (string queueId)
         {
              ApiResponse<Queue> localVarResponse = GetRoutingQueueWithHttpInfo(queueId);
@@ -15268,6 +16536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <returns>ApiResponse of Queue</returns>
+        
         
         public ApiResponse< Queue > GetRoutingQueueWithHttpInfo (string queueId)
         { 
@@ -15352,6 +16621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of Queue</returns>
         
+        
         public async System.Threading.Tasks.Task<Queue> GetRoutingQueueAsync (string queueId)
         {
              ApiResponse<Queue> localVarResponse = await GetRoutingQueueAsyncWithHttpInfo(queueId);
@@ -15365,6 +16635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Queue>> GetRoutingQueueAsyncWithHttpInfo (string queueId)
         { 
@@ -15452,6 +16723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
         /// <returns>ComparisonPeriod</returns>
         
+        
         public ComparisonPeriod GetRoutingQueueComparisonperiod (string queueId, string comparisonPeriodId)
         {
              ApiResponse<ComparisonPeriod> localVarResponse = GetRoutingQueueComparisonperiodWithHttpInfo(queueId, comparisonPeriodId);
@@ -15465,6 +16737,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue id</param>
         /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
         /// <returns>ApiResponse of ComparisonPeriod</returns>
+        
         
         public ApiResponse< ComparisonPeriod > GetRoutingQueueComparisonperiodWithHttpInfo (string queueId, string comparisonPeriodId)
         { 
@@ -15554,6 +16827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
         /// <returns>Task of ComparisonPeriod</returns>
         
+        
         public async System.Threading.Tasks.Task<ComparisonPeriod> GetRoutingQueueComparisonperiodAsync (string queueId, string comparisonPeriodId)
         {
              ApiResponse<ComparisonPeriod> localVarResponse = await GetRoutingQueueComparisonperiodAsyncWithHttpInfo(queueId, comparisonPeriodId);
@@ -15568,6 +16842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue id</param>
         /// <param name="comparisonPeriodId">ComparisonPeriod id</param>
         /// <returns>Task of ApiResponse (ComparisonPeriod)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ComparisonPeriod>> GetRoutingQueueComparisonperiodAsyncWithHttpInfo (string queueId, string comparisonPeriodId)
         { 
@@ -15659,6 +16934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue id</param>
         /// <returns>ComparisonPeriodListing</returns>
         
+        
         public ComparisonPeriodListing GetRoutingQueueComparisonperiods (string queueId)
         {
              ApiResponse<ComparisonPeriodListing> localVarResponse = GetRoutingQueueComparisonperiodsWithHttpInfo(queueId);
@@ -15671,6 +16947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue id</param>
         /// <returns>ApiResponse of ComparisonPeriodListing</returns>
+        
         
         public ApiResponse< ComparisonPeriodListing > GetRoutingQueueComparisonperiodsWithHttpInfo (string queueId)
         { 
@@ -15755,6 +17032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue id</param>
         /// <returns>Task of ComparisonPeriodListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ComparisonPeriodListing> GetRoutingQueueComparisonperiodsAsync (string queueId)
         {
              ApiResponse<ComparisonPeriodListing> localVarResponse = await GetRoutingQueueComparisonperiodsAsyncWithHttpInfo(queueId);
@@ -15768,6 +17046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue id</param>
         /// <returns>Task of ApiResponse (ComparisonPeriodListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ComparisonPeriodListing>> GetRoutingQueueComparisonperiodsAsyncWithHttpInfo (string queueId)
         { 
@@ -15855,6 +17134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>EstimatedWaitTimePredictions</returns>
         
+        
         public EstimatedWaitTimePredictions GetRoutingQueueEstimatedwaittime (string queueId, string conversationId = null)
         {
              ApiResponse<EstimatedWaitTimePredictions> localVarResponse = GetRoutingQueueEstimatedwaittimeWithHttpInfo(queueId, conversationId);
@@ -15868,6 +17148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queueId</param>
         /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
+        
         
         public ApiResponse< EstimatedWaitTimePredictions > GetRoutingQueueEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null)
         { 
@@ -15954,6 +17235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Task of EstimatedWaitTimePredictions</returns>
         
+        
         public async System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetRoutingQueueEstimatedwaittimeAsync (string queueId, string conversationId = null)
         {
              ApiResponse<EstimatedWaitTimePredictions> localVarResponse = await GetRoutingQueueEstimatedwaittimeAsyncWithHttpInfo(queueId, conversationId);
@@ -15968,6 +17250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queueId</param>
         /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null)
         { 
@@ -16056,6 +17339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">mediaType</param>
         /// <returns>EstimatedWaitTimePredictions</returns>
         
+        
         public EstimatedWaitTimePredictions GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType)
         {
              ApiResponse<EstimatedWaitTimePredictions> localVarResponse = GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo(queueId, mediaType);
@@ -16069,6 +17353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
         /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
+        
         
         public ApiResponse< EstimatedWaitTimePredictions > GetRoutingQueueMediatypeEstimatedwaittimeWithHttpInfo (string queueId, string mediaType)
         { 
@@ -16158,6 +17443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">mediaType</param>
         /// <returns>Task of EstimatedWaitTimePredictions</returns>
         
+        
         public async System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetRoutingQueueMediatypeEstimatedwaittimeAsync (string queueId, string mediaType)
         {
              ApiResponse<EstimatedWaitTimePredictions> localVarResponse = await GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo(queueId, mediaType);
@@ -16172,6 +17458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queueId</param>
         /// <param name="mediaType">mediaType</param>
         /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetRoutingQueueMediatypeEstimatedwaittimeAsyncWithHttpInfo (string queueId, string mediaType)
         { 
@@ -16275,6 +17562,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <returns>QueueMemberEntityListing</returns>
         
+        
         public QueueMemberEntityListing GetRoutingQueueMembers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null)
         {
              ApiResponse<QueueMemberEntityListing> localVarResponse = GetRoutingQueueMembersWithHttpInfo(queueId, pageNumber, pageSize, sortOrder, expand, name, profileSkills, skills, languages, routingStatus, presence, memberBy, joined);
@@ -16299,6 +17587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberBy">Filter by member type (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        
         
         public ApiResponse< QueueMemberEntityListing > GetRoutingQueueMembersWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null)
         { 
@@ -16407,6 +17696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetRoutingQueueMembersAsync (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null)
         {
              ApiResponse<QueueMemberEntityListing> localVarResponse = await GetRoutingQueueMembersAsyncWithHttpInfo(queueId, pageNumber, pageSize, sortOrder, expand, name, profileSkills, skills, languages, routingStatus, presence, memberBy, joined);
@@ -16432,6 +17722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberBy">Filter by member type (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetRoutingQueueMembersAsyncWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null)
         { 
@@ -16541,6 +17832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         public QueueMemberEntityListingV1 GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
              ApiResponse<QueueMemberEntityListingV1> localVarResponse = GetRoutingQueueUsersWithHttpInfo(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
@@ -16565,6 +17857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>ApiResponse of QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         public ApiResponse< QueueMemberEntityListingV1 > GetRoutingQueueUsersWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         { 
             // verify the required parameter 'queueId' is set
@@ -16670,6 +17963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<QueueMemberEntityListingV1> GetRoutingQueueUsersAsync (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
              ApiResponse<QueueMemberEntityListingV1> localVarResponse = await GetRoutingQueueUsersAsyncWithHttpInfo(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
@@ -16695,6 +17989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListingV1)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListingV1>> GetRoutingQueueUsersAsyncWithHttpInfo (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         { 
             // verify the required parameter 'queueId' is set
@@ -16793,6 +18088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>WrapupCodeEntityListing</returns>
         
+        
         public WrapupCodeEntityListing GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingQueueWrapupcodesWithHttpInfo(queueId, pageSize, pageNumber);
@@ -16807,6 +18103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        
         
         public ApiResponse< WrapupCodeEntityListing > GetRoutingQueueWrapupcodesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -16895,6 +18192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesAsync (string queueId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingQueueWrapupcodesAsyncWithHttpInfo(queueId, pageSize, pageNumber);
@@ -16910,6 +18208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -17005,6 +18304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>QueueEntityListing</returns>
         
+        
         public QueueEntityListing GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
         {
              ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesWithHttpInfo(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, hasPeer);
@@ -17024,6 +18324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
         /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
+        
         
         public ApiResponse< QueueEntityListing > GetRoutingQueuesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
         { 
@@ -17119,6 +18420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
         {
              ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesAsyncWithHttpInfo(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, hasPeer);
@@ -17139,6 +18441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
         /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
         { 
@@ -17234,6 +18537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>QueueEntityListing</returns>
         
+        
         public QueueEntityListing GetRoutingQueuesDivisionviews (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
         {
              ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesDivisionviewsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
@@ -17252,6 +18556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Queue ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
+        
         
         public ApiResponse< QueueEntityListing > GetRoutingQueuesDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
         { 
@@ -17345,6 +18650,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
         {
              ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
@@ -17364,6 +18670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Queue ID(s) (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
         { 
@@ -17454,6 +18761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>QueueEntityListing</returns>
         
+        
         public QueueEntityListing GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesDivisionviewsAllWithHttpInfo(pageSize, pageNumber, sortOrder);
@@ -17468,6 +18776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
+        
         
         public ApiResponse< QueueEntityListing > GetRoutingQueuesDivisionviewsAllWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -17553,6 +18862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of QueueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAllAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
@@ -17568,6 +18878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAllAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -17655,6 +18966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Note: results are sorted by name. (optional, default to asc)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         public UserQueueEntityListing GetRoutingQueuesMe (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = GetRoutingQueuesMeWithHttpInfo(pageNumber, pageSize, joined, sortOrder);
@@ -17670,6 +18982,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Filter by joined status. (optional)</param>
         /// <param name="sortOrder">Note: results are sorted by name. (optional, default to asc)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        
         
         public ApiResponse< UserQueueEntityListing > GetRoutingQueuesMeWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null)
         { 
@@ -17757,6 +19070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Note: results are sorted by name. (optional, default to asc)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserQueueEntityListing> GetRoutingQueuesMeAsync (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = await GetRoutingQueuesMeAsyncWithHttpInfo(pageNumber, pageSize, joined, sortOrder);
@@ -17773,6 +19087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Filter by joined status. (optional)</param>
         /// <param name="sortOrder">Note: results are sorted by name. (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetRoutingQueuesMeAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null)
         { 
@@ -17857,6 +19172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RoutingSettings</returns>
         
+        
         public RoutingSettings GetRoutingSettings ()
         {
              ApiResponse<RoutingSettings> localVarResponse = GetRoutingSettingsWithHttpInfo();
@@ -17868,6 +19184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RoutingSettings</returns>
+        
         
         public ApiResponse< RoutingSettings > GetRoutingSettingsWithHttpInfo ()
         { 
@@ -17947,6 +19264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RoutingSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<RoutingSettings> GetRoutingSettingsAsync ()
         {
              ApiResponse<RoutingSettings> localVarResponse = await GetRoutingSettingsAsyncWithHttpInfo();
@@ -17959,6 +19277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RoutingSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<RoutingSettings>> GetRoutingSettingsAsyncWithHttpInfo ()
         { 
@@ -18039,6 +19358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ContactCenterSettings</returns>
         
+        
         public ContactCenterSettings GetRoutingSettingsContactcenter ()
         {
              ApiResponse<ContactCenterSettings> localVarResponse = GetRoutingSettingsContactcenterWithHttpInfo();
@@ -18050,6 +19370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ContactCenterSettings</returns>
+        
         
         public ApiResponse< ContactCenterSettings > GetRoutingSettingsContactcenterWithHttpInfo ()
         { 
@@ -18129,6 +19450,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ContactCenterSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<ContactCenterSettings> GetRoutingSettingsContactcenterAsync ()
         {
              ApiResponse<ContactCenterSettings> localVarResponse = await GetRoutingSettingsContactcenterAsyncWithHttpInfo();
@@ -18141,6 +19463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ContactCenterSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactCenterSettings>> GetRoutingSettingsContactcenterAsyncWithHttpInfo ()
         { 
@@ -18221,6 +19544,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TranscriptionSettings</returns>
         
+        
         public TranscriptionSettings GetRoutingSettingsTranscription ()
         {
              ApiResponse<TranscriptionSettings> localVarResponse = GetRoutingSettingsTranscriptionWithHttpInfo();
@@ -18232,6 +19556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TranscriptionSettings</returns>
+        
         
         public ApiResponse< TranscriptionSettings > GetRoutingSettingsTranscriptionWithHttpInfo ()
         { 
@@ -18311,6 +19636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of TranscriptionSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<TranscriptionSettings> GetRoutingSettingsTranscriptionAsync ()
         {
              ApiResponse<TranscriptionSettings> localVarResponse = await GetRoutingSettingsTranscriptionAsyncWithHttpInfo();
@@ -18323,6 +19649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (TranscriptionSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TranscriptionSettings>> GetRoutingSettingsTranscriptionAsyncWithHttpInfo ()
         { 
@@ -18404,6 +19731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">Skill ID</param>
         /// <returns>RoutingSkill</returns>
         
+        
         public RoutingSkill GetRoutingSkill (string skillId)
         {
              ApiResponse<RoutingSkill> localVarResponse = GetRoutingSkillWithHttpInfo(skillId);
@@ -18416,6 +19744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>ApiResponse of RoutingSkill</returns>
+        
         
         public ApiResponse< RoutingSkill > GetRoutingSkillWithHttpInfo (string skillId)
         { 
@@ -18500,6 +19829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of RoutingSkill</returns>
         
+        
         public async System.Threading.Tasks.Task<RoutingSkill> GetRoutingSkillAsync (string skillId)
         {
              ApiResponse<RoutingSkill> localVarResponse = await GetRoutingSkillAsyncWithHttpInfo(skillId);
@@ -18513,6 +19843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetRoutingSkillAsyncWithHttpInfo (string skillId)
         { 
@@ -18599,6 +19930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>SkillGroup</returns>
         
+        
         public SkillGroup GetRoutingSkillgroup (string skillGroupId)
         {
              ApiResponse<SkillGroup> localVarResponse = GetRoutingSkillgroupWithHttpInfo(skillGroupId);
@@ -18611,6 +19943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>ApiResponse of SkillGroup</returns>
+        
         
         public ApiResponse< SkillGroup > GetRoutingSkillgroupWithHttpInfo (string skillGroupId)
         { 
@@ -18695,6 +20028,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>Task of SkillGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<SkillGroup> GetRoutingSkillgroupAsync (string skillGroupId)
         {
              ApiResponse<SkillGroup> localVarResponse = await GetRoutingSkillgroupAsyncWithHttpInfo(skillGroupId);
@@ -18708,6 +20042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <returns>Task of ApiResponse (SkillGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SkillGroup>> GetRoutingSkillgroupAsyncWithHttpInfo (string skillGroupId)
         { 
@@ -18798,6 +20133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>SkillGroupMemberEntityListing</returns>
         
+        
         public SkillGroupMemberEntityListing GetRoutingSkillgroupMembers (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null)
         {
              ApiResponse<SkillGroupMemberEntityListing> localVarResponse = GetRoutingSkillgroupMembersWithHttpInfo(skillGroupId, pageSize, after, before, expand);
@@ -18814,6 +20150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>ApiResponse of SkillGroupMemberEntityListing</returns>
+        
         
         public ApiResponse< SkillGroupMemberEntityListing > GetRoutingSkillgroupMembersWithHttpInfo (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null)
         { 
@@ -18906,6 +20243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of SkillGroupMemberEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SkillGroupMemberEntityListing> GetRoutingSkillgroupMembersAsync (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null)
         {
              ApiResponse<SkillGroupMemberEntityListing> localVarResponse = await GetRoutingSkillgroupMembersAsyncWithHttpInfo(skillGroupId, pageSize, after, before, expand);
@@ -18923,6 +20261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of ApiResponse (SkillGroupMemberEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SkillGroupMemberEntityListing>> GetRoutingSkillgroupMembersAsyncWithHttpInfo (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null)
         { 
@@ -19014,6 +20353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>SkillGroupMemberDivisionList</returns>
         
+        
         public SkillGroupMemberDivisionList GetRoutingSkillgroupMembersDivisions (string skillGroupId, string expand = null)
         {
              ApiResponse<SkillGroupMemberDivisionList> localVarResponse = GetRoutingSkillgroupMembersDivisionsWithHttpInfo(skillGroupId, expand);
@@ -19027,6 +20367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>ApiResponse of SkillGroupMemberDivisionList</returns>
+        
         
         public ApiResponse< SkillGroupMemberDivisionList > GetRoutingSkillgroupMembersDivisionsWithHttpInfo (string skillGroupId, string expand = null)
         { 
@@ -19113,6 +20454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of SkillGroupMemberDivisionList</returns>
         
+        
         public async System.Threading.Tasks.Task<SkillGroupMemberDivisionList> GetRoutingSkillgroupMembersDivisionsAsync (string skillGroupId, string expand = null)
         {
              ApiResponse<SkillGroupMemberDivisionList> localVarResponse = await GetRoutingSkillgroupMembersDivisionsAsyncWithHttpInfo(skillGroupId, expand);
@@ -19127,6 +20469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of ApiResponse (SkillGroupMemberDivisionList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SkillGroupMemberDivisionList>> GetRoutingSkillgroupMembersDivisionsAsyncWithHttpInfo (string skillGroupId, string expand = null)
         { 
@@ -19217,6 +20560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <returns>SkillGroupEntityListing</returns>
         
+        
         public SkillGroupEntityListing GetRoutingSkillgroups (int? pageSize = null, string name = null, string after = null, string before = null)
         {
              ApiResponse<SkillGroupEntityListing> localVarResponse = GetRoutingSkillgroupsWithHttpInfo(pageSize, name, after, before);
@@ -19232,6 +20576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item (optional)</param>
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <returns>ApiResponse of SkillGroupEntityListing</returns>
+        
         
         public ApiResponse< SkillGroupEntityListing > GetRoutingSkillgroupsWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null)
         { 
@@ -19319,6 +20664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <returns>Task of SkillGroupEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SkillGroupEntityListing> GetRoutingSkillgroupsAsync (int? pageSize = null, string name = null, string after = null, string before = null)
         {
              ApiResponse<SkillGroupEntityListing> localVarResponse = await GetRoutingSkillgroupsAsyncWithHttpInfo(pageSize, name, after, before);
@@ -19335,6 +20681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item (optional)</param>
         /// <param name="before">The cursor that points to the previous item (optional)</param>
         /// <returns>Task of ApiResponse (SkillGroupEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SkillGroupEntityListing>> GetRoutingSkillgroupsAsyncWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null)
         { 
@@ -19423,6 +20770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>SkillEntityListing</returns>
         
+        
         public SkillEntityListing GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
         {
              ApiResponse<SkillEntityListing> localVarResponse = GetRoutingSkillsWithHttpInfo(pageSize, pageNumber, name, id);
@@ -19438,6 +20786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of SkillEntityListing</returns>
+        
         
         public ApiResponse< SkillEntityListing > GetRoutingSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
         { 
@@ -19525,6 +20874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of SkillEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SkillEntityListing> GetRoutingSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
         {
              ApiResponse<SkillEntityListing> localVarResponse = await GetRoutingSkillsAsyncWithHttpInfo(pageSize, pageNumber, name, id);
@@ -19541,6 +20891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetRoutingSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
         { 
@@ -19626,6 +20977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns>SmsAddress</returns>
         
+        
         public SmsAddress GetRoutingSmsAddress (string addressId)
         {
              ApiResponse<SmsAddress> localVarResponse = GetRoutingSmsAddressWithHttpInfo(addressId);
@@ -19638,6 +20990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>ApiResponse of SmsAddress</returns>
+        
         
         public ApiResponse< SmsAddress > GetRoutingSmsAddressWithHttpInfo (string addressId)
         { 
@@ -19722,6 +21075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of SmsAddress</returns>
         
+        
         public async System.Threading.Tasks.Task<SmsAddress> GetRoutingSmsAddressAsync (string addressId)
         {
              ApiResponse<SmsAddress> localVarResponse = await GetRoutingSmsAddressAsyncWithHttpInfo(addressId);
@@ -19735,6 +21089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <returns>Task of ApiResponse (SmsAddress)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SmsAddress>> GetRoutingSmsAddressAsyncWithHttpInfo (string addressId)
         { 
@@ -19822,6 +21177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>SmsAddressEntityListing</returns>
         
+        
         public SmsAddressEntityListing GetRoutingSmsAddresses (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<SmsAddressEntityListing> localVarResponse = GetRoutingSmsAddressesWithHttpInfo(pageSize, pageNumber);
@@ -19835,6 +21191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of SmsAddressEntityListing</returns>
+        
         
         public ApiResponse< SmsAddressEntityListing > GetRoutingSmsAddressesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -19918,6 +21275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of SmsAddressEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SmsAddressEntityListing> GetRoutingSmsAddressesAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<SmsAddressEntityListing> localVarResponse = await GetRoutingSmsAddressesAsyncWithHttpInfo(pageSize, pageNumber);
@@ -19932,6 +21290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (SmsAddressEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SmsAddressEntityListing>> GetRoutingSmsAddressesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -20021,6 +21380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressRequirement">This indicates whether the phone number requires to have an Address registered. (optional)</param>
         /// <returns>SMSAvailablePhoneNumberEntityListing</returns>
         
+        
         public SMSAvailablePhoneNumberEntityListing GetRoutingSmsAvailablephonenumbers (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null)
         {
              ApiResponse<SMSAvailablePhoneNumberEntityListing> localVarResponse = GetRoutingSmsAvailablephonenumbersWithHttpInfo(countryCode, phoneNumberType, region, city, areaCode, pattern, addressRequirement);
@@ -20039,6 +21399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pattern">A pattern to match phone numbers. Valid characters are &#39;*&#39; and [0-9a-zA-Z]. The &#39;*&#39; character will match any single digit. (optional)</param>
         /// <param name="addressRequirement">This indicates whether the phone number requires to have an Address registered. (optional)</param>
         /// <returns>ApiResponse of SMSAvailablePhoneNumberEntityListing</returns>
+        
         
         public ApiResponse< SMSAvailablePhoneNumberEntityListing > GetRoutingSmsAvailablephonenumbersWithHttpInfo (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null)
         { 
@@ -20138,6 +21499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressRequirement">This indicates whether the phone number requires to have an Address registered. (optional)</param>
         /// <returns>Task of SMSAvailablePhoneNumberEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SMSAvailablePhoneNumberEntityListing> GetRoutingSmsAvailablephonenumbersAsync (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null)
         {
              ApiResponse<SMSAvailablePhoneNumberEntityListing> localVarResponse = await GetRoutingSmsAvailablephonenumbersAsyncWithHttpInfo(countryCode, phoneNumberType, region, city, areaCode, pattern, addressRequirement);
@@ -20157,6 +21519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pattern">A pattern to match phone numbers. Valid characters are &#39;*&#39; and [0-9a-zA-Z]. The &#39;*&#39; character will match any single digit. (optional)</param>
         /// <param name="addressRequirement">This indicates whether the phone number requires to have an Address registered. (optional)</param>
         /// <returns>Task of ApiResponse (SMSAvailablePhoneNumberEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SMSAvailablePhoneNumberEntityListing>> GetRoutingSmsAvailablephonenumbersAsyncWithHttpInfo (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null)
         { 
@@ -20254,6 +21617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>SmsPhoneNumber</returns>
         
+        
         public SmsPhoneNumber GetRoutingSmsPhonenumber (string addressId, string expand = null)
         {
              ApiResponse<SmsPhoneNumber> localVarResponse = GetRoutingSmsPhonenumberWithHttpInfo(addressId, expand);
@@ -20267,6 +21631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
         
         public ApiResponse< SmsPhoneNumber > GetRoutingSmsPhonenumberWithHttpInfo (string addressId, string expand = null)
         { 
@@ -20353,6 +21718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
+        
         public async System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string addressId, string expand = null)
         {
              ApiResponse<SmsPhoneNumber> localVarResponse = await GetRoutingSmsPhonenumberAsyncWithHttpInfo(addressId, expand);
@@ -20367,6 +21733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, string expand = null)
         { 
@@ -20463,6 +21830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>SmsPhoneNumberEntityListing</returns>
         
+        
         public SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
         {
              ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = GetRoutingSmsPhonenumbersWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId);
@@ -20484,6 +21852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
         /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumberEntityListing</returns>
+        
         
         public ApiResponse< SmsPhoneNumberEntityListing > GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
         { 
@@ -20583,6 +21952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>Task of SmsPhoneNumberEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
         {
              ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = await GetRoutingSmsPhonenumbersAsyncWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId);
@@ -20605,6 +21975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
         /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumberEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
         { 
@@ -20696,6 +22067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>AgentMaxUtilization</returns>
         
+        
         public AgentMaxUtilization GetRoutingUserUtilization (string userId)
         {
              ApiResponse<AgentMaxUtilization> localVarResponse = GetRoutingUserUtilizationWithHttpInfo(userId);
@@ -20708,6 +22080,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        
         
         public ApiResponse< AgentMaxUtilization > GetRoutingUserUtilizationWithHttpInfo (string userId)
         { 
@@ -20792,6 +22165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of AgentMaxUtilization</returns>
         
+        
         public async System.Threading.Tasks.Task<AgentMaxUtilization> GetRoutingUserUtilizationAsync (string userId)
         {
              ApiResponse<AgentMaxUtilization> localVarResponse = await GetRoutingUserUtilizationAsyncWithHttpInfo(userId);
@@ -20805,6 +22179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId)
         { 
@@ -20890,6 +22265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Utilization</returns>
         
+        
         public Utilization GetRoutingUtilization ()
         {
              ApiResponse<Utilization> localVarResponse = GetRoutingUtilizationWithHttpInfo();
@@ -20901,6 +22277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Utilization</returns>
+        
         
         public ApiResponse< Utilization > GetRoutingUtilizationWithHttpInfo ()
         { 
@@ -20980,6 +22357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Utilization</returns>
         
+        
         public async System.Threading.Tasks.Task<Utilization> GetRoutingUtilizationAsync ()
         {
              ApiResponse<Utilization> localVarResponse = await GetRoutingUtilizationAsyncWithHttpInfo();
@@ -20992,6 +22370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Utilization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Utilization>> GetRoutingUtilizationAsyncWithHttpInfo ()
         { 
@@ -21067,11 +22446,620 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get details about this utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        public UtilizationTag GetRoutingUtilizationTag (string tagId)
+        {
+             ApiResponse<UtilizationTag> localVarResponse = GetRoutingUtilizationTagWithHttpInfo(tagId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get details about this utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>ApiResponse of UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< UtilizationTag > GetRoutingUtilizationTagWithHttpInfo (string tagId)
+        { 
+            // verify the required parameter 'tagId' is set
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->GetRoutingUtilizationTag");
+
+            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTag: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationTag>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationTag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTag)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get details about this utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>Task of UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<UtilizationTag> GetRoutingUtilizationTagAsync (string tagId)
+        {
+             ApiResponse<UtilizationTag> localVarResponse = await GetRoutingUtilizationTagAsyncWithHttpInfo(tagId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get details about this utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>Task of ApiResponse (UtilizationTag)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationTag>> GetRoutingUtilizationTagAsyncWithHttpInfo (string tagId)
+        { 
+            // verify the required parameter 'tagId' is set
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->GetRoutingUtilizationTag");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTag: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationTag>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationTag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTag)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>List&lt;Object&gt;</returns>
+        
+        /// Preview Endpoint
+        public List<Object> GetRoutingUtilizationTagAgents (string tagId)
+        {
+             ApiResponse<List<Object>> localVarResponse = GetRoutingUtilizationTagAgentsWithHttpInfo(tagId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< List<Object> > GetRoutingUtilizationTagAgentsWithHttpInfo (string tagId)
+        { 
+            // verify the required parameter 'tagId' is set
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->GetRoutingUtilizationTagAgents");
+
+            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}/agents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTagAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTagAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Object>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<List<Object>> GetRoutingUtilizationTagAgentsAsync (string tagId)
+        {
+             ApiResponse<List<Object>> localVarResponse = await GetRoutingUtilizationTagAgentsAsyncWithHttpInfo(tagId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagId">Utilization Tag ID</param>
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetRoutingUtilizationTagAgentsAsyncWithHttpInfo (string tagId)
+        { 
+            // verify the required parameter 'tagId' is set
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->GetRoutingUtilizationTagAgents");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}/agents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTagAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTagAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Object>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get list of utilization tags 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
+        /// <returns>UtilizationTagEntityListing</returns>
+        
+        /// Preview Endpoint
+        public UtilizationTagEntityListing GetRoutingUtilizationTags (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        {
+             ApiResponse<UtilizationTagEntityListing> localVarResponse = GetRoutingUtilizationTagsWithHttpInfo(pageSize, pageNumber, sortOrder, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of utilization tags 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
+        /// <returns>ApiResponse of UtilizationTagEntityListing</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< UtilizationTagEntityListing > GetRoutingUtilizationTagsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/utilization/tags";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationTagEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationTagEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTagEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of utilization tags 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
+        /// <returns>Task of UtilizationTagEntityListing</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<UtilizationTagEntityListing> GetRoutingUtilizationTagsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        {
+             ApiResponse<UtilizationTagEntityListing> localVarResponse = await GetRoutingUtilizationTagsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of utilization tags 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
+        /// <returns>Task of ApiResponse (UtilizationTagEntityListing)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationTagEntityListing>> GetRoutingUtilizationTagsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/utilization/tags";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationTagEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationTagEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTagEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get details about this wrap-up code. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>WrapupCode</returns>
+        
         
         public WrapupCode GetRoutingWrapupcode (string codeId)
         {
@@ -21085,6 +23073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>ApiResponse of WrapupCode</returns>
+        
         
         public ApiResponse< WrapupCode > GetRoutingWrapupcodeWithHttpInfo (string codeId)
         { 
@@ -21169,6 +23158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of WrapupCode</returns>
         
+        
         public async System.Threading.Tasks.Task<WrapupCode> GetRoutingWrapupcodeAsync (string codeId)
         {
              ApiResponse<WrapupCode> localVarResponse = await GetRoutingWrapupcodeAsyncWithHttpInfo(codeId);
@@ -21182,6 +23172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetRoutingWrapupcodeAsyncWithHttpInfo (string codeId)
         { 
@@ -21274,6 +23265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>WrapupCodeEntityListing</returns>
         
+        
         public WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         {
              ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingWrapupcodesWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, id, name, divisionId);
@@ -21292,6 +23284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        
         
         public ApiResponse< WrapupCodeEntityListing > GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         { 
@@ -21385,6 +23378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         {
              ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingWrapupcodesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, id, name, divisionId);
@@ -21404,6 +23398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         { 
@@ -21496,6 +23491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         public UserQueueEntityListing GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = GetUserQueuesWithHttpInfo(userId, pageSize, pageNumber, joined, divisionId);
@@ -21512,6 +23508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        
         
         public ApiResponse< UserQueueEntityListing > GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         { 
@@ -21604,6 +23601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserQueueEntityListing> GetUserQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = await GetUserQueuesAsyncWithHttpInfo(userId, pageSize, pageNumber, joined, divisionId);
@@ -21621,6 +23619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         { 
@@ -21714,6 +23713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserLanguageEntityListing</returns>
         
+        
         public UserLanguageEntityListing GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<UserLanguageEntityListing> localVarResponse = GetUserRoutinglanguagesWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
@@ -21729,6 +23729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        
         
         public ApiResponse< UserLanguageEntityListing > GetUserRoutinglanguagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -21819,6 +23820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserLanguageEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserLanguageEntityListing> GetUserRoutinglanguagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<UserLanguageEntityListing> localVarResponse = await GetUserRoutinglanguagesAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
@@ -21835,6 +23837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> GetUserRoutinglanguagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -21927,6 +23930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserSkillEntityListing</returns>
         
+        
         public UserSkillEntityListing GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = GetUserRoutingskillsWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
@@ -21942,6 +23946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        
         
         public ApiResponse< UserSkillEntityListing > GetUserRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -22032,6 +24037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserSkillEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserSkillEntityListing> GetUserRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = await GetUserRoutingskillsAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
@@ -22048,6 +24054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -22140,6 +24147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>UserSkillGroupEntityListing</returns>
         
+        
         public UserSkillGroupEntityListing GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null)
         {
              ApiResponse<UserSkillGroupEntityListing> localVarResponse = GetUserSkillgroupsWithHttpInfo(userId, pageSize, after, before);
@@ -22155,6 +24163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next page (optional)</param>
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>ApiResponse of UserSkillGroupEntityListing</returns>
+        
         
         public ApiResponse< UserSkillGroupEntityListing > GetUserSkillgroupsWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null)
         { 
@@ -22245,6 +24254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>Task of UserSkillGroupEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserSkillGroupEntityListing> GetUserSkillgroupsAsync (string userId, int? pageSize = null, string after = null, string before = null)
         {
              ApiResponse<UserSkillGroupEntityListing> localVarResponse = await GetUserSkillgroupsAsyncWithHttpInfo(userId, pageSize, after, before);
@@ -22261,6 +24271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next page (optional)</param>
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>Task of ApiResponse (UserSkillGroupEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserSkillGroupEntityListing>> GetUserSkillgroupsAsyncWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null)
         { 
@@ -22351,6 +24362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Conversation Attributes</param>
         /// <returns>RoutingConversationAttributesResponse</returns>
         
+        
         public RoutingConversationAttributesResponse PatchRoutingConversation (string conversationId, RoutingConversationAttributesRequest body)
         {
              ApiResponse<RoutingConversationAttributesResponse> localVarResponse = PatchRoutingConversationWithHttpInfo(conversationId, body);
@@ -22364,6 +24376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">Conversation Attributes</param>
         /// <returns>ApiResponse of RoutingConversationAttributesResponse</returns>
+        
         
         public ApiResponse< RoutingConversationAttributesResponse > PatchRoutingConversationWithHttpInfo (string conversationId, RoutingConversationAttributesRequest body)
         { 
@@ -22458,6 +24471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Conversation Attributes</param>
         /// <returns>Task of RoutingConversationAttributesResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<RoutingConversationAttributesResponse> PatchRoutingConversationAsync (string conversationId, RoutingConversationAttributesRequest body)
         {
              ApiResponse<RoutingConversationAttributesResponse> localVarResponse = await PatchRoutingConversationAsyncWithHttpInfo(conversationId, body);
@@ -22472,6 +24486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">Conversation Attributes</param>
         /// <returns>Task of ApiResponse (RoutingConversationAttributesResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<RoutingConversationAttributesResponse>> PatchRoutingConversationAsyncWithHttpInfo (string conversationId, RoutingConversationAttributesRequest body)
         { 
@@ -22569,6 +24584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>InboundDomain</returns>
         
+        
         public InboundDomain PatchRoutingEmailDomain (string domainId, InboundDomainPatchRequest body)
         {
              ApiResponse<InboundDomain> localVarResponse = PatchRoutingEmailDomainWithHttpInfo(domainId, body);
@@ -22582,6 +24598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">Domain settings</param>
         /// <returns>ApiResponse of InboundDomain</returns>
+        
         
         public ApiResponse< InboundDomain > PatchRoutingEmailDomainWithHttpInfo (string domainId, InboundDomainPatchRequest body)
         { 
@@ -22676,6 +24693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>Task of InboundDomain</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundDomain> PatchRoutingEmailDomainAsync (string domainId, InboundDomainPatchRequest body)
         {
              ApiResponse<InboundDomain> localVarResponse = await PatchRoutingEmailDomainAsyncWithHttpInfo(domainId, body);
@@ -22690,6 +24708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">Domain settings</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body)
         { 
@@ -22787,6 +24806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>InboundDomain</returns>
         
+        
         public InboundDomain PatchRoutingEmailDomainValidate (string domainId, InboundDomainPatchRequest body)
         {
              ApiResponse<InboundDomain> localVarResponse = PatchRoutingEmailDomainValidateWithHttpInfo(domainId, body);
@@ -22800,6 +24820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">Domain settings</param>
         /// <returns>ApiResponse of InboundDomain</returns>
+        
         
         public ApiResponse< InboundDomain > PatchRoutingEmailDomainValidateWithHttpInfo (string domainId, InboundDomainPatchRequest body)
         { 
@@ -22894,6 +24915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain settings</param>
         /// <returns>Task of InboundDomain</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundDomain> PatchRoutingEmailDomainValidateAsync (string domainId, InboundDomainPatchRequest body)
         {
              ApiResponse<InboundDomain> localVarResponse = await PatchRoutingEmailDomainValidateAsyncWithHttpInfo(domainId, body);
@@ -22908,6 +24930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">Domain settings</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainValidateAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body)
         { 
@@ -23005,6 +25028,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Predictor</returns>
         
+        
         public Predictor PatchRoutingPredictor (string predictorId, PatchPredictorRequest body = null)
         {
              ApiResponse<Predictor> localVarResponse = PatchRoutingPredictorWithHttpInfo(predictorId, body);
@@ -23018,6 +25042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Predictor</returns>
+        
         
         public ApiResponse< Predictor > PatchRoutingPredictorWithHttpInfo (string predictorId, PatchPredictorRequest body = null)
         { 
@@ -23109,6 +25134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Predictor</returns>
         
+        
         public async System.Threading.Tasks.Task<Predictor> PatchRoutingPredictorAsync (string predictorId, PatchPredictorRequest body = null)
         {
              ApiResponse<Predictor> localVarResponse = await PatchRoutingPredictorAsyncWithHttpInfo(predictorId, body);
@@ -23123,6 +25149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Predictor)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Predictor>> PatchRoutingPredictorAsyncWithHttpInfo (string predictorId, PatchPredictorRequest body = null)
         { 
@@ -23217,6 +25244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns></returns>
         
+        
         public void PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
         {
              PatchRoutingQueueMemberWithHttpInfo(queueId, memberId, body);
@@ -23230,6 +25258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PatchRoutingQueueMemberWithHttpInfo (string queueId, string memberId, QueueMember body)
         { 
@@ -23329,6 +25358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PatchRoutingQueueMemberAsync (string queueId, string memberId, QueueMember body)
         {
              await PatchRoutingQueueMemberAsyncWithHttpInfo(queueId, memberId, body);
@@ -23343,6 +25373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueMemberAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
         { 
@@ -23445,6 +25476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>QueueMemberEntityListing</returns>
         
+        
         public QueueMemberEntityListing PatchRoutingQueueMembers (string queueId, List<QueueMember> body)
         {
              ApiResponse<QueueMemberEntityListing> localVarResponse = PatchRoutingQueueMembersWithHttpInfo(queueId, body);
@@ -23458,6 +25490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        
         
         public ApiResponse< QueueMemberEntityListing > PatchRoutingQueueMembersWithHttpInfo (string queueId, List<QueueMember> body)
         { 
@@ -23552,6 +25585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<QueueMemberEntityListing> PatchRoutingQueueMembersAsync (string queueId, List<QueueMember> body)
         {
              ApiResponse<QueueMemberEntityListing> localVarResponse = await PatchRoutingQueueMembersAsyncWithHttpInfo(queueId, body);
@@ -23566,6 +25600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchRoutingQueueMembersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
         { 
@@ -23664,6 +25699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns></returns>
         [Obsolete]
+        
         public void PatchRoutingQueueUser (string queueId, string memberId, QueueMember body)
         {
              PatchRoutingQueueUserWithHttpInfo(queueId, memberId, body);
@@ -23678,6 +25714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         public ApiResponse<Object> PatchRoutingQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body)
         { 
             // verify the required parameter 'queueId' is set
@@ -23776,6 +25813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task PatchRoutingQueueUserAsync (string queueId, string memberId, QueueMember body)
         {
              await PatchRoutingQueueUserAsyncWithHttpInfo(queueId, memberId, body);
@@ -23791,6 +25829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
         { 
             // verify the required parameter 'queueId' is set
@@ -23892,6 +25931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         public QueueMemberEntityListingV1 PatchRoutingQueueUsers (string queueId, List<QueueMember> body)
         {
              ApiResponse<QueueMemberEntityListingV1> localVarResponse = PatchRoutingQueueUsersWithHttpInfo(queueId, body);
@@ -23906,6 +25946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>ApiResponse of QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         public ApiResponse< QueueMemberEntityListingV1 > PatchRoutingQueueUsersWithHttpInfo (string queueId, List<QueueMember> body)
         { 
             // verify the required parameter 'queueId' is set
@@ -23999,6 +26040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>Task of QueueMemberEntityListingV1</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<QueueMemberEntityListingV1> PatchRoutingQueueUsersAsync (string queueId, List<QueueMember> body)
         {
              ApiResponse<QueueMemberEntityListingV1> localVarResponse = await PatchRoutingQueueUsersAsyncWithHttpInfo(queueId, body);
@@ -24014,6 +26056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListingV1)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListingV1>> PatchRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
         { 
             // verify the required parameter 'queueId' is set
@@ -24109,6 +26152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact Center Settings</param>
         /// <returns></returns>
         
+        
         public void PatchRoutingSettingsContactcenter (ContactCenterSettings body)
         {
              PatchRoutingSettingsContactcenterWithHttpInfo(body);
@@ -24120,6 +26164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact Center Settings</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PatchRoutingSettingsContactcenterWithHttpInfo (ContactCenterSettings body)
         { 
@@ -24209,6 +26254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact Center Settings</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PatchRoutingSettingsContactcenterAsync (ContactCenterSettings body)
         {
              await PatchRoutingSettingsContactcenterAsyncWithHttpInfo(body);
@@ -24221,6 +26267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact Center Settings</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingSettingsContactcenterAsyncWithHttpInfo (ContactCenterSettings body)
         { 
@@ -24313,6 +26360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Update skill groups</param>
         /// <returns>SkillGroup</returns>
         
+        
         public SkillGroup PatchRoutingSkillgroup (string skillGroupId, SkillGroup body)
         {
              ApiResponse<SkillGroup> localVarResponse = PatchRoutingSkillgroupWithHttpInfo(skillGroupId, body);
@@ -24326,6 +26374,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="body">Update skill groups</param>
         /// <returns>ApiResponse of SkillGroup</returns>
+        
         
         public ApiResponse< SkillGroup > PatchRoutingSkillgroupWithHttpInfo (string skillGroupId, SkillGroup body)
         { 
@@ -24420,6 +26469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Update skill groups</param>
         /// <returns>Task of SkillGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<SkillGroup> PatchRoutingSkillgroupAsync (string skillGroupId, SkillGroup body)
         {
              ApiResponse<SkillGroup> localVarResponse = await PatchRoutingSkillgroupAsyncWithHttpInfo(skillGroupId, body);
@@ -24434,6 +26484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="body">Update skill groups</param>
         /// <returns>Task of ApiResponse (SkillGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SkillGroup>> PatchRoutingSkillgroupAsyncWithHttpInfo (string skillGroupId, SkillGroup body)
         { 
@@ -24532,6 +26583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>UserQueue</returns>
         
+        
         public UserQueue PatchUserQueue (string queueId, string userId, UserQueue body)
         {
              ApiResponse<UserQueue> localVarResponse = PatchUserQueueWithHttpInfo(queueId, userId, body);
@@ -24546,6 +26598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of UserQueue</returns>
+        
         
         public ApiResponse< UserQueue > PatchUserQueueWithHttpInfo (string queueId, string userId, UserQueue body)
         { 
@@ -24645,6 +26698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of UserQueue</returns>
         
+        
         public async System.Threading.Tasks.Task<UserQueue> PatchUserQueueAsync (string queueId, string userId, UserQueue body)
         {
              ApiResponse<UserQueue> localVarResponse = await PatchUserQueueAsyncWithHttpInfo(queueId, userId, body);
@@ -24660,6 +26714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (UserQueue)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserQueueAsyncWithHttpInfo (string queueId, string userId, UserQueue body)
         { 
@@ -24763,6 +26818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         public UserQueueEntityListing PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = PatchUserQueuesWithHttpInfo(userId, body, divisionId);
@@ -24777,6 +26833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User Queues</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        
         
         public ApiResponse< UserQueueEntityListing > PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null)
         { 
@@ -24873,6 +26930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserQueuesAsync (string userId, List<UserQueue> body, List<string> divisionId = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = await PatchUserQueuesAsyncWithHttpInfo(userId, body, divisionId);
@@ -24888,6 +26946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User Queues</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null)
         { 
@@ -24987,6 +27046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserRoutingLanguage</returns>
         
+        
         public UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
         {
              ApiResponse<UserRoutingLanguage> localVarResponse = PatchUserRoutinglanguageWithHttpInfo(userId, languageId, body);
@@ -25001,6 +27061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        
         
         public ApiResponse< UserRoutingLanguage > PatchUserRoutinglanguageWithHttpInfo (string userId, string languageId, UserRoutingLanguage body)
         { 
@@ -25100,6 +27161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserRoutingLanguage</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body)
         {
              ApiResponse<UserRoutingLanguage> localVarResponse = await PatchUserRoutinglanguageAsyncWithHttpInfo(userId, languageId, body);
@@ -25115,6 +27177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PatchUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId, UserRoutingLanguage body)
         { 
@@ -25217,6 +27280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserLanguageEntityListing</returns>
         
+        
         public UserLanguageEntityListing PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body)
         {
              ApiResponse<UserLanguageEntityListing> localVarResponse = PatchUserRoutinglanguagesBulkWithHttpInfo(userId, body);
@@ -25230,6 +27294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        
         
         public ApiResponse< UserLanguageEntityListing > PatchUserRoutinglanguagesBulkWithHttpInfo (string userId, List<UserRoutingLanguagePost> body)
         { 
@@ -25324,6 +27389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserLanguageEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkAsync (string userId, List<UserRoutingLanguagePost> body)
         {
              ApiResponse<UserLanguageEntityListing> localVarResponse = await PatchUserRoutinglanguagesBulkAsyncWithHttpInfo(userId, body);
@@ -25338,6 +27404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> PatchUserRoutinglanguagesBulkAsyncWithHttpInfo (string userId, List<UserRoutingLanguagePost> body)
         { 
@@ -25435,6 +27502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserSkillEntityListing</returns>
         
+        
         public UserSkillEntityListing PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = PatchUserRoutingskillsBulkWithHttpInfo(userId, body);
@@ -25448,6 +27516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        
         
         public ApiResponse< UserSkillEntityListing > PatchUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
         { 
@@ -25542,6 +27611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserSkillEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserSkillEntityListing> PatchUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = await PatchUserRoutingskillsBulkAsyncWithHttpInfo(userId, body);
@@ -25556,6 +27626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PatchUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
         { 
@@ -25652,6 +27723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>QueueObservationQueryResponse</returns>
         
+        
         public QueueObservationQueryResponse PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body)
         {
              ApiResponse<QueueObservationQueryResponse> localVarResponse = PostAnalyticsQueuesObservationsQueryWithHttpInfo(body);
@@ -25664,6 +27736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of QueueObservationQueryResponse</returns>
+        
         
         public ApiResponse< QueueObservationQueryResponse > PostAnalyticsQueuesObservationsQueryWithHttpInfo (QueueObservationQuery body)
         { 
@@ -25753,6 +27826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of QueueObservationQueryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryAsync (QueueObservationQuery body)
         {
              ApiResponse<QueueObservationQueryResponse> localVarResponse = await PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo(body);
@@ -25766,6 +27840,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (QueueObservationQueryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueueObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (QueueObservationQuery body)
         { 
@@ -25851,11 +27926,233 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Query for user activity observations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>RoutingActivityResponse</returns>
+        
+        /// Preview Endpoint
+        public RoutingActivityResponse PostAnalyticsRoutingActivityQuery (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<RoutingActivityResponse> localVarResponse = PostAnalyticsRoutingActivityQueryWithHttpInfo(body, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for user activity observations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>ApiResponse of RoutingActivityResponse</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< RoutingActivityResponse > PostAnalyticsRoutingActivityQueryWithHttpInfo (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostAnalyticsRoutingActivityQuery");
+
+            var localVarPath = "/api/v2/analytics/routing/activity/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsRoutingActivityQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsRoutingActivityQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoutingActivityResponse>(localVarStatusCode,
+                localVarHeaders,
+                (RoutingActivityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingActivityResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query for user activity observations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>Task of RoutingActivityResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<RoutingActivityResponse> PostAnalyticsRoutingActivityQueryAsync (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<RoutingActivityResponse> localVarResponse = await PostAnalyticsRoutingActivityQueryAsyncWithHttpInfo(body, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for user activity observations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>Task of ApiResponse (RoutingActivityResponse)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<RoutingActivityResponse>> PostAnalyticsRoutingActivityQueryAsyncWithHttpInfo (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostAnalyticsRoutingActivityQuery");
+            
+
+            var localVarPath = "/api/v2/analytics/routing/activity/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsRoutingActivityQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsRoutingActivityQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoutingActivityResponse>(localVarStatusCode,
+                localVarHeaders,
+                (RoutingActivityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingActivityResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a benefit assessment. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>BenefitAssessment</returns>
+        
         
         public BenefitAssessment PostRoutingAssessments (CreateBenefitAssessmentRequest body = null)
         {
@@ -25869,6 +28166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of BenefitAssessment</returns>
+        
         
         public ApiResponse< BenefitAssessment > PostRoutingAssessmentsWithHttpInfo (CreateBenefitAssessmentRequest body = null)
         { 
@@ -25955,6 +28253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of BenefitAssessment</returns>
         
+        
         public async System.Threading.Tasks.Task<BenefitAssessment> PostRoutingAssessmentsAsync (CreateBenefitAssessmentRequest body = null)
         {
              ApiResponse<BenefitAssessment> localVarResponse = await PostRoutingAssessmentsAsyncWithHttpInfo(body);
@@ -25968,6 +28267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (BenefitAssessment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BenefitAssessment>> PostRoutingAssessmentsAsyncWithHttpInfo (CreateBenefitAssessmentRequest body = null)
         { 
@@ -26055,6 +28355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>BenefitAssessmentJob</returns>
         
+        
         public BenefitAssessmentJob PostRoutingAssessmentsJobs (CreateBenefitAssessmentJobRequest body = null)
         {
              ApiResponse<BenefitAssessmentJob> localVarResponse = PostRoutingAssessmentsJobsWithHttpInfo(body);
@@ -26067,6 +28368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of BenefitAssessmentJob</returns>
+        
         
         public ApiResponse< BenefitAssessmentJob > PostRoutingAssessmentsJobsWithHttpInfo (CreateBenefitAssessmentJobRequest body = null)
         { 
@@ -26153,6 +28455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of BenefitAssessmentJob</returns>
         
+        
         public async System.Threading.Tasks.Task<BenefitAssessmentJob> PostRoutingAssessmentsJobsAsync (CreateBenefitAssessmentJobRequest body = null)
         {
              ApiResponse<BenefitAssessmentJob> localVarResponse = await PostRoutingAssessmentsJobsAsyncWithHttpInfo(body);
@@ -26166,6 +28469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (BenefitAssessmentJob)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> PostRoutingAssessmentsJobsAsyncWithHttpInfo (CreateBenefitAssessmentJobRequest body = null)
         { 
@@ -26254,6 +28558,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
         
+        
         public InboundRoute PostRoutingEmailDomainRoutes (string domainName, InboundRoute body)
         {
              ApiResponse<InboundRoute> localVarResponse = PostRoutingEmailDomainRoutesWithHttpInfo(domainName, body);
@@ -26267,6 +28572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
+        
         
         public ApiResponse< InboundRoute > PostRoutingEmailDomainRoutesWithHttpInfo (string domainName, InboundRoute body)
         { 
@@ -26361,6 +28667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundRoute> PostRoutingEmailDomainRoutesAsync (string domainName, InboundRoute body)
         {
              ApiResponse<InboundRoute> localVarResponse = await PostRoutingEmailDomainRoutesAsyncWithHttpInfo(domainName, body);
@@ -26375,6 +28682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostRoutingEmailDomainRoutesAsyncWithHttpInfo (string domainName, InboundRoute body)
         { 
@@ -26472,6 +28780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TestMessage (optional)</param>
         /// <returns>TestMessage</returns>
         
+        
         public TestMessage PostRoutingEmailDomainTestconnection (string domainId, TestMessage body = null)
         {
              ApiResponse<TestMessage> localVarResponse = PostRoutingEmailDomainTestconnectionWithHttpInfo(domainId, body);
@@ -26485,6 +28794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">TestMessage (optional)</param>
         /// <returns>ApiResponse of TestMessage</returns>
+        
         
         public ApiResponse< TestMessage > PostRoutingEmailDomainTestconnectionWithHttpInfo (string domainId, TestMessage body = null)
         { 
@@ -26576,6 +28886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TestMessage (optional)</param>
         /// <returns>Task of TestMessage</returns>
         
+        
         public async System.Threading.Tasks.Task<TestMessage> PostRoutingEmailDomainTestconnectionAsync (string domainId, TestMessage body = null)
         {
              ApiResponse<TestMessage> localVarResponse = await PostRoutingEmailDomainTestconnectionAsyncWithHttpInfo(domainId, body);
@@ -26590,6 +28901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <param name="body">TestMessage (optional)</param>
         /// <returns>Task of ApiResponse (TestMessage)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TestMessage>> PostRoutingEmailDomainTestconnectionAsyncWithHttpInfo (string domainId, TestMessage body = null)
         { 
@@ -26682,6 +28994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>InboundDomain</returns>
         
+        
         public InboundDomain PostRoutingEmailDomains (InboundDomain body)
         {
              ApiResponse<InboundDomain> localVarResponse = PostRoutingEmailDomainsWithHttpInfo(body);
@@ -26694,6 +29007,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of InboundDomain</returns>
+        
         
         public ApiResponse< InboundDomain > PostRoutingEmailDomainsWithHttpInfo (InboundDomain body)
         { 
@@ -26783,6 +29097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of InboundDomain</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundDomain> PostRoutingEmailDomainsAsync (InboundDomain body)
         {
              ApiResponse<InboundDomain> localVarResponse = await PostRoutingEmailDomainsAsyncWithHttpInfo(body);
@@ -26796,6 +29111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PostRoutingEmailDomainsAsyncWithHttpInfo (InboundDomain body)
         { 
@@ -26887,6 +29203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
+        
         public EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomain body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = PostRoutingEmailOutboundDomainsWithHttpInfo(body);
@@ -26899,6 +29216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
+        
         
         public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomain body)
         { 
@@ -26988,6 +29306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
+        
         public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomain body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = await PostRoutingEmailOutboundDomainsAsyncWithHttpInfo(body);
@@ -27001,6 +29320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomain body)
         { 
@@ -27092,6 +29412,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
+        
         public EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomain body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo(body);
@@ -27104,6 +29425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
+        
         
         public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomain body)
         { 
@@ -27193,6 +29515,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
+        
         public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomain body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = await PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo(body);
@@ -27206,6 +29529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomain body)
         { 
@@ -27297,6 +29621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Language</returns>
         
+        
         public Language PostRoutingLanguages (Language body)
         {
              ApiResponse<Language> localVarResponse = PostRoutingLanguagesWithHttpInfo(body);
@@ -27309,6 +29634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
+        
         
         public ApiResponse< Language > PostRoutingLanguagesWithHttpInfo (Language body)
         { 
@@ -27398,6 +29724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of Language</returns>
         
+        
         public async System.Threading.Tasks.Task<Language> PostRoutingLanguagesAsync (Language body)
         {
              ApiResponse<Language> localVarResponse = await PostRoutingLanguagesAsyncWithHttpInfo(body);
@@ -27411,6 +29738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Language>> PostRoutingLanguagesAsyncWithHttpInfo (Language body)
         { 
@@ -27502,6 +29830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Predictor</returns>
         
+        
         public Predictor PostRoutingPredictors (CreatePredictorRequest body = null)
         {
              ApiResponse<Predictor> localVarResponse = PostRoutingPredictorsWithHttpInfo(body);
@@ -27514,6 +29843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Predictor</returns>
+        
         
         public ApiResponse< Predictor > PostRoutingPredictorsWithHttpInfo (CreatePredictorRequest body = null)
         { 
@@ -27600,6 +29930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Predictor</returns>
         
+        
         public async System.Threading.Tasks.Task<Predictor> PostRoutingPredictorsAsync (CreatePredictorRequest body = null)
         {
              ApiResponse<Predictor> localVarResponse = await PostRoutingPredictorsAsyncWithHttpInfo(body);
@@ -27613,6 +29944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Predictor)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Predictor>> PostRoutingPredictorsAsyncWithHttpInfo (CreatePredictorRequest body = null)
         { 
@@ -27702,6 +30034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns></returns>
         
+        
         public void PostRoutingQueueMembers (string queueId, List<WritableEntity> body, bool? delete = null)
         {
              PostRoutingQueueMembersWithHttpInfo(queueId, body, delete);
@@ -27715,6 +30048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostRoutingQueueMembersWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null)
         { 
@@ -27811,6 +30145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostRoutingQueueMembersAsync (string queueId, List<WritableEntity> body, bool? delete = null)
         {
              await PostRoutingQueueMembersAsyncWithHttpInfo(queueId, body, delete);
@@ -27825,6 +30160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostRoutingQueueMembersAsyncWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null)
         { 
@@ -27924,6 +30260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns></returns>
         [Obsolete]
+        
         public void PostRoutingQueueUsers (string queueId, List<WritableEntity> body, bool? delete = null)
         {
              PostRoutingQueueUsersWithHttpInfo(queueId, body, delete);
@@ -27938,6 +30275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         public ApiResponse<Object> PostRoutingQueueUsersWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null)
         { 
             // verify the required parameter 'queueId' is set
@@ -28033,6 +30371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task PostRoutingQueueUsersAsync (string queueId, List<WritableEntity> body, bool? delete = null)
         {
              await PostRoutingQueueUsersAsyncWithHttpInfo(queueId, body, delete);
@@ -28048,6 +30387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<WritableEntity> body, bool? delete = null)
         { 
             // verify the required parameter 'queueId' is set
@@ -28145,6 +30485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of wrapup codes</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
         
+        
         public List<WrapupCode> PostRoutingQueueWrapupcodes (string queueId, List<WrapUpCodeReference> body)
         {
              ApiResponse<List<WrapupCode>> localVarResponse = PostRoutingQueueWrapupcodesWithHttpInfo(queueId, body);
@@ -28158,6 +30499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        
         
         public ApiResponse< List<WrapupCode> > PostRoutingQueueWrapupcodesWithHttpInfo (string queueId, List<WrapUpCodeReference> body)
         { 
@@ -28252,6 +30594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<WrapupCode>> PostRoutingQueueWrapupcodesAsync (string queueId, List<WrapUpCodeReference> body)
         {
              ApiResponse<List<WrapupCode>> localVarResponse = await PostRoutingQueueWrapupcodesAsyncWithHttpInfo(queueId, body);
@@ -28266,6 +30609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, List<WrapUpCodeReference> body)
         { 
@@ -28362,6 +30706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
         
+        
         public Queue PostRoutingQueues (CreateQueueRequest body)
         {
              ApiResponse<Queue> localVarResponse = PostRoutingQueuesWithHttpInfo(body);
@@ -28374,6 +30719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
+        
         
         public ApiResponse< Queue > PostRoutingQueuesWithHttpInfo (CreateQueueRequest body)
         { 
@@ -28463,6 +30809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
         
+        
         public async System.Threading.Tasks.Task<Queue> PostRoutingQueuesAsync (CreateQueueRequest body)
         {
              ApiResponse<Queue> localVarResponse = await PostRoutingQueuesAsyncWithHttpInfo(body);
@@ -28476,6 +30823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Queue>> PostRoutingQueuesAsyncWithHttpInfo (CreateQueueRequest body)
         { 
@@ -28568,6 +30916,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
         
+        
         public void PostRoutingSkillgroupMembersDivisions (string skillGroupId, SkillGroupMemberDivisions body = null)
         {
              PostRoutingSkillgroupMembersDivisionsWithHttpInfo(skillGroupId, body);
@@ -28580,6 +30929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostRoutingSkillgroupMembersDivisionsWithHttpInfo (string skillGroupId, SkillGroupMemberDivisions body = null)
         { 
@@ -28671,6 +31021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostRoutingSkillgroupMembersDivisionsAsync (string skillGroupId, SkillGroupMemberDivisions body = null)
         {
              await PostRoutingSkillgroupMembersDivisionsAsyncWithHttpInfo(skillGroupId, body);
@@ -28684,6 +31035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillGroupId">Skill Group ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostRoutingSkillgroupMembersDivisionsAsyncWithHttpInfo (string skillGroupId, SkillGroupMemberDivisions body = null)
         { 
@@ -28776,6 +31128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Create skill group</param>
         /// <returns>SkillGroup</returns>
         
+        
         public SkillGroup PostRoutingSkillgroups (SkillGroup body)
         {
              ApiResponse<SkillGroup> localVarResponse = PostRoutingSkillgroupsWithHttpInfo(body);
@@ -28788,6 +31141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
         /// <returns>ApiResponse of SkillGroup</returns>
+        
         
         public ApiResponse< SkillGroup > PostRoutingSkillgroupsWithHttpInfo (SkillGroup body)
         { 
@@ -28877,6 +31231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Create skill group</param>
         /// <returns>Task of SkillGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<SkillGroup> PostRoutingSkillgroupsAsync (SkillGroup body)
         {
              ApiResponse<SkillGroup> localVarResponse = await PostRoutingSkillgroupsAsyncWithHttpInfo(body);
@@ -28890,6 +31245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
         /// <returns>Task of ApiResponse (SkillGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SkillGroup>> PostRoutingSkillgroupsAsyncWithHttpInfo (SkillGroup body)
         { 
@@ -28981,6 +31337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>RoutingSkill</returns>
         
+        
         public RoutingSkill PostRoutingSkills (RoutingSkill body)
         {
              ApiResponse<RoutingSkill> localVarResponse = PostRoutingSkillsWithHttpInfo(body);
@@ -28993,6 +31350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of RoutingSkill</returns>
+        
         
         public ApiResponse< RoutingSkill > PostRoutingSkillsWithHttpInfo (RoutingSkill body)
         { 
@@ -29082,6 +31440,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of RoutingSkill</returns>
         
+        
         public async System.Threading.Tasks.Task<RoutingSkill> PostRoutingSkillsAsync (RoutingSkill body)
         {
              ApiResponse<RoutingSkill> localVarResponse = await PostRoutingSkillsAsyncWithHttpInfo(body);
@@ -29095,6 +31454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PostRoutingSkillsAsyncWithHttpInfo (RoutingSkill body)
         { 
@@ -29186,6 +31546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsAddress</param>
         /// <returns>SmsAddress</returns>
         
+        
         public SmsAddress PostRoutingSmsAddresses (SmsAddressProvision body)
         {
              ApiResponse<SmsAddress> localVarResponse = PostRoutingSmsAddressesWithHttpInfo(body);
@@ -29198,6 +31559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
         /// <returns>ApiResponse of SmsAddress</returns>
+        
         
         public ApiResponse< SmsAddress > PostRoutingSmsAddressesWithHttpInfo (SmsAddressProvision body)
         { 
@@ -29287,6 +31649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsAddress</param>
         /// <returns>Task of SmsAddress</returns>
         
+        
         public async System.Threading.Tasks.Task<SmsAddress> PostRoutingSmsAddressesAsync (SmsAddressProvision body)
         {
              ApiResponse<SmsAddress> localVarResponse = await PostRoutingSmsAddressesAsyncWithHttpInfo(body);
@@ -29300,6 +31663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsAddress</param>
         /// <returns>Task of ApiResponse (SmsAddress)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SmsAddress>> PostRoutingSmsAddressesAsyncWithHttpInfo (SmsAddressProvision body)
         { 
@@ -29391,6 +31755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>SmsPhoneNumber</returns>
         
+        
         public SmsPhoneNumber PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body)
         {
              ApiResponse<SmsPhoneNumber> localVarResponse = PostRoutingSmsPhonenumbersWithHttpInfo(body);
@@ -29403,6 +31768,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
         
         public ApiResponse< SmsPhoneNumber > PostRoutingSmsPhonenumbersWithHttpInfo (SmsPhoneNumberProvision body)
         { 
@@ -29492,6 +31858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
+        
         public async System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersAsync (SmsPhoneNumberProvision body)
         {
              ApiResponse<SmsPhoneNumber> localVarResponse = await PostRoutingSmsPhonenumbersAsyncWithHttpInfo(body);
@@ -29505,6 +31872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAsyncWithHttpInfo (SmsPhoneNumberProvision body)
         { 
@@ -29590,11 +31958,430 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Imports a phone number for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>SmsPhoneNumber</returns>
+        
+        /// Preview Endpoint
+        public SmsPhoneNumber PostRoutingSmsPhonenumbersImport (SmsPhoneNumberImport body)
+        {
+             ApiResponse<SmsPhoneNumber> localVarResponse = PostRoutingSmsPhonenumbersImportWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Imports a phone number for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< SmsPhoneNumber > PostRoutingSmsPhonenumbersImportWithHttpInfo (SmsPhoneNumberImport body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingSmsPhonenumbersImport");
+
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/import";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbersImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbersImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
+                localVarHeaders,
+                (SmsPhoneNumber) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsPhoneNumber)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Imports a phone number for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>Task of SmsPhoneNumber</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersImportAsync (SmsPhoneNumberImport body)
+        {
+             ApiResponse<SmsPhoneNumber> localVarResponse = await PostRoutingSmsPhonenumbersImportAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Imports a phone number for SMS 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersImportAsyncWithHttpInfo (SmsPhoneNumberImport body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingSmsPhonenumbersImport");
+            
+
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/import";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbersImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbersImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
+                localVarHeaders,
+                (SmsPhoneNumber) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsPhoneNumber)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create an utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationTag</param>
+        /// <returns>UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        public UtilizationTag PostRoutingUtilizationTags (CreateUtilizationTagRequest body)
+        {
+             ApiResponse<UtilizationTag> localVarResponse = PostRoutingUtilizationTagsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationTag</param>
+        /// <returns>ApiResponse of UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< UtilizationTag > PostRoutingUtilizationTagsWithHttpInfo (CreateUtilizationTagRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingUtilizationTags");
+
+            var localVarPath = "/api/v2/routing/utilization/tags";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationTag>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationTag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTag)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationTag</param>
+        /// <returns>Task of UtilizationTag</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<UtilizationTag> PostRoutingUtilizationTagsAsync (CreateUtilizationTagRequest body)
+        {
+             ApiResponse<UtilizationTag> localVarResponse = await PostRoutingUtilizationTagsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an utilization tag 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationTag</param>
+        /// <returns>Task of ApiResponse (UtilizationTag)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationTag>> PostRoutingUtilizationTagsAsyncWithHttpInfo (CreateUtilizationTagRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingUtilizationTags");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/tags";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationTag>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationTag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTag)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a wrap-up code 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WrapupCode</param>
         /// <returns>WrapupCode</returns>
+        
         
         public WrapupCode PostRoutingWrapupcodes (WrapupCodeRequest body)
         {
@@ -29608,6 +32395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WrapupCode</param>
         /// <returns>ApiResponse of WrapupCode</returns>
+        
         
         public ApiResponse< WrapupCode > PostRoutingWrapupcodesWithHttpInfo (WrapupCodeRequest body)
         { 
@@ -29697,6 +32485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of WrapupCode</returns>
         
+        
         public async System.Threading.Tasks.Task<WrapupCode> PostRoutingWrapupcodesAsync (WrapupCodeRequest body)
         {
              ApiResponse<WrapupCode> localVarResponse = await PostRoutingWrapupcodesAsyncWithHttpInfo(body);
@@ -29710,6 +32499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PostRoutingWrapupcodesAsyncWithHttpInfo (WrapupCodeRequest body)
         { 
@@ -29802,6 +32592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserRoutingLanguage</returns>
         
+        
         public UserRoutingLanguage PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
         {
              ApiResponse<UserRoutingLanguage> localVarResponse = PostUserRoutinglanguagesWithHttpInfo(userId, body);
@@ -29815,6 +32606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        
         
         public ApiResponse< UserRoutingLanguage > PostUserRoutinglanguagesWithHttpInfo (string userId, UserRoutingLanguagePost body)
         { 
@@ -29909,6 +32701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserRoutingLanguage</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRoutingLanguage> PostUserRoutinglanguagesAsync (string userId, UserRoutingLanguagePost body)
         {
              ApiResponse<UserRoutingLanguage> localVarResponse = await PostUserRoutinglanguagesAsyncWithHttpInfo(userId, body);
@@ -29923,6 +32716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PostUserRoutinglanguagesAsyncWithHttpInfo (string userId, UserRoutingLanguagePost body)
         { 
@@ -30020,6 +32814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         
+        
         public UserRoutingSkill PostUserRoutingskills (string userId, UserRoutingSkillPost body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = PostUserRoutingskillsWithHttpInfo(userId, body);
@@ -30033,6 +32828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
+        
         
         public ApiResponse< UserRoutingSkill > PostUserRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body)
         { 
@@ -30127,6 +32923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserRoutingskillsAsync (string userId, UserRoutingSkillPost body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = await PostUserRoutingskillsAsyncWithHttpInfo(userId, body);
@@ -30141,6 +32938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body)
         { 
@@ -30239,6 +33037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
         
+        
         public InboundRoute PutRoutingEmailDomainRoute (string domainName, string routeId, InboundRoute body)
         {
              ApiResponse<InboundRoute> localVarResponse = PutRoutingEmailDomainRouteWithHttpInfo(domainName, routeId, body);
@@ -30253,6 +33052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
+        
         
         public ApiResponse< InboundRoute > PutRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId, InboundRoute body)
         { 
@@ -30352,6 +33152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
         
+        
         public async System.Threading.Tasks.Task<InboundRoute> PutRoutingEmailDomainRouteAsync (string domainName, string routeId, InboundRoute body)
         {
              ApiResponse<InboundRoute> localVarResponse = await PutRoutingEmailDomainRouteAsyncWithHttpInfo(domainName, routeId, body);
@@ -30367,6 +33168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body)
         { 
@@ -30468,6 +33270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
+        
         public EmailOutboundDomainResult PutRoutingEmailOutboundDomainActivation (string domainId)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = PutRoutingEmailOutboundDomainActivationWithHttpInfo(domainId);
@@ -30480,6 +33283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
+        
         
         public ApiResponse< EmailOutboundDomainResult > PutRoutingEmailOutboundDomainActivationWithHttpInfo (string domainId)
         { 
@@ -30564,6 +33368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
+        
         public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PutRoutingEmailOutboundDomainActivationAsync (string domainId)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = await PutRoutingEmailOutboundDomainActivationAsyncWithHttpInfo(domainId);
@@ -30577,6 +33382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PutRoutingEmailOutboundDomainActivationAsyncWithHttpInfo (string domainId)
         { 
@@ -30664,6 +33470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Recipient</returns>
         
+        
         public Recipient PutRoutingMessageRecipient (string recipientId, Recipient body)
         {
              ApiResponse<Recipient> localVarResponse = PutRoutingMessageRecipientWithHttpInfo(recipientId, body);
@@ -30677,6 +33484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recipientId">Recipient ID</param>
         /// <param name="body">Recipient</param>
         /// <returns>ApiResponse of Recipient</returns>
+        
         
         public ApiResponse< Recipient > PutRoutingMessageRecipientWithHttpInfo (string recipientId, Recipient body)
         { 
@@ -30771,6 +33579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Task of Recipient</returns>
         
+        
         public async System.Threading.Tasks.Task<Recipient> PutRoutingMessageRecipientAsync (string recipientId, Recipient body)
         {
              ApiResponse<Recipient> localVarResponse = await PutRoutingMessageRecipientAsyncWithHttpInfo(recipientId, body);
@@ -30785,6 +33594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recipientId">Recipient ID</param>
         /// <param name="body">Recipient</param>
         /// <returns>Task of ApiResponse (Recipient)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Recipient>> PutRoutingMessageRecipientAsyncWithHttpInfo (string recipientId, Recipient body)
         { 
@@ -30882,6 +33692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
         
+        
         public Queue PutRoutingQueue (string queueId, QueueRequest body)
         {
              ApiResponse<Queue> localVarResponse = PutRoutingQueueWithHttpInfo(queueId, body);
@@ -30895,6 +33706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
+        
         
         public ApiResponse< Queue > PutRoutingQueueWithHttpInfo (string queueId, QueueRequest body)
         { 
@@ -30989,6 +33801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
         
+        
         public async System.Threading.Tasks.Task<Queue> PutRoutingQueueAsync (string queueId, QueueRequest body)
         {
              ApiResponse<Queue> localVarResponse = await PutRoutingQueueAsyncWithHttpInfo(queueId, body);
@@ -31003,6 +33816,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Queue>> PutRoutingQueueAsyncWithHttpInfo (string queueId, QueueRequest body)
         { 
@@ -31099,6 +33913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization Settings</param>
         /// <returns>RoutingSettings</returns>
         
+        
         public RoutingSettings PutRoutingSettings (RoutingSettings body)
         {
              ApiResponse<RoutingSettings> localVarResponse = PutRoutingSettingsWithHttpInfo(body);
@@ -31111,6 +33926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization Settings</param>
         /// <returns>ApiResponse of RoutingSettings</returns>
+        
         
         public ApiResponse< RoutingSettings > PutRoutingSettingsWithHttpInfo (RoutingSettings body)
         { 
@@ -31200,6 +34016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization Settings</param>
         /// <returns>Task of RoutingSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<RoutingSettings> PutRoutingSettingsAsync (RoutingSettings body)
         {
              ApiResponse<RoutingSettings> localVarResponse = await PutRoutingSettingsAsyncWithHttpInfo(body);
@@ -31213,6 +34030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization Settings</param>
         /// <returns>Task of ApiResponse (RoutingSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<RoutingSettings>> PutRoutingSettingsAsyncWithHttpInfo (RoutingSettings body)
         { 
@@ -31304,6 +34122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization Settings</param>
         /// <returns>TranscriptionSettings</returns>
         
+        
         public TranscriptionSettings PutRoutingSettingsTranscription (TranscriptionSettings body)
         {
              ApiResponse<TranscriptionSettings> localVarResponse = PutRoutingSettingsTranscriptionWithHttpInfo(body);
@@ -31316,6 +34135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization Settings</param>
         /// <returns>ApiResponse of TranscriptionSettings</returns>
+        
         
         public ApiResponse< TranscriptionSettings > PutRoutingSettingsTranscriptionWithHttpInfo (TranscriptionSettings body)
         { 
@@ -31405,6 +34225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization Settings</param>
         /// <returns>Task of TranscriptionSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<TranscriptionSettings> PutRoutingSettingsTranscriptionAsync (TranscriptionSettings body)
         {
              ApiResponse<TranscriptionSettings> localVarResponse = await PutRoutingSettingsTranscriptionAsyncWithHttpInfo(body);
@@ -31418,6 +34239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization Settings</param>
         /// <returns>Task of ApiResponse (TranscriptionSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TranscriptionSettings>> PutRoutingSettingsTranscriptionAsyncWithHttpInfo (TranscriptionSettings body)
         { 
@@ -31510,6 +34332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>SmsPhoneNumber</returns>
         
+        
         public SmsPhoneNumber PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body)
         {
              ApiResponse<SmsPhoneNumber> localVarResponse = PutRoutingSmsPhonenumberWithHttpInfo(addressId, body);
@@ -31523,6 +34346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
         
         public ApiResponse< SmsPhoneNumber > PutRoutingSmsPhonenumberWithHttpInfo (string addressId, SmsPhoneNumber body)
         { 
@@ -31617,6 +34441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of SmsPhoneNumber</returns>
         
+        
         public async System.Threading.Tasks.Task<SmsPhoneNumber> PutRoutingSmsPhonenumberAsync (string addressId, SmsPhoneNumber body)
         {
              ApiResponse<SmsPhoneNumber> localVarResponse = await PutRoutingSmsPhonenumberAsyncWithHttpInfo(addressId, body);
@@ -31631,6 +34456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="addressId">Address ID</param>
         /// <param name="body">SmsPhoneNumber</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PutRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, SmsPhoneNumber body)
         { 
@@ -31728,6 +34554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>AgentMaxUtilization</returns>
         
+        
         public AgentMaxUtilization PutRoutingUserUtilization (string userId, Utilization body)
         {
              ApiResponse<AgentMaxUtilization> localVarResponse = PutRoutingUserUtilizationWithHttpInfo(userId, body);
@@ -31741,6 +34568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
         /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        
         
         public ApiResponse< AgentMaxUtilization > PutRoutingUserUtilizationWithHttpInfo (string userId, Utilization body)
         { 
@@ -31835,6 +34663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Task of AgentMaxUtilization</returns>
         
+        
         public async System.Threading.Tasks.Task<AgentMaxUtilization> PutRoutingUserUtilizationAsync (string userId, Utilization body)
         {
              ApiResponse<AgentMaxUtilization> localVarResponse = await PutRoutingUserUtilizationAsyncWithHttpInfo(userId, body);
@@ -31849,6 +34678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
         /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, Utilization body)
         { 
@@ -31945,6 +34775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Utilization</returns>
         
+        
         public Utilization PutRoutingUtilization (Utilization body)
         {
              ApiResponse<Utilization> localVarResponse = PutRoutingUtilizationWithHttpInfo(body);
@@ -31957,6 +34788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
         /// <returns>ApiResponse of Utilization</returns>
+        
         
         public ApiResponse< Utilization > PutRoutingUtilizationWithHttpInfo (Utilization body)
         { 
@@ -32046,6 +34878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Task of Utilization</returns>
         
+        
         public async System.Threading.Tasks.Task<Utilization> PutRoutingUtilizationAsync (Utilization body)
         {
              ApiResponse<Utilization> localVarResponse = await PutRoutingUtilizationAsyncWithHttpInfo(body);
@@ -32059,6 +34892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
         /// <returns>Task of ApiResponse (Utilization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Utilization>> PutRoutingUtilizationAsyncWithHttpInfo (Utilization body)
         { 
@@ -32151,6 +34985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">WrapupCode</param>
         /// <returns>WrapupCode</returns>
         
+        
         public WrapupCode PutRoutingWrapupcode (string codeId, WrapupCodeRequest body)
         {
              ApiResponse<WrapupCode> localVarResponse = PutRoutingWrapupcodeWithHttpInfo(codeId, body);
@@ -32164,6 +34999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>ApiResponse of WrapupCode</returns>
+        
         
         public ApiResponse< WrapupCode > PutRoutingWrapupcodeWithHttpInfo (string codeId, WrapupCodeRequest body)
         { 
@@ -32258,6 +35094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of WrapupCode</returns>
         
+        
         public async System.Threading.Tasks.Task<WrapupCode> PutRoutingWrapupcodeAsync (string codeId, WrapupCodeRequest body)
         {
              ApiResponse<WrapupCode> localVarResponse = await PutRoutingWrapupcodeAsyncWithHttpInfo(codeId, body);
@@ -32272,6 +35109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PutRoutingWrapupcodeAsyncWithHttpInfo (string codeId, WrapupCodeRequest body)
         { 
@@ -32370,6 +35208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         
+        
         public UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = PutUserRoutingskillWithHttpInfo(userId, skillId, body);
@@ -32384,6 +35223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
+        
         
         public ApiResponse< UserRoutingSkill > PutUserRoutingskillWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
         { 
@@ -32483,6 +35323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = await PutUserRoutingskillAsyncWithHttpInfo(userId, skillId, body);
@@ -32498,6 +35339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserRoutingskillAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
         { 
@@ -32600,6 +35442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserSkillEntityListing</returns>
         
+        
         public UserSkillEntityListing PutUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = PutUserRoutingskillsBulkWithHttpInfo(userId, body);
@@ -32613,6 +35456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        
         
         public ApiResponse< UserSkillEntityListing > PutUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
         { 
@@ -32707,6 +35551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserSkillEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserSkillEntityListing> PutUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = await PutUserRoutingskillsBulkAsyncWithHttpInfo(userId, body);
@@ -32721,6 +35566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PutUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
         { 

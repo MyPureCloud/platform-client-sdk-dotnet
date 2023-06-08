@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns></returns>
         
+        
         void DeleteFaxDocument (string documentId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteFaxDocumentWithHttpInfo (string documentId);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>FaxDocument</returns>
         
+        
         FaxDocument GetFaxDocument (string documentId);
 
         /// <summary>
@@ -61,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of FaxDocument</returns>
+        
         
         ApiResponse<FaxDocument> GetFaxDocumentWithHttpInfo (string documentId);
 
@@ -74,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>DownloadResponse</returns>
         
+        
         DownloadResponse GetFaxDocumentContent (string documentId);
 
         /// <summary>
@@ -85,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
+        
         
         ApiResponse<DownloadResponse> GetFaxDocumentContentWithHttpInfo (string documentId);
 
@@ -99,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>FaxDocumentEntityListing</returns>
         
+        
         FaxDocumentEntityListing GetFaxDocuments (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -112,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of FaxDocumentEntityListing</returns>
         
+        
         ApiResponse<FaxDocumentEntityListing> GetFaxDocumentsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -123,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>FaxSummary</returns>
         
+        
         FaxSummary GetFaxSummary ();
 
         /// <summary>
@@ -133,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of FaxSummary</returns>
+        
         
         ApiResponse<FaxSummary> GetFaxSummaryWithHttpInfo ();
 
@@ -147,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Document</param>
         /// <returns>FaxDocument</returns>
         
+        
         FaxDocument PutFaxDocument (string documentId, FaxDocument body);
 
         /// <summary>
@@ -159,6 +170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>ApiResponse of FaxDocument</returns>
+        
         
         ApiResponse<FaxDocument> PutFaxDocumentWithHttpInfo (string documentId, FaxDocument body);
 
@@ -176,6 +188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteFaxDocumentAsync (string documentId);
 
         /// <summary>
@@ -187,6 +200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFaxDocumentAsyncWithHttpInfo (string documentId);
 
@@ -200,6 +214,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of FaxDocument</returns>
         
+        
         System.Threading.Tasks.Task<FaxDocument> GetFaxDocumentAsync (string documentId);
 
         /// <summary>
@@ -211,6 +226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetFaxDocumentAsyncWithHttpInfo (string documentId);
 
@@ -224,6 +240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of DownloadResponse</returns>
         
+        
         System.Threading.Tasks.Task<DownloadResponse> GetFaxDocumentContentAsync (string documentId);
 
         /// <summary>
@@ -235,6 +252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetFaxDocumentContentAsyncWithHttpInfo (string documentId);
 
@@ -249,6 +267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of FaxDocumentEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<FaxDocumentEntityListing> GetFaxDocumentsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -262,6 +281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (FaxDocumentEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> GetFaxDocumentsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -273,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of FaxSummary</returns>
         
+        
         System.Threading.Tasks.Task<FaxSummary> GetFaxSummaryAsync ();
 
         /// <summary>
@@ -283,6 +304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetFaxSummaryAsyncWithHttpInfo ();
 
@@ -297,6 +319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Document</param>
         /// <returns>Task of FaxDocument</returns>
         
+        
         System.Threading.Tasks.Task<FaxDocument> PutFaxDocumentAsync (string documentId, FaxDocument body);
 
         /// <summary>
@@ -309,6 +332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<FaxDocument>> PutFaxDocumentAsyncWithHttpInfo (string documentId, FaxDocument body);
 
@@ -411,6 +435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns></returns>
         
+        
         public void DeleteFaxDocument (string documentId)
         {
              DeleteFaxDocumentWithHttpInfo(documentId);
@@ -422,6 +447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteFaxDocumentWithHttpInfo (string documentId)
         { 
@@ -506,6 +532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteFaxDocumentAsync (string documentId)
         {
              await DeleteFaxDocumentAsyncWithHttpInfo(documentId);
@@ -518,6 +545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFaxDocumentAsyncWithHttpInfo (string documentId)
         { 
@@ -604,6 +632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>FaxDocument</returns>
         
+        
         public FaxDocument GetFaxDocument (string documentId)
         {
              ApiResponse<FaxDocument> localVarResponse = GetFaxDocumentWithHttpInfo(documentId);
@@ -616,6 +645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of FaxDocument</returns>
+        
         
         public ApiResponse< FaxDocument > GetFaxDocumentWithHttpInfo (string documentId)
         { 
@@ -700,6 +730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of FaxDocument</returns>
         
+        
         public async System.Threading.Tasks.Task<FaxDocument> GetFaxDocumentAsync (string documentId)
         {
              ApiResponse<FaxDocument> localVarResponse = await GetFaxDocumentAsyncWithHttpInfo(documentId);
@@ -713,6 +744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetFaxDocumentAsyncWithHttpInfo (string documentId)
         { 
@@ -799,6 +831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>DownloadResponse</returns>
         
+        
         public DownloadResponse GetFaxDocumentContent (string documentId)
         {
              ApiResponse<DownloadResponse> localVarResponse = GetFaxDocumentContentWithHttpInfo(documentId);
@@ -811,6 +844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
+        
         
         public ApiResponse< DownloadResponse > GetFaxDocumentContentWithHttpInfo (string documentId)
         { 
@@ -895,6 +929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of DownloadResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<DownloadResponse> GetFaxDocumentContentAsync (string documentId)
         {
              ApiResponse<DownloadResponse> localVarResponse = await GetFaxDocumentContentAsyncWithHttpInfo(documentId);
@@ -908,6 +943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetFaxDocumentContentAsyncWithHttpInfo (string documentId)
         { 
@@ -995,6 +1031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>FaxDocumentEntityListing</returns>
         
+        
         public FaxDocumentEntityListing GetFaxDocuments (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<FaxDocumentEntityListing> localVarResponse = GetFaxDocumentsWithHttpInfo(pageSize, pageNumber);
@@ -1008,6 +1045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of FaxDocumentEntityListing</returns>
+        
         
         public ApiResponse< FaxDocumentEntityListing > GetFaxDocumentsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -1091,6 +1129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of FaxDocumentEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<FaxDocumentEntityListing> GetFaxDocumentsAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<FaxDocumentEntityListing> localVarResponse = await GetFaxDocumentsAsyncWithHttpInfo(pageSize, pageNumber);
@@ -1105,6 +1144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (FaxDocumentEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> GetFaxDocumentsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -1187,6 +1227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>FaxSummary</returns>
         
+        
         public FaxSummary GetFaxSummary ()
         {
              ApiResponse<FaxSummary> localVarResponse = GetFaxSummaryWithHttpInfo();
@@ -1198,6 +1239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of FaxSummary</returns>
+        
         
         public ApiResponse< FaxSummary > GetFaxSummaryWithHttpInfo ()
         { 
@@ -1277,6 +1319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of FaxSummary</returns>
         
+        
         public async System.Threading.Tasks.Task<FaxSummary> GetFaxSummaryAsync ()
         {
              ApiResponse<FaxSummary> localVarResponse = await GetFaxSummaryAsyncWithHttpInfo();
@@ -1289,6 +1332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetFaxSummaryAsyncWithHttpInfo ()
         { 
@@ -1371,6 +1415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Document</param>
         /// <returns>FaxDocument</returns>
         
+        
         public FaxDocument PutFaxDocument (string documentId, FaxDocument body)
         {
              ApiResponse<FaxDocument> localVarResponse = PutFaxDocumentWithHttpInfo(documentId, body);
@@ -1384,6 +1429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>ApiResponse of FaxDocument</returns>
+        
         
         public ApiResponse< FaxDocument > PutFaxDocumentWithHttpInfo (string documentId, FaxDocument body)
         { 
@@ -1478,6 +1524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Document</param>
         /// <returns>Task of FaxDocument</returns>
         
+        
         public async System.Threading.Tasks.Task<FaxDocument> PutFaxDocumentAsync (string documentId, FaxDocument body)
         {
              ApiResponse<FaxDocument> localVarResponse = await PutFaxDocumentAsyncWithHttpInfo(documentId, body);
@@ -1492,6 +1539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> PutFaxDocumentAsyncWithHttpInfo (string documentId, FaxDocument body)
         { 

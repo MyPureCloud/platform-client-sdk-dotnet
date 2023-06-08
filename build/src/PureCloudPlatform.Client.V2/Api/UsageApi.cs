@@ -27,6 +27,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiUsageQueryResult</returns>
         
+        
         ApiUsageQueryResult GetOauthClientUsageQueryResult (string executionId, string clientId);
 
         /// <summary>
@@ -39,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
         
         ApiResponse<ApiUsageQueryResult> GetOauthClientUsageQueryResultWithHttpInfo (string executionId, string clientId);
 
@@ -53,6 +55,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         UsageExecutionResult GetOauthClientUsageSummary (string clientId, string days = null);
 
         /// <summary>
@@ -66,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
+        
         ApiResponse<UsageExecutionResult> GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null);
 
         /// <summary>
@@ -77,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>ApiUsageQueryResult</returns>
+        
         
         ApiUsageQueryResult GetUsageQueryExecutionIdResults (string executionId);
 
@@ -90,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
         
+        
         ApiResponse<ApiUsageQueryResult> GetUsageQueryExecutionIdResultsWithHttpInfo (string executionId);
 
         /// <summary>
@@ -102,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the search execution</param>
         /// <returns>ApiUsageQueryResult</returns>
         
+        
         ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId);
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
         
         ApiResponse<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId);
 
@@ -127,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -140,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
+        
         ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -151,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
+        
         
         UsageExecutionResult PostUsageQuery (ApiUsageOrganizationQuery body);
 
@@ -164,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
+        
         ApiResponse<UsageExecutionResult> PostUsageQueryWithHttpInfo (ApiUsageOrganizationQuery body);
 
         /// <summary>
@@ -176,6 +188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SimpleSearch</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         UsageExecutionResult PostUsageSimplesearch (ApiUsageSimpleSearch body);
 
         /// <summary>
@@ -187,6 +200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
         
         ApiResponse<UsageExecutionResult> PostUsageSimplesearchWithHttpInfo (ApiUsageSimpleSearch body);
 
@@ -205,6 +219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
+        
         System.Threading.Tasks.Task<ApiUsageQueryResult> GetOauthClientUsageQueryResultAsync (string executionId, string clientId);
 
         /// <summary>
@@ -217,6 +232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetOauthClientUsageQueryResultAsyncWithHttpInfo (string executionId, string clientId);
 
@@ -231,6 +247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         System.Threading.Tasks.Task<UsageExecutionResult> GetOauthClientUsageSummaryAsync (string clientId, string days = null);
 
         /// <summary>
@@ -244,6 +261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null);
 
         /// <summary>
@@ -255,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
+        
         
         System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageQueryExecutionIdResultsAsync (string executionId);
 
@@ -268,6 +287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageQueryExecutionIdResultsAsyncWithHttpInfo (string executionId);
 
         /// <summary>
@@ -280,6 +300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the search execution</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
+        
         System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId);
 
         /// <summary>
@@ -291,6 +312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId);
 
@@ -305,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -318,6 +341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -329,6 +353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
+        
         
         System.Threading.Tasks.Task<UsageExecutionResult> PostUsageQueryAsync (ApiUsageOrganizationQuery body);
 
@@ -342,6 +367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageOrganizationQuery body);
 
         /// <summary>
@@ -354,6 +380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SimpleSearch</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         System.Threading.Tasks.Task<UsageExecutionResult> PostUsageSimplesearchAsync (ApiUsageSimpleSearch body);
 
         /// <summary>
@@ -365,6 +392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageSimplesearchAsyncWithHttpInfo (ApiUsageSimpleSearch body);
 
@@ -468,6 +496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiUsageQueryResult</returns>
         
+        
         public ApiUsageQueryResult GetOauthClientUsageQueryResult (string executionId, string clientId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = GetOauthClientUsageQueryResultWithHttpInfo(executionId, clientId);
@@ -481,6 +510,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
         
         public ApiResponse< ApiUsageQueryResult > GetOauthClientUsageQueryResultWithHttpInfo (string executionId, string clientId)
         { 
@@ -570,6 +600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
+        
         public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetOauthClientUsageQueryResultAsync (string executionId, string clientId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = await GetOauthClientUsageQueryResultAsyncWithHttpInfo(executionId, clientId);
@@ -584,6 +615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetOauthClientUsageQueryResultAsyncWithHttpInfo (string executionId, string clientId)
         { 
@@ -676,6 +708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         public UsageExecutionResult GetOauthClientUsageSummary (string clientId, string days = null)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = GetOauthClientUsageSummaryWithHttpInfo(clientId, days);
@@ -689,6 +722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
         
         public ApiResponse< UsageExecutionResult > GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null)
         { 
@@ -775,6 +809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         public async System.Threading.Tasks.Task<UsageExecutionResult> GetOauthClientUsageSummaryAsync (string clientId, string days = null)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await GetOauthClientUsageSummaryAsyncWithHttpInfo(clientId, days);
@@ -789,6 +824,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null)
         { 
@@ -876,6 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>ApiUsageQueryResult</returns>
         
+        
         public ApiUsageQueryResult GetUsageQueryExecutionIdResults (string executionId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = GetUsageQueryExecutionIdResultsWithHttpInfo(executionId);
@@ -888,6 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
         
         public ApiResponse< ApiUsageQueryResult > GetUsageQueryExecutionIdResultsWithHttpInfo (string executionId)
         { 
@@ -972,6 +1010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
+        
         public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageQueryExecutionIdResultsAsync (string executionId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = await GetUsageQueryExecutionIdResultsAsyncWithHttpInfo(executionId);
@@ -985,6 +1024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageQueryExecutionIdResultsAsyncWithHttpInfo (string executionId)
         { 
@@ -1071,6 +1111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the search execution</param>
         /// <returns>ApiUsageQueryResult</returns>
         
+        
         public ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = GetUsageSimplesearchExecutionIdResultsWithHttpInfo(executionId);
@@ -1083,6 +1124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
         
         public ApiResponse< ApiUsageQueryResult > GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId)
         { 
@@ -1167,6 +1209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="executionId">ID of the search execution</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
+        
         public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = await GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo(executionId);
@@ -1180,6 +1223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId)
         { 
@@ -1267,6 +1311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         public UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostOauthClientUsageQueryWithHttpInfo(clientId, body);
@@ -1280,6 +1325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
         
         public ApiResponse< UsageExecutionResult > PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
@@ -1374,6 +1420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         public async System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostOauthClientUsageQueryAsyncWithHttpInfo(clientId, body);
@@ -1388,6 +1435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
@@ -1484,6 +1532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         public UsageExecutionResult PostUsageQuery (ApiUsageOrganizationQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostUsageQueryWithHttpInfo(body);
@@ -1496,6 +1545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
         
         public ApiResponse< UsageExecutionResult > PostUsageQueryWithHttpInfo (ApiUsageOrganizationQuery body)
         { 
@@ -1585,6 +1635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         public async System.Threading.Tasks.Task<UsageExecutionResult> PostUsageQueryAsync (ApiUsageOrganizationQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostUsageQueryAsyncWithHttpInfo(body);
@@ -1598,6 +1649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageOrganizationQuery body)
         { 
@@ -1689,6 +1741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SimpleSearch</param>
         /// <returns>UsageExecutionResult</returns>
         
+        
         public UsageExecutionResult PostUsageSimplesearch (ApiUsageSimpleSearch body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostUsageSimplesearchWithHttpInfo(body);
@@ -1701,6 +1754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
         
         public ApiResponse< UsageExecutionResult > PostUsageSimplesearchWithHttpInfo (ApiUsageSimpleSearch body)
         { 
@@ -1790,6 +1844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SimpleSearch</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
+        
         public async System.Threading.Tasks.Task<UsageExecutionResult> PostUsageSimplesearchAsync (ApiUsageSimpleSearch body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostUsageSimplesearchAsyncWithHttpInfo(body);
@@ -1803,6 +1858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageSimplesearchAsyncWithHttpInfo (ApiUsageSimpleSearch body)
         { 

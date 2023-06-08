@@ -13,10 +13,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteegrouproles) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles | Delete Trustee Group Roles |
 | [**DeleteOrgauthorizationTrusteeUser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteeuser) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId} | Delete Trustee User |
 | [**DeleteOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteeuserroles) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Delete Trustee User Roles |
+| [**DeleteOrgauthorizationTrustees**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustees) | **DELETE** /api/v2/orgauthorization/trustees | Delete Bulk Org Trustees |
 | [**DeleteOrgauthorizationTrustor**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustor) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId} | Delete Org Trust |
 | [**DeleteOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustorcloneduser) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId} | Delete Cloned User |
 | [**DeleteOrgauthorizationTrustorGroup**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustorgroup) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId} | Delete Trustee Group |
 | [**DeleteOrgauthorizationTrustorUser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustoruser) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId} | Delete Trustee User |
+| [**DeleteOrgauthorizationTrustors**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustors) | **DELETE** /api/v2/orgauthorization/trustors | Delete Bulk Org Trustors |
 | [**GetOrgauthorizationPairing**](OrganizationAuthorizationApi.html#getorgauthorizationpairing) | **GET** /api/v2/orgauthorization/pairings/{pairingId} | Get Pairing Info |
 | [**GetOrgauthorizationTrustee**](OrganizationAuthorizationApi.html#getorgauthorizationtrustee) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Get Org Trust |
 | [**GetOrgauthorizationTrusteeClonedusers**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeclonedusers) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers | The list of cloned users from the trustee organization (i.e. users with a native user record). |
@@ -447,6 +449,70 @@ namespace Example
 
 void (empty response body)
 
+<a name="deleteorgauthorizationtrustees"></a>
+
+## void DeleteOrgauthorizationTrustees (List<string> id)
+
+
+
+Delete Bulk Org Trustees
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOrgauthorizationTrusteesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var id = new List<string>(); // List<string> | Comma separated list of trustee ids to remove
+
+            try
+            { 
+                // Delete Bulk Org Trustees
+                apiInstance.DeleteOrgauthorizationTrustees(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.DeleteOrgauthorizationTrustees: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| Comma separated list of trustee ids to remove |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="deleteorgauthorizationtrustor"></a>
 
 ## void DeleteOrgauthorizationTrustor (string trustorOrgId)
@@ -703,6 +769,70 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **trustorOrgId** | **string**| Trustor Organization Id |  |
 | **trusteeUserId** | **string**| Trustee User Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteorgauthorizationtrustors"></a>
+
+## void DeleteOrgauthorizationTrustors (List<string> id)
+
+
+
+Delete Bulk Org Trustors
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrustor:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOrgauthorizationTrustorsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var id = new List<string>(); // List<string> | Comma separated list of trustor ids to remove
+
+            try
+            { 
+                // Delete Bulk Org Trustors
+                apiInstance.DeleteOrgauthorizationTrustors(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.DeleteOrgauthorizationTrustors: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| Comma separated list of trustor ids to remove |  |
 {: class="table table-striped"}
 
 ### Return type

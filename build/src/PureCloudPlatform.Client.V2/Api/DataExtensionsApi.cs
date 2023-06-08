@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coretypeName">The core type&#39;s name</param>
         /// <returns>Coretype</returns>
         
+        
         Coretype GetDataextensionsCoretype (string coretypeName);
 
         /// <summary>
@@ -38,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coretypeName">The core type&#39;s name</param>
         /// <returns>ApiResponse of Coretype</returns>
         
+        
         ApiResponse<Coretype> GetDataextensionsCoretypeWithHttpInfo (string coretypeName);
 
         /// <summary>
@@ -48,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CoretypeListing</returns>
+        
         
         CoretypeListing GetDataextensionsCoretypes ();
 
@@ -60,6 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CoretypeListing</returns>
         
+        
         ApiResponse<CoretypeListing> GetDataextensionsCoretypesWithHttpInfo ();
 
         /// <summary>
@@ -71,6 +75,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SchemaQuantityLimits</returns>
         
+        
         SchemaQuantityLimits GetDataextensionsLimits ();
 
         /// <summary>
@@ -81,6 +86,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SchemaQuantityLimits</returns>
+        
         
         ApiResponse<SchemaQuantityLimits> GetDataextensionsLimitsWithHttpInfo ();
 
@@ -98,6 +104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coretypeName">The core type&#39;s name</param>
         /// <returns>Task of Coretype</returns>
         
+        
         System.Threading.Tasks.Task<Coretype> GetDataextensionsCoretypeAsync (string coretypeName);
 
         /// <summary>
@@ -110,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coretypeName">The core type&#39;s name</param>
         /// <returns>Task of ApiResponse (Coretype)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Coretype>> GetDataextensionsCoretypeAsyncWithHttpInfo (string coretypeName);
 
         /// <summary>
@@ -120,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CoretypeListing</returns>
+        
         
         System.Threading.Tasks.Task<CoretypeListing> GetDataextensionsCoretypesAsync ();
 
@@ -132,6 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CoretypeListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetDataextensionsCoretypesAsyncWithHttpInfo ();
 
         /// <summary>
@@ -143,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SchemaQuantityLimits</returns>
         
+        
         System.Threading.Tasks.Task<SchemaQuantityLimits> GetDataextensionsLimitsAsync ();
 
         /// <summary>
@@ -153,6 +164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SchemaQuantityLimits)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetDataextensionsLimitsAsyncWithHttpInfo ();
 
@@ -255,6 +267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coretypeName">The core type&#39;s name</param>
         /// <returns>Coretype</returns>
         
+        
         public Coretype GetDataextensionsCoretype (string coretypeName)
         {
              ApiResponse<Coretype> localVarResponse = GetDataextensionsCoretypeWithHttpInfo(coretypeName);
@@ -267,6 +280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coretypeName">The core type&#39;s name</param>
         /// <returns>ApiResponse of Coretype</returns>
+        
         
         public ApiResponse< Coretype > GetDataextensionsCoretypeWithHttpInfo (string coretypeName)
         { 
@@ -351,6 +365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="coretypeName">The core type&#39;s name</param>
         /// <returns>Task of Coretype</returns>
         
+        
         public async System.Threading.Tasks.Task<Coretype> GetDataextensionsCoretypeAsync (string coretypeName)
         {
              ApiResponse<Coretype> localVarResponse = await GetDataextensionsCoretypeAsyncWithHttpInfo(coretypeName);
@@ -364,6 +379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coretypeName">The core type&#39;s name</param>
         /// <returns>Task of ApiResponse (Coretype)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Coretype>> GetDataextensionsCoretypeAsyncWithHttpInfo (string coretypeName)
         { 
@@ -449,6 +465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CoretypeListing</returns>
         
+        
         public CoretypeListing GetDataextensionsCoretypes ()
         {
              ApiResponse<CoretypeListing> localVarResponse = GetDataextensionsCoretypesWithHttpInfo();
@@ -460,6 +477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CoretypeListing</returns>
+        
         
         public ApiResponse< CoretypeListing > GetDataextensionsCoretypesWithHttpInfo ()
         { 
@@ -539,6 +557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CoretypeListing</returns>
         
+        
         public async System.Threading.Tasks.Task<CoretypeListing> GetDataextensionsCoretypesAsync ()
         {
              ApiResponse<CoretypeListing> localVarResponse = await GetDataextensionsCoretypesAsyncWithHttpInfo();
@@ -551,6 +570,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CoretypeListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetDataextensionsCoretypesAsyncWithHttpInfo ()
         { 
@@ -631,6 +651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SchemaQuantityLimits</returns>
         
+        
         public SchemaQuantityLimits GetDataextensionsLimits ()
         {
              ApiResponse<SchemaQuantityLimits> localVarResponse = GetDataextensionsLimitsWithHttpInfo();
@@ -642,6 +663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SchemaQuantityLimits</returns>
+        
         
         public ApiResponse< SchemaQuantityLimits > GetDataextensionsLimitsWithHttpInfo ()
         { 
@@ -721,6 +743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SchemaQuantityLimits</returns>
         
+        
         public async System.Threading.Tasks.Task<SchemaQuantityLimits> GetDataextensionsLimitsAsync ()
         {
              ApiResponse<SchemaQuantityLimits> localVarResponse = await GetDataextensionsLimitsAsyncWithHttpInfo();
@@ -733,6 +756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SchemaQuantityLimits)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetDataextensionsLimitsAsyncWithHttpInfo ()
         { 

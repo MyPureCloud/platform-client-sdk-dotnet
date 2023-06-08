@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns></returns>
         
+        
         void DeleteAnalyticsUsersDetailsJob (string jobId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteAnalyticsUsersDetailsJobWithHttpInfo (string jobId);
 
@@ -52,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns></returns>
         
+        
         void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId);
 
         /// <summary>
@@ -66,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId);
 
         /// <summary>
@@ -77,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns></returns>
+        
         
         void DeleteRoutingUserUtilization (string userId);
 
@@ -90,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteRoutingUserUtilizationWithHttpInfo (string userId);
 
         /// <summary>
@@ -102,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Object</returns>
         
+        
         Object DeleteUser (string userId);
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object</returns>
+        
         
         ApiResponse<Object> DeleteUserWithHttpInfo (string userId);
 
@@ -127,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <returns></returns>
         
+        
         void DeleteUserRoutinglanguage (string userId, string languageId);
 
         /// <summary>
@@ -139,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="languageId">languageId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteUserRoutinglanguageWithHttpInfo (string userId, string languageId);
 
@@ -153,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns></returns>
         
+        
         void DeleteUserRoutingskill (string userId, string skillId);
 
         /// <summary>
@@ -166,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId);
 
         /// <summary>
@@ -177,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns></returns>
+        
         
         void DeleteUserStationAssociatedstation (string userId);
 
@@ -190,6 +203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteUserStationAssociatedstationWithHttpInfo (string userId);
 
         /// <summary>
@@ -201,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns></returns>
+        
         
         void DeleteUserStationDefaultstation (string userId);
 
@@ -214,7 +229,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteUserStationDefaultstationWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get status for async query for user aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>AsyncQueryStatus</returns>
+        
+        /// Preview Endpoint
+        AsyncQueryStatus GetAnalyticsUsersAggregatesJob (string jobId);
+
+        /// <summary>
+        /// Get status for async query for user aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of AsyncQueryStatus</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<AsyncQueryStatus> GetAnalyticsUsersAggregatesJobWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>UserAsyncAggregateQueryResponse</returns>
+        
+        /// Preview Endpoint
+        UserAsyncAggregateQueryResponse GetAnalyticsUsersAggregatesJobResults (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>ApiResponse of UserAsyncAggregateQueryResponse</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<UserAsyncAggregateQueryResponse> GetAnalyticsUsersAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
         /// Get status for async query for user details
@@ -225,6 +295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>AsyncQueryStatus</returns>
+        
         
         AsyncQueryStatus GetAnalyticsUsersDetailsJob (string jobId);
 
@@ -237,6 +308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of AsyncQueryStatus</returns>
+        
         
         ApiResponse<AsyncQueryStatus> GetAnalyticsUsersDetailsJobWithHttpInfo (string jobId);
 
@@ -252,6 +324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>AnalyticsUserDetailsAsyncQueryResponse</returns>
         
+        
         AnalyticsUserDetailsAsyncQueryResponse GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
@@ -266,6 +339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>ApiResponse of AnalyticsUserDetailsAsyncQueryResponse</returns>
         
+        
         ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
@@ -277,6 +351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataAvailabilityResponse</returns>
         
+        
         DataAvailabilityResponse GetAnalyticsUsersDetailsJobsAvailability ();
 
         /// <summary>
@@ -287,6 +362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataAvailabilityResponse</returns>
+        
         
         ApiResponse<DataAvailabilityResponse> GetAnalyticsUsersDetailsJobsAvailabilityWithHttpInfo ();
 
@@ -301,6 +377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         List<AuthzDivision> GetAuthorizationDivisionspermittedMe (string permission, string name = null);
 
         /// <summary>
@@ -314,6 +391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         ApiResponse<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeWithHttpInfo (string permission, string name = null);
 
         /// <summary>
@@ -328,6 +406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DivsPermittedEntityListing</returns>
         
+        
         DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -341,6 +420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
+        
         
         ApiResponse<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null);
 
@@ -357,6 +437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -372,6 +453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         ApiResponse<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -383,6 +465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>AuthzSubject</returns>
+        
         
         AuthzSubject GetAuthorizationSubject (string subjectId);
 
@@ -396,6 +479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
+        
         ApiResponse<AuthzSubject> GetAuthorizationSubjectWithHttpInfo (string subjectId);
 
         /// <summary>
@@ -407,6 +491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthzSubject</returns>
         
+        
         AuthzSubject GetAuthorizationSubjectsMe ();
 
         /// <summary>
@@ -417,6 +502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthzSubject</returns>
+        
         
         ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo ();
 
@@ -430,6 +516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>FieldConfig</returns>
         [Obsolete]
+        
         FieldConfig GetFieldconfig (string type);
 
         /// <summary>
@@ -442,6 +529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>ApiResponse of FieldConfig</returns>
         [Obsolete]
+        
         ApiResponse<FieldConfig> GetFieldconfigWithHttpInfo (string type);
 
         /// <summary>
@@ -460,6 +548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>UserProfileEntityListing</returns>
         [Obsolete]
+        
         UserProfileEntityListing GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -478,6 +567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>ApiResponse of UserProfileEntityListing</returns>
         [Obsolete]
+        
         ApiResponse<UserProfileEntityListing> GetProfilesUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -490,6 +580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>AgentMaxUtilization</returns>
         
+        
         AgentMaxUtilization GetRoutingUserUtilization (string userId);
 
         /// <summary>
@@ -501,6 +592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        
         
         ApiResponse<AgentMaxUtilization> GetRoutingUserUtilizationWithHttpInfo (string userId);
 
@@ -517,6 +609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>User</returns>
         
+        
         User GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
@@ -532,6 +625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>ApiResponse of User</returns>
         
+        
         ApiResponse<User> GetUserWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
@@ -544,6 +638,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Adjacents</returns>
+        
         
         Adjacents GetUserAdjacents (string userId, List<string> expand = null);
 
@@ -558,6 +653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Adjacents</returns>
         
+        
         ApiResponse<Adjacents> GetUserAdjacentsWithHttpInfo (string userId, List<string> expand = null);
 
         /// <summary>
@@ -570,6 +666,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>CallForwarding</returns>
         
+        
         CallForwarding GetUserCallforwarding (string userId);
 
         /// <summary>
@@ -581,6 +678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of CallForwarding</returns>
+        
         
         ApiResponse<CallForwarding> GetUserCallforwardingWithHttpInfo (string userId);
 
@@ -595,6 +693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>List&lt;User&gt;</returns>
         
+        
         List<User> GetUserDirectreports (string userId, List<string> expand = null);
 
         /// <summary>
@@ -607,6 +706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
+        
         
         ApiResponse<List<User>> GetUserDirectreportsWithHttpInfo (string userId, List<string> expand = null);
 
@@ -624,6 +724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UserEntityListing</returns>
         [Obsolete]
+        
         UserEntityListing GetUserFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -640,6 +741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         [Obsolete]
+        
         ApiResponse<UserEntityListing> GetUserFavoritesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -652,6 +754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Geolocation</returns>
+        
         
         Geolocation GetUserGeolocation (string userId, string clientId);
 
@@ -666,6 +769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>ApiResponse of Geolocation</returns>
         
+        
         ApiResponse<Geolocation> GetUserGeolocationWithHttpInfo (string userId, string clientId);
 
         /// <summary>
@@ -678,6 +782,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>OutOfOffice</returns>
         
+        
         OutOfOffice GetUserOutofoffice (string userId);
 
         /// <summary>
@@ -689,6 +794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of OutOfOffice</returns>
+        
         
         ApiResponse<OutOfOffice> GetUserOutofofficeWithHttpInfo (string userId);
 
@@ -704,6 +810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>UserProfile</returns>
         [Obsolete]
+        
         UserProfile GetUserProfile (string userId, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -718,6 +825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>ApiResponse of UserProfile</returns>
         [Obsolete]
+        
         ApiResponse<UserProfile> GetUserProfileWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -730,6 +838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>List&lt;string&gt;</returns>
         
+        
         List<string> GetUserProfileskills (string userId);
 
         /// <summary>
@@ -741,6 +850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         
         ApiResponse<List<string>> GetUserProfileskillsWithHttpInfo (string userId);
 
@@ -758,6 +868,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         UserQueueEntityListing GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
@@ -774,6 +885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
         
+        
         ApiResponse<UserQueueEntityListing> GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
@@ -786,6 +898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <returns>UserAuthorization</returns>
         
+        
         UserAuthorization GetUserRoles (string subjectId);
 
         /// <summary>
@@ -797,6 +910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         
         ApiResponse<UserAuthorization> GetUserRolesWithHttpInfo (string subjectId);
 
@@ -813,6 +927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserLanguageEntityListing</returns>
         
+        
         UserLanguageEntityListing GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -827,6 +942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        
         
         ApiResponse<UserLanguageEntityListing> GetUserRoutinglanguagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -843,6 +959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserSkillEntityListing</returns>
         
+        
         UserSkillEntityListing GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -858,6 +975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
         
+        
         ApiResponse<UserSkillEntityListing> GetUserRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -870,6 +988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>RoutingStatus</returns>
         
+        
         RoutingStatus GetUserRoutingstatus (string userId);
 
         /// <summary>
@@ -881,6 +1000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of RoutingStatus</returns>
+        
         
         ApiResponse<RoutingStatus> GetUserRoutingstatusWithHttpInfo (string userId);
 
@@ -897,6 +1017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>UserSkillGroupEntityListing</returns>
         
+        
         UserSkillGroupEntityListing GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
@@ -912,6 +1033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>ApiResponse of UserSkillGroupEntityListing</returns>
         
+        
         ApiResponse<UserSkillGroupEntityListing> GetUserSkillgroupsWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
@@ -923,6 +1045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>UserState</returns>
+        
         
         UserState GetUserState (string userId);
 
@@ -936,6 +1059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of UserState</returns>
         
+        
         ApiResponse<UserState> GetUserStateWithHttpInfo (string userId);
 
         /// <summary>
@@ -948,6 +1072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>UserStations</returns>
         
+        
         UserStations GetUserStation (string userId);
 
         /// <summary>
@@ -959,6 +1084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of UserStations</returns>
+        
         
         ApiResponse<UserStations> GetUserStationWithHttpInfo (string userId);
 
@@ -973,6 +1099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>List&lt;User&gt;</returns>
         
+        
         List<User> GetUserSuperiors (string userId, List<string> expand = null);
 
         /// <summary>
@@ -985,6 +1112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
+        
         
         ApiResponse<List<User>> GetUserSuperiorsWithHttpInfo (string userId, List<string> expand = null);
 
@@ -1000,6 +1128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustorEntityListing</returns>
         
+        
         TrustorEntityListing GetUserTrustors (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1013,6 +1142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustorEntityListing</returns>
+        
         
         ApiResponse<TrustorEntityListing> GetUserTrustorsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
 
@@ -1033,6 +1163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
         
+        
         UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
@@ -1051,6 +1182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
+        
         
         ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
@@ -1075,6 +1207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
         
+        
         DevelopmentActivityListing GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
@@ -1098,6 +1231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
         
+        
         ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
@@ -1119,6 +1253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
+        
         
         DevelopmentActivityListing GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
@@ -1142,6 +1277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
         
+        
         ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
@@ -1154,6 +1290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
         /// <param name="type">Specifies the activity type.</param>
         /// <returns>DevelopmentActivity</returns>
+        
         
         DevelopmentActivity GetUsersDevelopmentActivity (string activityId, string type);
 
@@ -1168,6 +1305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Specifies the activity type.</param>
         /// <returns>ApiResponse of DevelopmentActivity</returns>
         
+        
         ApiResponse<DevelopmentActivity> GetUsersDevelopmentActivityWithHttpInfo (string activityId, string type);
 
         /// <summary>
@@ -1181,6 +1319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>UserMe</returns>
         
+        
         UserMe GetUsersMe (List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -1193,6 +1332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>ApiResponse of UserMe</returns>
+        
         
         ApiResponse<UserMe> GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null);
 
@@ -1208,6 +1348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>UsersSearchResponse</returns>
         
+        
         UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -1222,6 +1363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         
+        
         ApiResponse<UsersSearchResponse> GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -1234,6 +1376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>User</returns>
+        
         
         User PatchUser (string userId, UpdateUser body);
 
@@ -1248,6 +1391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
         
+        
         ApiResponse<User> PatchUserWithHttpInfo (string userId, UpdateUser body);
 
         /// <summary>
@@ -1261,6 +1405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call forwarding</param>
         /// <returns>CallForwarding</returns>
         
+        
         CallForwarding PatchUserCallforwarding (string userId, CallForwarding body);
 
         /// <summary>
@@ -1273,6 +1418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Call forwarding</param>
         /// <returns>ApiResponse of CallForwarding</returns>
+        
         
         ApiResponse<CallForwarding> PatchUserCallforwardingWithHttpInfo (string userId, CallForwarding body);
 
@@ -1288,6 +1434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Geolocation</returns>
         
+        
         Geolocation PatchUserGeolocation (string userId, string clientId, Geolocation body);
 
         /// <summary>
@@ -1301,6 +1448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
+        
         
         ApiResponse<Geolocation> PatchUserGeolocationWithHttpInfo (string userId, string clientId, Geolocation body);
 
@@ -1316,6 +1464,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>UserQueue</returns>
         
+        
         UserQueue PatchUserQueue (string queueId, string userId, UserQueue body);
 
         /// <summary>
@@ -1329,6 +1478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of UserQueue</returns>
+        
         
         ApiResponse<UserQueue> PatchUserQueueWithHttpInfo (string queueId, string userId, UserQueue body);
 
@@ -1344,6 +1494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         UserQueueEntityListing PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
@@ -1357,6 +1508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User Queues</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        
         
         ApiResponse<UserQueueEntityListing> PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
@@ -1372,6 +1524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserRoutingLanguage</returns>
         
+        
         UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
@@ -1386,6 +1539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
         
+        
         ApiResponse<UserRoutingLanguage> PatchUserRoutinglanguageWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
@@ -1398,6 +1552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>UserLanguageEntityListing</returns>
+        
         
         UserLanguageEntityListing PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body);
 
@@ -1412,6 +1567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserLanguageEntityListing</returns>
         
+        
         ApiResponse<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkWithHttpInfo (string userId, List<UserRoutingLanguagePost> body);
 
         /// <summary>
@@ -1424,6 +1580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserSkillEntityListing</returns>
+        
         
         UserSkillEntityListing PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body);
 
@@ -1438,6 +1595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
         
+        
         ApiResponse<UserSkillEntityListing> PatchUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
@@ -1449,6 +1607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Users</param>
         /// <returns>UserEntityListing</returns>
+        
         
         UserEntityListing PatchUsersBulk (List<PatchUser> body);
 
@@ -1462,7 +1621,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Users</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         
+        
         ApiResponse<UserEntityListing> PatchUsersBulkWithHttpInfo (List<PatchUser> body);
+
+        /// <summary>
+        /// Query for user activity observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>UserActivityResponse</returns>
+        
+        /// Preview Endpoint
+        UserActivityResponse PostAnalyticsUsersActivityQuery (UserActivityQuery body, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Query for user activity observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>ApiResponse of UserActivityResponse</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<UserActivityResponse> PostAnalyticsUsersActivityQueryWithHttpInfo (UserActivityQuery body, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Query for user aggregates asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AsyncQueryResponse</returns>
+        
+        /// Preview Endpoint
+        AsyncQueryResponse PostAnalyticsUsersAggregatesJobs (UserAsyncAggregationQuery body);
+
+        /// <summary>
+        /// Query for user aggregates asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AsyncQueryResponse</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<AsyncQueryResponse> PostAnalyticsUsersAggregatesJobsWithHttpInfo (UserAsyncAggregationQuery body);
 
         /// <summary>
         /// Query for user aggregates
@@ -1473,6 +1689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UserAggregateQueryResponse</returns>
+        
         
         UserAggregateQueryResponse PostAnalyticsUsersAggregatesQuery (UserAggregationQuery body);
 
@@ -1486,6 +1703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UserAggregateQueryResponse</returns>
         
+        
         ApiResponse<UserAggregateQueryResponse> PostAnalyticsUsersAggregatesQueryWithHttpInfo (UserAggregationQuery body);
 
         /// <summary>
@@ -1497,6 +1715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>AsyncQueryResponse</returns>
+        
         
         AsyncQueryResponse PostAnalyticsUsersDetailsJobs (AsyncUserDetailsQuery body);
 
@@ -1510,6 +1729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AsyncQueryResponse</returns>
         
+        
         ApiResponse<AsyncQueryResponse> PostAnalyticsUsersDetailsJobsWithHttpInfo (AsyncUserDetailsQuery body);
 
         /// <summary>
@@ -1521,6 +1741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>AnalyticsUserDetailsQueryResponse</returns>
+        
         
         AnalyticsUserDetailsQueryResponse PostAnalyticsUsersDetailsQuery (UserDetailsQuery body);
 
@@ -1534,6 +1755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AnalyticsUserDetailsQueryResponse</returns>
         
+        
         ApiResponse<AnalyticsUserDetailsQueryResponse> PostAnalyticsUsersDetailsQueryWithHttpInfo (UserDetailsQuery body);
 
         /// <summary>
@@ -1546,6 +1768,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>UserObservationQueryResponse</returns>
         
+        
         UserObservationQueryResponse PostAnalyticsUsersObservationsQuery (UserObservationQuery body);
 
         /// <summary>
@@ -1557,6 +1780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UserObservationQueryResponse</returns>
+        
         
         ApiResponse<UserObservationQueryResponse> PostAnalyticsUsersObservationsQueryWithHttpInfo (UserObservationQuery body);
 
@@ -1572,6 +1796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationSubjectBulkadd (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -1586,6 +1811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostAuthorizationSubjectBulkaddWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -1599,6 +1825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationSubjectBulkremove (string subjectId, RoleDivisionGrants body);
 
         /// <summary>
@@ -1611,6 +1838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PostAuthorizationSubjectBulkremoveWithHttpInfo (string subjectId, RoleDivisionGrants body);
 
@@ -1626,6 +1854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationSubjectBulkreplace (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -1639,6 +1868,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PostAuthorizationSubjectBulkreplaceWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
@@ -1655,6 +1885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
@@ -1670,6 +1901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
@@ -1682,6 +1914,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;UserExternalIdentifier&gt;</returns>
+        
         
         List<UserExternalIdentifier> PostUserExternalid (string userId, UserExternalIdentifier body);
 
@@ -1696,6 +1929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;UserExternalIdentifier&gt;</returns>
         
+        
         ApiResponse<List<UserExternalIdentifier>> PostUserExternalidWithHttpInfo (string userId, UserExternalIdentifier body);
 
         /// <summary>
@@ -1708,6 +1942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="force">Resend the invitation even if one is already outstanding (optional, default to false)</param>
         /// <returns></returns>
+        
         
         void PostUserInvite (string userId, bool? force = null);
 
@@ -1722,6 +1957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Resend the invitation even if one is already outstanding (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostUserInviteWithHttpInfo (string userId, bool? force = null);
 
         /// <summary>
@@ -1734,6 +1970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Password</param>
         /// <returns></returns>
+        
         
         void PostUserPassword (string userId, ChangePasswordRequest body);
 
@@ -1748,6 +1985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostUserPasswordWithHttpInfo (string userId, ChangePasswordRequest body);
 
         /// <summary>
@@ -1760,6 +1998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>UserRoutingLanguage</returns>
+        
         
         UserRoutingLanguage PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body);
 
@@ -1774,6 +2013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
         
+        
         ApiResponse<UserRoutingLanguage> PostUserRoutinglanguagesWithHttpInfo (string userId, UserRoutingLanguagePost body);
 
         /// <summary>
@@ -1786,6 +2026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
+        
         
         UserRoutingSkill PostUserRoutingskills (string userId, UserRoutingSkillPost body);
 
@@ -1800,6 +2041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
         
+        
         ApiResponse<UserRoutingSkill> PostUserRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body);
 
         /// <summary>
@@ -1811,6 +2053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User</param>
         /// <returns>User</returns>
+        
         
         User PostUsers (CreateUser body);
 
@@ -1824,6 +2067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
         
+        
         ApiResponse<User> PostUsersWithHttpInfo (CreateUser body);
 
         /// <summary>
@@ -1835,6 +2079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>DevelopmentActivityAggregateResponse</returns>
+        
         
         DevelopmentActivityAggregateResponse PostUsersDevelopmentActivitiesAggregatesQuery (DevelopmentActivityAggregateParam body);
 
@@ -1848,6 +2093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>ApiResponse of DevelopmentActivityAggregateResponse</returns>
         
+        
         ApiResponse<DevelopmentActivityAggregateResponse> PostUsersDevelopmentActivitiesAggregatesQueryWithHttpInfo (DevelopmentActivityAggregateParam body);
 
         /// <summary>
@@ -1859,6 +2105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Password</param>
         /// <returns></returns>
+        
         
         void PostUsersMePassword (ChangeMyPasswordRequest body);
 
@@ -1872,6 +2119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostUsersMePasswordWithHttpInfo (ChangeMyPasswordRequest body);
 
         /// <summary>
@@ -1883,6 +2131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
+        
         
         UsersSearchResponse PostUsersSearch (UserSearchRequest body);
 
@@ -1896,7 +2145,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         
+        
         ApiResponse<UsersSearchResponse> PostUsersSearchWithHttpInfo (UserSearchRequest body);
+
+        /// <summary>
+        /// Search users as conversation targets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        UsersSearchResponse PostUsersSearchConversationTarget (UserSearchRequest body);
+
+        /// <summary>
+        /// Search users as conversation targets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<UsersSearchResponse> PostUsersSearchConversationTargetWithHttpInfo (UserSearchRequest body);
+
+        /// <summary>
+        /// Search manage queue member
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        UsersSearchResponse PostUsersSearchQueuemembersManage (UserSearchRequest body);
+
+        /// <summary>
+        /// Search manage queue member
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<UsersSearchResponse> PostUsersSearchQueuemembersManageWithHttpInfo (UserSearchRequest body);
 
         /// <summary>
         /// Search users assigned to teams
@@ -1907,6 +2209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
+        
         
         UsersSearchResponse PostUsersSearchTeamsAssign (UserSearchRequest body);
 
@@ -1919,6 +2222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         
         ApiResponse<UsersSearchResponse> PostUsersSearchTeamsAssignWithHttpInfo (UserSearchRequest body);
 
@@ -1933,6 +2237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>AgentMaxUtilization</returns>
         
+        
         AgentMaxUtilization PutRoutingUserUtilization (string userId, Utilization body);
 
         /// <summary>
@@ -1945,6 +2250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
         /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        
         
         ApiResponse<AgentMaxUtilization> PutRoutingUserUtilizationWithHttpInfo (string userId, Utilization body);
 
@@ -1959,6 +2265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call forwarding</param>
         /// <returns>CallForwarding</returns>
         
+        
         CallForwarding PutUserCallforwarding (string userId, CallForwarding body);
 
         /// <summary>
@@ -1971,6 +2278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Call forwarding</param>
         /// <returns>ApiResponse of CallForwarding</returns>
+        
         
         ApiResponse<CallForwarding> PutUserCallforwardingWithHttpInfo (string userId, CallForwarding body);
 
@@ -1985,6 +2293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated OutOffOffice</param>
         /// <returns>OutOfOffice</returns>
         
+        
         OutOfOffice PutUserOutofoffice (string userId, OutOfOffice body);
 
         /// <summary>
@@ -1997,6 +2306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated OutOffOffice</param>
         /// <returns>ApiResponse of OutOfOffice</returns>
+        
         
         ApiResponse<OutOfOffice> PutUserOutofofficeWithHttpInfo (string userId, OutOfOffice body);
 
@@ -2011,6 +2321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skills</param>
         /// <returns>List&lt;string&gt;</returns>
         
+        
         List<string> PutUserProfileskills (string userId, List<string> body);
 
         /// <summary>
@@ -2023,6 +2334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skills</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         
         ApiResponse<List<string>> PutUserProfileskillsWithHttpInfo (string userId, List<string> body);
 
@@ -2037,6 +2349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
         
+        
         UserAuthorization PutUserRoles (string subjectId, List<string> body);
 
         /// <summary>
@@ -2049,6 +2362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         
         ApiResponse<UserAuthorization> PutUserRolesWithHttpInfo (string subjectId, List<string> body);
 
@@ -2064,6 +2378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         
+        
         UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
@@ -2078,6 +2393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
         
+        
         ApiResponse<UserRoutingSkill> PutUserRoutingskillWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
@@ -2090,6 +2406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserSkillEntityListing</returns>
+        
         
         UserSkillEntityListing PutUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body);
 
@@ -2104,6 +2421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
         
+        
         ApiResponse<UserSkillEntityListing> PutUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
@@ -2116,6 +2434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Routing Status</param>
         /// <returns>RoutingStatus</returns>
+        
         
         RoutingStatus PutUserRoutingstatus (string userId, RoutingStatus body);
 
@@ -2130,6 +2449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Routing Status</param>
         /// <returns>ApiResponse of RoutingStatus</returns>
         
+        
         ApiResponse<RoutingStatus> PutUserRoutingstatusWithHttpInfo (string userId, RoutingStatus body);
 
         /// <summary>
@@ -2142,6 +2462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>UserState</returns>
+        
         
         UserState PutUserState (string userId, UserState body);
 
@@ -2156,6 +2477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>ApiResponse of UserState</returns>
         
+        
         ApiResponse<UserState> PutUserStateWithHttpInfo (string userId, UserState body);
 
         /// <summary>
@@ -2168,6 +2490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="stationId">stationId</param>
         /// <returns></returns>
+        
         
         void PutUserStationAssociatedstationStationId (string userId, string stationId);
 
@@ -2182,6 +2505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="stationId">stationId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PutUserStationAssociatedstationStationIdWithHttpInfo (string userId, string stationId);
 
         /// <summary>
@@ -2195,6 +2519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="stationId">stationId</param>
         /// <returns></returns>
         
+        
         void PutUserStationDefaultstationStationId (string userId, string stationId);
 
         /// <summary>
@@ -2207,6 +2532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="stationId">stationId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PutUserStationDefaultstationStationIdWithHttpInfo (string userId, string stationId);
 
@@ -2224,6 +2550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteAnalyticsUsersDetailsJobAsync (string jobId);
 
         /// <summary>
@@ -2235,6 +2562,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsUsersDetailsJobAsyncWithHttpInfo (string jobId);
 
@@ -2250,6 +2578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId);
 
         /// <summary>
@@ -2264,6 +2593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId);
 
         /// <summary>
@@ -2275,6 +2605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteRoutingUserUtilizationAsync (string userId);
 
@@ -2288,6 +2619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUserUtilizationAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -2300,6 +2632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of Object</returns>
         
+        
         System.Threading.Tasks.Task<Object> DeleteUserAsync (string userId);
 
         /// <summary>
@@ -2311,6 +2644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserAsyncWithHttpInfo (string userId);
 
@@ -2325,6 +2659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteUserRoutinglanguageAsync (string userId, string languageId);
 
         /// <summary>
@@ -2337,6 +2672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="languageId">languageId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId);
 
@@ -2351,6 +2687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId);
 
         /// <summary>
@@ -2364,6 +2701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId);
 
         /// <summary>
@@ -2375,6 +2713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteUserStationAssociatedstationAsync (string userId);
 
@@ -2388,6 +2727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserStationAssociatedstationAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -2399,6 +2739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteUserStationDefaultstationAsync (string userId);
 
@@ -2412,7 +2753,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserStationDefaultstationAsyncWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get status for async query for user aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of AsyncQueryStatus</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsUsersAggregatesJobAsync (string jobId);
+
+        /// <summary>
+        /// Get status for async query for user aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsUsersAggregatesJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>Task of UserAsyncAggregateQueryResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<UserAsyncAggregateQueryResponse> GetAnalyticsUsersAggregatesJobResultsAsync (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>Task of ApiResponse (UserAsyncAggregateQueryResponse)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<UserAsyncAggregateQueryResponse>> GetAnalyticsUsersAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
         /// Get status for async query for user details
@@ -2423,6 +2819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of AsyncQueryStatus</returns>
+        
         
         System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsUsersDetailsJobAsync (string jobId);
 
@@ -2435,6 +2832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsUsersDetailsJobAsyncWithHttpInfo (string jobId);
 
@@ -2450,6 +2848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of AnalyticsUserDetailsAsyncQueryResponse</returns>
         
+        
         System.Threading.Tasks.Task<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsAsync (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
@@ -2464,6 +2863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsUserDetailsAsyncQueryResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsAsyncQueryResponse>> GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
@@ -2475,6 +2875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataAvailabilityResponse</returns>
         
+        
         System.Threading.Tasks.Task<DataAvailabilityResponse> GetAnalyticsUsersDetailsJobsAvailabilityAsync ();
 
         /// <summary>
@@ -2485,6 +2886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataAvailabilityResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DataAvailabilityResponse>> GetAnalyticsUsersDetailsJobsAvailabilityAsyncWithHttpInfo ();
 
@@ -2499,6 +2901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeAsync (string permission, string name = null);
 
         /// <summary>
@@ -2512,6 +2915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;AuthzDivision&gt;)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo (string permission, string name = null);
 
         /// <summary>
@@ -2526,6 +2930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DivsPermittedEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeAsync (string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -2539,6 +2944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null);
 
@@ -2555,6 +2961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdAsync (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -2570,6 +2977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -2581,6 +2989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>Task of AuthzSubject</returns>
+        
         
         System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId);
 
@@ -2594,6 +3003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId);
 
         /// <summary>
@@ -2605,6 +3015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthzSubject</returns>
         
+        
         System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync ();
 
         /// <summary>
@@ -2615,6 +3026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo ();
 
@@ -2628,6 +3040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of FieldConfig</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<FieldConfig> GetFieldconfigAsync (string type);
 
         /// <summary>
@@ -2640,6 +3053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of ApiResponse (FieldConfig)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type);
 
         /// <summary>
@@ -2658,6 +3072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of UserProfileEntityListing</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<UserProfileEntityListing> GetProfilesUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -2676,6 +3091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (UserProfileEntityListing)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -2688,6 +3104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of AgentMaxUtilization</returns>
         
+        
         System.Threading.Tasks.Task<AgentMaxUtilization> GetRoutingUserUtilizationAsync (string userId);
 
         /// <summary>
@@ -2699,6 +3116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId);
 
@@ -2715,6 +3133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of User</returns>
         
+        
         System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
@@ -2730,6 +3149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (User)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
@@ -2742,6 +3162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of Adjacents</returns>
+        
         
         System.Threading.Tasks.Task<Adjacents> GetUserAdjacentsAsync (string userId, List<string> expand = null);
 
@@ -2756,6 +3177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Adjacents)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Adjacents>> GetUserAdjacentsAsyncWithHttpInfo (string userId, List<string> expand = null);
 
         /// <summary>
@@ -2768,6 +3190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of CallForwarding</returns>
         
+        
         System.Threading.Tasks.Task<CallForwarding> GetUserCallforwardingAsync (string userId);
 
         /// <summary>
@@ -2779,6 +3202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<CallForwarding>> GetUserCallforwardingAsyncWithHttpInfo (string userId);
 
@@ -2793,6 +3217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of List&lt;User&gt;</returns>
         
+        
         System.Threading.Tasks.Task<List<User>> GetUserDirectreportsAsync (string userId, List<string> expand = null);
 
         /// <summary>
@@ -2805,6 +3230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserDirectreportsAsyncWithHttpInfo (string userId, List<string> expand = null);
 
@@ -2822,6 +3248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UserEntityListing</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<UserEntityListing> GetUserFavoritesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2838,6 +3265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUserFavoritesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2850,6 +3278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of Geolocation</returns>
+        
         
         System.Threading.Tasks.Task<Geolocation> GetUserGeolocationAsync (string userId, string clientId);
 
@@ -2864,6 +3293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserGeolocationAsyncWithHttpInfo (string userId, string clientId);
 
         /// <summary>
@@ -2876,6 +3306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of OutOfOffice</returns>
         
+        
         System.Threading.Tasks.Task<OutOfOffice> GetUserOutofofficeAsync (string userId);
 
         /// <summary>
@@ -2887,6 +3318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (OutOfOffice)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OutOfOffice>> GetUserOutofofficeAsyncWithHttpInfo (string userId);
 
@@ -2902,6 +3334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>Task of UserProfile</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<UserProfile> GetUserProfileAsync (string userId, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -2916,6 +3349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>Task of ApiResponse (UserProfile)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -2928,6 +3362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         
+        
         System.Threading.Tasks.Task<List<string>> GetUserProfileskillsAsync (string userId);
 
         /// <summary>
@@ -2939,6 +3374,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<List<string>>> GetUserProfileskillsAsyncWithHttpInfo (string userId);
 
@@ -2956,6 +3392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserQueueEntityListing> GetUserQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
@@ -2972,6 +3409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
@@ -2984,6 +3422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
         
+        
         System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string subjectId);
 
         /// <summary>
@@ -2995,6 +3434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string subjectId);
 
@@ -3011,6 +3451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserLanguageEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserLanguageEntityListing> GetUserRoutinglanguagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -3025,6 +3466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> GetUserRoutinglanguagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -3041,6 +3483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserSkillEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserSkillEntityListing> GetUserRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -3056,6 +3499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -3068,6 +3512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of RoutingStatus</returns>
         
+        
         System.Threading.Tasks.Task<RoutingStatus> GetUserRoutingstatusAsync (string userId);
 
         /// <summary>
@@ -3079,6 +3524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (RoutingStatus)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> GetUserRoutingstatusAsyncWithHttpInfo (string userId);
 
@@ -3095,6 +3541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>Task of UserSkillGroupEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserSkillGroupEntityListing> GetUserSkillgroupsAsync (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
@@ -3110,6 +3557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>Task of ApiResponse (UserSkillGroupEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserSkillGroupEntityListing>> GetUserSkillgroupsAsyncWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
@@ -3121,6 +3569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserState</returns>
+        
         
         System.Threading.Tasks.Task<UserState> GetUserStateAsync (string userId);
 
@@ -3134,6 +3583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserState)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserState>> GetUserStateAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -3146,6 +3596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserStations</returns>
         
+        
         System.Threading.Tasks.Task<UserStations> GetUserStationAsync (string userId);
 
         /// <summary>
@@ -3157,6 +3608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserStations)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserStations>> GetUserStationAsyncWithHttpInfo (string userId);
 
@@ -3171,6 +3623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of List&lt;User&gt;</returns>
         
+        
         System.Threading.Tasks.Task<List<User>> GetUserSuperiorsAsync (string userId, List<string> expand = null);
 
         /// <summary>
@@ -3183,6 +3636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserSuperiorsAsyncWithHttpInfo (string userId, List<string> expand = null);
 
@@ -3198,6 +3652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustorEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<TrustorEntityListing> GetUserTrustorsAsync (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -3211,6 +3666,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustorEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TrustorEntityListing>> GetUserTrustorsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
 
@@ -3231,6 +3687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
         /// <summary>
@@ -3249,6 +3706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
 
@@ -3273,6 +3731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
         
+        
         System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesAsync (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
@@ -3296,6 +3755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
@@ -3317,6 +3777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
+        
         
         System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
@@ -3340,6 +3801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
@@ -3352,6 +3814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
         /// <param name="type">Specifies the activity type.</param>
         /// <returns>Task of DevelopmentActivity</returns>
+        
         
         System.Threading.Tasks.Task<DevelopmentActivity> GetUsersDevelopmentActivityAsync (string activityId, string type);
 
@@ -3366,6 +3829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Specifies the activity type.</param>
         /// <returns>Task of ApiResponse (DevelopmentActivity)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DevelopmentActivity>> GetUsersDevelopmentActivityAsyncWithHttpInfo (string activityId, string type);
 
         /// <summary>
@@ -3379,6 +3843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of UserMe</returns>
         
+        
         System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -3391,6 +3856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null);
 
@@ -3406,6 +3872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
         
+        
         System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -3420,6 +3887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -3432,6 +3900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>Task of User</returns>
+        
         
         System.Threading.Tasks.Task<User> PatchUserAsync (string userId, UpdateUser body);
 
@@ -3446,6 +3915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<User>> PatchUserAsyncWithHttpInfo (string userId, UpdateUser body);
 
         /// <summary>
@@ -3459,6 +3929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call forwarding</param>
         /// <returns>Task of CallForwarding</returns>
         
+        
         System.Threading.Tasks.Task<CallForwarding> PatchUserCallforwardingAsync (string userId, CallForwarding body);
 
         /// <summary>
@@ -3471,6 +3942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Call forwarding</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PatchUserCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body);
 
@@ -3486,6 +3958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Task of Geolocation</returns>
         
+        
         System.Threading.Tasks.Task<Geolocation> PatchUserGeolocationAsync (string userId, string clientId, Geolocation body);
 
         /// <summary>
@@ -3499,6 +3972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body);
 
@@ -3514,6 +3988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of UserQueue</returns>
         
+        
         System.Threading.Tasks.Task<UserQueue> PatchUserQueueAsync (string queueId, string userId, UserQueue body);
 
         /// <summary>
@@ -3527,6 +4002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (UserQueue)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserQueueAsyncWithHttpInfo (string queueId, string userId, UserQueue body);
 
@@ -3542,6 +4018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserQueuesAsync (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
@@ -3555,6 +4032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User Queues</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
 
@@ -3570,6 +4048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserRoutingLanguage</returns>
         
+        
         System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
@@ -3584,6 +4063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PatchUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
 
         /// <summary>
@@ -3596,6 +4076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of UserLanguageEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkAsync (string userId, List<UserRoutingLanguagePost> body);
 
@@ -3610,6 +4091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> PatchUserRoutinglanguagesBulkAsyncWithHttpInfo (string userId, List<UserRoutingLanguagePost> body);
 
         /// <summary>
@@ -3622,6 +4104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserSkillEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserSkillEntityListing> PatchUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body);
 
@@ -3636,6 +4119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PatchUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
@@ -3647,6 +4131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Users</param>
         /// <returns>Task of UserEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserEntityListing> PatchUsersBulkAsync (List<PatchUser> body);
 
@@ -3660,7 +4145,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Users</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> PatchUsersBulkAsyncWithHttpInfo (List<PatchUser> body);
+
+        /// <summary>
+        /// Query for user activity observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>Task of UserActivityResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<UserActivityResponse> PostAnalyticsUsersActivityQueryAsync (UserActivityQuery body, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Query for user activity observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>Task of ApiResponse (UserActivityResponse)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<UserActivityResponse>> PostAnalyticsUsersActivityQueryAsyncWithHttpInfo (UserActivityQuery body, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Query for user aggregates asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AsyncQueryResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsUsersAggregatesJobsAsync (UserAsyncAggregationQuery body);
+
+        /// <summary>
+        /// Query for user aggregates asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsUsersAggregatesJobsAsyncWithHttpInfo (UserAsyncAggregationQuery body);
 
         /// <summary>
         /// Query for user aggregates
@@ -3671,6 +4213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UserAggregateQueryResponse</returns>
+        
         
         System.Threading.Tasks.Task<UserAggregateQueryResponse> PostAnalyticsUsersAggregatesQueryAsync (UserAggregationQuery body);
 
@@ -3684,6 +4227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UserAggregateQueryResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserAggregateQueryResponse>> PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo (UserAggregationQuery body);
 
         /// <summary>
@@ -3695,6 +4239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of AsyncQueryResponse</returns>
+        
         
         System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsUsersDetailsJobsAsync (AsyncUserDetailsQuery body);
 
@@ -3708,6 +4253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsUsersDetailsJobsAsyncWithHttpInfo (AsyncUserDetailsQuery body);
 
         /// <summary>
@@ -3719,6 +4265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of AnalyticsUserDetailsQueryResponse</returns>
+        
         
         System.Threading.Tasks.Task<AnalyticsUserDetailsQueryResponse> PostAnalyticsUsersDetailsQueryAsync (UserDetailsQuery body);
 
@@ -3732,6 +4279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AnalyticsUserDetailsQueryResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsQueryResponse>> PostAnalyticsUsersDetailsQueryAsyncWithHttpInfo (UserDetailsQuery body);
 
         /// <summary>
@@ -3744,6 +4292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of UserObservationQueryResponse</returns>
         
+        
         System.Threading.Tasks.Task<UserObservationQueryResponse> PostAnalyticsUsersObservationsQueryAsync (UserObservationQuery body);
 
         /// <summary>
@@ -3755,6 +4304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UserObservationQueryResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserObservationQueryResponse>> PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo (UserObservationQuery body);
 
@@ -3770,6 +4320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationSubjectBulkaddAsync (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -3784,6 +4335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkaddAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -3797,6 +4349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationSubjectBulkremoveAsync (string subjectId, RoleDivisionGrants body);
 
         /// <summary>
@@ -3809,6 +4362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkremoveAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body);
 
@@ -3824,6 +4378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationSubjectBulkreplaceAsync (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -3837,6 +4392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkreplaceAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
@@ -3853,6 +4409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
@@ -3868,6 +4425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
@@ -3880,6 +4438,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;UserExternalIdentifier&gt;</returns>
+        
         
         System.Threading.Tasks.Task<List<UserExternalIdentifier>> PostUserExternalidAsync (string userId, UserExternalIdentifier body);
 
@@ -3894,6 +4453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;UserExternalIdentifier&gt;)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<List<UserExternalIdentifier>>> PostUserExternalidAsyncWithHttpInfo (string userId, UserExternalIdentifier body);
 
         /// <summary>
@@ -3906,6 +4466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="force">Resend the invitation even if one is already outstanding (optional, default to false)</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task PostUserInviteAsync (string userId, bool? force = null);
 
@@ -3920,6 +4481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Resend the invitation even if one is already outstanding (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUserInviteAsyncWithHttpInfo (string userId, bool? force = null);
 
         /// <summary>
@@ -3932,6 +4494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Password</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task PostUserPasswordAsync (string userId, ChangePasswordRequest body);
 
@@ -3946,6 +4509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUserPasswordAsyncWithHttpInfo (string userId, ChangePasswordRequest body);
 
         /// <summary>
@@ -3958,6 +4522,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of UserRoutingLanguage</returns>
+        
         
         System.Threading.Tasks.Task<UserRoutingLanguage> PostUserRoutinglanguagesAsync (string userId, UserRoutingLanguagePost body);
 
@@ -3972,6 +4537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PostUserRoutinglanguagesAsyncWithHttpInfo (string userId, UserRoutingLanguagePost body);
 
         /// <summary>
@@ -3984,6 +4550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
+        
         
         System.Threading.Tasks.Task<UserRoutingSkill> PostUserRoutingskillsAsync (string userId, UserRoutingSkillPost body);
 
@@ -3998,6 +4565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body);
 
         /// <summary>
@@ -4009,6 +4577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User</param>
         /// <returns>Task of User</returns>
+        
         
         System.Threading.Tasks.Task<User> PostUsersAsync (CreateUser body);
 
@@ -4022,6 +4591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<User>> PostUsersAsyncWithHttpInfo (CreateUser body);
 
         /// <summary>
@@ -4033,6 +4603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of DevelopmentActivityAggregateResponse</returns>
+        
         
         System.Threading.Tasks.Task<DevelopmentActivityAggregateResponse> PostUsersDevelopmentActivitiesAggregatesQueryAsync (DevelopmentActivityAggregateParam body);
 
@@ -4046,6 +4617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityAggregateResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityAggregateResponse>> PostUsersDevelopmentActivitiesAggregatesQueryAsyncWithHttpInfo (DevelopmentActivityAggregateParam body);
 
         /// <summary>
@@ -4057,6 +4629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Password</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task PostUsersMePasswordAsync (ChangeMyPasswordRequest body);
 
@@ -4070,6 +4643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersMePasswordAsyncWithHttpInfo (ChangeMyPasswordRequest body);
 
         /// <summary>
@@ -4081,6 +4655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
+        
         
         System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchAsync (UserSearchRequest body);
 
@@ -4094,7 +4669,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchAsyncWithHttpInfo (UserSearchRequest body);
+
+        /// <summary>
+        /// Search users as conversation targets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchConversationTargetAsync (UserSearchRequest body);
+
+        /// <summary>
+        /// Search users as conversation targets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchConversationTargetAsyncWithHttpInfo (UserSearchRequest body);
+
+        /// <summary>
+        /// Search manage queue member
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchQueuemembersManageAsync (UserSearchRequest body);
+
+        /// <summary>
+        /// Search manage queue member
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchQueuemembersManageAsyncWithHttpInfo (UserSearchRequest body);
 
         /// <summary>
         /// Search users assigned to teams
@@ -4105,6 +4733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
+        
         
         System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchTeamsAssignAsync (UserSearchRequest body);
 
@@ -4117,6 +4746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchTeamsAssignAsyncWithHttpInfo (UserSearchRequest body);
 
@@ -4131,6 +4761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Task of AgentMaxUtilization</returns>
         
+        
         System.Threading.Tasks.Task<AgentMaxUtilization> PutRoutingUserUtilizationAsync (string userId, Utilization body);
 
         /// <summary>
@@ -4143,6 +4774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
         /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, Utilization body);
 
@@ -4157,6 +4789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call forwarding</param>
         /// <returns>Task of CallForwarding</returns>
         
+        
         System.Threading.Tasks.Task<CallForwarding> PutUserCallforwardingAsync (string userId, CallForwarding body);
 
         /// <summary>
@@ -4169,6 +4802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Call forwarding</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PutUserCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body);
 
@@ -4183,6 +4817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated OutOffOffice</param>
         /// <returns>Task of OutOfOffice</returns>
         
+        
         System.Threading.Tasks.Task<OutOfOffice> PutUserOutofofficeAsync (string userId, OutOfOffice body);
 
         /// <summary>
@@ -4195,6 +4830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated OutOffOffice</param>
         /// <returns>Task of ApiResponse (OutOfOffice)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OutOfOffice>> PutUserOutofofficeAsyncWithHttpInfo (string userId, OutOfOffice body);
 
@@ -4209,6 +4845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skills</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         
+        
         System.Threading.Tasks.Task<List<string>> PutUserProfileskillsAsync (string userId, List<string> body);
 
         /// <summary>
@@ -4221,6 +4858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skills</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserProfileskillsAsyncWithHttpInfo (string userId, List<string> body);
 
@@ -4235,6 +4873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
         
+        
         System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string subjectId, List<string> body);
 
         /// <summary>
@@ -4247,6 +4886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string subjectId, List<string> body);
 
@@ -4262,6 +4902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         
+        
         System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
@@ -4276,6 +4917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserRoutingskillAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
@@ -4288,6 +4930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserSkillEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<UserSkillEntityListing> PutUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body);
 
@@ -4302,6 +4945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PutUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body);
 
         /// <summary>
@@ -4314,6 +4958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Routing Status</param>
         /// <returns>Task of RoutingStatus</returns>
+        
         
         System.Threading.Tasks.Task<RoutingStatus> PutUserRoutingstatusAsync (string userId, RoutingStatus body);
 
@@ -4328,6 +4973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Routing Status</param>
         /// <returns>Task of ApiResponse (RoutingStatus)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> PutUserRoutingstatusAsyncWithHttpInfo (string userId, RoutingStatus body);
 
         /// <summary>
@@ -4340,6 +4986,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>Task of UserState</returns>
+        
         
         System.Threading.Tasks.Task<UserState> PutUserStateAsync (string userId, UserState body);
 
@@ -4354,6 +5001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (UserState)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UserState>> PutUserStateAsyncWithHttpInfo (string userId, UserState body);
 
         /// <summary>
@@ -4366,6 +5014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="stationId">stationId</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task PutUserStationAssociatedstationStationIdAsync (string userId, string stationId);
 
@@ -4380,6 +5029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="stationId">stationId</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PutUserStationAssociatedstationStationIdAsyncWithHttpInfo (string userId, string stationId);
 
         /// <summary>
@@ -4393,6 +5043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="stationId">stationId</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PutUserStationDefaultstationStationIdAsync (string userId, string stationId);
 
         /// <summary>
@@ -4405,6 +5056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="stationId">stationId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PutUserStationDefaultstationStationIdAsyncWithHttpInfo (string userId, string stationId);
 
@@ -4507,6 +5159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns></returns>
         
+        
         public void DeleteAnalyticsUsersDetailsJob (string jobId)
         {
              DeleteAnalyticsUsersDetailsJobWithHttpInfo(jobId);
@@ -4518,6 +5171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteAnalyticsUsersDetailsJobWithHttpInfo (string jobId)
         { 
@@ -4602,6 +5256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteAnalyticsUsersDetailsJobAsync (string jobId)
         {
              await DeleteAnalyticsUsersDetailsJobAsyncWithHttpInfo(jobId);
@@ -4614,6 +5269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsUsersDetailsJobAsyncWithHttpInfo (string jobId)
         { 
@@ -4702,6 +5358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns></returns>
         
+        
         public void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId)
         {
              DeleteAuthorizationSubjectDivisionRoleWithHttpInfo(subjectId, divisionId, roleId);
@@ -4715,6 +5372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">the id of the division of the grant</param>
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId)
         { 
@@ -4809,6 +5467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId)
         {
              await DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo(subjectId, divisionId, roleId);
@@ -4823,6 +5482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">the id of the division of the grant</param>
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId)
         { 
@@ -4919,6 +5579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns></returns>
         
+        
         public void DeleteRoutingUserUtilization (string userId)
         {
              DeleteRoutingUserUtilizationWithHttpInfo(userId);
@@ -4930,6 +5591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteRoutingUserUtilizationWithHttpInfo (string userId)
         { 
@@ -5014,6 +5676,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteRoutingUserUtilizationAsync (string userId)
         {
              await DeleteRoutingUserUtilizationAsyncWithHttpInfo(userId);
@@ -5026,6 +5689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUserUtilizationAsyncWithHttpInfo (string userId)
         { 
@@ -5112,6 +5776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Object</returns>
         
+        
         public Object DeleteUser (string userId)
         {
              ApiResponse<Object> localVarResponse = DeleteUserWithHttpInfo(userId);
@@ -5124,6 +5789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object</returns>
+        
         
         public ApiResponse< Object > DeleteUserWithHttpInfo (string userId)
         { 
@@ -5208,6 +5874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of Object</returns>
         
+        
         public async System.Threading.Tasks.Task<Object> DeleteUserAsync (string userId)
         {
              ApiResponse<Object> localVarResponse = await DeleteUserAsyncWithHttpInfo(userId);
@@ -5221,6 +5888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserAsyncWithHttpInfo (string userId)
         { 
@@ -5308,6 +5976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <returns></returns>
         
+        
         public void DeleteUserRoutinglanguage (string userId, string languageId)
         {
              DeleteUserRoutinglanguageWithHttpInfo(userId, languageId);
@@ -5320,6 +5989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="languageId">languageId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteUserRoutinglanguageWithHttpInfo (string userId, string languageId)
         { 
@@ -5409,6 +6079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteUserRoutinglanguageAsync (string userId, string languageId)
         {
              await DeleteUserRoutinglanguageAsyncWithHttpInfo(userId, languageId);
@@ -5422,6 +6093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="languageId">languageId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId)
         { 
@@ -5514,6 +6186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns></returns>
         
+        
         public void DeleteUserRoutingskill (string userId, string skillId)
         {
              DeleteUserRoutingskillWithHttpInfo(userId, skillId);
@@ -5526,6 +6199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId)
         { 
@@ -5615,6 +6289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId)
         {
              await DeleteUserRoutingskillAsyncWithHttpInfo(userId, skillId);
@@ -5628,6 +6303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId)
         { 
@@ -5719,6 +6395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns></returns>
         
+        
         public void DeleteUserStationAssociatedstation (string userId)
         {
              DeleteUserStationAssociatedstationWithHttpInfo(userId);
@@ -5730,6 +6407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteUserStationAssociatedstationWithHttpInfo (string userId)
         { 
@@ -5814,6 +6492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteUserStationAssociatedstationAsync (string userId)
         {
              await DeleteUserStationAssociatedstationAsyncWithHttpInfo(userId);
@@ -5826,6 +6505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserStationAssociatedstationAsyncWithHttpInfo (string userId)
         { 
@@ -5912,6 +6592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns></returns>
         
+        
         public void DeleteUserStationDefaultstation (string userId)
         {
              DeleteUserStationDefaultstationWithHttpInfo(userId);
@@ -5923,6 +6604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteUserStationDefaultstationWithHttpInfo (string userId)
         { 
@@ -6007,6 +6689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteUserStationDefaultstationAsync (string userId)
         {
              await DeleteUserStationDefaultstationAsyncWithHttpInfo(userId);
@@ -6019,6 +6702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserStationDefaultstationAsyncWithHttpInfo (string userId)
         { 
@@ -6099,11 +6783,416 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get status for async query for user aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>AsyncQueryStatus</returns>
+        
+        /// Preview Endpoint
+        public AsyncQueryStatus GetAnalyticsUsersAggregatesJob (string jobId)
+        {
+             ApiResponse<AsyncQueryStatus> localVarResponse = GetAnalyticsUsersAggregatesJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get status for async query for user aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of AsyncQueryStatus</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< AsyncQueryStatus > GetAnalyticsUsersAggregatesJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersAggregatesJob");
+
+            var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsUsersAggregatesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsUsersAggregatesJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryStatus>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get status for async query for user aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of AsyncQueryStatus</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsUsersAggregatesJobAsync (string jobId)
+        {
+             ApiResponse<AsyncQueryStatus> localVarResponse = await GetAnalyticsUsersAggregatesJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get status for async query for user aggregates 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsUsersAggregatesJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersAggregatesJob");
+            
+
+            var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsUsersAggregatesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsUsersAggregatesJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryStatus>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>UserAsyncAggregateQueryResponse</returns>
+        
+        /// Preview Endpoint
+        public UserAsyncAggregateQueryResponse GetAnalyticsUsersAggregatesJobResults (string jobId, string cursor = null)
+        {
+             ApiResponse<UserAsyncAggregateQueryResponse> localVarResponse = GetAnalyticsUsersAggregatesJobResultsWithHttpInfo(jobId, cursor);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>ApiResponse of UserAsyncAggregateQueryResponse</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< UserAsyncAggregateQueryResponse > GetAnalyticsUsersAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersAggregatesJobResults");
+
+            var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsUsersAggregatesJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsUsersAggregatesJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAsyncAggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UserAsyncAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAsyncAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>Task of UserAsyncAggregateQueryResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<UserAsyncAggregateQueryResponse> GetAnalyticsUsersAggregatesJobResultsAsync (string jobId, string cursor = null)
+        {
+             ApiResponse<UserAsyncAggregateQueryResponse> localVarResponse = await GetAnalyticsUsersAggregatesJobResultsAsyncWithHttpInfo(jobId, cursor);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>Task of ApiResponse (UserAsyncAggregateQueryResponse)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<UserAsyncAggregateQueryResponse>> GetAnalyticsUsersAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersAggregatesJobResults");
+            
+
+            var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsUsersAggregatesJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsUsersAggregatesJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAsyncAggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UserAsyncAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAsyncAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get status for async query for user details 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>AsyncQueryStatus</returns>
+        
         
         public AsyncQueryStatus GetAnalyticsUsersDetailsJob (string jobId)
         {
@@ -6117,6 +7206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of AsyncQueryStatus</returns>
+        
         
         public ApiResponse< AsyncQueryStatus > GetAnalyticsUsersDetailsJobWithHttpInfo (string jobId)
         { 
@@ -6201,6 +7291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>Task of AsyncQueryStatus</returns>
         
+        
         public async System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsUsersDetailsJobAsync (string jobId)
         {
              ApiResponse<AsyncQueryStatus> localVarResponse = await GetAnalyticsUsersDetailsJobAsyncWithHttpInfo(jobId);
@@ -6214,6 +7305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsUsersDetailsJobAsyncWithHttpInfo (string jobId)
         { 
@@ -6302,6 +7394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>AnalyticsUserDetailsAsyncQueryResponse</returns>
         
+        
         public AnalyticsUserDetailsAsyncQueryResponse GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
         {
              ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> localVarResponse = GetAnalyticsUsersDetailsJobResultsWithHttpInfo(jobId, cursor, pageSize);
@@ -6316,6 +7409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>ApiResponse of AnalyticsUserDetailsAsyncQueryResponse</returns>
+        
         
         public ApiResponse< AnalyticsUserDetailsAsyncQueryResponse > GetAnalyticsUsersDetailsJobResultsWithHttpInfo (string jobId, string cursor = null, int? pageSize = null)
         { 
@@ -6404,6 +7498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of AnalyticsUserDetailsAsyncQueryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AnalyticsUserDetailsAsyncQueryResponse> GetAnalyticsUsersDetailsJobResultsAsync (string jobId, string cursor = null, int? pageSize = null)
         {
              ApiResponse<AnalyticsUserDetailsAsyncQueryResponse> localVarResponse = await GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo(jobId, cursor, pageSize);
@@ -6419,6 +7514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">The desired maximum number of results (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsUserDetailsAsyncQueryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsAsyncQueryResponse>> GetAnalyticsUsersDetailsJobResultsAsyncWithHttpInfo (string jobId, string cursor = null, int? pageSize = null)
         { 
@@ -6506,6 +7602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataAvailabilityResponse</returns>
         
+        
         public DataAvailabilityResponse GetAnalyticsUsersDetailsJobsAvailability ()
         {
              ApiResponse<DataAvailabilityResponse> localVarResponse = GetAnalyticsUsersDetailsJobsAvailabilityWithHttpInfo();
@@ -6517,6 +7614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataAvailabilityResponse</returns>
+        
         
         public ApiResponse< DataAvailabilityResponse > GetAnalyticsUsersDetailsJobsAvailabilityWithHttpInfo ()
         { 
@@ -6596,6 +7694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataAvailabilityResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<DataAvailabilityResponse> GetAnalyticsUsersDetailsJobsAvailabilityAsync ()
         {
              ApiResponse<DataAvailabilityResponse> localVarResponse = await GetAnalyticsUsersDetailsJobsAvailabilityAsyncWithHttpInfo();
@@ -6608,6 +7707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataAvailabilityResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DataAvailabilityResponse>> GetAnalyticsUsersDetailsJobsAvailabilityAsyncWithHttpInfo ()
         { 
@@ -6690,6 +7790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         public List<AuthzDivision> GetAuthorizationDivisionspermittedMe (string permission, string name = null)
         {
              ApiResponse<List<AuthzDivision>> localVarResponse = GetAuthorizationDivisionspermittedMeWithHttpInfo(permission, name);
@@ -6704,6 +7805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         public ApiResponse< List<AuthzDivision> > GetAuthorizationDivisionspermittedMeWithHttpInfo (string permission, string name = null)
         { 
             // verify the required parameter 'permission' is set
@@ -6789,6 +7891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeAsync (string permission, string name = null)
         {
              ApiResponse<List<AuthzDivision>> localVarResponse = await GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo(permission, name);
@@ -6804,6 +7907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;AuthzDivision&gt;)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo (string permission, string name = null)
         { 
             // verify the required parameter 'permission' is set
@@ -6892,6 +7996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DivsPermittedEntityListing</returns>
         
+        
         public DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DivsPermittedEntityListing> localVarResponse = GetAuthorizationDivisionspermittedPagedMeWithHttpInfo(permission, pageNumber, pageSize);
@@ -6906,6 +8011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
+        
         
         public ApiResponse< DivsPermittedEntityListing > GetAuthorizationDivisionspermittedPagedMeWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null)
         { 
@@ -6994,6 +8100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DivsPermittedEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeAsync (string permission, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DivsPermittedEntityListing> localVarResponse = await GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo(permission, pageNumber, pageSize);
@@ -7009,6 +8116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null)
         { 
@@ -7100,6 +8208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         public DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DivsPermittedEntityListing> localVarResponse = GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo(subjectId, permission, pageNumber, pageSize);
@@ -7116,6 +8225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         public ApiResponse< DivsPermittedEntityListing > GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'subjectId' is set
@@ -7208,6 +8318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdAsync (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DivsPermittedEntityListing> localVarResponse = await GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo(subjectId, permission, pageNumber, pageSize);
@@ -7225,6 +8336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'subjectId' is set
@@ -7317,6 +8429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>AuthzSubject</returns>
         
+        
         public AuthzSubject GetAuthorizationSubject (string subjectId)
         {
              ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectWithHttpInfo(subjectId);
@@ -7329,6 +8442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
+        
         
         public ApiResponse< AuthzSubject > GetAuthorizationSubjectWithHttpInfo (string subjectId)
         { 
@@ -7413,6 +8527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>Task of AuthzSubject</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId)
         {
              ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectAsyncWithHttpInfo(subjectId);
@@ -7426,6 +8541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId)
         { 
@@ -7511,6 +8627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthzSubject</returns>
         
+        
         public AuthzSubject GetAuthorizationSubjectsMe ()
         {
              ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectsMeWithHttpInfo();
@@ -7522,6 +8639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthzSubject</returns>
+        
         
         public ApiResponse< AuthzSubject > GetAuthorizationSubjectsMeWithHttpInfo ()
         { 
@@ -7601,6 +8719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthzSubject</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync ()
         {
              ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectsMeAsyncWithHttpInfo();
@@ -7613,6 +8732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo ()
         { 
@@ -7694,6 +8814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>FieldConfig</returns>
         [Obsolete]
+        
         public FieldConfig GetFieldconfig (string type)
         {
              ApiResponse<FieldConfig> localVarResponse = GetFieldconfigWithHttpInfo(type);
@@ -7707,6 +8828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>ApiResponse of FieldConfig</returns>
         [Obsolete]
+        
         public ApiResponse< FieldConfig > GetFieldconfigWithHttpInfo (string type)
         { 
             // verify the required parameter 'type' is set
@@ -7790,6 +8912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of FieldConfig</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<FieldConfig> GetFieldconfigAsync (string type)
         {
              ApiResponse<FieldConfig> localVarResponse = await GetFieldconfigAsyncWithHttpInfo(type);
@@ -7804,6 +8927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of ApiResponse (FieldConfig)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type)
         { 
             // verify the required parameter 'type' is set
@@ -7895,6 +9019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>UserProfileEntityListing</returns>
         [Obsolete]
+        
         public UserProfileEntityListing GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UserProfileEntityListing> localVarResponse = GetProfilesUsersWithHttpInfo(pageSize, pageNumber, id, jid, sortOrder, expand, integrationPresenceSource);
@@ -7914,6 +9039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>ApiResponse of UserProfileEntityListing</returns>
         [Obsolete]
+        
         public ApiResponse< UserProfileEntityListing > GetProfilesUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
         { 
 
@@ -8006,6 +9132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of UserProfileEntityListing</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<UserProfileEntityListing> GetProfilesUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UserProfileEntityListing> localVarResponse = await GetProfilesUsersAsyncWithHttpInfo(pageSize, pageNumber, id, jid, sortOrder, expand, integrationPresenceSource);
@@ -8026,6 +9153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (UserProfileEntityListing)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
         { 
 
@@ -8113,6 +9241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>AgentMaxUtilization</returns>
         
+        
         public AgentMaxUtilization GetRoutingUserUtilization (string userId)
         {
              ApiResponse<AgentMaxUtilization> localVarResponse = GetRoutingUserUtilizationWithHttpInfo(userId);
@@ -8125,6 +9254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        
         
         public ApiResponse< AgentMaxUtilization > GetRoutingUserUtilizationWithHttpInfo (string userId)
         { 
@@ -8209,6 +9339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of AgentMaxUtilization</returns>
         
+        
         public async System.Threading.Tasks.Task<AgentMaxUtilization> GetRoutingUserUtilizationAsync (string userId)
         {
              ApiResponse<AgentMaxUtilization> localVarResponse = await GetRoutingUserUtilizationAsyncWithHttpInfo(userId);
@@ -8222,6 +9353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId)
         { 
@@ -8311,6 +9443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>User</returns>
         
+        
         public User GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         {
              ApiResponse<User> localVarResponse = GetUserWithHttpInfo(userId, expand, integrationPresenceSource, state);
@@ -8326,6 +9459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>ApiResponse of User</returns>
+        
         
         public ApiResponse< User > GetUserWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         { 
@@ -8416,6 +9550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of User</returns>
         
+        
         public async System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         {
              ApiResponse<User> localVarResponse = await GetUserAsyncWithHttpInfo(userId, expand, integrationPresenceSource, state);
@@ -8432,6 +9567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (User)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         { 
@@ -8522,6 +9658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Adjacents</returns>
         
+        
         public Adjacents GetUserAdjacents (string userId, List<string> expand = null)
         {
              ApiResponse<Adjacents> localVarResponse = GetUserAdjacentsWithHttpInfo(userId, expand);
@@ -8535,6 +9672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Adjacents</returns>
+        
         
         public ApiResponse< Adjacents > GetUserAdjacentsWithHttpInfo (string userId, List<string> expand = null)
         { 
@@ -8621,6 +9759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of Adjacents</returns>
         
+        
         public async System.Threading.Tasks.Task<Adjacents> GetUserAdjacentsAsync (string userId, List<string> expand = null)
         {
              ApiResponse<Adjacents> localVarResponse = await GetUserAdjacentsAsyncWithHttpInfo(userId, expand);
@@ -8635,6 +9774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Adjacents)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Adjacents>> GetUserAdjacentsAsyncWithHttpInfo (string userId, List<string> expand = null)
         { 
@@ -8722,6 +9862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>CallForwarding</returns>
         
+        
         public CallForwarding GetUserCallforwarding (string userId)
         {
              ApiResponse<CallForwarding> localVarResponse = GetUserCallforwardingWithHttpInfo(userId);
@@ -8734,6 +9875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of CallForwarding</returns>
+        
         
         public ApiResponse< CallForwarding > GetUserCallforwardingWithHttpInfo (string userId)
         { 
@@ -8818,6 +9960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of CallForwarding</returns>
         
+        
         public async System.Threading.Tasks.Task<CallForwarding> GetUserCallforwardingAsync (string userId)
         {
              ApiResponse<CallForwarding> localVarResponse = await GetUserCallforwardingAsyncWithHttpInfo(userId);
@@ -8831,6 +9974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CallForwarding>> GetUserCallforwardingAsyncWithHttpInfo (string userId)
         { 
@@ -8918,6 +10062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>List&lt;User&gt;</returns>
         
+        
         public List<User> GetUserDirectreports (string userId, List<string> expand = null)
         {
              ApiResponse<List<User>> localVarResponse = GetUserDirectreportsWithHttpInfo(userId, expand);
@@ -8931,6 +10076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
+        
         
         public ApiResponse< List<User> > GetUserDirectreportsWithHttpInfo (string userId, List<string> expand = null)
         { 
@@ -9017,6 +10163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of List&lt;User&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<User>> GetUserDirectreportsAsync (string userId, List<string> expand = null)
         {
              ApiResponse<List<User>> localVarResponse = await GetUserDirectreportsAsyncWithHttpInfo(userId, expand);
@@ -9031,6 +10178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserDirectreportsAsyncWithHttpInfo (string userId, List<string> expand = null)
         { 
@@ -9122,6 +10270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UserEntityListing</returns>
         [Obsolete]
+        
         public UserEntityListing GetUserFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<UserEntityListing> localVarResponse = GetUserFavoritesWithHttpInfo(userId, pageSize, pageNumber, sortOrder, expand);
@@ -9139,6 +10288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         [Obsolete]
+        
         public ApiResponse< UserEntityListing > GetUserFavoritesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         { 
             // verify the required parameter 'userId' is set
@@ -9230,6 +10380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UserEntityListing</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<UserEntityListing> GetUserFavoritesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<UserEntityListing> localVarResponse = await GetUserFavoritesAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder, expand);
@@ -9248,6 +10399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUserFavoritesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         { 
             // verify the required parameter 'userId' is set
@@ -9338,6 +10490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Geolocation</returns>
         
+        
         public Geolocation GetUserGeolocation (string userId, string clientId)
         {
              ApiResponse<Geolocation> localVarResponse = GetUserGeolocationWithHttpInfo(userId, clientId);
@@ -9351,6 +10504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>ApiResponse of Geolocation</returns>
+        
         
         public ApiResponse< Geolocation > GetUserGeolocationWithHttpInfo (string userId, string clientId)
         { 
@@ -9440,6 +10594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Task of Geolocation</returns>
         
+        
         public async System.Threading.Tasks.Task<Geolocation> GetUserGeolocationAsync (string userId, string clientId)
         {
              ApiResponse<Geolocation> localVarResponse = await GetUserGeolocationAsyncWithHttpInfo(userId, clientId);
@@ -9454,6 +10609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserGeolocationAsyncWithHttpInfo (string userId, string clientId)
         { 
@@ -9545,6 +10701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>OutOfOffice</returns>
         
+        
         public OutOfOffice GetUserOutofoffice (string userId)
         {
              ApiResponse<OutOfOffice> localVarResponse = GetUserOutofofficeWithHttpInfo(userId);
@@ -9557,6 +10714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of OutOfOffice</returns>
+        
         
         public ApiResponse< OutOfOffice > GetUserOutofofficeWithHttpInfo (string userId)
         { 
@@ -9641,6 +10799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of OutOfOffice</returns>
         
+        
         public async System.Threading.Tasks.Task<OutOfOffice> GetUserOutofofficeAsync (string userId)
         {
              ApiResponse<OutOfOffice> localVarResponse = await GetUserOutofofficeAsyncWithHttpInfo(userId);
@@ -9654,6 +10813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (OutOfOffice)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutOfOffice>> GetUserOutofofficeAsyncWithHttpInfo (string userId)
         { 
@@ -9742,6 +10902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>UserProfile</returns>
         [Obsolete]
+        
         public UserProfile GetUserProfile (string userId, List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UserProfile> localVarResponse = GetUserProfileWithHttpInfo(userId, expand, integrationPresenceSource);
@@ -9757,6 +10918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>ApiResponse of UserProfile</returns>
         [Obsolete]
+        
         public ApiResponse< UserProfile > GetUserProfileWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'userId' is set
@@ -9844,6 +11006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>Task of UserProfile</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<UserProfile> GetUserProfileAsync (string userId, List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UserProfile> localVarResponse = await GetUserProfileAsyncWithHttpInfo(userId, expand, integrationPresenceSource);
@@ -9860,6 +11023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <returns>Task of ApiResponse (UserProfile)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'userId' is set
@@ -9947,6 +11111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>List&lt;string&gt;</returns>
         
+        
         public List<string> GetUserProfileskills (string userId)
         {
              ApiResponse<List<string>> localVarResponse = GetUserProfileskillsWithHttpInfo(userId);
@@ -9959,6 +11124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         
         public ApiResponse< List<string> > GetUserProfileskillsWithHttpInfo (string userId)
         { 
@@ -10043,6 +11209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<string>> GetUserProfileskillsAsync (string userId)
         {
              ApiResponse<List<string>> localVarResponse = await GetUserProfileskillsAsyncWithHttpInfo(userId);
@@ -10056,6 +11223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> GetUserProfileskillsAsyncWithHttpInfo (string userId)
         { 
@@ -10146,6 +11314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         public UserQueueEntityListing GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = GetUserQueuesWithHttpInfo(userId, pageSize, pageNumber, joined, divisionId);
@@ -10162,6 +11331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        
         
         public ApiResponse< UserQueueEntityListing > GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         { 
@@ -10254,6 +11424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserQueueEntityListing> GetUserQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = await GetUserQueuesAsyncWithHttpInfo(userId, pageSize, pageNumber, joined, divisionId);
@@ -10271,6 +11442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         { 
@@ -10361,6 +11533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <returns>UserAuthorization</returns>
         
+        
         public UserAuthorization GetUserRoles (string subjectId)
         {
              ApiResponse<UserAuthorization> localVarResponse = GetUserRolesWithHttpInfo(subjectId);
@@ -10373,6 +11546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         
         public ApiResponse< UserAuthorization > GetUserRolesWithHttpInfo (string subjectId)
         { 
@@ -10457,6 +11631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
         
+        
         public async System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string subjectId)
         {
              ApiResponse<UserAuthorization> localVarResponse = await GetUserRolesAsyncWithHttpInfo(subjectId);
@@ -10470,6 +11645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string subjectId)
         { 
@@ -10559,6 +11735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserLanguageEntityListing</returns>
         
+        
         public UserLanguageEntityListing GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<UserLanguageEntityListing> localVarResponse = GetUserRoutinglanguagesWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
@@ -10574,6 +11751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        
         
         public ApiResponse< UserLanguageEntityListing > GetUserRoutinglanguagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -10664,6 +11842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserLanguageEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserLanguageEntityListing> GetUserRoutinglanguagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<UserLanguageEntityListing> localVarResponse = await GetUserRoutinglanguagesAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
@@ -10680,6 +11859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> GetUserRoutinglanguagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -10772,6 +11952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserSkillEntityListing</returns>
         
+        
         public UserSkillEntityListing GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = GetUserRoutingskillsWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
@@ -10787,6 +11968,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        
         
         public ApiResponse< UserSkillEntityListing > GetUserRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -10877,6 +12059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserSkillEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserSkillEntityListing> GetUserRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = await GetUserRoutingskillsAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
@@ -10893,6 +12076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -10982,6 +12166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>RoutingStatus</returns>
         
+        
         public RoutingStatus GetUserRoutingstatus (string userId)
         {
              ApiResponse<RoutingStatus> localVarResponse = GetUserRoutingstatusWithHttpInfo(userId);
@@ -10994,6 +12179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of RoutingStatus</returns>
+        
         
         public ApiResponse< RoutingStatus > GetUserRoutingstatusWithHttpInfo (string userId)
         { 
@@ -11078,6 +12264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of RoutingStatus</returns>
         
+        
         public async System.Threading.Tasks.Task<RoutingStatus> GetUserRoutingstatusAsync (string userId)
         {
              ApiResponse<RoutingStatus> localVarResponse = await GetUserRoutingstatusAsyncWithHttpInfo(userId);
@@ -11091,6 +12278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (RoutingStatus)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> GetUserRoutingstatusAsyncWithHttpInfo (string userId)
         { 
@@ -11180,6 +12368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>UserSkillGroupEntityListing</returns>
         
+        
         public UserSkillGroupEntityListing GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null)
         {
              ApiResponse<UserSkillGroupEntityListing> localVarResponse = GetUserSkillgroupsWithHttpInfo(userId, pageSize, after, before);
@@ -11195,6 +12384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next page (optional)</param>
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>ApiResponse of UserSkillGroupEntityListing</returns>
+        
         
         public ApiResponse< UserSkillGroupEntityListing > GetUserSkillgroupsWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null)
         { 
@@ -11285,6 +12475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>Task of UserSkillGroupEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserSkillGroupEntityListing> GetUserSkillgroupsAsync (string userId, int? pageSize = null, string after = null, string before = null)
         {
              ApiResponse<UserSkillGroupEntityListing> localVarResponse = await GetUserSkillgroupsAsyncWithHttpInfo(userId, pageSize, after, before);
@@ -11301,6 +12492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next page (optional)</param>
         /// <param name="before">The cursor that points to the previous page (optional)</param>
         /// <returns>Task of ApiResponse (UserSkillGroupEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserSkillGroupEntityListing>> GetUserSkillgroupsAsyncWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null)
         { 
@@ -11390,6 +12582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>UserState</returns>
         
+        
         public UserState GetUserState (string userId)
         {
              ApiResponse<UserState> localVarResponse = GetUserStateWithHttpInfo(userId);
@@ -11402,6 +12595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of UserState</returns>
+        
         
         public ApiResponse< UserState > GetUserStateWithHttpInfo (string userId)
         { 
@@ -11486,6 +12680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserState</returns>
         
+        
         public async System.Threading.Tasks.Task<UserState> GetUserStateAsync (string userId)
         {
              ApiResponse<UserState> localVarResponse = await GetUserStateAsyncWithHttpInfo(userId);
@@ -11499,6 +12694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserState)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserState>> GetUserStateAsyncWithHttpInfo (string userId)
         { 
@@ -11585,6 +12781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>UserStations</returns>
         
+        
         public UserStations GetUserStation (string userId)
         {
              ApiResponse<UserStations> localVarResponse = GetUserStationWithHttpInfo(userId);
@@ -11597,6 +12794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of UserStations</returns>
+        
         
         public ApiResponse< UserStations > GetUserStationWithHttpInfo (string userId)
         { 
@@ -11681,6 +12879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserStations</returns>
         
+        
         public async System.Threading.Tasks.Task<UserStations> GetUserStationAsync (string userId)
         {
              ApiResponse<UserStations> localVarResponse = await GetUserStationAsyncWithHttpInfo(userId);
@@ -11694,6 +12893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserStations)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserStations>> GetUserStationAsyncWithHttpInfo (string userId)
         { 
@@ -11781,6 +12981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>List&lt;User&gt;</returns>
         
+        
         public List<User> GetUserSuperiors (string userId, List<string> expand = null)
         {
              ApiResponse<List<User>> localVarResponse = GetUserSuperiorsWithHttpInfo(userId, expand);
@@ -11794,6 +12995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
+        
         
         public ApiResponse< List<User> > GetUserSuperiorsWithHttpInfo (string userId, List<string> expand = null)
         { 
@@ -11880,6 +13082,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of List&lt;User&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<User>> GetUserSuperiorsAsync (string userId, List<string> expand = null)
         {
              ApiResponse<List<User>> localVarResponse = await GetUserSuperiorsAsyncWithHttpInfo(userId, expand);
@@ -11894,6 +13097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserSuperiorsAsyncWithHttpInfo (string userId, List<string> expand = null)
         { 
@@ -11983,6 +13187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustorEntityListing</returns>
         
+        
         public TrustorEntityListing GetUserTrustors (string userId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustorEntityListing> localVarResponse = GetUserTrustorsWithHttpInfo(userId, pageSize, pageNumber);
@@ -11997,6 +13202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustorEntityListing</returns>
+        
         
         public ApiResponse< TrustorEntityListing > GetUserTrustorsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -12085,6 +13291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustorEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TrustorEntityListing> GetUserTrustorsAsync (string userId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustorEntityListing> localVarResponse = await GetUserTrustorsAsyncWithHttpInfo(userId, pageSize, pageNumber);
@@ -12100,6 +13307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustorEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrustorEntityListing>> GetUserTrustorsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -12195,6 +13403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
         
+        
         public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         {
              ApiResponse<UserEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, state);
@@ -12214,6 +13423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
+        
         
         public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         { 
@@ -12309,6 +13519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         {
              ApiResponse<UserEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, state);
@@ -12329,6 +13540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
         { 
@@ -12429,6 +13641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
         
+        
         public DevelopmentActivityListing GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
              ApiResponse<DevelopmentActivityListing> localVarResponse = GetUsersDevelopmentActivitiesWithHttpInfo(userId, moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
@@ -12452,6 +13665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
+        
         
         public ApiResponse< DevelopmentActivityListing > GetUsersDevelopmentActivitiesWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
@@ -12555,6 +13769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesAsync (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
              ApiResponse<DevelopmentActivityListing> localVarResponse = await GetUsersDevelopmentActivitiesAsyncWithHttpInfo(userId, moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
@@ -12579,6 +13794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
@@ -12682,6 +13898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
         
+        
         public DevelopmentActivityListing GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
              ApiResponse<DevelopmentActivityListing> localVarResponse = GetUsersDevelopmentActivitiesMeWithHttpInfo(moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
@@ -12704,6 +13921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
+        
         
         public ApiResponse< DevelopmentActivityListing > GetUsersDevelopmentActivitiesMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
@@ -12805,6 +14023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
              ApiResponse<DevelopmentActivityListing> localVarResponse = await GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
@@ -12828,6 +14047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
@@ -12921,6 +14141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Specifies the activity type.</param>
         /// <returns>DevelopmentActivity</returns>
         
+        
         public DevelopmentActivity GetUsersDevelopmentActivity (string activityId, string type)
         {
              ApiResponse<DevelopmentActivity> localVarResponse = GetUsersDevelopmentActivityWithHttpInfo(activityId, type);
@@ -12934,6 +14155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
         /// <param name="type">Specifies the activity type.</param>
         /// <returns>ApiResponse of DevelopmentActivity</returns>
+        
         
         public ApiResponse< DevelopmentActivity > GetUsersDevelopmentActivityWithHttpInfo (string activityId, string type)
         { 
@@ -13023,6 +14245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Specifies the activity type.</param>
         /// <returns>Task of DevelopmentActivity</returns>
         
+        
         public async System.Threading.Tasks.Task<DevelopmentActivity> GetUsersDevelopmentActivityAsync (string activityId, string type)
         {
              ApiResponse<DevelopmentActivity> localVarResponse = await GetUsersDevelopmentActivityAsyncWithHttpInfo(activityId, type);
@@ -13037,6 +14260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
         /// <param name="type">Specifies the activity type.</param>
         /// <returns>Task of ApiResponse (DevelopmentActivity)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivity>> GetUsersDevelopmentActivityAsyncWithHttpInfo (string activityId, string type)
         { 
@@ -13129,6 +14353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>UserMe</returns>
         
+        
         public UserMe GetUsersMe (List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UserMe> localVarResponse = GetUsersMeWithHttpInfo(expand, integrationPresenceSource);
@@ -13142,6 +14367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>ApiResponse of UserMe</returns>
+        
         
         public ApiResponse< UserMe > GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null)
         { 
@@ -13225,6 +14451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of UserMe</returns>
         
+        
         public async System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UserMe> localVarResponse = await GetUsersMeAsyncWithHttpInfo(expand, integrationPresenceSource);
@@ -13239,6 +14466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null)
         { 
@@ -13324,6 +14552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>UsersSearchResponse</returns>
         
+        
         public UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = GetUsersSearchWithHttpInfo(q64, expand, integrationPresenceSource);
@@ -13338,6 +14567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         
         public ApiResponse< UsersSearchResponse > GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null)
         { 
@@ -13426,6 +14656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await GetUsersSearchAsyncWithHttpInfo(q64, expand, integrationPresenceSource);
@@ -13441,6 +14672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null)
         { 
@@ -13530,6 +14762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>User</returns>
         
+        
         public User PatchUser (string userId, UpdateUser body)
         {
              ApiResponse<User> localVarResponse = PatchUserWithHttpInfo(userId, body);
@@ -13543,6 +14776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
+        
         
         public ApiResponse< User > PatchUserWithHttpInfo (string userId, UpdateUser body)
         { 
@@ -13637,6 +14871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>Task of User</returns>
         
+        
         public async System.Threading.Tasks.Task<User> PatchUserAsync (string userId, UpdateUser body)
         {
              ApiResponse<User> localVarResponse = await PatchUserAsyncWithHttpInfo(userId, body);
@@ -13651,6 +14886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<User>> PatchUserAsyncWithHttpInfo (string userId, UpdateUser body)
         { 
@@ -13748,6 +14984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call forwarding</param>
         /// <returns>CallForwarding</returns>
         
+        
         public CallForwarding PatchUserCallforwarding (string userId, CallForwarding body)
         {
              ApiResponse<CallForwarding> localVarResponse = PatchUserCallforwardingWithHttpInfo(userId, body);
@@ -13761,6 +14998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Call forwarding</param>
         /// <returns>ApiResponse of CallForwarding</returns>
+        
         
         public ApiResponse< CallForwarding > PatchUserCallforwardingWithHttpInfo (string userId, CallForwarding body)
         { 
@@ -13855,6 +15093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call forwarding</param>
         /// <returns>Task of CallForwarding</returns>
         
+        
         public async System.Threading.Tasks.Task<CallForwarding> PatchUserCallforwardingAsync (string userId, CallForwarding body)
         {
              ApiResponse<CallForwarding> localVarResponse = await PatchUserCallforwardingAsyncWithHttpInfo(userId, body);
@@ -13869,6 +15108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Call forwarding</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PatchUserCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body)
         { 
@@ -13967,6 +15207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Geolocation</returns>
         
+        
         public Geolocation PatchUserGeolocation (string userId, string clientId, Geolocation body)
         {
              ApiResponse<Geolocation> localVarResponse = PatchUserGeolocationWithHttpInfo(userId, clientId, body);
@@ -13981,6 +15222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
+        
         
         public ApiResponse< Geolocation > PatchUserGeolocationWithHttpInfo (string userId, string clientId, Geolocation body)
         { 
@@ -14080,6 +15322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Task of Geolocation</returns>
         
+        
         public async System.Threading.Tasks.Task<Geolocation> PatchUserGeolocationAsync (string userId, string clientId, Geolocation body)
         {
              ApiResponse<Geolocation> localVarResponse = await PatchUserGeolocationAsyncWithHttpInfo(userId, clientId, body);
@@ -14095,6 +15338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body)
         { 
@@ -14198,6 +15442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>UserQueue</returns>
         
+        
         public UserQueue PatchUserQueue (string queueId, string userId, UserQueue body)
         {
              ApiResponse<UserQueue> localVarResponse = PatchUserQueueWithHttpInfo(queueId, userId, body);
@@ -14212,6 +15457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of UserQueue</returns>
+        
         
         public ApiResponse< UserQueue > PatchUserQueueWithHttpInfo (string queueId, string userId, UserQueue body)
         { 
@@ -14311,6 +15557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Member</param>
         /// <returns>Task of UserQueue</returns>
         
+        
         public async System.Threading.Tasks.Task<UserQueue> PatchUserQueueAsync (string queueId, string userId, UserQueue body)
         {
              ApiResponse<UserQueue> localVarResponse = await PatchUserQueueAsyncWithHttpInfo(queueId, userId, body);
@@ -14326,6 +15573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (UserQueue)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserQueueAsyncWithHttpInfo (string queueId, string userId, UserQueue body)
         { 
@@ -14429,6 +15677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
         
+        
         public UserQueueEntityListing PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = PatchUserQueuesWithHttpInfo(userId, body, divisionId);
@@ -14443,6 +15692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User Queues</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        
         
         public ApiResponse< UserQueueEntityListing > PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null)
         { 
@@ -14539,6 +15789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserQueuesAsync (string userId, List<UserQueue> body, List<string> divisionId = null)
         {
              ApiResponse<UserQueueEntityListing> localVarResponse = await PatchUserQueuesAsyncWithHttpInfo(userId, body, divisionId);
@@ -14554,6 +15805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User Queues</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null)
         { 
@@ -14653,6 +15905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserRoutingLanguage</returns>
         
+        
         public UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
         {
              ApiResponse<UserRoutingLanguage> localVarResponse = PatchUserRoutinglanguageWithHttpInfo(userId, languageId, body);
@@ -14667,6 +15920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        
         
         public ApiResponse< UserRoutingLanguage > PatchUserRoutinglanguageWithHttpInfo (string userId, string languageId, UserRoutingLanguage body)
         { 
@@ -14766,6 +16020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserRoutingLanguage</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body)
         {
              ApiResponse<UserRoutingLanguage> localVarResponse = await PatchUserRoutinglanguageAsyncWithHttpInfo(userId, languageId, body);
@@ -14781,6 +16036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">languageId</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PatchUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId, UserRoutingLanguage body)
         { 
@@ -14883,6 +16139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserLanguageEntityListing</returns>
         
+        
         public UserLanguageEntityListing PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body)
         {
              ApiResponse<UserLanguageEntityListing> localVarResponse = PatchUserRoutinglanguagesBulkWithHttpInfo(userId, body);
@@ -14896,6 +16153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        
         
         public ApiResponse< UserLanguageEntityListing > PatchUserRoutinglanguagesBulkWithHttpInfo (string userId, List<UserRoutingLanguagePost> body)
         { 
@@ -14990,6 +16248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserLanguageEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserLanguageEntityListing> PatchUserRoutinglanguagesBulkAsync (string userId, List<UserRoutingLanguagePost> body)
         {
              ApiResponse<UserLanguageEntityListing> localVarResponse = await PatchUserRoutinglanguagesBulkAsyncWithHttpInfo(userId, body);
@@ -15004,6 +16263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> PatchUserRoutinglanguagesBulkAsyncWithHttpInfo (string userId, List<UserRoutingLanguagePost> body)
         { 
@@ -15101,6 +16361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserSkillEntityListing</returns>
         
+        
         public UserSkillEntityListing PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = PatchUserRoutingskillsBulkWithHttpInfo(userId, body);
@@ -15114,6 +16375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        
         
         public ApiResponse< UserSkillEntityListing > PatchUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
         { 
@@ -15208,6 +16470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserSkillEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserSkillEntityListing> PatchUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = await PatchUserRoutingskillsBulkAsyncWithHttpInfo(userId, body);
@@ -15222,6 +16485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PatchUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
         { 
@@ -15318,6 +16582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Users</param>
         /// <returns>UserEntityListing</returns>
         
+        
         public UserEntityListing PatchUsersBulk (List<PatchUser> body)
         {
              ApiResponse<UserEntityListing> localVarResponse = PatchUsersBulkWithHttpInfo(body);
@@ -15330,6 +16595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Users</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
+        
         
         public ApiResponse< UserEntityListing > PatchUsersBulkWithHttpInfo (List<PatchUser> body)
         { 
@@ -15419,6 +16685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Users</param>
         /// <returns>Task of UserEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserEntityListing> PatchUsersBulkAsync (List<PatchUser> body)
         {
              ApiResponse<UserEntityListing> localVarResponse = await PatchUsersBulkAsyncWithHttpInfo(body);
@@ -15432,6 +16699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Users</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> PatchUsersBulkAsyncWithHttpInfo (List<PatchUser> body)
         { 
@@ -15517,11 +16785,442 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Query for user activity observations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>UserActivityResponse</returns>
+        
+        /// Preview Endpoint
+        public UserActivityResponse PostAnalyticsUsersActivityQuery (UserActivityQuery body, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<UserActivityResponse> localVarResponse = PostAnalyticsUsersActivityQueryWithHttpInfo(body, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for user activity observations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>ApiResponse of UserActivityResponse</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< UserActivityResponse > PostAnalyticsUsersActivityQueryWithHttpInfo (UserActivityQuery body, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersActivityQuery");
+
+            var localVarPath = "/api/v2/analytics/users/activity/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersActivityQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersActivityQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserActivityResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UserActivityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserActivityResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query for user activity observations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>Task of UserActivityResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<UserActivityResponse> PostAnalyticsUsersActivityQueryAsync (UserActivityQuery body, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<UserActivityResponse> localVarResponse = await PostAnalyticsUsersActivityQueryAsyncWithHttpInfo(body, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for user activity observations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="pageSize">The desired page size (optional)</param>
+        /// <param name="pageNumber">The desired page number (optional)</param>
+        /// <returns>Task of ApiResponse (UserActivityResponse)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<UserActivityResponse>> PostAnalyticsUsersActivityQueryAsyncWithHttpInfo (UserActivityQuery body, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersActivityQuery");
+            
+
+            var localVarPath = "/api/v2/analytics/users/activity/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersActivityQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersActivityQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserActivityResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UserActivityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserActivityResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query for user aggregates asynchronously 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AsyncQueryResponse</returns>
+        
+        /// Preview Endpoint
+        public AsyncQueryResponse PostAnalyticsUsersAggregatesJobs (UserAsyncAggregationQuery body)
+        {
+             ApiResponse<AsyncQueryResponse> localVarResponse = PostAnalyticsUsersAggregatesJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for user aggregates asynchronously 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AsyncQueryResponse</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< AsyncQueryResponse > PostAnalyticsUsersAggregatesJobsWithHttpInfo (UserAsyncAggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersAggregatesJobs");
+
+            var localVarPath = "/api/v2/analytics/users/aggregates/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersAggregatesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersAggregatesJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query for user aggregates asynchronously 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AsyncQueryResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsUsersAggregatesJobsAsync (UserAsyncAggregationQuery body)
+        {
+             ApiResponse<AsyncQueryResponse> localVarResponse = await PostAnalyticsUsersAggregatesJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for user aggregates asynchronously 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsUsersAggregatesJobsAsyncWithHttpInfo (UserAsyncAggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersAggregatesJobs");
+            
+
+            var localVarPath = "/api/v2/analytics/users/aggregates/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersAggregatesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsUsersAggregatesJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UserAggregateQueryResponse</returns>
+        
         
         public UserAggregateQueryResponse PostAnalyticsUsersAggregatesQuery (UserAggregationQuery body)
         {
@@ -15535,6 +17234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UserAggregateQueryResponse</returns>
+        
         
         public ApiResponse< UserAggregateQueryResponse > PostAnalyticsUsersAggregatesQueryWithHttpInfo (UserAggregationQuery body)
         { 
@@ -15624,6 +17324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of UserAggregateQueryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<UserAggregateQueryResponse> PostAnalyticsUsersAggregatesQueryAsync (UserAggregationQuery body)
         {
              ApiResponse<UserAggregateQueryResponse> localVarResponse = await PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo(body);
@@ -15637,6 +17338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UserAggregateQueryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserAggregateQueryResponse>> PostAnalyticsUsersAggregatesQueryAsyncWithHttpInfo (UserAggregationQuery body)
         { 
@@ -15728,6 +17430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>AsyncQueryResponse</returns>
         
+        
         public AsyncQueryResponse PostAnalyticsUsersDetailsJobs (AsyncUserDetailsQuery body)
         {
              ApiResponse<AsyncQueryResponse> localVarResponse = PostAnalyticsUsersDetailsJobsWithHttpInfo(body);
@@ -15740,6 +17443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AsyncQueryResponse</returns>
+        
         
         public ApiResponse< AsyncQueryResponse > PostAnalyticsUsersDetailsJobsWithHttpInfo (AsyncUserDetailsQuery body)
         { 
@@ -15829,6 +17533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of AsyncQueryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsUsersDetailsJobsAsync (AsyncUserDetailsQuery body)
         {
              ApiResponse<AsyncQueryResponse> localVarResponse = await PostAnalyticsUsersDetailsJobsAsyncWithHttpInfo(body);
@@ -15842,6 +17547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsUsersDetailsJobsAsyncWithHttpInfo (AsyncUserDetailsQuery body)
         { 
@@ -15933,6 +17639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>AnalyticsUserDetailsQueryResponse</returns>
         
+        
         public AnalyticsUserDetailsQueryResponse PostAnalyticsUsersDetailsQuery (UserDetailsQuery body)
         {
              ApiResponse<AnalyticsUserDetailsQueryResponse> localVarResponse = PostAnalyticsUsersDetailsQueryWithHttpInfo(body);
@@ -15945,6 +17652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AnalyticsUserDetailsQueryResponse</returns>
+        
         
         public ApiResponse< AnalyticsUserDetailsQueryResponse > PostAnalyticsUsersDetailsQueryWithHttpInfo (UserDetailsQuery body)
         { 
@@ -16034,6 +17742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of AnalyticsUserDetailsQueryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AnalyticsUserDetailsQueryResponse> PostAnalyticsUsersDetailsQueryAsync (UserDetailsQuery body)
         {
              ApiResponse<AnalyticsUserDetailsQueryResponse> localVarResponse = await PostAnalyticsUsersDetailsQueryAsyncWithHttpInfo(body);
@@ -16047,6 +17756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AnalyticsUserDetailsQueryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsQueryResponse>> PostAnalyticsUsersDetailsQueryAsyncWithHttpInfo (UserDetailsQuery body)
         { 
@@ -16138,6 +17848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>UserObservationQueryResponse</returns>
         
+        
         public UserObservationQueryResponse PostAnalyticsUsersObservationsQuery (UserObservationQuery body)
         {
              ApiResponse<UserObservationQueryResponse> localVarResponse = PostAnalyticsUsersObservationsQueryWithHttpInfo(body);
@@ -16150,6 +17861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UserObservationQueryResponse</returns>
+        
         
         public ApiResponse< UserObservationQueryResponse > PostAnalyticsUsersObservationsQueryWithHttpInfo (UserObservationQuery body)
         { 
@@ -16239,6 +17951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of UserObservationQueryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<UserObservationQueryResponse> PostAnalyticsUsersObservationsQueryAsync (UserObservationQuery body)
         {
              ApiResponse<UserObservationQueryResponse> localVarResponse = await PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo(body);
@@ -16252,6 +17965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UserObservationQueryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserObservationQueryResponse>> PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo (UserObservationQuery body)
         { 
@@ -16345,6 +18059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationSubjectBulkadd (string subjectId, RoleDivisionGrants body, string subjectType = null)
         {
              PostAuthorizationSubjectBulkaddWithHttpInfo(subjectId, body, subjectType);
@@ -16358,6 +18073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationSubjectBulkaddWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null)
         { 
@@ -16454,6 +18170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationSubjectBulkaddAsync (string subjectId, RoleDivisionGrants body, string subjectType = null)
         {
              await PostAuthorizationSubjectBulkaddAsyncWithHttpInfo(subjectId, body, subjectType);
@@ -16468,6 +18185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkaddAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null)
         { 
@@ -16566,6 +18284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationSubjectBulkremove (string subjectId, RoleDivisionGrants body)
         {
              PostAuthorizationSubjectBulkremoveWithHttpInfo(subjectId, body);
@@ -16578,6 +18297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationSubjectBulkremoveWithHttpInfo (string subjectId, RoleDivisionGrants body)
         { 
@@ -16672,6 +18392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationSubjectBulkremoveAsync (string subjectId, RoleDivisionGrants body)
         {
              await PostAuthorizationSubjectBulkremoveAsyncWithHttpInfo(subjectId, body);
@@ -16685,6 +18406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkremoveAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body)
         { 
@@ -16783,6 +18505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationSubjectBulkreplace (string subjectId, RoleDivisionGrants body, string subjectType = null)
         {
              PostAuthorizationSubjectBulkreplaceWithHttpInfo(subjectId, body, subjectType);
@@ -16796,6 +18519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationSubjectBulkreplaceWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null)
         { 
@@ -16892,6 +18616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationSubjectBulkreplaceAsync (string subjectId, RoleDivisionGrants body, string subjectType = null)
         {
              await PostAuthorizationSubjectBulkreplaceAsyncWithHttpInfo(subjectId, body, subjectType);
@@ -16906,6 +18631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkreplaceAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null)
         { 
@@ -17006,6 +18732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null)
         {
              PostAuthorizationSubjectDivisionRoleWithHttpInfo(subjectId, divisionId, roleId, subjectType);
@@ -17020,6 +18747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role to grant</param>
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null)
         { 
@@ -17116,6 +18844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId, string subjectType = null)
         {
              await PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo(subjectId, divisionId, roleId, subjectType);
@@ -17131,6 +18860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role to grant</param>
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null)
         { 
@@ -17229,6 +18959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>List&lt;UserExternalIdentifier&gt;</returns>
         
+        
         public List<UserExternalIdentifier> PostUserExternalid (string userId, UserExternalIdentifier body)
         {
              ApiResponse<List<UserExternalIdentifier>> localVarResponse = PostUserExternalidWithHttpInfo(userId, body);
@@ -17242,6 +18973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;UserExternalIdentifier&gt;</returns>
+        
         
         public ApiResponse< List<UserExternalIdentifier> > PostUserExternalidWithHttpInfo (string userId, UserExternalIdentifier body)
         { 
@@ -17336,6 +19068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of List&lt;UserExternalIdentifier&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<UserExternalIdentifier>> PostUserExternalidAsync (string userId, UserExternalIdentifier body)
         {
              ApiResponse<List<UserExternalIdentifier>> localVarResponse = await PostUserExternalidAsyncWithHttpInfo(userId, body);
@@ -17350,6 +19083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;UserExternalIdentifier&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<UserExternalIdentifier>>> PostUserExternalidAsyncWithHttpInfo (string userId, UserExternalIdentifier body)
         { 
@@ -17447,6 +19181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Resend the invitation even if one is already outstanding (optional, default to false)</param>
         /// <returns></returns>
         
+        
         public void PostUserInvite (string userId, bool? force = null)
         {
              PostUserInviteWithHttpInfo(userId, force);
@@ -17459,6 +19194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="force">Resend the invitation even if one is already outstanding (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostUserInviteWithHttpInfo (string userId, bool? force = null)
         { 
@@ -17545,6 +19281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Resend the invitation even if one is already outstanding (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostUserInviteAsync (string userId, bool? force = null)
         {
              await PostUserInviteAsyncWithHttpInfo(userId, force);
@@ -17558,6 +19295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="force">Resend the invitation even if one is already outstanding (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUserInviteAsyncWithHttpInfo (string userId, bool? force = null)
         { 
@@ -17646,6 +19384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns></returns>
         
+        
         public void PostUserPassword (string userId, ChangePasswordRequest body)
         {
              PostUserPasswordWithHttpInfo(userId, body);
@@ -17658,6 +19397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Password</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostUserPasswordWithHttpInfo (string userId, ChangePasswordRequest body)
         { 
@@ -17752,6 +19492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostUserPasswordAsync (string userId, ChangePasswordRequest body)
         {
              await PostUserPasswordAsyncWithHttpInfo(userId, body);
@@ -17765,6 +19506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Password</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUserPasswordAsyncWithHttpInfo (string userId, ChangePasswordRequest body)
         { 
@@ -17862,6 +19604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>UserRoutingLanguage</returns>
         
+        
         public UserRoutingLanguage PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
         {
              ApiResponse<UserRoutingLanguage> localVarResponse = PostUserRoutinglanguagesWithHttpInfo(userId, body);
@@ -17875,6 +19618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        
         
         public ApiResponse< UserRoutingLanguage > PostUserRoutinglanguagesWithHttpInfo (string userId, UserRoutingLanguagePost body)
         { 
@@ -17969,6 +19713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of UserRoutingLanguage</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRoutingLanguage> PostUserRoutinglanguagesAsync (string userId, UserRoutingLanguagePost body)
         {
              ApiResponse<UserRoutingLanguage> localVarResponse = await PostUserRoutinglanguagesAsyncWithHttpInfo(userId, body);
@@ -17983,6 +19728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PostUserRoutinglanguagesAsyncWithHttpInfo (string userId, UserRoutingLanguagePost body)
         { 
@@ -18080,6 +19826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         
+        
         public UserRoutingSkill PostUserRoutingskills (string userId, UserRoutingSkillPost body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = PostUserRoutingskillsWithHttpInfo(userId, body);
@@ -18093,6 +19840,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
+        
         
         public ApiResponse< UserRoutingSkill > PostUserRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body)
         { 
@@ -18187,6 +19935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserRoutingskillsAsync (string userId, UserRoutingSkillPost body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = await PostUserRoutingskillsAsyncWithHttpInfo(userId, body);
@@ -18201,6 +19950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body)
         { 
@@ -18297,6 +20047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>User</returns>
         
+        
         public User PostUsers (CreateUser body)
         {
              ApiResponse<User> localVarResponse = PostUsersWithHttpInfo(body);
@@ -18309,6 +20060,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
+        
         
         public ApiResponse< User > PostUsersWithHttpInfo (CreateUser body)
         { 
@@ -18398,6 +20150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>Task of User</returns>
         
+        
         public async System.Threading.Tasks.Task<User> PostUsersAsync (CreateUser body)
         {
              ApiResponse<User> localVarResponse = await PostUsersAsyncWithHttpInfo(body);
@@ -18411,6 +20164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<User>> PostUsersAsyncWithHttpInfo (CreateUser body)
         { 
@@ -18502,6 +20256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>DevelopmentActivityAggregateResponse</returns>
         
+        
         public DevelopmentActivityAggregateResponse PostUsersDevelopmentActivitiesAggregatesQuery (DevelopmentActivityAggregateParam body)
         {
              ApiResponse<DevelopmentActivityAggregateResponse> localVarResponse = PostUsersDevelopmentActivitiesAggregatesQueryWithHttpInfo(body);
@@ -18514,6 +20269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>ApiResponse of DevelopmentActivityAggregateResponse</returns>
+        
         
         public ApiResponse< DevelopmentActivityAggregateResponse > PostUsersDevelopmentActivitiesAggregatesQueryWithHttpInfo (DevelopmentActivityAggregateParam body)
         { 
@@ -18603,6 +20359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of DevelopmentActivityAggregateResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<DevelopmentActivityAggregateResponse> PostUsersDevelopmentActivitiesAggregatesQueryAsync (DevelopmentActivityAggregateParam body)
         {
              ApiResponse<DevelopmentActivityAggregateResponse> localVarResponse = await PostUsersDevelopmentActivitiesAggregatesQueryAsyncWithHttpInfo(body);
@@ -18616,6 +20373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityAggregateResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityAggregateResponse>> PostUsersDevelopmentActivitiesAggregatesQueryAsyncWithHttpInfo (DevelopmentActivityAggregateParam body)
         { 
@@ -18707,6 +20465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns></returns>
         
+        
         public void PostUsersMePassword (ChangeMyPasswordRequest body)
         {
              PostUsersMePasswordWithHttpInfo(body);
@@ -18718,6 +20477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Password</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostUsersMePasswordWithHttpInfo (ChangeMyPasswordRequest body)
         { 
@@ -18807,6 +20567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostUsersMePasswordAsync (ChangeMyPasswordRequest body)
         {
              await PostUsersMePasswordAsyncWithHttpInfo(body);
@@ -18819,6 +20580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Password</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersMePasswordAsyncWithHttpInfo (ChangeMyPasswordRequest body)
         { 
@@ -18910,6 +20672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
         
+        
         public UsersSearchResponse PostUsersSearch (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = PostUsersSearchWithHttpInfo(body);
@@ -18922,6 +20685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         
         public ApiResponse< UsersSearchResponse > PostUsersSearchWithHttpInfo (UserSearchRequest body)
         { 
@@ -19011,6 +20775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchAsync (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await PostUsersSearchAsyncWithHttpInfo(body);
@@ -19024,6 +20789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchAsyncWithHttpInfo (UserSearchRequest body)
         { 
@@ -19109,11 +20875,430 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Search users as conversation targets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        public UsersSearchResponse PostUsersSearchConversationTarget (UserSearchRequest body)
+        {
+             ApiResponse<UsersSearchResponse> localVarResponse = PostUsersSearchConversationTargetWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search users as conversation targets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< UsersSearchResponse > PostUsersSearchConversationTargetWithHttpInfo (UserSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchConversationTarget");
+
+            var localVarPath = "/api/v2/users/search/conversation/target";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersSearchConversationTarget: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersSearchConversationTarget: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UsersSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UsersSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search users as conversation targets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchConversationTargetAsync (UserSearchRequest body)
+        {
+             ApiResponse<UsersSearchResponse> localVarResponse = await PostUsersSearchConversationTargetAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search users as conversation targets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchConversationTargetAsyncWithHttpInfo (UserSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchConversationTarget");
+            
+
+            var localVarPath = "/api/v2/users/search/conversation/target";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersSearchConversationTarget: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersSearchConversationTarget: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UsersSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UsersSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Search manage queue member 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        public UsersSearchResponse PostUsersSearchQueuemembersManage (UserSearchRequest body)
+        {
+             ApiResponse<UsersSearchResponse> localVarResponse = PostUsersSearchQueuemembersManageWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search manage queue member 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< UsersSearchResponse > PostUsersSearchQueuemembersManageWithHttpInfo (UserSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchQueuemembersManage");
+
+            var localVarPath = "/api/v2/users/search/queuemembers/manage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersSearchQueuemembersManage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersSearchQueuemembersManage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UsersSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UsersSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search manage queue member 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of UsersSearchResponse</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchQueuemembersManageAsync (UserSearchRequest body)
+        {
+             ApiResponse<UsersSearchResponse> localVarResponse = await PostUsersSearchQueuemembersManageAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search manage queue member 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchQueuemembersManageAsyncWithHttpInfo (UserSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchQueuemembersManage");
+            
+
+            var localVarPath = "/api/v2/users/search/queuemembers/manage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersSearchQueuemembersManage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersSearchQueuemembersManage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UsersSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UsersSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Search users assigned to teams 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
+        
         
         public UsersSearchResponse PostUsersSearchTeamsAssign (UserSearchRequest body)
         {
@@ -19127,6 +21312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         
         public ApiResponse< UsersSearchResponse > PostUsersSearchTeamsAssignWithHttpInfo (UserSearchRequest body)
         { 
@@ -19216,6 +21402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchTeamsAssignAsync (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await PostUsersSearchTeamsAssignAsyncWithHttpInfo(body);
@@ -19229,6 +21416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchTeamsAssignAsyncWithHttpInfo (UserSearchRequest body)
         { 
@@ -19321,6 +21509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>AgentMaxUtilization</returns>
         
+        
         public AgentMaxUtilization PutRoutingUserUtilization (string userId, Utilization body)
         {
              ApiResponse<AgentMaxUtilization> localVarResponse = PutRoutingUserUtilizationWithHttpInfo(userId, body);
@@ -19334,6 +21523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
         /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        
         
         public ApiResponse< AgentMaxUtilization > PutRoutingUserUtilizationWithHttpInfo (string userId, Utilization body)
         { 
@@ -19428,6 +21618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">utilization</param>
         /// <returns>Task of AgentMaxUtilization</returns>
         
+        
         public async System.Threading.Tasks.Task<AgentMaxUtilization> PutRoutingUserUtilizationAsync (string userId, Utilization body)
         {
              ApiResponse<AgentMaxUtilization> localVarResponse = await PutRoutingUserUtilizationAsyncWithHttpInfo(userId, body);
@@ -19442,6 +21633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
         /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, Utilization body)
         { 
@@ -19539,6 +21731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call forwarding</param>
         /// <returns>CallForwarding</returns>
         
+        
         public CallForwarding PutUserCallforwarding (string userId, CallForwarding body)
         {
              ApiResponse<CallForwarding> localVarResponse = PutUserCallforwardingWithHttpInfo(userId, body);
@@ -19552,6 +21745,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Call forwarding</param>
         /// <returns>ApiResponse of CallForwarding</returns>
+        
         
         public ApiResponse< CallForwarding > PutUserCallforwardingWithHttpInfo (string userId, CallForwarding body)
         { 
@@ -19646,6 +21840,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Call forwarding</param>
         /// <returns>Task of CallForwarding</returns>
         
+        
         public async System.Threading.Tasks.Task<CallForwarding> PutUserCallforwardingAsync (string userId, CallForwarding body)
         {
              ApiResponse<CallForwarding> localVarResponse = await PutUserCallforwardingAsyncWithHttpInfo(userId, body);
@@ -19660,6 +21855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Call forwarding</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PutUserCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body)
         { 
@@ -19757,6 +21953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated OutOffOffice</param>
         /// <returns>OutOfOffice</returns>
         
+        
         public OutOfOffice PutUserOutofoffice (string userId, OutOfOffice body)
         {
              ApiResponse<OutOfOffice> localVarResponse = PutUserOutofofficeWithHttpInfo(userId, body);
@@ -19770,6 +21967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated OutOffOffice</param>
         /// <returns>ApiResponse of OutOfOffice</returns>
+        
         
         public ApiResponse< OutOfOffice > PutUserOutofofficeWithHttpInfo (string userId, OutOfOffice body)
         { 
@@ -19864,6 +22062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated OutOffOffice</param>
         /// <returns>Task of OutOfOffice</returns>
         
+        
         public async System.Threading.Tasks.Task<OutOfOffice> PutUserOutofofficeAsync (string userId, OutOfOffice body)
         {
              ApiResponse<OutOfOffice> localVarResponse = await PutUserOutofofficeAsyncWithHttpInfo(userId, body);
@@ -19878,6 +22077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated OutOffOffice</param>
         /// <returns>Task of ApiResponse (OutOfOffice)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutOfOffice>> PutUserOutofofficeAsyncWithHttpInfo (string userId, OutOfOffice body)
         { 
@@ -19975,6 +22175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skills</param>
         /// <returns>List&lt;string&gt;</returns>
         
+        
         public List<string> PutUserProfileskills (string userId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = PutUserProfileskillsWithHttpInfo(userId, body);
@@ -19988,6 +22189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skills</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         
         public ApiResponse< List<string> > PutUserProfileskillsWithHttpInfo (string userId, List<string> body)
         { 
@@ -20082,6 +22284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skills</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<string>> PutUserProfileskillsAsync (string userId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = await PutUserProfileskillsAsyncWithHttpInfo(userId, body);
@@ -20096,6 +22299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skills</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserProfileskillsAsyncWithHttpInfo (string userId, List<string> body)
         { 
@@ -20193,6 +22397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
         
+        
         public UserAuthorization PutUserRoles (string subjectId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = PutUserRolesWithHttpInfo(subjectId, body);
@@ -20206,6 +22411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         
         public ApiResponse< UserAuthorization > PutUserRolesWithHttpInfo (string subjectId, List<string> body)
         { 
@@ -20300,6 +22506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
         
+        
         public async System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string subjectId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = await PutUserRolesAsyncWithHttpInfo(subjectId, body);
@@ -20314,6 +22521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string subjectId, List<string> body)
         { 
@@ -20412,6 +22620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         
+        
         public UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = PutUserRoutingskillWithHttpInfo(userId, skillId, body);
@@ -20426,6 +22635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
+        
         
         public ApiResponse< UserRoutingSkill > PutUserRoutingskillWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
         { 
@@ -20525,6 +22735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         
+        
         public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = await PutUserRoutingskillAsyncWithHttpInfo(userId, skillId, body);
@@ -20540,6 +22751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserRoutingskillAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
         { 
@@ -20642,6 +22854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>UserSkillEntityListing</returns>
         
+        
         public UserSkillEntityListing PutUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = PutUserRoutingskillsBulkWithHttpInfo(userId, body);
@@ -20655,6 +22868,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        
         
         public ApiResponse< UserSkillEntityListing > PutUserRoutingskillsBulkWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
         { 
@@ -20749,6 +22963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of UserSkillEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserSkillEntityListing> PutUserRoutingskillsBulkAsync (string userId, List<UserRoutingSkillPost> body)
         {
              ApiResponse<UserSkillEntityListing> localVarResponse = await PutUserRoutingskillsBulkAsyncWithHttpInfo(userId, body);
@@ -20763,6 +22978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> PutUserRoutingskillsBulkAsyncWithHttpInfo (string userId, List<UserRoutingSkillPost> body)
         { 
@@ -20860,6 +23076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Routing Status</param>
         /// <returns>RoutingStatus</returns>
         
+        
         public RoutingStatus PutUserRoutingstatus (string userId, RoutingStatus body)
         {
              ApiResponse<RoutingStatus> localVarResponse = PutUserRoutingstatusWithHttpInfo(userId, body);
@@ -20873,6 +23090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Routing Status</param>
         /// <returns>ApiResponse of RoutingStatus</returns>
+        
         
         public ApiResponse< RoutingStatus > PutUserRoutingstatusWithHttpInfo (string userId, RoutingStatus body)
         { 
@@ -20967,6 +23185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Routing Status</param>
         /// <returns>Task of RoutingStatus</returns>
         
+        
         public async System.Threading.Tasks.Task<RoutingStatus> PutUserRoutingstatusAsync (string userId, RoutingStatus body)
         {
              ApiResponse<RoutingStatus> localVarResponse = await PutUserRoutingstatusAsyncWithHttpInfo(userId, body);
@@ -20981,6 +23200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Routing Status</param>
         /// <returns>Task of ApiResponse (RoutingStatus)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> PutUserRoutingstatusAsyncWithHttpInfo (string userId, RoutingStatus body)
         { 
@@ -21078,6 +23298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>UserState</returns>
         
+        
         public UserState PutUserState (string userId, UserState body)
         {
              ApiResponse<UserState> localVarResponse = PutUserStateWithHttpInfo(userId, body);
@@ -21091,6 +23312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>ApiResponse of UserState</returns>
+        
         
         public ApiResponse< UserState > PutUserStateWithHttpInfo (string userId, UserState body)
         { 
@@ -21185,6 +23407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User</param>
         /// <returns>Task of UserState</returns>
         
+        
         public async System.Threading.Tasks.Task<UserState> PutUserStateAsync (string userId, UserState body)
         {
              ApiResponse<UserState> localVarResponse = await PutUserStateAsyncWithHttpInfo(userId, body);
@@ -21199,6 +23422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (UserState)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserState>> PutUserStateAsyncWithHttpInfo (string userId, UserState body)
         { 
@@ -21296,6 +23520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="stationId">stationId</param>
         /// <returns></returns>
         
+        
         public void PutUserStationAssociatedstationStationId (string userId, string stationId)
         {
              PutUserStationAssociatedstationStationIdWithHttpInfo(userId, stationId);
@@ -21308,6 +23533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="stationId">stationId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PutUserStationAssociatedstationStationIdWithHttpInfo (string userId, string stationId)
         { 
@@ -21397,6 +23623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="stationId">stationId</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PutUserStationAssociatedstationStationIdAsync (string userId, string stationId)
         {
              await PutUserStationAssociatedstationStationIdAsyncWithHttpInfo(userId, stationId);
@@ -21410,6 +23637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="stationId">stationId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutUserStationAssociatedstationStationIdAsyncWithHttpInfo (string userId, string stationId)
         { 
@@ -21502,6 +23730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="stationId">stationId</param>
         /// <returns></returns>
         
+        
         public void PutUserStationDefaultstationStationId (string userId, string stationId)
         {
              PutUserStationDefaultstationStationIdWithHttpInfo(userId, stationId);
@@ -21514,6 +23743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="stationId">stationId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PutUserStationDefaultstationStationIdWithHttpInfo (string userId, string stationId)
         { 
@@ -21603,6 +23833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="stationId">stationId</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PutUserStationDefaultstationStationIdAsync (string userId, string stationId)
         {
              await PutUserStationDefaultstationStationIdAsyncWithHttpInfo(userId, stationId);
@@ -21616,6 +23847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="stationId">stationId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutUserStationDefaultstationStationIdAsyncWithHttpInfo (string userId, string stationId)
         { 

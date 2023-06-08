@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns></returns>
         
+        
         void DeleteWebdeploymentsConfiguration (string configurationId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWebdeploymentsConfigurationWithHttpInfo (string configurationId);
 
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns></returns>
         
+        
         void DeleteWebdeploymentsDeployment (string deploymentId);
 
         /// <summary>
@@ -61,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWebdeploymentsDeploymentWithHttpInfo (string deploymentId);
 
@@ -75,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Object</returns>
         
+        
         Object DeleteWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId);
 
         /// <summary>
@@ -87,6 +92,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">WebMessaging deployment ID</param>
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>ApiResponse of Object</returns>
+        
         
         ApiResponse<Object> DeleteWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo (string deploymentId, string sessionId);
 
@@ -101,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
         /// <returns></returns>
         
+        
         void DeleteWebdeploymentsTokenRevoke (string xJourneySessionId = null, string xJourneySessionType = null);
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
         /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWebdeploymentsTokenRevokeWithHttpInfo (string xJourneySessionId = null, string xJourneySessionType = null);
 
@@ -127,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of the configuration to get</param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
         
+        
         WebDeploymentConfigurationVersion GetWebdeploymentsConfigurationVersion (string configurationId, string versionId);
 
         /// <summary>
@@ -140,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of the configuration to get</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
         
+        
         ApiResponse<WebDeploymentConfigurationVersion> GetWebdeploymentsConfigurationVersionWithHttpInfo (string configurationId, string versionId);
 
         /// <summary>
@@ -151,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
+        
         
         WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurationVersions (string configurationId);
 
@@ -164,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
         
+        
         ApiResponse<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsWithHttpInfo (string configurationId);
 
         /// <summary>
@@ -175,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
+        
         
         WebDeploymentConfigurationVersion GetWebdeploymentsConfigurationVersionsDraft (string configurationId);
 
@@ -188,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
         
+        
         ApiResponse<WebDeploymentConfigurationVersion> GetWebdeploymentsConfigurationVersionsDraftWithHttpInfo (string configurationId);
 
         /// <summary>
@@ -199,6 +213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
+        
         
         WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurations (bool? showOnlyPublished = null);
 
@@ -212,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
         
+        
         ApiResponse<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsWithHttpInfo (bool? showOnlyPublished = null);
 
         /// <summary>
@@ -224,6 +240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>WebDeployment</returns>
         
+        
         WebDeployment GetWebdeploymentsDeployment (string deploymentId);
 
         /// <summary>
@@ -235,6 +252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>ApiResponse of WebDeployment</returns>
+        
         
         ApiResponse<WebDeployment> GetWebdeploymentsDeploymentWithHttpInfo (string deploymentId);
 
@@ -249,6 +267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>CobrowseWebMessagingSession</returns>
         
+        
         CobrowseWebMessagingSession GetWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId);
 
         /// <summary>
@@ -261,6 +280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">WebMessaging deployment ID</param>
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>ApiResponse of CobrowseWebMessagingSession</returns>
+        
         
         ApiResponse<CobrowseWebMessagingSession> GetWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo (string deploymentId, string sessionId);
 
@@ -275,6 +295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Get active configuration on a deployment (optional)</param>
         /// <returns>WebDeploymentActiveConfigurationOnDeployment</returns>
         
+        
         WebDeploymentActiveConfigurationOnDeployment GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null);
 
         /// <summary>
@@ -288,6 +309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Get active configuration on a deployment (optional)</param>
         /// <returns>ApiResponse of WebDeploymentActiveConfigurationOnDeployment</returns>
         
+        
         ApiResponse<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsWithHttpInfo (string deploymentId, string type = null);
 
         /// <summary>
@@ -299,6 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
         /// <returns>ExpandableWebDeploymentEntityListing</returns>
+        
         
         ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (List<string> expand = null);
 
@@ -312,6 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
         /// <returns>ApiResponse of ExpandableWebDeploymentEntityListing</returns>
         
+        
         ApiResponse<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsWithHttpInfo (List<string> expand = null);
 
         /// <summary>
@@ -323,6 +347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
+        
         
         WebDeploymentConfigurationVersion PostWebdeploymentsConfigurationVersionsDraftPublish (string configurationId);
 
@@ -336,6 +361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
         
+        
         ApiResponse<WebDeploymentConfigurationVersion> PostWebdeploymentsConfigurationVersionsDraftPublishWithHttpInfo (string configurationId);
 
         /// <summary>
@@ -347,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationVersion"></param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
+        
         
         WebDeploymentConfigurationVersion PostWebdeploymentsConfigurations (WebDeploymentConfigurationVersion configurationVersion);
 
@@ -360,6 +387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationVersion"></param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
         
+        
         ApiResponse<WebDeploymentConfigurationVersion> PostWebdeploymentsConfigurationsWithHttpInfo (WebDeploymentConfigurationVersion configurationVersion);
 
         /// <summary>
@@ -371,6 +399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deployment"></param>
         /// <returns>WebDeployment</returns>
+        
         
         WebDeployment PostWebdeploymentsDeployments (WebDeployment deployment);
 
@@ -384,6 +413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>ApiResponse of WebDeployment</returns>
         
+        
         ApiResponse<WebDeployment> PostWebdeploymentsDeploymentsWithHttpInfo (WebDeployment deployment);
 
         /// <summary>
@@ -395,6 +425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
         /// <returns>WebDeploymentsAuthorizationResponse</returns>
+        
         
         WebDeploymentsAuthorizationResponse PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body);
 
@@ -408,6 +439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
         /// <returns>ApiResponse of WebDeploymentsAuthorizationResponse</returns>
         
+        
         ApiResponse<WebDeploymentsAuthorizationResponse> PostWebdeploymentsTokenOauthcodegrantjwtexchangeWithHttpInfo (WebDeploymentsOAuthExchangeRequest body);
 
         /// <summary>
@@ -420,6 +452,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>SignedData</returns>
         
+        
         SignedData PostWebdeploymentsTokenRefresh (WebDeploymentsRefreshJWTRequest body = null);
 
         /// <summary>
@@ -431,6 +464,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of SignedData</returns>
+        
         
         ApiResponse<SignedData> PostWebdeploymentsTokenRefreshWithHttpInfo (WebDeploymentsRefreshJWTRequest body = null);
 
@@ -445,6 +479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationVersion"></param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
         
+        
         WebDeploymentConfigurationVersion PutWebdeploymentsConfigurationVersionsDraft (string configurationId, WebDeploymentConfigurationVersion configurationVersion);
 
         /// <summary>
@@ -457,6 +492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <param name="configurationVersion"></param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
+        
         
         ApiResponse<WebDeploymentConfigurationVersion> PutWebdeploymentsConfigurationVersionsDraftWithHttpInfo (string configurationId, WebDeploymentConfigurationVersion configurationVersion);
 
@@ -471,6 +507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>WebDeployment</returns>
         
+        
         WebDeployment PutWebdeploymentsDeployment (string deploymentId, WebDeployment deployment);
 
         /// <summary>
@@ -483,6 +520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="deployment"></param>
         /// <returns>ApiResponse of WebDeployment</returns>
+        
         
         ApiResponse<WebDeployment> PutWebdeploymentsDeploymentWithHttpInfo (string deploymentId, WebDeployment deployment);
 
@@ -500,6 +538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWebdeploymentsConfigurationAsync (string configurationId);
 
         /// <summary>
@@ -511,6 +550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsConfigurationAsyncWithHttpInfo (string configurationId);
 
@@ -524,6 +564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWebdeploymentsDeploymentAsync (string deploymentId);
 
         /// <summary>
@@ -535,6 +576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId);
 
@@ -549,6 +591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Task of Object</returns>
         
+        
         System.Threading.Tasks.Task<Object> DeleteWebdeploymentsDeploymentCobrowseSessionIdAsync (string deploymentId, string sessionId);
 
         /// <summary>
@@ -561,6 +604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">WebMessaging deployment ID</param>
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo (string deploymentId, string sessionId);
 
@@ -575,6 +619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWebdeploymentsTokenRevokeAsync (string xJourneySessionId = null, string xJourneySessionType = null);
 
         /// <summary>
@@ -587,6 +632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
         /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsTokenRevokeAsyncWithHttpInfo (string xJourneySessionId = null, string xJourneySessionType = null);
 
@@ -601,6 +647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of the configuration to get</param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
         
+        
         System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> GetWebdeploymentsConfigurationVersionAsync (string configurationId, string versionId);
 
         /// <summary>
@@ -614,6 +661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of the configuration to get</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> GetWebdeploymentsConfigurationVersionAsyncWithHttpInfo (string configurationId, string versionId);
 
         /// <summary>
@@ -625,6 +673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsAsync (string configurationId);
 
@@ -638,6 +687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo (string configurationId);
 
         /// <summary>
@@ -649,6 +699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
+        
         
         System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> GetWebdeploymentsConfigurationVersionsDraftAsync (string configurationId);
 
@@ -662,6 +713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> GetWebdeploymentsConfigurationVersionsDraftAsyncWithHttpInfo (string configurationId);
 
         /// <summary>
@@ -673,6 +725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsAsync (bool? showOnlyPublished = null);
 
@@ -686,6 +739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo (bool? showOnlyPublished = null);
 
         /// <summary>
@@ -698,6 +752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of WebDeployment</returns>
         
+        
         System.Threading.Tasks.Task<WebDeployment> GetWebdeploymentsDeploymentAsync (string deploymentId);
 
         /// <summary>
@@ -709,6 +764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WebDeployment>> GetWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId);
 
@@ -723,6 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Task of CobrowseWebMessagingSession</returns>
         
+        
         System.Threading.Tasks.Task<CobrowseWebMessagingSession> GetWebdeploymentsDeploymentCobrowseSessionIdAsync (string deploymentId, string sessionId);
 
         /// <summary>
@@ -735,6 +792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">WebMessaging deployment ID</param>
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Task of ApiResponse (CobrowseWebMessagingSession)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<CobrowseWebMessagingSession>> GetWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo (string deploymentId, string sessionId);
 
@@ -749,6 +807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Get active configuration on a deployment (optional)</param>
         /// <returns>Task of WebDeploymentActiveConfigurationOnDeployment</returns>
         
+        
         System.Threading.Tasks.Task<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsAsync (string deploymentId, string type = null);
 
         /// <summary>
@@ -762,6 +821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Get active configuration on a deployment (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentActiveConfigurationOnDeployment)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentActiveConfigurationOnDeployment>> GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo (string deploymentId, string type = null);
 
         /// <summary>
@@ -773,6 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
         /// <returns>Task of ExpandableWebDeploymentEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (List<string> expand = null);
 
@@ -786,6 +847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
         /// <returns>Task of ApiResponse (ExpandableWebDeploymentEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (List<string> expand = null);
 
         /// <summary>
@@ -797,6 +859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
+        
         
         System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> PostWebdeploymentsConfigurationVersionsDraftPublishAsync (string configurationId);
 
@@ -810,6 +873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> PostWebdeploymentsConfigurationVersionsDraftPublishAsyncWithHttpInfo (string configurationId);
 
         /// <summary>
@@ -821,6 +885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationVersion"></param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
+        
         
         System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> PostWebdeploymentsConfigurationsAsync (WebDeploymentConfigurationVersion configurationVersion);
 
@@ -834,6 +899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationVersion"></param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> PostWebdeploymentsConfigurationsAsyncWithHttpInfo (WebDeploymentConfigurationVersion configurationVersion);
 
         /// <summary>
@@ -845,6 +911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deployment"></param>
         /// <returns>Task of WebDeployment</returns>
+        
         
         System.Threading.Tasks.Task<WebDeployment> PostWebdeploymentsDeploymentsAsync (WebDeployment deployment);
 
@@ -858,6 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeployment>> PostWebdeploymentsDeploymentsAsyncWithHttpInfo (WebDeployment deployment);
 
         /// <summary>
@@ -869,6 +937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
         /// <returns>Task of WebDeploymentsAuthorizationResponse</returns>
+        
         
         System.Threading.Tasks.Task<WebDeploymentsAuthorizationResponse> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsync (WebDeploymentsOAuthExchangeRequest body);
 
@@ -882,6 +951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
         /// <returns>Task of ApiResponse (WebDeploymentsAuthorizationResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentsAuthorizationResponse>> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsyncWithHttpInfo (WebDeploymentsOAuthExchangeRequest body);
 
         /// <summary>
@@ -894,6 +964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of SignedData</returns>
         
+        
         System.Threading.Tasks.Task<SignedData> PostWebdeploymentsTokenRefreshAsync (WebDeploymentsRefreshJWTRequest body = null);
 
         /// <summary>
@@ -905,6 +976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (SignedData)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SignedData>> PostWebdeploymentsTokenRefreshAsyncWithHttpInfo (WebDeploymentsRefreshJWTRequest body = null);
 
@@ -919,6 +991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationVersion"></param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
         
+        
         System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> PutWebdeploymentsConfigurationVersionsDraftAsync (string configurationId, WebDeploymentConfigurationVersion configurationVersion);
 
         /// <summary>
@@ -931,6 +1004,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <param name="configurationVersion"></param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> PutWebdeploymentsConfigurationVersionsDraftAsyncWithHttpInfo (string configurationId, WebDeploymentConfigurationVersion configurationVersion);
 
@@ -945,6 +1019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>Task of WebDeployment</returns>
         
+        
         System.Threading.Tasks.Task<WebDeployment> PutWebdeploymentsDeploymentAsync (string deploymentId, WebDeployment deployment);
 
         /// <summary>
@@ -957,6 +1032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="deployment"></param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WebDeployment>> PutWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId, WebDeployment deployment);
 
@@ -1059,6 +1135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns></returns>
         
+        
         public void DeleteWebdeploymentsConfiguration (string configurationId)
         {
              DeleteWebdeploymentsConfigurationWithHttpInfo(configurationId);
@@ -1070,6 +1147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWebdeploymentsConfigurationWithHttpInfo (string configurationId)
         { 
@@ -1154,6 +1232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWebdeploymentsConfigurationAsync (string configurationId)
         {
              await DeleteWebdeploymentsConfigurationAsyncWithHttpInfo(configurationId);
@@ -1166,6 +1245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsConfigurationAsyncWithHttpInfo (string configurationId)
         { 
@@ -1252,6 +1332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns></returns>
         
+        
         public void DeleteWebdeploymentsDeployment (string deploymentId)
         {
              DeleteWebdeploymentsDeploymentWithHttpInfo(deploymentId);
@@ -1263,6 +1344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWebdeploymentsDeploymentWithHttpInfo (string deploymentId)
         { 
@@ -1347,6 +1429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWebdeploymentsDeploymentAsync (string deploymentId)
         {
              await DeleteWebdeploymentsDeploymentAsyncWithHttpInfo(deploymentId);
@@ -1359,6 +1442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId)
         { 
@@ -1446,6 +1530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Object</returns>
         
+        
         public Object DeleteWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
         {
              ApiResponse<Object> localVarResponse = DeleteWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo(deploymentId, sessionId);
@@ -1459,6 +1544,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">WebMessaging deployment ID</param>
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>ApiResponse of Object</returns>
+        
         
         public ApiResponse< Object > DeleteWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo (string deploymentId, string sessionId)
         { 
@@ -1541,6 +1627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Task of Object</returns>
         
+        
         public async System.Threading.Tasks.Task<Object> DeleteWebdeploymentsDeploymentCobrowseSessionIdAsync (string deploymentId, string sessionId)
         {
              ApiResponse<Object> localVarResponse = await DeleteWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo(deploymentId, sessionId);
@@ -1555,6 +1642,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">WebMessaging deployment ID</param>
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo (string deploymentId, string sessionId)
         { 
@@ -1640,6 +1728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
         /// <returns></returns>
         
+        
         public void DeleteWebdeploymentsTokenRevoke (string xJourneySessionId = null, string xJourneySessionType = null)
         {
              DeleteWebdeploymentsTokenRevokeWithHttpInfo(xJourneySessionId, xJourneySessionType);
@@ -1652,6 +1741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
         /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWebdeploymentsTokenRevokeWithHttpInfo (string xJourneySessionId = null, string xJourneySessionType = null)
         { 
@@ -1728,6 +1818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWebdeploymentsTokenRevokeAsync (string xJourneySessionId = null, string xJourneySessionType = null)
         {
              await DeleteWebdeploymentsTokenRevokeAsyncWithHttpInfo(xJourneySessionId, xJourneySessionType);
@@ -1741,6 +1832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
         /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsTokenRevokeAsyncWithHttpInfo (string xJourneySessionId = null, string xJourneySessionType = null)
         { 
@@ -1818,6 +1910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of the configuration to get</param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
         
+        
         public WebDeploymentConfigurationVersion GetWebdeploymentsConfigurationVersion (string configurationId, string versionId)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = GetWebdeploymentsConfigurationVersionWithHttpInfo(configurationId, versionId);
@@ -1831,6 +1924,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <param name="versionId">The version of the configuration to get</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
+        
         
         public ApiResponse< WebDeploymentConfigurationVersion > GetWebdeploymentsConfigurationVersionWithHttpInfo (string configurationId, string versionId)
         { 
@@ -1920,6 +2014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">The version of the configuration to get</param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> GetWebdeploymentsConfigurationVersionAsync (string configurationId, string versionId)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = await GetWebdeploymentsConfigurationVersionAsyncWithHttpInfo(configurationId, versionId);
@@ -1934,6 +2029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <param name="versionId">The version of the configuration to get</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> GetWebdeploymentsConfigurationVersionAsyncWithHttpInfo (string configurationId, string versionId)
         { 
@@ -2025,6 +2121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
         
+        
         public WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurationVersions (string configurationId)
         {
              ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = GetWebdeploymentsConfigurationVersionsWithHttpInfo(configurationId);
@@ -2037,6 +2134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
+        
         
         public ApiResponse< WebDeploymentConfigurationVersionEntityListing > GetWebdeploymentsConfigurationVersionsWithHttpInfo (string configurationId)
         { 
@@ -2121,6 +2219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsAsync (string configurationId)
         {
              ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = await GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo(configurationId);
@@ -2134,6 +2233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo (string configurationId)
         { 
@@ -2220,6 +2320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
         
+        
         public WebDeploymentConfigurationVersion GetWebdeploymentsConfigurationVersionsDraft (string configurationId)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = GetWebdeploymentsConfigurationVersionsDraftWithHttpInfo(configurationId);
@@ -2232,6 +2333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
+        
         
         public ApiResponse< WebDeploymentConfigurationVersion > GetWebdeploymentsConfigurationVersionsDraftWithHttpInfo (string configurationId)
         { 
@@ -2316,6 +2418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> GetWebdeploymentsConfigurationVersionsDraftAsync (string configurationId)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = await GetWebdeploymentsConfigurationVersionsDraftAsyncWithHttpInfo(configurationId);
@@ -2329,6 +2432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> GetWebdeploymentsConfigurationVersionsDraftAsyncWithHttpInfo (string configurationId)
         { 
@@ -2415,6 +2519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
         
+        
         public WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurations (bool? showOnlyPublished = null)
         {
              ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = GetWebdeploymentsConfigurationsWithHttpInfo(showOnlyPublished);
@@ -2427,6 +2532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
+        
         
         public ApiResponse< WebDeploymentConfigurationVersionEntityListing > GetWebdeploymentsConfigurationsWithHttpInfo (bool? showOnlyPublished = null)
         { 
@@ -2508,6 +2614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsAsync (bool? showOnlyPublished = null)
         {
              ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = await GetWebdeploymentsConfigurationsAsyncWithHttpInfo(showOnlyPublished);
@@ -2521,6 +2628,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="showOnlyPublished">Get only configuration drafts with published versions (optional, default to false)</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo (bool? showOnlyPublished = null)
         { 
@@ -2603,6 +2711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>WebDeployment</returns>
         
+        
         public WebDeployment GetWebdeploymentsDeployment (string deploymentId)
         {
              ApiResponse<WebDeployment> localVarResponse = GetWebdeploymentsDeploymentWithHttpInfo(deploymentId);
@@ -2615,6 +2724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>ApiResponse of WebDeployment</returns>
+        
         
         public ApiResponse< WebDeployment > GetWebdeploymentsDeploymentWithHttpInfo (string deploymentId)
         { 
@@ -2699,6 +2809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of WebDeployment</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeployment> GetWebdeploymentsDeploymentAsync (string deploymentId)
         {
              ApiResponse<WebDeployment> localVarResponse = await GetWebdeploymentsDeploymentAsyncWithHttpInfo(deploymentId);
@@ -2712,6 +2823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeployment>> GetWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId)
         { 
@@ -2799,6 +2911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>CobrowseWebMessagingSession</returns>
         
+        
         public CobrowseWebMessagingSession GetWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
         {
              ApiResponse<CobrowseWebMessagingSession> localVarResponse = GetWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo(deploymentId, sessionId);
@@ -2812,6 +2925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">WebMessaging deployment ID</param>
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>ApiResponse of CobrowseWebMessagingSession</returns>
+        
         
         public ApiResponse< CobrowseWebMessagingSession > GetWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo (string deploymentId, string sessionId)
         { 
@@ -2894,6 +3008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Task of CobrowseWebMessagingSession</returns>
         
+        
         public async System.Threading.Tasks.Task<CobrowseWebMessagingSession> GetWebdeploymentsDeploymentCobrowseSessionIdAsync (string deploymentId, string sessionId)
         {
              ApiResponse<CobrowseWebMessagingSession> localVarResponse = await GetWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo(deploymentId, sessionId);
@@ -2908,6 +3023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">WebMessaging deployment ID</param>
         /// <param name="sessionId">Cobrowse session id or join code</param>
         /// <returns>Task of ApiResponse (CobrowseWebMessagingSession)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CobrowseWebMessagingSession>> GetWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo (string deploymentId, string sessionId)
         { 
@@ -2993,6 +3109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Get active configuration on a deployment (optional)</param>
         /// <returns>WebDeploymentActiveConfigurationOnDeployment</returns>
         
+        
         public WebDeploymentActiveConfigurationOnDeployment GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null)
         {
              ApiResponse<WebDeploymentActiveConfigurationOnDeployment> localVarResponse = GetWebdeploymentsDeploymentConfigurationsWithHttpInfo(deploymentId, type);
@@ -3006,6 +3123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
         /// <returns>ApiResponse of WebDeploymentActiveConfigurationOnDeployment</returns>
+        
         
         public ApiResponse< WebDeploymentActiveConfigurationOnDeployment > GetWebdeploymentsDeploymentConfigurationsWithHttpInfo (string deploymentId, string type = null)
         { 
@@ -3092,6 +3210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Get active configuration on a deployment (optional)</param>
         /// <returns>Task of WebDeploymentActiveConfigurationOnDeployment</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsAsync (string deploymentId, string type = null)
         {
              ApiResponse<WebDeploymentActiveConfigurationOnDeployment> localVarResponse = await GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo(deploymentId, type);
@@ -3106,6 +3225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentActiveConfigurationOnDeployment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentActiveConfigurationOnDeployment>> GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo (string deploymentId, string type = null)
         { 
@@ -3193,6 +3313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
         /// <returns>ExpandableWebDeploymentEntityListing</returns>
         
+        
         public ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (List<string> expand = null)
         {
              ApiResponse<ExpandableWebDeploymentEntityListing> localVarResponse = GetWebdeploymentsDeploymentsWithHttpInfo(expand);
@@ -3205,6 +3326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
         /// <returns>ApiResponse of ExpandableWebDeploymentEntityListing</returns>
+        
         
         public ApiResponse< ExpandableWebDeploymentEntityListing > GetWebdeploymentsDeploymentsWithHttpInfo (List<string> expand = null)
         { 
@@ -3286,6 +3408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
         /// <returns>Task of ExpandableWebDeploymentEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (List<string> expand = null)
         {
              ApiResponse<ExpandableWebDeploymentEntityListing> localVarResponse = await GetWebdeploymentsDeploymentsAsyncWithHttpInfo(expand);
@@ -3299,6 +3422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
         /// <returns>Task of ApiResponse (ExpandableWebDeploymentEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (List<string> expand = null)
         { 
@@ -3381,6 +3505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
         
+        
         public WebDeploymentConfigurationVersion PostWebdeploymentsConfigurationVersionsDraftPublish (string configurationId)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = PostWebdeploymentsConfigurationVersionsDraftPublishWithHttpInfo(configurationId);
@@ -3393,6 +3518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
+        
         
         public ApiResponse< WebDeploymentConfigurationVersion > PostWebdeploymentsConfigurationVersionsDraftPublishWithHttpInfo (string configurationId)
         { 
@@ -3477,6 +3603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> PostWebdeploymentsConfigurationVersionsDraftPublishAsync (string configurationId)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = await PostWebdeploymentsConfigurationVersionsDraftPublishAsyncWithHttpInfo(configurationId);
@@ -3490,6 +3617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> PostWebdeploymentsConfigurationVersionsDraftPublishAsyncWithHttpInfo (string configurationId)
         { 
@@ -3576,6 +3704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationVersion"></param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
         
+        
         public WebDeploymentConfigurationVersion PostWebdeploymentsConfigurations (WebDeploymentConfigurationVersion configurationVersion)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = PostWebdeploymentsConfigurationsWithHttpInfo(configurationVersion);
@@ -3588,6 +3717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationVersion"></param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
+        
         
         public ApiResponse< WebDeploymentConfigurationVersion > PostWebdeploymentsConfigurationsWithHttpInfo (WebDeploymentConfigurationVersion configurationVersion)
         { 
@@ -3677,6 +3807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationVersion"></param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> PostWebdeploymentsConfigurationsAsync (WebDeploymentConfigurationVersion configurationVersion)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = await PostWebdeploymentsConfigurationsAsyncWithHttpInfo(configurationVersion);
@@ -3690,6 +3821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationVersion"></param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> PostWebdeploymentsConfigurationsAsyncWithHttpInfo (WebDeploymentConfigurationVersion configurationVersion)
         { 
@@ -3781,6 +3913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>WebDeployment</returns>
         
+        
         public WebDeployment PostWebdeploymentsDeployments (WebDeployment deployment)
         {
              ApiResponse<WebDeployment> localVarResponse = PostWebdeploymentsDeploymentsWithHttpInfo(deployment);
@@ -3793,6 +3926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deployment"></param>
         /// <returns>ApiResponse of WebDeployment</returns>
+        
         
         public ApiResponse< WebDeployment > PostWebdeploymentsDeploymentsWithHttpInfo (WebDeployment deployment)
         { 
@@ -3882,6 +4016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>Task of WebDeployment</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeployment> PostWebdeploymentsDeploymentsAsync (WebDeployment deployment)
         {
              ApiResponse<WebDeployment> localVarResponse = await PostWebdeploymentsDeploymentsAsyncWithHttpInfo(deployment);
@@ -3895,6 +4030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deployment"></param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeployment>> PostWebdeploymentsDeploymentsAsyncWithHttpInfo (WebDeployment deployment)
         { 
@@ -3986,6 +4122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
         /// <returns>WebDeploymentsAuthorizationResponse</returns>
         
+        
         public WebDeploymentsAuthorizationResponse PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body)
         {
              ApiResponse<WebDeploymentsAuthorizationResponse> localVarResponse = PostWebdeploymentsTokenOauthcodegrantjwtexchangeWithHttpInfo(body);
@@ -3998,6 +4135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
         /// <returns>ApiResponse of WebDeploymentsAuthorizationResponse</returns>
+        
         
         public ApiResponse< WebDeploymentsAuthorizationResponse > PostWebdeploymentsTokenOauthcodegrantjwtexchangeWithHttpInfo (WebDeploymentsOAuthExchangeRequest body)
         { 
@@ -4080,6 +4218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
         /// <returns>Task of WebDeploymentsAuthorizationResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentsAuthorizationResponse> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsync (WebDeploymentsOAuthExchangeRequest body)
         {
              ApiResponse<WebDeploymentsAuthorizationResponse> localVarResponse = await PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsyncWithHttpInfo(body);
@@ -4093,6 +4232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
         /// <returns>Task of ApiResponse (WebDeploymentsAuthorizationResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentsAuthorizationResponse>> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsyncWithHttpInfo (WebDeploymentsOAuthExchangeRequest body)
         { 
@@ -4177,6 +4317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>SignedData</returns>
         
+        
         public SignedData PostWebdeploymentsTokenRefresh (WebDeploymentsRefreshJWTRequest body = null)
         {
              ApiResponse<SignedData> localVarResponse = PostWebdeploymentsTokenRefreshWithHttpInfo(body);
@@ -4189,6 +4330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of SignedData</returns>
+        
         
         public ApiResponse< SignedData > PostWebdeploymentsTokenRefreshWithHttpInfo (WebDeploymentsRefreshJWTRequest body = null)
         { 
@@ -4268,6 +4410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of SignedData</returns>
         
+        
         public async System.Threading.Tasks.Task<SignedData> PostWebdeploymentsTokenRefreshAsync (WebDeploymentsRefreshJWTRequest body = null)
         {
              ApiResponse<SignedData> localVarResponse = await PostWebdeploymentsTokenRefreshAsyncWithHttpInfo(body);
@@ -4281,6 +4424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (SignedData)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SignedData>> PostWebdeploymentsTokenRefreshAsyncWithHttpInfo (WebDeploymentsRefreshJWTRequest body = null)
         { 
@@ -4362,6 +4506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationVersion"></param>
         /// <returns>WebDeploymentConfigurationVersion</returns>
         
+        
         public WebDeploymentConfigurationVersion PutWebdeploymentsConfigurationVersionsDraft (string configurationId, WebDeploymentConfigurationVersion configurationVersion)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = PutWebdeploymentsConfigurationVersionsDraftWithHttpInfo(configurationId, configurationVersion);
@@ -4375,6 +4520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <param name="configurationVersion"></param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersion</returns>
+        
         
         public ApiResponse< WebDeploymentConfigurationVersion > PutWebdeploymentsConfigurationVersionsDraftWithHttpInfo (string configurationId, WebDeploymentConfigurationVersion configurationVersion)
         { 
@@ -4469,6 +4615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationVersion"></param>
         /// <returns>Task of WebDeploymentConfigurationVersion</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersion> PutWebdeploymentsConfigurationVersionsDraftAsync (string configurationId, WebDeploymentConfigurationVersion configurationVersion)
         {
              ApiResponse<WebDeploymentConfigurationVersion> localVarResponse = await PutWebdeploymentsConfigurationVersionsDraftAsyncWithHttpInfo(configurationId, configurationVersion);
@@ -4483,6 +4630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configurationId">The configuration version ID</param>
         /// <param name="configurationVersion"></param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersion)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersion>> PutWebdeploymentsConfigurationVersionsDraftAsyncWithHttpInfo (string configurationId, WebDeploymentConfigurationVersion configurationVersion)
         { 
@@ -4580,6 +4728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>WebDeployment</returns>
         
+        
         public WebDeployment PutWebdeploymentsDeployment (string deploymentId, WebDeployment deployment)
         {
              ApiResponse<WebDeployment> localVarResponse = PutWebdeploymentsDeploymentWithHttpInfo(deploymentId, deployment);
@@ -4593,6 +4742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="deployment"></param>
         /// <returns>ApiResponse of WebDeployment</returns>
+        
         
         public ApiResponse< WebDeployment > PutWebdeploymentsDeploymentWithHttpInfo (string deploymentId, WebDeployment deployment)
         { 
@@ -4687,6 +4837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>Task of WebDeployment</returns>
         
+        
         public async System.Threading.Tasks.Task<WebDeployment> PutWebdeploymentsDeploymentAsync (string deploymentId, WebDeployment deployment)
         {
              ApiResponse<WebDeployment> localVarResponse = await PutWebdeploymentsDeploymentAsyncWithHttpInfo(deploymentId, deployment);
@@ -4701,6 +4852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="deployment"></param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebDeployment>> PutWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId, WebDeployment deployment)
         { 

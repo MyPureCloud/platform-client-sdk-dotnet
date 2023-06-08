@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="requestId">Request id</param>
         /// <returns>GDPRRequest</returns>
         
+        
         GDPRRequest GetGdprRequest (string requestId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Request id</param>
         /// <returns>ApiResponse of GDPRRequest</returns>
+        
         
         ApiResponse<GDPRRequest> GetGdprRequestWithHttpInfo (string requestId);
 
@@ -51,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>GDPRRequestEntityListing</returns>
         
+        
         GDPRRequestEntityListing GetGdprRequests (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -63,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of GDPRRequestEntityListing</returns>
+        
         
         ApiResponse<GDPRRequestEntityListing> GetGdprRequestsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
@@ -77,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="searchValue">Search Value</param>
         /// <returns>GDPRSubjectEntityListing</returns>
         
+        
         GDPRSubjectEntityListing GetGdprSubjects (string searchType, string searchValue);
 
         /// <summary>
@@ -89,6 +94,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="searchType">Search Type</param>
         /// <param name="searchValue">Search Value</param>
         /// <returns>ApiResponse of GDPRSubjectEntityListing</returns>
+        
         
         ApiResponse<GDPRSubjectEntityListing> GetGdprSubjectsWithHttpInfo (string searchType, string searchValue);
 
@@ -103,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleteConfirmed">Confirm delete (optional, default to false)</param>
         /// <returns>GDPRRequest</returns>
         
+        
         GDPRRequest PostGdprRequests (GDPRRequest body, bool? deleteConfirmed = null);
 
         /// <summary>
@@ -115,6 +122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">GDPR request</param>
         /// <param name="deleteConfirmed">Confirm delete (optional, default to false)</param>
         /// <returns>ApiResponse of GDPRRequest</returns>
+        
         
         ApiResponse<GDPRRequest> PostGdprRequestsWithHttpInfo (GDPRRequest body, bool? deleteConfirmed = null);
 
@@ -132,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="requestId">Request id</param>
         /// <returns>Task of GDPRRequest</returns>
         
+        
         System.Threading.Tasks.Task<GDPRRequest> GetGdprRequestAsync (string requestId);
 
         /// <summary>
@@ -143,6 +152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Request id</param>
         /// <returns>Task of ApiResponse (GDPRRequest)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<GDPRRequest>> GetGdprRequestAsyncWithHttpInfo (string requestId);
 
@@ -157,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of GDPRRequestEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<GDPRRequestEntityListing> GetGdprRequestsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -169,6 +180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (GDPRRequestEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<GDPRRequestEntityListing>> GetGdprRequestsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
@@ -183,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="searchValue">Search Value</param>
         /// <returns>Task of GDPRSubjectEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<GDPRSubjectEntityListing> GetGdprSubjectsAsync (string searchType, string searchValue);
 
         /// <summary>
@@ -195,6 +208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="searchType">Search Type</param>
         /// <param name="searchValue">Search Value</param>
         /// <returns>Task of ApiResponse (GDPRSubjectEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<GDPRSubjectEntityListing>> GetGdprSubjectsAsyncWithHttpInfo (string searchType, string searchValue);
 
@@ -209,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleteConfirmed">Confirm delete (optional, default to false)</param>
         /// <returns>Task of GDPRRequest</returns>
         
+        
         System.Threading.Tasks.Task<GDPRRequest> PostGdprRequestsAsync (GDPRRequest body, bool? deleteConfirmed = null);
 
         /// <summary>
@@ -221,6 +236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">GDPR request</param>
         /// <param name="deleteConfirmed">Confirm delete (optional, default to false)</param>
         /// <returns>Task of ApiResponse (GDPRRequest)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<GDPRRequest>> PostGdprRequestsAsyncWithHttpInfo (GDPRRequest body, bool? deleteConfirmed = null);
 
@@ -323,6 +339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="requestId">Request id</param>
         /// <returns>GDPRRequest</returns>
         
+        
         public GDPRRequest GetGdprRequest (string requestId)
         {
              ApiResponse<GDPRRequest> localVarResponse = GetGdprRequestWithHttpInfo(requestId);
@@ -335,6 +352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Request id</param>
         /// <returns>ApiResponse of GDPRRequest</returns>
+        
         
         public ApiResponse< GDPRRequest > GetGdprRequestWithHttpInfo (string requestId)
         { 
@@ -419,6 +437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="requestId">Request id</param>
         /// <returns>Task of GDPRRequest</returns>
         
+        
         public async System.Threading.Tasks.Task<GDPRRequest> GetGdprRequestAsync (string requestId)
         {
              ApiResponse<GDPRRequest> localVarResponse = await GetGdprRequestAsyncWithHttpInfo(requestId);
@@ -432,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Request id</param>
         /// <returns>Task of ApiResponse (GDPRRequest)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GDPRRequest>> GetGdprRequestAsyncWithHttpInfo (string requestId)
         { 
@@ -519,6 +539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>GDPRRequestEntityListing</returns>
         
+        
         public GDPRRequestEntityListing GetGdprRequests (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<GDPRRequestEntityListing> localVarResponse = GetGdprRequestsWithHttpInfo(pageSize, pageNumber);
@@ -532,6 +553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of GDPRRequestEntityListing</returns>
+        
         
         public ApiResponse< GDPRRequestEntityListing > GetGdprRequestsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -615,6 +637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of GDPRRequestEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<GDPRRequestEntityListing> GetGdprRequestsAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<GDPRRequestEntityListing> localVarResponse = await GetGdprRequestsAsyncWithHttpInfo(pageSize, pageNumber);
@@ -629,6 +652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (GDPRRequestEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GDPRRequestEntityListing>> GetGdprRequestsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -713,6 +737,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="searchValue">Search Value</param>
         /// <returns>GDPRSubjectEntityListing</returns>
         
+        
         public GDPRSubjectEntityListing GetGdprSubjects (string searchType, string searchValue)
         {
              ApiResponse<GDPRSubjectEntityListing> localVarResponse = GetGdprSubjectsWithHttpInfo(searchType, searchValue);
@@ -726,6 +751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="searchType">Search Type</param>
         /// <param name="searchValue">Search Value</param>
         /// <returns>ApiResponse of GDPRSubjectEntityListing</returns>
+        
         
         public ApiResponse< GDPRSubjectEntityListing > GetGdprSubjectsWithHttpInfo (string searchType, string searchValue)
         { 
@@ -815,6 +841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="searchValue">Search Value</param>
         /// <returns>Task of GDPRSubjectEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<GDPRSubjectEntityListing> GetGdprSubjectsAsync (string searchType, string searchValue)
         {
              ApiResponse<GDPRSubjectEntityListing> localVarResponse = await GetGdprSubjectsAsyncWithHttpInfo(searchType, searchValue);
@@ -829,6 +856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="searchType">Search Type</param>
         /// <param name="searchValue">Search Value</param>
         /// <returns>Task of ApiResponse (GDPRSubjectEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GDPRSubjectEntityListing>> GetGdprSubjectsAsyncWithHttpInfo (string searchType, string searchValue)
         { 
@@ -921,6 +949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleteConfirmed">Confirm delete (optional, default to false)</param>
         /// <returns>GDPRRequest</returns>
         
+        
         public GDPRRequest PostGdprRequests (GDPRRequest body, bool? deleteConfirmed = null)
         {
              ApiResponse<GDPRRequest> localVarResponse = PostGdprRequestsWithHttpInfo(body, deleteConfirmed);
@@ -934,6 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">GDPR request</param>
         /// <param name="deleteConfirmed">Confirm delete (optional, default to false)</param>
         /// <returns>ApiResponse of GDPRRequest</returns>
+        
         
         public ApiResponse< GDPRRequest > PostGdprRequestsWithHttpInfo (GDPRRequest body, bool? deleteConfirmed = null)
         { 
@@ -1025,6 +1055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleteConfirmed">Confirm delete (optional, default to false)</param>
         /// <returns>Task of GDPRRequest</returns>
         
+        
         public async System.Threading.Tasks.Task<GDPRRequest> PostGdprRequestsAsync (GDPRRequest body, bool? deleteConfirmed = null)
         {
              ApiResponse<GDPRRequest> localVarResponse = await PostGdprRequestsAsyncWithHttpInfo(body, deleteConfirmed);
@@ -1039,6 +1070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">GDPR request</param>
         /// <param name="deleteConfirmed">Confirm delete (optional, default to false)</param>
         /// <returns>Task of ApiResponse (GDPRRequest)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<GDPRRequest>> PostGdprRequestsAsyncWithHttpInfo (GDPRRequest body, bool? deleteConfirmed = null)
         { 

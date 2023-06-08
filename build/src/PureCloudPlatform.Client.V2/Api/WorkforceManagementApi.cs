@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementBusinessunit (string businessUnitId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId);
 
@@ -51,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId);
 
         /// <summary>
@@ -63,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId);
 
@@ -77,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId);
 
         /// <summary>
@@ -89,6 +94,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId);
 
@@ -103,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementBusinessunitSchedulingRun (string businessUnitId, string runId);
 
         /// <summary>
@@ -115,6 +122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId);
 
@@ -129,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId);
 
         /// <summary>
@@ -141,6 +150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId);
 
@@ -156,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>BuAsyncScheduleResponse</returns>
         
+        
         BuAsyncScheduleResponse DeleteWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId);
 
         /// <summary>
@@ -169,6 +180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
+        
         
         ApiResponse<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
 
@@ -184,6 +196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
@@ -198,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
@@ -209,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementCalendarUrlIcs ();
 
         /// <summary>
@@ -219,6 +234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementCalendarUrlIcsWithHttpInfo ();
 
@@ -232,6 +248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementManagementunit (string managementUnitId);
 
         /// <summary>
@@ -243,6 +260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId);
 
@@ -257,6 +275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId);
 
         /// <summary>
@@ -269,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId);
 
@@ -283,6 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId);
 
         /// <summary>
@@ -295,6 +316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId);
 
@@ -309,6 +331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId);
 
         /// <summary>
@@ -321,6 +344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId);
 
@@ -335,6 +359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns></returns>
         
+        
         void DeleteWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId);
 
         /// <summary>
@@ -348,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId);
 
         /// <summary>
@@ -359,6 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>List&lt;UserScheduleAdherence&gt;</returns>
+        
         
         List<UserScheduleAdherence> GetWorkforcemanagementAdherence (List<string> userId);
 
@@ -372,6 +399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>ApiResponse of List&lt;UserScheduleAdherence&gt;</returns>
         
+        
         ApiResponse<List<UserScheduleAdherence>> GetWorkforcemanagementAdherenceWithHttpInfo (List<string> userId);
 
         /// <summary>
@@ -383,6 +411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>AdherenceExplanationResponse</returns>
+        
         
         AdherenceExplanationResponse GetWorkforcemanagementAdherenceExplanation (string explanationId);
 
@@ -396,6 +425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>ApiResponse of AdherenceExplanationResponse</returns>
         
+        
         ApiResponse<AdherenceExplanationResponse> GetWorkforcemanagementAdherenceExplanationWithHttpInfo (string explanationId);
 
         /// <summary>
@@ -407,6 +437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <returns>AdherenceExplanationJob</returns>
+        
         
         AdherenceExplanationJob GetWorkforcemanagementAdherenceExplanationsJob (string jobId);
 
@@ -420,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the job</param>
         /// <returns>ApiResponse of AdherenceExplanationJob</returns>
         
+        
         ApiResponse<AdherenceExplanationJob> GetWorkforcemanagementAdherenceExplanationsJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -431,6 +463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job to get</param>
         /// <returns>WfmHistoricalAdherenceBulkResponse</returns>
+        
         
         WfmHistoricalAdherenceBulkResponse GetWorkforcemanagementAdherenceHistoricalBulkJob (string jobId);
 
@@ -444,6 +477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">ID of the job to get</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
         
+        
         ApiResponse<WfmHistoricalAdherenceBulkResponse> GetWorkforcemanagementAdherenceHistoricalBulkJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -455,6 +489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
+        
         
         WfmHistoricalAdherenceResponse GetWorkforcemanagementAdherenceHistoricalJob (string jobId);
 
@@ -468,6 +503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         
+        
         ApiResponse<WfmHistoricalAdherenceResponse> GetWorkforcemanagementAdherenceHistoricalJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -480,6 +516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ModelingStatusResponse</returns>
         
+        
         ModelingStatusResponse GetWorkforcemanagementAdhocmodelingjob (string jobId);
 
         /// <summary>
@@ -491,6 +528,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ApiResponse of ModelingStatusResponse</returns>
+        
         
         ApiResponse<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobWithHttpInfo (string jobId);
 
@@ -505,6 +543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>AdherenceExplanationResponse</returns>
         
+        
         AdherenceExplanationResponse GetWorkforcemanagementAgentAdherenceExplanation (string agentId, string explanationId);
 
         /// <summary>
@@ -518,6 +557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>ApiResponse of AdherenceExplanationResponse</returns>
         
+        
         ApiResponse<AdherenceExplanationResponse> GetWorkforcemanagementAgentAdherenceExplanationWithHttpInfo (string agentId, string explanationId);
 
         /// <summary>
@@ -529,6 +569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>AgentManagementUnitReference</returns>
+        
         
         AgentManagementUnitReference GetWorkforcemanagementAgentManagementunit (string agentId);
 
@@ -542,6 +583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>ApiResponse of AgentManagementUnitReference</returns>
         
+        
         ApiResponse<AgentManagementUnitReference> GetWorkforcemanagementAgentManagementunitWithHttpInfo (string agentId);
 
         /// <summary>
@@ -553,6 +595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AgentManagementUnitReference</returns>
         
+        
         AgentManagementUnitReference GetWorkforcemanagementAgentsMeManagementunit ();
 
         /// <summary>
@@ -563,6 +606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AgentManagementUnitReference</returns>
+        
         
         ApiResponse<AgentManagementUnitReference> GetWorkforcemanagementAgentsMeManagementunitWithHttpInfo ();
 
@@ -577,6 +621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the business unit (optional)</param>
         /// <returns>BusinessUnitResponse</returns>
         
+        
         BusinessUnitResponse GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null);
 
         /// <summary>
@@ -589,6 +634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the business unit (optional)</param>
         /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        
         
         ApiResponse<BusinessUnitResponse> GetWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, List<string> expand = null);
 
@@ -603,6 +649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>BusinessUnitActivityCode</returns>
         
+        
         BusinessUnitActivityCode GetWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId);
 
         /// <summary>
@@ -616,6 +663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
         
+        
         ApiResponse<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId);
 
         /// <summary>
@@ -628,6 +676,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>BusinessUnitActivityCodeListing</returns>
         
+        
         BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string businessUnitId);
 
         /// <summary>
@@ -639,6 +688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>ApiResponse of BusinessUnitActivityCodeListing</returns>
+        
         
         ApiResponse<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId);
 
@@ -653,6 +703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>WfmIntradayPlanningGroupListing</returns>
         
+        
         WfmIntradayPlanningGroupListing GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, String date);
 
         /// <summary>
@@ -665,6 +716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of WfmIntradayPlanningGroupListing</returns>
+        
         
         ApiResponse<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, String date);
 
@@ -680,6 +732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
+        
         ManagementUnitListing GetWorkforcemanagementBusinessunitManagementunits (string businessUnitId, string feature = null, string divisionId = null);
 
         /// <summary>
@@ -694,6 +747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         
+        
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementBusinessunitManagementunitsWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null);
 
         /// <summary>
@@ -706,6 +760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>PlanningGroup</returns>
+        
         
         PlanningGroup GetWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId);
 
@@ -720,6 +775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
         
+        
         ApiResponse<PlanningGroup> GetWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId);
 
         /// <summary>
@@ -732,6 +788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>PlanningGroupList</returns>
         
+        
         PlanningGroupList GetWorkforcemanagementBusinessunitPlanninggroups (string businessUnitId);
 
         /// <summary>
@@ -743,6 +800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>ApiResponse of PlanningGroupList</returns>
+        
         
         ApiResponse<PlanningGroupList> GetWorkforcemanagementBusinessunitPlanninggroupsWithHttpInfo (string businessUnitId);
 
@@ -757,6 +815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>BuScheduleRun</returns>
         
+        
         BuScheduleRun GetWorkforcemanagementBusinessunitSchedulingRun (string businessUnitId, string runId);
 
         /// <summary>
@@ -769,6 +828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>ApiResponse of BuScheduleRun</returns>
+        
         
         ApiResponse<BuScheduleRun> GetWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId);
 
@@ -785,6 +845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>BuRescheduleResult</returns>
         
+        
         BuRescheduleResult GetWorkforcemanagementBusinessunitSchedulingRunResult (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand);
 
         /// <summary>
@@ -800,6 +861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>ApiResponse of BuRescheduleResult</returns>
         
+        
         ApiResponse<BuRescheduleResult> GetWorkforcemanagementBusinessunitSchedulingRunResultWithHttpInfo (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand);
 
         /// <summary>
@@ -812,6 +874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>BuScheduleRunListing</returns>
         
+        
         BuScheduleRunListing GetWorkforcemanagementBusinessunitSchedulingRuns (string businessUnitId);
 
         /// <summary>
@@ -823,6 +886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>ApiResponse of BuScheduleRunListing</returns>
+        
         
         ApiResponse<BuScheduleRunListing> GetWorkforcemanagementBusinessunitSchedulingRunsWithHttpInfo (string businessUnitId);
 
@@ -837,6 +901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>ServiceGoalTemplate</returns>
         
+        
         ServiceGoalTemplate GetWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId);
 
         /// <summary>
@@ -850,6 +915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
         
+        
         ApiResponse<ServiceGoalTemplate> GetWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId);
 
         /// <summary>
@@ -862,6 +928,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>ServiceGoalTemplateList</returns>
         
+        
         ServiceGoalTemplateList GetWorkforcemanagementBusinessunitServicegoaltemplates (string businessUnitId);
 
         /// <summary>
@@ -873,6 +940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>ApiResponse of ServiceGoalTemplateList</returns>
+        
         
         ApiResponse<ServiceGoalTemplateList> GetWorkforcemanagementBusinessunitServicegoaltemplatesWithHttpInfo (string businessUnitId);
 
@@ -889,6 +957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleMetadata</returns>
         
+        
         BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId, string expand = null);
 
         /// <summary>
@@ -904,6 +973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
         
+        
         ApiResponse<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null);
 
         /// <summary>
@@ -918,6 +988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ScheduleGenerationResult</returns>
         
+        
         ScheduleGenerationResult GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults (string businessUnitId, String weekId, string scheduleId);
 
         /// <summary>
@@ -931,6 +1002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of ScheduleGenerationResult</returns>
+        
         
         ApiResponse<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
 
@@ -947,6 +1019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>BuHeadcountForecastResponse</returns>
         
+        
         BuHeadcountForecastResponse GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
 
         /// <summary>
@@ -961,6 +1034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>ApiResponse of BuHeadcountForecastResponse</returns>
+        
         
         ApiResponse<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
 
@@ -977,6 +1051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>BuAgentScheduleHistoryResponse</returns>
         
+        
         BuAgentScheduleHistoryResponse GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent (string businessUnitId, String weekId, string scheduleId, string agentId);
 
         /// <summary>
@@ -991,6 +1066,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>ApiResponse of BuAgentScheduleHistoryResponse</returns>
+        
         
         ApiResponse<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId);
 
@@ -1007,6 +1083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleListing</returns>
         
+        
         BuScheduleListing GetWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null);
 
         /// <summary>
@@ -1021,6 +1098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleListing</returns>
+        
         
         ApiResponse<BuScheduleListing> GetWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null);
 
@@ -1037,6 +1115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the forecast (optional)</param>
         /// <returns>BuShortTermForecast</returns>
         
+        
         BuShortTermForecast GetWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
 
         /// <summary>
@@ -1051,6 +1130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand">Include to access additional data on the forecast (optional)</param>
         /// <returns>ApiResponse of BuShortTermForecast</returns>
+        
         
         ApiResponse<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
 
@@ -1068,6 +1148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>BuForecastResultResponse</returns>
         
+        
         BuForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastData (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -1084,6 +1165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuForecastResultResponse</returns>
         
+        
         ApiResponse<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -1098,6 +1180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>BuForecastGenerationResult</returns>
         
+        
         BuForecastGenerationResult GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
@@ -1111,6 +1194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of BuForecastGenerationResult</returns>
+        
         
         ApiResponse<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
 
@@ -1127,6 +1211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>LongTermForecastResultResponse</returns>
         
+        
         LongTermForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
 
         /// <summary>
@@ -1142,6 +1227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of LongTermForecastResultResponse</returns>
         
+        
         ApiResponse<LongTermForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
 
         /// <summary>
@@ -1155,6 +1241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ForecastPlanningGroupsResponse</returns>
+        
         
         ForecastPlanningGroupsResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups (string businessUnitId, String weekDateId, string forecastId);
 
@@ -1170,6 +1257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of ForecastPlanningGroupsResponse</returns>
         
+        
         ApiResponse<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
@@ -1182,6 +1270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>BuShortTermForecastListing</returns>
+        
         
         BuShortTermForecastListing GetWorkforcemanagementBusinessunitWeekShorttermforecasts (string businessUnitId, string weekDateId);
 
@@ -1196,6 +1285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>ApiResponse of BuShortTermForecastListing</returns>
         
+        
         ApiResponse<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsWithHttpInfo (string businessUnitId, string weekDateId);
 
         /// <summary>
@@ -1208,6 +1298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>BusinessUnitListing</returns>
+        
         
         BusinessUnitListing GetWorkforcemanagementBusinessunits (string feature = null, string divisionId = null);
 
@@ -1222,6 +1313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of BusinessUnitListing</returns>
         
+        
         ApiResponse<BusinessUnitListing> GetWorkforcemanagementBusinessunitsWithHttpInfo (string feature = null, string divisionId = null);
 
         /// <summary>
@@ -1233,6 +1325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>BusinessUnitListing</returns>
+        
         
         BusinessUnitListing GetWorkforcemanagementBusinessunitsDivisionviews (List<string> divisionId = null);
 
@@ -1246,6 +1339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>ApiResponse of BusinessUnitListing</returns>
         
+        
         ApiResponse<BusinessUnitListing> GetWorkforcemanagementBusinessunitsDivisionviewsWithHttpInfo (List<string> divisionId = null);
 
         /// <summary>
@@ -1257,6 +1351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>string</returns>
+        
         
         string GetWorkforcemanagementCalendarDataIcs (string calendarId);
 
@@ -1270,6 +1365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>ApiResponse of string</returns>
         
+        
         ApiResponse<string> GetWorkforcemanagementCalendarDataIcsWithHttpInfo (string calendarId);
 
         /// <summary>
@@ -1280,6 +1376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CalendarUrlResponse</returns>
+        
         
         CalendarUrlResponse GetWorkforcemanagementCalendarUrlIcs ();
 
@@ -1292,6 +1389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CalendarUrlResponse</returns>
         
+        
         ApiResponse<CalendarUrlResponse> GetWorkforcemanagementCalendarUrlIcsWithHttpInfo ();
 
         /// <summary>
@@ -1302,6 +1400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportDeleteJobResponse</returns>
+        
         
         HistoricalImportDeleteJobResponse GetWorkforcemanagementHistoricaldataDeletejob ();
 
@@ -1314,6 +1413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
         
+        
         ApiResponse<HistoricalImportDeleteJobResponse> GetWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ();
 
         /// <summary>
@@ -1325,6 +1425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportStatusListing</returns>
         
+        
         HistoricalImportStatusListing GetWorkforcemanagementHistoricaldataImportstatus ();
 
         /// <summary>
@@ -1335,6 +1436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportStatusListing</returns>
+        
         
         ApiResponse<HistoricalImportStatusListing> GetWorkforcemanagementHistoricaldataImportstatusWithHttpInfo ();
 
@@ -1349,6 +1451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>ManagementUnit</returns>
         
+        
         ManagementUnit GetWorkforcemanagementManagementunit (string managementUnitId, List<string> expand = null);
 
         /// <summary>
@@ -1362,6 +1465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
         
+        
         ApiResponse<ManagementUnit> GetWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, List<string> expand = null);
 
         /// <summary>
@@ -1374,6 +1478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ActivityCodeContainer</returns>
         [Obsolete]
+        
         ActivityCodeContainer GetWorkforcemanagementManagementunitActivitycodes (string managementUnitId);
 
         /// <summary>
@@ -1386,6 +1491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ActivityCodeContainer</returns>
         [Obsolete]
+        
         ApiResponse<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string managementUnitId);
 
         /// <summary>
@@ -1399,6 +1505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>UserScheduleAdherenceListing</returns>
         
+        
         UserScheduleAdherenceListing GetWorkforcemanagementManagementunitAdherence (string managementUnitId, bool? forceDownloadService = null);
 
         /// <summary>
@@ -1411,6 +1518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of UserScheduleAdherenceListing</returns>
+        
         
         ApiResponse<UserScheduleAdherenceListing> GetWorkforcemanagementManagementunitAdherenceWithHttpInfo (string managementUnitId, bool? forceDownloadService = null);
 
@@ -1426,6 +1534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>WfmAgent</returns>
         
+        
         WfmAgent GetWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, bool? excludeCapabilities = null);
 
         /// <summary>
@@ -1440,6 +1549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>ApiResponse of WfmAgent</returns>
         
+        
         ApiResponse<WfmAgent> GetWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null);
 
         /// <summary>
@@ -1452,6 +1562,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>ShiftTradeListResponse</returns>
+        
         
         ShiftTradeListResponse GetWorkforcemanagementManagementunitAgentShifttrades (string managementUnitId, string agentId);
 
@@ -1466,6 +1577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <returns>ApiResponse of ShiftTradeListResponse</returns>
         
+        
         ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo (string managementUnitId, string agentId);
 
         /// <summary>
@@ -1477,6 +1589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ShiftTradeMatchesSummaryResponse</returns>
+        
         
         ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string managementUnitId);
 
@@ -1490,6 +1603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
         
+        
         ApiResponse<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string managementUnitId);
 
         /// <summary>
@@ -1502,6 +1616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         
+        
         WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string managementUnitId);
 
         /// <summary>
@@ -1513,6 +1628,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
+        
         
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string managementUnitId);
 
@@ -1527,6 +1643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>TimeOffLimit</returns>
         
+        
         TimeOffLimit GetWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId);
 
         /// <summary>
@@ -1540,6 +1657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         
+        
         ApiResponse<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId);
 
         /// <summary>
@@ -1552,6 +1670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>TimeOffLimitListing</returns>
         
+        
         TimeOffLimitListing GetWorkforcemanagementManagementunitTimeofflimits (string managementUnitId);
 
         /// <summary>
@@ -1563,6 +1682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>ApiResponse of TimeOffLimitListing</returns>
+        
         
         ApiResponse<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId);
 
@@ -1577,6 +1697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>TimeOffPlan</returns>
         
+        
         TimeOffPlan GetWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId);
 
         /// <summary>
@@ -1590,6 +1711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         
+        
         ApiResponse<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId);
 
         /// <summary>
@@ -1602,6 +1724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>TimeOffPlanListing</returns>
         
+        
         TimeOffPlanListing GetWorkforcemanagementManagementunitTimeoffplans (string managementUnitId);
 
         /// <summary>
@@ -1613,6 +1736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>ApiResponse of TimeOffPlanListing</returns>
+        
         
         ApiResponse<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId);
 
@@ -1628,6 +1752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         TimeOffRequestResponse GetWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId);
 
         /// <summary>
@@ -1641,6 +1766,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
 
@@ -1656,6 +1782,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>QueryTimeOffLimitValuesResponse</returns>
         
+        
         QueryTimeOffLimitValuesResponse GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits (string managementUnitId, string userId, string timeOffRequestId);
 
         /// <summary>
@@ -1669,6 +1796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
+        
         
         ApiResponse<QueryTimeOffLimitValuesResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
 
@@ -1684,6 +1812,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
         
+        
         TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId, bool? recentlyReviewed = null);
 
         /// <summary>
@@ -1698,6 +1827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         
+        
         ApiResponse<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null);
 
         /// <summary>
@@ -1710,6 +1840,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         
+        
         WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string managementUnitId);
 
         /// <summary>
@@ -1721,6 +1852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
+        
         
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersWithHttpInfo (string managementUnitId);
 
@@ -1738,6 +1870,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>WeekScheduleResponse</returns>
         [Obsolete]
+        
         WeekScheduleResponse GetWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -1754,6 +1887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WeekScheduleResponse</returns>
         [Obsolete]
+        
         ApiResponse<WeekScheduleResponse> GetWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -1770,6 +1904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>WeekScheduleListResponse</returns>
         [Obsolete]
+        
         WeekScheduleListResponse GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
 
         /// <summary>
@@ -1786,6 +1921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>ApiResponse of WeekScheduleListResponse</returns>
         [Obsolete]
+        
         ApiResponse<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
 
         /// <summary>
@@ -1799,6 +1935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
+        
         
         WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
 
@@ -1814,6 +1951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
         
+        
         ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
 
         /// <summary>
@@ -1827,6 +1965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>WorkPlan</returns>
+        
         
         WorkPlan GetWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, List<string> includeOnly = null);
 
@@ -1842,6 +1981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
         
+        
         ApiResponse<WorkPlan> GetWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null);
 
         /// <summary>
@@ -1854,6 +1994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>WorkPlanRotationResponse</returns>
+        
         
         WorkPlanRotationResponse GetWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId);
 
@@ -1868,6 +2009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
         
+        
         ApiResponse<WorkPlanRotationResponse> GetWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId);
 
         /// <summary>
@@ -1880,6 +2022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>WorkPlanRotationListResponse</returns>
+        
         
         WorkPlanRotationListResponse GetWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, List<string> expand = null);
 
@@ -1894,6 +2037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationListResponse</returns>
         
+        
         ApiResponse<WorkPlanRotationListResponse> GetWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, List<string> expand = null);
 
         /// <summary>
@@ -1907,6 +2051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <returns>WorkPlanListResponse</returns>
         
+        
         WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null);
 
         /// <summary>
@@ -1919,6 +2064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
+        
         
         ApiResponse<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null);
 
@@ -1936,6 +2082,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
+        
         ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
 
         /// <summary>
@@ -1952,6 +2099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         
+        
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
 
         /// <summary>
@@ -1963,6 +2111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>ManagementUnitListing</returns>
+        
         
         ManagementUnitListing GetWorkforcemanagementManagementunitsDivisionviews (List<string> divisionId = null);
 
@@ -1976,6 +2125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         
+        
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo (List<string> divisionId = null);
 
         /// <summary>
@@ -1987,6 +2137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>NotificationsResponse</returns>
         
+        
         NotificationsResponse GetWorkforcemanagementNotifications ();
 
         /// <summary>
@@ -1997,6 +2148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of NotificationsResponse</returns>
+        
         
         ApiResponse<NotificationsResponse> GetWorkforcemanagementNotificationsWithHttpInfo ();
 
@@ -2010,6 +2162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>SchedulingStatusResponse</returns>
         
+        
         SchedulingStatusResponse GetWorkforcemanagementSchedulingjob (string jobId);
 
         /// <summary>
@@ -2022,6 +2175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>ApiResponse of SchedulingStatusResponse</returns>
         
+        
         ApiResponse<SchedulingStatusResponse> GetWorkforcemanagementSchedulingjobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -2033,6 +2187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ShiftTradeListResponse</returns>
         
+        
         ShiftTradeListResponse GetWorkforcemanagementShifttrades ();
 
         /// <summary>
@@ -2043,6 +2198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ShiftTradeListResponse</returns>
+        
         
         ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementShifttradesWithHttpInfo ();
 
@@ -2056,6 +2212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>WfmHistoricalShrinkageResponse</returns>
         
+        
         WfmHistoricalShrinkageResponse GetWorkforcemanagementShrinkageJob (string jobId);
 
         /// <summary>
@@ -2067,6 +2224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of WfmHistoricalShrinkageResponse</returns>
+        
         
         ApiResponse<WfmHistoricalShrinkageResponse> GetWorkforcemanagementShrinkageJobWithHttpInfo (string jobId);
 
@@ -2080,6 +2238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         TimeOffRequestResponse GetWorkforcemanagementTimeoffrequest (string timeOffRequestId);
 
         /// <summary>
@@ -2091,6 +2250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         ApiResponse<TimeOffRequestResponse> GetWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId);
 
@@ -2104,6 +2264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>WaitlistPositionListing</returns>
         
+        
         WaitlistPositionListing GetWorkforcemanagementTimeoffrequestWaitlistpositions (string timeOffRequestId);
 
         /// <summary>
@@ -2115,6 +2276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
+        
         
         ApiResponse<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo (string timeOffRequestId);
 
@@ -2128,6 +2290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
         
+        
         TimeOffRequestList GetWorkforcemanagementTimeoffrequests (bool? recentlyReviewed = null);
 
         /// <summary>
@@ -2139,6 +2302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
+        
         
         ApiResponse<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsWithHttpInfo (bool? recentlyReviewed = null);
 
@@ -2154,6 +2318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>AdherenceExplanationAsyncResponse</returns>
         
+        
         AdherenceExplanationAsyncResponse PatchWorkforcemanagementAgentAdherenceExplanation (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body);
 
         /// <summary>
@@ -2168,6 +2333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of AdherenceExplanationAsyncResponse</returns>
         
+        
         ApiResponse<AdherenceExplanationAsyncResponse> PatchWorkforcemanagementAgentAdherenceExplanationWithHttpInfo (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body);
 
         /// <summary>
@@ -2181,6 +2347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitResponse</returns>
         
+        
         BusinessUnitResponse PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null);
 
         /// <summary>
@@ -2193,6 +2360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        
         
         ApiResponse<BusinessUnitResponse> PatchWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null);
 
@@ -2208,6 +2376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitActivityCode</returns>
         
+        
         BusinessUnitActivityCode PatchWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
 
         /// <summary>
@@ -2221,6 +2390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
+        
         
         ApiResponse<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
 
@@ -2236,6 +2406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>PlanningGroup</returns>
         
+        
         PlanningGroup PatchWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null);
 
         /// <summary>
@@ -2249,6 +2420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
+        
         
         ApiResponse<PlanningGroup> PatchWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null);
 
@@ -2264,6 +2436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns></returns>
         
+        
         void PatchWorkforcemanagementBusinessunitSchedulingRun (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null);
 
         /// <summary>
@@ -2277,6 +2450,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PatchWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null);
 
@@ -2292,6 +2466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ServiceGoalTemplate</returns>
         
+        
         ServiceGoalTemplate PatchWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null);
 
         /// <summary>
@@ -2306,6 +2481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
         
+        
         ApiResponse<ServiceGoalTemplate> PatchWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null);
 
         /// <summary>
@@ -2319,6 +2495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ManagementUnit</returns>
         
+        
         ManagementUnit PatchWorkforcemanagementManagementunit (string managementUnitId, UpdateManagementUnitRequest body = null);
 
         /// <summary>
@@ -2331,6 +2508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
+        
         
         ApiResponse<ManagementUnit> PatchWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
 
@@ -2346,6 +2524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
         
+        
         TimeOffLimit PatchWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
 
         /// <summary>
@@ -2359,6 +2538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
+        
         
         ApiResponse<TimeOffLimit> PatchWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
 
@@ -2374,6 +2554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffPlan</returns>
         
+        
         TimeOffPlan PatchWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
 
         /// <summary>
@@ -2387,6 +2568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
+        
         
         ApiResponse<TimeOffPlan> PatchWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
 
@@ -2403,6 +2585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         TimeOffRequestResponse PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
 
         /// <summary>
@@ -2417,6 +2600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         ApiResponse<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
 
@@ -2433,6 +2617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
         
+        
         ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body);
 
         /// <summary>
@@ -2447,6 +2632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        
         
         ApiResponse<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body);
 
@@ -2463,6 +2649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlan</returns>
         
+        
         WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null);
 
         /// <summary>
@@ -2478,6 +2665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
         
+        
         ApiResponse<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null);
 
         /// <summary>
@@ -2491,6 +2679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlanRotationResponse</returns>
+        
         
         WorkPlanRotationResponse PatchWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
 
@@ -2506,6 +2695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
         
+        
         ApiResponse<WorkPlanRotationResponse> PatchWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
 
         /// <summary>
@@ -2518,6 +2708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
+        
         
         TimeOffRequestResponse PatchWorkforcemanagementTimeoffrequest (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
 
@@ -2532,6 +2723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
         
+        
         ApiResponse<TimeOffRequestResponse> PatchWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
 
         /// <summary>
@@ -2544,6 +2736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>AdherenceExplanationAsyncResponse</returns>
         
+        
         AdherenceExplanationAsyncResponse PostWorkforcemanagementAdherenceExplanations (AddAdherenceExplanationAgentRequest body);
 
         /// <summary>
@@ -2555,6 +2748,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of AdherenceExplanationAsyncResponse</returns>
+        
         
         ApiResponse<AdherenceExplanationAsyncResponse> PostWorkforcemanagementAdherenceExplanationsWithHttpInfo (AddAdherenceExplanationAgentRequest body);
 
@@ -2570,6 +2764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>QueryAdherenceExplanationsResponse</returns>
         
+        
         QueryAdherenceExplanationsResponse PostWorkforcemanagementAdherenceExplanationsQuery (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -2584,6 +2779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of QueryAdherenceExplanationsResponse</returns>
         
+        
         ApiResponse<QueryAdherenceExplanationsResponse> PostWorkforcemanagementAdherenceExplanationsQueryWithHttpInfo (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -2595,6 +2791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
+        
         
         WfmHistoricalAdherenceResponse PostWorkforcemanagementAdherenceHistorical (WfmHistoricalAdherenceQueryForUsers body = null);
 
@@ -2608,6 +2805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         
+        
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementAdherenceHistoricalWithHttpInfo (WfmHistoricalAdherenceQueryForUsers body = null);
 
         /// <summary>
@@ -2620,6 +2818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceBulkResponse</returns>
         
+        
         WfmHistoricalAdherenceBulkResponse PostWorkforcemanagementAdherenceHistoricalBulk (WfmHistoricalAdherenceBulkQuery body = null);
 
         /// <summary>
@@ -2631,6 +2830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
+        
         
         ApiResponse<WfmHistoricalAdherenceBulkResponse> PostWorkforcemanagementAdherenceHistoricalBulkWithHttpInfo (WfmHistoricalAdherenceBulkQuery body = null);
 
@@ -2645,6 +2845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>AdherenceExplanationAsyncResponse</returns>
         
+        
         AdherenceExplanationAsyncResponse PostWorkforcemanagementAgentAdherenceExplanations (string agentId, AddAdherenceExplanationAdminRequest body);
 
         /// <summary>
@@ -2657,6 +2858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to query</param>
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of AdherenceExplanationAsyncResponse</returns>
+        
         
         ApiResponse<AdherenceExplanationAsyncResponse> PostWorkforcemanagementAgentAdherenceExplanationsWithHttpInfo (string agentId, AddAdherenceExplanationAdminRequest body);
 
@@ -2673,6 +2875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>AgentQueryAdherenceExplanationsResponse</returns>
         
+        
         AgentQueryAdherenceExplanationsResponse PostWorkforcemanagementAgentAdherenceExplanationsQuery (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -2688,6 +2891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AgentQueryAdherenceExplanationsResponse</returns>
         
+        
         ApiResponse<AgentQueryAdherenceExplanationsResponse> PostWorkforcemanagementAgentAdherenceExplanationsQueryWithHttpInfo (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -2699,6 +2903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
         /// <returns>AgentPossibleWorkShiftsResponse</returns>
+        
         
         AgentPossibleWorkShiftsResponse PostWorkforcemanagementAgentsMePossibleworkshifts (AgentPossibleWorkShiftsRequest body);
 
@@ -2712,6 +2917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of AgentPossibleWorkShiftsResponse</returns>
         
+        
         ApiResponse<AgentPossibleWorkShiftsResponse> PostWorkforcemanagementAgentsMePossibleworkshiftsWithHttpInfo (AgentPossibleWorkShiftsRequest body);
 
         /// <summary>
@@ -2724,6 +2930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BuCurrentAgentScheduleSearchResponse</returns>
         
+        
         BuCurrentAgentScheduleSearchResponse PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body = null);
 
         /// <summary>
@@ -2735,6 +2942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuCurrentAgentScheduleSearchResponse</returns>
+        
         
         ApiResponse<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineWithHttpInfo (BuGetCurrentAgentScheduleRequest body = null);
 
@@ -2749,6 +2957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitActivityCode</returns>
         
+        
         BusinessUnitActivityCode PostWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, CreateActivityCodeRequest body = null);
 
         /// <summary>
@@ -2761,6 +2970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
+        
         
         ApiResponse<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null);
 
@@ -2777,6 +2987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>BuQueryAdherenceExplanationsResponse</returns>
         
+        
         BuQueryAdherenceExplanationsResponse PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery (string businessUnitId, BuQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -2791,6 +3002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuQueryAdherenceExplanationsResponse</returns>
+        
         
         ApiResponse<BuQueryAdherenceExplanationsResponse> PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryWithHttpInfo (string businessUnitId, BuQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
@@ -2807,6 +3019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
 
         /// <summary>
@@ -2822,6 +3035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
 
         /// <summary>
@@ -2835,6 +3049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>AsyncIntradayResponse</returns>
+        
         
         AsyncIntradayResponse PostWorkforcemanagementBusinessunitIntraday (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null);
 
@@ -2850,6 +3065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AsyncIntradayResponse</returns>
         
+        
         ApiResponse<AsyncIntradayResponse> PostWorkforcemanagementBusinessunitIntradayWithHttpInfo (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null);
 
         /// <summary>
@@ -2862,6 +3078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>PlanningGroup</returns>
+        
         
         PlanningGroup PostWorkforcemanagementBusinessunitPlanninggroups (string businessUnitId, CreatePlanningGroupRequest body = null);
 
@@ -2876,6 +3093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
         
+        
         ApiResponse<PlanningGroup> PostWorkforcemanagementBusinessunitPlanninggroupsWithHttpInfo (string businessUnitId, CreatePlanningGroupRequest body = null);
 
         /// <summary>
@@ -2889,6 +3107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ServiceGoalTemplate</returns>
         
+        
         ServiceGoalTemplate PostWorkforcemanagementBusinessunitServicegoaltemplates (string businessUnitId, CreateServiceGoalTemplate body = null);
 
         /// <summary>
@@ -2901,6 +3120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
+        
         
         ApiResponse<ServiceGoalTemplate> PostWorkforcemanagementBusinessunitServicegoaltemplatesWithHttpInfo (string businessUnitId, CreateServiceGoalTemplate body = null);
 
@@ -2919,6 +3139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>BuAsyncAgentSchedulesQueryResponse</returns>
         
+        
         BuAsyncAgentSchedulesQueryResponse PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -2936,6 +3157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesQueryResponse</returns>
         
+        
         ApiResponse<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -2950,6 +3172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleResponse</returns>
+        
         
         BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleCopy (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
 
@@ -2966,6 +3189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
         
+        
         ApiResponse<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
 
         /// <summary>
@@ -2980,6 +3204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleRunResponse</returns>
+        
         
         BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekScheduleReschedule (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
 
@@ -2996,6 +3221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
         
+        
         ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
 
         /// <summary>
@@ -3010,6 +3236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleResponse</returns>
+        
         
         BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleUpdate (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
 
@@ -3026,6 +3253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
         
+        
         ApiResponse<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
 
         /// <summary>
@@ -3040,6 +3268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>UpdateScheduleUploadResponse</returns>
+        
         
         UpdateScheduleUploadResponse PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
 
@@ -3056,6 +3285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of UpdateScheduleUploadResponse</returns>
         
+        
         ApiResponse<UpdateScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
 
         /// <summary>
@@ -3069,6 +3299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>BuScheduleMetadata</returns>
+        
         
         BuScheduleMetadata PostWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
 
@@ -3084,6 +3315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
         
+        
         ApiResponse<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
 
         /// <summary>
@@ -3097,6 +3329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleRunResponse</returns>
+        
         
         BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekSchedulesGenerate (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
 
@@ -3112,6 +3345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
         
+        
         ApiResponse<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
 
         /// <summary>
@@ -3125,6 +3359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>ScheduleUploadProcessingResponse</returns>
+        
         
         ScheduleUploadProcessingResponse PostWorkforcemanagementBusinessunitWeekSchedulesImport (string businessUnitId, String weekId, WfmProcessUploadRequest body);
 
@@ -3140,6 +3375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleUploadProcessingResponse</returns>
         
+        
         ApiResponse<ScheduleUploadProcessingResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body);
 
         /// <summary>
@@ -3154,6 +3390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ImportScheduleUploadResponse</returns>
         
+        
         ImportScheduleUploadResponse PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl (string businessUnitId, String weekId, UploadUrlRequestBody body);
 
         /// <summary>
@@ -3167,6 +3404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportScheduleUploadResponse</returns>
+        
         
         ApiResponse<ImportScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body);
 
@@ -3184,6 +3422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>AsyncForecastOperationResult</returns>
         
+        
         AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -3200,6 +3439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
         
+        
         ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -3214,6 +3454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>AsyncForecastOperationResult</returns>
+        
         
         AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
 
@@ -3230,6 +3471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
         
+        
         ApiResponse<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -3243,6 +3485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ImportForecastResponse</returns>
+        
         
         ImportForecastResponse PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
 
@@ -3258,6 +3501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportForecastResponse</returns>
         
+        
         ApiResponse<ImportForecastResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
 
         /// <summary>
@@ -3271,6 +3515,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ImportForecastUploadResponse</returns>
+        
         
         ImportForecastUploadResponse PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
 
@@ -3286,6 +3531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportForecastUploadResponse</returns>
         
+        
         ApiResponse<ImportForecastUploadResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
 
         /// <summary>
@@ -3297,6 +3543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitResponse</returns>
+        
         
         BusinessUnitResponse PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null);
 
@@ -3310,6 +3557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitResponse</returns>
         
+        
         ApiResponse<BusinessUnitResponse> PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null);
 
         /// <summary>
@@ -3321,6 +3569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>CalendarUrlResponse</returns>
+        
         
         CalendarUrlResponse PostWorkforcemanagementCalendarUrlIcs (string language = null);
 
@@ -3334,6 +3583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>ApiResponse of CalendarUrlResponse</returns>
         
+        
         ApiResponse<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsWithHttpInfo (string language = null);
 
         /// <summary>
@@ -3345,6 +3595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportDeleteJobResponse</returns>
         
+        
         HistoricalImportDeleteJobResponse PostWorkforcemanagementHistoricaldataDeletejob ();
 
         /// <summary>
@@ -3355,6 +3606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
+        
         
         ApiResponse<HistoricalImportDeleteJobResponse> PostWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ();
 
@@ -3368,6 +3620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns></returns>
         
+        
         void PostWorkforcemanagementHistoricaldataValidate (ValidationServiceRequest body = null);
 
         /// <summary>
@@ -3379,6 +3632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PostWorkforcemanagementHistoricaldataValidateWithHttpInfo (ValidationServiceRequest body = null);
 
@@ -3395,6 +3649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
 
         /// <summary>
@@ -3410,6 +3665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         ApiResponse<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
 
         /// <summary>
@@ -3422,6 +3678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
+        
         
         WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
 
@@ -3436,6 +3693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         
+        
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
 
         /// <summary>
@@ -3448,6 +3706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>MoveManagementUnitResponse</returns>
+        
         
         MoveManagementUnitResponse PostWorkforcemanagementManagementunitMove (string managementUnitId, MoveManagementUnitRequest body = null);
 
@@ -3462,6 +3721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of MoveManagementUnitResponse</returns>
         
+        
         ApiResponse<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null);
 
         /// <summary>
@@ -3475,6 +3735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
         [Obsolete]
+        
         UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string managementUnitId, UserListScheduleRequestBody body = null);
 
         /// <summary>
@@ -3488,6 +3749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         [Obsolete]
+        
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
 
         /// <summary>
@@ -3500,6 +3762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalShrinkageResponse</returns>
+        
         
         WfmHistoricalShrinkageResponse PostWorkforcemanagementManagementunitShrinkageJobs (string managementUnitId, WfmHistoricalShrinkageRequest body = null);
 
@@ -3514,6 +3777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalShrinkageResponse</returns>
         
+        
         ApiResponse<WfmHistoricalShrinkageResponse> PostWorkforcemanagementManagementunitShrinkageJobsWithHttpInfo (string managementUnitId, WfmHistoricalShrinkageRequest body = null);
 
         /// <summary>
@@ -3526,6 +3790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
+        
         
         TimeOffLimit PostWorkforcemanagementManagementunitTimeofflimits (string managementUnitId, CreateTimeOffLimitRequest body = null);
 
@@ -3540,6 +3805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
         
+        
         ApiResponse<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null);
 
         /// <summary>
@@ -3552,6 +3818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>QueryTimeOffLimitValuesResponse</returns>
+        
         
         QueryTimeOffLimitValuesResponse PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
 
@@ -3566,6 +3833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
         
+        
         ApiResponse<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
 
         /// <summary>
@@ -3578,6 +3846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffPlan</returns>
+        
         
         TimeOffPlan PostWorkforcemanagementManagementunitTimeoffplans (string managementUnitId, CreateTimeOffPlanRequest body = null);
 
@@ -3592,6 +3861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
         
+        
         ApiResponse<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null);
 
         /// <summary>
@@ -3604,6 +3874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestList</returns>
+        
         
         TimeOffRequestList PostWorkforcemanagementManagementunitTimeoffrequests (string managementUnitId, CreateAdminTimeOffRequest body = null);
 
@@ -3618,6 +3889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         
+        
         ApiResponse<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
 
         /// <summary>
@@ -3630,6 +3902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestListing</returns>
+        
         
         TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null);
 
@@ -3644,6 +3917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
         
+        
         ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
 
         /// <summary>
@@ -3657,6 +3931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WaitlistPositionListing</returns>
         
+        
         WaitlistPositionListing PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery (string managementUnitId, QueryWaitlistPositionsRequest body = null);
 
         /// <summary>
@@ -3669,6 +3944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
+        
         
         ApiResponse<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null);
 
@@ -3684,6 +3960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>TimeOffBalancesResponse</returns>
         
+        
         TimeOffBalancesResponse PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs (string managementUnitId, string userId, TimeOffBalanceRequest body);
 
         /// <summary>
@@ -3697,6 +3974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of the user</param>
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of TimeOffBalancesResponse</returns>
+        
         
         ApiResponse<TimeOffBalancesResponse> PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsWithHttpInfo (string managementUnitId, string userId, TimeOffBalanceRequest body);
 
@@ -3712,6 +3990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The time off request id.</param>
         /// <returns>TimeOffBalancesResponse</returns>
         
+        
         TimeOffBalancesResponse PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs (string managementUnitId, string userId, string timeOffRequestId);
 
         /// <summary>
@@ -3725,6 +4004,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The time off request id.</param>
         /// <returns>ApiResponse of TimeOffBalancesResponse</returns>
+        
         
         ApiResponse<TimeOffBalancesResponse> PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
 
@@ -3741,6 +4021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>MatchShiftTradeResponse</returns>
         
+        
         MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body);
 
         /// <summary>
@@ -3756,6 +4037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of MatchShiftTradeResponse</returns>
         
+        
         ApiResponse<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body);
 
         /// <summary>
@@ -3769,6 +4051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
+        
         
         ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
 
@@ -3784,6 +4067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
         
+        
         ApiResponse<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
 
         /// <summary>
@@ -3798,6 +4082,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>SearchShiftTradesResponse</returns>
         
+        
         SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
 
         /// <summary>
@@ -3811,6 +4096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
+        
         
         ApiResponse<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
 
@@ -3827,6 +4113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>BulkUpdateShiftTradeStateResponse</returns>
         
+        
         BulkUpdateShiftTradeStateResponse PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -3842,6 +4129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BulkUpdateShiftTradeStateResponse</returns>
         
+        
         ApiResponse<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -3856,6 +4144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlan</returns>
         
+        
         WorkPlan PostWorkforcemanagementManagementunitWorkplanCopy (string managementUnitId, string workPlanId, CopyWorkPlan body = null);
 
         /// <summary>
@@ -3869,6 +4158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to create a copy</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
+        
         
         ApiResponse<WorkPlan> PostWorkforcemanagementManagementunitWorkplanCopyWithHttpInfo (string managementUnitId, string workPlanId, CopyWorkPlan body = null);
 
@@ -3885,6 +4175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ValidateWorkPlanResponse</returns>
         
+        
         ValidateWorkPlanResponse PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null);
 
         /// <summary>
@@ -3900,6 +4191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ValidateWorkPlanResponse</returns>
         
+        
         ApiResponse<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null);
 
         /// <summary>
@@ -3913,6 +4205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlanRotationResponse</returns>
+        
         
         WorkPlanRotationResponse PostWorkforcemanagementManagementunitWorkplanrotationCopy (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
 
@@ -3928,6 +4221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
         
+        
         ApiResponse<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationCopyWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
 
         /// <summary>
@@ -3941,6 +4235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlanRotationResponse</returns>
         
+        
         WorkPlanRotationResponse PostWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, AddWorkPlanRotationRequest body = null);
 
         /// <summary>
@@ -3953,6 +4248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        
         
         ApiResponse<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null);
 
@@ -3968,6 +4264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlan</returns>
         
+        
         WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, string validationMode = null, CreateWorkPlan body = null);
 
         /// <summary>
@@ -3982,6 +4279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
         
+        
         ApiResponse<WorkPlan> PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, string validationMode = null, CreateWorkPlan body = null);
 
         /// <summary>
@@ -3993,6 +4291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ManagementUnit</returns>
+        
         
         ManagementUnit PostWorkforcemanagementManagementunits (CreateManagementUnitApiRequest body = null);
 
@@ -4006,6 +4305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
         
+        
         ApiResponse<ManagementUnit> PostWorkforcemanagementManagementunitsWithHttpInfo (CreateManagementUnitApiRequest body = null);
 
         /// <summary>
@@ -4017,6 +4317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>UpdateNotificationsResponse</returns>
+        
         
         UpdateNotificationsResponse PostWorkforcemanagementNotificationsUpdate (UpdateNotificationsRequest body = null);
 
@@ -4030,6 +4331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UpdateNotificationsResponse</returns>
         
+        
         ApiResponse<UpdateNotificationsResponse> PostWorkforcemanagementNotificationsUpdateWithHttpInfo (UpdateNotificationsRequest body = null);
 
         /// <summary>
@@ -4042,6 +4344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
         [Obsolete]
+        
         UserScheduleContainer PostWorkforcemanagementSchedules (CurrentUserScheduleRequestBody body = null);
 
         /// <summary>
@@ -4054,6 +4357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         [Obsolete]
+        
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null);
 
         /// <summary>
@@ -4066,6 +4370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">The ID of the team</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
+        
         
         WfmHistoricalAdherenceResponse PostWorkforcemanagementTeamAdherenceHistorical (string teamId, WfmHistoricalAdherenceQueryForTeams body = null);
 
@@ -4080,6 +4385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         
+        
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementTeamAdherenceHistoricalWithHttpInfo (string teamId, WfmHistoricalAdherenceQueryForTeams body = null);
 
         /// <summary>
@@ -4092,6 +4398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">The ID of the team</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalShrinkageResponse</returns>
+        
         
         WfmHistoricalShrinkageResponse PostWorkforcemanagementTeamShrinkageJobs (string teamId, WfmHistoricalShrinkageTeamsRequest body = null);
 
@@ -4106,6 +4413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalShrinkageResponse</returns>
         
+        
         ApiResponse<WfmHistoricalShrinkageResponse> PostWorkforcemanagementTeamShrinkageJobsWithHttpInfo (string teamId, WfmHistoricalShrinkageTeamsRequest body = null);
 
         /// <summary>
@@ -4117,6 +4425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>AvailableTimeOffResponse</returns>
+        
         
         AvailableTimeOffResponse PostWorkforcemanagementTimeofflimitsAvailableQuery (AvailableTimeOffRequest body = null);
 
@@ -4130,6 +4439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AvailableTimeOffResponse</returns>
         
+        
         ApiResponse<AvailableTimeOffResponse> PostWorkforcemanagementTimeofflimitsAvailableQueryWithHttpInfo (AvailableTimeOffRequest body = null);
 
         /// <summary>
@@ -4142,6 +4452,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         TimeOffRequestResponse PostWorkforcemanagementTimeoffrequests (CreateAgentTimeOffRequest body = null);
 
         /// <summary>
@@ -4153,6 +4464,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         ApiResponse<TimeOffRequestResponse> PostWorkforcemanagementTimeoffrequestsWithHttpInfo (CreateAgentTimeOffRequest body = null);
 
@@ -4168,6 +4480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
         
+        
         TimeOffLimit PutWorkforcemanagementManagementunitTimeofflimitValues (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
 
         /// <summary>
@@ -4181,6 +4494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
+        
         
         ApiResponse<TimeOffLimit> PutWorkforcemanagementManagementunitTimeofflimitValuesWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
 
@@ -4198,6 +4512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitAsync (string businessUnitId);
 
         /// <summary>
@@ -4209,6 +4524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId);
 
@@ -4223,6 +4539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId);
 
         /// <summary>
@@ -4235,6 +4552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId);
 
@@ -4249,6 +4567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitPlanninggroupAsync (string businessUnitId, string planningGroupId);
 
         /// <summary>
@@ -4261,6 +4580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId);
 
@@ -4275,6 +4595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitSchedulingRunAsync (string businessUnitId, string runId);
 
         /// <summary>
@@ -4287,6 +4608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId);
 
@@ -4301,6 +4623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitServicegoaltemplateAsync (string businessUnitId, string serviceGoalTemplateId);
 
         /// <summary>
@@ -4313,6 +4636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId);
 
@@ -4328,6 +4652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, String weekId, string scheduleId);
 
         /// <summary>
@@ -4341,6 +4666,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
 
@@ -4356,6 +4682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
@@ -4370,6 +4697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
@@ -4381,6 +4709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementCalendarUrlIcsAsync ();
 
         /// <summary>
@@ -4391,6 +4720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ();
 
@@ -4404,6 +4734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitAsync (string managementUnitId);
 
         /// <summary>
@@ -4415,6 +4746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId);
 
@@ -4429,6 +4761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId);
 
         /// <summary>
@@ -4441,6 +4774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId);
 
@@ -4455,6 +4789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId);
 
         /// <summary>
@@ -4467,6 +4802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId);
 
@@ -4481,6 +4817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId);
 
         /// <summary>
@@ -4493,6 +4830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId);
 
@@ -4507,6 +4845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId);
 
         /// <summary>
@@ -4520,6 +4859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId);
 
         /// <summary>
@@ -4531,6 +4871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>Task of List&lt;UserScheduleAdherence&gt;</returns>
+        
         
         System.Threading.Tasks.Task<List<UserScheduleAdherence>> GetWorkforcemanagementAdherenceAsync (List<string> userId);
 
@@ -4544,6 +4885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>Task of ApiResponse (List&lt;UserScheduleAdherence&gt;)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<List<UserScheduleAdherence>>> GetWorkforcemanagementAdherenceAsyncWithHttpInfo (List<string> userId);
 
         /// <summary>
@@ -4555,6 +4897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>Task of AdherenceExplanationResponse</returns>
+        
         
         System.Threading.Tasks.Task<AdherenceExplanationResponse> GetWorkforcemanagementAdherenceExplanationAsync (string explanationId);
 
@@ -4568,6 +4911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationResponse>> GetWorkforcemanagementAdherenceExplanationAsyncWithHttpInfo (string explanationId);
 
         /// <summary>
@@ -4579,6 +4923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <returns>Task of AdherenceExplanationJob</returns>
+        
         
         System.Threading.Tasks.Task<AdherenceExplanationJob> GetWorkforcemanagementAdherenceExplanationsJobAsync (string jobId);
 
@@ -4592,6 +4937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the job</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationJob)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationJob>> GetWorkforcemanagementAdherenceExplanationsJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -4603,6 +4949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job to get</param>
         /// <returns>Task of WfmHistoricalAdherenceBulkResponse</returns>
+        
         
         System.Threading.Tasks.Task<WfmHistoricalAdherenceBulkResponse> GetWorkforcemanagementAdherenceHistoricalBulkJobAsync (string jobId);
 
@@ -4616,6 +4963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">ID of the job to get</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> GetWorkforcemanagementAdherenceHistoricalBulkJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -4627,6 +4975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
+        
         
         System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> GetWorkforcemanagementAdherenceHistoricalJobAsync (string jobId);
 
@@ -4640,6 +4989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> GetWorkforcemanagementAdherenceHistoricalJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -4652,6 +5002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ModelingStatusResponse</returns>
         
+        
         System.Threading.Tasks.Task<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobAsync (string jobId);
 
         /// <summary>
@@ -4663,6 +5014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ApiResponse (ModelingStatusResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ModelingStatusResponse>> GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo (string jobId);
 
@@ -4677,6 +5029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>Task of AdherenceExplanationResponse</returns>
         
+        
         System.Threading.Tasks.Task<AdherenceExplanationResponse> GetWorkforcemanagementAgentAdherenceExplanationAsync (string agentId, string explanationId);
 
         /// <summary>
@@ -4690,6 +5043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationResponse>> GetWorkforcemanagementAgentAdherenceExplanationAsyncWithHttpInfo (string agentId, string explanationId);
 
         /// <summary>
@@ -4701,6 +5055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>Task of AgentManagementUnitReference</returns>
+        
         
         System.Threading.Tasks.Task<AgentManagementUnitReference> GetWorkforcemanagementAgentManagementunitAsync (string agentId);
 
@@ -4714,6 +5069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>Task of ApiResponse (AgentManagementUnitReference)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AgentManagementUnitReference>> GetWorkforcemanagementAgentManagementunitAsyncWithHttpInfo (string agentId);
 
         /// <summary>
@@ -4725,6 +5081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AgentManagementUnitReference</returns>
         
+        
         System.Threading.Tasks.Task<AgentManagementUnitReference> GetWorkforcemanagementAgentsMeManagementunitAsync ();
 
         /// <summary>
@@ -4735,6 +5092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AgentManagementUnitReference)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AgentManagementUnitReference>> GetWorkforcemanagementAgentsMeManagementunitAsyncWithHttpInfo ();
 
@@ -4749,6 +5107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the business unit (optional)</param>
         /// <returns>Task of BusinessUnitResponse</returns>
         
+        
         System.Threading.Tasks.Task<BusinessUnitResponse> GetWorkforcemanagementBusinessunitAsync (string businessUnitId, List<string> expand = null);
 
         /// <summary>
@@ -4761,6 +5120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the business unit (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> GetWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, List<string> expand = null);
 
@@ -4775,6 +5135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
         
+        
         System.Threading.Tasks.Task<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId);
 
         /// <summary>
@@ -4788,6 +5149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId);
 
         /// <summary>
@@ -4800,6 +5162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of BusinessUnitActivityCodeListing</returns>
         
+        
         System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId);
 
         /// <summary>
@@ -4811,6 +5174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCodeListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId);
 
@@ -4825,6 +5189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of WfmIntradayPlanningGroupListing</returns>
         
+        
         System.Threading.Tasks.Task<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsync (string businessUnitId, String date);
 
         /// <summary>
@@ -4837,6 +5202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (WfmIntradayPlanningGroupListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String date);
 
@@ -4852,6 +5218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
+        
         System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementBusinessunitManagementunitsAsync (string businessUnitId, string feature = null, string divisionId = null);
 
         /// <summary>
@@ -4866,6 +5233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementBusinessunitManagementunitsAsyncWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null);
 
         /// <summary>
@@ -4878,6 +5246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>Task of PlanningGroup</returns>
+        
         
         System.Threading.Tasks.Task<PlanningGroup> GetWorkforcemanagementBusinessunitPlanninggroupAsync (string businessUnitId, string planningGroupId);
 
@@ -4892,6 +5261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> GetWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId);
 
         /// <summary>
@@ -4904,6 +5274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of PlanningGroupList</returns>
         
+        
         System.Threading.Tasks.Task<PlanningGroupList> GetWorkforcemanagementBusinessunitPlanninggroupsAsync (string businessUnitId);
 
         /// <summary>
@@ -4915,6 +5286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of ApiResponse (PlanningGroupList)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<PlanningGroupList>> GetWorkforcemanagementBusinessunitPlanninggroupsAsyncWithHttpInfo (string businessUnitId);
 
@@ -4929,6 +5301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of BuScheduleRun</returns>
         
+        
         System.Threading.Tasks.Task<BuScheduleRun> GetWorkforcemanagementBusinessunitSchedulingRunAsync (string businessUnitId, string runId);
 
         /// <summary>
@@ -4941,6 +5314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of ApiResponse (BuScheduleRun)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuScheduleRun>> GetWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId);
 
@@ -4957,6 +5331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>Task of BuRescheduleResult</returns>
         
+        
         System.Threading.Tasks.Task<BuRescheduleResult> GetWorkforcemanagementBusinessunitSchedulingRunResultAsync (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand);
 
         /// <summary>
@@ -4972,6 +5347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>Task of ApiResponse (BuRescheduleResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuRescheduleResult>> GetWorkforcemanagementBusinessunitSchedulingRunResultAsyncWithHttpInfo (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand);
 
         /// <summary>
@@ -4984,6 +5360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>Task of BuScheduleRunListing</returns>
         
+        
         System.Threading.Tasks.Task<BuScheduleRunListing> GetWorkforcemanagementBusinessunitSchedulingRunsAsync (string businessUnitId);
 
         /// <summary>
@@ -4995,6 +5372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>Task of ApiResponse (BuScheduleRunListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuScheduleRunListing>> GetWorkforcemanagementBusinessunitSchedulingRunsAsyncWithHttpInfo (string businessUnitId);
 
@@ -5009,6 +5387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>Task of ServiceGoalTemplate</returns>
         
+        
         System.Threading.Tasks.Task<ServiceGoalTemplate> GetWorkforcemanagementBusinessunitServicegoaltemplateAsync (string businessUnitId, string serviceGoalTemplateId);
 
         /// <summary>
@@ -5022,6 +5401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> GetWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId);
 
         /// <summary>
@@ -5034,6 +5414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of ServiceGoalTemplateList</returns>
         
+        
         System.Threading.Tasks.Task<ServiceGoalTemplateList> GetWorkforcemanagementBusinessunitServicegoaltemplatesAsync (string businessUnitId);
 
         /// <summary>
@@ -5045,6 +5426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplateList)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplateList>> GetWorkforcemanagementBusinessunitServicegoaltemplatesAsyncWithHttpInfo (string businessUnitId);
 
@@ -5061,6 +5443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleMetadata</returns>
         
+        
         System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, String weekId, string scheduleId, string expand = null);
 
         /// <summary>
@@ -5076,6 +5459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null);
 
         /// <summary>
@@ -5090,6 +5474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ScheduleGenerationResult</returns>
         
+        
         System.Threading.Tasks.Task<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsync (string businessUnitId, String weekId, string scheduleId);
 
         /// <summary>
@@ -5103,6 +5488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (ScheduleGenerationResult)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ScheduleGenerationResult>> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId);
 
@@ -5119,6 +5505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of BuHeadcountForecastResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsync (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
 
         /// <summary>
@@ -5133,6 +5520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of ApiResponse (BuHeadcountForecastResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null);
 
@@ -5149,6 +5537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>Task of BuAgentScheduleHistoryResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsync (string businessUnitId, String weekId, string scheduleId, string agentId);
 
         /// <summary>
@@ -5163,6 +5552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>Task of ApiResponse (BuAgentScheduleHistoryResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuAgentScheduleHistoryResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId);
 
@@ -5179,6 +5569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleListing</returns>
         
+        
         System.Threading.Tasks.Task<BuScheduleListing> GetWorkforcemanagementBusinessunitWeekSchedulesAsync (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null);
 
         /// <summary>
@@ -5193,6 +5584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuScheduleListing>> GetWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null);
 
@@ -5209,6 +5601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the forecast (optional)</param>
         /// <returns>Task of BuShortTermForecast</returns>
         
+        
         System.Threading.Tasks.Task<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
 
         /// <summary>
@@ -5223,6 +5616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand">Include to access additional data on the forecast (optional)</param>
         /// <returns>Task of ApiResponse (BuShortTermForecast)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuShortTermForecast>> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null);
 
@@ -5240,6 +5634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BuForecastResultResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsync (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -5256,6 +5651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuForecastResultResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -5270,6 +5666,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of BuForecastGenerationResult</returns>
         
+        
         System.Threading.Tasks.Task<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsync (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
@@ -5283,6 +5680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (BuForecastGenerationResult)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuForecastGenerationResult>> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
 
@@ -5299,6 +5697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of LongTermForecastResultResponse</returns>
         
+        
         System.Threading.Tasks.Task<LongTermForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsync (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
 
         /// <summary>
@@ -5314,6 +5713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (LongTermForecastResultResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LongTermForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null);
 
         /// <summary>
@@ -5327,6 +5727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ForecastPlanningGroupsResponse</returns>
+        
         
         System.Threading.Tasks.Task<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsync (string businessUnitId, String weekDateId, string forecastId);
 
@@ -5342,6 +5743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (ForecastPlanningGroupsResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ForecastPlanningGroupsResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
 
         /// <summary>
@@ -5354,6 +5756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of BuShortTermForecastListing</returns>
+        
         
         System.Threading.Tasks.Task<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsync (string businessUnitId, string weekDateId);
 
@@ -5368,6 +5771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of ApiResponse (BuShortTermForecastListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuShortTermForecastListing>> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsyncWithHttpInfo (string businessUnitId, string weekDateId);
 
         /// <summary>
@@ -5380,6 +5784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of BusinessUnitListing</returns>
+        
         
         System.Threading.Tasks.Task<BusinessUnitListing> GetWorkforcemanagementBusinessunitsAsync (string feature = null, string divisionId = null);
 
@@ -5394,6 +5799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsAsyncWithHttpInfo (string feature = null, string divisionId = null);
 
         /// <summary>
@@ -5405,6 +5811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>Task of BusinessUnitListing</returns>
+        
         
         System.Threading.Tasks.Task<BusinessUnitListing> GetWorkforcemanagementBusinessunitsDivisionviewsAsync (List<string> divisionId = null);
 
@@ -5418,6 +5825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null);
 
         /// <summary>
@@ -5429,6 +5837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>Task of string</returns>
+        
         
         System.Threading.Tasks.Task<string> GetWorkforcemanagementCalendarDataIcsAsync (string calendarId);
 
@@ -5442,6 +5851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>Task of ApiResponse (string)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<string>> GetWorkforcemanagementCalendarDataIcsAsyncWithHttpInfo (string calendarId);
 
         /// <summary>
@@ -5452,6 +5862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CalendarUrlResponse</returns>
+        
         
         System.Threading.Tasks.Task<CalendarUrlResponse> GetWorkforcemanagementCalendarUrlIcsAsync ();
 
@@ -5464,6 +5875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> GetWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -5474,6 +5886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportDeleteJobResponse</returns>
+        
         
         System.Threading.Tasks.Task<HistoricalImportDeleteJobResponse> GetWorkforcemanagementHistoricaldataDeletejobAsync ();
 
@@ -5486,6 +5899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> GetWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ();
 
         /// <summary>
@@ -5497,6 +5911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportStatusListing</returns>
         
+        
         System.Threading.Tasks.Task<HistoricalImportStatusListing> GetWorkforcemanagementHistoricaldataImportstatusAsync ();
 
         /// <summary>
@@ -5507,6 +5922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportStatusListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportStatusListing>> GetWorkforcemanagementHistoricaldataImportstatusAsyncWithHttpInfo ();
 
@@ -5521,6 +5937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
         
+        
         System.Threading.Tasks.Task<ManagementUnit> GetWorkforcemanagementManagementunitAsync (string managementUnitId, List<string> expand = null);
 
         /// <summary>
@@ -5534,6 +5951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
 
         /// <summary>
@@ -5546,6 +5964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ActivityCodeContainer</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesAsync (string managementUnitId);
 
         /// <summary>
@@ -5558,6 +5977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string managementUnitId);
 
         /// <summary>
@@ -5571,6 +5991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of UserScheduleAdherenceListing</returns>
         
+        
         System.Threading.Tasks.Task<UserScheduleAdherenceListing> GetWorkforcemanagementManagementunitAdherenceAsync (string managementUnitId, bool? forceDownloadService = null);
 
         /// <summary>
@@ -5583,6 +6004,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleAdherenceListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserScheduleAdherenceListing>> GetWorkforcemanagementManagementunitAdherenceAsyncWithHttpInfo (string managementUnitId, bool? forceDownloadService = null);
 
@@ -5598,6 +6020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of WfmAgent</returns>
         
+        
         System.Threading.Tasks.Task<WfmAgent> GetWorkforcemanagementManagementunitAgentAsync (string managementUnitId, string agentId, bool? excludeCapabilities = null);
 
         /// <summary>
@@ -5612,6 +6035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of ApiResponse (WfmAgent)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WfmAgent>> GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null);
 
         /// <summary>
@@ -5624,6 +6048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ShiftTradeListResponse</returns>
+        
         
         System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesAsync (string managementUnitId, string agentId);
 
@@ -5638,6 +6063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo (string managementUnitId, string agentId);
 
         /// <summary>
@@ -5649,6 +6075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ShiftTradeMatchesSummaryResponse</returns>
+        
         
         System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string managementUnitId);
 
@@ -5662,6 +6089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string managementUnitId);
 
         /// <summary>
@@ -5674,6 +6102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string managementUnitId);
 
         /// <summary>
@@ -5685,6 +6114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string managementUnitId);
 
@@ -5699,6 +6129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of TimeOffLimit</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId);
 
         /// <summary>
@@ -5712,6 +6143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId);
 
         /// <summary>
@@ -5724,6 +6156,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of TimeOffLimitListing</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId);
 
         /// <summary>
@@ -5735,6 +6168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of ApiResponse (TimeOffLimitListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimitListing>> GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId);
 
@@ -5749,6 +6183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of TimeOffPlan</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId);
 
         /// <summary>
@@ -5762,6 +6197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId);
 
         /// <summary>
@@ -5774,6 +6210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of TimeOffPlanListing</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId);
 
         /// <summary>
@@ -5785,6 +6222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of ApiResponse (TimeOffPlanListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlanListing>> GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId);
 
@@ -5800,6 +6238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestAsync (string managementUnitId, string userId, string timeOffRequestId);
 
         /// <summary>
@@ -5813,6 +6252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
 
@@ -5828,6 +6268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
         
+        
         System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsync (string managementUnitId, string userId, string timeOffRequestId);
 
         /// <summary>
@@ -5841,6 +6282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
 
@@ -5856,6 +6298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string managementUnitId, string userId, bool? recentlyReviewed = null);
 
         /// <summary>
@@ -5870,6 +6313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null);
 
         /// <summary>
@@ -5882,6 +6326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string managementUnitId);
 
         /// <summary>
@@ -5893,6 +6338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string managementUnitId);
 
@@ -5910,6 +6356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of WeekScheduleResponse</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<WeekScheduleResponse> GetWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -5926,6 +6373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WeekScheduleResponse)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<WeekScheduleResponse>> GetWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -5942,6 +6390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of WeekScheduleListResponse</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
 
         /// <summary>
@@ -5958,6 +6407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of ApiResponse (WeekScheduleListResponse)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<WeekScheduleListResponse>> GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null);
 
         /// <summary>
@@ -5971,6 +6421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
+        
         
         System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
 
@@ -5986,6 +6437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
 
         /// <summary>
@@ -5999,6 +6451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of WorkPlan</returns>
+        
         
         System.Threading.Tasks.Task<WorkPlan> GetWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, List<string> includeOnly = null);
 
@@ -6014,6 +6467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null);
 
         /// <summary>
@@ -6026,6 +6480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>Task of WorkPlanRotationResponse</returns>
+        
         
         System.Threading.Tasks.Task<WorkPlanRotationResponse> GetWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId);
 
@@ -6040,6 +6495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> GetWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId);
 
         /// <summary>
@@ -6052,6 +6508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of WorkPlanRotationListResponse</returns>
+        
         
         System.Threading.Tasks.Task<WorkPlanRotationListResponse> GetWorkforcemanagementManagementunitWorkplanrotationsAsync (string managementUnitId, List<string> expand = null);
 
@@ -6066,6 +6523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationListResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationListResponse>> GetWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
 
         /// <summary>
@@ -6079,6 +6537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <returns>Task of WorkPlanListResponse</returns>
         
+        
         System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null);
 
         /// <summary>
@@ -6091,6 +6550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
 
@@ -6108,6 +6568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
+        
         System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
 
         /// <summary>
@@ -6124,6 +6585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
 
         /// <summary>
@@ -6135,6 +6597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
+        
         
         System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsAsync (List<string> divisionId = null);
 
@@ -6148,6 +6611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null);
 
         /// <summary>
@@ -6159,6 +6623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of NotificationsResponse</returns>
         
+        
         System.Threading.Tasks.Task<NotificationsResponse> GetWorkforcemanagementNotificationsAsync ();
 
         /// <summary>
@@ -6169,6 +6634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (NotificationsResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<NotificationsResponse>> GetWorkforcemanagementNotificationsAsyncWithHttpInfo ();
 
@@ -6182,6 +6648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>Task of SchedulingStatusResponse</returns>
         
+        
         System.Threading.Tasks.Task<SchedulingStatusResponse> GetWorkforcemanagementSchedulingjobAsync (string jobId);
 
         /// <summary>
@@ -6194,6 +6661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>Task of ApiResponse (SchedulingStatusResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SchedulingStatusResponse>> GetWorkforcemanagementSchedulingjobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -6205,6 +6673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ShiftTradeListResponse</returns>
         
+        
         System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementShifttradesAsync ();
 
         /// <summary>
@@ -6215,6 +6684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementShifttradesAsyncWithHttpInfo ();
 
@@ -6228,6 +6698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>Task of WfmHistoricalShrinkageResponse</returns>
         
+        
         System.Threading.Tasks.Task<WfmHistoricalShrinkageResponse> GetWorkforcemanagementShrinkageJobAsync (string jobId);
 
         /// <summary>
@@ -6239,6 +6710,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (WfmHistoricalShrinkageResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalShrinkageResponse>> GetWorkforcemanagementShrinkageJobAsyncWithHttpInfo (string jobId);
 
@@ -6252,6 +6724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementTimeoffrequestAsync (string timeOffRequestId);
 
         /// <summary>
@@ -6263,6 +6736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId);
 
@@ -6276,6 +6750,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of WaitlistPositionListing</returns>
         
+        
         System.Threading.Tasks.Task<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsync (string timeOffRequestId);
 
         /// <summary>
@@ -6287,6 +6762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo (string timeOffRequestId);
 
@@ -6300,6 +6776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsAsync (bool? recentlyReviewed = null);
 
         /// <summary>
@@ -6311,6 +6788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (bool? recentlyReviewed = null);
 
@@ -6326,6 +6804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of AdherenceExplanationAsyncResponse</returns>
         
+        
         System.Threading.Tasks.Task<AdherenceExplanationAsyncResponse> PatchWorkforcemanagementAgentAdherenceExplanationAsync (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body);
 
         /// <summary>
@@ -6340,6 +6819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationAsyncResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationAsyncResponse>> PatchWorkforcemanagementAgentAdherenceExplanationAsyncWithHttpInfo (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body);
 
         /// <summary>
@@ -6353,6 +6833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitResponse</returns>
         
+        
         System.Threading.Tasks.Task<BusinessUnitResponse> PatchWorkforcemanagementBusinessunitAsync (string businessUnitId, UpdateBusinessUnitRequest body = null);
 
         /// <summary>
@@ -6365,6 +6846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null);
 
@@ -6380,6 +6862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
         
+        
         System.Threading.Tasks.Task<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
 
         /// <summary>
@@ -6393,6 +6876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null);
 
@@ -6408,6 +6892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of PlanningGroup</returns>
         
+        
         System.Threading.Tasks.Task<PlanningGroup> PatchWorkforcemanagementBusinessunitPlanninggroupAsync (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null);
 
         /// <summary>
@@ -6421,6 +6906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> PatchWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null);
 
@@ -6436,6 +6922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PatchWorkforcemanagementBusinessunitSchedulingRunAsync (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null);
 
         /// <summary>
@@ -6449,6 +6936,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null);
 
@@ -6464,6 +6952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ServiceGoalTemplate</returns>
         
+        
         System.Threading.Tasks.Task<ServiceGoalTemplate> PatchWorkforcemanagementBusinessunitServicegoaltemplateAsync (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null);
 
         /// <summary>
@@ -6478,6 +6967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> PatchWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null);
 
         /// <summary>
@@ -6491,6 +6981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
         
+        
         System.Threading.Tasks.Task<ManagementUnit> PatchWorkforcemanagementManagementunitAsync (string managementUnitId, UpdateManagementUnitRequest body = null);
 
         /// <summary>
@@ -6503,6 +6994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
 
@@ -6518,6 +7010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffLimit> PatchWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
 
         /// <summary>
@@ -6531,6 +7024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PatchWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null);
 
@@ -6546,6 +7040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffPlan</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffPlan> PatchWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
 
         /// <summary>
@@ -6559,6 +7054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PatchWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null);
 
@@ -6575,6 +7071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsync (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
 
         /// <summary>
@@ -6589,6 +7086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null);
 
@@ -6605,6 +7103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
         
+        
         System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body);
 
         /// <summary>
@@ -6619,6 +7118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body);
 
@@ -6635,6 +7135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlan</returns>
         
+        
         System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null);
 
         /// <summary>
@@ -6650,6 +7151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null);
 
         /// <summary>
@@ -6663,6 +7165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlanRotationResponse</returns>
+        
         
         System.Threading.Tasks.Task<WorkPlanRotationResponse> PatchWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
 
@@ -6678,6 +7181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PatchWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null);
 
         /// <summary>
@@ -6690,6 +7194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
+        
         
         System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementTimeoffrequestAsync (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
 
@@ -6704,6 +7209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null);
 
         /// <summary>
@@ -6716,6 +7222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of AdherenceExplanationAsyncResponse</returns>
         
+        
         System.Threading.Tasks.Task<AdherenceExplanationAsyncResponse> PostWorkforcemanagementAdherenceExplanationsAsync (AddAdherenceExplanationAgentRequest body);
 
         /// <summary>
@@ -6727,6 +7234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationAsyncResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationAsyncResponse>> PostWorkforcemanagementAdherenceExplanationsAsyncWithHttpInfo (AddAdherenceExplanationAgentRequest body);
 
@@ -6742,6 +7250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of QueryAdherenceExplanationsResponse</returns>
         
+        
         System.Threading.Tasks.Task<QueryAdherenceExplanationsResponse> PostWorkforcemanagementAdherenceExplanationsQueryAsync (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -6756,6 +7265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (QueryAdherenceExplanationsResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<QueryAdherenceExplanationsResponse>> PostWorkforcemanagementAdherenceExplanationsQueryAsyncWithHttpInfo (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -6767,6 +7277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
+        
         
         System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementAdherenceHistoricalAsync (WfmHistoricalAdherenceQueryForUsers body = null);
 
@@ -6780,6 +7291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementAdherenceHistoricalAsyncWithHttpInfo (WfmHistoricalAdherenceQueryForUsers body = null);
 
         /// <summary>
@@ -6792,6 +7304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceBulkResponse</returns>
         
+        
         System.Threading.Tasks.Task<WfmHistoricalAdherenceBulkResponse> PostWorkforcemanagementAdherenceHistoricalBulkAsync (WfmHistoricalAdherenceBulkQuery body = null);
 
         /// <summary>
@@ -6803,6 +7316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> PostWorkforcemanagementAdherenceHistoricalBulkAsyncWithHttpInfo (WfmHistoricalAdherenceBulkQuery body = null);
 
@@ -6817,6 +7331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of AdherenceExplanationAsyncResponse</returns>
         
+        
         System.Threading.Tasks.Task<AdherenceExplanationAsyncResponse> PostWorkforcemanagementAgentAdherenceExplanationsAsync (string agentId, AddAdherenceExplanationAdminRequest body);
 
         /// <summary>
@@ -6829,6 +7344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to query</param>
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationAsyncResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationAsyncResponse>> PostWorkforcemanagementAgentAdherenceExplanationsAsyncWithHttpInfo (string agentId, AddAdherenceExplanationAdminRequest body);
 
@@ -6845,6 +7361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of AgentQueryAdherenceExplanationsResponse</returns>
         
+        
         System.Threading.Tasks.Task<AgentQueryAdherenceExplanationsResponse> PostWorkforcemanagementAgentAdherenceExplanationsQueryAsync (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -6860,6 +7377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AgentQueryAdherenceExplanationsResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AgentQueryAdherenceExplanationsResponse>> PostWorkforcemanagementAgentAdherenceExplanationsQueryAsyncWithHttpInfo (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -6871,6 +7389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
         /// <returns>Task of AgentPossibleWorkShiftsResponse</returns>
+        
         
         System.Threading.Tasks.Task<AgentPossibleWorkShiftsResponse> PostWorkforcemanagementAgentsMePossibleworkshiftsAsync (AgentPossibleWorkShiftsRequest body);
 
@@ -6884,6 +7403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (AgentPossibleWorkShiftsResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AgentPossibleWorkShiftsResponse>> PostWorkforcemanagementAgentsMePossibleworkshiftsAsyncWithHttpInfo (AgentPossibleWorkShiftsRequest body);
 
         /// <summary>
@@ -6896,6 +7416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BuCurrentAgentScheduleSearchResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineAsync (BuGetCurrentAgentScheduleRequest body = null);
 
         /// <summary>
@@ -6907,6 +7428,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuCurrentAgentScheduleSearchResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuCurrentAgentScheduleSearchResponse>> PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo (BuGetCurrentAgentScheduleRequest body = null);
 
@@ -6921,6 +7443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
         
+        
         System.Threading.Tasks.Task<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId, CreateActivityCodeRequest body = null);
 
         /// <summary>
@@ -6933,6 +7456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null);
 
@@ -6949,6 +7473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of BuQueryAdherenceExplanationsResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuQueryAdherenceExplanationsResponse> PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryAsync (string businessUnitId, BuQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -6963,6 +7488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuQueryAdherenceExplanationsResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<BuQueryAdherenceExplanationsResponse>> PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryAsyncWithHttpInfo (string businessUnitId, BuQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
@@ -6979,6 +7505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsync (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
 
         /// <summary>
@@ -6994,6 +7521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
 
         /// <summary>
@@ -7007,6 +7535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of AsyncIntradayResponse</returns>
+        
         
         System.Threading.Tasks.Task<AsyncIntradayResponse> PostWorkforcemanagementBusinessunitIntradayAsync (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null);
 
@@ -7022,6 +7551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AsyncIntradayResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AsyncIntradayResponse>> PostWorkforcemanagementBusinessunitIntradayAsyncWithHttpInfo (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null);
 
         /// <summary>
@@ -7034,6 +7564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of PlanningGroup</returns>
+        
         
         System.Threading.Tasks.Task<PlanningGroup> PostWorkforcemanagementBusinessunitPlanninggroupsAsync (string businessUnitId, CreatePlanningGroupRequest body = null);
 
@@ -7048,6 +7579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> PostWorkforcemanagementBusinessunitPlanninggroupsAsyncWithHttpInfo (string businessUnitId, CreatePlanningGroupRequest body = null);
 
         /// <summary>
@@ -7061,6 +7593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ServiceGoalTemplate</returns>
         
+        
         System.Threading.Tasks.Task<ServiceGoalTemplate> PostWorkforcemanagementBusinessunitServicegoaltemplatesAsync (string businessUnitId, CreateServiceGoalTemplate body = null);
 
         /// <summary>
@@ -7073,6 +7606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> PostWorkforcemanagementBusinessunitServicegoaltemplatesAsyncWithHttpInfo (string businessUnitId, CreateServiceGoalTemplate body = null);
 
@@ -7091,6 +7625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesQueryResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsync (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -7108,6 +7643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesQueryResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesQueryResponse>> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
@@ -7122,6 +7658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
+        
         
         System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsync (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
 
@@ -7138,6 +7675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
 
         /// <summary>
@@ -7152,6 +7690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleRunResponse</returns>
+        
         
         System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsync (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
 
@@ -7168,6 +7707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body);
 
         /// <summary>
@@ -7182,6 +7722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
+        
         
         System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsync (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
 
@@ -7198,6 +7739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body);
 
         /// <summary>
@@ -7212,6 +7754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of UpdateScheduleUploadResponse</returns>
+        
         
         System.Threading.Tasks.Task<UpdateScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsync (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
 
@@ -7228,6 +7771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (UpdateScheduleUploadResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UpdateScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body);
 
         /// <summary>
@@ -7241,6 +7785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuScheduleMetadata</returns>
+        
         
         System.Threading.Tasks.Task<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesAsync (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
 
@@ -7256,6 +7801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body);
 
         /// <summary>
@@ -7269,6 +7815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleRunResponse</returns>
+        
         
         System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsync (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
 
@@ -7284,6 +7831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body);
 
         /// <summary>
@@ -7297,6 +7845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>Task of ScheduleUploadProcessingResponse</returns>
+        
         
         System.Threading.Tasks.Task<ScheduleUploadProcessingResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsync (string businessUnitId, String weekId, WfmProcessUploadRequest body);
 
@@ -7312,6 +7861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleUploadProcessingResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ScheduleUploadProcessingResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsyncWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body);
 
         /// <summary>
@@ -7326,6 +7876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ImportScheduleUploadResponse</returns>
         
+        
         System.Threading.Tasks.Task<ImportScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsync (string businessUnitId, String weekId, UploadUrlRequestBody body);
 
         /// <summary>
@@ -7339,6 +7890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportScheduleUploadResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ImportScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body);
 
@@ -7356,6 +7908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of AsyncForecastOperationResult</returns>
         
+        
         System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsync (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -7372,6 +7925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -7386,6 +7940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of AsyncForecastOperationResult</returns>
+        
         
         System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsync (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
 
@@ -7402,6 +7957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -7415,6 +7971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ImportForecastResponse</returns>
+        
         
         System.Threading.Tasks.Task<ImportForecastResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsync (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
 
@@ -7430,6 +7987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportForecastResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ImportForecastResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsyncWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body);
 
         /// <summary>
@@ -7443,6 +8001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ImportForecastUploadResponse</returns>
+        
         
         System.Threading.Tasks.Task<ImportForecastUploadResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsync (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
 
@@ -7458,6 +8017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportForecastUploadResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ImportForecastUploadResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body);
 
         /// <summary>
@@ -7469,6 +8029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitResponse</returns>
+        
         
         System.Threading.Tasks.Task<BusinessUnitResponse> PostWorkforcemanagementBusinessunitsAsync (CreateBusinessUnitRequest body = null);
 
@@ -7482,6 +8043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null);
 
         /// <summary>
@@ -7493,6 +8055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>Task of CalendarUrlResponse</returns>
+        
         
         System.Threading.Tasks.Task<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsAsync (string language = null);
 
@@ -7506,6 +8069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo (string language = null);
 
         /// <summary>
@@ -7517,6 +8081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportDeleteJobResponse</returns>
         
+        
         System.Threading.Tasks.Task<HistoricalImportDeleteJobResponse> PostWorkforcemanagementHistoricaldataDeletejobAsync ();
 
         /// <summary>
@@ -7527,6 +8092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> PostWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ();
 
@@ -7540,6 +8106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostWorkforcemanagementHistoricaldataValidateAsync (ValidationServiceRequest body = null);
 
         /// <summary>
@@ -7551,6 +8118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementHistoricaldataValidateAsyncWithHttpInfo (ValidationServiceRequest body = null);
 
@@ -7567,6 +8135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
 
         /// <summary>
@@ -7582,6 +8151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null);
 
         /// <summary>
@@ -7594,6 +8164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
+        
         
         System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
 
@@ -7608,6 +8179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null);
 
         /// <summary>
@@ -7620,6 +8192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of MoveManagementUnitResponse</returns>
+        
         
         System.Threading.Tasks.Task<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveAsync (string managementUnitId, MoveManagementUnitRequest body = null);
 
@@ -7634,6 +8207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (MoveManagementUnitResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<MoveManagementUnitResponse>> PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null);
 
         /// <summary>
@@ -7647,6 +8221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string managementUnitId, UserListScheduleRequestBody body = null);
 
         /// <summary>
@@ -7660,6 +8235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null);
 
         /// <summary>
@@ -7672,6 +8248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalShrinkageResponse</returns>
+        
         
         System.Threading.Tasks.Task<WfmHistoricalShrinkageResponse> PostWorkforcemanagementManagementunitShrinkageJobsAsync (string managementUnitId, WfmHistoricalShrinkageRequest body = null);
 
@@ -7686,6 +8263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalShrinkageResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalShrinkageResponse>> PostWorkforcemanagementManagementunitShrinkageJobsAsyncWithHttpInfo (string managementUnitId, WfmHistoricalShrinkageRequest body = null);
 
         /// <summary>
@@ -7698,6 +8276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
+        
         
         System.Threading.Tasks.Task<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId, CreateTimeOffLimitRequest body = null);
 
@@ -7712,6 +8291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null);
 
         /// <summary>
@@ -7724,6 +8304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
+        
         
         System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsync (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
 
@@ -7738,6 +8319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null);
 
         /// <summary>
@@ -7750,6 +8332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffPlan</returns>
+        
         
         System.Threading.Tasks.Task<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId, CreateTimeOffPlanRequest body = null);
 
@@ -7764,6 +8347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null);
 
         /// <summary>
@@ -7776,6 +8360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestList</returns>
+        
         
         System.Threading.Tasks.Task<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsAsync (string managementUnitId, CreateAdminTimeOffRequest body = null);
 
@@ -7790,6 +8375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null);
 
         /// <summary>
@@ -7802,6 +8388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestListing</returns>
+        
         
         System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null);
 
@@ -7816,6 +8403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
 
         /// <summary>
@@ -7829,6 +8417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WaitlistPositionListing</returns>
         
+        
         System.Threading.Tasks.Task<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsync (string managementUnitId, QueryWaitlistPositionsRequest body = null);
 
         /// <summary>
@@ -7841,6 +8430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null);
 
@@ -7856,6 +8446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of TimeOffBalancesResponse</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffBalancesResponse> PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsAsync (string managementUnitId, string userId, TimeOffBalanceRequest body);
 
         /// <summary>
@@ -7869,6 +8460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of the user</param>
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (TimeOffBalancesResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffBalancesResponse>> PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsAsyncWithHttpInfo (string managementUnitId, string userId, TimeOffBalanceRequest body);
 
@@ -7884,6 +8476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The time off request id.</param>
         /// <returns>Task of TimeOffBalancesResponse</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffBalancesResponse> PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsAsync (string managementUnitId, string userId, string timeOffRequestId);
 
         /// <summary>
@@ -7897,6 +8490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The time off request id.</param>
         /// <returns>Task of ApiResponse (TimeOffBalancesResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffBalancesResponse>> PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId);
 
@@ -7913,6 +8507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of MatchShiftTradeResponse</returns>
         
+        
         System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body);
 
         /// <summary>
@@ -7928,6 +8523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (MatchShiftTradeResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body);
 
         /// <summary>
@@ -7941,6 +8537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
+        
         
         System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
 
@@ -7956,6 +8553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body);
 
         /// <summary>
@@ -7970,6 +8568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of SearchShiftTradesResponse</returns>
         
+        
         System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
 
         /// <summary>
@@ -7983,6 +8582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
 
@@ -7999,6 +8599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BulkUpdateShiftTradeStateResponse</returns>
         
+        
         System.Threading.Tasks.Task<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsync (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -8014,6 +8615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BulkUpdateShiftTradeStateResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<BulkUpdateShiftTradeStateResponse>> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null);
 
         /// <summary>
@@ -8028,6 +8630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlan</returns>
         
+        
         System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplanCopyAsync (string managementUnitId, string workPlanId, CopyWorkPlan body = null);
 
         /// <summary>
@@ -8041,6 +8644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to create a copy</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplanCopyAsyncWithHttpInfo (string managementUnitId, string workPlanId, CopyWorkPlan body = null);
 
@@ -8057,6 +8661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ValidateWorkPlanResponse</returns>
         
+        
         System.Threading.Tasks.Task<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateAsync (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null);
 
         /// <summary>
@@ -8072,6 +8677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ValidateWorkPlanResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null);
 
         /// <summary>
@@ -8085,6 +8691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlanRotationResponse</returns>
+        
         
         System.Threading.Tasks.Task<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsync (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
 
@@ -8100,6 +8707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null);
 
         /// <summary>
@@ -8113,6 +8721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlanRotationResponse</returns>
         
+        
         System.Threading.Tasks.Task<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationsAsync (string managementUnitId, AddWorkPlanRotationRequest body = null);
 
         /// <summary>
@@ -8125,6 +8734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null);
 
@@ -8140,6 +8750,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlan</returns>
         
+        
         System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, string validationMode = null, CreateWorkPlan body = null);
 
         /// <summary>
@@ -8154,6 +8765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, string validationMode = null, CreateWorkPlan body = null);
 
         /// <summary>
@@ -8165,6 +8777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
+        
         
         System.Threading.Tasks.Task<ManagementUnit> PostWorkforcemanagementManagementunitsAsync (CreateManagementUnitApiRequest body = null);
 
@@ -8178,6 +8791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PostWorkforcemanagementManagementunitsAsyncWithHttpInfo (CreateManagementUnitApiRequest body = null);
 
         /// <summary>
@@ -8189,6 +8803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UpdateNotificationsResponse</returns>
+        
         
         System.Threading.Tasks.Task<UpdateNotificationsResponse> PostWorkforcemanagementNotificationsUpdateAsync (UpdateNotificationsRequest body = null);
 
@@ -8202,6 +8817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UpdateNotificationsResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<UpdateNotificationsResponse>> PostWorkforcemanagementNotificationsUpdateAsyncWithHttpInfo (UpdateNotificationsRequest body = null);
 
         /// <summary>
@@ -8214,6 +8830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementSchedulesAsync (CurrentUserScheduleRequestBody body = null);
 
         /// <summary>
@@ -8226,6 +8843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null);
 
         /// <summary>
@@ -8238,6 +8856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">The ID of the team</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
+        
         
         System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementTeamAdherenceHistoricalAsync (string teamId, WfmHistoricalAdherenceQueryForTeams body = null);
 
@@ -8252,6 +8871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementTeamAdherenceHistoricalAsyncWithHttpInfo (string teamId, WfmHistoricalAdherenceQueryForTeams body = null);
 
         /// <summary>
@@ -8264,6 +8884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">The ID of the team</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalShrinkageResponse</returns>
+        
         
         System.Threading.Tasks.Task<WfmHistoricalShrinkageResponse> PostWorkforcemanagementTeamShrinkageJobsAsync (string teamId, WfmHistoricalShrinkageTeamsRequest body = null);
 
@@ -8278,6 +8899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalShrinkageResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalShrinkageResponse>> PostWorkforcemanagementTeamShrinkageJobsAsyncWithHttpInfo (string teamId, WfmHistoricalShrinkageTeamsRequest body = null);
 
         /// <summary>
@@ -8289,6 +8911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of AvailableTimeOffResponse</returns>
+        
         
         System.Threading.Tasks.Task<AvailableTimeOffResponse> PostWorkforcemanagementTimeofflimitsAvailableQueryAsync (AvailableTimeOffRequest body = null);
 
@@ -8302,6 +8925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AvailableTimeOffResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AvailableTimeOffResponse>> PostWorkforcemanagementTimeofflimitsAvailableQueryAsyncWithHttpInfo (AvailableTimeOffRequest body = null);
 
         /// <summary>
@@ -8314,6 +8938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffRequestResponse> PostWorkforcemanagementTimeoffrequestsAsync (CreateAgentTimeOffRequest body = null);
 
         /// <summary>
@@ -8325,6 +8950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PostWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (CreateAgentTimeOffRequest body = null);
 
@@ -8340,6 +8966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
         
+        
         System.Threading.Tasks.Task<TimeOffLimit> PutWorkforcemanagementManagementunitTimeofflimitValuesAsync (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
 
         /// <summary>
@@ -8353,6 +8980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PutWorkforcemanagementManagementunitTimeofflimitValuesAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null);
 
@@ -8455,6 +9083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementBusinessunit (string businessUnitId)
         {
              DeleteWorkforcemanagementBusinessunitWithHttpInfo(businessUnitId);
@@ -8466,6 +9095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId)
         { 
@@ -8550,6 +9180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitAsync (string businessUnitId)
         {
              await DeleteWorkforcemanagementBusinessunitAsyncWithHttpInfo(businessUnitId);
@@ -8562,6 +9193,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId)
         { 
@@ -8649,6 +9281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId)
         {
              DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(businessUnitId, activityCodeId);
@@ -8661,6 +9294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId)
         { 
@@ -8750,6 +9384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId)
         {
              await DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(businessUnitId, activityCodeId);
@@ -8763,6 +9398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="activityCodeId">The ID of the activity code to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId)
         { 
@@ -8855,6 +9491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId)
         {
              DeleteWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo(businessUnitId, planningGroupId);
@@ -8867,6 +9504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId)
         { 
@@ -8956,6 +9594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitPlanninggroupAsync (string businessUnitId, string planningGroupId)
         {
              await DeleteWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo(businessUnitId, planningGroupId);
@@ -8969,6 +9608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="planningGroupId">The ID of a planning group to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId)
         { 
@@ -9061,6 +9701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementBusinessunitSchedulingRun (string businessUnitId, string runId)
         {
              DeleteWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo(businessUnitId, runId);
@@ -9073,6 +9714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId)
         { 
@@ -9162,6 +9804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitSchedulingRunAsync (string businessUnitId, string runId)
         {
              await DeleteWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo(businessUnitId, runId);
@@ -9175,6 +9818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId)
         { 
@@ -9267,6 +9911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId)
         {
              DeleteWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo(businessUnitId, serviceGoalTemplateId);
@@ -9279,6 +9924,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId)
         { 
@@ -9368,6 +10014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitServicegoaltemplateAsync (string businessUnitId, string serviceGoalTemplateId)
         {
              await DeleteWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo(businessUnitId, serviceGoalTemplateId);
@@ -9381,6 +10028,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="serviceGoalTemplateId">The ID of the service goal template to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId)
         { 
@@ -9474,6 +10122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>BuAsyncScheduleResponse</returns>
         
+        
         public BuAsyncScheduleResponse DeleteWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo(businessUnitId, weekId, scheduleId);
@@ -9488,6 +10137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
+        
         
         public ApiResponse< BuAsyncScheduleResponse > DeleteWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId)
         { 
@@ -9582,6 +10232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAsyncScheduleResponse> DeleteWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, String weekId, string scheduleId)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = await DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo(businessUnitId, weekId, scheduleId);
@@ -9597,6 +10248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> DeleteWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId)
         { 
@@ -9695,6 +10347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId)
         {
              DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo(businessUnitId, weekDateId, forecastId);
@@ -9708,6 +10361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
@@ -9802,6 +10456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, String weekDateId, string forecastId)
         {
              await DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId);
@@ -9816,6 +10471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
@@ -9911,6 +10567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementCalendarUrlIcs ()
         {
              DeleteWorkforcemanagementCalendarUrlIcsWithHttpInfo();
@@ -9921,6 +10578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementCalendarUrlIcsWithHttpInfo ()
         { 
@@ -10000,6 +10658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementCalendarUrlIcsAsync ()
         {
              await DeleteWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo();
@@ -10011,6 +10670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ()
         { 
@@ -10092,6 +10752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementManagementunit (string managementUnitId)
         {
              DeleteWorkforcemanagementManagementunitWithHttpInfo(managementUnitId);
@@ -10103,6 +10764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId)
         { 
@@ -10187,6 +10849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitAsync (string managementUnitId)
         {
              await DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo(managementUnitId);
@@ -10199,6 +10862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -10286,6 +10950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId)
         {
              DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo(managementUnitId, timeOffLimitId);
@@ -10298,6 +10963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId)
         { 
@@ -10387,6 +11053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId)
         {
              await DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo(managementUnitId, timeOffLimitId);
@@ -10400,6 +11067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit object to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId)
         { 
@@ -10492,6 +11160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId)
         {
              DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo(managementUnitId, timeOffPlanId);
@@ -10504,6 +11173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId)
         { 
@@ -10593,6 +11263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId)
         {
              await DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo(managementUnitId, timeOffPlanId);
@@ -10606,6 +11277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId)
         { 
@@ -10698,6 +11370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId)
         {
              DeleteWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId);
@@ -10710,6 +11383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId)
         { 
@@ -10799,6 +11473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId)
         {
              await DeleteWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId);
@@ -10812,6 +11487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanId">The ID of the work plan to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId)
         { 
@@ -10904,6 +11580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns></returns>
         
+        
         public void DeleteWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId)
         {
              DeleteWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo(managementUnitId, workPlanRotationId);
@@ -10916,6 +11593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId)
         { 
@@ -11005,6 +11683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId)
         {
              await DeleteWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo(managementUnitId, workPlanRotationId);
@@ -11018,6 +11697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanRotationId">The ID of the work plan rotation to be deleted</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId)
         { 
@@ -11109,6 +11789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>List&lt;UserScheduleAdherence&gt;</returns>
         
+        
         public List<UserScheduleAdherence> GetWorkforcemanagementAdherence (List<string> userId)
         {
              ApiResponse<List<UserScheduleAdherence>> localVarResponse = GetWorkforcemanagementAdherenceWithHttpInfo(userId);
@@ -11121,6 +11802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>ApiResponse of List&lt;UserScheduleAdherence&gt;</returns>
+        
         
         public ApiResponse< List<UserScheduleAdherence> > GetWorkforcemanagementAdherenceWithHttpInfo (List<string> userId)
         { 
@@ -11205,6 +11887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>Task of List&lt;UserScheduleAdherence&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<UserScheduleAdherence>> GetWorkforcemanagementAdherenceAsync (List<string> userId)
         {
              ApiResponse<List<UserScheduleAdherence>> localVarResponse = await GetWorkforcemanagementAdherenceAsyncWithHttpInfo(userId);
@@ -11218,6 +11901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>Task of ApiResponse (List&lt;UserScheduleAdherence&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<UserScheduleAdherence>>> GetWorkforcemanagementAdherenceAsyncWithHttpInfo (List<string> userId)
         { 
@@ -11304,6 +11988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>AdherenceExplanationResponse</returns>
         
+        
         public AdherenceExplanationResponse GetWorkforcemanagementAdherenceExplanation (string explanationId)
         {
              ApiResponse<AdherenceExplanationResponse> localVarResponse = GetWorkforcemanagementAdherenceExplanationWithHttpInfo(explanationId);
@@ -11316,6 +12001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>ApiResponse of AdherenceExplanationResponse</returns>
+        
         
         public ApiResponse< AdherenceExplanationResponse > GetWorkforcemanagementAdherenceExplanationWithHttpInfo (string explanationId)
         { 
@@ -11400,6 +12086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>Task of AdherenceExplanationResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AdherenceExplanationResponse> GetWorkforcemanagementAdherenceExplanationAsync (string explanationId)
         {
              ApiResponse<AdherenceExplanationResponse> localVarResponse = await GetWorkforcemanagementAdherenceExplanationAsyncWithHttpInfo(explanationId);
@@ -11413,6 +12100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationResponse>> GetWorkforcemanagementAdherenceExplanationAsyncWithHttpInfo (string explanationId)
         { 
@@ -11499,6 +12187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the job</param>
         /// <returns>AdherenceExplanationJob</returns>
         
+        
         public AdherenceExplanationJob GetWorkforcemanagementAdherenceExplanationsJob (string jobId)
         {
              ApiResponse<AdherenceExplanationJob> localVarResponse = GetWorkforcemanagementAdherenceExplanationsJobWithHttpInfo(jobId);
@@ -11511,6 +12200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <returns>ApiResponse of AdherenceExplanationJob</returns>
+        
         
         public ApiResponse< AdherenceExplanationJob > GetWorkforcemanagementAdherenceExplanationsJobWithHttpInfo (string jobId)
         { 
@@ -11595,6 +12285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the job</param>
         /// <returns>Task of AdherenceExplanationJob</returns>
         
+        
         public async System.Threading.Tasks.Task<AdherenceExplanationJob> GetWorkforcemanagementAdherenceExplanationsJobAsync (string jobId)
         {
              ApiResponse<AdherenceExplanationJob> localVarResponse = await GetWorkforcemanagementAdherenceExplanationsJobAsyncWithHttpInfo(jobId);
@@ -11608,6 +12299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationJob)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationJob>> GetWorkforcemanagementAdherenceExplanationsJobAsyncWithHttpInfo (string jobId)
         { 
@@ -11694,6 +12386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">ID of the job to get</param>
         /// <returns>WfmHistoricalAdherenceBulkResponse</returns>
         
+        
         public WfmHistoricalAdherenceBulkResponse GetWorkforcemanagementAdherenceHistoricalBulkJob (string jobId)
         {
              ApiResponse<WfmHistoricalAdherenceBulkResponse> localVarResponse = GetWorkforcemanagementAdherenceHistoricalBulkJobWithHttpInfo(jobId);
@@ -11706,6 +12399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job to get</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalAdherenceBulkResponse > GetWorkforcemanagementAdherenceHistoricalBulkJobWithHttpInfo (string jobId)
         { 
@@ -11790,6 +12484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">ID of the job to get</param>
         /// <returns>Task of WfmHistoricalAdherenceBulkResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalAdherenceBulkResponse> GetWorkforcemanagementAdherenceHistoricalBulkJobAsync (string jobId)
         {
              ApiResponse<WfmHistoricalAdherenceBulkResponse> localVarResponse = await GetWorkforcemanagementAdherenceHistoricalBulkJobAsyncWithHttpInfo(jobId);
@@ -11803,6 +12498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job to get</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> GetWorkforcemanagementAdherenceHistoricalBulkJobAsyncWithHttpInfo (string jobId)
         { 
@@ -11889,6 +12585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
         
+        
         public WfmHistoricalAdherenceResponse GetWorkforcemanagementAdherenceHistoricalJob (string jobId)
         {
              ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = GetWorkforcemanagementAdherenceHistoricalJobWithHttpInfo(jobId);
@@ -11901,6 +12598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalAdherenceResponse > GetWorkforcemanagementAdherenceHistoricalJobWithHttpInfo (string jobId)
         { 
@@ -11985,6 +12683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> GetWorkforcemanagementAdherenceHistoricalJobAsync (string jobId)
         {
              ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = await GetWorkforcemanagementAdherenceHistoricalJobAsyncWithHttpInfo(jobId);
@@ -11998,6 +12697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> GetWorkforcemanagementAdherenceHistoricalJobAsyncWithHttpInfo (string jobId)
         { 
@@ -12084,6 +12784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ModelingStatusResponse</returns>
         
+        
         public ModelingStatusResponse GetWorkforcemanagementAdhocmodelingjob (string jobId)
         {
              ApiResponse<ModelingStatusResponse> localVarResponse = GetWorkforcemanagementAdhocmodelingjobWithHttpInfo(jobId);
@@ -12096,6 +12797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ApiResponse of ModelingStatusResponse</returns>
+        
         
         public ApiResponse< ModelingStatusResponse > GetWorkforcemanagementAdhocmodelingjobWithHttpInfo (string jobId)
         { 
@@ -12180,6 +12882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ModelingStatusResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobAsync (string jobId)
         {
              ApiResponse<ModelingStatusResponse> localVarResponse = await GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo(jobId);
@@ -12193,6 +12896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ApiResponse (ModelingStatusResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ModelingStatusResponse>> GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo (string jobId)
         { 
@@ -12280,6 +12984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>AdherenceExplanationResponse</returns>
         
+        
         public AdherenceExplanationResponse GetWorkforcemanagementAgentAdherenceExplanation (string agentId, string explanationId)
         {
              ApiResponse<AdherenceExplanationResponse> localVarResponse = GetWorkforcemanagementAgentAdherenceExplanationWithHttpInfo(agentId, explanationId);
@@ -12293,6 +12998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to query</param>
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>ApiResponse of AdherenceExplanationResponse</returns>
+        
         
         public ApiResponse< AdherenceExplanationResponse > GetWorkforcemanagementAgentAdherenceExplanationWithHttpInfo (string agentId, string explanationId)
         { 
@@ -12382,6 +13088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>Task of AdherenceExplanationResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AdherenceExplanationResponse> GetWorkforcemanagementAgentAdherenceExplanationAsync (string agentId, string explanationId)
         {
              ApiResponse<AdherenceExplanationResponse> localVarResponse = await GetWorkforcemanagementAgentAdherenceExplanationAsyncWithHttpInfo(agentId, explanationId);
@@ -12396,6 +13103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to query</param>
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationResponse>> GetWorkforcemanagementAgentAdherenceExplanationAsyncWithHttpInfo (string agentId, string explanationId)
         { 
@@ -12487,6 +13195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>AgentManagementUnitReference</returns>
         
+        
         public AgentManagementUnitReference GetWorkforcemanagementAgentManagementunit (string agentId)
         {
              ApiResponse<AgentManagementUnitReference> localVarResponse = GetWorkforcemanagementAgentManagementunitWithHttpInfo(agentId);
@@ -12499,6 +13208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>ApiResponse of AgentManagementUnitReference</returns>
+        
         
         public ApiResponse< AgentManagementUnitReference > GetWorkforcemanagementAgentManagementunitWithHttpInfo (string agentId)
         { 
@@ -12583,6 +13293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>Task of AgentManagementUnitReference</returns>
         
+        
         public async System.Threading.Tasks.Task<AgentManagementUnitReference> GetWorkforcemanagementAgentManagementunitAsync (string agentId)
         {
              ApiResponse<AgentManagementUnitReference> localVarResponse = await GetWorkforcemanagementAgentManagementunitAsyncWithHttpInfo(agentId);
@@ -12596,6 +13307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The ID of the agent to look up</param>
         /// <returns>Task of ApiResponse (AgentManagementUnitReference)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentManagementUnitReference>> GetWorkforcemanagementAgentManagementunitAsyncWithHttpInfo (string agentId)
         { 
@@ -12681,6 +13393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AgentManagementUnitReference</returns>
         
+        
         public AgentManagementUnitReference GetWorkforcemanagementAgentsMeManagementunit ()
         {
              ApiResponse<AgentManagementUnitReference> localVarResponse = GetWorkforcemanagementAgentsMeManagementunitWithHttpInfo();
@@ -12692,6 +13405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AgentManagementUnitReference</returns>
+        
         
         public ApiResponse< AgentManagementUnitReference > GetWorkforcemanagementAgentsMeManagementunitWithHttpInfo ()
         { 
@@ -12771,6 +13485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AgentManagementUnitReference</returns>
         
+        
         public async System.Threading.Tasks.Task<AgentManagementUnitReference> GetWorkforcemanagementAgentsMeManagementunitAsync ()
         {
              ApiResponse<AgentManagementUnitReference> localVarResponse = await GetWorkforcemanagementAgentsMeManagementunitAsyncWithHttpInfo();
@@ -12783,6 +13498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AgentManagementUnitReference)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentManagementUnitReference>> GetWorkforcemanagementAgentsMeManagementunitAsyncWithHttpInfo ()
         { 
@@ -12865,6 +13581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the business unit (optional)</param>
         /// <returns>BusinessUnitResponse</returns>
         
+        
         public BusinessUnitResponse GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null)
         {
              ApiResponse<BusinessUnitResponse> localVarResponse = GetWorkforcemanagementBusinessunitWithHttpInfo(businessUnitId, expand);
@@ -12878,6 +13595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the business unit (optional)</param>
         /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        
         
         public ApiResponse< BusinessUnitResponse > GetWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, List<string> expand = null)
         { 
@@ -12964,6 +13682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the business unit (optional)</param>
         /// <returns>Task of BusinessUnitResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitResponse> GetWorkforcemanagementBusinessunitAsync (string businessUnitId, List<string> expand = null)
         {
              ApiResponse<BusinessUnitResponse> localVarResponse = await GetWorkforcemanagementBusinessunitAsyncWithHttpInfo(businessUnitId, expand);
@@ -12978,6 +13697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the business unit (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> GetWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, List<string> expand = null)
         { 
@@ -13066,6 +13786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>BusinessUnitActivityCode</returns>
         
+        
         public BusinessUnitActivityCode GetWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId)
         {
              ApiResponse<BusinessUnitActivityCode> localVarResponse = GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(businessUnitId, activityCodeId);
@@ -13079,6 +13800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
+        
         
         public ApiResponse< BusinessUnitActivityCode > GetWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId)
         { 
@@ -13168,6 +13890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitActivityCode> GetWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId)
         {
              ApiResponse<BusinessUnitActivityCode> localVarResponse = await GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(businessUnitId, activityCodeId);
@@ -13182,6 +13905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="activityCodeId">The ID of the activity code to fetch</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> GetWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId)
         { 
@@ -13273,6 +13997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>BusinessUnitActivityCodeListing</returns>
         
+        
         public BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string businessUnitId)
         {
              ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo(businessUnitId);
@@ -13285,6 +14010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>ApiResponse of BusinessUnitActivityCodeListing</returns>
+        
         
         public ApiResponse< BusinessUnitActivityCodeListing > GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId)
         { 
@@ -13369,6 +14095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of BusinessUnitActivityCodeListing</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId)
         {
              ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = await GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo(businessUnitId);
@@ -13382,6 +14109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCodeListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId)
         { 
@@ -13469,6 +14197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>WfmIntradayPlanningGroupListing</returns>
         
+        
         public WfmIntradayPlanningGroupListing GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, String date)
         {
              ApiResponse<WfmIntradayPlanningGroupListing> localVarResponse = GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo(businessUnitId, date);
@@ -13482,6 +14211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of WfmIntradayPlanningGroupListing</returns>
+        
         
         public ApiResponse< WfmIntradayPlanningGroupListing > GetWorkforcemanagementBusinessunitIntradayPlanninggroupsWithHttpInfo (string businessUnitId, String date)
         { 
@@ -13571,6 +14301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of WfmIntradayPlanningGroupListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmIntradayPlanningGroupListing> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsync (string businessUnitId, String date)
         {
              ApiResponse<WfmIntradayPlanningGroupListing> localVarResponse = await GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo(businessUnitId, date);
@@ -13585,6 +14316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="date">yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (WfmIntradayPlanningGroupListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmIntradayPlanningGroupListing>> GetWorkforcemanagementBusinessunitIntradayPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String date)
         { 
@@ -13678,6 +14410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
+        
         public ManagementUnitListing GetWorkforcemanagementBusinessunitManagementunits (string businessUnitId, string feature = null, string divisionId = null)
         {
              ApiResponse<ManagementUnitListing> localVarResponse = GetWorkforcemanagementBusinessunitManagementunitsWithHttpInfo(businessUnitId, feature, divisionId);
@@ -13692,6 +14425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
+        
         
         public ApiResponse< ManagementUnitListing > GetWorkforcemanagementBusinessunitManagementunitsWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null)
         { 
@@ -13780,6 +14514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementBusinessunitManagementunitsAsync (string businessUnitId, string feature = null, string divisionId = null)
         {
              ApiResponse<ManagementUnitListing> localVarResponse = await GetWorkforcemanagementBusinessunitManagementunitsAsyncWithHttpInfo(businessUnitId, feature, divisionId);
@@ -13795,6 +14530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementBusinessunitManagementunitsAsyncWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null)
         { 
@@ -13884,6 +14620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>PlanningGroup</returns>
         
+        
         public PlanningGroup GetWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId)
         {
              ApiResponse<PlanningGroup> localVarResponse = GetWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo(businessUnitId, planningGroupId);
@@ -13897,6 +14634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
+        
         
         public ApiResponse< PlanningGroup > GetWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId)
         { 
@@ -13986,6 +14724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>Task of PlanningGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<PlanningGroup> GetWorkforcemanagementBusinessunitPlanninggroupAsync (string businessUnitId, string planningGroupId)
         {
              ApiResponse<PlanningGroup> localVarResponse = await GetWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo(businessUnitId, planningGroupId);
@@ -14000,6 +14739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="planningGroupId">The ID of a planning group to fetch</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> GetWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId)
         { 
@@ -14091,6 +14831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>PlanningGroupList</returns>
         
+        
         public PlanningGroupList GetWorkforcemanagementBusinessunitPlanninggroups (string businessUnitId)
         {
              ApiResponse<PlanningGroupList> localVarResponse = GetWorkforcemanagementBusinessunitPlanninggroupsWithHttpInfo(businessUnitId);
@@ -14103,6 +14844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>ApiResponse of PlanningGroupList</returns>
+        
         
         public ApiResponse< PlanningGroupList > GetWorkforcemanagementBusinessunitPlanninggroupsWithHttpInfo (string businessUnitId)
         { 
@@ -14187,6 +14929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of PlanningGroupList</returns>
         
+        
         public async System.Threading.Tasks.Task<PlanningGroupList> GetWorkforcemanagementBusinessunitPlanninggroupsAsync (string businessUnitId)
         {
              ApiResponse<PlanningGroupList> localVarResponse = await GetWorkforcemanagementBusinessunitPlanninggroupsAsyncWithHttpInfo(businessUnitId);
@@ -14200,6 +14943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of ApiResponse (PlanningGroupList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PlanningGroupList>> GetWorkforcemanagementBusinessunitPlanninggroupsAsyncWithHttpInfo (string businessUnitId)
         { 
@@ -14287,6 +15031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>BuScheduleRun</returns>
         
+        
         public BuScheduleRun GetWorkforcemanagementBusinessunitSchedulingRun (string businessUnitId, string runId)
         {
              ApiResponse<BuScheduleRun> localVarResponse = GetWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo(businessUnitId, runId);
@@ -14300,6 +15045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>ApiResponse of BuScheduleRun</returns>
+        
         
         public ApiResponse< BuScheduleRun > GetWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId)
         { 
@@ -14389,6 +15135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of BuScheduleRun</returns>
         
+        
         public async System.Threading.Tasks.Task<BuScheduleRun> GetWorkforcemanagementBusinessunitSchedulingRunAsync (string businessUnitId, string runId)
         {
              ApiResponse<BuScheduleRun> localVarResponse = await GetWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo(businessUnitId, runId);
@@ -14403,6 +15150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <param name="runId">The ID of the schedule run</param>
         /// <returns>Task of ApiResponse (BuScheduleRun)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuScheduleRun>> GetWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId)
         { 
@@ -14497,6 +15245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>BuRescheduleResult</returns>
         
+        
         public BuRescheduleResult GetWorkforcemanagementBusinessunitSchedulingRunResult (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand)
         {
              ApiResponse<BuRescheduleResult> localVarResponse = GetWorkforcemanagementBusinessunitSchedulingRunResultWithHttpInfo(businessUnitId, runId, managementUnitIds, expand);
@@ -14512,6 +15261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitIds">The IDs of the management units for which to fetch the reschedule results</param>
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>ApiResponse of BuRescheduleResult</returns>
+        
         
         public ApiResponse< BuRescheduleResult > GetWorkforcemanagementBusinessunitSchedulingRunResultWithHttpInfo (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand)
         { 
@@ -14611,6 +15361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>Task of BuRescheduleResult</returns>
         
+        
         public async System.Threading.Tasks.Task<BuRescheduleResult> GetWorkforcemanagementBusinessunitSchedulingRunResultAsync (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand)
         {
              ApiResponse<BuRescheduleResult> localVarResponse = await GetWorkforcemanagementBusinessunitSchedulingRunResultAsyncWithHttpInfo(businessUnitId, runId, managementUnitIds, expand);
@@ -14627,6 +15378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitIds">The IDs of the management units for which to fetch the reschedule results</param>
         /// <param name="expand">The fields to expand. Omitting will return an empty response</param>
         /// <returns>Task of ApiResponse (BuRescheduleResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuRescheduleResult>> GetWorkforcemanagementBusinessunitSchedulingRunResultAsyncWithHttpInfo (string businessUnitId, string runId, List<string> managementUnitIds, List<string> expand)
         { 
@@ -14728,6 +15480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>BuScheduleRunListing</returns>
         
+        
         public BuScheduleRunListing GetWorkforcemanagementBusinessunitSchedulingRuns (string businessUnitId)
         {
              ApiResponse<BuScheduleRunListing> localVarResponse = GetWorkforcemanagementBusinessunitSchedulingRunsWithHttpInfo(businessUnitId);
@@ -14740,6 +15493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>ApiResponse of BuScheduleRunListing</returns>
+        
         
         public ApiResponse< BuScheduleRunListing > GetWorkforcemanagementBusinessunitSchedulingRunsWithHttpInfo (string businessUnitId)
         { 
@@ -14824,6 +15578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>Task of BuScheduleRunListing</returns>
         
+        
         public async System.Threading.Tasks.Task<BuScheduleRunListing> GetWorkforcemanagementBusinessunitSchedulingRunsAsync (string businessUnitId)
         {
              ApiResponse<BuScheduleRunListing> localVarResponse = await GetWorkforcemanagementBusinessunitSchedulingRunsAsyncWithHttpInfo(businessUnitId);
@@ -14837,6 +15592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
         /// <returns>Task of ApiResponse (BuScheduleRunListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuScheduleRunListing>> GetWorkforcemanagementBusinessunitSchedulingRunsAsyncWithHttpInfo (string businessUnitId)
         { 
@@ -14924,6 +15680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>ServiceGoalTemplate</returns>
         
+        
         public ServiceGoalTemplate GetWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId)
         {
              ApiResponse<ServiceGoalTemplate> localVarResponse = GetWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo(businessUnitId, serviceGoalTemplateId);
@@ -14937,6 +15694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
+        
         
         public ApiResponse< ServiceGoalTemplate > GetWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId)
         { 
@@ -15026,6 +15784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>Task of ServiceGoalTemplate</returns>
         
+        
         public async System.Threading.Tasks.Task<ServiceGoalTemplate> GetWorkforcemanagementBusinessunitServicegoaltemplateAsync (string businessUnitId, string serviceGoalTemplateId)
         {
              ApiResponse<ServiceGoalTemplate> localVarResponse = await GetWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo(businessUnitId, serviceGoalTemplateId);
@@ -15040,6 +15799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to fetch</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> GetWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId)
         { 
@@ -15131,6 +15891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>ServiceGoalTemplateList</returns>
         
+        
         public ServiceGoalTemplateList GetWorkforcemanagementBusinessunitServicegoaltemplates (string businessUnitId)
         {
              ApiResponse<ServiceGoalTemplateList> localVarResponse = GetWorkforcemanagementBusinessunitServicegoaltemplatesWithHttpInfo(businessUnitId);
@@ -15143,6 +15904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>ApiResponse of ServiceGoalTemplateList</returns>
+        
         
         public ApiResponse< ServiceGoalTemplateList > GetWorkforcemanagementBusinessunitServicegoaltemplatesWithHttpInfo (string businessUnitId)
         { 
@@ -15227,6 +15989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of ServiceGoalTemplateList</returns>
         
+        
         public async System.Threading.Tasks.Task<ServiceGoalTemplateList> GetWorkforcemanagementBusinessunitServicegoaltemplatesAsync (string businessUnitId)
         {
              ApiResponse<ServiceGoalTemplateList> localVarResponse = await GetWorkforcemanagementBusinessunitServicegoaltemplatesAsyncWithHttpInfo(businessUnitId);
@@ -15240,6 +16003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplateList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplateList>> GetWorkforcemanagementBusinessunitServicegoaltemplatesAsyncWithHttpInfo (string businessUnitId)
         { 
@@ -15329,6 +16093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleMetadata</returns>
         
+        
         public BuScheduleMetadata GetWorkforcemanagementBusinessunitWeekSchedule (string businessUnitId, String weekId, string scheduleId, string expand = null)
         {
              ApiResponse<BuScheduleMetadata> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo(businessUnitId, weekId, scheduleId, expand);
@@ -15344,6 +16109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
+        
         
         public ApiResponse< BuScheduleMetadata > GetWorkforcemanagementBusinessunitWeekScheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null)
         { 
@@ -15440,6 +16206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleMetadata</returns>
         
+        
         public async System.Threading.Tasks.Task<BuScheduleMetadata> GetWorkforcemanagementBusinessunitWeekScheduleAsync (string businessUnitId, String weekId, string scheduleId, string expand = null)
         {
              ApiResponse<BuScheduleMetadata> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, expand);
@@ -15456,6 +16223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> GetWorkforcemanagementBusinessunitWeekScheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string expand = null)
         { 
@@ -15555,6 +16323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ScheduleGenerationResult</returns>
         
+        
         public ScheduleGenerationResult GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults (string businessUnitId, String weekId, string scheduleId)
         {
              ApiResponse<ScheduleGenerationResult> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo(businessUnitId, weekId, scheduleId);
@@ -15569,6 +16338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>ApiResponse of ScheduleGenerationResult</returns>
+        
         
         public ApiResponse< ScheduleGenerationResult > GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithHttpInfo (string businessUnitId, String weekId, string scheduleId)
         { 
@@ -15663,6 +16433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ScheduleGenerationResult</returns>
         
+        
         public async System.Threading.Tasks.Task<ScheduleGenerationResult> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsync (string businessUnitId, String weekId, string scheduleId)
         {
              ApiResponse<ScheduleGenerationResult> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo(businessUnitId, weekId, scheduleId);
@@ -15678,6 +16449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <returns>Task of ApiResponse (ScheduleGenerationResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ScheduleGenerationResult>> GetWorkforcemanagementBusinessunitWeekScheduleGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId)
         { 
@@ -15777,6 +16549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>BuHeadcountForecastResponse</returns>
         
+        
         public BuHeadcountForecastResponse GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
         {
              ApiResponse<BuHeadcountForecastResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo(businessUnitId, weekId, scheduleId, forceDownload);
@@ -15792,6 +16565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>ApiResponse of BuHeadcountForecastResponse</returns>
+        
         
         public ApiResponse< BuHeadcountForecastResponse > GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
         { 
@@ -15888,6 +16662,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of BuHeadcountForecastResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuHeadcountForecastResponse> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsync (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
         {
              ApiResponse<BuHeadcountForecastResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, forceDownload);
@@ -15904,6 +16679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="forceDownload">Whether to force the result to come via download url.  For testing purposes only (optional)</param>
         /// <returns>Task of ApiResponse (BuHeadcountForecastResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuHeadcountForecastResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, bool? forceDownload = null)
         { 
@@ -16004,6 +16780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>BuAgentScheduleHistoryResponse</returns>
         
+        
         public BuAgentScheduleHistoryResponse GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent (string businessUnitId, String weekId, string scheduleId, string agentId)
         {
              ApiResponse<BuAgentScheduleHistoryResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithHttpInfo(businessUnitId, weekId, scheduleId, agentId);
@@ -16019,6 +16796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>ApiResponse of BuAgentScheduleHistoryResponse</returns>
+        
         
         public ApiResponse< BuAgentScheduleHistoryResponse > GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId)
         { 
@@ -16118,6 +16896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>Task of BuAgentScheduleHistoryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsync (string businessUnitId, String weekId, string scheduleId, string agentId)
         {
              ApiResponse<BuAgentScheduleHistoryResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, agentId);
@@ -16134,6 +16913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="agentId">THe ID of the agent</param>
         /// <returns>Task of ApiResponse (BuAgentScheduleHistoryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAgentScheduleHistoryResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId)
         { 
@@ -16238,6 +17018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>BuScheduleListing</returns>
         
+        
         public BuScheduleListing GetWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null)
         {
              ApiResponse<BuScheduleListing> localVarResponse = GetWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo(businessUnitId, weekId, includeOnlyPublished, expand);
@@ -16253,6 +17034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of BuScheduleListing</returns>
+        
         
         public ApiResponse< BuScheduleListing > GetWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null)
         { 
@@ -16346,6 +17128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of BuScheduleListing</returns>
         
+        
         public async System.Threading.Tasks.Task<BuScheduleListing> GetWorkforcemanagementBusinessunitWeekSchedulesAsync (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null)
         {
              ApiResponse<BuScheduleListing> localVarResponse = await GetWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo(businessUnitId, weekId, includeOnlyPublished, expand);
@@ -16362,6 +17145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnlyPublished">includeOnlyPublished (optional)</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (BuScheduleListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuScheduleListing>> GetWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null)
         { 
@@ -16458,6 +17242,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the forecast (optional)</param>
         /// <returns>BuShortTermForecast</returns>
         
+        
         public BuShortTermForecast GetWorkforcemanagementBusinessunitWeekShorttermforecast (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
         {
              ApiResponse<BuShortTermForecast> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo(businessUnitId, weekDateId, forecastId, expand);
@@ -16473,6 +17258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand">Include to access additional data on the forecast (optional)</param>
         /// <returns>ApiResponse of BuShortTermForecast</returns>
+        
         
         public ApiResponse< BuShortTermForecast > GetWorkforcemanagementBusinessunitWeekShorttermforecastWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
         { 
@@ -16569,6 +17355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the forecast (optional)</param>
         /// <returns>Task of BuShortTermForecast</returns>
         
+        
         public async System.Threading.Tasks.Task<BuShortTermForecast> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsync (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
         {
              ApiResponse<BuShortTermForecast> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, expand);
@@ -16585,6 +17372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="expand">Include to access additional data on the forecast (optional)</param>
         /// <returns>Task of ApiResponse (BuShortTermForecast)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuShortTermForecast>> GetWorkforcemanagementBusinessunitWeekShorttermforecastAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> expand = null)
         { 
@@ -16686,6 +17474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>BuForecastResultResponse</returns>
         
+        
         public BuForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastData (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuForecastResultResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumber, forceDownloadService);
@@ -16702,6 +17491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuForecastResultResponse</returns>
+        
         
         public ApiResponse< BuForecastResultResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastDataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
         { 
@@ -16800,6 +17590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BuForecastResultResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsync (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuForecastResultResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumber, forceDownloadService);
@@ -16817,6 +17608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekNumber">The week number to fetch (for multi-week forecasts) (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuForecastResultResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastDataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, int? weekNumber = null, bool? forceDownloadService = null)
         { 
@@ -16917,6 +17709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>BuForecastGenerationResult</returns>
         
+        
         public BuForecastGenerationResult GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults (string businessUnitId, String weekDateId, string forecastId)
         {
              ApiResponse<BuForecastGenerationResult> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo(businessUnitId, weekDateId, forecastId);
@@ -16931,6 +17724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of BuForecastGenerationResult</returns>
+        
         
         public ApiResponse< BuForecastGenerationResult > GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
@@ -17025,6 +17819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of BuForecastGenerationResult</returns>
         
+        
         public async System.Threading.Tasks.Task<BuForecastGenerationResult> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsync (string businessUnitId, String weekDateId, string forecastId)
         {
              ApiResponse<BuForecastGenerationResult> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId);
@@ -17040,6 +17835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (BuForecastGenerationResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuForecastGenerationResult>> GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
@@ -17139,6 +17935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>LongTermForecastResultResponse</returns>
         
+        
         public LongTermForecastResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null)
         {
              ApiResponse<LongTermForecastResultResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithHttpInfo(businessUnitId, weekDateId, forecastId, forceDownloadService);
@@ -17154,6 +17951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of LongTermForecastResultResponse</returns>
+        
         
         public ApiResponse< LongTermForecastResultResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null)
         { 
@@ -17250,6 +18048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of LongTermForecastResultResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<LongTermForecastResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsync (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null)
         {
              ApiResponse<LongTermForecastResultResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, forceDownloadService);
@@ -17266,6 +18065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (LongTermForecastResultResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LongTermForecastResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, bool? forceDownloadService = null)
         { 
@@ -17365,6 +18165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ForecastPlanningGroupsResponse</returns>
         
+        
         public ForecastPlanningGroupsResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups (string businessUnitId, String weekDateId, string forecastId)
         {
              ApiResponse<ForecastPlanningGroupsResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo(businessUnitId, weekDateId, forecastId);
@@ -17379,6 +18180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>ApiResponse of ForecastPlanningGroupsResponse</returns>
+        
         
         public ApiResponse< ForecastPlanningGroupsResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
@@ -17473,6 +18275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ForecastPlanningGroupsResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsync (string businessUnitId, String weekDateId, string forecastId)
         {
              ApiResponse<ForecastPlanningGroupsResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId);
@@ -17488,6 +18291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <returns>Task of ApiResponse (ForecastPlanningGroupsResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ForecastPlanningGroupsResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId)
         { 
@@ -17585,6 +18389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>BuShortTermForecastListing</returns>
         
+        
         public BuShortTermForecastListing GetWorkforcemanagementBusinessunitWeekShorttermforecasts (string businessUnitId, string weekDateId)
         {
              ApiResponse<BuShortTermForecastListing> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastsWithHttpInfo(businessUnitId, weekDateId);
@@ -17598,6 +18403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>ApiResponse of BuShortTermForecastListing</returns>
+        
         
         public ApiResponse< BuShortTermForecastListing > GetWorkforcemanagementBusinessunitWeekShorttermforecastsWithHttpInfo (string businessUnitId, string weekDateId)
         { 
@@ -17687,6 +18493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of BuShortTermForecastListing</returns>
         
+        
         public async System.Threading.Tasks.Task<BuShortTermForecastListing> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsync (string businessUnitId, string weekDateId)
         {
              ApiResponse<BuShortTermForecastListing> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsyncWithHttpInfo(businessUnitId, weekDateId);
@@ -17701,6 +18508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts</param>
         /// <returns>Task of ApiResponse (BuShortTermForecastListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuShortTermForecastListing>> GetWorkforcemanagementBusinessunitWeekShorttermforecastsAsyncWithHttpInfo (string businessUnitId, string weekDateId)
         { 
@@ -17793,6 +18601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>BusinessUnitListing</returns>
         
+        
         public BusinessUnitListing GetWorkforcemanagementBusinessunits (string feature = null, string divisionId = null)
         {
              ApiResponse<BusinessUnitListing> localVarResponse = GetWorkforcemanagementBusinessunitsWithHttpInfo(feature, divisionId);
@@ -17806,6 +18615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of BusinessUnitListing</returns>
+        
         
         public ApiResponse< BusinessUnitListing > GetWorkforcemanagementBusinessunitsWithHttpInfo (string feature = null, string divisionId = null)
         { 
@@ -17889,6 +18699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of BusinessUnitListing</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitListing> GetWorkforcemanagementBusinessunitsAsync (string feature = null, string divisionId = null)
         {
              ApiResponse<BusinessUnitListing> localVarResponse = await GetWorkforcemanagementBusinessunitsAsyncWithHttpInfo(feature, divisionId);
@@ -17903,6 +18714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsAsyncWithHttpInfo (string feature = null, string divisionId = null)
         { 
@@ -17986,6 +18798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>BusinessUnitListing</returns>
         
+        
         public BusinessUnitListing GetWorkforcemanagementBusinessunitsDivisionviews (List<string> divisionId = null)
         {
              ApiResponse<BusinessUnitListing> localVarResponse = GetWorkforcemanagementBusinessunitsDivisionviewsWithHttpInfo(divisionId);
@@ -17998,6 +18811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>ApiResponse of BusinessUnitListing</returns>
+        
         
         public ApiResponse< BusinessUnitListing > GetWorkforcemanagementBusinessunitsDivisionviewsWithHttpInfo (List<string> divisionId = null)
         { 
@@ -18079,6 +18893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>Task of BusinessUnitListing</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitListing> GetWorkforcemanagementBusinessunitsDivisionviewsAsync (List<string> divisionId = null)
         {
              ApiResponse<BusinessUnitListing> localVarResponse = await GetWorkforcemanagementBusinessunitsDivisionviewsAsyncWithHttpInfo(divisionId);
@@ -18092,6 +18907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return business units in all divisions (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null)
         { 
@@ -18174,6 +18990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>string</returns>
         
+        
         public string GetWorkforcemanagementCalendarDataIcs (string calendarId)
         {
              ApiResponse<string> localVarResponse = GetWorkforcemanagementCalendarDataIcsWithHttpInfo(calendarId);
@@ -18186,6 +19003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>ApiResponse of string</returns>
+        
         
         public ApiResponse< string > GetWorkforcemanagementCalendarDataIcsWithHttpInfo (string calendarId)
         { 
@@ -18263,6 +19081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>Task of string</returns>
         
+        
         public async System.Threading.Tasks.Task<string> GetWorkforcemanagementCalendarDataIcsAsync (string calendarId)
         {
              ApiResponse<string> localVarResponse = await GetWorkforcemanagementCalendarDataIcsAsyncWithHttpInfo(calendarId);
@@ -18276,6 +19095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calendarId">The id of the ics-formatted calendar</param>
         /// <returns>Task of ApiResponse (string)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetWorkforcemanagementCalendarDataIcsAsyncWithHttpInfo (string calendarId)
         { 
@@ -18354,6 +19174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CalendarUrlResponse</returns>
         
+        
         public CalendarUrlResponse GetWorkforcemanagementCalendarUrlIcs ()
         {
              ApiResponse<CalendarUrlResponse> localVarResponse = GetWorkforcemanagementCalendarUrlIcsWithHttpInfo();
@@ -18365,6 +19186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CalendarUrlResponse</returns>
+        
         
         public ApiResponse< CalendarUrlResponse > GetWorkforcemanagementCalendarUrlIcsWithHttpInfo ()
         { 
@@ -18444,6 +19266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CalendarUrlResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<CalendarUrlResponse> GetWorkforcemanagementCalendarUrlIcsAsync ()
         {
              ApiResponse<CalendarUrlResponse> localVarResponse = await GetWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo();
@@ -18456,6 +19279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> GetWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo ()
         { 
@@ -18536,6 +19360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportDeleteJobResponse</returns>
         
+        
         public HistoricalImportDeleteJobResponse GetWorkforcemanagementHistoricaldataDeletejob ()
         {
              ApiResponse<HistoricalImportDeleteJobResponse> localVarResponse = GetWorkforcemanagementHistoricaldataDeletejobWithHttpInfo();
@@ -18547,6 +19372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
+        
         
         public ApiResponse< HistoricalImportDeleteJobResponse > GetWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ()
         { 
@@ -18626,6 +19452,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportDeleteJobResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<HistoricalImportDeleteJobResponse> GetWorkforcemanagementHistoricaldataDeletejobAsync ()
         {
              ApiResponse<HistoricalImportDeleteJobResponse> localVarResponse = await GetWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo();
@@ -18638,6 +19465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> GetWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ()
         { 
@@ -18718,6 +19546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportStatusListing</returns>
         
+        
         public HistoricalImportStatusListing GetWorkforcemanagementHistoricaldataImportstatus ()
         {
              ApiResponse<HistoricalImportStatusListing> localVarResponse = GetWorkforcemanagementHistoricaldataImportstatusWithHttpInfo();
@@ -18729,6 +19558,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportStatusListing</returns>
+        
         
         public ApiResponse< HistoricalImportStatusListing > GetWorkforcemanagementHistoricaldataImportstatusWithHttpInfo ()
         { 
@@ -18808,6 +19638,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportStatusListing</returns>
         
+        
         public async System.Threading.Tasks.Task<HistoricalImportStatusListing> GetWorkforcemanagementHistoricaldataImportstatusAsync ()
         {
              ApiResponse<HistoricalImportStatusListing> localVarResponse = await GetWorkforcemanagementHistoricaldataImportstatusAsyncWithHttpInfo();
@@ -18820,6 +19651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportStatusListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<HistoricalImportStatusListing>> GetWorkforcemanagementHistoricaldataImportstatusAsyncWithHttpInfo ()
         { 
@@ -18902,6 +19734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>ManagementUnit</returns>
         
+        
         public ManagementUnit GetWorkforcemanagementManagementunit (string managementUnitId, List<string> expand = null)
         {
              ApiResponse<ManagementUnit> localVarResponse = GetWorkforcemanagementManagementunitWithHttpInfo(managementUnitId, expand);
@@ -18915,6 +19748,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
+        
         
         public ApiResponse< ManagementUnit > GetWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
@@ -19001,6 +19835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
         
+        
         public async System.Threading.Tasks.Task<ManagementUnit> GetWorkforcemanagementManagementunitAsync (string managementUnitId, List<string> expand = null)
         {
              ApiResponse<ManagementUnit> localVarResponse = await GetWorkforcemanagementManagementunitAsyncWithHttpInfo(managementUnitId, expand);
@@ -19015,6 +19850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
@@ -19102,6 +19938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ActivityCodeContainer</returns>
         [Obsolete]
+        
         public ActivityCodeContainer GetWorkforcemanagementManagementunitActivitycodes (string managementUnitId)
         {
              ApiResponse<ActivityCodeContainer> localVarResponse = GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo(managementUnitId);
@@ -19115,6 +19952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ActivityCodeContainer</returns>
         [Obsolete]
+        
         public ApiResponse< ActivityCodeContainer > GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string managementUnitId)
         { 
             // verify the required parameter 'managementUnitId' is set
@@ -19198,6 +20036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ActivityCodeContainer</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesAsync (string managementUnitId)
         {
              ApiResponse<ActivityCodeContainer> localVarResponse = await GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo(managementUnitId);
@@ -19212,6 +20051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string managementUnitId)
         { 
             // verify the required parameter 'managementUnitId' is set
@@ -19298,6 +20138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>UserScheduleAdherenceListing</returns>
         
+        
         public UserScheduleAdherenceListing GetWorkforcemanagementManagementunitAdherence (string managementUnitId, bool? forceDownloadService = null)
         {
              ApiResponse<UserScheduleAdherenceListing> localVarResponse = GetWorkforcemanagementManagementunitAdherenceWithHttpInfo(managementUnitId, forceDownloadService);
@@ -19311,6 +20152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of UserScheduleAdherenceListing</returns>
+        
         
         public ApiResponse< UserScheduleAdherenceListing > GetWorkforcemanagementManagementunitAdherenceWithHttpInfo (string managementUnitId, bool? forceDownloadService = null)
         { 
@@ -19397,6 +20239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of UserScheduleAdherenceListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserScheduleAdherenceListing> GetWorkforcemanagementManagementunitAdherenceAsync (string managementUnitId, bool? forceDownloadService = null)
         {
              ApiResponse<UserScheduleAdherenceListing> localVarResponse = await GetWorkforcemanagementManagementunitAdherenceAsyncWithHttpInfo(managementUnitId, forceDownloadService);
@@ -19411,6 +20254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleAdherenceListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserScheduleAdherenceListing>> GetWorkforcemanagementManagementunitAdherenceAsyncWithHttpInfo (string managementUnitId, bool? forceDownloadService = null)
         { 
@@ -19500,6 +20344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>WfmAgent</returns>
         
+        
         public WfmAgent GetWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, bool? excludeCapabilities = null)
         {
              ApiResponse<WfmAgent> localVarResponse = GetWorkforcemanagementManagementunitAgentWithHttpInfo(managementUnitId, agentId, excludeCapabilities);
@@ -19514,6 +20359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>ApiResponse of WfmAgent</returns>
+        
         
         public ApiResponse< WfmAgent > GetWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null)
         { 
@@ -19605,6 +20451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of WfmAgent</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmAgent> GetWorkforcemanagementManagementunitAgentAsync (string managementUnitId, string agentId, bool? excludeCapabilities = null)
         {
              ApiResponse<WfmAgent> localVarResponse = await GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo(managementUnitId, agentId, excludeCapabilities);
@@ -19620,6 +20467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
         /// <returns>Task of ApiResponse (WfmAgent)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmAgent>> GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null)
         { 
@@ -19713,6 +20561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <returns>ShiftTradeListResponse</returns>
         
+        
         public ShiftTradeListResponse GetWorkforcemanagementManagementunitAgentShifttrades (string managementUnitId, string agentId)
         {
              ApiResponse<ShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo(managementUnitId, agentId);
@@ -19726,6 +20575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>ApiResponse of ShiftTradeListResponse</returns>
+        
         
         public ApiResponse< ShiftTradeListResponse > GetWorkforcemanagementManagementunitAgentShifttradesWithHttpInfo (string managementUnitId, string agentId)
         { 
@@ -19815,6 +20665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ShiftTradeListResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementManagementunitAgentShifttradesAsync (string managementUnitId, string agentId)
         {
              ApiResponse<ShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo(managementUnitId, agentId);
@@ -19829,6 +20680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementManagementunitAgentShifttradesAsyncWithHttpInfo (string managementUnitId, string agentId)
         { 
@@ -19920,6 +20772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ShiftTradeMatchesSummaryResponse</returns>
         
+        
         public ShiftTradeMatchesSummaryResponse GetWorkforcemanagementManagementunitShifttradesMatched (string managementUnitId)
         {
              ApiResponse<ShiftTradeMatchesSummaryResponse> localVarResponse = GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo(managementUnitId);
@@ -19932,6 +20785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ShiftTradeMatchesSummaryResponse</returns>
+        
         
         public ApiResponse< ShiftTradeMatchesSummaryResponse > GetWorkforcemanagementManagementunitShifttradesMatchedWithHttpInfo (string managementUnitId)
         { 
@@ -20016,6 +20870,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ShiftTradeMatchesSummaryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ShiftTradeMatchesSummaryResponse> GetWorkforcemanagementManagementunitShifttradesMatchedAsync (string managementUnitId)
         {
              ApiResponse<ShiftTradeMatchesSummaryResponse> localVarResponse = await GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo(managementUnitId);
@@ -20029,6 +20884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ShiftTradeMatchesSummaryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeMatchesSummaryResponse>> GetWorkforcemanagementManagementunitShifttradesMatchedAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -20115,6 +20971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         
+        
         public WfmUserEntityListing GetWorkforcemanagementManagementunitShifttradesUsers (string managementUnitId)
         {
              ApiResponse<WfmUserEntityListing> localVarResponse = GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo(managementUnitId);
@@ -20127,6 +20984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
+        
         
         public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitShifttradesUsersWithHttpInfo (string managementUnitId)
         { 
@@ -20211,6 +21069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitShifttradesUsersAsync (string managementUnitId)
         {
              ApiResponse<WfmUserEntityListing> localVarResponse = await GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo(managementUnitId);
@@ -20224,6 +21083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitShifttradesUsersAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -20311,6 +21171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>TimeOffLimit</returns>
         
+        
         public TimeOffLimit GetWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId)
         {
              ApiResponse<TimeOffLimit> localVarResponse = GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo(managementUnitId, timeOffLimitId);
@@ -20324,6 +21185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
+        
         
         public ApiResponse< TimeOffLimit > GetWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId)
         { 
@@ -20413,6 +21275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of TimeOffLimit</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffLimit> GetWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId)
         {
              ApiResponse<TimeOffLimit> localVarResponse = await GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo(managementUnitId, timeOffLimitId);
@@ -20427,6 +21290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="timeOffLimitId">The ID of the time off limit to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> GetWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId)
         { 
@@ -20518,6 +21382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>TimeOffLimitListing</returns>
         
+        
         public TimeOffLimitListing GetWorkforcemanagementManagementunitTimeofflimits (string managementUnitId)
         {
              ApiResponse<TimeOffLimitListing> localVarResponse = GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo(managementUnitId);
@@ -20530,6 +21395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>ApiResponse of TimeOffLimitListing</returns>
+        
         
         public ApiResponse< TimeOffLimitListing > GetWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId)
         { 
@@ -20614,6 +21480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of TimeOffLimitListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffLimitListing> GetWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId)
         {
              ApiResponse<TimeOffLimitListing> localVarResponse = await GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo(managementUnitId);
@@ -20627,6 +21494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <returns>Task of ApiResponse (TimeOffLimitListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimitListing>> GetWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -20714,6 +21582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>TimeOffPlan</returns>
         
+        
         public TimeOffPlan GetWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId)
         {
              ApiResponse<TimeOffPlan> localVarResponse = GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo(managementUnitId, timeOffPlanId);
@@ -20727,6 +21596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
+        
         
         public ApiResponse< TimeOffPlan > GetWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId)
         { 
@@ -20816,6 +21686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of TimeOffPlan</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffPlan> GetWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId)
         {
              ApiResponse<TimeOffPlan> localVarResponse = await GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo(managementUnitId, timeOffPlanId);
@@ -20830,6 +21701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="timeOffPlanId">The ID of the time off plan to fetch</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> GetWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId)
         { 
@@ -20921,6 +21793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>TimeOffPlanListing</returns>
         
+        
         public TimeOffPlanListing GetWorkforcemanagementManagementunitTimeoffplans (string managementUnitId)
         {
              ApiResponse<TimeOffPlanListing> localVarResponse = GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo(managementUnitId);
@@ -20933,6 +21806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>ApiResponse of TimeOffPlanListing</returns>
+        
         
         public ApiResponse< TimeOffPlanListing > GetWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId)
         { 
@@ -21017,6 +21891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of TimeOffPlanListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffPlanListing> GetWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId)
         {
              ApiResponse<TimeOffPlanListing> localVarResponse = await GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo(managementUnitId);
@@ -21030,6 +21905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <returns>Task of ApiResponse (TimeOffPlanListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlanListing>> GetWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -21118,6 +21994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         public TimeOffRequestResponse GetWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo(managementUnitId, userId, timeOffRequestId);
@@ -21132,6 +22009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         public ApiResponse< TimeOffRequestResponse > GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
         { 
@@ -21226,6 +22104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestAsync (string managementUnitId, string userId, string timeOffRequestId)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo(managementUnitId, userId, timeOffRequestId);
@@ -21241,6 +22120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
         { 
@@ -21339,6 +22219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>QueryTimeOffLimitValuesResponse</returns>
         
+        
         public QueryTimeOffLimitValuesResponse GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits (string managementUnitId, string userId, string timeOffRequestId)
         {
              ApiResponse<QueryTimeOffLimitValuesResponse> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithHttpInfo(managementUnitId, userId, timeOffRequestId);
@@ -21353,6 +22234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
+        
         
         public ApiResponse< QueryTimeOffLimitValuesResponse > GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
         { 
@@ -21447,6 +22329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsync (string managementUnitId, string userId, string timeOffRequestId)
         {
              ApiResponse<QueryTimeOffLimitValuesResponse> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsyncWithHttpInfo(managementUnitId, userId, timeOffRequestId);
@@ -21462,6 +22345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The ID of the time off request, which dates and activityCodeId determine limit values to retrieve</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
         { 
@@ -21560,6 +22444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
         
+        
         public TimeOffRequestList GetWorkforcemanagementManagementunitUserTimeoffrequests (string managementUnitId, string userId, bool? recentlyReviewed = null)
         {
              ApiResponse<TimeOffRequestList> localVarResponse = GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo(managementUnitId, userId, recentlyReviewed);
@@ -21574,6 +22459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
+        
         
         public ApiResponse< TimeOffRequestList > GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null)
         { 
@@ -21665,6 +22551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsync (string managementUnitId, string userId, bool? recentlyReviewed = null)
         {
              ApiResponse<TimeOffRequestList> localVarResponse = await GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo(managementUnitId, userId, recentlyReviewed);
@@ -21680,6 +22567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, string userId, bool? recentlyReviewed = null)
         { 
@@ -21772,6 +22660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         
+        
         public WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string managementUnitId)
         {
              ApiResponse<WfmUserEntityListing> localVarResponse = GetWorkforcemanagementManagementunitUsersWithHttpInfo(managementUnitId);
@@ -21784,6 +22673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
+        
         
         public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitUsersWithHttpInfo (string managementUnitId)
         { 
@@ -21868,6 +22758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string managementUnitId)
         {
              ApiResponse<WfmUserEntityListing> localVarResponse = await GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo(managementUnitId);
@@ -21881,6 +22772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string managementUnitId)
         { 
@@ -21971,6 +22863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>WeekScheduleResponse</returns>
         [Obsolete]
+        
         public WeekScheduleResponse GetWorkforcemanagementManagementunitWeekSchedule (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null)
         {
              ApiResponse<WeekScheduleResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekScheduleWithHttpInfo(managementUnitId, weekId, scheduleId, expand, forceDownloadService);
@@ -21988,6 +22881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WeekScheduleResponse</returns>
         [Obsolete]
+        
         public ApiResponse< WeekScheduleResponse > GetWorkforcemanagementManagementunitWeekScheduleWithHttpInfo (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
@@ -22085,6 +22979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of WeekScheduleResponse</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<WeekScheduleResponse> GetWorkforcemanagementManagementunitWeekScheduleAsync (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null)
         {
              ApiResponse<WeekScheduleResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo(managementUnitId, weekId, scheduleId, expand, forceDownloadService);
@@ -22103,6 +22998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WeekScheduleResponse)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<WeekScheduleResponse>> GetWorkforcemanagementManagementunitWeekScheduleAsyncWithHttpInfo (string managementUnitId, string weekId, string scheduleId, string expand = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
@@ -22204,6 +23100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>WeekScheduleListResponse</returns>
         [Obsolete]
+        
         public WeekScheduleListResponse GetWorkforcemanagementManagementunitWeekSchedules (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
         {
              ApiResponse<WeekScheduleListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate);
@@ -22221,6 +23118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>ApiResponse of WeekScheduleListResponse</returns>
         [Obsolete]
+        
         public ApiResponse< WeekScheduleListResponse > GetWorkforcemanagementManagementunitWeekSchedulesWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
         { 
             // verify the required parameter 'managementUnitId' is set
@@ -22315,6 +23213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of WeekScheduleListResponse</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<WeekScheduleListResponse> GetWorkforcemanagementManagementunitWeekSchedulesAsync (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
         {
              ApiResponse<WeekScheduleListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate);
@@ -22333,6 +23232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="latestWeekDate">The start date of the latest week to query in yyyy-MM-dd format (optional)</param>
         /// <returns>Task of ApiResponse (WeekScheduleListResponse)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<WeekScheduleListResponse>> GetWorkforcemanagementManagementunitWeekSchedulesAsyncWithHttpInfo (string managementUnitId, string weekId, bool? includeOnlyPublished = null, string earliestWeekDate = null, string latestWeekDate = null)
         { 
             // verify the required parameter 'managementUnitId' is set
@@ -22428,6 +23328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
         
+        
         public WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
         {
              ApiResponse<WeekShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, evaluateMatches);
@@ -22442,6 +23343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
+        
         
         public ApiResponse< WeekShiftTradeListResponse > GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
         { 
@@ -22533,6 +23435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
         {
              ApiResponse<WeekShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, evaluateMatches);
@@ -22548,6 +23451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
         { 
@@ -22642,6 +23546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>WorkPlan</returns>
         
+        
         public WorkPlan GetWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, List<string> includeOnly = null)
         {
              ApiResponse<WorkPlan> localVarResponse = GetWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId, includeOnly);
@@ -22656,6 +23561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
+        
         
         public ApiResponse< WorkPlan > GetWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null)
         { 
@@ -22747,6 +23653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of WorkPlan</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlan> GetWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, List<string> includeOnly = null)
         {
              ApiResponse<WorkPlan> localVarResponse = await GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId, includeOnly);
@@ -22762,6 +23669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to fetch</param>
         /// <param name="includeOnly">limit response to the specified fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> GetWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> includeOnly = null)
         { 
@@ -22855,6 +23763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>WorkPlanRotationResponse</returns>
         
+        
         public WorkPlanRotationResponse GetWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId)
         {
              ApiResponse<WorkPlanRotationResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo(managementUnitId, workPlanRotationId);
@@ -22868,6 +23777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        
         
         public ApiResponse< WorkPlanRotationResponse > GetWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId)
         { 
@@ -22957,6 +23867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>Task of WorkPlanRotationResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlanRotationResponse> GetWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId)
         {
              ApiResponse<WorkPlanRotationResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo(managementUnitId, workPlanRotationId);
@@ -22971,6 +23882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="workPlanRotationId">The ID of the work plan rotation to fetch</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> GetWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId)
         { 
@@ -23063,6 +23975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>WorkPlanRotationListResponse</returns>
         
+        
         public WorkPlanRotationListResponse GetWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, List<string> expand = null)
         {
              ApiResponse<WorkPlanRotationListResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo(managementUnitId, expand);
@@ -23076,6 +23989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationListResponse</returns>
+        
         
         public ApiResponse< WorkPlanRotationListResponse > GetWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
@@ -23162,6 +24076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of WorkPlanRotationListResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlanRotationListResponse> GetWorkforcemanagementManagementunitWorkplanrotationsAsync (string managementUnitId, List<string> expand = null)
         {
              ApiResponse<WorkPlanRotationListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo(managementUnitId, expand);
@@ -23176,6 +24091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationListResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationListResponse>> GetWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
@@ -23264,6 +24180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <returns>WorkPlanListResponse</returns>
         
+        
         public WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null)
         {
              ApiResponse<WorkPlanListResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, expand);
@@ -23277,6 +24194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
+        
         
         public ApiResponse< WorkPlanListResponse > GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
@@ -23363,6 +24281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <returns>Task of WorkPlanListResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null)
         {
              ApiResponse<WorkPlanListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, expand);
@@ -23377,6 +24296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null)
         { 
@@ -23468,6 +24388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
+        
         public ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
         {
              ApiResponse<ManagementUnitListing> localVarResponse = GetWorkforcemanagementManagementunitsWithHttpInfo(pageSize, pageNumber, expand, feature, divisionId);
@@ -23484,6 +24405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
+        
         
         public ApiResponse< ManagementUnitListing > GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
         { 
@@ -23573,6 +24495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
         {
              ApiResponse<ManagementUnitListing> localVarResponse = await GetWorkforcemanagementManagementunitsAsyncWithHttpInfo(pageSize, pageNumber, expand, feature, divisionId);
@@ -23590,6 +24513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feature"> (optional)</param>
         /// <param name="divisionId"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
         { 
@@ -23676,6 +24600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
+        
         public ManagementUnitListing GetWorkforcemanagementManagementunitsDivisionviews (List<string> divisionId = null)
         {
              ApiResponse<ManagementUnitListing> localVarResponse = GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo(divisionId);
@@ -23688,6 +24613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
+        
         
         public ApiResponse< ManagementUnitListing > GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo (List<string> divisionId = null)
         { 
@@ -23769,6 +24695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsAsync (List<string> divisionId = null)
         {
              ApiResponse<ManagementUnitListing> localVarResponse = await GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo(divisionId);
@@ -23782,6 +24709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">The divisionIds to filter by. If omitted, will return all divisions (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo (List<string> divisionId = null)
         { 
@@ -23863,6 +24791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>NotificationsResponse</returns>
         
+        
         public NotificationsResponse GetWorkforcemanagementNotifications ()
         {
              ApiResponse<NotificationsResponse> localVarResponse = GetWorkforcemanagementNotificationsWithHttpInfo();
@@ -23874,6 +24803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of NotificationsResponse</returns>
+        
         
         public ApiResponse< NotificationsResponse > GetWorkforcemanagementNotificationsWithHttpInfo ()
         { 
@@ -23953,6 +24883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of NotificationsResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<NotificationsResponse> GetWorkforcemanagementNotificationsAsync ()
         {
              ApiResponse<NotificationsResponse> localVarResponse = await GetWorkforcemanagementNotificationsAsyncWithHttpInfo();
@@ -23965,6 +24896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (NotificationsResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<NotificationsResponse>> GetWorkforcemanagementNotificationsAsyncWithHttpInfo ()
         { 
@@ -24046,6 +24978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>SchedulingStatusResponse</returns>
         
+        
         public SchedulingStatusResponse GetWorkforcemanagementSchedulingjob (string jobId)
         {
              ApiResponse<SchedulingStatusResponse> localVarResponse = GetWorkforcemanagementSchedulingjobWithHttpInfo(jobId);
@@ -24058,6 +24991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>ApiResponse of SchedulingStatusResponse</returns>
+        
         
         public ApiResponse< SchedulingStatusResponse > GetWorkforcemanagementSchedulingjobWithHttpInfo (string jobId)
         { 
@@ -24142,6 +25076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>Task of SchedulingStatusResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<SchedulingStatusResponse> GetWorkforcemanagementSchedulingjobAsync (string jobId)
         {
              ApiResponse<SchedulingStatusResponse> localVarResponse = await GetWorkforcemanagementSchedulingjobAsyncWithHttpInfo(jobId);
@@ -24155,6 +25090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the scheduling job</param>
         /// <returns>Task of ApiResponse (SchedulingStatusResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SchedulingStatusResponse>> GetWorkforcemanagementSchedulingjobAsyncWithHttpInfo (string jobId)
         { 
@@ -24240,6 +25176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ShiftTradeListResponse</returns>
         
+        
         public ShiftTradeListResponse GetWorkforcemanagementShifttrades ()
         {
              ApiResponse<ShiftTradeListResponse> localVarResponse = GetWorkforcemanagementShifttradesWithHttpInfo();
@@ -24251,6 +25188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ShiftTradeListResponse</returns>
+        
         
         public ApiResponse< ShiftTradeListResponse > GetWorkforcemanagementShifttradesWithHttpInfo ()
         { 
@@ -24330,6 +25268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ShiftTradeListResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ShiftTradeListResponse> GetWorkforcemanagementShifttradesAsync ()
         {
              ApiResponse<ShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementShifttradesAsyncWithHttpInfo();
@@ -24342,6 +25281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ShiftTradeListResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementShifttradesAsyncWithHttpInfo ()
         { 
@@ -24423,6 +25363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>WfmHistoricalShrinkageResponse</returns>
         
+        
         public WfmHistoricalShrinkageResponse GetWorkforcemanagementShrinkageJob (string jobId)
         {
              ApiResponse<WfmHistoricalShrinkageResponse> localVarResponse = GetWorkforcemanagementShrinkageJobWithHttpInfo(jobId);
@@ -24435,6 +25376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of WfmHistoricalShrinkageResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalShrinkageResponse > GetWorkforcemanagementShrinkageJobWithHttpInfo (string jobId)
         { 
@@ -24519,6 +25461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <returns>Task of WfmHistoricalShrinkageResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalShrinkageResponse> GetWorkforcemanagementShrinkageJobAsync (string jobId)
         {
              ApiResponse<WfmHistoricalShrinkageResponse> localVarResponse = await GetWorkforcemanagementShrinkageJobAsyncWithHttpInfo(jobId);
@@ -24532,6 +25475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (WfmHistoricalShrinkageResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalShrinkageResponse>> GetWorkforcemanagementShrinkageJobAsyncWithHttpInfo (string jobId)
         { 
@@ -24618,6 +25562,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         public TimeOffRequestResponse GetWorkforcemanagementTimeoffrequest (string timeOffRequestId)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = GetWorkforcemanagementTimeoffrequestWithHttpInfo(timeOffRequestId);
@@ -24630,6 +25575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         public ApiResponse< TimeOffRequestResponse > GetWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId)
         { 
@@ -24714,6 +25660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestResponse> GetWorkforcemanagementTimeoffrequestAsync (string timeOffRequestId)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = await GetWorkforcemanagementTimeoffrequestAsyncWithHttpInfo(timeOffRequestId);
@@ -24727,6 +25674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> GetWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId)
         { 
@@ -24813,6 +25761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>WaitlistPositionListing</returns>
         
+        
         public WaitlistPositionListing GetWorkforcemanagementTimeoffrequestWaitlistpositions (string timeOffRequestId)
         {
              ApiResponse<WaitlistPositionListing> localVarResponse = GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo(timeOffRequestId);
@@ -24825,6 +25774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
+        
         
         public ApiResponse< WaitlistPositionListing > GetWorkforcemanagementTimeoffrequestWaitlistpositionsWithHttpInfo (string timeOffRequestId)
         { 
@@ -24909,6 +25859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of WaitlistPositionListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WaitlistPositionListing> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsync (string timeOffRequestId)
         {
              ApiResponse<WaitlistPositionListing> localVarResponse = await GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo(timeOffRequestId);
@@ -24922,6 +25873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> GetWorkforcemanagementTimeoffrequestWaitlistpositionsAsyncWithHttpInfo (string timeOffRequestId)
         { 
@@ -25008,6 +25960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
         
+        
         public TimeOffRequestList GetWorkforcemanagementTimeoffrequests (bool? recentlyReviewed = null)
         {
              ApiResponse<TimeOffRequestList> localVarResponse = GetWorkforcemanagementTimeoffrequestsWithHttpInfo(recentlyReviewed);
@@ -25020,6 +25973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
+        
         
         public ApiResponse< TimeOffRequestList > GetWorkforcemanagementTimeoffrequestsWithHttpInfo (bool? recentlyReviewed = null)
         { 
@@ -25101,6 +26055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsAsync (bool? recentlyReviewed = null)
         {
              ApiResponse<TimeOffRequestList> localVarResponse = await GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo(recentlyReviewed);
@@ -25114,6 +26069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (bool? recentlyReviewed = null)
         { 
@@ -25198,6 +26154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>AdherenceExplanationAsyncResponse</returns>
         
+        
         public AdherenceExplanationAsyncResponse PatchWorkforcemanagementAgentAdherenceExplanation (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body)
         {
              ApiResponse<AdherenceExplanationAsyncResponse> localVarResponse = PatchWorkforcemanagementAgentAdherenceExplanationWithHttpInfo(agentId, explanationId, body);
@@ -25212,6 +26169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of AdherenceExplanationAsyncResponse</returns>
+        
         
         public ApiResponse< AdherenceExplanationAsyncResponse > PatchWorkforcemanagementAgentAdherenceExplanationWithHttpInfo (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body)
         { 
@@ -25311,6 +26269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of AdherenceExplanationAsyncResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AdherenceExplanationAsyncResponse> PatchWorkforcemanagementAgentAdherenceExplanationAsync (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body)
         {
              ApiResponse<AdherenceExplanationAsyncResponse> localVarResponse = await PatchWorkforcemanagementAgentAdherenceExplanationAsyncWithHttpInfo(agentId, explanationId, body);
@@ -25326,6 +26285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="explanationId">The ID of the explanation to update</param>
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationAsyncResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationAsyncResponse>> PatchWorkforcemanagementAgentAdherenceExplanationAsyncWithHttpInfo (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body)
         { 
@@ -25428,6 +26388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitResponse</returns>
         
+        
         public BusinessUnitResponse PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null)
         {
              ApiResponse<BusinessUnitResponse> localVarResponse = PatchWorkforcemanagementBusinessunitWithHttpInfo(businessUnitId, body);
@@ -25441,6 +26402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        
         
         public ApiResponse< BusinessUnitResponse > PatchWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null)
         { 
@@ -25532,6 +26494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitResponse> PatchWorkforcemanagementBusinessunitAsync (string businessUnitId, UpdateBusinessUnitRequest body = null)
         {
              ApiResponse<BusinessUnitResponse> localVarResponse = await PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo(businessUnitId, body);
@@ -25546,6 +26509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null)
         { 
@@ -25640,6 +26604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitActivityCode</returns>
         
+        
         public BusinessUnitActivityCode PatchWorkforcemanagementBusinessunitActivitycode (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
         {
              ApiResponse<BusinessUnitActivityCode> localVarResponse = PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo(businessUnitId, activityCodeId, body);
@@ -25654,6 +26619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
+        
         
         public ApiResponse< BusinessUnitActivityCode > PatchWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
         { 
@@ -25750,6 +26716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitActivityCode> PatchWorkforcemanagementBusinessunitActivitycodeAsync (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
         {
              ApiResponse<BusinessUnitActivityCode> localVarResponse = await PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo(businessUnitId, activityCodeId, body);
@@ -25765,6 +26732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="activityCodeId">The ID of the activity code to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PatchWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId, UpdateActivityCodeRequest body = null)
         { 
@@ -25864,6 +26832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>PlanningGroup</returns>
         
+        
         public PlanningGroup PatchWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null)
         {
              ApiResponse<PlanningGroup> localVarResponse = PatchWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo(businessUnitId, planningGroupId, body);
@@ -25878,6 +26847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
+        
         
         public ApiResponse< PlanningGroup > PatchWorkforcemanagementBusinessunitPlanninggroupWithHttpInfo (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null)
         { 
@@ -25974,6 +26944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of PlanningGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<PlanningGroup> PatchWorkforcemanagementBusinessunitPlanninggroupAsync (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null)
         {
              ApiResponse<PlanningGroup> localVarResponse = await PatchWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo(businessUnitId, planningGroupId, body);
@@ -25989,6 +26960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="planningGroupId">The ID of a planning group to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> PatchWorkforcemanagementBusinessunitPlanninggroupAsyncWithHttpInfo (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null)
         { 
@@ -26088,6 +27060,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns></returns>
         
+        
         public void PatchWorkforcemanagementBusinessunitSchedulingRun (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null)
         {
              PatchWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo(businessUnitId, runId, body);
@@ -26101,6 +27074,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PatchWorkforcemanagementBusinessunitSchedulingRunWithHttpInfo (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null)
         { 
@@ -26197,6 +27171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PatchWorkforcemanagementBusinessunitSchedulingRunAsync (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null)
         {
              await PatchWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo(businessUnitId, runId, body);
@@ -26211,6 +27186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="runId">The ID of the schedule run</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementBusinessunitSchedulingRunAsyncWithHttpInfo (string businessUnitId, string runId, PatchBuScheduleRunRequest body = null)
         { 
@@ -26310,6 +27286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ServiceGoalTemplate</returns>
         
+        
         public ServiceGoalTemplate PatchWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null)
         {
              ApiResponse<ServiceGoalTemplate> localVarResponse = PatchWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo(businessUnitId, serviceGoalTemplateId, body);
@@ -26324,6 +27301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
+        
         
         public ApiResponse< ServiceGoalTemplate > PatchWorkforcemanagementBusinessunitServicegoaltemplateWithHttpInfo (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null)
         { 
@@ -26420,6 +27398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ServiceGoalTemplate</returns>
         
+        
         public async System.Threading.Tasks.Task<ServiceGoalTemplate> PatchWorkforcemanagementBusinessunitServicegoaltemplateAsync (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null)
         {
              ApiResponse<ServiceGoalTemplate> localVarResponse = await PatchWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo(businessUnitId, serviceGoalTemplateId, body);
@@ -26435,6 +27414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="serviceGoalTemplateId">The ID of a service goal template to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> PatchWorkforcemanagementBusinessunitServicegoaltemplateAsyncWithHttpInfo (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body = null)
         { 
@@ -26533,6 +27513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ManagementUnit</returns>
         
+        
         public ManagementUnit PatchWorkforcemanagementManagementunit (string managementUnitId, UpdateManagementUnitRequest body = null)
         {
              ApiResponse<ManagementUnit> localVarResponse = PatchWorkforcemanagementManagementunitWithHttpInfo(managementUnitId, body);
@@ -26546,6 +27527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
+        
         
         public ApiResponse< ManagementUnit > PatchWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null)
         { 
@@ -26637,6 +27619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
         
+        
         public async System.Threading.Tasks.Task<ManagementUnit> PatchWorkforcemanagementManagementunitAsync (string managementUnitId, UpdateManagementUnitRequest body = null)
         {
              ApiResponse<ManagementUnit> localVarResponse = await PatchWorkforcemanagementManagementunitAsyncWithHttpInfo(managementUnitId, body);
@@ -26651,6 +27634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null)
         { 
@@ -26745,6 +27729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
         
+        
         public TimeOffLimit PatchWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
         {
              ApiResponse<TimeOffLimit> localVarResponse = PatchWorkforcemanagementManagementunitTimeofflimitWithHttpInfo(managementUnitId, timeOffLimitId, body);
@@ -26759,6 +27744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
+        
         
         public ApiResponse< TimeOffLimit > PatchWorkforcemanagementManagementunitTimeofflimitWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
         { 
@@ -26855,6 +27841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffLimit> PatchWorkforcemanagementManagementunitTimeofflimitAsync (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
         {
              ApiResponse<TimeOffLimit> localVarResponse = await PatchWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo(managementUnitId, timeOffLimitId, body);
@@ -26870,6 +27857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The id of time off limit object to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PatchWorkforcemanagementManagementunitTimeofflimitAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
         { 
@@ -26969,6 +27957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffPlan</returns>
         
+        
         public TimeOffPlan PatchWorkforcemanagementManagementunitTimeoffplan (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
         {
              ApiResponse<TimeOffPlan> localVarResponse = PatchWorkforcemanagementManagementunitTimeoffplanWithHttpInfo(managementUnitId, timeOffPlanId, body);
@@ -26983,6 +27972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
+        
         
         public ApiResponse< TimeOffPlan > PatchWorkforcemanagementManagementunitTimeoffplanWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
         { 
@@ -27079,6 +28069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffPlan</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffPlan> PatchWorkforcemanagementManagementunitTimeoffplanAsync (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
         {
              ApiResponse<TimeOffPlan> localVarResponse = await PatchWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo(managementUnitId, timeOffPlanId, body);
@@ -27094,6 +28085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffPlanId">The ID of the time off plan to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PatchWorkforcemanagementManagementunitTimeoffplanAsyncWithHttpInfo (string managementUnitId, string timeOffPlanId, UpdateTimeOffPlanRequest body = null)
         { 
@@ -27194,6 +28186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         public TimeOffRequestResponse PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo(managementUnitId, userId, timeOffRequestId, body);
@@ -27209,6 +28202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         public ApiResponse< TimeOffRequestResponse > PatchWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
         { 
@@ -27310,6 +28304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsync (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = await PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo(managementUnitId, userId, timeOffRequestId, body);
@@ -27326,6 +28321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The id of the time off request to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
         { 
@@ -27431,6 +28427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
         
+        
         public ShiftTradeResponse PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
         {
              ApiResponse<ShiftTradeResponse> localVarResponse = PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
@@ -27446,6 +28443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        
         
         public ApiResponse< ShiftTradeResponse > PatchWorkforcemanagementManagementunitWeekShifttradeWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
         { 
@@ -27550,6 +28548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ShiftTradeResponse> PatchWorkforcemanagementManagementunitWeekShifttradeAsync (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
         {
              ApiResponse<ShiftTradeResponse> localVarResponse = await PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
@@ -27566,6 +28565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PatchWorkforcemanagementManagementunitWeekShifttradeAsyncWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
         { 
@@ -27675,6 +28675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlan</returns>
         
+        
         public WorkPlan PatchWorkforcemanagementManagementunitWorkplan (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
         {
              ApiResponse<WorkPlan> localVarResponse = PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo(managementUnitId, workPlanId, validationMode, body);
@@ -27690,6 +28691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
+        
         
         public ApiResponse< WorkPlan > PatchWorkforcemanagementManagementunitWorkplanWithHttpInfo (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
         { 
@@ -27788,6 +28790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlan</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlan> PatchWorkforcemanagementManagementunitWorkplanAsync (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
         {
              ApiResponse<WorkPlan> localVarResponse = await PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo(managementUnitId, workPlanId, validationMode, body);
@@ -27804,6 +28807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="validationMode">Allows to update work plan even if validation result is invalid (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PatchWorkforcemanagementManagementunitWorkplanAsyncWithHttpInfo (string managementUnitId, string workPlanId, string validationMode = null, WorkPlan body = null)
         { 
@@ -27904,6 +28908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlanRotationResponse</returns>
         
+        
         public WorkPlanRotationResponse PatchWorkforcemanagementManagementunitWorkplanrotation (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
         {
              ApiResponse<WorkPlanRotationResponse> localVarResponse = PatchWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo(managementUnitId, workPlanRotationId, body);
@@ -27918,6 +28923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        
         
         public ApiResponse< WorkPlanRotationResponse > PatchWorkforcemanagementManagementunitWorkplanrotationWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
         { 
@@ -28014,6 +29020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlanRotationResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlanRotationResponse> PatchWorkforcemanagementManagementunitWorkplanrotationAsync (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
         {
              ApiResponse<WorkPlanRotationResponse> localVarResponse = await PatchWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo(managementUnitId, workPlanRotationId, body);
@@ -28029,6 +29036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to update</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PatchWorkforcemanagementManagementunitWorkplanrotationAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, UpdateWorkPlanRotationRequest body = null)
         { 
@@ -28127,6 +29135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         public TimeOffRequestResponse PatchWorkforcemanagementTimeoffrequest (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = PatchWorkforcemanagementTimeoffrequestWithHttpInfo(timeOffRequestId, body);
@@ -28140,6 +29149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         public ApiResponse< TimeOffRequestResponse > PatchWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
         { 
@@ -28231,6 +29241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestResponse> PatchWorkforcemanagementTimeoffrequestAsync (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = await PatchWorkforcemanagementTimeoffrequestAsyncWithHttpInfo(timeOffRequestId, body);
@@ -28245,6 +29256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The ID of the time off request</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PatchWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId, AgentTimeOffRequestPatch body = null)
         { 
@@ -28337,6 +29349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>AdherenceExplanationAsyncResponse</returns>
         
+        
         public AdherenceExplanationAsyncResponse PostWorkforcemanagementAdherenceExplanations (AddAdherenceExplanationAgentRequest body)
         {
              ApiResponse<AdherenceExplanationAsyncResponse> localVarResponse = PostWorkforcemanagementAdherenceExplanationsWithHttpInfo(body);
@@ -28349,6 +29362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of AdherenceExplanationAsyncResponse</returns>
+        
         
         public ApiResponse< AdherenceExplanationAsyncResponse > PostWorkforcemanagementAdherenceExplanationsWithHttpInfo (AddAdherenceExplanationAgentRequest body)
         { 
@@ -28438,6 +29452,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of AdherenceExplanationAsyncResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AdherenceExplanationAsyncResponse> PostWorkforcemanagementAdherenceExplanationsAsync (AddAdherenceExplanationAgentRequest body)
         {
              ApiResponse<AdherenceExplanationAsyncResponse> localVarResponse = await PostWorkforcemanagementAdherenceExplanationsAsyncWithHttpInfo(body);
@@ -28451,6 +29466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationAsyncResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationAsyncResponse>> PostWorkforcemanagementAdherenceExplanationsAsyncWithHttpInfo (AddAdherenceExplanationAgentRequest body)
         { 
@@ -28544,6 +29560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>QueryAdherenceExplanationsResponse</returns>
         
+        
         public QueryAdherenceExplanationsResponse PostWorkforcemanagementAdherenceExplanationsQuery (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<QueryAdherenceExplanationsResponse> localVarResponse = PostWorkforcemanagementAdherenceExplanationsQueryWithHttpInfo(body, forceAsync, forceDownloadService);
@@ -28558,6 +29575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of QueryAdherenceExplanationsResponse</returns>
+        
         
         public ApiResponse< QueryAdherenceExplanationsResponse > PostWorkforcemanagementAdherenceExplanationsQueryWithHttpInfo (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
@@ -28651,6 +29669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of QueryAdherenceExplanationsResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<QueryAdherenceExplanationsResponse> PostWorkforcemanagementAdherenceExplanationsQueryAsync (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<QueryAdherenceExplanationsResponse> localVarResponse = await PostWorkforcemanagementAdherenceExplanationsQueryAsyncWithHttpInfo(body, forceAsync, forceDownloadService);
@@ -28666,6 +29685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (QueryAdherenceExplanationsResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueryAdherenceExplanationsResponse>> PostWorkforcemanagementAdherenceExplanationsQueryAsyncWithHttpInfo (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
@@ -28759,6 +29779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
         
+        
         public WfmHistoricalAdherenceResponse PostWorkforcemanagementAdherenceHistorical (WfmHistoricalAdherenceQueryForUsers body = null)
         {
              ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = PostWorkforcemanagementAdherenceHistoricalWithHttpInfo(body);
@@ -28771,6 +29792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalAdherenceResponse > PostWorkforcemanagementAdherenceHistoricalWithHttpInfo (WfmHistoricalAdherenceQueryForUsers body = null)
         { 
@@ -28857,6 +29879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementAdherenceHistoricalAsync (WfmHistoricalAdherenceQueryForUsers body = null)
         {
              ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = await PostWorkforcemanagementAdherenceHistoricalAsyncWithHttpInfo(body);
@@ -28870,6 +29893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementAdherenceHistoricalAsyncWithHttpInfo (WfmHistoricalAdherenceQueryForUsers body = null)
         { 
@@ -28957,6 +29981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceBulkResponse</returns>
         
+        
         public WfmHistoricalAdherenceBulkResponse PostWorkforcemanagementAdherenceHistoricalBulk (WfmHistoricalAdherenceBulkQuery body = null)
         {
              ApiResponse<WfmHistoricalAdherenceBulkResponse> localVarResponse = PostWorkforcemanagementAdherenceHistoricalBulkWithHttpInfo(body);
@@ -28969,6 +29994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalAdherenceBulkResponse > PostWorkforcemanagementAdherenceHistoricalBulkWithHttpInfo (WfmHistoricalAdherenceBulkQuery body = null)
         { 
@@ -29055,6 +30081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceBulkResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalAdherenceBulkResponse> PostWorkforcemanagementAdherenceHistoricalBulkAsync (WfmHistoricalAdherenceBulkQuery body = null)
         {
              ApiResponse<WfmHistoricalAdherenceBulkResponse> localVarResponse = await PostWorkforcemanagementAdherenceHistoricalBulkAsyncWithHttpInfo(body);
@@ -29068,6 +30095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> PostWorkforcemanagementAdherenceHistoricalBulkAsyncWithHttpInfo (WfmHistoricalAdherenceBulkQuery body = null)
         { 
@@ -29156,6 +30184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>AdherenceExplanationAsyncResponse</returns>
         
+        
         public AdherenceExplanationAsyncResponse PostWorkforcemanagementAgentAdherenceExplanations (string agentId, AddAdherenceExplanationAdminRequest body)
         {
              ApiResponse<AdherenceExplanationAsyncResponse> localVarResponse = PostWorkforcemanagementAgentAdherenceExplanationsWithHttpInfo(agentId, body);
@@ -29169,6 +30198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to query</param>
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of AdherenceExplanationAsyncResponse</returns>
+        
         
         public ApiResponse< AdherenceExplanationAsyncResponse > PostWorkforcemanagementAgentAdherenceExplanationsWithHttpInfo (string agentId, AddAdherenceExplanationAdminRequest body)
         { 
@@ -29263,6 +30293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of AdherenceExplanationAsyncResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AdherenceExplanationAsyncResponse> PostWorkforcemanagementAgentAdherenceExplanationsAsync (string agentId, AddAdherenceExplanationAdminRequest body)
         {
              ApiResponse<AdherenceExplanationAsyncResponse> localVarResponse = await PostWorkforcemanagementAgentAdherenceExplanationsAsyncWithHttpInfo(agentId, body);
@@ -29277,6 +30308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The ID of the agent to query</param>
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationAsyncResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationAsyncResponse>> PostWorkforcemanagementAgentAdherenceExplanationsAsyncWithHttpInfo (string agentId, AddAdherenceExplanationAdminRequest body)
         { 
@@ -29376,6 +30408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>AgentQueryAdherenceExplanationsResponse</returns>
         
+        
         public AgentQueryAdherenceExplanationsResponse PostWorkforcemanagementAgentAdherenceExplanationsQuery (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<AgentQueryAdherenceExplanationsResponse> localVarResponse = PostWorkforcemanagementAgentAdherenceExplanationsQueryWithHttpInfo(agentId, body, forceAsync, forceDownloadService);
@@ -29391,6 +30424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AgentQueryAdherenceExplanationsResponse</returns>
+        
         
         public ApiResponse< AgentQueryAdherenceExplanationsResponse > PostWorkforcemanagementAgentAdherenceExplanationsQueryWithHttpInfo (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
@@ -29489,6 +30523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of AgentQueryAdherenceExplanationsResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AgentQueryAdherenceExplanationsResponse> PostWorkforcemanagementAgentAdherenceExplanationsQueryAsync (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<AgentQueryAdherenceExplanationsResponse> localVarResponse = await PostWorkforcemanagementAgentAdherenceExplanationsQueryAsyncWithHttpInfo(agentId, body, forceAsync, forceDownloadService);
@@ -29505,6 +30540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AgentQueryAdherenceExplanationsResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentQueryAdherenceExplanationsResponse>> PostWorkforcemanagementAgentAdherenceExplanationsQueryAsyncWithHttpInfo (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
@@ -29603,6 +30639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>AgentPossibleWorkShiftsResponse</returns>
         
+        
         public AgentPossibleWorkShiftsResponse PostWorkforcemanagementAgentsMePossibleworkshifts (AgentPossibleWorkShiftsRequest body)
         {
              ApiResponse<AgentPossibleWorkShiftsResponse> localVarResponse = PostWorkforcemanagementAgentsMePossibleworkshiftsWithHttpInfo(body);
@@ -29615,6 +30652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of AgentPossibleWorkShiftsResponse</returns>
+        
         
         public ApiResponse< AgentPossibleWorkShiftsResponse > PostWorkforcemanagementAgentsMePossibleworkshiftsWithHttpInfo (AgentPossibleWorkShiftsRequest body)
         { 
@@ -29704,6 +30742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of AgentPossibleWorkShiftsResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AgentPossibleWorkShiftsResponse> PostWorkforcemanagementAgentsMePossibleworkshiftsAsync (AgentPossibleWorkShiftsRequest body)
         {
              ApiResponse<AgentPossibleWorkShiftsResponse> localVarResponse = await PostWorkforcemanagementAgentsMePossibleworkshiftsAsyncWithHttpInfo(body);
@@ -29717,6 +30756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (AgentPossibleWorkShiftsResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentPossibleWorkShiftsResponse>> PostWorkforcemanagementAgentsMePossibleworkshiftsAsyncWithHttpInfo (AgentPossibleWorkShiftsRequest body)
         { 
@@ -29808,6 +30848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BuCurrentAgentScheduleSearchResponse</returns>
         
+        
         public BuCurrentAgentScheduleSearchResponse PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body = null)
         {
              ApiResponse<BuCurrentAgentScheduleSearchResponse> localVarResponse = PostWorkforcemanagementAgentschedulesMineWithHttpInfo(body);
@@ -29820,6 +30861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuCurrentAgentScheduleSearchResponse</returns>
+        
         
         public ApiResponse< BuCurrentAgentScheduleSearchResponse > PostWorkforcemanagementAgentschedulesMineWithHttpInfo (BuGetCurrentAgentScheduleRequest body = null)
         { 
@@ -29906,6 +30948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BuCurrentAgentScheduleSearchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineAsync (BuGetCurrentAgentScheduleRequest body = null)
         {
              ApiResponse<BuCurrentAgentScheduleSearchResponse> localVarResponse = await PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo(body);
@@ -29919,6 +30962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuCurrentAgentScheduleSearchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuCurrentAgentScheduleSearchResponse>> PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo (BuGetCurrentAgentScheduleRequest body = null)
         { 
@@ -30007,6 +31051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitActivityCode</returns>
         
+        
         public BusinessUnitActivityCode PostWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, CreateActivityCodeRequest body = null)
         {
              ApiResponse<BusinessUnitActivityCode> localVarResponse = PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo(businessUnitId, body);
@@ -30020,6 +31065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCode</returns>
+        
         
         public ApiResponse< BusinessUnitActivityCode > PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null)
         { 
@@ -30111,6 +31157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitActivityCode</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId, CreateActivityCodeRequest body = null)
         {
              ApiResponse<BusinessUnitActivityCode> localVarResponse = await PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo(businessUnitId, body);
@@ -30125,6 +31172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCode)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body = null)
         { 
@@ -30220,6 +31268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>BuQueryAdherenceExplanationsResponse</returns>
         
+        
         public BuQueryAdherenceExplanationsResponse PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery (string businessUnitId, BuQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuQueryAdherenceExplanationsResponse> localVarResponse = PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryWithHttpInfo(businessUnitId, body, forceAsync, forceDownloadService);
@@ -30235,6 +31284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuQueryAdherenceExplanationsResponse</returns>
+        
         
         public ApiResponse< BuQueryAdherenceExplanationsResponse > PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryWithHttpInfo (string businessUnitId, BuQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
@@ -30333,6 +31383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of BuQueryAdherenceExplanationsResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuQueryAdherenceExplanationsResponse> PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryAsync (string businessUnitId, BuQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuQueryAdherenceExplanationsResponse> localVarResponse = await PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryAsyncWithHttpInfo(businessUnitId, body, forceAsync, forceDownloadService);
@@ -30349,6 +31400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuQueryAdherenceExplanationsResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuQueryAdherenceExplanationsResponse>> PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryAsyncWithHttpInfo (string businessUnitId, BuQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
@@ -30450,6 +31502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementBusinessunitAgentschedulesSearch (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         {
              ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo(businessUnitId, forceAsync, forceDownloadService, body);
@@ -30465,6 +31518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
+        
         
         public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementBusinessunitAgentschedulesSearchWithHttpInfo (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         { 
@@ -30560,6 +31614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsync (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         {
              ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo(businessUnitId, forceAsync, forceDownloadService, body);
@@ -30576,6 +31631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementBusinessunitAgentschedulesSearchAsyncWithHttpInfo (string businessUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         { 
@@ -30672,6 +31728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>AsyncIntradayResponse</returns>
         
+        
         public AsyncIntradayResponse PostWorkforcemanagementBusinessunitIntraday (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null)
         {
              ApiResponse<AsyncIntradayResponse> localVarResponse = PostWorkforcemanagementBusinessunitIntradayWithHttpInfo(businessUnitId, forceAsync, body);
@@ -30686,6 +31743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AsyncIntradayResponse</returns>
+        
         
         public ApiResponse< AsyncIntradayResponse > PostWorkforcemanagementBusinessunitIntradayWithHttpInfo (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null)
         { 
@@ -30779,6 +31837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of AsyncIntradayResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AsyncIntradayResponse> PostWorkforcemanagementBusinessunitIntradayAsync (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null)
         {
              ApiResponse<AsyncIntradayResponse> localVarResponse = await PostWorkforcemanagementBusinessunitIntradayAsyncWithHttpInfo(businessUnitId, forceAsync, body);
@@ -30794,6 +31853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AsyncIntradayResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AsyncIntradayResponse>> PostWorkforcemanagementBusinessunitIntradayAsyncWithHttpInfo (string businessUnitId, bool? forceAsync = null, IntradayPlanningGroupRequest body = null)
         { 
@@ -30888,6 +31948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>PlanningGroup</returns>
         
+        
         public PlanningGroup PostWorkforcemanagementBusinessunitPlanninggroups (string businessUnitId, CreatePlanningGroupRequest body = null)
         {
              ApiResponse<PlanningGroup> localVarResponse = PostWorkforcemanagementBusinessunitPlanninggroupsWithHttpInfo(businessUnitId, body);
@@ -30901,6 +31962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of PlanningGroup</returns>
+        
         
         public ApiResponse< PlanningGroup > PostWorkforcemanagementBusinessunitPlanninggroupsWithHttpInfo (string businessUnitId, CreatePlanningGroupRequest body = null)
         { 
@@ -30992,6 +32054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of PlanningGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<PlanningGroup> PostWorkforcemanagementBusinessunitPlanninggroupsAsync (string businessUnitId, CreatePlanningGroupRequest body = null)
         {
              ApiResponse<PlanningGroup> localVarResponse = await PostWorkforcemanagementBusinessunitPlanninggroupsAsyncWithHttpInfo(businessUnitId, body);
@@ -31006,6 +32069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (PlanningGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PlanningGroup>> PostWorkforcemanagementBusinessunitPlanninggroupsAsyncWithHttpInfo (string businessUnitId, CreatePlanningGroupRequest body = null)
         { 
@@ -31099,6 +32163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ServiceGoalTemplate</returns>
         
+        
         public ServiceGoalTemplate PostWorkforcemanagementBusinessunitServicegoaltemplates (string businessUnitId, CreateServiceGoalTemplate body = null)
         {
              ApiResponse<ServiceGoalTemplate> localVarResponse = PostWorkforcemanagementBusinessunitServicegoaltemplatesWithHttpInfo(businessUnitId, body);
@@ -31112,6 +32177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ServiceGoalTemplate</returns>
+        
         
         public ApiResponse< ServiceGoalTemplate > PostWorkforcemanagementBusinessunitServicegoaltemplatesWithHttpInfo (string businessUnitId, CreateServiceGoalTemplate body = null)
         { 
@@ -31203,6 +32269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ServiceGoalTemplate</returns>
         
+        
         public async System.Threading.Tasks.Task<ServiceGoalTemplate> PostWorkforcemanagementBusinessunitServicegoaltemplatesAsync (string businessUnitId, CreateServiceGoalTemplate body = null)
         {
              ApiResponse<ServiceGoalTemplate> localVarResponse = await PostWorkforcemanagementBusinessunitServicegoaltemplatesAsyncWithHttpInfo(businessUnitId, body);
@@ -31217,6 +32284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="businessUnitId">The ID of the business unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ServiceGoalTemplate)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ServiceGoalTemplate>> PostWorkforcemanagementBusinessunitServicegoaltemplatesAsyncWithHttpInfo (string businessUnitId, CreateServiceGoalTemplate body = null)
         { 
@@ -31314,6 +32382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>BuAsyncAgentSchedulesQueryResponse</returns>
         
+        
         public BuAsyncAgentSchedulesQueryResponse PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuAsyncAgentSchedulesQueryResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo(businessUnitId, weekId, scheduleId, body, forceAsync, forceDownloadService);
@@ -31331,6 +32400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesQueryResponse</returns>
+        
         
         public ApiResponse< BuAsyncAgentSchedulesQueryResponse > PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
@@ -31439,6 +32509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesQueryResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesQueryResponse> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsync (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         {
              ApiResponse<BuAsyncAgentSchedulesQueryResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body, forceAsync, forceDownloadService);
@@ -31457,6 +32528,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)</param>
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesQueryResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesQueryResponse>> PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuQueryAgentSchedulesRequest body, bool? forceAsync = null, bool? forceDownloadService = null)
         { 
@@ -31568,6 +32640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleResponse</returns>
         
+        
         public BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleCopy (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo(businessUnitId, weekId, scheduleId, body);
@@ -31583,6 +32656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
+        
         
         public ApiResponse< BuAsyncScheduleResponse > PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
         { 
@@ -31687,6 +32761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsync (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
@@ -31703,6 +32778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule to copy</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body)
         { 
@@ -31812,6 +32888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleRunResponse</returns>
         
+        
         public BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekScheduleReschedule (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleRunResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo(businessUnitId, weekId, scheduleId, body);
@@ -31827,6 +32904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
+        
         
         public ApiResponse< BuAsyncScheduleRunResponse > PostWorkforcemanagementBusinessunitWeekScheduleRescheduleWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
         { 
@@ -31931,6 +33009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleRunResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsync (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleRunResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
@@ -31947,6 +33026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekScheduleRescheduleAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuRescheduleRequest body)
         { 
@@ -32056,6 +33136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleResponse</returns>
         
+        
         public BuAsyncScheduleResponse PostWorkforcemanagementBusinessunitWeekScheduleUpdate (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleUpdateWithHttpInfo(businessUnitId, weekId, scheduleId, body);
@@ -32071,6 +33152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
+        
         
         public ApiResponse< BuAsyncScheduleResponse > PostWorkforcemanagementBusinessunitWeekScheduleUpdateWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body)
         { 
@@ -32175,6 +33257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsync (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body)
         {
              ApiResponse<BuAsyncScheduleResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
@@ -32191,6 +33274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, ProcessScheduleUpdateUploadRequest body)
         { 
@@ -32300,6 +33384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>UpdateScheduleUploadResponse</returns>
         
+        
         public UpdateScheduleUploadResponse PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body)
         {
              ApiResponse<UpdateScheduleUploadResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithHttpInfo(businessUnitId, weekId, scheduleId, body);
@@ -32315,6 +33400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of UpdateScheduleUploadResponse</returns>
+        
         
         public ApiResponse< UpdateScheduleUploadResponse > PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body)
         { 
@@ -32419,6 +33505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of UpdateScheduleUploadResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<UpdateScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsync (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body)
         {
              ApiResponse<UpdateScheduleUploadResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
@@ -32435,6 +33522,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">The ID of the schedule</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (UpdateScheduleUploadResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UpdateScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, UploadUrlRequestBody body)
         { 
@@ -32543,6 +33631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>BuScheduleMetadata</returns>
         
+        
         public BuScheduleMetadata PostWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
         {
              ApiResponse<BuScheduleMetadata> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo(businessUnitId, weekId, body);
@@ -32557,6 +33646,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuScheduleMetadata</returns>
+        
         
         public ApiResponse< BuScheduleMetadata > PostWorkforcemanagementBusinessunitWeekSchedulesWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
         { 
@@ -32656,6 +33746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of BuScheduleMetadata</returns>
         
+        
         public async System.Threading.Tasks.Task<BuScheduleMetadata> PostWorkforcemanagementBusinessunitWeekSchedulesAsync (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
         {
              ApiResponse<BuScheduleMetadata> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo(businessUnitId, weekId, body);
@@ -32671,6 +33762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuScheduleMetadata)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuScheduleMetadata>> PostWorkforcemanagementBusinessunitWeekSchedulesAsyncWithHttpInfo (string businessUnitId, String weekId, BuCreateBlankScheduleRequest body)
         { 
@@ -32774,6 +33866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>BuAsyncScheduleRunResponse</returns>
         
+        
         public BuAsyncScheduleRunResponse PostWorkforcemanagementBusinessunitWeekSchedulesGenerate (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleRunResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo(businessUnitId, weekId, body);
@@ -32788,6 +33881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of BuAsyncScheduleRunResponse</returns>
+        
         
         public ApiResponse< BuAsyncScheduleRunResponse > PostWorkforcemanagementBusinessunitWeekSchedulesGenerateWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
         { 
@@ -32887,6 +33981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of BuAsyncScheduleRunResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAsyncScheduleRunResponse> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsync (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
         {
              ApiResponse<BuAsyncScheduleRunResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo(businessUnitId, weekId, body);
@@ -32902,6 +33997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (BuAsyncScheduleRunResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleRunResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesGenerateAsyncWithHttpInfo (string businessUnitId, String weekId, BuGenerateScheduleRequest body)
         { 
@@ -33005,6 +34101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ScheduleUploadProcessingResponse</returns>
         
+        
         public ScheduleUploadProcessingResponse PostWorkforcemanagementBusinessunitWeekSchedulesImport (string businessUnitId, String weekId, WfmProcessUploadRequest body)
         {
              ApiResponse<ScheduleUploadProcessingResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulesImportWithHttpInfo(businessUnitId, weekId, body);
@@ -33019,6 +34116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleUploadProcessingResponse</returns>
+        
         
         public ApiResponse< ScheduleUploadProcessingResponse > PostWorkforcemanagementBusinessunitWeekSchedulesImportWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body)
         { 
@@ -33118,6 +34216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ScheduleUploadProcessingResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ScheduleUploadProcessingResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsync (string businessUnitId, String weekId, WfmProcessUploadRequest body)
         {
              ApiResponse<ScheduleUploadProcessingResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulesImportAsyncWithHttpInfo(businessUnitId, weekId, body);
@@ -33133,6 +34232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleUploadProcessingResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ScheduleUploadProcessingResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportAsyncWithHttpInfo (string businessUnitId, String weekId, WfmProcessUploadRequest body)
         { 
@@ -33236,6 +34336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ImportScheduleUploadResponse</returns>
         
+        
         public ImportScheduleUploadResponse PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl (string businessUnitId, String weekId, UploadUrlRequestBody body)
         {
              ApiResponse<ImportScheduleUploadResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithHttpInfo(businessUnitId, weekId, body);
@@ -33250,6 +34351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportScheduleUploadResponse</returns>
+        
         
         public ApiResponse< ImportScheduleUploadResponse > PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body)
         { 
@@ -33349,6 +34451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ImportScheduleUploadResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ImportScheduleUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsync (string businessUnitId, String weekId, UploadUrlRequestBody body)
         {
              ApiResponse<ImportScheduleUploadResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsyncWithHttpInfo(businessUnitId, weekId, body);
@@ -33364,6 +34467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportScheduleUploadResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ImportScheduleUploadResponse>> PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekId, UploadUrlRequestBody body)
         { 
@@ -33469,6 +34573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>AsyncForecastOperationResult</returns>
         
+        
         public AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
         {
              ApiResponse<AsyncForecastOperationResult> localVarResponse = PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo(businessUnitId, weekDateId, forecastId, body, forceAsync);
@@ -33485,6 +34590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
+        
         
         public ApiResponse< AsyncForecastOperationResult > PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
         { 
@@ -33591,6 +34697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of AsyncForecastOperationResult</returns>
         
+        
         public async System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsync (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
         {
              ApiResponse<AsyncForecastOperationResult> localVarResponse = await PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, body, forceAsync);
@@ -33608,6 +34715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastCopyAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, CopyBuForecastRequest body, bool? forceAsync = null)
         { 
@@ -33718,6 +34826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>AsyncForecastOperationResult</returns>
         
+        
         public AsyncForecastOperationResult PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
         {
              ApiResponse<AsyncForecastOperationResult> localVarResponse = PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo(businessUnitId, weekDateId, body, forceAsync);
@@ -33733,6 +34842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of AsyncForecastOperationResult</returns>
+        
         
         public ApiResponse< AsyncForecastOperationResult > PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
         { 
@@ -33834,6 +34944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of AsyncForecastOperationResult</returns>
         
+        
         public async System.Threading.Tasks.Task<AsyncForecastOperationResult> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsync (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
         {
              ApiResponse<AsyncForecastOperationResult> localVarResponse = await PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo(businessUnitId, weekDateId, body, forceAsync);
@@ -33850,6 +34961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AsyncForecastOperationResult)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AsyncForecastOperationResult>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateAsyncWithHttpInfo (string businessUnitId, String weekDateId, GenerateBuForecastRequest body, bool? forceAsync = null)
         { 
@@ -33954,6 +35066,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ImportForecastResponse</returns>
         
+        
         public ImportForecastResponse PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport (string businessUnitId, String weekDateId, WfmProcessUploadRequest body)
         {
              ApiResponse<ImportForecastResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithHttpInfo(businessUnitId, weekDateId, body);
@@ -33968,6 +35081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportForecastResponse</returns>
+        
         
         public ApiResponse< ImportForecastResponse > PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body)
         { 
@@ -34067,6 +35181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ImportForecastResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ImportForecastResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsync (string businessUnitId, String weekDateId, WfmProcessUploadRequest body)
         {
              ApiResponse<ImportForecastResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsyncWithHttpInfo(businessUnitId, weekDateId, body);
@@ -34082,6 +35197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportForecastResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ImportForecastResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportAsyncWithHttpInfo (string businessUnitId, String weekDateId, WfmProcessUploadRequest body)
         { 
@@ -34185,6 +35301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ImportForecastUploadResponse</returns>
         
+        
         public ImportForecastUploadResponse PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl (string businessUnitId, String weekDateId, UploadUrlRequestBody body)
         {
              ApiResponse<ImportForecastUploadResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithHttpInfo(businessUnitId, weekDateId, body);
@@ -34199,6 +35316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ImportForecastUploadResponse</returns>
+        
         
         public ApiResponse< ImportForecastUploadResponse > PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body)
         { 
@@ -34298,6 +35416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ImportForecastUploadResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ImportForecastUploadResponse> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsync (string businessUnitId, String weekDateId, UploadUrlRequestBody body)
         {
              ApiResponse<ImportForecastUploadResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsyncWithHttpInfo(businessUnitId, weekDateId, body);
@@ -34313,6 +35432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ImportForecastUploadResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ImportForecastUploadResponse>> PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlAsyncWithHttpInfo (string businessUnitId, String weekDateId, UploadUrlRequestBody body)
         { 
@@ -34414,6 +35534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BusinessUnitResponse</returns>
         
+        
         public BusinessUnitResponse PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null)
         {
              ApiResponse<BusinessUnitResponse> localVarResponse = PostWorkforcemanagementBusinessunitsWithHttpInfo(body);
@@ -34426,6 +35547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        
         
         public ApiResponse< BusinessUnitResponse > PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null)
         { 
@@ -34512,6 +35634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BusinessUnitResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BusinessUnitResponse> PostWorkforcemanagementBusinessunitsAsync (CreateBusinessUnitRequest body = null)
         {
              ApiResponse<BusinessUnitResponse> localVarResponse = await PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo(body);
@@ -34525,6 +35648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null)
         { 
@@ -34612,6 +35736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>CalendarUrlResponse</returns>
         
+        
         public CalendarUrlResponse PostWorkforcemanagementCalendarUrlIcs (string language = null)
         {
              ApiResponse<CalendarUrlResponse> localVarResponse = PostWorkforcemanagementCalendarUrlIcsWithHttpInfo(language);
@@ -34624,6 +35749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>ApiResponse of CalendarUrlResponse</returns>
+        
         
         public ApiResponse< CalendarUrlResponse > PostWorkforcemanagementCalendarUrlIcsWithHttpInfo (string language = null)
         { 
@@ -34705,6 +35831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>Task of CalendarUrlResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsAsync (string language = null)
         {
              ApiResponse<CalendarUrlResponse> localVarResponse = await PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo(language);
@@ -34718,6 +35845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to "en-US")</param>
         /// <returns>Task of ApiResponse (CalendarUrlResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo (string language = null)
         { 
@@ -34799,6 +35927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>HistoricalImportDeleteJobResponse</returns>
         
+        
         public HistoricalImportDeleteJobResponse PostWorkforcemanagementHistoricaldataDeletejob ()
         {
              ApiResponse<HistoricalImportDeleteJobResponse> localVarResponse = PostWorkforcemanagementHistoricaldataDeletejobWithHttpInfo();
@@ -34810,6 +35939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of HistoricalImportDeleteJobResponse</returns>
+        
         
         public ApiResponse< HistoricalImportDeleteJobResponse > PostWorkforcemanagementHistoricaldataDeletejobWithHttpInfo ()
         { 
@@ -34889,6 +36019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of HistoricalImportDeleteJobResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<HistoricalImportDeleteJobResponse> PostWorkforcemanagementHistoricaldataDeletejobAsync ()
         {
              ApiResponse<HistoricalImportDeleteJobResponse> localVarResponse = await PostWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo();
@@ -34901,6 +36032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (HistoricalImportDeleteJobResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<HistoricalImportDeleteJobResponse>> PostWorkforcemanagementHistoricaldataDeletejobAsyncWithHttpInfo ()
         { 
@@ -34982,6 +36114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns></returns>
         
+        
         public void PostWorkforcemanagementHistoricaldataValidate (ValidationServiceRequest body = null)
         {
              PostWorkforcemanagementHistoricaldataValidateWithHttpInfo(body);
@@ -34993,6 +36126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostWorkforcemanagementHistoricaldataValidateWithHttpInfo (ValidationServiceRequest body = null)
         { 
@@ -35079,6 +36213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostWorkforcemanagementHistoricaldataValidateAsync (ValidationServiceRequest body = null)
         {
              await PostWorkforcemanagementHistoricaldataValidateAsyncWithHttpInfo(body);
@@ -35091,6 +36226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementHistoricaldataValidateAsyncWithHttpInfo (ValidationServiceRequest body = null)
         { 
@@ -35181,6 +36317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         public BuAsyncAgentSchedulesSearchResponse PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         {
              ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo(managementUnitId, forceAsync, forceDownloadService, body);
@@ -35196,6 +36333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of BuAsyncAgentSchedulesSearchResponse</returns>
+        
         
         public ApiResponse< BuAsyncAgentSchedulesSearchResponse > PostWorkforcemanagementManagementunitAgentschedulesSearchWithHttpInfo (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         { 
@@ -35291,6 +36429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of BuAsyncAgentSchedulesSearchResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BuAsyncAgentSchedulesSearchResponse> PostWorkforcemanagementManagementunitAgentschedulesSearchAsync (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         {
              ApiResponse<BuAsyncAgentSchedulesSearchResponse> localVarResponse = await PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo(managementUnitId, forceAsync, forceDownloadService, body);
@@ -35307,6 +36446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (BuAsyncAgentSchedulesSearchResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BuAsyncAgentSchedulesSearchResponse>> PostWorkforcemanagementManagementunitAgentschedulesSearchAsyncWithHttpInfo (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
         { 
@@ -35402,6 +36542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
         
+        
         public WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
         {
              ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo(managementUnitId, body);
@@ -35415,6 +36556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalAdherenceResponse > PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
         { 
@@ -35506,6 +36648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
         {
              ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = await PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo(managementUnitId, body);
@@ -35520,6 +36663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string managementUnitId, WfmHistoricalAdherenceQuery body = null)
         { 
@@ -35613,6 +36757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>MoveManagementUnitResponse</returns>
         
+        
         public MoveManagementUnitResponse PostWorkforcemanagementManagementunitMove (string managementUnitId, MoveManagementUnitRequest body = null)
         {
              ApiResponse<MoveManagementUnitResponse> localVarResponse = PostWorkforcemanagementManagementunitMoveWithHttpInfo(managementUnitId, body);
@@ -35626,6 +36771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of MoveManagementUnitResponse</returns>
+        
         
         public ApiResponse< MoveManagementUnitResponse > PostWorkforcemanagementManagementunitMoveWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null)
         { 
@@ -35717,6 +36863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of MoveManagementUnitResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<MoveManagementUnitResponse> PostWorkforcemanagementManagementunitMoveAsync (string managementUnitId, MoveManagementUnitRequest body = null)
         {
              ApiResponse<MoveManagementUnitResponse> localVarResponse = await PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo(managementUnitId, body);
@@ -35731,6 +36878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (MoveManagementUnitResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<MoveManagementUnitResponse>> PostWorkforcemanagementManagementunitMoveAsyncWithHttpInfo (string managementUnitId, MoveManagementUnitRequest body = null)
         { 
@@ -35824,6 +36972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
         [Obsolete]
+        
         public UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string managementUnitId, UserListScheduleRequestBody body = null)
         {
              ApiResponse<UserScheduleContainer> localVarResponse = PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo(managementUnitId, body);
@@ -35838,6 +36987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         [Obsolete]
+        
         public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
@@ -35928,6 +37078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string managementUnitId, UserListScheduleRequestBody body = null)
         {
              ApiResponse<UserScheduleContainer> localVarResponse = await PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo(managementUnitId, body);
@@ -35943,6 +37094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string managementUnitId, UserListScheduleRequestBody body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
@@ -36035,6 +37187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalShrinkageResponse</returns>
         
+        
         public WfmHistoricalShrinkageResponse PostWorkforcemanagementManagementunitShrinkageJobs (string managementUnitId, WfmHistoricalShrinkageRequest body = null)
         {
              ApiResponse<WfmHistoricalShrinkageResponse> localVarResponse = PostWorkforcemanagementManagementunitShrinkageJobsWithHttpInfo(managementUnitId, body);
@@ -36048,6 +37201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalShrinkageResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalShrinkageResponse > PostWorkforcemanagementManagementunitShrinkageJobsWithHttpInfo (string managementUnitId, WfmHistoricalShrinkageRequest body = null)
         { 
@@ -36139,6 +37293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalShrinkageResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalShrinkageResponse> PostWorkforcemanagementManagementunitShrinkageJobsAsync (string managementUnitId, WfmHistoricalShrinkageRequest body = null)
         {
              ApiResponse<WfmHistoricalShrinkageResponse> localVarResponse = await PostWorkforcemanagementManagementunitShrinkageJobsAsyncWithHttpInfo(managementUnitId, body);
@@ -36153,6 +37308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalShrinkageResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalShrinkageResponse>> PostWorkforcemanagementManagementunitShrinkageJobsAsyncWithHttpInfo (string managementUnitId, WfmHistoricalShrinkageRequest body = null)
         { 
@@ -36246,6 +37402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
         
+        
         public TimeOffLimit PostWorkforcemanagementManagementunitTimeofflimits (string managementUnitId, CreateTimeOffLimitRequest body = null)
         {
              ApiResponse<TimeOffLimit> localVarResponse = PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo(managementUnitId, body);
@@ -36259,6 +37416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
+        
         
         public ApiResponse< TimeOffLimit > PostWorkforcemanagementManagementunitTimeofflimitsWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null)
         { 
@@ -36350,6 +37508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffLimit> PostWorkforcemanagementManagementunitTimeofflimitsAsync (string managementUnitId, CreateTimeOffLimitRequest body = null)
         {
              ApiResponse<TimeOffLimit> localVarResponse = await PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo(managementUnitId, body);
@@ -36364,6 +37523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PostWorkforcemanagementManagementunitTimeofflimitsAsyncWithHttpInfo (string managementUnitId, CreateTimeOffLimitRequest body = null)
         { 
@@ -36457,6 +37617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>QueryTimeOffLimitValuesResponse</returns>
         
+        
         public QueryTimeOffLimitValuesResponse PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
         {
              ApiResponse<QueryTimeOffLimitValuesResponse> localVarResponse = PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo(managementUnitId, body);
@@ -36470,6 +37631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of QueryTimeOffLimitValuesResponse</returns>
+        
         
         public ApiResponse< QueryTimeOffLimitValuesResponse > PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
         { 
@@ -36561,6 +37723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of QueryTimeOffLimitValuesResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<QueryTimeOffLimitValuesResponse> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsync (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
         {
              ApiResponse<QueryTimeOffLimitValuesResponse> localVarResponse = await PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo(managementUnitId, body);
@@ -36575,6 +37738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (QueryTimeOffLimitValuesResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<QueryTimeOffLimitValuesResponse>> PostWorkforcemanagementManagementunitTimeofflimitsValuesQueryAsyncWithHttpInfo (string managementUnitId, QueryTimeOffLimitValuesRequest body = null)
         { 
@@ -36668,6 +37832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffPlan</returns>
         
+        
         public TimeOffPlan PostWorkforcemanagementManagementunitTimeoffplans (string managementUnitId, CreateTimeOffPlanRequest body = null)
         {
              ApiResponse<TimeOffPlan> localVarResponse = PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo(managementUnitId, body);
@@ -36681,6 +37846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffPlan</returns>
+        
         
         public ApiResponse< TimeOffPlan > PostWorkforcemanagementManagementunitTimeoffplansWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null)
         { 
@@ -36772,6 +37938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffPlan</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffPlan> PostWorkforcemanagementManagementunitTimeoffplansAsync (string managementUnitId, CreateTimeOffPlanRequest body = null)
         {
              ApiResponse<TimeOffPlan> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo(managementUnitId, body);
@@ -36786,6 +37953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffPlan)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffPlan>> PostWorkforcemanagementManagementunitTimeoffplansAsyncWithHttpInfo (string managementUnitId, CreateTimeOffPlanRequest body = null)
         { 
@@ -36879,6 +38047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestList</returns>
         
+        
         public TimeOffRequestList PostWorkforcemanagementManagementunitTimeoffrequests (string managementUnitId, CreateAdminTimeOffRequest body = null)
         {
              ApiResponse<TimeOffRequestList> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo(managementUnitId, body);
@@ -36892,6 +38061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
+        
         
         public ApiResponse< TimeOffRequestList > PostWorkforcemanagementManagementunitTimeoffrequestsWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null)
         { 
@@ -36983,6 +38153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestList</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestList> PostWorkforcemanagementManagementunitTimeoffrequestsAsync (string managementUnitId, CreateAdminTimeOffRequest body = null)
         {
              ApiResponse<TimeOffRequestList> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo(managementUnitId, body);
@@ -36997,6 +38168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostWorkforcemanagementManagementunitTimeoffrequestsAsyncWithHttpInfo (string managementUnitId, CreateAdminTimeOffRequest body = null)
         { 
@@ -37090,6 +38262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestListing</returns>
         
+        
         public TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null)
         {
              ApiResponse<TimeOffRequestListing> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo(managementUnitId, body);
@@ -37103,6 +38276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
+        
         
         public ApiResponse< TimeOffRequestListing > PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null)
         { 
@@ -37194,6 +38368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null)
         {
              ApiResponse<TimeOffRequestListing> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo(managementUnitId, body);
@@ -37208,6 +38383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null)
         { 
@@ -37301,6 +38477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WaitlistPositionListing</returns>
         
+        
         public WaitlistPositionListing PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery (string managementUnitId, QueryWaitlistPositionsRequest body = null)
         {
              ApiResponse<WaitlistPositionListing> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo(managementUnitId, body);
@@ -37314,6 +38491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WaitlistPositionListing</returns>
+        
         
         public ApiResponse< WaitlistPositionListing > PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null)
         { 
@@ -37405,6 +38583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WaitlistPositionListing</returns>
         
+        
         public async System.Threading.Tasks.Task<WaitlistPositionListing> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsync (string managementUnitId, QueryWaitlistPositionsRequest body = null)
         {
              ApiResponse<WaitlistPositionListing> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo(managementUnitId, body);
@@ -37419,6 +38598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WaitlistPositionListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WaitlistPositionListing>> PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryAsyncWithHttpInfo (string managementUnitId, QueryWaitlistPositionsRequest body = null)
         { 
@@ -37513,6 +38693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>TimeOffBalancesResponse</returns>
         
+        
         public TimeOffBalancesResponse PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs (string managementUnitId, string userId, TimeOffBalanceRequest body)
         {
              ApiResponse<TimeOffBalancesResponse> localVarResponse = PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsWithHttpInfo(managementUnitId, userId, body);
@@ -37527,6 +38708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of the user</param>
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of TimeOffBalancesResponse</returns>
+        
         
         public ApiResponse< TimeOffBalancesResponse > PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsWithHttpInfo (string managementUnitId, string userId, TimeOffBalanceRequest body)
         { 
@@ -37626,6 +38808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of TimeOffBalancesResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffBalancesResponse> PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsAsync (string managementUnitId, string userId, TimeOffBalanceRequest body)
         {
              ApiResponse<TimeOffBalancesResponse> localVarResponse = await PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsAsyncWithHttpInfo(managementUnitId, userId, body);
@@ -37641,6 +38824,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of the user</param>
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (TimeOffBalancesResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffBalancesResponse>> PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsAsyncWithHttpInfo (string managementUnitId, string userId, TimeOffBalanceRequest body)
         { 
@@ -37744,6 +38928,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The time off request id.</param>
         /// <returns>TimeOffBalancesResponse</returns>
         
+        
         public TimeOffBalancesResponse PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs (string managementUnitId, string userId, string timeOffRequestId)
         {
              ApiResponse<TimeOffBalancesResponse> localVarResponse = PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsWithHttpInfo(managementUnitId, userId, timeOffRequestId);
@@ -37758,6 +38943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The time off request id.</param>
         /// <returns>ApiResponse of TimeOffBalancesResponse</returns>
+        
         
         public ApiResponse< TimeOffBalancesResponse > PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
         { 
@@ -37852,6 +39038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">The time off request id.</param>
         /// <returns>Task of TimeOffBalancesResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffBalancesResponse> PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsAsync (string managementUnitId, string userId, string timeOffRequestId)
         {
              ApiResponse<TimeOffBalancesResponse> localVarResponse = await PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsAsyncWithHttpInfo(managementUnitId, userId, timeOffRequestId);
@@ -37867,6 +39054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The userId to whom the time off request applies.</param>
         /// <param name="timeOffRequestId">The time off request id.</param>
         /// <returns>Task of ApiResponse (TimeOffBalancesResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffBalancesResponse>> PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsAsyncWithHttpInfo (string managementUnitId, string userId, string timeOffRequestId)
         { 
@@ -37966,6 +39154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>MatchShiftTradeResponse</returns>
         
+        
         public MatchShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
         {
              ApiResponse<MatchShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
@@ -37981,6 +39170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of MatchShiftTradeResponse</returns>
+        
         
         public ApiResponse< MatchShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradeMatchWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
         { 
@@ -38085,6 +39275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of MatchShiftTradeResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<MatchShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsync (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
         {
              ApiResponse<MatchShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo(managementUnitId, weekDateId, tradeId, body);
@@ -38101,6 +39292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tradeId">The ID of the shift trade to update</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (MatchShiftTradeResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<MatchShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradeMatchAsyncWithHttpInfo (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
         { 
@@ -38209,6 +39401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ShiftTradeResponse</returns>
         
+        
         public ShiftTradeResponse PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
         {
              ApiResponse<ShiftTradeResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, body);
@@ -38223,6 +39416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of ShiftTradeResponse</returns>
+        
         
         public ApiResponse< ShiftTradeResponse > PostWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
         { 
@@ -38322,6 +39516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ShiftTradeResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ShiftTradeResponse> PostWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
         {
              ApiResponse<ShiftTradeResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, body);
@@ -38337,6 +39532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (ShiftTradeResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeResponse>> PostWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
         { 
@@ -38440,6 +39636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>SearchShiftTradesResponse</returns>
         
+        
         public SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
         {
              ApiResponse<SearchShiftTradesResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo(managementUnitId, weekDateId, body);
@@ -38454,6 +39651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
+        
         
         public ApiResponse< SearchShiftTradesResponse > PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
         { 
@@ -38553,6 +39751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of SearchShiftTradesResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
         {
              ApiResponse<SearchShiftTradesResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo(managementUnitId, weekDateId, body);
@@ -38568,6 +39767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
         { 
@@ -38672,6 +39872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>BulkUpdateShiftTradeStateResponse</returns>
         
+        
         public BulkUpdateShiftTradeStateResponse PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
         {
              ApiResponse<BulkUpdateShiftTradeStateResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo(managementUnitId, weekDateId, body, forceAsync);
@@ -38687,6 +39888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BulkUpdateShiftTradeStateResponse</returns>
+        
         
         public ApiResponse< BulkUpdateShiftTradeStateResponse > PostWorkforcemanagementManagementunitWeekShifttradesStateBulkWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
         { 
@@ -38788,6 +39990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of BulkUpdateShiftTradeStateResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<BulkUpdateShiftTradeStateResponse> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsync (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
         {
              ApiResponse<BulkUpdateShiftTradeStateResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo(managementUnitId, weekDateId, body, forceAsync);
@@ -38804,6 +40007,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <param name="forceAsync">Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BulkUpdateShiftTradeStateResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<BulkUpdateShiftTradeStateResponse>> PostWorkforcemanagementManagementunitWeekShifttradesStateBulkAsyncWithHttpInfo (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
         { 
@@ -38908,6 +40112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlan</returns>
         
+        
         public WorkPlan PostWorkforcemanagementManagementunitWorkplanCopy (string managementUnitId, string workPlanId, CopyWorkPlan body = null)
         {
              ApiResponse<WorkPlan> localVarResponse = PostWorkforcemanagementManagementunitWorkplanCopyWithHttpInfo(managementUnitId, workPlanId, body);
@@ -38922,6 +40127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to create a copy</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
+        
         
         public ApiResponse< WorkPlan > PostWorkforcemanagementManagementunitWorkplanCopyWithHttpInfo (string managementUnitId, string workPlanId, CopyWorkPlan body = null)
         { 
@@ -39018,6 +40224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlan</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplanCopyAsync (string managementUnitId, string workPlanId, CopyWorkPlan body = null)
         {
              ApiResponse<WorkPlan> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanCopyAsyncWithHttpInfo(managementUnitId, workPlanId, body);
@@ -39033,6 +40240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanId">The ID of the work plan to create a copy</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplanCopyAsyncWithHttpInfo (string managementUnitId, string workPlanId, CopyWorkPlan body = null)
         { 
@@ -39133,6 +40341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ValidateWorkPlanResponse</returns>
         
+        
         public ValidateWorkPlanResponse PostWorkforcemanagementManagementunitWorkplanValidate (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
         {
              ApiResponse<ValidateWorkPlanResponse> localVarResponse = PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo(managementUnitId, workPlanId, expand, body);
@@ -39148,6 +40357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ValidateWorkPlanResponse</returns>
+        
         
         public ApiResponse< ValidateWorkPlanResponse > PostWorkforcemanagementManagementunitWorkplanValidateWithHttpInfo (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
         { 
@@ -39246,6 +40456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ValidateWorkPlanResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ValidateWorkPlanResponse> PostWorkforcemanagementManagementunitWorkplanValidateAsync (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
         {
              ApiResponse<ValidateWorkPlanResponse> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo(managementUnitId, workPlanId, expand, body);
@@ -39262,6 +40473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand"> (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ValidateWorkPlanResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ValidateWorkPlanResponse>> PostWorkforcemanagementManagementunitWorkplanValidateAsyncWithHttpInfo (string managementUnitId, string workPlanId, List<string> expand = null, WorkPlanValidationRequest body = null)
         { 
@@ -39362,6 +40574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlanRotationResponse</returns>
         
+        
         public WorkPlanRotationResponse PostWorkforcemanagementManagementunitWorkplanrotationCopy (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
         {
              ApiResponse<WorkPlanRotationResponse> localVarResponse = PostWorkforcemanagementManagementunitWorkplanrotationCopyWithHttpInfo(managementUnitId, workPlanRotationId, body);
@@ -39376,6 +40589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        
         
         public ApiResponse< WorkPlanRotationResponse > PostWorkforcemanagementManagementunitWorkplanrotationCopyWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
         { 
@@ -39472,6 +40686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlanRotationResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsync (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
         {
              ApiResponse<WorkPlanRotationResponse> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanrotationCopyAsyncWithHttpInfo(managementUnitId, workPlanRotationId, body);
@@ -39487,6 +40702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workPlanRotationId">The ID of the work plan rotation to create a copy</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationCopyAsyncWithHttpInfo (string managementUnitId, string workPlanRotationId, CopyWorkPlanRotationRequest body = null)
         { 
@@ -39585,6 +40801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlanRotationResponse</returns>
         
+        
         public WorkPlanRotationResponse PostWorkforcemanagementManagementunitWorkplanrotations (string managementUnitId, AddWorkPlanRotationRequest body = null)
         {
              ApiResponse<WorkPlanRotationResponse> localVarResponse = PostWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo(managementUnitId, body);
@@ -39598,6 +40815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlanRotationResponse</returns>
+        
         
         public ApiResponse< WorkPlanRotationResponse > PostWorkforcemanagementManagementunitWorkplanrotationsWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null)
         { 
@@ -39689,6 +40907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlanRotationResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlanRotationResponse> PostWorkforcemanagementManagementunitWorkplanrotationsAsync (string managementUnitId, AddWorkPlanRotationRequest body = null)
         {
              ApiResponse<WorkPlanRotationResponse> localVarResponse = await PostWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo(managementUnitId, body);
@@ -39703,6 +40922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanRotationResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlanRotationResponse>> PostWorkforcemanagementManagementunitWorkplanrotationsAsyncWithHttpInfo (string managementUnitId, AddWorkPlanRotationRequest body = null)
         { 
@@ -39797,6 +41017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkPlan</returns>
         
+        
         public WorkPlan PostWorkforcemanagementManagementunitWorkplans (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
         {
              ApiResponse<WorkPlan> localVarResponse = PostWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, validationMode, body);
@@ -39811,6 +41032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkPlan</returns>
+        
         
         public ApiResponse< WorkPlan > PostWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
         { 
@@ -39904,6 +41126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkPlan</returns>
         
+        
         public async System.Threading.Tasks.Task<WorkPlan> PostWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
         {
              ApiResponse<WorkPlan> localVarResponse = await PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, validationMode, body);
@@ -39919,6 +41142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="validationMode">Allows to create work plan even if the validation result is invalid (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlan)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WorkPlan>> PostWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, string validationMode = null, CreateWorkPlan body = null)
         { 
@@ -40012,6 +41236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ManagementUnit</returns>
         
+        
         public ManagementUnit PostWorkforcemanagementManagementunits (CreateManagementUnitApiRequest body = null)
         {
              ApiResponse<ManagementUnit> localVarResponse = PostWorkforcemanagementManagementunitsWithHttpInfo(body);
@@ -40024,6 +41249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of ManagementUnit</returns>
+        
         
         public ApiResponse< ManagementUnit > PostWorkforcemanagementManagementunitsWithHttpInfo (CreateManagementUnitApiRequest body = null)
         { 
@@ -40110,6 +41336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ManagementUnit</returns>
         
+        
         public async System.Threading.Tasks.Task<ManagementUnit> PostWorkforcemanagementManagementunitsAsync (CreateManagementUnitApiRequest body = null)
         {
              ApiResponse<ManagementUnit> localVarResponse = await PostWorkforcemanagementManagementunitsAsyncWithHttpInfo(body);
@@ -40123,6 +41350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnit)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PostWorkforcemanagementManagementunitsAsyncWithHttpInfo (CreateManagementUnitApiRequest body = null)
         { 
@@ -40210,6 +41438,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>UpdateNotificationsResponse</returns>
         
+        
         public UpdateNotificationsResponse PostWorkforcemanagementNotificationsUpdate (UpdateNotificationsRequest body = null)
         {
              ApiResponse<UpdateNotificationsResponse> localVarResponse = PostWorkforcemanagementNotificationsUpdateWithHttpInfo(body);
@@ -40222,6 +41451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UpdateNotificationsResponse</returns>
+        
         
         public ApiResponse< UpdateNotificationsResponse > PostWorkforcemanagementNotificationsUpdateWithHttpInfo (UpdateNotificationsRequest body = null)
         { 
@@ -40308,6 +41538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UpdateNotificationsResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<UpdateNotificationsResponse> PostWorkforcemanagementNotificationsUpdateAsync (UpdateNotificationsRequest body = null)
         {
              ApiResponse<UpdateNotificationsResponse> localVarResponse = await PostWorkforcemanagementNotificationsUpdateAsyncWithHttpInfo(body);
@@ -40321,6 +41552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UpdateNotificationsResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UpdateNotificationsResponse>> PostWorkforcemanagementNotificationsUpdateAsyncWithHttpInfo (UpdateNotificationsRequest body = null)
         { 
@@ -40408,6 +41640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
         [Obsolete]
+        
         public UserScheduleContainer PostWorkforcemanagementSchedules (CurrentUserScheduleRequestBody body = null)
         {
              ApiResponse<UserScheduleContainer> localVarResponse = PostWorkforcemanagementSchedulesWithHttpInfo(body);
@@ -40421,6 +41654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         [Obsolete]
+        
         public ApiResponse< UserScheduleContainer > PostWorkforcemanagementSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null)
         { 
 
@@ -40506,6 +41740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementSchedulesAsync (CurrentUserScheduleRequestBody body = null)
         {
              ApiResponse<UserScheduleContainer> localVarResponse = await PostWorkforcemanagementSchedulesAsyncWithHttpInfo(body);
@@ -40520,6 +41755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null)
         { 
 
@@ -40607,6 +41843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
         
+        
         public WfmHistoricalAdherenceResponse PostWorkforcemanagementTeamAdherenceHistorical (string teamId, WfmHistoricalAdherenceQueryForTeams body = null)
         {
              ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = PostWorkforcemanagementTeamAdherenceHistoricalWithHttpInfo(teamId, body);
@@ -40620,6 +41857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">The ID of the team</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalAdherenceResponse > PostWorkforcemanagementTeamAdherenceHistoricalWithHttpInfo (string teamId, WfmHistoricalAdherenceQueryForTeams body = null)
         { 
@@ -40711,6 +41949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementTeamAdherenceHistoricalAsync (string teamId, WfmHistoricalAdherenceQueryForTeams body = null)
         {
              ApiResponse<WfmHistoricalAdherenceResponse> localVarResponse = await PostWorkforcemanagementTeamAdherenceHistoricalAsyncWithHttpInfo(teamId, body);
@@ -40725,6 +41964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">The ID of the team</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementTeamAdherenceHistoricalAsyncWithHttpInfo (string teamId, WfmHistoricalAdherenceQueryForTeams body = null)
         { 
@@ -40818,6 +42058,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalShrinkageResponse</returns>
         
+        
         public WfmHistoricalShrinkageResponse PostWorkforcemanagementTeamShrinkageJobs (string teamId, WfmHistoricalShrinkageTeamsRequest body = null)
         {
              ApiResponse<WfmHistoricalShrinkageResponse> localVarResponse = PostWorkforcemanagementTeamShrinkageJobsWithHttpInfo(teamId, body);
@@ -40831,6 +42072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">The ID of the team</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalShrinkageResponse</returns>
+        
         
         public ApiResponse< WfmHistoricalShrinkageResponse > PostWorkforcemanagementTeamShrinkageJobsWithHttpInfo (string teamId, WfmHistoricalShrinkageTeamsRequest body = null)
         { 
@@ -40922,6 +42164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalShrinkageResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<WfmHistoricalShrinkageResponse> PostWorkforcemanagementTeamShrinkageJobsAsync (string teamId, WfmHistoricalShrinkageTeamsRequest body = null)
         {
              ApiResponse<WfmHistoricalShrinkageResponse> localVarResponse = await PostWorkforcemanagementTeamShrinkageJobsAsyncWithHttpInfo(teamId, body);
@@ -40936,6 +42179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">The ID of the team</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalShrinkageResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalShrinkageResponse>> PostWorkforcemanagementTeamShrinkageJobsAsyncWithHttpInfo (string teamId, WfmHistoricalShrinkageTeamsRequest body = null)
         { 
@@ -41028,6 +42272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>AvailableTimeOffResponse</returns>
         
+        
         public AvailableTimeOffResponse PostWorkforcemanagementTimeofflimitsAvailableQuery (AvailableTimeOffRequest body = null)
         {
              ApiResponse<AvailableTimeOffResponse> localVarResponse = PostWorkforcemanagementTimeofflimitsAvailableQueryWithHttpInfo(body);
@@ -41040,6 +42285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of AvailableTimeOffResponse</returns>
+        
         
         public ApiResponse< AvailableTimeOffResponse > PostWorkforcemanagementTimeofflimitsAvailableQueryWithHttpInfo (AvailableTimeOffRequest body = null)
         { 
@@ -41126,6 +42372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of AvailableTimeOffResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<AvailableTimeOffResponse> PostWorkforcemanagementTimeofflimitsAvailableQueryAsync (AvailableTimeOffRequest body = null)
         {
              ApiResponse<AvailableTimeOffResponse> localVarResponse = await PostWorkforcemanagementTimeofflimitsAvailableQueryAsyncWithHttpInfo(body);
@@ -41139,6 +42386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (AvailableTimeOffResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AvailableTimeOffResponse>> PostWorkforcemanagementTimeofflimitsAvailableQueryAsyncWithHttpInfo (AvailableTimeOffRequest body = null)
         { 
@@ -41226,6 +42474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestResponse</returns>
         
+        
         public TimeOffRequestResponse PostWorkforcemanagementTimeoffrequests (CreateAgentTimeOffRequest body = null)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = PostWorkforcemanagementTimeoffrequestsWithHttpInfo(body);
@@ -41238,6 +42487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestResponse</returns>
+        
         
         public ApiResponse< TimeOffRequestResponse > PostWorkforcemanagementTimeoffrequestsWithHttpInfo (CreateAgentTimeOffRequest body = null)
         { 
@@ -41324,6 +42574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffRequestResponse> PostWorkforcemanagementTimeoffrequestsAsync (CreateAgentTimeOffRequest body = null)
         {
              ApiResponse<TimeOffRequestResponse> localVarResponse = await PostWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo(body);
@@ -41337,6 +42588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestResponse>> PostWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (CreateAgentTimeOffRequest body = null)
         { 
@@ -41426,6 +42678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffLimit</returns>
         
+        
         public TimeOffLimit PutWorkforcemanagementManagementunitTimeofflimitValues (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
         {
              ApiResponse<TimeOffLimit> localVarResponse = PutWorkforcemanagementManagementunitTimeofflimitValuesWithHttpInfo(managementUnitId, timeOffLimitId, body);
@@ -41440,6 +42693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffLimit</returns>
+        
         
         public ApiResponse< TimeOffLimit > PutWorkforcemanagementManagementunitTimeofflimitValuesWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
         { 
@@ -41536,6 +42790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffLimit</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeOffLimit> PutWorkforcemanagementManagementunitTimeofflimitValuesAsync (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
         {
              ApiResponse<TimeOffLimit> localVarResponse = await PutWorkforcemanagementManagementunitTimeofflimitValuesAsyncWithHttpInfo(managementUnitId, timeOffLimitId, body);
@@ -41551,6 +42806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffLimitId">The ID of the time off limit object to set values for</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffLimit)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffLimit>> PutWorkforcemanagementManagementunitTimeofflimitValuesAsyncWithHttpInfo (string managementUnitId, string timeOffLimitId, SetTimeOffLimitValuesRequest body = null)
         { 

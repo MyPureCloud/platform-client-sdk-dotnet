@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns></returns>
         [Obsolete]
+        
         void DeleteLanguage (string languageId);
 
         /// <summary>
@@ -38,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         ApiResponse<Object> DeleteLanguageWithHttpInfo (string languageId);
 
         /// <summary>
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Language</returns>
         [Obsolete]
+        
         Language GetLanguage (string languageId);
 
         /// <summary>
@@ -62,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Language</returns>
         [Obsolete]
+        
         ApiResponse<Language> GetLanguageWithHttpInfo (string languageId);
 
         /// <summary>
@@ -77,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>LanguageEntityListing</returns>
         [Obsolete]
+        
         LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
@@ -92,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
         [Obsolete]
+        
         ApiResponse<LanguageEntityListing> GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
@@ -103,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AvailableTranslations</returns>
         
+        
         AvailableTranslations GetLanguagesTranslations ();
 
         /// <summary>
@@ -113,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AvailableTranslations</returns>
+        
         
         ApiResponse<AvailableTranslations> GetLanguagesTranslationsWithHttpInfo ();
 
@@ -126,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The language of the builtin translation to retrieve</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
         
+        
         Dictionary<string, Object> GetLanguagesTranslationsBuiltin (string language);
 
         /// <summary>
@@ -137,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">The language of the builtin translation to retrieve</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         
         ApiResponse<Dictionary<string, Object>> GetLanguagesTranslationsBuiltinWithHttpInfo (string language);
 
@@ -150,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The language of the translation to retrieve for the organization</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
         
+        
         Dictionary<string, Object> GetLanguagesTranslationsOrganization (string language);
 
         /// <summary>
@@ -161,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">The language of the translation to retrieve for the organization</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         
         ApiResponse<Dictionary<string, Object>> GetLanguagesTranslationsOrganizationWithHttpInfo (string language);
 
@@ -174,6 +186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The user id</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
         
+        
         Dictionary<string, Object> GetLanguagesTranslationsUser (string userId);
 
         /// <summary>
@@ -185,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The user id</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         
         ApiResponse<Dictionary<string, Object>> GetLanguagesTranslationsUserWithHttpInfo (string userId);
 
@@ -198,6 +212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Language</returns>
         [Obsolete]
+        
         Language PostLanguages (Language body);
 
         /// <summary>
@@ -210,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
         [Obsolete]
+        
         ApiResponse<Language> PostLanguagesWithHttpInfo (Language body);
 
         #endregion Synchronous Operations
@@ -226,6 +242,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task DeleteLanguageAsync (string languageId);
 
         /// <summary>
@@ -238,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageAsyncWithHttpInfo (string languageId);
 
         /// <summary>
@@ -250,6 +268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of Language</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<Language> GetLanguageAsync (string languageId);
 
         /// <summary>
@@ -262,6 +281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageAsyncWithHttpInfo (string languageId);
 
         /// <summary>
@@ -277,6 +297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of LanguageEntityListing</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
@@ -292,6 +313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
@@ -303,6 +325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AvailableTranslations</returns>
         
+        
         System.Threading.Tasks.Task<AvailableTranslations> GetLanguagesTranslationsAsync ();
 
         /// <summary>
@@ -313,6 +336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AvailableTranslations)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AvailableTranslations>> GetLanguagesTranslationsAsyncWithHttpInfo ();
 
@@ -326,6 +350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The language of the builtin translation to retrieve</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
         
+        
         System.Threading.Tasks.Task<Dictionary<string, Object>> GetLanguagesTranslationsBuiltinAsync (string language);
 
         /// <summary>
@@ -337,6 +362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">The language of the builtin translation to retrieve</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetLanguagesTranslationsBuiltinAsyncWithHttpInfo (string language);
 
@@ -350,6 +376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The language of the translation to retrieve for the organization</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
         
+        
         System.Threading.Tasks.Task<Dictionary<string, Object>> GetLanguagesTranslationsOrganizationAsync (string language);
 
         /// <summary>
@@ -361,6 +388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">The language of the translation to retrieve for the organization</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetLanguagesTranslationsOrganizationAsyncWithHttpInfo (string language);
 
@@ -374,6 +402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The user id</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
         
+        
         System.Threading.Tasks.Task<Dictionary<string, Object>> GetLanguagesTranslationsUserAsync (string userId);
 
         /// <summary>
@@ -385,6 +414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The user id</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetLanguagesTranslationsUserAsyncWithHttpInfo (string userId);
 
@@ -398,6 +428,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of Language</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<Language> PostLanguagesAsync (Language body);
 
         /// <summary>
@@ -410,6 +441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<Language>> PostLanguagesAsyncWithHttpInfo (Language body);
 
         #endregion Asynchronous Operations
@@ -511,6 +543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns></returns>
         [Obsolete]
+        
         public void DeleteLanguage (string languageId)
         {
              DeleteLanguageWithHttpInfo(languageId);
@@ -523,6 +556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
+        
         public ApiResponse<Object> DeleteLanguageWithHttpInfo (string languageId)
         { 
             // verify the required parameter 'languageId' is set
@@ -606,6 +640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of void</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task DeleteLanguageAsync (string languageId)
         {
              await DeleteLanguageAsyncWithHttpInfo(languageId);
@@ -619,6 +654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageAsyncWithHttpInfo (string languageId)
         { 
             // verify the required parameter 'languageId' is set
@@ -704,6 +740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Language</returns>
         [Obsolete]
+        
         public Language GetLanguage (string languageId)
         {
              ApiResponse<Language> localVarResponse = GetLanguageWithHttpInfo(languageId);
@@ -717,6 +754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Language</returns>
         [Obsolete]
+        
         public ApiResponse< Language > GetLanguageWithHttpInfo (string languageId)
         { 
             // verify the required parameter 'languageId' is set
@@ -800,6 +838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of Language</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<Language> GetLanguageAsync (string languageId)
         {
              ApiResponse<Language> localVarResponse = await GetLanguageAsyncWithHttpInfo(languageId);
@@ -814,6 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageAsyncWithHttpInfo (string languageId)
         { 
             // verify the required parameter 'languageId' is set
@@ -902,6 +942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>LanguageEntityListing</returns>
         [Obsolete]
+        
         public LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
         {
              ApiResponse<LanguageEntityListing> localVarResponse = GetLanguagesWithHttpInfo(pageSize, pageNumber, sortOrder, name);
@@ -918,6 +959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
         [Obsolete]
+        
         public ApiResponse< LanguageEntityListing > GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
         { 
 
@@ -1004,6 +1046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of LanguageEntityListing</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
         {
              ApiResponse<LanguageEntityListing> localVarResponse = await GetLanguagesAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name);
@@ -1021,6 +1064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
         { 
 
@@ -1104,6 +1148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AvailableTranslations</returns>
         
+        
         public AvailableTranslations GetLanguagesTranslations ()
         {
              ApiResponse<AvailableTranslations> localVarResponse = GetLanguagesTranslationsWithHttpInfo();
@@ -1115,6 +1160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AvailableTranslations</returns>
+        
         
         public ApiResponse< AvailableTranslations > GetLanguagesTranslationsWithHttpInfo ()
         { 
@@ -1194,6 +1240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AvailableTranslations</returns>
         
+        
         public async System.Threading.Tasks.Task<AvailableTranslations> GetLanguagesTranslationsAsync ()
         {
              ApiResponse<AvailableTranslations> localVarResponse = await GetLanguagesTranslationsAsyncWithHttpInfo();
@@ -1206,6 +1253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AvailableTranslations)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AvailableTranslations>> GetLanguagesTranslationsAsyncWithHttpInfo ()
         { 
@@ -1287,6 +1335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The language of the builtin translation to retrieve</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
         
+        
         public Dictionary<string, Object> GetLanguagesTranslationsBuiltin (string language)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = GetLanguagesTranslationsBuiltinWithHttpInfo(language);
@@ -1299,6 +1348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">The language of the builtin translation to retrieve</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         
         public ApiResponse< Dictionary<string, Object> > GetLanguagesTranslationsBuiltinWithHttpInfo (string language)
         { 
@@ -1383,6 +1433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The language of the builtin translation to retrieve</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetLanguagesTranslationsBuiltinAsync (string language)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = await GetLanguagesTranslationsBuiltinAsyncWithHttpInfo(language);
@@ -1396,6 +1447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">The language of the builtin translation to retrieve</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetLanguagesTranslationsBuiltinAsyncWithHttpInfo (string language)
         { 
@@ -1482,6 +1534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The language of the translation to retrieve for the organization</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
         
+        
         public Dictionary<string, Object> GetLanguagesTranslationsOrganization (string language)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = GetLanguagesTranslationsOrganizationWithHttpInfo(language);
@@ -1494,6 +1547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">The language of the translation to retrieve for the organization</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         
         public ApiResponse< Dictionary<string, Object> > GetLanguagesTranslationsOrganizationWithHttpInfo (string language)
         { 
@@ -1578,6 +1632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The language of the translation to retrieve for the organization</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetLanguagesTranslationsOrganizationAsync (string language)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = await GetLanguagesTranslationsOrganizationAsyncWithHttpInfo(language);
@@ -1591,6 +1646,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="language">The language of the translation to retrieve for the organization</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetLanguagesTranslationsOrganizationAsyncWithHttpInfo (string language)
         { 
@@ -1677,6 +1733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The user id</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
         
+        
         public Dictionary<string, Object> GetLanguagesTranslationsUser (string userId)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = GetLanguagesTranslationsUserWithHttpInfo(userId);
@@ -1689,6 +1746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The user id</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         
         public ApiResponse< Dictionary<string, Object> > GetLanguagesTranslationsUserWithHttpInfo (string userId)
         { 
@@ -1773,6 +1831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The user id</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetLanguagesTranslationsUserAsync (string userId)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = await GetLanguagesTranslationsUserAsyncWithHttpInfo(userId);
@@ -1786,6 +1845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The user id</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetLanguagesTranslationsUserAsyncWithHttpInfo (string userId)
         { 
@@ -1872,6 +1932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Language</returns>
         [Obsolete]
+        
         public Language PostLanguages (Language body)
         {
              ApiResponse<Language> localVarResponse = PostLanguagesWithHttpInfo(body);
@@ -1885,6 +1946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
         [Obsolete]
+        
         public ApiResponse< Language > PostLanguagesWithHttpInfo (Language body)
         { 
             // verify the required parameter 'body' is set
@@ -1973,6 +2035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of Language</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<Language> PostLanguagesAsync (Language body)
         {
              ApiResponse<Language> localVarResponse = await PostLanguagesAsyncWithHttpInfo(body);
@@ -1987,6 +2050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<Language>> PostLanguagesAsyncWithHttpInfo (Language body)
         { 
             // verify the required parameter 'body' is set

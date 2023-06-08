@@ -27,6 +27,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns></returns>
         
+        
         void DeleteAuthorizationDivision (string divisionId, bool? force = null);
 
         /// <summary>
@@ -40,6 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId, bool? force = null);
 
         /// <summary>
@@ -52,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <returns></returns>
         
+        
         void DeleteAuthorizationRole (string roleId);
 
         /// <summary>
@@ -63,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteAuthorizationRoleWithHttpInfo (string roleId);
 
@@ -78,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns></returns>
         
+        
         void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId);
 
         /// <summary>
@@ -92,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId);
 
         /// <summary>
@@ -105,6 +111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>AuthzDivision</returns>
         
+        
         AuthzDivision GetAuthorizationDivision (string divisionId, bool? objectCount = null);
 
         /// <summary>
@@ -117,6 +124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         
         ApiResponse<AuthzDivision> GetAuthorizationDivisionWithHttpInfo (string divisionId, bool? objectCount = null);
 
@@ -132,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>AuthzDivisionGrantEntityListing</returns>
         
+        
         AuthzDivisionGrantEntityListing GetAuthorizationDivisionGrants (string divisionId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -145,6 +154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of AuthzDivisionGrantEntityListing</returns>
+        
         
         ApiResponse<AuthzDivisionGrantEntityListing> GetAuthorizationDivisionGrantsWithHttpInfo (string divisionId, int? pageNumber = null, int? pageSize = null);
 
@@ -166,6 +176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>AuthzDivisionEntityListing</returns>
         
+        
         AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
@@ -186,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of AuthzDivisionEntityListing</returns>
         
+        
         ApiResponse<AuthzDivisionEntityListing> GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
@@ -196,6 +208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthzDivision</returns>
+        
         
         AuthzDivision GetAuthorizationDivisionsHome ();
 
@@ -208,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthzDivision</returns>
         
+        
         ApiResponse<AuthzDivision> GetAuthorizationDivisionsHomeWithHttpInfo ();
 
         /// <summary>
@@ -219,6 +233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>int?</returns>
         
+        
         int? GetAuthorizationDivisionsLimit ();
 
         /// <summary>
@@ -229,6 +244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of int?</returns>
+        
         
         ApiResponse<int?> GetAuthorizationDivisionsLimitWithHttpInfo ();
 
@@ -243,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         List<AuthzDivision> GetAuthorizationDivisionspermittedMe (string permission, string name = null);
 
         /// <summary>
@@ -256,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         ApiResponse<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeWithHttpInfo (string permission, string name = null);
 
         /// <summary>
@@ -270,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DivsPermittedEntityListing</returns>
         
+        
         DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -283,6 +302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
+        
         
         ApiResponse<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null);
 
@@ -299,6 +319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -314,6 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         ApiResponse<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -328,6 +350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>PermissionCollectionEntityListing</returns>
+        
         
         PermissionCollectionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
@@ -344,6 +367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
         
+        
         ApiResponse<PermissionCollectionEntityListing> GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
         /// <summary>
@@ -355,6 +379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OrganizationProductEntityListing</returns>
         
+        
         OrganizationProductEntityListing GetAuthorizationProducts ();
 
         /// <summary>
@@ -365,6 +390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OrganizationProductEntityListing</returns>
+        
         
         ApiResponse<OrganizationProductEntityListing> GetAuthorizationProductsWithHttpInfo ();
 
@@ -380,6 +406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>DomainOrganizationRole</returns>
         
+        
         DomainOrganizationRole GetAuthorizationRole (string roleId, bool? userCount = null, List<string> expand = null);
 
         /// <summary>
@@ -394,6 +421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         
+        
         ApiResponse<DomainOrganizationRole> GetAuthorizationRoleWithHttpInfo (string roleId, bool? userCount = null, List<string> expand = null);
 
         /// <summary>
@@ -407,6 +435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>DomainOrgRoleDifference</returns>
         
+        
         DomainOrgRoleDifference GetAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId);
 
         /// <summary>
@@ -419,6 +448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
+        
         
         ApiResponse<DomainOrgRoleDifference> GetAuthorizationRoleComparedefaultRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId);
 
@@ -438,6 +468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>SubjectDivisionGrantsEntityListing</returns>
         
+        
         SubjectDivisionGrantsEntityListing GetAuthorizationRoleSubjectgrants (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -456,6 +487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of SubjectDivisionGrantsEntityListing</returns>
         
+        
         ApiResponse<SubjectDivisionGrantsEntityListing> GetAuthorizationRoleSubjectgrantsWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -470,6 +502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>UserEntityListing</returns>
         
+        
         UserEntityListing GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -483,6 +516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
+        
         
         ApiResponse<UserEntityListing> GetAuthorizationRoleUsersWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null);
 
@@ -506,6 +540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>OrganizationRoleEntityListing</returns>
         
+        
         OrganizationRoleEntityListing GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null);
 
         /// <summary>
@@ -528,6 +563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
         
+        
         ApiResponse<OrganizationRoleEntityListing> GetAuthorizationRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null);
 
         /// <summary>
@@ -539,6 +575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthorizationSettings</returns>
         
+        
         AuthorizationSettings GetAuthorizationSettings ();
 
         /// <summary>
@@ -549,6 +586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthorizationSettings</returns>
+        
         
         ApiResponse<AuthorizationSettings> GetAuthorizationSettingsWithHttpInfo ();
 
@@ -562,6 +600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>AuthzSubject</returns>
         
+        
         AuthzSubject GetAuthorizationSubject (string subjectId);
 
         /// <summary>
@@ -574,6 +613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
+        
         ApiResponse<AuthzSubject> GetAuthorizationSubjectWithHttpInfo (string subjectId);
 
         /// <summary>
@@ -585,6 +625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthzSubject</returns>
         
+        
         AuthzSubject GetAuthorizationSubjectsMe ();
 
         /// <summary>
@@ -595,6 +636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthzSubject</returns>
+        
         
         ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo ();
 
@@ -608,6 +650,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
         
+        
         Dictionary<string, Object> GetAuthorizationSubjectsRolecounts (List<string> id = null);
 
         /// <summary>
@@ -619,6 +662,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         
         ApiResponse<Dictionary<string, Object>> GetAuthorizationSubjectsRolecountsWithHttpInfo (List<string> id = null);
 
@@ -632,6 +676,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <returns>UserAuthorization</returns>
         
+        
         UserAuthorization GetUserRoles (string subjectId);
 
         /// <summary>
@@ -643,6 +688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         
         ApiResponse<UserAuthorization> GetUserRolesWithHttpInfo (string subjectId);
 
@@ -657,6 +703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
         
+        
         DomainOrganizationRole PatchAuthorizationRole (string roleId, DomainOrganizationRole body);
 
         /// <summary>
@@ -670,6 +717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         
+        
         ApiResponse<DomainOrganizationRole> PatchAuthorizationRoleWithHttpInfo (string roleId, DomainOrganizationRole body);
 
         /// <summary>
@@ -682,6 +730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Authorization Settings</param>
         /// <returns>AuthorizationSettings</returns>
         
+        
         AuthorizationSettings PatchAuthorizationSettings (AuthorizationSettings body);
 
         /// <summary>
@@ -693,6 +742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Authorization Settings</param>
         /// <returns>ApiResponse of AuthorizationSettings</returns>
+        
         
         ApiResponse<AuthorizationSettings> PatchAuthorizationSettingsWithHttpInfo (AuthorizationSettings body);
 
@@ -708,6 +758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Object Id List</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body);
 
         /// <summary>
@@ -722,6 +773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Object Id List</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostAuthorizationDivisionObjectWithHttpInfo (string divisionId, string objectType, List<string> body);
 
         /// <summary>
@@ -734,6 +786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>AuthzDivision</returns>
+        
         
         AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body);
 
@@ -748,6 +801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recreated division data</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
         
+        
         ApiResponse<AuthzDivision> PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -760,6 +814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Division</param>
         /// <returns>AuthzDivision</returns>
         
+        
         AuthzDivision PostAuthorizationDivisions (AuthzDivision body);
 
         /// <summary>
@@ -771,6 +826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         
         ApiResponse<AuthzDivision> PostAuthorizationDivisionsWithHttpInfo (AuthzDivision body);
 
@@ -786,6 +842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null);
 
         /// <summary>
@@ -799,6 +856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Subjects and Divisions</param>
         /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null);
 
@@ -814,6 +872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrgRoleDifference</returns>
         
+        
         DomainOrgRoleDifference PostAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body);
 
         /// <summary>
@@ -828,6 +887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
         
+        
         ApiResponse<DomainOrgRoleDifference> PostAuthorizationRoleComparedefaultRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body);
 
         /// <summary>
@@ -839,6 +899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
+        
         
         DomainOrganizationRole PostAuthorizationRoles (DomainOrganizationRoleCreate body);
 
@@ -852,6 +913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         
+        
         ApiResponse<DomainOrganizationRole> PostAuthorizationRolesWithHttpInfo (DomainOrganizationRoleCreate body);
 
         /// <summary>
@@ -864,6 +926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>OrganizationRoleEntityListing</returns>
         
+        
         OrganizationRoleEntityListing PostAuthorizationRolesDefault (bool? force = null);
 
         /// <summary>
@@ -875,6 +938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
+        
         
         ApiResponse<OrganizationRoleEntityListing> PostAuthorizationRolesDefaultWithHttpInfo (bool? force = null);
 
@@ -890,6 +954,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationSubjectBulkadd (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -904,6 +969,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostAuthorizationSubjectBulkaddWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -917,6 +983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationSubjectBulkremove (string subjectId, RoleDivisionGrants body);
 
         /// <summary>
@@ -929,6 +996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PostAuthorizationSubjectBulkremoveWithHttpInfo (string subjectId, RoleDivisionGrants body);
 
@@ -944,6 +1012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationSubjectBulkreplace (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -957,6 +1026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PostAuthorizationSubjectBulkreplaceWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
@@ -973,6 +1043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
@@ -988,6 +1059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
@@ -1000,6 +1072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>AuthzDivision</returns>
+        
         
         AuthzDivision PutAuthorizationDivision (string divisionId, AuthzDivision body);
 
@@ -1014,6 +1087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated division data</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
         
+        
         ApiResponse<AuthzDivision> PutAuthorizationDivisionWithHttpInfo (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -1026,6 +1100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
+        
         
         DomainOrganizationRole PutAuthorizationRole (string roleId, DomainOrganizationRoleUpdate body);
 
@@ -1040,6 +1115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         
+        
         ApiResponse<DomainOrganizationRole> PutAuthorizationRoleWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body);
 
         /// <summary>
@@ -1052,6 +1128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">List of user IDs</param>
         /// <returns>List&lt;string&gt;</returns>
+        
         
         List<string> PutAuthorizationRoleUsersAdd (string roleId, List<string> body);
 
@@ -1066,6 +1143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         
+        
         ApiResponse<List<string>> PutAuthorizationRoleUsersAddWithHttpInfo (string roleId, List<string> body);
 
         /// <summary>
@@ -1078,6 +1156,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">List of user IDs</param>
         /// <returns>List&lt;string&gt;</returns>
+        
         
         List<string> PutAuthorizationRoleUsersRemove (string roleId, List<string> body);
 
@@ -1092,6 +1171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         
+        
         ApiResponse<List<string>> PutAuthorizationRoleUsersRemoveWithHttpInfo (string roleId, List<string> body);
 
         /// <summary>
@@ -1104,6 +1184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization roles list</param>
         /// <returns>OrganizationRoleEntityListing</returns>
         
+        
         OrganizationRoleEntityListing PutAuthorizationRolesDefault (List<DomainOrganizationRole> body);
 
         /// <summary>
@@ -1115,6 +1196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization roles list</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
+        
         
         ApiResponse<OrganizationRoleEntityListing> PutAuthorizationRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body);
 
@@ -1129,6 +1211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
         
+        
         UserAuthorization PutUserRoles (string subjectId, List<string> body);
 
         /// <summary>
@@ -1141,6 +1224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         
         ApiResponse<UserAuthorization> PutUserRolesWithHttpInfo (string subjectId, List<string> body);
 
@@ -1159,6 +1243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId, bool? force = null);
 
         /// <summary>
@@ -1172,6 +1257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? force = null);
 
         /// <summary>
@@ -1184,6 +1270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteAuthorizationRoleAsync (string roleId);
 
         /// <summary>
@@ -1195,6 +1282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationRoleAsyncWithHttpInfo (string roleId);
 
@@ -1210,6 +1298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId);
 
         /// <summary>
@@ -1224,6 +1313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId);
 
         /// <summary>
@@ -1237,6 +1327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of AuthzDivision</returns>
         
+        
         System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionAsync (string divisionId, bool? objectCount = null);
 
         /// <summary>
@@ -1249,6 +1340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? objectCount = null);
 
@@ -1264,6 +1356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of AuthzDivisionGrantEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<AuthzDivisionGrantEntityListing> GetAuthorizationDivisionGrantsAsync (string divisionId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1277,6 +1370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionGrantEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AuthzDivisionGrantEntityListing>> GetAuthorizationDivisionGrantsAsyncWithHttpInfo (string divisionId, int? pageNumber = null, int? pageSize = null);
 
@@ -1298,6 +1392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of AuthzDivisionEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
@@ -1318,6 +1413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
@@ -1328,6 +1424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthzDivision</returns>
+        
         
         System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionsHomeAsync ();
 
@@ -1340,6 +1437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionsHomeAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1351,6 +1449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of int?</returns>
         
+        
         System.Threading.Tasks.Task<int?> GetAuthorizationDivisionsLimitAsync ();
 
         /// <summary>
@@ -1361,6 +1460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (int?)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<int?>> GetAuthorizationDivisionsLimitAsyncWithHttpInfo ();
 
@@ -1375,6 +1475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeAsync (string permission, string name = null);
 
         /// <summary>
@@ -1388,6 +1489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;AuthzDivision&gt;)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo (string permission, string name = null);
 
         /// <summary>
@@ -1402,6 +1504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DivsPermittedEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeAsync (string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1415,6 +1518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null);
 
@@ -1431,6 +1535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdAsync (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1446,6 +1551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1460,6 +1566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>Task of PermissionCollectionEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
@@ -1476,6 +1583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
         /// <summary>
@@ -1487,6 +1595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OrganizationProductEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<OrganizationProductEntityListing> GetAuthorizationProductsAsync ();
 
         /// <summary>
@@ -1497,6 +1606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OrganizationProductEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> GetAuthorizationProductsAsyncWithHttpInfo ();
 
@@ -1512,6 +1622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         
+        
         System.Threading.Tasks.Task<DomainOrganizationRole> GetAuthorizationRoleAsync (string roleId, bool? userCount = null, List<string> expand = null);
 
         /// <summary>
@@ -1526,6 +1637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId, bool? userCount = null, List<string> expand = null);
 
         /// <summary>
@@ -1539,6 +1651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
         
+        
         System.Threading.Tasks.Task<DomainOrgRoleDifference> GetAuthorizationRoleComparedefaultRightRoleIdAsync (string leftRoleId, string rightRoleId);
 
         /// <summary>
@@ -1551,6 +1664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetAuthorizationRoleComparedefaultRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId);
 
@@ -1570,6 +1684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of SubjectDivisionGrantsEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SubjectDivisionGrantsEntityListing> GetAuthorizationRoleSubjectgrantsAsync (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -1588,6 +1703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (SubjectDivisionGrantsEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SubjectDivisionGrantsEntityListing>> GetAuthorizationRoleSubjectgrantsAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -1602,6 +1718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of UserEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<UserEntityListing> GetAuthorizationRoleUsersAsync (string roleId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1615,6 +1732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetAuthorizationRoleUsersAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null);
 
@@ -1638,6 +1756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetAuthorizationRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null);
 
         /// <summary>
@@ -1660,6 +1779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetAuthorizationRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null);
 
         /// <summary>
@@ -1671,6 +1791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthorizationSettings</returns>
         
+        
         System.Threading.Tasks.Task<AuthorizationSettings> GetAuthorizationSettingsAsync ();
 
         /// <summary>
@@ -1681,6 +1802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthorizationSettings)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AuthorizationSettings>> GetAuthorizationSettingsAsyncWithHttpInfo ();
 
@@ -1694,6 +1816,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>Task of AuthzSubject</returns>
         
+        
         System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId);
 
         /// <summary>
@@ -1706,6 +1829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId);
 
         /// <summary>
@@ -1717,6 +1841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthzSubject</returns>
         
+        
         System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync ();
 
         /// <summary>
@@ -1727,6 +1852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo ();
 
@@ -1740,6 +1866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
         
+        
         System.Threading.Tasks.Task<Dictionary<string, Object>> GetAuthorizationSubjectsRolecountsAsync (List<string> id = null);
 
         /// <summary>
@@ -1751,6 +1878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetAuthorizationSubjectsRolecountsAsyncWithHttpInfo (List<string> id = null);
 
@@ -1764,6 +1892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
         
+        
         System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string subjectId);
 
         /// <summary>
@@ -1775,6 +1904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string subjectId);
 
@@ -1789,6 +1919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         
+        
         System.Threading.Tasks.Task<DomainOrganizationRole> PatchAuthorizationRoleAsync (string roleId, DomainOrganizationRole body);
 
         /// <summary>
@@ -1802,6 +1933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchAuthorizationRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body);
 
         /// <summary>
@@ -1814,6 +1946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Authorization Settings</param>
         /// <returns>Task of AuthorizationSettings</returns>
         
+        
         System.Threading.Tasks.Task<AuthorizationSettings> PatchAuthorizationSettingsAsync (AuthorizationSettings body);
 
         /// <summary>
@@ -1825,6 +1958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Authorization Settings</param>
         /// <returns>Task of ApiResponse (AuthorizationSettings)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AuthorizationSettings>> PatchAuthorizationSettingsAsyncWithHttpInfo (AuthorizationSettings body);
 
@@ -1840,6 +1974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Object Id List</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationDivisionObjectAsync (string divisionId, string objectType, List<string> body);
 
         /// <summary>
@@ -1854,6 +1989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Object Id List</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationDivisionObjectAsyncWithHttpInfo (string divisionId, string objectType, List<string> body);
 
         /// <summary>
@@ -1866,6 +2002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         
         System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body);
 
@@ -1880,6 +2017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recreated division data</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -1892,6 +2030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Division</param>
         /// <returns>Task of AuthzDivision</returns>
         
+        
         System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionsAsync (AuthzDivision body);
 
         /// <summary>
@@ -1903,6 +2042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionsAsyncWithHttpInfo (AuthzDivision body);
 
@@ -1918,6 +2058,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body, string subjectType = null);
 
         /// <summary>
@@ -1931,6 +2072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Subjects and Divisions</param>
         /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null);
 
@@ -1946,6 +2088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
         
+        
         System.Threading.Tasks.Task<DomainOrgRoleDifference> PostAuthorizationRoleComparedefaultRightRoleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body);
 
         /// <summary>
@@ -1960,6 +2103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostAuthorizationRoleComparedefaultRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body);
 
         /// <summary>
@@ -1971,6 +2115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
+        
         
         System.Threading.Tasks.Task<DomainOrganizationRole> PostAuthorizationRolesAsync (DomainOrganizationRoleCreate body);
 
@@ -1984,6 +2129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostAuthorizationRolesAsyncWithHttpInfo (DomainOrganizationRoleCreate body);
 
         /// <summary>
@@ -1996,6 +2142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<OrganizationRoleEntityListing> PostAuthorizationRolesDefaultAsync (bool? force = null);
 
         /// <summary>
@@ -2007,6 +2154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PostAuthorizationRolesDefaultAsyncWithHttpInfo (bool? force = null);
 
@@ -2022,6 +2170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationSubjectBulkaddAsync (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -2036,6 +2185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkaddAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -2049,6 +2199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationSubjectBulkremoveAsync (string subjectId, RoleDivisionGrants body);
 
         /// <summary>
@@ -2061,6 +2212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkremoveAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body);
 
@@ -2076,6 +2228,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationSubjectBulkreplaceAsync (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
         /// <summary>
@@ -2089,6 +2242,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkreplaceAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null);
 
@@ -2105,6 +2259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
@@ -2120,6 +2275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
@@ -2132,6 +2288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         
         System.Threading.Tasks.Task<AuthzDivision> PutAuthorizationDivisionAsync (string divisionId, AuthzDivision body);
 
@@ -2146,6 +2303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated division data</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PutAuthorizationDivisionAsyncWithHttpInfo (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -2158,6 +2316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
+        
         
         System.Threading.Tasks.Task<DomainOrganizationRole> PutAuthorizationRoleAsync (string roleId, DomainOrganizationRoleUpdate body);
 
@@ -2172,6 +2331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutAuthorizationRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body);
 
         /// <summary>
@@ -2184,6 +2344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of List&lt;string&gt;</returns>
+        
         
         System.Threading.Tasks.Task<List<string>> PutAuthorizationRoleUsersAddAsync (string roleId, List<string> body);
 
@@ -2198,6 +2359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<List<string>>> PutAuthorizationRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body);
 
         /// <summary>
@@ -2210,6 +2372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of List&lt;string&gt;</returns>
+        
         
         System.Threading.Tasks.Task<List<string>> PutAuthorizationRoleUsersRemoveAsync (string roleId, List<string> body);
 
@@ -2224,6 +2387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<List<string>>> PutAuthorizationRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body);
 
         /// <summary>
@@ -2236,6 +2400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization roles list</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<OrganizationRoleEntityListing> PutAuthorizationRolesDefaultAsync (List<DomainOrganizationRole> body);
 
         /// <summary>
@@ -2247,6 +2412,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization roles list</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutAuthorizationRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body);
 
@@ -2261,6 +2427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
         
+        
         System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string subjectId, List<string> body);
 
         /// <summary>
@@ -2273,6 +2440,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string subjectId, List<string> body);
 
@@ -2376,6 +2544,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns></returns>
         
+        
         public void DeleteAuthorizationDivision (string divisionId, bool? force = null)
         {
              DeleteAuthorizationDivisionWithHttpInfo(divisionId, force);
@@ -2388,6 +2557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId, bool? force = null)
         { 
@@ -2474,6 +2644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId, bool? force = null)
         {
              await DeleteAuthorizationDivisionAsyncWithHttpInfo(divisionId, force);
@@ -2487,6 +2658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? force = null)
         { 
@@ -2574,6 +2746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <returns></returns>
         
+        
         public void DeleteAuthorizationRole (string roleId)
         {
              DeleteAuthorizationRoleWithHttpInfo(roleId);
@@ -2585,6 +2758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteAuthorizationRoleWithHttpInfo (string roleId)
         { 
@@ -2669,6 +2843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteAuthorizationRoleAsync (string roleId)
         {
              await DeleteAuthorizationRoleAsyncWithHttpInfo(roleId);
@@ -2681,6 +2856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationRoleAsyncWithHttpInfo (string roleId)
         { 
@@ -2769,6 +2945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns></returns>
         
+        
         public void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId)
         {
              DeleteAuthorizationSubjectDivisionRoleWithHttpInfo(subjectId, divisionId, roleId);
@@ -2782,6 +2959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">the id of the division of the grant</param>
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId)
         { 
@@ -2876,6 +3054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId)
         {
              await DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo(subjectId, divisionId, roleId);
@@ -2890,6 +3069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">the id of the division of the grant</param>
         /// <param name="roleId">the id of the role of the grant</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId)
         { 
@@ -2987,6 +3167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>AuthzDivision</returns>
         
+        
         public AuthzDivision GetAuthorizationDivision (string divisionId, bool? objectCount = null)
         {
              ApiResponse<AuthzDivision> localVarResponse = GetAuthorizationDivisionWithHttpInfo(divisionId, objectCount);
@@ -3000,6 +3181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         
         public ApiResponse< AuthzDivision > GetAuthorizationDivisionWithHttpInfo (string divisionId, bool? objectCount = null)
         { 
@@ -3086,6 +3268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of AuthzDivision</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionAsync (string divisionId, bool? objectCount = null)
         {
              ApiResponse<AuthzDivision> localVarResponse = await GetAuthorizationDivisionAsyncWithHttpInfo(divisionId, objectCount);
@@ -3100,6 +3283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? objectCount = null)
         { 
@@ -3189,6 +3373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>AuthzDivisionGrantEntityListing</returns>
         
+        
         public AuthzDivisionGrantEntityListing GetAuthorizationDivisionGrants (string divisionId, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<AuthzDivisionGrantEntityListing> localVarResponse = GetAuthorizationDivisionGrantsWithHttpInfo(divisionId, pageNumber, pageSize);
@@ -3203,6 +3388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of AuthzDivisionGrantEntityListing</returns>
+        
         
         public ApiResponse< AuthzDivisionGrantEntityListing > GetAuthorizationDivisionGrantsWithHttpInfo (string divisionId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -3291,6 +3477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of AuthzDivisionGrantEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzDivisionGrantEntityListing> GetAuthorizationDivisionGrantsAsync (string divisionId, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<AuthzDivisionGrantEntityListing> localVarResponse = await GetAuthorizationDivisionGrantsAsyncWithHttpInfo(divisionId, pageNumber, pageSize);
@@ -3306,6 +3493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionGrantEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionGrantEntityListing>> GetAuthorizationDivisionGrantsAsyncWithHttpInfo (string divisionId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -3402,6 +3590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>AuthzDivisionEntityListing</returns>
         
+        
         public AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         {
              ApiResponse<AuthzDivisionEntityListing> localVarResponse = GetAuthorizationDivisionsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
@@ -3422,6 +3611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of AuthzDivisionEntityListing</returns>
+        
         
         public ApiResponse< AuthzDivisionEntityListing > GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         { 
@@ -3519,6 +3709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of AuthzDivisionEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         {
              ApiResponse<AuthzDivisionEntityListing> localVarResponse = await GetAuthorizationDivisionsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
@@ -3540,6 +3731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         { 
@@ -3629,6 +3821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthzDivision</returns>
         
+        
         public AuthzDivision GetAuthorizationDivisionsHome ()
         {
              ApiResponse<AuthzDivision> localVarResponse = GetAuthorizationDivisionsHomeWithHttpInfo();
@@ -3640,6 +3833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         
         public ApiResponse< AuthzDivision > GetAuthorizationDivisionsHomeWithHttpInfo ()
         { 
@@ -3719,6 +3913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthzDivision</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionsHomeAsync ()
         {
              ApiResponse<AuthzDivision> localVarResponse = await GetAuthorizationDivisionsHomeAsyncWithHttpInfo();
@@ -3731,6 +3926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionsHomeAsyncWithHttpInfo ()
         { 
@@ -3811,6 +4007,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>int?</returns>
         
+        
         public int? GetAuthorizationDivisionsLimit ()
         {
              ApiResponse<int?> localVarResponse = GetAuthorizationDivisionsLimitWithHttpInfo();
@@ -3822,6 +4019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of int?</returns>
+        
         
         public ApiResponse< int? > GetAuthorizationDivisionsLimitWithHttpInfo ()
         { 
@@ -3901,6 +4099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of int?</returns>
         
+        
         public async System.Threading.Tasks.Task<int?> GetAuthorizationDivisionsLimitAsync ()
         {
              ApiResponse<int?> localVarResponse = await GetAuthorizationDivisionsLimitAsyncWithHttpInfo();
@@ -3913,6 +4112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (int?)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<int?>> GetAuthorizationDivisionsLimitAsyncWithHttpInfo ()
         { 
@@ -3995,6 +4195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         public List<AuthzDivision> GetAuthorizationDivisionspermittedMe (string permission, string name = null)
         {
              ApiResponse<List<AuthzDivision>> localVarResponse = GetAuthorizationDivisionspermittedMeWithHttpInfo(permission, name);
@@ -4009,6 +4210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         public ApiResponse< List<AuthzDivision> > GetAuthorizationDivisionspermittedMeWithHttpInfo (string permission, string name = null)
         { 
             // verify the required parameter 'permission' is set
@@ -4094,6 +4296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of List&lt;AuthzDivision&gt;</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<List<AuthzDivision>> GetAuthorizationDivisionspermittedMeAsync (string permission, string name = null)
         {
              ApiResponse<List<AuthzDivision>> localVarResponse = await GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo(permission, name);
@@ -4109,6 +4312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;AuthzDivision&gt;)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<AuthzDivision>>> GetAuthorizationDivisionspermittedMeAsyncWithHttpInfo (string permission, string name = null)
         { 
             // verify the required parameter 'permission' is set
@@ -4197,6 +4401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DivsPermittedEntityListing</returns>
         
+        
         public DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DivsPermittedEntityListing> localVarResponse = GetAuthorizationDivisionspermittedPagedMeWithHttpInfo(permission, pageNumber, pageSize);
@@ -4211,6 +4416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
+        
         
         public ApiResponse< DivsPermittedEntityListing > GetAuthorizationDivisionspermittedPagedMeWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null)
         { 
@@ -4299,6 +4505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DivsPermittedEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedMeAsync (string permission, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DivsPermittedEntityListing> localVarResponse = await GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo(permission, pageNumber, pageSize);
@@ -4314,6 +4521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedMeAsyncWithHttpInfo (string permission, int? pageNumber = null, int? pageSize = null)
         { 
@@ -4405,6 +4613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         public DivsPermittedEntityListing GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DivsPermittedEntityListing> localVarResponse = GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo(subjectId, permission, pageNumber, pageSize);
@@ -4421,6 +4630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         public ApiResponse< DivsPermittedEntityListing > GetAuthorizationDivisionspermittedPagedSubjectIdWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'subjectId' is set
@@ -4513,6 +4723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DivsPermittedEntityListing</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<DivsPermittedEntityListing> GetAuthorizationDivisionspermittedPagedSubjectIdAsync (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DivsPermittedEntityListing> localVarResponse = await GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo(subjectId, permission, pageNumber, pageSize);
@@ -4530,6 +4741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DivsPermittedEntityListing)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<DivsPermittedEntityListing>> GetAuthorizationDivisionspermittedPagedSubjectIdAsyncWithHttpInfo (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'subjectId' is set
@@ -4625,6 +4837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>PermissionCollectionEntityListing</returns>
         
+        
         public PermissionCollectionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         {
              ApiResponse<PermissionCollectionEntityListing> localVarResponse = GetAuthorizationPermissionsWithHttpInfo(pageSize, pageNumber, queryType, query);
@@ -4640,6 +4853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
+        
         
         public ApiResponse< PermissionCollectionEntityListing > GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         { 
@@ -4727,6 +4941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>Task of PermissionCollectionEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         {
              ApiResponse<PermissionCollectionEntityListing> localVarResponse = await GetAuthorizationPermissionsAsyncWithHttpInfo(pageSize, pageNumber, queryType, query);
@@ -4743,6 +4958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
         /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         { 
@@ -4827,6 +5043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OrganizationProductEntityListing</returns>
         
+        
         public OrganizationProductEntityListing GetAuthorizationProducts ()
         {
              ApiResponse<OrganizationProductEntityListing> localVarResponse = GetAuthorizationProductsWithHttpInfo();
@@ -4838,6 +5055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OrganizationProductEntityListing</returns>
+        
         
         public ApiResponse< OrganizationProductEntityListing > GetAuthorizationProductsWithHttpInfo ()
         { 
@@ -4917,6 +5135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OrganizationProductEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OrganizationProductEntityListing> GetAuthorizationProductsAsync ()
         {
              ApiResponse<OrganizationProductEntityListing> localVarResponse = await GetAuthorizationProductsAsyncWithHttpInfo();
@@ -4929,6 +5148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OrganizationProductEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> GetAuthorizationProductsAsyncWithHttpInfo ()
         { 
@@ -5012,6 +5232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>DomainOrganizationRole</returns>
         
+        
         public DomainOrganizationRole GetAuthorizationRole (string roleId, bool? userCount = null, List<string> expand = null)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = GetAuthorizationRoleWithHttpInfo(roleId, userCount, expand);
@@ -5026,6 +5247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
+        
         
         public ApiResponse< DomainOrganizationRole > GetAuthorizationRoleWithHttpInfo (string roleId, bool? userCount = null, List<string> expand = null)
         { 
@@ -5114,6 +5336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainOrganizationRole> GetAuthorizationRoleAsync (string roleId, bool? userCount = null, List<string> expand = null)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await GetAuthorizationRoleAsyncWithHttpInfo(roleId, userCount, expand);
@@ -5129,6 +5352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId, bool? userCount = null, List<string> expand = null)
         { 
@@ -5218,6 +5442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>DomainOrgRoleDifference</returns>
         
+        
         public DomainOrgRoleDifference GetAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId)
         {
              ApiResponse<DomainOrgRoleDifference> localVarResponse = GetAuthorizationRoleComparedefaultRightRoleIdWithHttpInfo(leftRoleId, rightRoleId);
@@ -5231,6 +5456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
+        
         
         public ApiResponse< DomainOrgRoleDifference > GetAuthorizationRoleComparedefaultRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId)
         { 
@@ -5320,6 +5546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainOrgRoleDifference> GetAuthorizationRoleComparedefaultRightRoleIdAsync (string leftRoleId, string rightRoleId)
         {
              ApiResponse<DomainOrgRoleDifference> localVarResponse = await GetAuthorizationRoleComparedefaultRightRoleIdAsyncWithHttpInfo(leftRoleId, rightRoleId);
@@ -5334,6 +5561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetAuthorizationRoleComparedefaultRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId)
         { 
@@ -5431,6 +5659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>SubjectDivisionGrantsEntityListing</returns>
         
+        
         public SubjectDivisionGrantsEntityListing GetAuthorizationRoleSubjectgrants (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<SubjectDivisionGrantsEntityListing> localVarResponse = GetAuthorizationRoleSubjectgrantsWithHttpInfo(roleId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -5449,6 +5678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of SubjectDivisionGrantsEntityListing</returns>
+        
         
         public ApiResponse< SubjectDivisionGrantsEntityListing > GetAuthorizationRoleSubjectgrantsWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -5545,6 +5775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of SubjectDivisionGrantsEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SubjectDivisionGrantsEntityListing> GetAuthorizationRoleSubjectgrantsAsync (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<SubjectDivisionGrantsEntityListing> localVarResponse = await GetAuthorizationRoleSubjectgrantsAsyncWithHttpInfo(roleId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -5564,6 +5795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (SubjectDivisionGrantsEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SubjectDivisionGrantsEntityListing>> GetAuthorizationRoleSubjectgrantsAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -5658,6 +5890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>UserEntityListing</returns>
         
+        
         public UserEntityListing GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<UserEntityListing> localVarResponse = GetAuthorizationRoleUsersWithHttpInfo(roleId, pageSize, pageNumber);
@@ -5672,6 +5905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
+        
         
         public ApiResponse< UserEntityListing > GetAuthorizationRoleUsersWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -5760,6 +5994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of UserEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<UserEntityListing> GetAuthorizationRoleUsersAsync (string roleId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<UserEntityListing> localVarResponse = await GetAuthorizationRoleUsersAsyncWithHttpInfo(roleId, pageSize, pageNumber);
@@ -5775,6 +6010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetAuthorizationRoleUsersAsyncWithHttpInfo (string roleId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -5873,6 +6109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>OrganizationRoleEntityListing</returns>
         
+        
         public OrganizationRoleEntityListing GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = GetAuthorizationRolesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount, id);
@@ -5895,6 +6132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
+        
         
         public ApiResponse< OrganizationRoleEntityListing > GetAuthorizationRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
         { 
@@ -5996,6 +6234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetAuthorizationRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = await GetAuthorizationRolesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount, id);
@@ -6019,6 +6258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetAuthorizationRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
         { 
@@ -6110,6 +6350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthorizationSettings</returns>
         
+        
         public AuthorizationSettings GetAuthorizationSettings ()
         {
              ApiResponse<AuthorizationSettings> localVarResponse = GetAuthorizationSettingsWithHttpInfo();
@@ -6121,6 +6362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthorizationSettings</returns>
+        
         
         public ApiResponse< AuthorizationSettings > GetAuthorizationSettingsWithHttpInfo ()
         { 
@@ -6200,6 +6442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthorizationSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthorizationSettings> GetAuthorizationSettingsAsync ()
         {
              ApiResponse<AuthorizationSettings> localVarResponse = await GetAuthorizationSettingsAsyncWithHttpInfo();
@@ -6212,6 +6455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthorizationSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthorizationSettings>> GetAuthorizationSettingsAsyncWithHttpInfo ()
         { 
@@ -6293,6 +6537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>AuthzSubject</returns>
         
+        
         public AuthzSubject GetAuthorizationSubject (string subjectId)
         {
              ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectWithHttpInfo(subjectId);
@@ -6305,6 +6550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
+        
         
         public ApiResponse< AuthzSubject > GetAuthorizationSubjectWithHttpInfo (string subjectId)
         { 
@@ -6389,6 +6635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>Task of AuthzSubject</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId)
         {
              ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectAsyncWithHttpInfo(subjectId);
@@ -6402,6 +6649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId)
         { 
@@ -6487,6 +6735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthzSubject</returns>
         
+        
         public AuthzSubject GetAuthorizationSubjectsMe ()
         {
              ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectsMeWithHttpInfo();
@@ -6498,6 +6747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthzSubject</returns>
+        
         
         public ApiResponse< AuthzSubject > GetAuthorizationSubjectsMeWithHttpInfo ()
         { 
@@ -6577,6 +6827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthzSubject</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync ()
         {
              ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectsMeAsyncWithHttpInfo();
@@ -6589,6 +6840,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo ()
         { 
@@ -6670,6 +6922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
         
+        
         public Dictionary<string, Object> GetAuthorizationSubjectsRolecounts (List<string> id = null)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = GetAuthorizationSubjectsRolecountsWithHttpInfo(id);
@@ -6682,6 +6935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         
         public ApiResponse< Dictionary<string, Object> > GetAuthorizationSubjectsRolecountsWithHttpInfo (List<string> id = null)
         { 
@@ -6763,6 +7017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetAuthorizationSubjectsRolecountsAsync (List<string> id = null)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = await GetAuthorizationSubjectsRolecountsAsyncWithHttpInfo(id);
@@ -6776,6 +7031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetAuthorizationSubjectsRolecountsAsyncWithHttpInfo (List<string> id = null)
         { 
@@ -6858,6 +7114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <returns>UserAuthorization</returns>
         
+        
         public UserAuthorization GetUserRoles (string subjectId)
         {
              ApiResponse<UserAuthorization> localVarResponse = GetUserRolesWithHttpInfo(subjectId);
@@ -6870,6 +7127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         
         public ApiResponse< UserAuthorization > GetUserRolesWithHttpInfo (string subjectId)
         { 
@@ -6954,6 +7212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
         
+        
         public async System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string subjectId)
         {
              ApiResponse<UserAuthorization> localVarResponse = await GetUserRolesAsyncWithHttpInfo(subjectId);
@@ -6967,6 +7226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string subjectId)
         { 
@@ -7054,6 +7314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
         
+        
         public DomainOrganizationRole PatchAuthorizationRole (string roleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = PatchAuthorizationRoleWithHttpInfo(roleId, body);
@@ -7067,6 +7328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
+        
         
         public ApiResponse< DomainOrganizationRole > PatchAuthorizationRoleWithHttpInfo (string roleId, DomainOrganizationRole body)
         { 
@@ -7161,6 +7423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainOrganizationRole> PatchAuthorizationRoleAsync (string roleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await PatchAuthorizationRoleAsyncWithHttpInfo(roleId, body);
@@ -7175,6 +7438,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchAuthorizationRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body)
         { 
@@ -7271,6 +7535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Authorization Settings</param>
         /// <returns>AuthorizationSettings</returns>
         
+        
         public AuthorizationSettings PatchAuthorizationSettings (AuthorizationSettings body)
         {
              ApiResponse<AuthorizationSettings> localVarResponse = PatchAuthorizationSettingsWithHttpInfo(body);
@@ -7283,6 +7548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Authorization Settings</param>
         /// <returns>ApiResponse of AuthorizationSettings</returns>
+        
         
         public ApiResponse< AuthorizationSettings > PatchAuthorizationSettingsWithHttpInfo (AuthorizationSettings body)
         { 
@@ -7372,6 +7638,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Authorization Settings</param>
         /// <returns>Task of AuthorizationSettings</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthorizationSettings> PatchAuthorizationSettingsAsync (AuthorizationSettings body)
         {
              ApiResponse<AuthorizationSettings> localVarResponse = await PatchAuthorizationSettingsAsyncWithHttpInfo(body);
@@ -7385,6 +7652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Authorization Settings</param>
         /// <returns>Task of ApiResponse (AuthorizationSettings)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthorizationSettings>> PatchAuthorizationSettingsAsyncWithHttpInfo (AuthorizationSettings body)
         { 
@@ -7478,6 +7746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Object Id List</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body)
         {
              PostAuthorizationDivisionObjectWithHttpInfo(divisionId, objectType, body);
@@ -7491,6 +7760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationDivisionObjectWithHttpInfo (string divisionId, string objectType, List<string> body)
         { 
@@ -7590,6 +7860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Object Id List</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationDivisionObjectAsync (string divisionId, string objectType, List<string> body)
         {
              await PostAuthorizationDivisionObjectAsyncWithHttpInfo(divisionId, objectType, body);
@@ -7604,6 +7875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationDivisionObjectAsyncWithHttpInfo (string divisionId, string objectType, List<string> body)
         { 
@@ -7706,6 +7978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recreated division data</param>
         /// <returns>AuthzDivision</returns>
         
+        
         public AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = PostAuthorizationDivisionRestoreWithHttpInfo(divisionId, body);
@@ -7719,6 +7992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         
         public ApiResponse< AuthzDivision > PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body)
         { 
@@ -7813,6 +8087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recreated division data</param>
         /// <returns>Task of AuthzDivision</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = await PostAuthorizationDivisionRestoreAsyncWithHttpInfo(divisionId, body);
@@ -7827,6 +8102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body)
         { 
@@ -7923,6 +8199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Division</param>
         /// <returns>AuthzDivision</returns>
         
+        
         public AuthzDivision PostAuthorizationDivisions (AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = PostAuthorizationDivisionsWithHttpInfo(body);
@@ -7935,6 +8212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         
         public ApiResponse< AuthzDivision > PostAuthorizationDivisionsWithHttpInfo (AuthzDivision body)
         { 
@@ -8024,6 +8302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Division</param>
         /// <returns>Task of AuthzDivision</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionsAsync (AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = await PostAuthorizationDivisionsAsyncWithHttpInfo(body);
@@ -8037,6 +8316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionsAsyncWithHttpInfo (AuthzDivision body)
         { 
@@ -8130,6 +8410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null)
         {
              PostAuthorizationRoleWithHttpInfo(roleId, body, subjectType);
@@ -8143,6 +8424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Subjects and Divisions</param>
         /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationRoleWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null)
         { 
@@ -8239,6 +8521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationRoleAsync (string roleId, SubjectDivisions body, string subjectType = null)
         {
              await PostAuthorizationRoleAsyncWithHttpInfo(roleId, body, subjectType);
@@ -8253,6 +8536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Subjects and Divisions</param>
         /// <param name="subjectType">what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationRoleAsyncWithHttpInfo (string roleId, SubjectDivisions body, string subjectType = null)
         { 
@@ -8352,6 +8636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrgRoleDifference</returns>
         
+        
         public DomainOrgRoleDifference PostAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrgRoleDifference> localVarResponse = PostAuthorizationRoleComparedefaultRightRoleIdWithHttpInfo(leftRoleId, rightRoleId, body);
@@ -8366,6 +8651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
+        
         
         public ApiResponse< DomainOrgRoleDifference > PostAuthorizationRoleComparedefaultRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
         { 
@@ -8465,6 +8751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainOrgRoleDifference> PostAuthorizationRoleComparedefaultRightRoleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrgRoleDifference> localVarResponse = await PostAuthorizationRoleComparedefaultRightRoleIdAsyncWithHttpInfo(leftRoleId, rightRoleId, body);
@@ -8480,6 +8767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostAuthorizationRoleComparedefaultRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
         { 
@@ -8581,6 +8869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
         
+        
         public DomainOrganizationRole PostAuthorizationRoles (DomainOrganizationRoleCreate body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = PostAuthorizationRolesWithHttpInfo(body);
@@ -8593,6 +8882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
+        
         
         public ApiResponse< DomainOrganizationRole > PostAuthorizationRolesWithHttpInfo (DomainOrganizationRoleCreate body)
         { 
@@ -8682,6 +8972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainOrganizationRole> PostAuthorizationRolesAsync (DomainOrganizationRoleCreate body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await PostAuthorizationRolesAsyncWithHttpInfo(body);
@@ -8695,6 +8986,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostAuthorizationRolesAsyncWithHttpInfo (DomainOrganizationRoleCreate body)
         { 
@@ -8786,6 +9078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>OrganizationRoleEntityListing</returns>
         
+        
         public OrganizationRoleEntityListing PostAuthorizationRolesDefault (bool? force = null)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = PostAuthorizationRolesDefaultWithHttpInfo(force);
@@ -8798,6 +9091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
+        
         
         public ApiResponse< OrganizationRoleEntityListing > PostAuthorizationRolesDefaultWithHttpInfo (bool? force = null)
         { 
@@ -8879,6 +9173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> PostAuthorizationRolesDefaultAsync (bool? force = null)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = await PostAuthorizationRolesDefaultAsyncWithHttpInfo(force);
@@ -8892,6 +9187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PostAuthorizationRolesDefaultAsyncWithHttpInfo (bool? force = null)
         { 
@@ -8976,6 +9272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationSubjectBulkadd (string subjectId, RoleDivisionGrants body, string subjectType = null)
         {
              PostAuthorizationSubjectBulkaddWithHttpInfo(subjectId, body, subjectType);
@@ -8989,6 +9286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationSubjectBulkaddWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null)
         { 
@@ -9085,6 +9383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationSubjectBulkaddAsync (string subjectId, RoleDivisionGrants body, string subjectType = null)
         {
              await PostAuthorizationSubjectBulkaddAsyncWithHttpInfo(subjectId, body, subjectType);
@@ -9099,6 +9398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkaddAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null)
         { 
@@ -9197,6 +9497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationSubjectBulkremove (string subjectId, RoleDivisionGrants body)
         {
              PostAuthorizationSubjectBulkremoveWithHttpInfo(subjectId, body);
@@ -9209,6 +9510,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationSubjectBulkremoveWithHttpInfo (string subjectId, RoleDivisionGrants body)
         { 
@@ -9303,6 +9605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationSubjectBulkremoveAsync (string subjectId, RoleDivisionGrants body)
         {
              await PostAuthorizationSubjectBulkremoveAsyncWithHttpInfo(subjectId, body);
@@ -9316,6 +9619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="body">Pairs of role and division IDs</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkremoveAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body)
         { 
@@ -9414,6 +9718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationSubjectBulkreplace (string subjectId, RoleDivisionGrants body, string subjectType = null)
         {
              PostAuthorizationSubjectBulkreplaceWithHttpInfo(subjectId, body, subjectType);
@@ -9427,6 +9732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationSubjectBulkreplaceWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null)
         { 
@@ -9523,6 +9829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationSubjectBulkreplaceAsync (string subjectId, RoleDivisionGrants body, string subjectType = null)
         {
              await PostAuthorizationSubjectBulkreplaceAsyncWithHttpInfo(subjectId, body, subjectType);
@@ -9537,6 +9844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairs of role and division IDs</param>
         /// <param name="subjectType">what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectBulkreplaceAsyncWithHttpInfo (string subjectId, RoleDivisionGrants body, string subjectType = null)
         { 
@@ -9637,6 +9945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns></returns>
         
+        
         public void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null)
         {
              PostAuthorizationSubjectDivisionRoleWithHttpInfo(subjectId, divisionId, roleId, subjectType);
@@ -9651,6 +9960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role to grant</param>
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null)
         { 
@@ -9747,6 +10057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostAuthorizationSubjectDivisionRoleAsync (string subjectId, string divisionId, string roleId, string subjectType = null)
         {
              await PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo(subjectId, divisionId, roleId, subjectType);
@@ -9762,6 +10073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">the id of the role to grant</param>
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null)
         { 
@@ -9860,6 +10172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated division data</param>
         /// <returns>AuthzDivision</returns>
         
+        
         public AuthzDivision PutAuthorizationDivision (string divisionId, AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = PutAuthorizationDivisionWithHttpInfo(divisionId, body);
@@ -9873,6 +10186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         
         public ApiResponse< AuthzDivision > PutAuthorizationDivisionWithHttpInfo (string divisionId, AuthzDivision body)
         { 
@@ -9967,6 +10281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated division data</param>
         /// <returns>Task of AuthzDivision</returns>
         
+        
         public async System.Threading.Tasks.Task<AuthzDivision> PutAuthorizationDivisionAsync (string divisionId, AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = await PutAuthorizationDivisionAsyncWithHttpInfo(divisionId, body);
@@ -9981,6 +10296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PutAuthorizationDivisionAsyncWithHttpInfo (string divisionId, AuthzDivision body)
         { 
@@ -10078,6 +10394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
         
+        
         public DomainOrganizationRole PutAuthorizationRole (string roleId, DomainOrganizationRoleUpdate body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = PutAuthorizationRoleWithHttpInfo(roleId, body);
@@ -10091,6 +10408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
+        
         
         public ApiResponse< DomainOrganizationRole > PutAuthorizationRoleWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body)
         { 
@@ -10185,6 +10503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainOrganizationRole> PutAuthorizationRoleAsync (string roleId, DomainOrganizationRoleUpdate body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await PutAuthorizationRoleAsyncWithHttpInfo(roleId, body);
@@ -10199,6 +10518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutAuthorizationRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body)
         { 
@@ -10296,6 +10616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>List&lt;string&gt;</returns>
         
+        
         public List<string> PutAuthorizationRoleUsersAdd (string roleId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = PutAuthorizationRoleUsersAddWithHttpInfo(roleId, body);
@@ -10309,6 +10630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         
         public ApiResponse< List<string> > PutAuthorizationRoleUsersAddWithHttpInfo (string roleId, List<string> body)
         { 
@@ -10403,6 +10725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<string>> PutAuthorizationRoleUsersAddAsync (string roleId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = await PutAuthorizationRoleUsersAddAsyncWithHttpInfo(roleId, body);
@@ -10417,6 +10740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutAuthorizationRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body)
         { 
@@ -10514,6 +10838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>List&lt;string&gt;</returns>
         
+        
         public List<string> PutAuthorizationRoleUsersRemove (string roleId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = PutAuthorizationRoleUsersRemoveWithHttpInfo(roleId, body);
@@ -10527,6 +10852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         
         public ApiResponse< List<string> > PutAuthorizationRoleUsersRemoveWithHttpInfo (string roleId, List<string> body)
         { 
@@ -10621,6 +10947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<string>> PutAuthorizationRoleUsersRemoveAsync (string roleId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = await PutAuthorizationRoleUsersRemoveAsyncWithHttpInfo(roleId, body);
@@ -10635,6 +10962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutAuthorizationRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body)
         { 
@@ -10731,6 +11059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization roles list</param>
         /// <returns>OrganizationRoleEntityListing</returns>
         
+        
         public OrganizationRoleEntityListing PutAuthorizationRolesDefault (List<DomainOrganizationRole> body)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = PutAuthorizationRolesDefaultWithHttpInfo(body);
@@ -10743,6 +11072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization roles list</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
+        
         
         public ApiResponse< OrganizationRoleEntityListing > PutAuthorizationRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body)
         { 
@@ -10832,6 +11162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization roles list</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> PutAuthorizationRolesDefaultAsync (List<DomainOrganizationRole> body)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = await PutAuthorizationRolesDefaultAsyncWithHttpInfo(body);
@@ -10845,6 +11176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization roles list</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutAuthorizationRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body)
         { 
@@ -10937,6 +11269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
         
+        
         public UserAuthorization PutUserRoles (string subjectId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = PutUserRolesWithHttpInfo(subjectId, body);
@@ -10950,6 +11283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         
         public ApiResponse< UserAuthorization > PutUserRolesWithHttpInfo (string subjectId, List<string> body)
         { 
@@ -11044,6 +11378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
         
+        
         public async System.Threading.Tasks.Task<UserAuthorization> PutUserRolesAsync (string subjectId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = await PutUserRolesAsyncWithHttpInfo(subjectId, body);
@@ -11058,6 +11393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectId">User ID</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string subjectId, List<string> body)
         { 

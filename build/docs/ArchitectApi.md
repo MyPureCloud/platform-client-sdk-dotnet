@@ -66,6 +66,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsDatatablesDivisionviews**](ArchitectApi.html#getflowsdatatablesdivisionviews) | **GET** /api/v2/flows/datatables/divisionviews | Retrieve a list of datatables for the org |
 | [**GetFlowsDivisionviews**](ArchitectApi.html#getflowsdivisionviews) | **GET** /api/v2/flows/divisionviews | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**GetFlowsExecution**](ArchitectApi.html#getflowsexecution) | **GET** /api/v2/flows/executions/{flowExecutionId} | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
+| [**GetFlowsInstance**](ArchitectApi.html#getflowsinstance) | **GET** /api/v2/flows/instances/{instanceId} | Start a process (job) to prepare a download of a singular flow execution data instance by Id |
+| [**GetFlowsInstancesJob**](ArchitectApi.html#getflowsinstancesjob) | **GET** /api/v2/flows/instances/jobs/{jobId} | Get the status and/or results of an asynchronous flow execution data retrieval job |
+| [**GetFlowsInstancesQuerycapabilities**](ArchitectApi.html#getflowsinstancesquerycapabilities) | **GET** /api/v2/flows/instances/querycapabilities | Retrieve a list of capabilities that the org can use to query for execution data |
 | [**GetFlowsJob**](ArchitectApi.html#getflowsjob) | **GET** /api/v2/flows/jobs/{jobId} | Fetch Architect Job Status |
 | [**GetFlowsMilestone**](ArchitectApi.html#getflowsmilestone) | **GET** /api/v2/flows/milestones/{milestoneId} | Get a flow milestone |
 | [**GetFlowsMilestones**](ArchitectApi.html#getflowsmilestones) | **GET** /api/v2/flows/milestones | Get a pageable list of flow milestones, filtered by query parameters |
@@ -97,6 +100,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
 | [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **POST** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
 | [**PostFlowsExecutions**](ArchitectApi.html#postflowsexecutions) | **POST** /api/v2/flows/executions | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
+| [**PostFlowsInstancesJobs**](ArchitectApi.html#postflowsinstancesjobs) | **POST** /api/v2/flows/instances/jobs | Start a process (job) that will prepare a list of execution data IDs for download. |
+| [**PostFlowsInstancesQuery**](ArchitectApi.html#postflowsinstancesquery) | **POST** /api/v2/flows/instances/query | Query the database of existing flow histories to look for particular flow criteria |
 | [**PostFlowsJobs**](ArchitectApi.html#postflowsjobs) | **POST** /api/v2/flows/jobs | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
 | [**PostFlowsMilestones**](ArchitectApi.html#postflowsmilestones) | **POST** /api/v2/flows/milestones | Create a flow milestone |
 | [**PostFlowsOutcomes**](ArchitectApi.html#postflowsoutcomes) | **POST** /api/v2/flows/outcomes | Create a flow outcome |
@@ -4301,6 +4306,207 @@ namespace Example
 
 [**FlowRuntimeExecution**](FlowRuntimeExecution.html)
 
+<a name="getflowsinstance"></a>
+
+## [**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html) GetFlowsInstance (string instanceId, string expand = null)
+
+
+
+Start a process (job) to prepare a download of a singular flow execution data instance by Id
+
+Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
+
+
+
+Requires ANY permissions: 
+
+* architect:flowInstance:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsInstanceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var instanceId = instanceId_example;  // string | Instance ID
+            var expand = expand_example;  // string | Expand various details. (optional) 
+
+            try
+            { 
+                // Start a process (job) to prepare a download of a singular flow execution data instance by Id
+                GetFlowExecutionDataJobResult result = apiInstance.GetFlowsInstance(instanceId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsInstance: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **instanceId** | **string**| Instance ID |  |
+| **expand** | **string**| Expand various details. | [optional] <br />**Values**: bots, data |
+{: class="table table-striped"}
+
+### Return type
+
+[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html)
+
+<a name="getflowsinstancesjob"></a>
+
+## [**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html) GetFlowsInstancesJob (string jobId)
+
+
+
+Get the status and/or results of an asynchronous flow execution data retrieval job
+
+
+
+Requires ANY permissions: 
+
+* architect:flowInstance:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsInstancesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var jobId = jobId_example;  // string | The asynchronous job ID
+
+            try
+            { 
+                // Get the status and/or results of an asynchronous flow execution data retrieval job
+                GetFlowExecutionDataJobResult result = apiInstance.GetFlowsInstancesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsInstancesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The asynchronous job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html)
+
+<a name="getflowsinstancesquerycapabilities"></a>
+
+## [**FlowsQueryCriteriaResponse**](FlowsQueryCriteriaResponse.html) GetFlowsInstancesQuerycapabilities (string expand = null)
+
+
+
+Retrieve a list of capabilities that the org can use to query for execution data
+
+Returns the queryable parameters that can be used to build a query for execution data.
+
+
+
+Requires ANY permissions: 
+
+* architect:flowInstance:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsInstancesQuerycapabilitiesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var expand = expand_example;  // string | Expand various query types. (optional) 
+
+            try
+            { 
+                // Retrieve a list of capabilities that the org can use to query for execution data
+                FlowsQueryCriteriaResponse result = apiInstance.GetFlowsInstancesQuerycapabilities(expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsInstancesQuerycapabilities: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | **string**| Expand various query types. | [optional] <br />**Values**: flow, action |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowsQueryCriteriaResponse**](FlowsQueryCriteriaResponse.html)
+
 <a name="getflowsjob"></a>
 
 ## [**ArchitectJobStateResponse**](ArchitectJobStateResponse.html) GetFlowsJob (string jobId, List<string> expand = null)
@@ -6422,6 +6628,144 @@ namespace Example
 ### Return type
 
 [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html)
+
+<a name="postflowsinstancesjobs"></a>
+
+## [**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html) PostFlowsInstancesJobs (ExecutionDataRequest body, string expand = null)
+
+
+
+Start a process (job) that will prepare a list of execution data IDs for download.
+
+Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
+
+
+
+Requires ANY permissions: 
+
+* architect:flowInstance:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsInstancesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var body = new ExecutionDataRequest(); // ExecutionDataRequest | Requested Flow Ids
+            var expand = expand_example;  // string | Expand various query types. (optional) 
+
+            try
+            { 
+                // Start a process (job) that will prepare a list of execution data IDs for download.
+                GetFlowExecutionDataJobResult result = apiInstance.PostFlowsInstancesJobs(body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsInstancesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ExecutionDataRequest**](ExecutionDataRequest.html)| Requested Flow Ids |  |
+| **expand** | **string**| Expand various query types. | [optional] <br />**Values**: bots, data |
+{: class="table table-striped"}
+
+### Return type
+
+[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html)
+
+<a name="postflowsinstancesquery"></a>
+
+## [**FlowResultEntityListing**](FlowResultEntityListing.html) PostFlowsInstancesQuery (CriteriaQuery body, bool? indexOnly = null)
+
+
+
+Query the database of existing flow histories to look for particular flow criteria
+
+Returns a list of matching flow histories up to 200 max.
+
+
+
+Requires ANY permissions: 
+
+* architect:flowInstance:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsInstancesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var body = new CriteriaQuery(); // CriteriaQuery | query
+            var indexOnly = true;  // bool? | indexes only (optional) 
+
+            try
+            { 
+                // Query the database of existing flow histories to look for particular flow criteria
+                FlowResultEntityListing result = apiInstance.PostFlowsInstancesQuery(body, indexOnly);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsInstancesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CriteriaQuery**](CriteriaQuery.html)| query |  |
+| **indexOnly** | **bool?**| indexes only | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowResultEntityListing**](FlowResultEntityListing.html)
 
 <a name="postflowsjobs"></a>
 

@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns></returns>
         
+        
         void DeleteTelephonyProvidersEdge (string edgeId);
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteTelephonyProvidersEdgeWithHttpInfo (string edgeId);
 
@@ -51,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns></returns>
         
+        
         void DeleteTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId);
 
         /// <summary>
@@ -64,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId);
 
         /// <summary>
@@ -75,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns></returns>
+        
         
         void DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId);
 
@@ -88,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -99,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns></returns>
+        
         
         void DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId);
 
@@ -112,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId);
 
         /// <summary>
@@ -123,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns></returns>
+        
         
         void DeleteTelephonyProvidersEdgesDidpool (string didPoolId);
 
@@ -136,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId);
 
         /// <summary>
@@ -147,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns></returns>
+        
         
         void DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId);
 
@@ -160,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId);
 
         /// <summary>
@@ -171,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns></returns>
+        
         
         void DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId);
 
@@ -184,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId);
 
         /// <summary>
@@ -195,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
         /// <returns></returns>
+        
         
         void DeleteTelephonyProvidersEdgesPhone (string phoneId);
 
@@ -208,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId);
 
         /// <summary>
@@ -219,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns></returns>
+        
         
         void DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId);
 
@@ -232,6 +249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId);
 
         /// <summary>
@@ -244,6 +262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns></returns>
         
+        
         void DeleteTelephonyProvidersEdgesSite (string siteId);
 
         /// <summary>
@@ -255,6 +274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteTelephonyProvidersEdgesSiteWithHttpInfo (string siteId);
 
@@ -269,6 +289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns></returns>
         
+        
         void DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId);
 
         /// <summary>
@@ -282,6 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId);
 
         /// <summary>
@@ -294,6 +316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns></returns>
         
+        
         void DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId);
 
         /// <summary>
@@ -305,6 +328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId);
 
@@ -319,6 +343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Edge</returns>
         
+        
         Edge GetTelephonyProvidersEdge (string edgeId, List<string> expand = null);
 
         /// <summary>
@@ -332,6 +357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of Edge</returns>
         
+        
         ApiResponse<Edge> GetTelephonyProvidersEdgeWithHttpInfo (string edgeId, List<string> expand = null);
 
         /// <summary>
@@ -343,6 +369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        
         
         EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticNslookup (string edgeId);
 
@@ -356,6 +383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
         
+        
         ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -367,6 +395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        
         
         EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticPing (string edgeId);
 
@@ -380,6 +409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
         
+        
         ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticPingWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -391,6 +421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeNetworkDiagnosticResponse</returns>
+        
         
         EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticRoute (string edgeId);
 
@@ -404,6 +435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
         
+        
         ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -416,6 +448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeNetworkDiagnosticResponse</returns>
         
+        
         EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticTracepath (string edgeId);
 
         /// <summary>
@@ -427,6 +460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        
         
         ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId);
 
@@ -442,6 +476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>DomainLogicalInterface</returns>
         
+        
         DomainLogicalInterface GetTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId, List<string> expand = null);
 
         /// <summary>
@@ -456,6 +491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
         
+        
         ApiResponse<DomainLogicalInterface> GetTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId, List<string> expand = null);
 
         /// <summary>
@@ -468,6 +504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>LogicalInterfaceEntityListing</returns>
+        
         
         LogicalInterfaceEntityListing GetTelephonyProvidersEdgeLogicalinterfaces (string edgeId, List<string> expand = null);
 
@@ -482,6 +519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of LogicalInterfaceEntityListing</returns>
         
+        
         ApiResponse<LogicalInterfaceEntityListing> GetTelephonyProvidersEdgeLogicalinterfacesWithHttpInfo (string edgeId, List<string> expand = null);
 
         /// <summary>
@@ -494,6 +532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
         /// <returns>EdgeLogsJob</returns>
+        
         
         EdgeLogsJob GetTelephonyProvidersEdgeLogsJob (string edgeId, string jobId);
 
@@ -508,6 +547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <returns>ApiResponse of EdgeLogsJob</returns>
         
+        
         ApiResponse<EdgeLogsJob> GetTelephonyProvidersEdgeLogsJobWithHttpInfo (string edgeId, string jobId);
 
         /// <summary>
@@ -520,6 +560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeMetrics</returns>
         
+        
         EdgeMetrics GetTelephonyProvidersEdgeMetrics (string edgeId);
 
         /// <summary>
@@ -531,6 +572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeMetrics</returns>
+        
         
         ApiResponse<EdgeMetrics> GetTelephonyProvidersEdgeMetricsWithHttpInfo (string edgeId);
 
@@ -545,6 +587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>DomainPhysicalInterface</returns>
         
+        
         DomainPhysicalInterface GetTelephonyProvidersEdgePhysicalinterface (string edgeId, string interfaceId);
 
         /// <summary>
@@ -558,6 +601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>ApiResponse of DomainPhysicalInterface</returns>
         
+        
         ApiResponse<DomainPhysicalInterface> GetTelephonyProvidersEdgePhysicalinterfaceWithHttpInfo (string edgeId, string interfaceId);
 
         /// <summary>
@@ -569,6 +613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>PhysicalInterfaceEntityListing</returns>
+        
         
         PhysicalInterfaceEntityListing GetTelephonyProvidersEdgePhysicalinterfaces (string edgeId);
 
@@ -582,6 +627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of PhysicalInterfaceEntityListing</returns>
         
+        
         ApiResponse<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgePhysicalinterfacesWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -593,6 +639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>VmPairingInfo</returns>
+        
         
         VmPairingInfo GetTelephonyProvidersEdgeSetuppackage (string edgeId);
 
@@ -606,6 +653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of VmPairingInfo</returns>
         
+        
         ApiResponse<VmPairingInfo> GetTelephonyProvidersEdgeSetuppackageWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -617,6 +665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
+        
         
         DomainEdgeSoftwareUpdateDto GetTelephonyProvidersEdgeSoftwareupdate (string edgeId);
 
@@ -630,6 +679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
         
+        
         ApiResponse<DomainEdgeSoftwareUpdateDto> GetTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -642,6 +692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>DomainEdgeSoftwareVersionDtoEntityListing</returns>
         
+        
         DomainEdgeSoftwareVersionDtoEntityListing GetTelephonyProvidersEdgeSoftwareversions (string edgeId);
 
         /// <summary>
@@ -653,6 +704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareVersionDtoEntityListing</returns>
+        
         
         ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing> GetTelephonyProvidersEdgeSoftwareversionsWithHttpInfo (string edgeId);
 
@@ -672,6 +724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>TrunkEntityListing</returns>
         
+        
         TrunkEntityListing GetTelephonyProvidersEdgeTrunks (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null);
 
         /// <summary>
@@ -689,6 +742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>ApiResponse of TrunkEntityListing</returns>
+        
         
         ApiResponse<TrunkEntityListing> GetTelephonyProvidersEdgeTrunksWithHttpInfo (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null);
 
@@ -709,6 +763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>EdgeEntityListing</returns>
         
+        
         EdgeEntityListing GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
@@ -728,6 +783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>ApiResponse of EdgeEntityListing</returns>
         
+        
         ApiResponse<EdgeEntityListing> GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
@@ -738,6 +794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AvailableLanguageList</returns>
+        
         
         AvailableLanguageList GetTelephonyProvidersEdgesAvailablelanguages ();
 
@@ -750,6 +807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AvailableLanguageList</returns>
         
+        
         ApiResponse<AvailableLanguageList> GetTelephonyProvidersEdgesAvailablelanguagesWithHttpInfo ();
 
         /// <summary>
@@ -761,6 +819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CertificateAuthorityEntityListing</returns>
         
+        
         CertificateAuthorityEntityListing GetTelephonyProvidersEdgesCertificateauthorities ();
 
         /// <summary>
@@ -771,6 +830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CertificateAuthorityEntityListing</returns>
+        
         
         ApiResponse<CertificateAuthorityEntityListing> GetTelephonyProvidersEdgesCertificateauthoritiesWithHttpInfo ();
 
@@ -784,6 +844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>DomainCertificateAuthority</returns>
         
+        
         DomainCertificateAuthority GetTelephonyProvidersEdgesCertificateauthority (string certificateId);
 
         /// <summary>
@@ -795,6 +856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
+        
         
         ApiResponse<DomainCertificateAuthority> GetTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId);
 
@@ -808,6 +870,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didId">DID ID</param>
         /// <returns>DID</returns>
         
+        
         DID GetTelephonyProvidersEdgesDid (string didId);
 
         /// <summary>
@@ -819,6 +882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
         /// <returns>ApiResponse of DID</returns>
+        
         
         ApiResponse<DID> GetTelephonyProvidersEdgesDidWithHttpInfo (string didId);
 
@@ -832,6 +896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>DIDPool</returns>
         
+        
         DIDPool GetTelephonyProvidersEdgesDidpool (string didPoolId);
 
         /// <summary>
@@ -843,6 +908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>ApiResponse of DIDPool</returns>
+        
         
         ApiResponse<DIDPool> GetTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId);
 
@@ -859,6 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>DIDPoolEntityListing</returns>
         
+        
         DIDPoolEntityListing GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
 
         /// <summary>
@@ -873,6 +940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "number")</param>
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>ApiResponse of DIDPoolEntityListing</returns>
+        
         
         ApiResponse<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
 
@@ -891,6 +959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>DIDNumberEntityListing</returns>
         
+        
         DIDNumberEntityListing GetTelephonyProvidersEdgesDidpoolsDids (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -907,6 +976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>ApiResponse of DIDNumberEntityListing</returns>
+        
         
         ApiResponse<DIDNumberEntityListing> GetTelephonyProvidersEdgesDidpoolsDidsWithHttpInfo (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -927,6 +997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>DIDEntityListing</returns>
         
+        
         DIDEntityListing GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null);
 
         /// <summary>
@@ -946,6 +1017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>ApiResponse of DIDEntityListing</returns>
         
+        
         ApiResponse<DIDEntityListing> GetTelephonyProvidersEdgesDidsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null);
 
         /// <summary>
@@ -958,6 +1030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>EdgeGroup</returns>
+        
         
         EdgeGroup GetTelephonyProvidersEdgesEdgegroup (string edgeGroupId, List<string> expand = null);
 
@@ -972,6 +1045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
         
+        
         ApiResponse<EdgeGroup> GetTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId, List<string> expand = null);
 
         /// <summary>
@@ -985,6 +1059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>EdgeTrunkBase</returns>
         
+        
         EdgeTrunkBase GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId);
 
         /// <summary>
@@ -997,6 +1072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>ApiResponse of EdgeTrunkBase</returns>
+        
         
         ApiResponse<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo (string edgegroupId, string edgetrunkbaseId);
 
@@ -1014,6 +1090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>EdgeGroupEntityListing</returns>
         
+        
         EdgeGroupEntityListing GetTelephonyProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null);
 
         /// <summary>
@@ -1030,6 +1107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of EdgeGroupEntityListing</returns>
         
+        
         ApiResponse<EdgeGroupEntityListing> GetTelephonyProvidersEdgesEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null);
 
         /// <summary>
@@ -1040,6 +1118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EdgeVersionReport</returns>
+        
         
         EdgeVersionReport GetTelephonyProvidersEdgesEdgeversionreport ();
 
@@ -1052,6 +1131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EdgeVersionReport</returns>
         
+        
         ApiResponse<EdgeVersionReport> GetTelephonyProvidersEdgesEdgeversionreportWithHttpInfo ();
 
         /// <summary>
@@ -1063,6 +1143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ExpiredEdgeListing</returns>
         
+        
         ExpiredEdgeListing GetTelephonyProvidersEdgesExpired ();
 
         /// <summary>
@@ -1073,6 +1154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ExpiredEdgeListing</returns>
+        
         
         ApiResponse<ExpiredEdgeListing> GetTelephonyProvidersEdgesExpiredWithHttpInfo ();
 
@@ -1086,6 +1168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Extension</returns>
         
+        
         Extension GetTelephonyProvidersEdgesExtension (string extensionId);
 
         /// <summary>
@@ -1097,6 +1180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>ApiResponse of Extension</returns>
+        
         
         ApiResponse<Extension> GetTelephonyProvidersEdgesExtensionWithHttpInfo (string extensionId);
 
@@ -1110,6 +1194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ExtensionPool</returns>
         
+        
         ExtensionPool GetTelephonyProvidersEdgesExtensionpool (string extensionPoolId);
 
         /// <summary>
@@ -1121,6 +1206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
+        
         
         ApiResponse<ExtensionPool> GetTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId);
 
@@ -1137,6 +1223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
         /// <returns>ExtensionPoolEntityListing</returns>
         
+        
         ExtensionPoolEntityListing GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
 
         /// <summary>
@@ -1152,7 +1239,46 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
         /// <returns>ApiResponse of ExtensionPoolEntityListing</returns>
         
+        
         ApiResponse<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
+
+        /// <summary>
+        /// Get a pageable list of basic extension pool objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Extension Pools to filter by. (optional)</param>
+        /// <param name="name">Name of the Extension Pools to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ExtensionPoolDivisionViewEntityListing</returns>
+        
+        /// Preview Endpoint
+        ExtensionPoolDivisionViewEntityListing GetTelephonyProvidersEdgesExtensionpoolsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic extension pool objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Extension Pools to filter by. (optional)</param>
+        /// <param name="name">Name of the Extension Pools to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of ExtensionPoolDivisionViewEntityListing</returns>
+        
+        /// Preview Endpoint
+        ApiResponse<ExtensionPoolDivisionViewEntityListing> GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a listing of extensions
@@ -1167,6 +1293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="number">Filter by number (optional)</param>
         /// <returns>ExtensionEntityListing</returns>
+        
         
         ExtensionEntityListing GetTelephonyProvidersEdgesExtensions (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null);
 
@@ -1184,6 +1311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Filter by number (optional)</param>
         /// <returns>ApiResponse of ExtensionEntityListing</returns>
         
+        
         ApiResponse<ExtensionEntityListing> GetTelephonyProvidersEdgesExtensionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null);
 
         /// <summary>
@@ -1195,6 +1323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineId">Line ID</param>
         /// <returns>Line</returns>
+        
         
         Line GetTelephonyProvidersEdgesLine (string lineId);
 
@@ -1208,6 +1337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineId">Line ID</param>
         /// <returns>ApiResponse of Line</returns>
         
+        
         ApiResponse<Line> GetTelephonyProvidersEdgesLineWithHttpInfo (string lineId);
 
         /// <summary>
@@ -1220,6 +1350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>LineBase</returns>
         
+        
         LineBase GetTelephonyProvidersEdgesLinebasesetting (string lineBaseId);
 
         /// <summary>
@@ -1231,6 +1362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>ApiResponse of LineBase</returns>
+        
         
         ApiResponse<LineBase> GetTelephonyProvidersEdgesLinebasesettingWithHttpInfo (string lineBaseId);
 
@@ -1248,6 +1380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>LineBaseEntityListing</returns>
         
+        
         LineBaseEntityListing GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -1263,6 +1396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of LineBaseEntityListing</returns>
+        
         
         ApiResponse<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
@@ -1280,6 +1414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>LineEntityListing</returns>
         
+        
         LineEntityListing GetTelephonyProvidersEdgesLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
@@ -1296,6 +1431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>ApiResponse of LineEntityListing</returns>
         
+        
         ApiResponse<LineEntityListing> GetTelephonyProvidersEdgesLinesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
@@ -1308,6 +1444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Line</returns>
         
+        
         Line GetTelephonyProvidersEdgesLinesTemplate (string lineBaseSettingsId);
 
         /// <summary>
@@ -1319,6 +1456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>ApiResponse of Line</returns>
+        
         
         ApiResponse<Line> GetTelephonyProvidersEdgesLinesTemplateWithHttpInfo (string lineBaseSettingsId);
 
@@ -1333,6 +1471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>LogicalInterfaceEntityListing</returns>
         
+        
         LogicalInterfaceEntityListing GetTelephonyProvidersEdgesLogicalinterfaces (string edgeIds, List<string> expand = null);
 
         /// <summary>
@@ -1346,6 +1485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of LogicalInterfaceEntityListing</returns>
         
+        
         ApiResponse<LogicalInterfaceEntityListing> GetTelephonyProvidersEdgesLogicalinterfacesWithHttpInfo (string edgeIds, List<string> expand = null);
 
         /// <summary>
@@ -1357,6 +1497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>List&lt;EdgeMetrics&gt;</returns>
+        
         
         List<EdgeMetrics> GetTelephonyProvidersEdgesMetrics (string edgeIds);
 
@@ -1370,6 +1511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>ApiResponse of List&lt;EdgeMetrics&gt;</returns>
         
+        
         ApiResponse<List<EdgeMetrics>> GetTelephonyProvidersEdgesMetricsWithHttpInfo (string edgeIds);
 
         /// <summary>
@@ -1382,6 +1524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>OutboundRoute</returns>
         [Obsolete]
+        
         OutboundRoute GetTelephonyProvidersEdgesOutboundroute (string outboundRouteId);
 
         /// <summary>
@@ -1394,6 +1537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
         [Obsolete]
+        
         ApiResponse<OutboundRoute> GetTelephonyProvidersEdgesOutboundrouteWithHttpInfo (string outboundRouteId);
 
         /// <summary>
@@ -1410,6 +1554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>OutboundRouteEntityListing</returns>
+        
         
         OutboundRouteEntityListing GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null);
 
@@ -1428,6 +1573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>ApiResponse of OutboundRouteEntityListing</returns>
         
+        
         ApiResponse<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
@@ -1439,6 +1585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Phone</returns>
+        
         
         Phone GetTelephonyProvidersEdgesPhone (string phoneId);
 
@@ -1452,6 +1599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <returns>ApiResponse of Phone</returns>
         
+        
         ApiResponse<Phone> GetTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId);
 
         /// <summary>
@@ -1464,6 +1612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>PhoneBase</returns>
         
+        
         PhoneBase GetTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId);
 
         /// <summary>
@@ -1475,6 +1624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>ApiResponse of PhoneBase</returns>
+        
         
         ApiResponse<PhoneBase> GetTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId);
 
@@ -1493,6 +1643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>PhoneBaseEntityListing</returns>
         
+        
         PhoneBaseEntityListing GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null);
 
         /// <summary>
@@ -1510,6 +1661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of PhoneBaseEntityListing</returns>
         
+        
         ApiResponse<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null);
 
         /// <summary>
@@ -1522,6 +1674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>PhoneMetaBaseEntityListing</returns>
+        
         
         PhoneMetaBaseEntityListing GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabases (int? pageSize = null, int? pageNumber = null);
 
@@ -1536,6 +1689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of PhoneMetaBaseEntityListing</returns>
         
+        
         ApiResponse<PhoneMetaBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1548,6 +1702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>PhoneBase</returns>
         
+        
         PhoneBase GetTelephonyProvidersEdgesPhonebasesettingsTemplate (string phoneMetabaseId);
 
         /// <summary>
@@ -1559,6 +1714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
+        
         
         ApiResponse<PhoneBase> GetTelephonyProvidersEdgesPhonebasesettingsTemplateWithHttpInfo (string phoneMetabaseId);
 
@@ -1588,6 +1744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>PhoneEntityListing</returns>
         
+        
         PhoneEntityListing GetTelephonyProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
@@ -1616,6 +1773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of PhoneEntityListing</returns>
         
+        
         ApiResponse<PhoneEntityListing> GetTelephonyProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
@@ -1627,6 +1785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Phone</returns>
+        
         
         Phone GetTelephonyProvidersEdgesPhonesTemplate (string phoneBaseSettingsId);
 
@@ -1640,6 +1799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>ApiResponse of Phone</returns>
         
+        
         ApiResponse<Phone> GetTelephonyProvidersEdgesPhonesTemplateWithHttpInfo (string phoneBaseSettingsId);
 
         /// <summary>
@@ -1651,6 +1811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>PhysicalInterfaceEntityListing</returns>
+        
         
         PhysicalInterfaceEntityListing GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds);
 
@@ -1664,6 +1825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>ApiResponse of PhysicalInterfaceEntityListing</returns>
         
+        
         ApiResponse<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo (string edgeIds);
 
         /// <summary>
@@ -1676,6 +1838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Site</returns>
         
+        
         Site GetTelephonyProvidersEdgesSite (string siteId);
 
         /// <summary>
@@ -1687,6 +1850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of Site</returns>
+        
         
         ApiResponse<Site> GetTelephonyProvidersEdgesSiteWithHttpInfo (string siteId);
 
@@ -1701,6 +1865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>NumberPlan</returns>
         
+        
         NumberPlan GetTelephonyProvidersEdgesSiteNumberplan (string siteId, string numberPlanId);
 
         /// <summary>
@@ -1714,6 +1879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>ApiResponse of NumberPlan</returns>
         
+        
         ApiResponse<NumberPlan> GetTelephonyProvidersEdgesSiteNumberplanWithHttpInfo (string siteId, string numberPlanId);
 
         /// <summary>
@@ -1726,6 +1892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>List&lt;NumberPlan&gt;</returns>
         
+        
         List<NumberPlan> GetTelephonyProvidersEdgesSiteNumberplans (string siteId);
 
         /// <summary>
@@ -1737,6 +1904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
+        
         
         ApiResponse<List<NumberPlan>> GetTelephonyProvidersEdgesSiteNumberplansWithHttpInfo (string siteId);
 
@@ -1751,6 +1919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="classification">Classification (optional)</param>
         /// <returns>List&lt;string&gt;</returns>
         
+        
         List<string> GetTelephonyProvidersEdgesSiteNumberplansClassifications (string siteId, string classification = null);
 
         /// <summary>
@@ -1763,6 +1932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification (optional)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         
         ApiResponse<List<string>> GetTelephonyProvidersEdgesSiteNumberplansClassificationsWithHttpInfo (string siteId, string classification = null);
 
@@ -1777,6 +1947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>OutboundRouteBase</returns>
         
+        
         OutboundRouteBase GetTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId);
 
         /// <summary>
@@ -1789,6 +1960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>ApiResponse of OutboundRouteBase</returns>
+        
         
         ApiResponse<OutboundRouteBase> GetTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId);
 
@@ -1807,6 +1979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>OutboundRouteBaseEntityListing</returns>
         
+        
         OutboundRouteBaseEntityListing GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
@@ -1823,6 +1996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>ApiResponse of OutboundRouteBaseEntityListing</returns>
+        
         
         ApiResponse<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
 
@@ -1842,6 +2016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>SiteEntityListing</returns>
         
+        
         SiteEntityListing GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
 
         /// <summary>
@@ -1860,6 +2035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of SiteEntityListing</returns>
         
+        
         ApiResponse<SiteEntityListing> GetTelephonyProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
 
         /// <summary>
@@ -1872,6 +2048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 1000)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TimeZoneEntityListing</returns>
+        
         
         TimeZoneEntityListing GetTelephonyProvidersEdgesTimezones (int? pageSize = null, int? pageNumber = null);
 
@@ -1886,6 +2063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
         
+        
         ApiResponse<TimeZoneEntityListing> GetTelephonyProvidersEdgesTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1897,6 +2075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>Trunk</returns>
+        
         
         Trunk GetTelephonyProvidersEdgesTrunk (string trunkId);
 
@@ -1910,6 +2089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>ApiResponse of Trunk</returns>
         
+        
         ApiResponse<Trunk> GetTelephonyProvidersEdgesTrunkWithHttpInfo (string trunkId);
 
         /// <summary>
@@ -1922,6 +2102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkId">Trunk Id</param>
         /// <returns>TrunkMetrics</returns>
         
+        
         TrunkMetrics GetTelephonyProvidersEdgesTrunkMetrics (string trunkId);
 
         /// <summary>
@@ -1933,6 +2114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkId">Trunk Id</param>
         /// <returns>ApiResponse of TrunkMetrics</returns>
+        
         
         ApiResponse<TrunkMetrics> GetTelephonyProvidersEdgesTrunkMetricsWithHttpInfo (string trunkId);
 
@@ -1947,6 +2129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>TrunkBase</returns>
         
+        
         TrunkBase GetTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId, bool? ignoreHidden = null);
 
         /// <summary>
@@ -1959,6 +2142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>ApiResponse of TrunkBase</returns>
+        
         
         ApiResponse<TrunkBase> GetTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId, bool? ignoreHidden = null);
 
@@ -1980,6 +2164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the TrunkBase to filter by (optional)</param>
         /// <returns>TrunkBaseEntityListing</returns>
         
+        
         TrunkBaseEntityListing GetTelephonyProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null);
 
         /// <summary>
@@ -2000,6 +2185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the TrunkBase to filter by (optional)</param>
         /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
         
+        
         ApiResponse<TrunkBaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null);
 
         /// <summary>
@@ -2013,6 +2199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>TrunkMetabaseEntityListing</returns>
+        
         
         TrunkMetabaseEntityListing GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases (string type = null, int? pageSize = null, int? pageNumber = null);
 
@@ -2028,6 +2215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>ApiResponse of TrunkMetabaseEntityListing</returns>
         
+        
         ApiResponse<TrunkMetabaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -2040,6 +2228,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>TrunkBase</returns>
         
+        
         TrunkBase GetTelephonyProvidersEdgesTrunkbasesettingsTemplate (string trunkMetabaseId);
 
         /// <summary>
@@ -2051,6 +2240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
+        
         
         ApiResponse<TrunkBase> GetTelephonyProvidersEdgesTrunkbasesettingsTemplateWithHttpInfo (string trunkMetabaseId);
 
@@ -2070,6 +2260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>TrunkEntityListing</returns>
         
+        
         TrunkEntityListing GetTelephonyProvidersEdgesTrunks (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null);
 
         /// <summary>
@@ -2088,6 +2279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>ApiResponse of TrunkEntityListing</returns>
         
+        
         ApiResponse<TrunkEntityListing> GetTelephonyProvidersEdgesTrunksWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null);
 
         /// <summary>
@@ -2099,6 +2291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkIds">Comma separated list of Trunk Id&#39;s</param>
         /// <returns>List&lt;TrunkMetrics&gt;</returns>
+        
         
         List<TrunkMetrics> GetTelephonyProvidersEdgesTrunksMetrics (string trunkIds);
 
@@ -2112,6 +2305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkIds">Comma separated list of Trunk Id&#39;s</param>
         /// <returns>ApiResponse of List&lt;TrunkMetrics&gt;</returns>
         
+        
         ApiResponse<List<TrunkMetrics>> GetTelephonyProvidersEdgesTrunksMetricsWithHttpInfo (string trunkIds);
 
         /// <summary>
@@ -2124,6 +2318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>TrunkRecordingEnabledCount</returns>
         
+        
         TrunkRecordingEnabledCount GetTelephonyProvidersEdgesTrunkswithrecording (string trunkType = null);
 
         /// <summary>
@@ -2135,6 +2330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>ApiResponse of TrunkRecordingEnabledCount</returns>
+        
         
         ApiResponse<TrunkRecordingEnabledCount> GetTelephonyProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null);
 
@@ -2149,6 +2345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>EdgeNetworkDiagnostic</returns>
         
+        
         EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticNslookup (string edgeId, EdgeNetworkDiagnosticRequest body);
 
         /// <summary>
@@ -2161,6 +2358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        
         
         ApiResponse<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
 
@@ -2175,6 +2373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>EdgeNetworkDiagnostic</returns>
         
+        
         EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticPing (string edgeId, EdgeNetworkDiagnosticRequest body);
 
         /// <summary>
@@ -2187,6 +2386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        
         
         ApiResponse<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticPingWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
 
@@ -2201,6 +2401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>EdgeNetworkDiagnostic</returns>
         
+        
         EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticRoute (string edgeId, EdgeNetworkDiagnosticRequest body);
 
         /// <summary>
@@ -2213,6 +2414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        
         
         ApiResponse<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
 
@@ -2227,6 +2429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>EdgeNetworkDiagnostic</returns>
         
+        
         EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticTracepath (string edgeId, EdgeNetworkDiagnosticRequest body);
 
         /// <summary>
@@ -2239,6 +2442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        
         
         ApiResponse<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
 
@@ -2253,6 +2457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>DomainLogicalInterface</returns>
         
+        
         DomainLogicalInterface PostTelephonyProvidersEdgeLogicalinterfaces (string edgeId, DomainLogicalInterface body);
 
         /// <summary>
@@ -2265,6 +2470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Logical interface</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
+        
         
         ApiResponse<DomainLogicalInterface> PostTelephonyProvidersEdgeLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body);
 
@@ -2280,6 +2486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Log upload request</param>
         /// <returns></returns>
         
+        
         void PostTelephonyProvidersEdgeLogsJobUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body);
 
         /// <summary>
@@ -2294,6 +2501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Log upload request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostTelephonyProvidersEdgeLogsJobUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body);
 
         /// <summary>
@@ -2306,6 +2514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>EdgeLogsJobResponse</returns>
+        
         
         EdgeLogsJobResponse PostTelephonyProvidersEdgeLogsJobs (string edgeId, EdgeLogsJobRequest body);
 
@@ -2320,6 +2529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
         
+        
         ApiResponse<EdgeLogsJobResponse> PostTelephonyProvidersEdgeLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body);
 
         /// <summary>
@@ -2332,6 +2542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>string</returns>
+        
         
         string PostTelephonyProvidersEdgeReboot (string edgeId, EdgeRebootParameters body = null);
 
@@ -2346,6 +2557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>ApiResponse of string</returns>
         
+        
         ApiResponse<string> PostTelephonyProvidersEdgeRebootWithHttpInfo (string edgeId, EdgeRebootParameters body = null);
 
         /// <summary>
@@ -2358,6 +2570,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Software update request</param>
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
+        
         
         DomainEdgeSoftwareUpdateDto PostTelephonyProvidersEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body);
 
@@ -2372,6 +2585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Software update request</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
         
+        
         ApiResponse<DomainEdgeSoftwareUpdateDto> PostTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body);
 
         /// <summary>
@@ -2384,6 +2598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge Service State (optional)</param>
         /// <returns>string</returns>
+        
         
         string PostTelephonyProvidersEdgeStatuscode (string edgeId, EdgeServiceStateRequest body = null);
 
@@ -2398,6 +2613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge Service State (optional)</param>
         /// <returns>ApiResponse of string</returns>
         
+        
         ApiResponse<string> PostTelephonyProvidersEdgeStatuscodeWithHttpInfo (string edgeId, EdgeServiceStateRequest body = null);
 
         /// <summary>
@@ -2409,6 +2625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>string</returns>
+        
         
         string PostTelephonyProvidersEdgeUnpair (string edgeId);
 
@@ -2422,6 +2639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of string</returns>
         
+        
         ApiResponse<string> PostTelephonyProvidersEdgeUnpairWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -2433,6 +2651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
+        
         
         Edge PostTelephonyProvidersEdges (Edge body);
 
@@ -2446,6 +2665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
         
+        
         ApiResponse<Edge> PostTelephonyProvidersEdgesWithHttpInfo (Edge body);
 
         /// <summary>
@@ -2457,6 +2677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Address</param>
         /// <returns>ValidateAddressResponse</returns>
+        
         
         ValidateAddressResponse PostTelephonyProvidersEdgesAddressvalidation (ValidateAddressRequest body);
 
@@ -2470,6 +2691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Address</param>
         /// <returns>ApiResponse of ValidateAddressResponse</returns>
         
+        
         ApiResponse<ValidateAddressResponse> PostTelephonyProvidersEdgesAddressvalidationWithHttpInfo (ValidateAddressRequest body);
 
         /// <summary>
@@ -2481,6 +2703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CertificateAuthority</param>
         /// <returns>DomainCertificateAuthority</returns>
+        
         
         DomainCertificateAuthority PostTelephonyProvidersEdgesCertificateauthorities (DomainCertificateAuthority body);
 
@@ -2494,6 +2717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CertificateAuthority</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
         
+        
         ApiResponse<DomainCertificateAuthority> PostTelephonyProvidersEdgesCertificateauthoritiesWithHttpInfo (DomainCertificateAuthority body);
 
         /// <summary>
@@ -2505,6 +2729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DID pool</param>
         /// <returns>DIDPool</returns>
+        
         
         DIDPool PostTelephonyProvidersEdgesDidpools (DIDPool body);
 
@@ -2518,6 +2743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DID pool</param>
         /// <returns>ApiResponse of DIDPool</returns>
         
+        
         ApiResponse<DIDPool> PostTelephonyProvidersEdgesDidpoolsWithHttpInfo (DIDPool body);
 
         /// <summary>
@@ -2529,6 +2755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
+        
         
         EdgeGroup PostTelephonyProvidersEdgesEdgegroups (EdgeGroup body);
 
@@ -2542,6 +2769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
         
+        
         ApiResponse<EdgeGroup> PostTelephonyProvidersEdgesEdgegroupsWithHttpInfo (EdgeGroup body);
 
         /// <summary>
@@ -2553,6 +2781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
         /// <returns>ExtensionPool</returns>
+        
         
         ExtensionPool PostTelephonyProvidersEdgesExtensionpools (ExtensionPool body);
 
@@ -2566,6 +2795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
         
+        
         ApiResponse<ExtensionPool> PostTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body);
 
         /// <summary>
@@ -2577,6 +2807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone Id</param>
         /// <returns></returns>
+        
         
         void PostTelephonyProvidersEdgesPhoneReboot (string phoneId);
 
@@ -2590,6 +2821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
+        
         ApiResponse<Object> PostTelephonyProvidersEdgesPhoneRebootWithHttpInfo (string phoneId);
 
         /// <summary>
@@ -2601,6 +2833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phone base settings</param>
         /// <returns>PhoneBase</returns>
+        
         
         PhoneBase PostTelephonyProvidersEdgesPhonebasesettings (PhoneBase body);
 
@@ -2614,6 +2847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone base settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
         
+        
         ApiResponse<PhoneBase> PostTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo (PhoneBase body);
 
         /// <summary>
@@ -2625,6 +2859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phone</param>
         /// <returns>Phone</returns>
+        
         
         Phone PostTelephonyProvidersEdgesPhones (Phone body);
 
@@ -2638,6 +2873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone</param>
         /// <returns>ApiResponse of Phone</returns>
         
+        
         ApiResponse<Phone> PostTelephonyProvidersEdgesPhonesWithHttpInfo (Phone body);
 
         /// <summary>
@@ -2650,6 +2886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phones</param>
         /// <returns></returns>
         
+        
         void PostTelephonyProvidersEdgesPhonesReboot (PhonesReboot body);
 
         /// <summary>
@@ -2661,6 +2898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phones</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         ApiResponse<Object> PostTelephonyProvidersEdgesPhonesRebootWithHttpInfo (PhonesReboot body);
 
@@ -2675,6 +2913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRouteBase</returns>
         
+        
         OutboundRouteBase PostTelephonyProvidersEdgesSiteOutboundroutes (string siteId, OutboundRouteBase body);
 
         /// <summary>
@@ -2688,6 +2927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRouteBase</returns>
         
+        
         ApiResponse<OutboundRouteBase> PostTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, OutboundRouteBase body);
 
         /// <summary>
@@ -2699,6 +2939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Site</param>
         /// <returns>Site</returns>
+        
         
         Site PostTelephonyProvidersEdgesSites (Site body);
 
@@ -2712,6 +2953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
         
+        
         ApiResponse<Site> PostTelephonyProvidersEdgesSitesWithHttpInfo (Site body);
 
         /// <summary>
@@ -2724,6 +2966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trunk base settings</param>
         /// <returns>TrunkBase</returns>
         
+        
         TrunkBase PostTelephonyProvidersEdgesTrunkbasesettings (TrunkBase body);
 
         /// <summary>
@@ -2735,6 +2978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trunk base settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
+        
         
         ApiResponse<TrunkBase> PostTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo (TrunkBase body);
 
@@ -2749,6 +2993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
         
+        
         Edge PutTelephonyProvidersEdge (string edgeId, Edge body);
 
         /// <summary>
@@ -2761,6 +3006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
+        
         
         ApiResponse<Edge> PutTelephonyProvidersEdgeWithHttpInfo (string edgeId, Edge body);
 
@@ -2776,6 +3022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>DomainLogicalInterface</returns>
         
+        
         DomainLogicalInterface PutTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId, DomainLogicalInterface body);
 
         /// <summary>
@@ -2790,6 +3037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
         
+        
         ApiResponse<DomainLogicalInterface> PutTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body);
 
         /// <summary>
@@ -2802,6 +3050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body">Certificate authority</param>
         /// <returns>DomainCertificateAuthority</returns>
+        
         
         DomainCertificateAuthority PutTelephonyProvidersEdgesCertificateauthority (string certificateId, DomainCertificateAuthority body);
 
@@ -2816,6 +3065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Certificate authority</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
         
+        
         ApiResponse<DomainCertificateAuthority> PutTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId, DomainCertificateAuthority body);
 
         /// <summary>
@@ -2828,6 +3078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body">DID pool</param>
         /// <returns>DIDPool</returns>
+        
         
         DIDPool PutTelephonyProvidersEdgesDidpool (string didPoolId, DIDPool body);
 
@@ -2842,6 +3093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DID pool</param>
         /// <returns>ApiResponse of DIDPool</returns>
         
+        
         ApiResponse<DIDPool> PutTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId, DIDPool body);
 
         /// <summary>
@@ -2855,6 +3107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
         
+        
         EdgeGroup PutTelephonyProvidersEdgesEdgegroup (string edgeGroupId, EdgeGroup body);
 
         /// <summary>
@@ -2867,6 +3120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
+        
         
         ApiResponse<EdgeGroup> PutTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId, EdgeGroup body);
 
@@ -2882,6 +3136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>EdgeTrunkBase</returns>
         
+        
         EdgeTrunkBase PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
 
         /// <summary>
@@ -2896,6 +3151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>ApiResponse of EdgeTrunkBase</returns>
         
+        
         ApiResponse<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
 
         /// <summary>
@@ -2908,6 +3164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>ExtensionPool</returns>
+        
         
         ExtensionPool PutTelephonyProvidersEdgesExtensionpool (string extensionPoolId, ExtensionPool body);
 
@@ -2922,6 +3179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
         
+        
         ApiResponse<ExtensionPool> PutTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId, ExtensionPool body);
 
         /// <summary>
@@ -2934,6 +3192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body">Phone</param>
         /// <returns>Phone</returns>
+        
         
         Phone PutTelephonyProvidersEdgesPhone (string phoneId, Phone body);
 
@@ -2948,6 +3207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone</param>
         /// <returns>ApiResponse of Phone</returns>
         
+        
         ApiResponse<Phone> PutTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId, Phone body);
 
         /// <summary>
@@ -2960,6 +3220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body">Phone base settings</param>
         /// <returns>PhoneBase</returns>
+        
         
         PhoneBase PutTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId, PhoneBase body);
 
@@ -2974,6 +3235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone base settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
         
+        
         ApiResponse<PhoneBase> PutTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId, PhoneBase body);
 
         /// <summary>
@@ -2986,6 +3248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>Site</returns>
+        
         
         Site PutTelephonyProvidersEdgesSite (string siteId, Site body);
 
@@ -3000,6 +3263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
         
+        
         ApiResponse<Site> PutTelephonyProvidersEdgesSiteWithHttpInfo (string siteId, Site body);
 
         /// <summary>
@@ -3013,6 +3277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of number plans</param>
         /// <returns>List&lt;NumberPlan&gt;</returns>
         
+        
         List<NumberPlan> PutTelephonyProvidersEdgesSiteNumberplans (string siteId, List<NumberPlan> body);
 
         /// <summary>
@@ -3025,6 +3290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">List of number plans</param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
+        
         
         ApiResponse<List<NumberPlan>> PutTelephonyProvidersEdgesSiteNumberplansWithHttpInfo (string siteId, List<NumberPlan> body);
 
@@ -3040,6 +3306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRouteBase</returns>
         
+        
         OutboundRouteBase PutTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId, OutboundRouteBase body);
 
         /// <summary>
@@ -3054,6 +3321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRouteBase</returns>
         
+        
         ApiResponse<OutboundRouteBase> PutTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId, OutboundRouteBase body);
 
         /// <summary>
@@ -3067,6 +3335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trunk base settings</param>
         /// <returns>TrunkBase</returns>
         
+        
         TrunkBase PutTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId, TrunkBase body);
 
         /// <summary>
@@ -3079,6 +3348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body">Trunk base settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
+        
         
         ApiResponse<TrunkBase> PutTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId, TrunkBase body);
 
@@ -3096,6 +3366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeAsync (string edgeId);
 
         /// <summary>
@@ -3107,6 +3378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId);
 
@@ -3121,6 +3393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeLogicalinterfaceAsync (string edgeId, string interfaceId);
 
         /// <summary>
@@ -3134,6 +3407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId);
 
         /// <summary>
@@ -3145,6 +3419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId);
 
@@ -3158,6 +3433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -3169,6 +3445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId);
 
@@ -3182,6 +3459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId);
 
         /// <summary>
@@ -3193,6 +3471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesDidpoolAsync (string didPoolId);
 
@@ -3206,6 +3485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId);
 
         /// <summary>
@@ -3217,6 +3497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId);
 
@@ -3230,6 +3511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId);
 
         /// <summary>
@@ -3241,6 +3523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId);
 
@@ -3254,6 +3537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId);
 
         /// <summary>
@@ -3265,6 +3549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesPhoneAsync (string phoneId);
 
@@ -3278,6 +3563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId);
 
         /// <summary>
@@ -3289,6 +3575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId);
 
@@ -3302,6 +3589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId);
 
         /// <summary>
@@ -3314,6 +3602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesSiteAsync (string siteId);
 
         /// <summary>
@@ -3325,6 +3614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId);
 
@@ -3339,6 +3629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId);
 
         /// <summary>
@@ -3352,6 +3643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId);
 
         /// <summary>
@@ -3364,6 +3656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId);
 
         /// <summary>
@@ -3375,6 +3668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId);
 
@@ -3389,6 +3683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of Edge</returns>
         
+        
         System.Threading.Tasks.Task<Edge> GetTelephonyProvidersEdgeAsync (string edgeId, List<string> expand = null);
 
         /// <summary>
@@ -3402,6 +3697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Edge>> GetTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId, List<string> expand = null);
 
         /// <summary>
@@ -3413,6 +3709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        
         
         System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticNslookupAsync (string edgeId);
 
@@ -3426,6 +3723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -3437,6 +3735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        
         
         System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticPingAsync (string edgeId);
 
@@ -3450,6 +3749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -3461,6 +3761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
+        
         
         System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticRouteAsync (string edgeId);
 
@@ -3474,6 +3775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -3486,6 +3788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
         
+        
         System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticTracepathAsync (string edgeId);
 
         /// <summary>
@@ -3497,6 +3800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId);
 
@@ -3512,6 +3816,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of DomainLogicalInterface</returns>
         
+        
         System.Threading.Tasks.Task<DomainLogicalInterface> GetTelephonyProvidersEdgeLogicalinterfaceAsync (string edgeId, string interfaceId, List<string> expand = null);
 
         /// <summary>
@@ -3526,6 +3831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId, List<string> expand = null);
 
         /// <summary>
@@ -3538,6 +3844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of LogicalInterfaceEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetTelephonyProvidersEdgeLogicalinterfacesAsync (string edgeId, List<string> expand = null);
 
@@ -3552,6 +3859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetTelephonyProvidersEdgeLogicalinterfacesAsyncWithHttpInfo (string edgeId, List<string> expand = null);
 
         /// <summary>
@@ -3564,6 +3872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
         /// <returns>Task of EdgeLogsJob</returns>
+        
         
         System.Threading.Tasks.Task<EdgeLogsJob> GetTelephonyProvidersEdgeLogsJobAsync (string edgeId, string jobId);
 
@@ -3578,6 +3887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <returns>Task of ApiResponse (EdgeLogsJob)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeLogsJob>> GetTelephonyProvidersEdgeLogsJobAsyncWithHttpInfo (string edgeId, string jobId);
 
         /// <summary>
@@ -3590,6 +3900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeMetrics</returns>
         
+        
         System.Threading.Tasks.Task<EdgeMetrics> GetTelephonyProvidersEdgeMetricsAsync (string edgeId);
 
         /// <summary>
@@ -3601,6 +3912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeMetrics)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EdgeMetrics>> GetTelephonyProvidersEdgeMetricsAsyncWithHttpInfo (string edgeId);
 
@@ -3615,6 +3927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of DomainPhysicalInterface</returns>
         
+        
         System.Threading.Tasks.Task<DomainPhysicalInterface> GetTelephonyProvidersEdgePhysicalinterfaceAsync (string edgeId, string interfaceId);
 
         /// <summary>
@@ -3628,6 +3941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse (DomainPhysicalInterface)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainPhysicalInterface>> GetTelephonyProvidersEdgePhysicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId);
 
         /// <summary>
@@ -3639,6 +3953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of PhysicalInterfaceEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgePhysicalinterfacesAsync (string edgeId);
 
@@ -3652,6 +3967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (PhysicalInterfaceEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetTelephonyProvidersEdgePhysicalinterfacesAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -3663,6 +3979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of VmPairingInfo</returns>
+        
         
         System.Threading.Tasks.Task<VmPairingInfo> GetTelephonyProvidersEdgeSetuppackageAsync (string edgeId);
 
@@ -3676,6 +3993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (VmPairingInfo)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<VmPairingInfo>> GetTelephonyProvidersEdgeSetuppackageAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -3687,6 +4005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
+        
         
         System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> GetTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId);
 
@@ -3700,6 +4019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> GetTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -3712,6 +4032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of DomainEdgeSoftwareVersionDtoEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDtoEntityListing> GetTelephonyProvidersEdgeSoftwareversionsAsync (string edgeId);
 
         /// <summary>
@@ -3723,6 +4044,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDtoEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing>> GetTelephonyProvidersEdgeSoftwareversionsAsyncWithHttpInfo (string edgeId);
 
@@ -3742,6 +4064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>Task of TrunkEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<TrunkEntityListing> GetTelephonyProvidersEdgeTrunksAsync (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null);
 
         /// <summary>
@@ -3759,6 +4082,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>Task of ApiResponse (TrunkEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetTelephonyProvidersEdgeTrunksAsyncWithHttpInfo (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null);
 
@@ -3779,6 +4103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>Task of EdgeEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<EdgeEntityListing> GetTelephonyProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
@@ -3798,6 +4123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (EdgeEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
@@ -3808,6 +4134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AvailableLanguageList</returns>
+        
         
         System.Threading.Tasks.Task<AvailableLanguageList> GetTelephonyProvidersEdgesAvailablelanguagesAsync ();
 
@@ -3820,6 +4147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AvailableLanguageList)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<AvailableLanguageList>> GetTelephonyProvidersEdgesAvailablelanguagesAsyncWithHttpInfo ();
 
         /// <summary>
@@ -3831,6 +4159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CertificateAuthorityEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<CertificateAuthorityEntityListing> GetTelephonyProvidersEdgesCertificateauthoritiesAsync ();
 
         /// <summary>
@@ -3841,6 +4170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CertificateAuthorityEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<CertificateAuthorityEntityListing>> GetTelephonyProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo ();
 
@@ -3854,6 +4184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
         
+        
         System.Threading.Tasks.Task<DomainCertificateAuthority> GetTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId);
 
         /// <summary>
@@ -3865,6 +4196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> GetTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId);
 
@@ -3878,6 +4210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didId">DID ID</param>
         /// <returns>Task of DID</returns>
         
+        
         System.Threading.Tasks.Task<DID> GetTelephonyProvidersEdgesDidAsync (string didId);
 
         /// <summary>
@@ -3889,6 +4222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
         /// <returns>Task of ApiResponse (DID)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DID>> GetTelephonyProvidersEdgesDidAsyncWithHttpInfo (string didId);
 
@@ -3902,6 +4236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of DIDPool</returns>
         
+        
         System.Threading.Tasks.Task<DIDPool> GetTelephonyProvidersEdgesDidpoolAsync (string didPoolId);
 
         /// <summary>
@@ -3913,6 +4248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DIDPool>> GetTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId);
 
@@ -3929,6 +4265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of DIDPoolEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
 
         /// <summary>
@@ -3943,6 +4280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "number")</param>
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDPoolEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DIDPoolEntityListing>> GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null);
 
@@ -3961,6 +4299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>Task of DIDNumberEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<DIDNumberEntityListing> GetTelephonyProvidersEdgesDidpoolsDidsAsync (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
@@ -3977,6 +4316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>Task of ApiResponse (DIDNumberEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DIDNumberEntityListing>> GetTelephonyProvidersEdgesDidpoolsDidsAsyncWithHttpInfo (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -3997,6 +4337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of DIDEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<DIDEntityListing> GetTelephonyProvidersEdgesDidsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null);
 
         /// <summary>
@@ -4016,6 +4357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DIDEntityListing>> GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null);
 
         /// <summary>
@@ -4028,6 +4370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>Task of EdgeGroup</returns>
+        
         
         System.Threading.Tasks.Task<EdgeGroup> GetTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId, List<string> expand = null);
 
@@ -4042,6 +4385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId, List<string> expand = null);
 
         /// <summary>
@@ -4055,6 +4399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>Task of EdgeTrunkBase</returns>
         
+        
         System.Threading.Tasks.Task<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsync (string edgegroupId, string edgetrunkbaseId);
 
         /// <summary>
@@ -4067,6 +4412,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>Task of ApiResponse (EdgeTrunkBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId);
 
@@ -4084,6 +4430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of EdgeGroupEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<EdgeGroupEntityListing> GetTelephonyProvidersEdgesEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null);
 
         /// <summary>
@@ -4100,6 +4447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (EdgeGroupEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetTelephonyProvidersEdgesEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null);
 
         /// <summary>
@@ -4110,6 +4458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EdgeVersionReport</returns>
+        
         
         System.Threading.Tasks.Task<EdgeVersionReport> GetTelephonyProvidersEdgesEdgeversionreportAsync ();
 
@@ -4122,6 +4471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EdgeVersionReport)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeVersionReport>> GetTelephonyProvidersEdgesEdgeversionreportAsyncWithHttpInfo ();
 
         /// <summary>
@@ -4133,6 +4483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ExpiredEdgeListing</returns>
         
+        
         System.Threading.Tasks.Task<ExpiredEdgeListing> GetTelephonyProvidersEdgesExpiredAsync ();
 
         /// <summary>
@@ -4143,6 +4494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ExpiredEdgeListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ExpiredEdgeListing>> GetTelephonyProvidersEdgesExpiredAsyncWithHttpInfo ();
 
@@ -4156,6 +4508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Task of Extension</returns>
         
+        
         System.Threading.Tasks.Task<Extension> GetTelephonyProvidersEdgesExtensionAsync (string extensionId);
 
         /// <summary>
@@ -4167,6 +4520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Extension>> GetTelephonyProvidersEdgesExtensionAsyncWithHttpInfo (string extensionId);
 
@@ -4180,6 +4534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ExtensionPool</returns>
         
+        
         System.Threading.Tasks.Task<ExtensionPool> GetTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId);
 
         /// <summary>
@@ -4191,6 +4546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> GetTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId);
 
@@ -4207,6 +4563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
         /// <returns>Task of ExtensionPoolEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
 
         /// <summary>
@@ -4222,7 +4579,46 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
         /// <returns>Task of ApiResponse (ExtensionPoolEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null);
+
+        /// <summary>
+        /// Get a pageable list of basic extension pool objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Extension Pools to filter by. (optional)</param>
+        /// <param name="name">Name of the Extension Pools to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ExtensionPoolDivisionViewEntityListing</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ExtensionPoolDivisionViewEntityListing> GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic extension pool objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Extension Pools to filter by. (optional)</param>
+        /// <param name="name">Name of the Extension Pools to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (ExtensionPoolDivisionViewEntityListing)</returns>
+        
+        /// Preview Endpoint
+        System.Threading.Tasks.Task<ApiResponse<ExtensionPoolDivisionViewEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a listing of extensions
@@ -4237,6 +4633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="number">Filter by number (optional)</param>
         /// <returns>Task of ExtensionEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<ExtensionEntityListing> GetTelephonyProvidersEdgesExtensionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null);
 
@@ -4254,6 +4651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Filter by number (optional)</param>
         /// <returns>Task of ApiResponse (ExtensionEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ExtensionEntityListing>> GetTelephonyProvidersEdgesExtensionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null);
 
         /// <summary>
@@ -4265,6 +4663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of Line</returns>
+        
         
         System.Threading.Tasks.Task<Line> GetTelephonyProvidersEdgesLineAsync (string lineId);
 
@@ -4278,6 +4677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of ApiResponse (Line)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Line>> GetTelephonyProvidersEdgesLineAsyncWithHttpInfo (string lineId);
 
         /// <summary>
@@ -4290,6 +4690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>Task of LineBase</returns>
         
+        
         System.Threading.Tasks.Task<LineBase> GetTelephonyProvidersEdgesLinebasesettingAsync (string lineBaseId);
 
         /// <summary>
@@ -4301,6 +4702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>Task of ApiResponse (LineBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LineBase>> GetTelephonyProvidersEdgesLinebasesettingAsyncWithHttpInfo (string lineBaseId);
 
@@ -4318,6 +4720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of LineBaseEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -4333,6 +4736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (LineBaseEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
@@ -4350,6 +4754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>Task of LineEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<LineEntityListing> GetTelephonyProvidersEdgesLinesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
@@ -4366,6 +4771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>Task of ApiResponse (LineEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetTelephonyProvidersEdgesLinesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
@@ -4378,6 +4784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Task of Line</returns>
         
+        
         System.Threading.Tasks.Task<Line> GetTelephonyProvidersEdgesLinesTemplateAsync (string lineBaseSettingsId);
 
         /// <summary>
@@ -4389,6 +4796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Task of ApiResponse (Line)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Line>> GetTelephonyProvidersEdgesLinesTemplateAsyncWithHttpInfo (string lineBaseSettingsId);
 
@@ -4403,6 +4811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of LogicalInterfaceEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetTelephonyProvidersEdgesLogicalinterfacesAsync (string edgeIds, List<string> expand = null);
 
         /// <summary>
@@ -4416,6 +4825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetTelephonyProvidersEdgesLogicalinterfacesAsyncWithHttpInfo (string edgeIds, List<string> expand = null);
 
         /// <summary>
@@ -4427,6 +4837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>Task of List&lt;EdgeMetrics&gt;</returns>
+        
         
         System.Threading.Tasks.Task<List<EdgeMetrics>> GetTelephonyProvidersEdgesMetricsAsync (string edgeIds);
 
@@ -4440,6 +4851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>Task of ApiResponse (List&lt;EdgeMetrics&gt;)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<List<EdgeMetrics>>> GetTelephonyProvidersEdgesMetricsAsyncWithHttpInfo (string edgeIds);
 
         /// <summary>
@@ -4452,6 +4864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of OutboundRoute</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<OutboundRoute> GetTelephonyProvidersEdgesOutboundrouteAsync (string outboundRouteId);
 
         /// <summary>
@@ -4464,6 +4877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
         [Obsolete]
+        
         System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> GetTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo (string outboundRouteId);
 
         /// <summary>
@@ -4480,6 +4894,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>Task of OutboundRouteEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null);
 
@@ -4498,6 +4913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>Task of ApiResponse (OutboundRouteEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
@@ -4509,6 +4925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of Phone</returns>
+        
         
         System.Threading.Tasks.Task<Phone> GetTelephonyProvidersEdgesPhoneAsync (string phoneId);
 
@@ -4522,6 +4939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId);
 
         /// <summary>
@@ -4534,6 +4952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of PhoneBase</returns>
         
+        
         System.Threading.Tasks.Task<PhoneBase> GetTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId);
 
         /// <summary>
@@ -4545,6 +4964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId);
 
@@ -4563,6 +4983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of PhoneBaseEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null);
 
         /// <summary>
@@ -4580,6 +5001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (PhoneBaseEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null);
 
         /// <summary>
@@ -4592,6 +5014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of PhoneMetaBaseEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<PhoneMetaBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesAsync (int? pageSize = null, int? pageNumber = null);
 
@@ -4606,6 +5029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (PhoneMetaBaseEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PhoneMetaBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -4618,6 +5042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>Task of PhoneBase</returns>
         
+        
         System.Threading.Tasks.Task<PhoneBase> GetTelephonyProvidersEdgesPhonebasesettingsTemplateAsync (string phoneMetabaseId);
 
         /// <summary>
@@ -4629,6 +5054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetTelephonyProvidersEdgesPhonebasesettingsTemplateAsyncWithHttpInfo (string phoneMetabaseId);
 
@@ -4658,6 +5084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of PhoneEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<PhoneEntityListing> GetTelephonyProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
@@ -4686,6 +5113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (PhoneEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetTelephonyProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
@@ -4697,6 +5125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of Phone</returns>
+        
         
         System.Threading.Tasks.Task<Phone> GetTelephonyProvidersEdgesPhonesTemplateAsync (string phoneBaseSettingsId);
 
@@ -4710,6 +5139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgesPhonesTemplateAsyncWithHttpInfo (string phoneBaseSettingsId);
 
         /// <summary>
@@ -4721,6 +5151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>Task of PhysicalInterfaceEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgesPhysicalinterfacesAsync (string edgeIds);
 
@@ -4734,6 +5165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>Task of ApiResponse (PhysicalInterfaceEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo (string edgeIds);
 
         /// <summary>
@@ -4746,6 +5178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of Site</returns>
         
+        
         System.Threading.Tasks.Task<Site> GetTelephonyProvidersEdgesSiteAsync (string siteId);
 
         /// <summary>
@@ -4757,6 +5190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (Site)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Site>> GetTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId);
 
@@ -4771,6 +5205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>Task of NumberPlan</returns>
         
+        
         System.Threading.Tasks.Task<NumberPlan> GetTelephonyProvidersEdgesSiteNumberplanAsync (string siteId, string numberPlanId);
 
         /// <summary>
@@ -4784,6 +5219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>Task of ApiResponse (NumberPlan)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<NumberPlan>> GetTelephonyProvidersEdgesSiteNumberplanAsyncWithHttpInfo (string siteId, string numberPlanId);
 
         /// <summary>
@@ -4796,6 +5232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
         
+        
         System.Threading.Tasks.Task<List<NumberPlan>> GetTelephonyProvidersEdgesSiteNumberplansAsync (string siteId);
 
         /// <summary>
@@ -4807,6 +5244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> GetTelephonyProvidersEdgesSiteNumberplansAsyncWithHttpInfo (string siteId);
 
@@ -4821,6 +5259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="classification">Classification (optional)</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         
+        
         System.Threading.Tasks.Task<List<string>> GetTelephonyProvidersEdgesSiteNumberplansClassificationsAsync (string siteId, string classification = null);
 
         /// <summary>
@@ -4833,6 +5272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<List<string>>> GetTelephonyProvidersEdgesSiteNumberplansClassificationsAsyncWithHttpInfo (string siteId, string classification = null);
 
@@ -4847,6 +5287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of OutboundRouteBase</returns>
         
+        
         System.Threading.Tasks.Task<OutboundRouteBase> GetTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId);
 
         /// <summary>
@@ -4859,6 +5300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> GetTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId);
 
@@ -4877,6 +5319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>Task of OutboundRouteBaseEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesAsync (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
@@ -4893,6 +5336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>Task of ApiResponse (OutboundRouteBaseEntityListing)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
 
@@ -4912,6 +5356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of SiteEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<SiteEntityListing> GetTelephonyProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
 
         /// <summary>
@@ -4930,6 +5375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (SiteEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
 
         /// <summary>
@@ -4942,6 +5388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 1000)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<TimeZoneEntityListing> GetTelephonyProvidersEdgesTimezonesAsync (int? pageSize = null, int? pageNumber = null);
 
@@ -4956,6 +5403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTelephonyProvidersEdgesTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -4967,6 +5415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>Task of Trunk</returns>
+        
         
         System.Threading.Tasks.Task<Trunk> GetTelephonyProvidersEdgesTrunkAsync (string trunkId);
 
@@ -4980,6 +5429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>Task of ApiResponse (Trunk)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Trunk>> GetTelephonyProvidersEdgesTrunkAsyncWithHttpInfo (string trunkId);
 
         /// <summary>
@@ -4992,6 +5442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkId">Trunk Id</param>
         /// <returns>Task of TrunkMetrics</returns>
         
+        
         System.Threading.Tasks.Task<TrunkMetrics> GetTelephonyProvidersEdgesTrunkMetricsAsync (string trunkId);
 
         /// <summary>
@@ -5003,6 +5454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkId">Trunk Id</param>
         /// <returns>Task of ApiResponse (TrunkMetrics)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TrunkMetrics>> GetTelephonyProvidersEdgesTrunkMetricsAsyncWithHttpInfo (string trunkId);
 
@@ -5017,6 +5469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>Task of TrunkBase</returns>
         
+        
         System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId, bool? ignoreHidden = null);
 
         /// <summary>
@@ -5029,6 +5482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId, bool? ignoreHidden = null);
 
@@ -5050,6 +5504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the TrunkBase to filter by (optional)</param>
         /// <returns>Task of TrunkBaseEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<TrunkBaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null);
 
         /// <summary>
@@ -5070,6 +5525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the TrunkBase to filter by (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null);
 
         /// <summary>
@@ -5083,6 +5539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>Task of TrunkMetabaseEntityListing</returns>
+        
         
         System.Threading.Tasks.Task<TrunkMetabaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesAsync (string type = null, int? pageSize = null, int? pageNumber = null);
 
@@ -5098,6 +5555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrunkMetabaseEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TrunkMetabaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -5110,6 +5568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>Task of TrunkBase</returns>
         
+        
         System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgesTrunkbasesettingsTemplateAsync (string trunkMetabaseId);
 
         /// <summary>
@@ -5121,6 +5580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgesTrunkbasesettingsTemplateAsyncWithHttpInfo (string trunkMetabaseId);
 
@@ -5140,6 +5600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>Task of TrunkEntityListing</returns>
         
+        
         System.Threading.Tasks.Task<TrunkEntityListing> GetTelephonyProvidersEdgesTrunksAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null);
 
         /// <summary>
@@ -5158,6 +5619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>Task of ApiResponse (TrunkEntityListing)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetTelephonyProvidersEdgesTrunksAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null);
 
         /// <summary>
@@ -5169,6 +5631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkIds">Comma separated list of Trunk Id&#39;s</param>
         /// <returns>Task of List&lt;TrunkMetrics&gt;</returns>
+        
         
         System.Threading.Tasks.Task<List<TrunkMetrics>> GetTelephonyProvidersEdgesTrunksMetricsAsync (string trunkIds);
 
@@ -5182,6 +5645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkIds">Comma separated list of Trunk Id&#39;s</param>
         /// <returns>Task of ApiResponse (List&lt;TrunkMetrics&gt;)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<List<TrunkMetrics>>> GetTelephonyProvidersEdgesTrunksMetricsAsyncWithHttpInfo (string trunkIds);
 
         /// <summary>
@@ -5194,6 +5658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>Task of TrunkRecordingEnabledCount</returns>
         
+        
         System.Threading.Tasks.Task<TrunkRecordingEnabledCount> GetTelephonyProvidersEdgesTrunkswithrecordingAsync (string trunkType = null);
 
         /// <summary>
@@ -5205,6 +5670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>Task of ApiResponse (TrunkRecordingEnabledCount)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetTelephonyProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null);
 
@@ -5219,6 +5685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of EdgeNetworkDiagnostic</returns>
         
+        
         System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticNslookupAsync (string edgeId, EdgeNetworkDiagnosticRequest body);
 
         /// <summary>
@@ -5231,6 +5698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
 
@@ -5245,6 +5713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of EdgeNetworkDiagnostic</returns>
         
+        
         System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticPingAsync (string edgeId, EdgeNetworkDiagnosticRequest body);
 
         /// <summary>
@@ -5257,6 +5726,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
 
@@ -5271,6 +5741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of EdgeNetworkDiagnostic</returns>
         
+        
         System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticRouteAsync (string edgeId, EdgeNetworkDiagnosticRequest body);
 
         /// <summary>
@@ -5283,6 +5754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
 
@@ -5297,6 +5769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of EdgeNetworkDiagnostic</returns>
         
+        
         System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticTracepathAsync (string edgeId, EdgeNetworkDiagnosticRequest body);
 
         /// <summary>
@@ -5309,6 +5782,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body);
 
@@ -5323,6 +5797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>Task of DomainLogicalInterface</returns>
         
+        
         System.Threading.Tasks.Task<DomainLogicalInterface> PostTelephonyProvidersEdgeLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body);
 
         /// <summary>
@@ -5335,6 +5810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Logical interface</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostTelephonyProvidersEdgeLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body);
 
@@ -5350,6 +5826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Log upload request</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostTelephonyProvidersEdgeLogsJobUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body);
 
         /// <summary>
@@ -5364,6 +5841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Log upload request</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgeLogsJobUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body);
 
         /// <summary>
@@ -5376,6 +5854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of EdgeLogsJobResponse</returns>
+        
         
         System.Threading.Tasks.Task<EdgeLogsJobResponse> PostTelephonyProvidersEdgeLogsJobsAsync (string edgeId, EdgeLogsJobRequest body);
 
@@ -5390,6 +5869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostTelephonyProvidersEdgeLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body);
 
         /// <summary>
@@ -5402,6 +5882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>Task of string</returns>
+        
         
         System.Threading.Tasks.Task<string> PostTelephonyProvidersEdgeRebootAsync (string edgeId, EdgeRebootParameters body = null);
 
@@ -5416,6 +5897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<string>> PostTelephonyProvidersEdgeRebootAsyncWithHttpInfo (string edgeId, EdgeRebootParameters body = null);
 
         /// <summary>
@@ -5428,6 +5910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Software update request</param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
+        
         
         System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body);
 
@@ -5442,6 +5925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Software update request</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body);
 
         /// <summary>
@@ -5454,6 +5938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge Service State (optional)</param>
         /// <returns>Task of string</returns>
+        
         
         System.Threading.Tasks.Task<string> PostTelephonyProvidersEdgeStatuscodeAsync (string edgeId, EdgeServiceStateRequest body = null);
 
@@ -5468,6 +5953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge Service State (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<string>> PostTelephonyProvidersEdgeStatuscodeAsyncWithHttpInfo (string edgeId, EdgeServiceStateRequest body = null);
 
         /// <summary>
@@ -5479,6 +5965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of string</returns>
+        
         
         System.Threading.Tasks.Task<string> PostTelephonyProvidersEdgeUnpairAsync (string edgeId);
 
@@ -5492,6 +5979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<string>> PostTelephonyProvidersEdgeUnpairAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
@@ -5503,6 +5991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
+        
         
         System.Threading.Tasks.Task<Edge> PostTelephonyProvidersEdgesAsync (Edge body);
 
@@ -5516,6 +6005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Edge>> PostTelephonyProvidersEdgesAsyncWithHttpInfo (Edge body);
 
         /// <summary>
@@ -5527,6 +6017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Address</param>
         /// <returns>Task of ValidateAddressResponse</returns>
+        
         
         System.Threading.Tasks.Task<ValidateAddressResponse> PostTelephonyProvidersEdgesAddressvalidationAsync (ValidateAddressRequest body);
 
@@ -5540,6 +6031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Address</param>
         /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostTelephonyProvidersEdgesAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body);
 
         /// <summary>
@@ -5551,6 +6043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CertificateAuthority</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
+        
         
         System.Threading.Tasks.Task<DomainCertificateAuthority> PostTelephonyProvidersEdgesCertificateauthoritiesAsync (DomainCertificateAuthority body);
 
@@ -5564,6 +6057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CertificateAuthority</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PostTelephonyProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo (DomainCertificateAuthority body);
 
         /// <summary>
@@ -5575,6 +6069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DID pool</param>
         /// <returns>Task of DIDPool</returns>
+        
         
         System.Threading.Tasks.Task<DIDPool> PostTelephonyProvidersEdgesDidpoolsAsync (DIDPool body);
 
@@ -5588,6 +6083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DID pool</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DIDPool>> PostTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (DIDPool body);
 
         /// <summary>
@@ -5599,6 +6095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
+        
         
         System.Threading.Tasks.Task<EdgeGroup> PostTelephonyProvidersEdgesEdgegroupsAsync (EdgeGroup body);
 
@@ -5612,6 +6109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostTelephonyProvidersEdgesEdgegroupsAsyncWithHttpInfo (EdgeGroup body);
 
         /// <summary>
@@ -5623,6 +6121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ExtensionPool</returns>
+        
         
         System.Threading.Tasks.Task<ExtensionPool> PostTelephonyProvidersEdgesExtensionpoolsAsync (ExtensionPool body);
 
@@ -5636,6 +6135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PostTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body);
 
         /// <summary>
@@ -5647,6 +6147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone Id</param>
         /// <returns>Task of void</returns>
+        
         
         System.Threading.Tasks.Task PostTelephonyProvidersEdgesPhoneRebootAsync (string phoneId);
 
@@ -5660,6 +6161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone Id</param>
         /// <returns>Task of ApiResponse</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgesPhoneRebootAsyncWithHttpInfo (string phoneId);
 
         /// <summary>
@@ -5671,6 +6173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phone base settings</param>
         /// <returns>Task of PhoneBase</returns>
+        
         
         System.Threading.Tasks.Task<PhoneBase> PostTelephonyProvidersEdgesPhonebasesettingsAsync (PhoneBase body);
 
@@ -5684,6 +6187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone base settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (PhoneBase body);
 
         /// <summary>
@@ -5695,6 +6199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phone</param>
         /// <returns>Task of Phone</returns>
+        
         
         System.Threading.Tasks.Task<Phone> PostTelephonyProvidersEdgesPhonesAsync (Phone body);
 
@@ -5708,6 +6213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Phone>> PostTelephonyProvidersEdgesPhonesAsyncWithHttpInfo (Phone body);
 
         /// <summary>
@@ -5720,6 +6226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phones</param>
         /// <returns>Task of void</returns>
         
+        
         System.Threading.Tasks.Task PostTelephonyProvidersEdgesPhonesRebootAsync (PhonesReboot body);
 
         /// <summary>
@@ -5731,6 +6238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phones</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgesPhonesRebootAsyncWithHttpInfo (PhonesReboot body);
 
@@ -5745,6 +6253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRouteBase</returns>
         
+        
         System.Threading.Tasks.Task<OutboundRouteBase> PostTelephonyProvidersEdgesSiteOutboundroutesAsync (string siteId, OutboundRouteBase body);
 
         /// <summary>
@@ -5758,6 +6267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> PostTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, OutboundRouteBase body);
 
         /// <summary>
@@ -5769,6 +6279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
+        
         
         System.Threading.Tasks.Task<Site> PostTelephonyProvidersEdgesSitesAsync (Site body);
 
@@ -5782,6 +6293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Site>> PostTelephonyProvidersEdgesSitesAsyncWithHttpInfo (Site body);
 
         /// <summary>
@@ -5794,6 +6306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trunk base settings</param>
         /// <returns>Task of TrunkBase</returns>
         
+        
         System.Threading.Tasks.Task<TrunkBase> PostTelephonyProvidersEdgesTrunkbasesettingsAsync (TrunkBase body);
 
         /// <summary>
@@ -5805,6 +6318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trunk base settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body);
 
@@ -5819,6 +6333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
         
+        
         System.Threading.Tasks.Task<Edge> PutTelephonyProvidersEdgeAsync (string edgeId, Edge body);
 
         /// <summary>
@@ -5831,6 +6346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<Edge>> PutTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId, Edge body);
 
@@ -5846,6 +6362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>Task of DomainLogicalInterface</returns>
         
+        
         System.Threading.Tasks.Task<DomainLogicalInterface> PutTelephonyProvidersEdgeLogicalinterfaceAsync (string edgeId, string interfaceId, DomainLogicalInterface body);
 
         /// <summary>
@@ -5860,6 +6377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body);
 
         /// <summary>
@@ -5872,6 +6390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body">Certificate authority</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
+        
         
         System.Threading.Tasks.Task<DomainCertificateAuthority> PutTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId, DomainCertificateAuthority body);
 
@@ -5886,6 +6405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Certificate authority</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body);
 
         /// <summary>
@@ -5898,6 +6418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body">DID pool</param>
         /// <returns>Task of DIDPool</returns>
+        
         
         System.Threading.Tasks.Task<DIDPool> PutTelephonyProvidersEdgesDidpoolAsync (string didPoolId, DIDPool body);
 
@@ -5912,6 +6433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DID pool</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId, DIDPool body);
 
         /// <summary>
@@ -5925,6 +6447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
         
+        
         System.Threading.Tasks.Task<EdgeGroup> PutTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId, EdgeGroup body);
 
         /// <summary>
@@ -5937,6 +6460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body);
 
@@ -5952,6 +6476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>Task of EdgeTrunkBase</returns>
         
+        
         System.Threading.Tasks.Task<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsync (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
 
         /// <summary>
@@ -5966,6 +6491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>Task of ApiResponse (EdgeTrunkBase)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
 
         /// <summary>
@@ -5978,6 +6504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ExtensionPool</returns>
+        
         
         System.Threading.Tasks.Task<ExtensionPool> PutTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId, ExtensionPool body);
 
@@ -5992,6 +6519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body);
 
         /// <summary>
@@ -6004,6 +6532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body">Phone</param>
         /// <returns>Task of Phone</returns>
+        
         
         System.Threading.Tasks.Task<Phone> PutTelephonyProvidersEdgesPhoneAsync (string phoneId, Phone body);
 
@@ -6018,6 +6547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Phone>> PutTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId, Phone body);
 
         /// <summary>
@@ -6030,6 +6560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body">Phone base settings</param>
         /// <returns>Task of PhoneBase</returns>
+        
         
         System.Threading.Tasks.Task<PhoneBase> PutTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId, PhoneBase body);
 
@@ -6044,6 +6575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone base settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId, PhoneBase body);
 
         /// <summary>
@@ -6056,6 +6588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
+        
         
         System.Threading.Tasks.Task<Site> PutTelephonyProvidersEdgesSiteAsync (string siteId, Site body);
 
@@ -6070,6 +6603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<Site>> PutTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId, Site body);
 
         /// <summary>
@@ -6083,6 +6617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of number plans</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
         
+        
         System.Threading.Tasks.Task<List<NumberPlan>> PutTelephonyProvidersEdgesSiteNumberplansAsync (string siteId, List<NumberPlan> body);
 
         /// <summary>
@@ -6095,6 +6630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">List of number plans</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutTelephonyProvidersEdgesSiteNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body);
 
@@ -6110,6 +6646,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRouteBase</returns>
         
+        
         System.Threading.Tasks.Task<OutboundRouteBase> PutTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId, OutboundRouteBase body);
 
         /// <summary>
@@ -6124,6 +6661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
         
+        
         System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> PutTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId, OutboundRouteBase body);
 
         /// <summary>
@@ -6137,6 +6675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trunk base settings</param>
         /// <returns>Task of TrunkBase</returns>
         
+        
         System.Threading.Tasks.Task<TrunkBase> PutTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId, TrunkBase body);
 
         /// <summary>
@@ -6149,6 +6688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body">Trunk base settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body);
 
@@ -6251,6 +6791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdge (string edgeId)
         {
              DeleteTelephonyProvidersEdgeWithHttpInfo(edgeId);
@@ -6262,6 +6803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgeWithHttpInfo (string edgeId)
         { 
@@ -6346,6 +6888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeAsync (string edgeId)
         {
              await DeleteTelephonyProvidersEdgeAsyncWithHttpInfo(edgeId);
@@ -6358,6 +6901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId)
         { 
@@ -6445,6 +6989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId)
         {
              DeleteTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo(edgeId, interfaceId);
@@ -6457,6 +7002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId)
         { 
@@ -6546,6 +7092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeLogicalinterfaceAsync (string edgeId, string interfaceId)
         {
              await DeleteTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo(edgeId, interfaceId);
@@ -6559,6 +7106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId)
         { 
@@ -6650,6 +7198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId)
         {
              DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo(edgeId);
@@ -6661,6 +7210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId)
         { 
@@ -6745,6 +7295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId)
         {
              await DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo(edgeId);
@@ -6757,6 +7308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId)
         { 
@@ -6843,6 +7395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId)
         {
              DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo(certificateId);
@@ -6854,6 +7407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId)
         { 
@@ -6938,6 +7492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId)
         {
              await DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo(certificateId);
@@ -6950,6 +7505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId)
         { 
@@ -7036,6 +7592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesDidpool (string didPoolId)
         {
              DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo(didPoolId);
@@ -7047,6 +7604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId)
         { 
@@ -7131,6 +7689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesDidpoolAsync (string didPoolId)
         {
              await DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo(didPoolId);
@@ -7143,6 +7702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId)
         { 
@@ -7229,6 +7789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId)
         {
              DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo(edgeGroupId);
@@ -7240,6 +7801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId)
         { 
@@ -7324,6 +7886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId)
         {
              await DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo(edgeGroupId);
@@ -7336,6 +7899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId)
         { 
@@ -7422,6 +7986,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId)
         {
              DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo(extensionPoolId);
@@ -7433,6 +7998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId)
         { 
@@ -7517,6 +8083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId)
         {
              await DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo(extensionPoolId);
@@ -7529,6 +8096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId)
         { 
@@ -7615,6 +8183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesPhone (string phoneId)
         {
              DeleteTelephonyProvidersEdgesPhoneWithHttpInfo(phoneId);
@@ -7626,6 +8195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId)
         { 
@@ -7710,6 +8280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesPhoneAsync (string phoneId)
         {
              await DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo(phoneId);
@@ -7722,6 +8293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId)
         { 
@@ -7808,6 +8380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId)
         {
              DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo(phoneBaseId);
@@ -7819,6 +8392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId)
         { 
@@ -7903,6 +8477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId)
         {
              await DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo(phoneBaseId);
@@ -7915,6 +8490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId)
         { 
@@ -8001,6 +8577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesSite (string siteId)
         {
              DeleteTelephonyProvidersEdgesSiteWithHttpInfo(siteId);
@@ -8012,6 +8589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesSiteWithHttpInfo (string siteId)
         { 
@@ -8096,6 +8674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesSiteAsync (string siteId)
         {
              await DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo(siteId);
@@ -8108,6 +8687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId)
         { 
@@ -8195,6 +8775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId)
         {
              DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo(siteId, outboundRouteId);
@@ -8207,6 +8788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId)
         { 
@@ -8296,6 +8878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId)
         {
              await DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo(siteId, outboundRouteId);
@@ -8309,6 +8892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId)
         { 
@@ -8400,6 +8984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns></returns>
         
+        
         public void DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId)
         {
              DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo(trunkBaseSettingsId);
@@ -8411,6 +8996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId)
         { 
@@ -8495,6 +9081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId)
         {
              await DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo(trunkBaseSettingsId);
@@ -8507,6 +9094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId)
         { 
@@ -8594,6 +9182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Edge</returns>
         
+        
         public Edge GetTelephonyProvidersEdge (string edgeId, List<string> expand = null)
         {
              ApiResponse<Edge> localVarResponse = GetTelephonyProvidersEdgeWithHttpInfo(edgeId, expand);
@@ -8607,6 +9196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of Edge</returns>
+        
         
         public ApiResponse< Edge > GetTelephonyProvidersEdgeWithHttpInfo (string edgeId, List<string> expand = null)
         { 
@@ -8693,6 +9283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of Edge</returns>
         
+        
         public async System.Threading.Tasks.Task<Edge> GetTelephonyProvidersEdgeAsync (string edgeId, List<string> expand = null)
         {
              ApiResponse<Edge> localVarResponse = await GetTelephonyProvidersEdgeAsyncWithHttpInfo(edgeId, expand);
@@ -8707,6 +9298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Edge>> GetTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId, List<string> expand = null)
         { 
@@ -8794,6 +9386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeNetworkDiagnosticResponse</returns>
         
+        
         public EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticNslookup (string edgeId)
         {
              ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = GetTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo(edgeId);
@@ -8806,6 +9399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        
         
         public ApiResponse< EdgeNetworkDiagnosticResponse > GetTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo (string edgeId)
         { 
@@ -8890,6 +9484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticNslookupAsync (string edgeId)
         {
              ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = await GetTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo(edgeId);
@@ -8903,6 +9498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo (string edgeId)
         { 
@@ -8989,6 +9585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeNetworkDiagnosticResponse</returns>
         
+        
         public EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticPing (string edgeId)
         {
              ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = GetTelephonyProvidersEdgeDiagnosticPingWithHttpInfo(edgeId);
@@ -9001,6 +9598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        
         
         public ApiResponse< EdgeNetworkDiagnosticResponse > GetTelephonyProvidersEdgeDiagnosticPingWithHttpInfo (string edgeId)
         { 
@@ -9085,6 +9683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticPingAsync (string edgeId)
         {
              ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = await GetTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo(edgeId);
@@ -9098,6 +9697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo (string edgeId)
         { 
@@ -9184,6 +9784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeNetworkDiagnosticResponse</returns>
         
+        
         public EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticRoute (string edgeId)
         {
              ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = GetTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo(edgeId);
@@ -9196,6 +9797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        
         
         public ApiResponse< EdgeNetworkDiagnosticResponse > GetTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo (string edgeId)
         { 
@@ -9280,6 +9882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticRouteAsync (string edgeId)
         {
              ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = await GetTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo(edgeId);
@@ -9293,6 +9896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo (string edgeId)
         { 
@@ -9379,6 +9983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeNetworkDiagnosticResponse</returns>
         
+        
         public EdgeNetworkDiagnosticResponse GetTelephonyProvidersEdgeDiagnosticTracepath (string edgeId)
         {
              ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = GetTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo(edgeId);
@@ -9391,6 +9996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnosticResponse</returns>
+        
         
         public ApiResponse< EdgeNetworkDiagnosticResponse > GetTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId)
         { 
@@ -9475,6 +10081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeNetworkDiagnosticResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticTracepathAsync (string edgeId)
         {
              ApiResponse<EdgeNetworkDiagnosticResponse> localVarResponse = await GetTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo(edgeId);
@@ -9488,6 +10095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnosticResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId)
         { 
@@ -9576,6 +10184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>DomainLogicalInterface</returns>
         
+        
         public DomainLogicalInterface GetTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId, List<string> expand = null)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = GetTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo(edgeId, interfaceId, expand);
@@ -9590,6 +10199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
+        
         
         public ApiResponse< DomainLogicalInterface > GetTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId, List<string> expand = null)
         { 
@@ -9681,6 +10291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of DomainLogicalInterface</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainLogicalInterface> GetTelephonyProvidersEdgeLogicalinterfaceAsync (string edgeId, string interfaceId, List<string> expand = null)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = await GetTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo(edgeId, interfaceId, expand);
@@ -9696,6 +10307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId, List<string> expand = null)
         { 
@@ -9789,6 +10401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>LogicalInterfaceEntityListing</returns>
         
+        
         public LogicalInterfaceEntityListing GetTelephonyProvidersEdgeLogicalinterfaces (string edgeId, List<string> expand = null)
         {
              ApiResponse<LogicalInterfaceEntityListing> localVarResponse = GetTelephonyProvidersEdgeLogicalinterfacesWithHttpInfo(edgeId, expand);
@@ -9802,6 +10415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of LogicalInterfaceEntityListing</returns>
+        
         
         public ApiResponse< LogicalInterfaceEntityListing > GetTelephonyProvidersEdgeLogicalinterfacesWithHttpInfo (string edgeId, List<string> expand = null)
         { 
@@ -9888,6 +10502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of LogicalInterfaceEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetTelephonyProvidersEdgeLogicalinterfacesAsync (string edgeId, List<string> expand = null)
         {
              ApiResponse<LogicalInterfaceEntityListing> localVarResponse = await GetTelephonyProvidersEdgeLogicalinterfacesAsyncWithHttpInfo(edgeId, expand);
@@ -9902,6 +10517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetTelephonyProvidersEdgeLogicalinterfacesAsyncWithHttpInfo (string edgeId, List<string> expand = null)
         { 
@@ -9990,6 +10606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <returns>EdgeLogsJob</returns>
         
+        
         public EdgeLogsJob GetTelephonyProvidersEdgeLogsJob (string edgeId, string jobId)
         {
              ApiResponse<EdgeLogsJob> localVarResponse = GetTelephonyProvidersEdgeLogsJobWithHttpInfo(edgeId, jobId);
@@ -10003,6 +10620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
         /// <returns>ApiResponse of EdgeLogsJob</returns>
+        
         
         public ApiResponse< EdgeLogsJob > GetTelephonyProvidersEdgeLogsJobWithHttpInfo (string edgeId, string jobId)
         { 
@@ -10092,6 +10710,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <returns>Task of EdgeLogsJob</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeLogsJob> GetTelephonyProvidersEdgeLogsJobAsync (string edgeId, string jobId)
         {
              ApiResponse<EdgeLogsJob> localVarResponse = await GetTelephonyProvidersEdgeLogsJobAsyncWithHttpInfo(edgeId, jobId);
@@ -10106,6 +10725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
         /// <returns>Task of ApiResponse (EdgeLogsJob)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeLogsJob>> GetTelephonyProvidersEdgeLogsJobAsyncWithHttpInfo (string edgeId, string jobId)
         { 
@@ -10197,6 +10817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>EdgeMetrics</returns>
         
+        
         public EdgeMetrics GetTelephonyProvidersEdgeMetrics (string edgeId)
         {
              ApiResponse<EdgeMetrics> localVarResponse = GetTelephonyProvidersEdgeMetricsWithHttpInfo(edgeId);
@@ -10209,6 +10830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of EdgeMetrics</returns>
+        
         
         public ApiResponse< EdgeMetrics > GetTelephonyProvidersEdgeMetricsWithHttpInfo (string edgeId)
         { 
@@ -10293,6 +10915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of EdgeMetrics</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeMetrics> GetTelephonyProvidersEdgeMetricsAsync (string edgeId)
         {
              ApiResponse<EdgeMetrics> localVarResponse = await GetTelephonyProvidersEdgeMetricsAsyncWithHttpInfo(edgeId);
@@ -10306,6 +10929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (EdgeMetrics)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeMetrics>> GetTelephonyProvidersEdgeMetricsAsyncWithHttpInfo (string edgeId)
         { 
@@ -10393,6 +11017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>DomainPhysicalInterface</returns>
         
+        
         public DomainPhysicalInterface GetTelephonyProvidersEdgePhysicalinterface (string edgeId, string interfaceId)
         {
              ApiResponse<DomainPhysicalInterface> localVarResponse = GetTelephonyProvidersEdgePhysicalinterfaceWithHttpInfo(edgeId, interfaceId);
@@ -10406,6 +11031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>ApiResponse of DomainPhysicalInterface</returns>
+        
         
         public ApiResponse< DomainPhysicalInterface > GetTelephonyProvidersEdgePhysicalinterfaceWithHttpInfo (string edgeId, string interfaceId)
         { 
@@ -10495,6 +11121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of DomainPhysicalInterface</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainPhysicalInterface> GetTelephonyProvidersEdgePhysicalinterfaceAsync (string edgeId, string interfaceId)
         {
              ApiResponse<DomainPhysicalInterface> localVarResponse = await GetTelephonyProvidersEdgePhysicalinterfaceAsyncWithHttpInfo(edgeId, interfaceId);
@@ -10509,6 +11136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse (DomainPhysicalInterface)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainPhysicalInterface>> GetTelephonyProvidersEdgePhysicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId)
         { 
@@ -10600,6 +11228,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>PhysicalInterfaceEntityListing</returns>
         
+        
         public PhysicalInterfaceEntityListing GetTelephonyProvidersEdgePhysicalinterfaces (string edgeId)
         {
              ApiResponse<PhysicalInterfaceEntityListing> localVarResponse = GetTelephonyProvidersEdgePhysicalinterfacesWithHttpInfo(edgeId);
@@ -10612,6 +11241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of PhysicalInterfaceEntityListing</returns>
+        
         
         public ApiResponse< PhysicalInterfaceEntityListing > GetTelephonyProvidersEdgePhysicalinterfacesWithHttpInfo (string edgeId)
         { 
@@ -10696,6 +11326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of PhysicalInterfaceEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgePhysicalinterfacesAsync (string edgeId)
         {
              ApiResponse<PhysicalInterfaceEntityListing> localVarResponse = await GetTelephonyProvidersEdgePhysicalinterfacesAsyncWithHttpInfo(edgeId);
@@ -10709,6 +11340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (PhysicalInterfaceEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetTelephonyProvidersEdgePhysicalinterfacesAsyncWithHttpInfo (string edgeId)
         { 
@@ -10795,6 +11427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>VmPairingInfo</returns>
         
+        
         public VmPairingInfo GetTelephonyProvidersEdgeSetuppackage (string edgeId)
         {
              ApiResponse<VmPairingInfo> localVarResponse = GetTelephonyProvidersEdgeSetuppackageWithHttpInfo(edgeId);
@@ -10807,6 +11440,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of VmPairingInfo</returns>
+        
         
         public ApiResponse< VmPairingInfo > GetTelephonyProvidersEdgeSetuppackageWithHttpInfo (string edgeId)
         { 
@@ -10891,6 +11525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of VmPairingInfo</returns>
         
+        
         public async System.Threading.Tasks.Task<VmPairingInfo> GetTelephonyProvidersEdgeSetuppackageAsync (string edgeId)
         {
              ApiResponse<VmPairingInfo> localVarResponse = await GetTelephonyProvidersEdgeSetuppackageAsyncWithHttpInfo(edgeId);
@@ -10904,6 +11539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (VmPairingInfo)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<VmPairingInfo>> GetTelephonyProvidersEdgeSetuppackageAsyncWithHttpInfo (string edgeId)
         { 
@@ -10990,6 +11626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
         
+        
         public DomainEdgeSoftwareUpdateDto GetTelephonyProvidersEdgeSoftwareupdate (string edgeId)
         {
              ApiResponse<DomainEdgeSoftwareUpdateDto> localVarResponse = GetTelephonyProvidersEdgeSoftwareupdateWithHttpInfo(edgeId);
@@ -11002,6 +11639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
+        
         
         public ApiResponse< DomainEdgeSoftwareUpdateDto > GetTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId)
         { 
@@ -11086,6 +11724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> GetTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId)
         {
              ApiResponse<DomainEdgeSoftwareUpdateDto> localVarResponse = await GetTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo(edgeId);
@@ -11099,6 +11738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> GetTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId)
         { 
@@ -11185,6 +11825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>DomainEdgeSoftwareVersionDtoEntityListing</returns>
         
+        
         public DomainEdgeSoftwareVersionDtoEntityListing GetTelephonyProvidersEdgeSoftwareversions (string edgeId)
         {
              ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing> localVarResponse = GetTelephonyProvidersEdgeSoftwareversionsWithHttpInfo(edgeId);
@@ -11197,6 +11838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareVersionDtoEntityListing</returns>
+        
         
         public ApiResponse< DomainEdgeSoftwareVersionDtoEntityListing > GetTelephonyProvidersEdgeSoftwareversionsWithHttpInfo (string edgeId)
         { 
@@ -11281,6 +11923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of DomainEdgeSoftwareVersionDtoEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDtoEntityListing> GetTelephonyProvidersEdgeSoftwareversionsAsync (string edgeId)
         {
              ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing> localVarResponse = await GetTelephonyProvidersEdgeSoftwareversionsAsyncWithHttpInfo(edgeId);
@@ -11294,6 +11937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDtoEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing>> GetTelephonyProvidersEdgeSoftwareversionsAsyncWithHttpInfo (string edgeId)
         { 
@@ -11386,6 +12030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>TrunkEntityListing</returns>
         
+        
         public TrunkEntityListing GetTelephonyProvidersEdgeTrunks (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
         {
              ApiResponse<TrunkEntityListing> localVarResponse = GetTelephonyProvidersEdgeTrunksWithHttpInfo(edgeId, pageNumber, pageSize, sortBy, sortOrder, trunkBaseId, trunkType);
@@ -11404,6 +12049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>ApiResponse of TrunkEntityListing</returns>
+        
         
         public ApiResponse< TrunkEntityListing > GetTelephonyProvidersEdgeTrunksWithHttpInfo (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
         { 
@@ -11500,6 +12146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>Task of TrunkEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkEntityListing> GetTelephonyProvidersEdgeTrunksAsync (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
         {
              ApiResponse<TrunkEntityListing> localVarResponse = await GetTelephonyProvidersEdgeTrunksAsyncWithHttpInfo(edgeId, pageNumber, pageSize, sortBy, sortOrder, trunkBaseId, trunkType);
@@ -11519,6 +12166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>Task of ApiResponse (TrunkEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetTelephonyProvidersEdgeTrunksAsyncWithHttpInfo (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
         { 
@@ -11618,6 +12266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>EdgeEntityListing</returns>
         
+        
         public EdgeEntityListing GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
         {
              ApiResponse<EdgeEntityListing> localVarResponse = GetTelephonyProvidersEdgesWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed, showCloudMedia);
@@ -11637,6 +12286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>ApiResponse of EdgeEntityListing</returns>
+        
         
         public ApiResponse< EdgeEntityListing > GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
         { 
@@ -11732,6 +12382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>Task of EdgeEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeEntityListing> GetTelephonyProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
         {
              ApiResponse<EdgeEntityListing> localVarResponse = await GetTelephonyProvidersEdgesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed, showCloudMedia);
@@ -11752,6 +12403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (EdgeEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
         { 
@@ -11840,6 +12492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AvailableLanguageList</returns>
         
+        
         public AvailableLanguageList GetTelephonyProvidersEdgesAvailablelanguages ()
         {
              ApiResponse<AvailableLanguageList> localVarResponse = GetTelephonyProvidersEdgesAvailablelanguagesWithHttpInfo();
@@ -11851,6 +12504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AvailableLanguageList</returns>
+        
         
         public ApiResponse< AvailableLanguageList > GetTelephonyProvidersEdgesAvailablelanguagesWithHttpInfo ()
         { 
@@ -11930,6 +12584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AvailableLanguageList</returns>
         
+        
         public async System.Threading.Tasks.Task<AvailableLanguageList> GetTelephonyProvidersEdgesAvailablelanguagesAsync ()
         {
              ApiResponse<AvailableLanguageList> localVarResponse = await GetTelephonyProvidersEdgesAvailablelanguagesAsyncWithHttpInfo();
@@ -11942,6 +12597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AvailableLanguageList)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<AvailableLanguageList>> GetTelephonyProvidersEdgesAvailablelanguagesAsyncWithHttpInfo ()
         { 
@@ -12022,6 +12678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CertificateAuthorityEntityListing</returns>
         
+        
         public CertificateAuthorityEntityListing GetTelephonyProvidersEdgesCertificateauthorities ()
         {
              ApiResponse<CertificateAuthorityEntityListing> localVarResponse = GetTelephonyProvidersEdgesCertificateauthoritiesWithHttpInfo();
@@ -12033,6 +12690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CertificateAuthorityEntityListing</returns>
+        
         
         public ApiResponse< CertificateAuthorityEntityListing > GetTelephonyProvidersEdgesCertificateauthoritiesWithHttpInfo ()
         { 
@@ -12112,6 +12770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CertificateAuthorityEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<CertificateAuthorityEntityListing> GetTelephonyProvidersEdgesCertificateauthoritiesAsync ()
         {
              ApiResponse<CertificateAuthorityEntityListing> localVarResponse = await GetTelephonyProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo();
@@ -12124,6 +12783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CertificateAuthorityEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<CertificateAuthorityEntityListing>> GetTelephonyProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo ()
         { 
@@ -12205,6 +12865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>DomainCertificateAuthority</returns>
         
+        
         public DomainCertificateAuthority GetTelephonyProvidersEdgesCertificateauthority (string certificateId)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = GetTelephonyProvidersEdgesCertificateauthorityWithHttpInfo(certificateId);
@@ -12217,6 +12878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
+        
         
         public ApiResponse< DomainCertificateAuthority > GetTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId)
         { 
@@ -12301,6 +12963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainCertificateAuthority> GetTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = await GetTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo(certificateId);
@@ -12314,6 +12977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> GetTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId)
         { 
@@ -12400,6 +13064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didId">DID ID</param>
         /// <returns>DID</returns>
         
+        
         public DID GetTelephonyProvidersEdgesDid (string didId)
         {
              ApiResponse<DID> localVarResponse = GetTelephonyProvidersEdgesDidWithHttpInfo(didId);
@@ -12412,6 +13077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
         /// <returns>ApiResponse of DID</returns>
+        
         
         public ApiResponse< DID > GetTelephonyProvidersEdgesDidWithHttpInfo (string didId)
         { 
@@ -12496,6 +13162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didId">DID ID</param>
         /// <returns>Task of DID</returns>
         
+        
         public async System.Threading.Tasks.Task<DID> GetTelephonyProvidersEdgesDidAsync (string didId)
         {
              ApiResponse<DID> localVarResponse = await GetTelephonyProvidersEdgesDidAsyncWithHttpInfo(didId);
@@ -12509,6 +13176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
         /// <returns>Task of ApiResponse (DID)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DID>> GetTelephonyProvidersEdgesDidAsyncWithHttpInfo (string didId)
         { 
@@ -12595,6 +13263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>DIDPool</returns>
         
+        
         public DIDPool GetTelephonyProvidersEdgesDidpool (string didPoolId)
         {
              ApiResponse<DIDPool> localVarResponse = GetTelephonyProvidersEdgesDidpoolWithHttpInfo(didPoolId);
@@ -12607,6 +13276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>ApiResponse of DIDPool</returns>
+        
         
         public ApiResponse< DIDPool > GetTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId)
         { 
@@ -12691,6 +13361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of DIDPool</returns>
         
+        
         public async System.Threading.Tasks.Task<DIDPool> GetTelephonyProvidersEdgesDidpoolAsync (string didPoolId)
         {
              ApiResponse<DIDPool> localVarResponse = await GetTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo(didPoolId);
@@ -12704,6 +13375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> GetTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId)
         { 
@@ -12793,6 +13465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>DIDPoolEntityListing</returns>
         
+        
         public DIDPoolEntityListing GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
         {
              ApiResponse<DIDPoolEntityListing> localVarResponse = GetTelephonyProvidersEdgesDidpoolsWithHttpInfo(pageSize, pageNumber, sortBy, id);
@@ -12808,6 +13481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "number")</param>
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>ApiResponse of DIDPoolEntityListing</returns>
+        
         
         public ApiResponse< DIDPoolEntityListing > GetTelephonyProvidersEdgesDidpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
         { 
@@ -12895,6 +13569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of DIDPoolEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
         {
              ApiResponse<DIDPoolEntityListing> localVarResponse = await GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, id);
@@ -12911,6 +13586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "number")</param>
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDPoolEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DIDPoolEntityListing>> GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
         { 
@@ -13001,6 +13677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>DIDNumberEntityListing</returns>
         
+        
         public DIDNumberEntityListing GetTelephonyProvidersEdgesDidpoolsDids (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<DIDNumberEntityListing> localVarResponse = GetTelephonyProvidersEdgesDidpoolsDidsWithHttpInfo(type, id, numberMatch, pageSize, pageNumber, sortOrder);
@@ -13018,6 +13695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>ApiResponse of DIDNumberEntityListing</returns>
+        
         
         public ApiResponse< DIDNumberEntityListing > GetTelephonyProvidersEdgesDidpoolsDidsWithHttpInfo (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -13112,6 +13790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>Task of DIDNumberEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DIDNumberEntityListing> GetTelephonyProvidersEdgesDidpoolsDidsAsync (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<DIDNumberEntityListing> localVarResponse = await GetTelephonyProvidersEdgesDidpoolsDidsAsyncWithHttpInfo(type, id, numberMatch, pageSize, pageNumber, sortOrder);
@@ -13130,6 +13809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <returns>Task of ApiResponse (DIDNumberEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DIDNumberEntityListing>> GetTelephonyProvidersEdgesDidpoolsDidsAsyncWithHttpInfo (string type, List<string> id = null, string numberMatch = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
@@ -13228,6 +13908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>DIDEntityListing</returns>
         
+        
         public DIDEntityListing GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
         {
              ApiResponse<DIDEntityListing> localVarResponse = GetTelephonyProvidersEdgesDidsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId, id);
@@ -13247,6 +13928,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>ApiResponse of DIDEntityListing</returns>
+        
         
         public ApiResponse< DIDEntityListing > GetTelephonyProvidersEdgesDidsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
         { 
@@ -13342,6 +14024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of DIDEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<DIDEntityListing> GetTelephonyProvidersEdgesDidsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
         {
              ApiResponse<DIDEntityListing> localVarResponse = await GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId, id);
@@ -13362,6 +14045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">Filter by the DID Pool assignment (optional)</param>
         /// <param name="id">Filter by a specific list of ID&#39;s (optional)</param>
         /// <returns>Task of ApiResponse (DIDEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DIDEntityListing>> GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
         { 
@@ -13452,6 +14136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>EdgeGroup</returns>
         
+        
         public EdgeGroup GetTelephonyProvidersEdgesEdgegroup (string edgeGroupId, List<string> expand = null)
         {
              ApiResponse<EdgeGroup> localVarResponse = GetTelephonyProvidersEdgesEdgegroupWithHttpInfo(edgeGroupId, expand);
@@ -13465,6 +14150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
+        
         
         public ApiResponse< EdgeGroup > GetTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId, List<string> expand = null)
         { 
@@ -13551,6 +14237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>Task of EdgeGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeGroup> GetTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId, List<string> expand = null)
         {
              ApiResponse<EdgeGroup> localVarResponse = await GetTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo(edgeGroupId, expand);
@@ -13565,6 +14252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId, List<string> expand = null)
         { 
@@ -13653,6 +14341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>EdgeTrunkBase</returns>
         
+        
         public EdgeTrunkBase GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId)
         {
              ApiResponse<EdgeTrunkBase> localVarResponse = GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo(edgegroupId, edgetrunkbaseId);
@@ -13666,6 +14355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>ApiResponse of EdgeTrunkBase</returns>
+        
         
         public ApiResponse< EdgeTrunkBase > GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo (string edgegroupId, string edgetrunkbaseId)
         { 
@@ -13755,6 +14445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>Task of EdgeTrunkBase</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsync (string edgegroupId, string edgetrunkbaseId)
         {
              ApiResponse<EdgeTrunkBase> localVarResponse = await GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo(edgegroupId, edgetrunkbaseId);
@@ -13769,6 +14460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>Task of ApiResponse (EdgeTrunkBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId)
         { 
@@ -13864,6 +14556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>EdgeGroupEntityListing</returns>
         
+        
         public EdgeGroupEntityListing GetTelephonyProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
         {
              ApiResponse<EdgeGroupEntityListing> localVarResponse = GetTelephonyProvidersEdgesEdgegroupsWithHttpInfo(pageSize, pageNumber, name, sortBy, managed);
@@ -13880,6 +14573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of EdgeGroupEntityListing</returns>
+        
         
         public ApiResponse< EdgeGroupEntityListing > GetTelephonyProvidersEdgesEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
         { 
@@ -13969,6 +14663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of EdgeGroupEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeGroupEntityListing> GetTelephonyProvidersEdgesEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
         {
              ApiResponse<EdgeGroupEntityListing> localVarResponse = await GetTelephonyProvidersEdgesEdgegroupsAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy, managed);
@@ -13986,6 +14681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (EdgeGroupEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetTelephonyProvidersEdgesEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
         { 
@@ -14071,6 +14767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EdgeVersionReport</returns>
         
+        
         public EdgeVersionReport GetTelephonyProvidersEdgesEdgeversionreport ()
         {
              ApiResponse<EdgeVersionReport> localVarResponse = GetTelephonyProvidersEdgesEdgeversionreportWithHttpInfo();
@@ -14082,6 +14779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EdgeVersionReport</returns>
+        
         
         public ApiResponse< EdgeVersionReport > GetTelephonyProvidersEdgesEdgeversionreportWithHttpInfo ()
         { 
@@ -14161,6 +14859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EdgeVersionReport</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeVersionReport> GetTelephonyProvidersEdgesEdgeversionreportAsync ()
         {
              ApiResponse<EdgeVersionReport> localVarResponse = await GetTelephonyProvidersEdgesEdgeversionreportAsyncWithHttpInfo();
@@ -14173,6 +14872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EdgeVersionReport)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeVersionReport>> GetTelephonyProvidersEdgesEdgeversionreportAsyncWithHttpInfo ()
         { 
@@ -14253,6 +14953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ExpiredEdgeListing</returns>
         
+        
         public ExpiredEdgeListing GetTelephonyProvidersEdgesExpired ()
         {
              ApiResponse<ExpiredEdgeListing> localVarResponse = GetTelephonyProvidersEdgesExpiredWithHttpInfo();
@@ -14264,6 +14965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ExpiredEdgeListing</returns>
+        
         
         public ApiResponse< ExpiredEdgeListing > GetTelephonyProvidersEdgesExpiredWithHttpInfo ()
         { 
@@ -14343,6 +15045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ExpiredEdgeListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ExpiredEdgeListing> GetTelephonyProvidersEdgesExpiredAsync ()
         {
              ApiResponse<ExpiredEdgeListing> localVarResponse = await GetTelephonyProvidersEdgesExpiredAsyncWithHttpInfo();
@@ -14355,6 +15058,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ExpiredEdgeListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExpiredEdgeListing>> GetTelephonyProvidersEdgesExpiredAsyncWithHttpInfo ()
         { 
@@ -14436,6 +15140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Extension</returns>
         
+        
         public Extension GetTelephonyProvidersEdgesExtension (string extensionId)
         {
              ApiResponse<Extension> localVarResponse = GetTelephonyProvidersEdgesExtensionWithHttpInfo(extensionId);
@@ -14448,6 +15153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>ApiResponse of Extension</returns>
+        
         
         public ApiResponse< Extension > GetTelephonyProvidersEdgesExtensionWithHttpInfo (string extensionId)
         { 
@@ -14532,6 +15238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Task of Extension</returns>
         
+        
         public async System.Threading.Tasks.Task<Extension> GetTelephonyProvidersEdgesExtensionAsync (string extensionId)
         {
              ApiResponse<Extension> localVarResponse = await GetTelephonyProvidersEdgesExtensionAsyncWithHttpInfo(extensionId);
@@ -14545,6 +15252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Extension>> GetTelephonyProvidersEdgesExtensionAsyncWithHttpInfo (string extensionId)
         { 
@@ -14631,6 +15339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ExtensionPool</returns>
         
+        
         public ExtensionPool GetTelephonyProvidersEdgesExtensionpool (string extensionPoolId)
         {
              ApiResponse<ExtensionPool> localVarResponse = GetTelephonyProvidersEdgesExtensionpoolWithHttpInfo(extensionPoolId);
@@ -14643,6 +15352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
+        
         
         public ApiResponse< ExtensionPool > GetTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId)
         { 
@@ -14727,6 +15437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ExtensionPool</returns>
         
+        
         public async System.Threading.Tasks.Task<ExtensionPool> GetTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId)
         {
              ApiResponse<ExtensionPool> localVarResponse = await GetTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo(extensionPoolId);
@@ -14740,6 +15451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> GetTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId)
         { 
@@ -14829,6 +15541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
         /// <returns>ExtensionPoolEntityListing</returns>
         
+        
         public ExtensionPoolEntityListing GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
         {
              ApiResponse<ExtensionPoolEntityListing> localVarResponse = GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo(pageSize, pageNumber, sortBy, number);
@@ -14844,6 +15557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
         /// <returns>ApiResponse of ExtensionPoolEntityListing</returns>
+        
         
         public ApiResponse< ExtensionPoolEntityListing > GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
         { 
@@ -14931,6 +15645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
         /// <returns>Task of ExtensionPoolEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
         {
              ApiResponse<ExtensionPoolEntityListing> localVarResponse = await GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, number);
@@ -14947,6 +15662,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="number">Deprecated, filtering by number not supported (optional)</param>
         /// <returns>Task of ApiResponse (ExtensionPoolEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
         { 
@@ -15026,6 +15742,234 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a pageable list of basic extension pool objects filterable by query parameters. This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Extension Pools to filter by. (optional)</param>
+        /// <param name="name">Name of the Extension Pools to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ExtensionPoolDivisionViewEntityListing</returns>
+        
+        /// Preview Endpoint
+        public ExtensionPoolDivisionViewEntityListing GetTelephonyProvidersEdgesExtensionpoolsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<ExtensionPoolDivisionViewEntityListing> localVarResponse = GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic extension pool objects filterable by query parameters. This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Extension Pools to filter by. (optional)</param>
+        /// <param name="name">Name of the Extension Pools to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of ExtensionPoolDivisionViewEntityListing</returns>
+        
+        /// Preview Endpoint
+        public ApiResponse< ExtensionPoolDivisionViewEntityListing > GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesExtensionpoolsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesExtensionpoolsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExtensionPoolDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ExtensionPoolDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionPoolDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a pageable list of basic extension pool objects filterable by query parameters. This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Extension Pools to filter by. (optional)</param>
+        /// <param name="name">Name of the Extension Pools to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ExtensionPoolDivisionViewEntityListing</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ExtensionPoolDivisionViewEntityListing> GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<ExtensionPoolDivisionViewEntityListing> localVarResponse = await GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic extension pool objects filterable by query parameters. This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Extension Pools to filter by. (optional)</param>
+        /// <param name="name">Name of the Extension Pools to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (ExtensionPoolDivisionViewEntityListing)</returns>
+        
+        /// Preview Endpoint
+        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPoolDivisionViewEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesExtensionpoolsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesExtensionpoolsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExtensionPoolDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ExtensionPoolDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionPoolDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a listing of extensions 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -15035,6 +15979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="number">Filter by number (optional)</param>
         /// <returns>ExtensionEntityListing</returns>
+        
         
         public ExtensionEntityListing GetTelephonyProvidersEdgesExtensions (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null)
         {
@@ -15052,6 +15997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="number">Filter by number (optional)</param>
         /// <returns>ApiResponse of ExtensionEntityListing</returns>
+        
         
         public ApiResponse< ExtensionEntityListing > GetTelephonyProvidersEdgesExtensionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null)
         { 
@@ -15141,6 +16087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="number">Filter by number (optional)</param>
         /// <returns>Task of ExtensionEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<ExtensionEntityListing> GetTelephonyProvidersEdgesExtensionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null)
         {
              ApiResponse<ExtensionEntityListing> localVarResponse = await GetTelephonyProvidersEdgesExtensionsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, number);
@@ -15158,6 +16105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="number">Filter by number (optional)</param>
         /// <returns>Task of ApiResponse (ExtensionEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExtensionEntityListing>> GetTelephonyProvidersEdgesExtensionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null)
         { 
@@ -15244,6 +16192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineId">Line ID</param>
         /// <returns>Line</returns>
         
+        
         public Line GetTelephonyProvidersEdgesLine (string lineId)
         {
              ApiResponse<Line> localVarResponse = GetTelephonyProvidersEdgesLineWithHttpInfo(lineId);
@@ -15256,6 +16205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineId">Line ID</param>
         /// <returns>ApiResponse of Line</returns>
+        
         
         public ApiResponse< Line > GetTelephonyProvidersEdgesLineWithHttpInfo (string lineId)
         { 
@@ -15340,6 +16290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of Line</returns>
         
+        
         public async System.Threading.Tasks.Task<Line> GetTelephonyProvidersEdgesLineAsync (string lineId)
         {
              ApiResponse<Line> localVarResponse = await GetTelephonyProvidersEdgesLineAsyncWithHttpInfo(lineId);
@@ -15353,6 +16304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of ApiResponse (Line)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Line>> GetTelephonyProvidersEdgesLineAsyncWithHttpInfo (string lineId)
         { 
@@ -15439,6 +16391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>LineBase</returns>
         
+        
         public LineBase GetTelephonyProvidersEdgesLinebasesetting (string lineBaseId)
         {
              ApiResponse<LineBase> localVarResponse = GetTelephonyProvidersEdgesLinebasesettingWithHttpInfo(lineBaseId);
@@ -15451,6 +16404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>ApiResponse of LineBase</returns>
+        
         
         public ApiResponse< LineBase > GetTelephonyProvidersEdgesLinebasesettingWithHttpInfo (string lineBaseId)
         { 
@@ -15535,6 +16489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>Task of LineBase</returns>
         
+        
         public async System.Threading.Tasks.Task<LineBase> GetTelephonyProvidersEdgesLinebasesettingAsync (string lineBaseId)
         {
              ApiResponse<LineBase> localVarResponse = await GetTelephonyProvidersEdgesLinebasesettingAsyncWithHttpInfo(lineBaseId);
@@ -15548,6 +16503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>Task of ApiResponse (LineBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LineBase>> GetTelephonyProvidersEdgesLinebasesettingAsyncWithHttpInfo (string lineBaseId)
         { 
@@ -15638,6 +16594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>LineBaseEntityListing</returns>
         
+        
         public LineBaseEntityListing GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<LineBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, expand);
@@ -15654,6 +16611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of LineBaseEntityListing</returns>
+        
         
         public ApiResponse< LineBaseEntityListing > GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         { 
@@ -15743,6 +16701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of LineBaseEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<LineBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, expand);
@@ -15760,6 +16719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (LineBaseEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         { 
@@ -15850,6 +16810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>LineEntityListing</returns>
         
+        
         public LineEntityListing GetTelephonyProvidersEdgesLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         {
              ApiResponse<LineEntityListing> localVarResponse = GetTelephonyProvidersEdgesLinesWithHttpInfo(pageSize, pageNumber, name, sortBy, expand);
@@ -15866,6 +16827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
         /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>ApiResponse of LineEntityListing</returns>
+        
         
         public ApiResponse< LineEntityListing > GetTelephonyProvidersEdgesLinesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         { 
@@ -15955,6 +16917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>Task of LineEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<LineEntityListing> GetTelephonyProvidersEdgesLinesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         {
              ApiResponse<LineEntityListing> localVarResponse = await GetTelephonyProvidersEdgesLinesAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy, expand);
@@ -15972,6 +16935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
         /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>Task of ApiResponse (LineEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetTelephonyProvidersEdgesLinesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         { 
@@ -16058,6 +17022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Line</returns>
         
+        
         public Line GetTelephonyProvidersEdgesLinesTemplate (string lineBaseSettingsId)
         {
              ApiResponse<Line> localVarResponse = GetTelephonyProvidersEdgesLinesTemplateWithHttpInfo(lineBaseSettingsId);
@@ -16070,6 +17035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>ApiResponse of Line</returns>
+        
         
         public ApiResponse< Line > GetTelephonyProvidersEdgesLinesTemplateWithHttpInfo (string lineBaseSettingsId)
         { 
@@ -16154,6 +17120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Task of Line</returns>
         
+        
         public async System.Threading.Tasks.Task<Line> GetTelephonyProvidersEdgesLinesTemplateAsync (string lineBaseSettingsId)
         {
              ApiResponse<Line> localVarResponse = await GetTelephonyProvidersEdgesLinesTemplateAsyncWithHttpInfo(lineBaseSettingsId);
@@ -16167,6 +17134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Task of ApiResponse (Line)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Line>> GetTelephonyProvidersEdgesLinesTemplateAsyncWithHttpInfo (string lineBaseSettingsId)
         { 
@@ -16254,6 +17222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>LogicalInterfaceEntityListing</returns>
         
+        
         public LogicalInterfaceEntityListing GetTelephonyProvidersEdgesLogicalinterfaces (string edgeIds, List<string> expand = null)
         {
              ApiResponse<LogicalInterfaceEntityListing> localVarResponse = GetTelephonyProvidersEdgesLogicalinterfacesWithHttpInfo(edgeIds, expand);
@@ -16267,6 +17236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of LogicalInterfaceEntityListing</returns>
+        
         
         public ApiResponse< LogicalInterfaceEntityListing > GetTelephonyProvidersEdgesLogicalinterfacesWithHttpInfo (string edgeIds, List<string> expand = null)
         { 
@@ -16353,6 +17323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of LogicalInterfaceEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetTelephonyProvidersEdgesLogicalinterfacesAsync (string edgeIds, List<string> expand = null)
         {
              ApiResponse<LogicalInterfaceEntityListing> localVarResponse = await GetTelephonyProvidersEdgesLogicalinterfacesAsyncWithHttpInfo(edgeIds, expand);
@@ -16367,6 +17338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetTelephonyProvidersEdgesLogicalinterfacesAsyncWithHttpInfo (string edgeIds, List<string> expand = null)
         { 
@@ -16454,6 +17426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>List&lt;EdgeMetrics&gt;</returns>
         
+        
         public List<EdgeMetrics> GetTelephonyProvidersEdgesMetrics (string edgeIds)
         {
              ApiResponse<List<EdgeMetrics>> localVarResponse = GetTelephonyProvidersEdgesMetricsWithHttpInfo(edgeIds);
@@ -16466,6 +17439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>ApiResponse of List&lt;EdgeMetrics&gt;</returns>
+        
         
         public ApiResponse< List<EdgeMetrics> > GetTelephonyProvidersEdgesMetricsWithHttpInfo (string edgeIds)
         { 
@@ -16550,6 +17524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>Task of List&lt;EdgeMetrics&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<EdgeMetrics>> GetTelephonyProvidersEdgesMetricsAsync (string edgeIds)
         {
              ApiResponse<List<EdgeMetrics>> localVarResponse = await GetTelephonyProvidersEdgesMetricsAsyncWithHttpInfo(edgeIds);
@@ -16563,6 +17538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>Task of ApiResponse (List&lt;EdgeMetrics&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<EdgeMetrics>>> GetTelephonyProvidersEdgesMetricsAsyncWithHttpInfo (string edgeIds)
         { 
@@ -16649,6 +17625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>OutboundRoute</returns>
         [Obsolete]
+        
         public OutboundRoute GetTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
         {
              ApiResponse<OutboundRoute> localVarResponse = GetTelephonyProvidersEdgesOutboundrouteWithHttpInfo(outboundRouteId);
@@ -16662,6 +17639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
         [Obsolete]
+        
         public ApiResponse< OutboundRoute > GetTelephonyProvidersEdgesOutboundrouteWithHttpInfo (string outboundRouteId)
         { 
             // verify the required parameter 'outboundRouteId' is set
@@ -16745,6 +17723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of OutboundRoute</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<OutboundRoute> GetTelephonyProvidersEdgesOutboundrouteAsync (string outboundRouteId)
         {
              ApiResponse<OutboundRoute> localVarResponse = await GetTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo(outboundRouteId);
@@ -16759,6 +17738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
         [Obsolete]
+        
         public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> GetTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo (string outboundRouteId)
         { 
             // verify the required parameter 'outboundRouteId' is set
@@ -16849,6 +17829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>OutboundRouteEntityListing</returns>
         
+        
         public OutboundRouteEntityListing GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
         {
              ApiResponse<OutboundRouteEntityListing> localVarResponse = GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo(pageSize, pageNumber, name, siteId, externalTrunkBasesIds, sortBy);
@@ -16866,6 +17847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>ApiResponse of OutboundRouteEntityListing</returns>
+        
         
         public ApiResponse< OutboundRouteEntityListing > GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
         { 
@@ -16957,6 +17939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>Task of OutboundRouteEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
         {
              ApiResponse<OutboundRouteEntityListing> localVarResponse = await GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, externalTrunkBasesIds, sortBy);
@@ -16975,6 +17958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalTrunkBasesIds">Filter by externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>Task of ApiResponse (OutboundRouteEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
         { 
@@ -17062,6 +18046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Phone</returns>
         
+        
         public Phone GetTelephonyProvidersEdgesPhone (string phoneId)
         {
              ApiResponse<Phone> localVarResponse = GetTelephonyProvidersEdgesPhoneWithHttpInfo(phoneId);
@@ -17074,6 +18059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>ApiResponse of Phone</returns>
+        
         
         public ApiResponse< Phone > GetTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId)
         { 
@@ -17158,6 +18144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of Phone</returns>
         
+        
         public async System.Threading.Tasks.Task<Phone> GetTelephonyProvidersEdgesPhoneAsync (string phoneId)
         {
              ApiResponse<Phone> localVarResponse = await GetTelephonyProvidersEdgesPhoneAsyncWithHttpInfo(phoneId);
@@ -17171,6 +18158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId)
         { 
@@ -17257,6 +18245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>PhoneBase</returns>
         
+        
         public PhoneBase GetTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId)
         {
              ApiResponse<PhoneBase> localVarResponse = GetTelephonyProvidersEdgesPhonebasesettingWithHttpInfo(phoneBaseId);
@@ -17269,6 +18258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>ApiResponse of PhoneBase</returns>
+        
         
         public ApiResponse< PhoneBase > GetTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId)
         { 
@@ -17353,6 +18343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of PhoneBase</returns>
         
+        
         public async System.Threading.Tasks.Task<PhoneBase> GetTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId)
         {
              ApiResponse<PhoneBase> localVarResponse = await GetTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo(phoneBaseId);
@@ -17366,6 +18357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId)
         { 
@@ -17457,6 +18449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>PhoneBaseEntityListing</returns>
         
+        
         public PhoneBaseEntityListing GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
         {
              ApiResponse<PhoneBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, expand, name);
@@ -17474,6 +18467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of PhoneBaseEntityListing</returns>
+        
         
         public ApiResponse< PhoneBaseEntityListing > GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
         { 
@@ -17565,6 +18559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of PhoneBaseEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
         {
              ApiResponse<PhoneBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, expand, name);
@@ -17583,6 +18578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (PhoneBaseEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
         { 
@@ -17671,6 +18667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>PhoneMetaBaseEntityListing</returns>
         
+        
         public PhoneMetaBaseEntityListing GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabases (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<PhoneMetaBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesWithHttpInfo(pageSize, pageNumber);
@@ -17684,6 +18681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of PhoneMetaBaseEntityListing</returns>
+        
         
         public ApiResponse< PhoneMetaBaseEntityListing > GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -17767,6 +18765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of PhoneMetaBaseEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<PhoneMetaBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<PhoneMetaBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesAsyncWithHttpInfo(pageSize, pageNumber);
@@ -17781,6 +18780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (PhoneMetaBaseEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhoneMetaBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -17864,6 +18864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>PhoneBase</returns>
         
+        
         public PhoneBase GetTelephonyProvidersEdgesPhonebasesettingsTemplate (string phoneMetabaseId)
         {
              ApiResponse<PhoneBase> localVarResponse = GetTelephonyProvidersEdgesPhonebasesettingsTemplateWithHttpInfo(phoneMetabaseId);
@@ -17876,6 +18877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
+        
         
         public ApiResponse< PhoneBase > GetTelephonyProvidersEdgesPhonebasesettingsTemplateWithHttpInfo (string phoneMetabaseId)
         { 
@@ -17960,6 +18962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>Task of PhoneBase</returns>
         
+        
         public async System.Threading.Tasks.Task<PhoneBase> GetTelephonyProvidersEdgesPhonebasesettingsTemplateAsync (string phoneMetabaseId)
         {
              ApiResponse<PhoneBase> localVarResponse = await GetTelephonyProvidersEdgesPhonebasesettingsTemplateAsyncWithHttpInfo(phoneMetabaseId);
@@ -17973,6 +18976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetTelephonyProvidersEdgesPhonebasesettingsTemplateAsyncWithHttpInfo (string phoneMetabaseId)
         { 
@@ -18075,6 +19079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>PhoneEntityListing</returns>
         
+        
         public PhoneEntityListing GetTelephonyProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null)
         {
              ApiResponse<PhoneEntityListing> localVarResponse = GetTelephonyProvidersEdgesPhonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, name, statusOperationalStatus, secondaryStatusOperationalStatus, expand, fields);
@@ -18103,6 +19108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of PhoneEntityListing</returns>
+        
         
         public ApiResponse< PhoneEntityListing > GetTelephonyProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null)
         { 
@@ -18216,6 +19222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of PhoneEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<PhoneEntityListing> GetTelephonyProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null)
         {
              ApiResponse<PhoneEntityListing> localVarResponse = await GetTelephonyProvidersEdgesPhonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, name, statusOperationalStatus, secondaryStatusOperationalStatus, expand, fields);
@@ -18245,6 +19252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (PhoneEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetTelephonyProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null)
         { 
@@ -18343,6 +19351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Phone</returns>
         
+        
         public Phone GetTelephonyProvidersEdgesPhonesTemplate (string phoneBaseSettingsId)
         {
              ApiResponse<Phone> localVarResponse = GetTelephonyProvidersEdgesPhonesTemplateWithHttpInfo(phoneBaseSettingsId);
@@ -18355,6 +19364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>ApiResponse of Phone</returns>
+        
         
         public ApiResponse< Phone > GetTelephonyProvidersEdgesPhonesTemplateWithHttpInfo (string phoneBaseSettingsId)
         { 
@@ -18439,6 +19449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of Phone</returns>
         
+        
         public async System.Threading.Tasks.Task<Phone> GetTelephonyProvidersEdgesPhonesTemplateAsync (string phoneBaseSettingsId)
         {
              ApiResponse<Phone> localVarResponse = await GetTelephonyProvidersEdgesPhonesTemplateAsyncWithHttpInfo(phoneBaseSettingsId);
@@ -18452,6 +19463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgesPhonesTemplateAsyncWithHttpInfo (string phoneBaseSettingsId)
         { 
@@ -18538,6 +19550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>PhysicalInterfaceEntityListing</returns>
         
+        
         public PhysicalInterfaceEntityListing GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds)
         {
              ApiResponse<PhysicalInterfaceEntityListing> localVarResponse = GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo(edgeIds);
@@ -18550,6 +19563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>ApiResponse of PhysicalInterfaceEntityListing</returns>
+        
         
         public ApiResponse< PhysicalInterfaceEntityListing > GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo (string edgeIds)
         { 
@@ -18634,6 +19648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>Task of PhysicalInterfaceEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgesPhysicalinterfacesAsync (string edgeIds)
         {
              ApiResponse<PhysicalInterfaceEntityListing> localVarResponse = await GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo(edgeIds);
@@ -18647,6 +19662,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
         /// <returns>Task of ApiResponse (PhysicalInterfaceEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo (string edgeIds)
         { 
@@ -18733,6 +19749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Site</returns>
         
+        
         public Site GetTelephonyProvidersEdgesSite (string siteId)
         {
              ApiResponse<Site> localVarResponse = GetTelephonyProvidersEdgesSiteWithHttpInfo(siteId);
@@ -18745,6 +19762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of Site</returns>
+        
         
         public ApiResponse< Site > GetTelephonyProvidersEdgesSiteWithHttpInfo (string siteId)
         { 
@@ -18829,6 +19847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of Site</returns>
         
+        
         public async System.Threading.Tasks.Task<Site> GetTelephonyProvidersEdgesSiteAsync (string siteId)
         {
              ApiResponse<Site> localVarResponse = await GetTelephonyProvidersEdgesSiteAsyncWithHttpInfo(siteId);
@@ -18842,6 +19861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (Site)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Site>> GetTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId)
         { 
@@ -18929,6 +19949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>NumberPlan</returns>
         
+        
         public NumberPlan GetTelephonyProvidersEdgesSiteNumberplan (string siteId, string numberPlanId)
         {
              ApiResponse<NumberPlan> localVarResponse = GetTelephonyProvidersEdgesSiteNumberplanWithHttpInfo(siteId, numberPlanId);
@@ -18942,6 +19963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>ApiResponse of NumberPlan</returns>
+        
         
         public ApiResponse< NumberPlan > GetTelephonyProvidersEdgesSiteNumberplanWithHttpInfo (string siteId, string numberPlanId)
         { 
@@ -19031,6 +20053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>Task of NumberPlan</returns>
         
+        
         public async System.Threading.Tasks.Task<NumberPlan> GetTelephonyProvidersEdgesSiteNumberplanAsync (string siteId, string numberPlanId)
         {
              ApiResponse<NumberPlan> localVarResponse = await GetTelephonyProvidersEdgesSiteNumberplanAsyncWithHttpInfo(siteId, numberPlanId);
@@ -19045,6 +20068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>Task of ApiResponse (NumberPlan)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<NumberPlan>> GetTelephonyProvidersEdgesSiteNumberplanAsyncWithHttpInfo (string siteId, string numberPlanId)
         { 
@@ -19136,6 +20160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>List&lt;NumberPlan&gt;</returns>
         
+        
         public List<NumberPlan> GetTelephonyProvidersEdgesSiteNumberplans (string siteId)
         {
              ApiResponse<List<NumberPlan>> localVarResponse = GetTelephonyProvidersEdgesSiteNumberplansWithHttpInfo(siteId);
@@ -19148,6 +20173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
+        
         
         public ApiResponse< List<NumberPlan> > GetTelephonyProvidersEdgesSiteNumberplansWithHttpInfo (string siteId)
         { 
@@ -19232,6 +20258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<NumberPlan>> GetTelephonyProvidersEdgesSiteNumberplansAsync (string siteId)
         {
              ApiResponse<List<NumberPlan>> localVarResponse = await GetTelephonyProvidersEdgesSiteNumberplansAsyncWithHttpInfo(siteId);
@@ -19245,6 +20272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> GetTelephonyProvidersEdgesSiteNumberplansAsyncWithHttpInfo (string siteId)
         { 
@@ -19332,6 +20360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="classification">Classification (optional)</param>
         /// <returns>List&lt;string&gt;</returns>
         
+        
         public List<string> GetTelephonyProvidersEdgesSiteNumberplansClassifications (string siteId, string classification = null)
         {
              ApiResponse<List<string>> localVarResponse = GetTelephonyProvidersEdgesSiteNumberplansClassificationsWithHttpInfo(siteId, classification);
@@ -19345,6 +20374,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification (optional)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         
         public ApiResponse< List<string> > GetTelephonyProvidersEdgesSiteNumberplansClassificationsWithHttpInfo (string siteId, string classification = null)
         { 
@@ -19431,6 +20461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="classification">Classification (optional)</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<string>> GetTelephonyProvidersEdgesSiteNumberplansClassificationsAsync (string siteId, string classification = null)
         {
              ApiResponse<List<string>> localVarResponse = await GetTelephonyProvidersEdgesSiteNumberplansClassificationsAsyncWithHttpInfo(siteId, classification);
@@ -19445,6 +20476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> GetTelephonyProvidersEdgesSiteNumberplansClassificationsAsyncWithHttpInfo (string siteId, string classification = null)
         { 
@@ -19533,6 +20565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>OutboundRouteBase</returns>
         
+        
         public OutboundRouteBase GetTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId)
         {
              ApiResponse<OutboundRouteBase> localVarResponse = GetTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo(siteId, outboundRouteId);
@@ -19546,6 +20579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>ApiResponse of OutboundRouteBase</returns>
+        
         
         public ApiResponse< OutboundRouteBase > GetTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId)
         { 
@@ -19635,6 +20669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of OutboundRouteBase</returns>
         
+        
         public async System.Threading.Tasks.Task<OutboundRouteBase> GetTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId)
         {
              ApiResponse<OutboundRouteBase> localVarResponse = await GetTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo(siteId, outboundRouteId);
@@ -19649,6 +20684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> GetTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId)
         { 
@@ -19745,6 +20781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>OutboundRouteBaseEntityListing</returns>
         
+        
         public OutboundRouteBaseEntityListing GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
         {
              ApiResponse<OutboundRouteBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo(siteId, pageSize, pageNumber, name, externalTrunkBasesIds, sortBy);
@@ -19762,6 +20799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>ApiResponse of OutboundRouteBaseEntityListing</returns>
+        
         
         public ApiResponse< OutboundRouteBaseEntityListing > GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
         { 
@@ -19856,6 +20894,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>Task of OutboundRouteBaseEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesAsync (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
         {
              ApiResponse<OutboundRouteBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo(siteId, pageSize, pageNumber, name, externalTrunkBasesIds, sortBy);
@@ -19874,6 +20913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalTrunkBasesIds">externalTrunkBases.ids (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <returns>Task of ApiResponse (OutboundRouteBaseEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null)
         { 
@@ -19971,6 +21011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>SiteEntityListing</returns>
         
+        
         public SiteEntityListing GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
         {
              ApiResponse<SiteEntityListing> localVarResponse = GetTelephonyProvidersEdgesSitesWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
@@ -19989,6 +21030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of SiteEntityListing</returns>
+        
         
         public ApiResponse< SiteEntityListing > GetTelephonyProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
         { 
@@ -20082,6 +21124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of SiteEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<SiteEntityListing> GetTelephonyProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
         {
              ApiResponse<SiteEntityListing> localVarResponse = await GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
@@ -20101,6 +21144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (SiteEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
         { 
@@ -20190,6 +21234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TimeZoneEntityListing</returns>
         
+        
         public TimeZoneEntityListing GetTelephonyProvidersEdgesTimezones (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TimeZoneEntityListing> localVarResponse = GetTelephonyProvidersEdgesTimezonesWithHttpInfo(pageSize, pageNumber);
@@ -20203,6 +21248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 1000)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
+        
         
         public ApiResponse< TimeZoneEntityListing > GetTelephonyProvidersEdgesTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -20286,6 +21332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TimeZoneEntityListing> GetTelephonyProvidersEdgesTimezonesAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TimeZoneEntityListing> localVarResponse = await GetTelephonyProvidersEdgesTimezonesAsyncWithHttpInfo(pageSize, pageNumber);
@@ -20300,6 +21347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 1000)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTelephonyProvidersEdgesTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -20383,6 +21431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>Trunk</returns>
         
+        
         public Trunk GetTelephonyProvidersEdgesTrunk (string trunkId)
         {
              ApiResponse<Trunk> localVarResponse = GetTelephonyProvidersEdgesTrunkWithHttpInfo(trunkId);
@@ -20395,6 +21444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>ApiResponse of Trunk</returns>
+        
         
         public ApiResponse< Trunk > GetTelephonyProvidersEdgesTrunkWithHttpInfo (string trunkId)
         { 
@@ -20479,6 +21529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>Task of Trunk</returns>
         
+        
         public async System.Threading.Tasks.Task<Trunk> GetTelephonyProvidersEdgesTrunkAsync (string trunkId)
         {
              ApiResponse<Trunk> localVarResponse = await GetTelephonyProvidersEdgesTrunkAsyncWithHttpInfo(trunkId);
@@ -20492,6 +21543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>Task of ApiResponse (Trunk)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Trunk>> GetTelephonyProvidersEdgesTrunkAsyncWithHttpInfo (string trunkId)
         { 
@@ -20578,6 +21630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkId">Trunk Id</param>
         /// <returns>TrunkMetrics</returns>
         
+        
         public TrunkMetrics GetTelephonyProvidersEdgesTrunkMetrics (string trunkId)
         {
              ApiResponse<TrunkMetrics> localVarResponse = GetTelephonyProvidersEdgesTrunkMetricsWithHttpInfo(trunkId);
@@ -20590,6 +21643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkId">Trunk Id</param>
         /// <returns>ApiResponse of TrunkMetrics</returns>
+        
         
         public ApiResponse< TrunkMetrics > GetTelephonyProvidersEdgesTrunkMetricsWithHttpInfo (string trunkId)
         { 
@@ -20674,6 +21728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkId">Trunk Id</param>
         /// <returns>Task of TrunkMetrics</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkMetrics> GetTelephonyProvidersEdgesTrunkMetricsAsync (string trunkId)
         {
              ApiResponse<TrunkMetrics> localVarResponse = await GetTelephonyProvidersEdgesTrunkMetricsAsyncWithHttpInfo(trunkId);
@@ -20687,6 +21742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkId">Trunk Id</param>
         /// <returns>Task of ApiResponse (TrunkMetrics)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkMetrics>> GetTelephonyProvidersEdgesTrunkMetricsAsyncWithHttpInfo (string trunkId)
         { 
@@ -20774,6 +21830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>TrunkBase</returns>
         
+        
         public TrunkBase GetTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId, bool? ignoreHidden = null)
         {
              ApiResponse<TrunkBase> localVarResponse = GetTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo(trunkBaseSettingsId, ignoreHidden);
@@ -20787,6 +21844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>ApiResponse of TrunkBase</returns>
+        
         
         public ApiResponse< TrunkBase > GetTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId, bool? ignoreHidden = null)
         { 
@@ -20873,6 +21931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>Task of TrunkBase</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId, bool? ignoreHidden = null)
         {
              ApiResponse<TrunkBase> localVarResponse = await GetTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo(trunkBaseSettingsId, ignoreHidden);
@@ -20887,6 +21946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId, bool? ignoreHidden = null)
         { 
@@ -20982,6 +22042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the TrunkBase to filter by (optional)</param>
         /// <returns>TrunkBaseEntityListing</returns>
         
+        
         public TrunkBaseEntityListing GetTelephonyProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null)
         {
              ApiResponse<TrunkBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, ignoreHidden, managed, expand, name);
@@ -21002,6 +22063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name of the TrunkBase to filter by (optional)</param>
         /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
+        
         
         public ApiResponse< TrunkBaseEntityListing > GetTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null)
         { 
@@ -21099,6 +22161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the TrunkBase to filter by (optional)</param>
         /// <returns>Task of TrunkBaseEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkBaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null)
         {
              ApiResponse<TrunkBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, ignoreHidden, managed, expand, name);
@@ -21120,6 +22183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name of the TrunkBase to filter by (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null)
         { 
@@ -21212,6 +22276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>TrunkMetabaseEntityListing</returns>
         
+        
         public TrunkMetabaseEntityListing GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases (string type = null, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrunkMetabaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesWithHttpInfo(type, pageSize, pageNumber);
@@ -21226,6 +22291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>ApiResponse of TrunkMetabaseEntityListing</returns>
+        
         
         public ApiResponse< TrunkMetabaseEntityListing > GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null)
         { 
@@ -21311,6 +22377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>Task of TrunkMetabaseEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkMetabaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesAsync (string type = null, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrunkMetabaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo(type, pageSize, pageNumber);
@@ -21326,6 +22393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 25)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrunkMetabaseEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkMetabaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null)
         { 
@@ -21410,6 +22478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>TrunkBase</returns>
         
+        
         public TrunkBase GetTelephonyProvidersEdgesTrunkbasesettingsTemplate (string trunkMetabaseId)
         {
              ApiResponse<TrunkBase> localVarResponse = GetTelephonyProvidersEdgesTrunkbasesettingsTemplateWithHttpInfo(trunkMetabaseId);
@@ -21422,6 +22491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
+        
         
         public ApiResponse< TrunkBase > GetTelephonyProvidersEdgesTrunkbasesettingsTemplateWithHttpInfo (string trunkMetabaseId)
         { 
@@ -21506,6 +22576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>Task of TrunkBase</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgesTrunkbasesettingsTemplateAsync (string trunkMetabaseId)
         {
              ApiResponse<TrunkBase> localVarResponse = await GetTelephonyProvidersEdgesTrunkbasesettingsTemplateAsyncWithHttpInfo(trunkMetabaseId);
@@ -21519,6 +22590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgesTrunkbasesettingsTemplateAsyncWithHttpInfo (string trunkMetabaseId)
         { 
@@ -21611,6 +22683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>TrunkEntityListing</returns>
         
+        
         public TrunkEntityListing GetTelephonyProvidersEdgesTrunks (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
         {
              ApiResponse<TrunkEntityListing> localVarResponse = GetTelephonyProvidersEdgesTrunksWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, edgeId, trunkBaseId, trunkType);
@@ -21629,6 +22702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>ApiResponse of TrunkEntityListing</returns>
+        
         
         public ApiResponse< TrunkEntityListing > GetTelephonyProvidersEdgesTrunksWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
         { 
@@ -21722,6 +22796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>Task of TrunkEntityListing</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkEntityListing> GetTelephonyProvidersEdgesTrunksAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
         {
              ApiResponse<TrunkEntityListing> localVarResponse = await GetTelephonyProvidersEdgesTrunksAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, edgeId, trunkBaseId, trunkType);
@@ -21741,6 +22816,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
         /// <param name="trunkType">Filter by a Trunk type (optional)</param>
         /// <returns>Task of ApiResponse (TrunkEntityListing)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetTelephonyProvidersEdgesTrunksAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
         { 
@@ -21829,6 +22905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkIds">Comma separated list of Trunk Id&#39;s</param>
         /// <returns>List&lt;TrunkMetrics&gt;</returns>
         
+        
         public List<TrunkMetrics> GetTelephonyProvidersEdgesTrunksMetrics (string trunkIds)
         {
              ApiResponse<List<TrunkMetrics>> localVarResponse = GetTelephonyProvidersEdgesTrunksMetricsWithHttpInfo(trunkIds);
@@ -21841,6 +22918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkIds">Comma separated list of Trunk Id&#39;s</param>
         /// <returns>ApiResponse of List&lt;TrunkMetrics&gt;</returns>
+        
         
         public ApiResponse< List<TrunkMetrics> > GetTelephonyProvidersEdgesTrunksMetricsWithHttpInfo (string trunkIds)
         { 
@@ -21925,6 +23003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkIds">Comma separated list of Trunk Id&#39;s</param>
         /// <returns>Task of List&lt;TrunkMetrics&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<TrunkMetrics>> GetTelephonyProvidersEdgesTrunksMetricsAsync (string trunkIds)
         {
              ApiResponse<List<TrunkMetrics>> localVarResponse = await GetTelephonyProvidersEdgesTrunksMetricsAsyncWithHttpInfo(trunkIds);
@@ -21938,6 +23017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkIds">Comma separated list of Trunk Id&#39;s</param>
         /// <returns>Task of ApiResponse (List&lt;TrunkMetrics&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<TrunkMetrics>>> GetTelephonyProvidersEdgesTrunksMetricsAsyncWithHttpInfo (string trunkIds)
         { 
@@ -22024,6 +23104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>TrunkRecordingEnabledCount</returns>
         
+        
         public TrunkRecordingEnabledCount GetTelephonyProvidersEdgesTrunkswithrecording (string trunkType = null)
         {
              ApiResponse<TrunkRecordingEnabledCount> localVarResponse = GetTelephonyProvidersEdgesTrunkswithrecordingWithHttpInfo(trunkType);
@@ -22036,6 +23117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>ApiResponse of TrunkRecordingEnabledCount</returns>
+        
         
         public ApiResponse< TrunkRecordingEnabledCount > GetTelephonyProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null)
         { 
@@ -22117,6 +23199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>Task of TrunkRecordingEnabledCount</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkRecordingEnabledCount> GetTelephonyProvidersEdgesTrunkswithrecordingAsync (string trunkType = null)
         {
              ApiResponse<TrunkRecordingEnabledCount> localVarResponse = await GetTelephonyProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo(trunkType);
@@ -22130,6 +23213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkType">The type of this trunk base. (optional)</param>
         /// <returns>Task of ApiResponse (TrunkRecordingEnabledCount)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetTelephonyProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null)
         { 
@@ -22213,6 +23297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>EdgeNetworkDiagnostic</returns>
         
+        
         public EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticNslookup (string edgeId, EdgeNetworkDiagnosticRequest body)
         {
              ApiResponse<EdgeNetworkDiagnostic> localVarResponse = PostTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo(edgeId, body);
@@ -22226,6 +23311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        
         
         public ApiResponse< EdgeNetworkDiagnostic > PostTelephonyProvidersEdgeDiagnosticNslookupWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
         { 
@@ -22320,6 +23406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of EdgeNetworkDiagnostic</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticNslookupAsync (string edgeId, EdgeNetworkDiagnosticRequest body)
         {
              ApiResponse<EdgeNetworkDiagnostic> localVarResponse = await PostTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo(edgeId, body);
@@ -22334,6 +23421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticNslookupAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
         { 
@@ -22431,6 +23519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>EdgeNetworkDiagnostic</returns>
         
+        
         public EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticPing (string edgeId, EdgeNetworkDiagnosticRequest body)
         {
              ApiResponse<EdgeNetworkDiagnostic> localVarResponse = PostTelephonyProvidersEdgeDiagnosticPingWithHttpInfo(edgeId, body);
@@ -22444,6 +23533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        
         
         public ApiResponse< EdgeNetworkDiagnostic > PostTelephonyProvidersEdgeDiagnosticPingWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
         { 
@@ -22538,6 +23628,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of EdgeNetworkDiagnostic</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticPingAsync (string edgeId, EdgeNetworkDiagnosticRequest body)
         {
              ApiResponse<EdgeNetworkDiagnostic> localVarResponse = await PostTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo(edgeId, body);
@@ -22552,6 +23643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticPingAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
         { 
@@ -22649,6 +23741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>EdgeNetworkDiagnostic</returns>
         
+        
         public EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticRoute (string edgeId, EdgeNetworkDiagnosticRequest body)
         {
              ApiResponse<EdgeNetworkDiagnostic> localVarResponse = PostTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo(edgeId, body);
@@ -22662,6 +23755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        
         
         public ApiResponse< EdgeNetworkDiagnostic > PostTelephonyProvidersEdgeDiagnosticRouteWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
         { 
@@ -22756,6 +23850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of EdgeNetworkDiagnostic</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticRouteAsync (string edgeId, EdgeNetworkDiagnosticRequest body)
         {
              ApiResponse<EdgeNetworkDiagnostic> localVarResponse = await PostTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo(edgeId, body);
@@ -22770,6 +23865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticRouteAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
         { 
@@ -22867,6 +23963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>EdgeNetworkDiagnostic</returns>
         
+        
         public EdgeNetworkDiagnostic PostTelephonyProvidersEdgeDiagnosticTracepath (string edgeId, EdgeNetworkDiagnosticRequest body)
         {
              ApiResponse<EdgeNetworkDiagnostic> localVarResponse = PostTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo(edgeId, body);
@@ -22880,6 +23977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>ApiResponse of EdgeNetworkDiagnostic</returns>
+        
         
         public ApiResponse< EdgeNetworkDiagnostic > PostTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
         { 
@@ -22974,6 +24072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of EdgeNetworkDiagnostic</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeNetworkDiagnostic> PostTelephonyProvidersEdgeDiagnosticTracepathAsync (string edgeId, EdgeNetworkDiagnosticRequest body)
         {
              ApiResponse<EdgeNetworkDiagnostic> localVarResponse = await PostTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo(edgeId, body);
@@ -22988,6 +24087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <param name="body">request payload to get network diagnostic</param>
         /// <returns>Task of ApiResponse (EdgeNetworkDiagnostic)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnostic>> PostTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId, EdgeNetworkDiagnosticRequest body)
         { 
@@ -23085,6 +24185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>DomainLogicalInterface</returns>
         
+        
         public DomainLogicalInterface PostTelephonyProvidersEdgeLogicalinterfaces (string edgeId, DomainLogicalInterface body)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = PostTelephonyProvidersEdgeLogicalinterfacesWithHttpInfo(edgeId, body);
@@ -23098,6 +24199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Logical interface</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
+        
         
         public ApiResponse< DomainLogicalInterface > PostTelephonyProvidersEdgeLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body)
         { 
@@ -23192,6 +24294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>Task of DomainLogicalInterface</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainLogicalInterface> PostTelephonyProvidersEdgeLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = await PostTelephonyProvidersEdgeLogicalinterfacesAsyncWithHttpInfo(edgeId, body);
@@ -23206,6 +24309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Logical interface</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostTelephonyProvidersEdgeLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body)
         { 
@@ -23304,6 +24408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Log upload request</param>
         /// <returns></returns>
         
+        
         public void PostTelephonyProvidersEdgeLogsJobUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
         {
              PostTelephonyProvidersEdgeLogsJobUploadWithHttpInfo(edgeId, jobId, body);
@@ -23317,6 +24422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="body">Log upload request</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostTelephonyProvidersEdgeLogsJobUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
         { 
@@ -23416,6 +24522,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Log upload request</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostTelephonyProvidersEdgeLogsJobUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
         {
              await PostTelephonyProvidersEdgeLogsJobUploadAsyncWithHttpInfo(edgeId, jobId, body);
@@ -23430,6 +24537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="body">Log upload request</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgeLogsJobUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
         { 
@@ -23532,6 +24640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>EdgeLogsJobResponse</returns>
         
+        
         public EdgeLogsJobResponse PostTelephonyProvidersEdgeLogsJobs (string edgeId, EdgeLogsJobRequest body)
         {
              ApiResponse<EdgeLogsJobResponse> localVarResponse = PostTelephonyProvidersEdgeLogsJobsWithHttpInfo(edgeId, body);
@@ -23545,6 +24654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
+        
         
         public ApiResponse< EdgeLogsJobResponse > PostTelephonyProvidersEdgeLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body)
         { 
@@ -23639,6 +24749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of EdgeLogsJobResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeLogsJobResponse> PostTelephonyProvidersEdgeLogsJobsAsync (string edgeId, EdgeLogsJobRequest body)
         {
              ApiResponse<EdgeLogsJobResponse> localVarResponse = await PostTelephonyProvidersEdgeLogsJobsAsyncWithHttpInfo(edgeId, body);
@@ -23653,6 +24764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostTelephonyProvidersEdgeLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body)
         { 
@@ -23750,6 +24862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>string</returns>
         
+        
         public string PostTelephonyProvidersEdgeReboot (string edgeId, EdgeRebootParameters body = null)
         {
              ApiResponse<string> localVarResponse = PostTelephonyProvidersEdgeRebootWithHttpInfo(edgeId, body);
@@ -23763,6 +24876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>ApiResponse of string</returns>
+        
         
         public ApiResponse< string > PostTelephonyProvidersEdgeRebootWithHttpInfo (string edgeId, EdgeRebootParameters body = null)
         { 
@@ -23854,6 +24968,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>Task of string</returns>
         
+        
         public async System.Threading.Tasks.Task<string> PostTelephonyProvidersEdgeRebootAsync (string edgeId, EdgeRebootParameters body = null)
         {
              ApiResponse<string> localVarResponse = await PostTelephonyProvidersEdgeRebootAsyncWithHttpInfo(edgeId, body);
@@ -23868,6 +24983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostTelephonyProvidersEdgeRebootAsyncWithHttpInfo (string edgeId, EdgeRebootParameters body = null)
         { 
@@ -23961,6 +25077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Software update request</param>
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
         
+        
         public DomainEdgeSoftwareUpdateDto PostTelephonyProvidersEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body)
         {
              ApiResponse<DomainEdgeSoftwareUpdateDto> localVarResponse = PostTelephonyProvidersEdgeSoftwareupdateWithHttpInfo(edgeId, body);
@@ -23974,6 +25091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Software update request</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
+        
         
         public ApiResponse< DomainEdgeSoftwareUpdateDto > PostTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body)
         { 
@@ -24068,6 +25186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Software update request</param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body)
         {
              ApiResponse<DomainEdgeSoftwareUpdateDto> localVarResponse = await PostTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo(edgeId, body);
@@ -24082,6 +25201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Software update request</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body)
         { 
@@ -24179,6 +25299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge Service State (optional)</param>
         /// <returns>string</returns>
         
+        
         public string PostTelephonyProvidersEdgeStatuscode (string edgeId, EdgeServiceStateRequest body = null)
         {
              ApiResponse<string> localVarResponse = PostTelephonyProvidersEdgeStatuscodeWithHttpInfo(edgeId, body);
@@ -24192,6 +25313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge Service State (optional)</param>
         /// <returns>ApiResponse of string</returns>
+        
         
         public ApiResponse< string > PostTelephonyProvidersEdgeStatuscodeWithHttpInfo (string edgeId, EdgeServiceStateRequest body = null)
         { 
@@ -24283,6 +25405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge Service State (optional)</param>
         /// <returns>Task of string</returns>
         
+        
         public async System.Threading.Tasks.Task<string> PostTelephonyProvidersEdgeStatuscodeAsync (string edgeId, EdgeServiceStateRequest body = null)
         {
              ApiResponse<string> localVarResponse = await PostTelephonyProvidersEdgeStatuscodeAsyncWithHttpInfo(edgeId, body);
@@ -24297,6 +25420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge Service State (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostTelephonyProvidersEdgeStatuscodeAsyncWithHttpInfo (string edgeId, EdgeServiceStateRequest body = null)
         { 
@@ -24389,6 +25513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>string</returns>
         
+        
         public string PostTelephonyProvidersEdgeUnpair (string edgeId)
         {
              ApiResponse<string> localVarResponse = PostTelephonyProvidersEdgeUnpairWithHttpInfo(edgeId);
@@ -24401,6 +25526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of string</returns>
+        
         
         public ApiResponse< string > PostTelephonyProvidersEdgeUnpairWithHttpInfo (string edgeId)
         { 
@@ -24485,6 +25611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of string</returns>
         
+        
         public async System.Threading.Tasks.Task<string> PostTelephonyProvidersEdgeUnpairAsync (string edgeId)
         {
              ApiResponse<string> localVarResponse = await PostTelephonyProvidersEdgeUnpairAsyncWithHttpInfo(edgeId);
@@ -24498,6 +25625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (string)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostTelephonyProvidersEdgeUnpairAsyncWithHttpInfo (string edgeId)
         { 
@@ -24584,6 +25712,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
         
+        
         public Edge PostTelephonyProvidersEdges (Edge body)
         {
              ApiResponse<Edge> localVarResponse = PostTelephonyProvidersEdgesWithHttpInfo(body);
@@ -24596,6 +25725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
+        
         
         public ApiResponse< Edge > PostTelephonyProvidersEdgesWithHttpInfo (Edge body)
         { 
@@ -24685,6 +25815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
         
+        
         public async System.Threading.Tasks.Task<Edge> PostTelephonyProvidersEdgesAsync (Edge body)
         {
              ApiResponse<Edge> localVarResponse = await PostTelephonyProvidersEdgesAsyncWithHttpInfo(body);
@@ -24698,6 +25829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Edge>> PostTelephonyProvidersEdgesAsyncWithHttpInfo (Edge body)
         { 
@@ -24789,6 +25921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Address</param>
         /// <returns>ValidateAddressResponse</returns>
         
+        
         public ValidateAddressResponse PostTelephonyProvidersEdgesAddressvalidation (ValidateAddressRequest body)
         {
              ApiResponse<ValidateAddressResponse> localVarResponse = PostTelephonyProvidersEdgesAddressvalidationWithHttpInfo(body);
@@ -24801,6 +25934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Address</param>
         /// <returns>ApiResponse of ValidateAddressResponse</returns>
+        
         
         public ApiResponse< ValidateAddressResponse > PostTelephonyProvidersEdgesAddressvalidationWithHttpInfo (ValidateAddressRequest body)
         { 
@@ -24890,6 +26024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Address</param>
         /// <returns>Task of ValidateAddressResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<ValidateAddressResponse> PostTelephonyProvidersEdgesAddressvalidationAsync (ValidateAddressRequest body)
         {
              ApiResponse<ValidateAddressResponse> localVarResponse = await PostTelephonyProvidersEdgesAddressvalidationAsyncWithHttpInfo(body);
@@ -24903,6 +26038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Address</param>
         /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostTelephonyProvidersEdgesAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body)
         { 
@@ -24994,6 +26130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CertificateAuthority</param>
         /// <returns>DomainCertificateAuthority</returns>
         
+        
         public DomainCertificateAuthority PostTelephonyProvidersEdgesCertificateauthorities (DomainCertificateAuthority body)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = PostTelephonyProvidersEdgesCertificateauthoritiesWithHttpInfo(body);
@@ -25006,6 +26143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CertificateAuthority</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
+        
         
         public ApiResponse< DomainCertificateAuthority > PostTelephonyProvidersEdgesCertificateauthoritiesWithHttpInfo (DomainCertificateAuthority body)
         { 
@@ -25095,6 +26233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CertificateAuthority</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainCertificateAuthority> PostTelephonyProvidersEdgesCertificateauthoritiesAsync (DomainCertificateAuthority body)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = await PostTelephonyProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo(body);
@@ -25108,6 +26247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CertificateAuthority</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PostTelephonyProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo (DomainCertificateAuthority body)
         { 
@@ -25199,6 +26339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DID pool</param>
         /// <returns>DIDPool</returns>
         
+        
         public DIDPool PostTelephonyProvidersEdgesDidpools (DIDPool body)
         {
              ApiResponse<DIDPool> localVarResponse = PostTelephonyProvidersEdgesDidpoolsWithHttpInfo(body);
@@ -25211,6 +26352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DID pool</param>
         /// <returns>ApiResponse of DIDPool</returns>
+        
         
         public ApiResponse< DIDPool > PostTelephonyProvidersEdgesDidpoolsWithHttpInfo (DIDPool body)
         { 
@@ -25300,6 +26442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DID pool</param>
         /// <returns>Task of DIDPool</returns>
         
+        
         public async System.Threading.Tasks.Task<DIDPool> PostTelephonyProvidersEdgesDidpoolsAsync (DIDPool body)
         {
              ApiResponse<DIDPool> localVarResponse = await PostTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo(body);
@@ -25313,6 +26456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DID pool</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> PostTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo (DIDPool body)
         { 
@@ -25404,6 +26548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
         
+        
         public EdgeGroup PostTelephonyProvidersEdgesEdgegroups (EdgeGroup body)
         {
              ApiResponse<EdgeGroup> localVarResponse = PostTelephonyProvidersEdgesEdgegroupsWithHttpInfo(body);
@@ -25416,6 +26561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
+        
         
         public ApiResponse< EdgeGroup > PostTelephonyProvidersEdgesEdgegroupsWithHttpInfo (EdgeGroup body)
         { 
@@ -25505,6 +26651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeGroup> PostTelephonyProvidersEdgesEdgegroupsAsync (EdgeGroup body)
         {
              ApiResponse<EdgeGroup> localVarResponse = await PostTelephonyProvidersEdgesEdgegroupsAsyncWithHttpInfo(body);
@@ -25518,6 +26665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostTelephonyProvidersEdgesEdgegroupsAsyncWithHttpInfo (EdgeGroup body)
         { 
@@ -25609,6 +26757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>ExtensionPool</returns>
         
+        
         public ExtensionPool PostTelephonyProvidersEdgesExtensionpools (ExtensionPool body)
         {
              ApiResponse<ExtensionPool> localVarResponse = PostTelephonyProvidersEdgesExtensionpoolsWithHttpInfo(body);
@@ -25621,6 +26770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
+        
         
         public ApiResponse< ExtensionPool > PostTelephonyProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body)
         { 
@@ -25710,6 +26860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ExtensionPool</returns>
         
+        
         public async System.Threading.Tasks.Task<ExtensionPool> PostTelephonyProvidersEdgesExtensionpoolsAsync (ExtensionPool body)
         {
              ApiResponse<ExtensionPool> localVarResponse = await PostTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo(body);
@@ -25723,6 +26874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PostTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body)
         { 
@@ -25814,6 +26966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone Id</param>
         /// <returns></returns>
         
+        
         public void PostTelephonyProvidersEdgesPhoneReboot (string phoneId)
         {
              PostTelephonyProvidersEdgesPhoneRebootWithHttpInfo(phoneId);
@@ -25825,6 +26978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostTelephonyProvidersEdgesPhoneRebootWithHttpInfo (string phoneId)
         { 
@@ -25909,6 +27063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone Id</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostTelephonyProvidersEdgesPhoneRebootAsync (string phoneId)
         {
              await PostTelephonyProvidersEdgesPhoneRebootAsyncWithHttpInfo(phoneId);
@@ -25921,6 +27076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgesPhoneRebootAsyncWithHttpInfo (string phoneId)
         { 
@@ -26007,6 +27163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone base settings</param>
         /// <returns>PhoneBase</returns>
         
+        
         public PhoneBase PostTelephonyProvidersEdgesPhonebasesettings (PhoneBase body)
         {
              ApiResponse<PhoneBase> localVarResponse = PostTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo(body);
@@ -26019,6 +27176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phone base settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
+        
         
         public ApiResponse< PhoneBase > PostTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo (PhoneBase body)
         { 
@@ -26108,6 +27266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone base settings</param>
         /// <returns>Task of PhoneBase</returns>
         
+        
         public async System.Threading.Tasks.Task<PhoneBase> PostTelephonyProvidersEdgesPhonebasesettingsAsync (PhoneBase body)
         {
              ApiResponse<PhoneBase> localVarResponse = await PostTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo(body);
@@ -26121,6 +27280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phone base settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (PhoneBase body)
         { 
@@ -26212,6 +27372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone</param>
         /// <returns>Phone</returns>
         
+        
         public Phone PostTelephonyProvidersEdgesPhones (Phone body)
         {
              ApiResponse<Phone> localVarResponse = PostTelephonyProvidersEdgesPhonesWithHttpInfo(body);
@@ -26224,6 +27385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phone</param>
         /// <returns>ApiResponse of Phone</returns>
+        
         
         public ApiResponse< Phone > PostTelephonyProvidersEdgesPhonesWithHttpInfo (Phone body)
         { 
@@ -26313,6 +27475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone</param>
         /// <returns>Task of Phone</returns>
         
+        
         public async System.Threading.Tasks.Task<Phone> PostTelephonyProvidersEdgesPhonesAsync (Phone body)
         {
              ApiResponse<Phone> localVarResponse = await PostTelephonyProvidersEdgesPhonesAsyncWithHttpInfo(body);
@@ -26326,6 +27489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Phone>> PostTelephonyProvidersEdgesPhonesAsyncWithHttpInfo (Phone body)
         { 
@@ -26417,6 +27581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phones</param>
         /// <returns></returns>
         
+        
         public void PostTelephonyProvidersEdgesPhonesReboot (PhonesReboot body)
         {
              PostTelephonyProvidersEdgesPhonesRebootWithHttpInfo(body);
@@ -26428,6 +27593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phones</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         
         public ApiResponse<Object> PostTelephonyProvidersEdgesPhonesRebootWithHttpInfo (PhonesReboot body)
         { 
@@ -26517,6 +27683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phones</param>
         /// <returns>Task of void</returns>
         
+        
         public async System.Threading.Tasks.Task PostTelephonyProvidersEdgesPhonesRebootAsync (PhonesReboot body)
         {
              await PostTelephonyProvidersEdgesPhonesRebootAsyncWithHttpInfo(body);
@@ -26529,6 +27696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Phones</param>
         /// <returns>Task of ApiResponse</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgesPhonesRebootAsyncWithHttpInfo (PhonesReboot body)
         { 
@@ -26621,6 +27789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRouteBase</returns>
         
+        
         public OutboundRouteBase PostTelephonyProvidersEdgesSiteOutboundroutes (string siteId, OutboundRouteBase body)
         {
              ApiResponse<OutboundRouteBase> localVarResponse = PostTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo(siteId, body);
@@ -26634,6 +27803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRouteBase</returns>
+        
         
         public ApiResponse< OutboundRouteBase > PostTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, OutboundRouteBase body)
         { 
@@ -26728,6 +27898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRouteBase</returns>
         
+        
         public async System.Threading.Tasks.Task<OutboundRouteBase> PostTelephonyProvidersEdgesSiteOutboundroutesAsync (string siteId, OutboundRouteBase body)
         {
              ApiResponse<OutboundRouteBase> localVarResponse = await PostTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo(siteId, body);
@@ -26742,6 +27913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> PostTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, OutboundRouteBase body)
         { 
@@ -26838,6 +28010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Site</param>
         /// <returns>Site</returns>
         
+        
         public Site PostTelephonyProvidersEdgesSites (Site body)
         {
              ApiResponse<Site> localVarResponse = PostTelephonyProvidersEdgesSitesWithHttpInfo(body);
@@ -26850,6 +28023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
+        
         
         public ApiResponse< Site > PostTelephonyProvidersEdgesSitesWithHttpInfo (Site body)
         { 
@@ -26939,6 +28113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
         
+        
         public async System.Threading.Tasks.Task<Site> PostTelephonyProvidersEdgesSitesAsync (Site body)
         {
              ApiResponse<Site> localVarResponse = await PostTelephonyProvidersEdgesSitesAsyncWithHttpInfo(body);
@@ -26952,6 +28127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Site>> PostTelephonyProvidersEdgesSitesAsyncWithHttpInfo (Site body)
         { 
@@ -27043,6 +28219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trunk base settings</param>
         /// <returns>TrunkBase</returns>
         
+        
         public TrunkBase PostTelephonyProvidersEdgesTrunkbasesettings (TrunkBase body)
         {
              ApiResponse<TrunkBase> localVarResponse = PostTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo(body);
@@ -27055,6 +28232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trunk base settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
+        
         
         public ApiResponse< TrunkBase > PostTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo (TrunkBase body)
         { 
@@ -27144,6 +28322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trunk base settings</param>
         /// <returns>Task of TrunkBase</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkBase> PostTelephonyProvidersEdgesTrunkbasesettingsAsync (TrunkBase body)
         {
              ApiResponse<TrunkBase> localVarResponse = await PostTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(body);
@@ -27157,6 +28336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trunk base settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body)
         { 
@@ -27249,6 +28429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
         
+        
         public Edge PutTelephonyProvidersEdge (string edgeId, Edge body)
         {
              ApiResponse<Edge> localVarResponse = PutTelephonyProvidersEdgeWithHttpInfo(edgeId, body);
@@ -27262,6 +28443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
+        
         
         public ApiResponse< Edge > PutTelephonyProvidersEdgeWithHttpInfo (string edgeId, Edge body)
         { 
@@ -27356,6 +28538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
         
+        
         public async System.Threading.Tasks.Task<Edge> PutTelephonyProvidersEdgeAsync (string edgeId, Edge body)
         {
              ApiResponse<Edge> localVarResponse = await PutTelephonyProvidersEdgeAsyncWithHttpInfo(edgeId, body);
@@ -27370,6 +28553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Edge>> PutTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId, Edge body)
         { 
@@ -27468,6 +28652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>DomainLogicalInterface</returns>
         
+        
         public DomainLogicalInterface PutTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId, DomainLogicalInterface body)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = PutTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo(edgeId, interfaceId, body);
@@ -27482,6 +28667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="body">Logical interface</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
+        
         
         public ApiResponse< DomainLogicalInterface > PutTelephonyProvidersEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body)
         { 
@@ -27581,6 +28767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Logical interface</param>
         /// <returns>Task of DomainLogicalInterface</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainLogicalInterface> PutTelephonyProvidersEdgeLogicalinterfaceAsync (string edgeId, string interfaceId, DomainLogicalInterface body)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = await PutTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo(edgeId, interfaceId, body);
@@ -27596,6 +28783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="body">Logical interface</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutTelephonyProvidersEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body)
         { 
@@ -27698,6 +28886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Certificate authority</param>
         /// <returns>DomainCertificateAuthority</returns>
         
+        
         public DomainCertificateAuthority PutTelephonyProvidersEdgesCertificateauthority (string certificateId, DomainCertificateAuthority body)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = PutTelephonyProvidersEdgesCertificateauthorityWithHttpInfo(certificateId, body);
@@ -27711,6 +28900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body">Certificate authority</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
+        
         
         public ApiResponse< DomainCertificateAuthority > PutTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId, DomainCertificateAuthority body)
         { 
@@ -27805,6 +28995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Certificate authority</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
         
+        
         public async System.Threading.Tasks.Task<DomainCertificateAuthority> PutTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId, DomainCertificateAuthority body)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = await PutTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo(certificateId, body);
@@ -27819,6 +29010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body">Certificate authority</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body)
         { 
@@ -27916,6 +29108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DID pool</param>
         /// <returns>DIDPool</returns>
         
+        
         public DIDPool PutTelephonyProvidersEdgesDidpool (string didPoolId, DIDPool body)
         {
              ApiResponse<DIDPool> localVarResponse = PutTelephonyProvidersEdgesDidpoolWithHttpInfo(didPoolId, body);
@@ -27929,6 +29122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body">DID pool</param>
         /// <returns>ApiResponse of DIDPool</returns>
+        
         
         public ApiResponse< DIDPool > PutTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId, DIDPool body)
         { 
@@ -28023,6 +29217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DID pool</param>
         /// <returns>Task of DIDPool</returns>
         
+        
         public async System.Threading.Tasks.Task<DIDPool> PutTelephonyProvidersEdgesDidpoolAsync (string didPoolId, DIDPool body)
         {
              ApiResponse<DIDPool> localVarResponse = await PutTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo(didPoolId, body);
@@ -28037,6 +29232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body">DID pool</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId, DIDPool body)
         { 
@@ -28134,6 +29330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
         
+        
         public EdgeGroup PutTelephonyProvidersEdgesEdgegroup (string edgeGroupId, EdgeGroup body)
         {
              ApiResponse<EdgeGroup> localVarResponse = PutTelephonyProvidersEdgesEdgegroupWithHttpInfo(edgeGroupId, body);
@@ -28147,6 +29344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
+        
         
         public ApiResponse< EdgeGroup > PutTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId, EdgeGroup body)
         { 
@@ -28241,6 +29439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeGroup> PutTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId, EdgeGroup body)
         {
              ApiResponse<EdgeGroup> localVarResponse = await PutTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo(edgeGroupId, body);
@@ -28255,6 +29454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body)
         { 
@@ -28353,6 +29553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>EdgeTrunkBase</returns>
         
+        
         public EdgeTrunkBase PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
         {
              ApiResponse<EdgeTrunkBase> localVarResponse = PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo(edgegroupId, edgetrunkbaseId, body);
@@ -28367,6 +29568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>ApiResponse of EdgeTrunkBase</returns>
+        
         
         public ApiResponse< EdgeTrunkBase > PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
         { 
@@ -28466,6 +29668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>Task of EdgeTrunkBase</returns>
         
+        
         public async System.Threading.Tasks.Task<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsync (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
         {
              ApiResponse<EdgeTrunkBase> localVarResponse = await PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo(edgegroupId, edgetrunkbaseId, body);
@@ -28481,6 +29684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>Task of ApiResponse (EdgeTrunkBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
         { 
@@ -28583,6 +29787,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>ExtensionPool</returns>
         
+        
         public ExtensionPool PutTelephonyProvidersEdgesExtensionpool (string extensionPoolId, ExtensionPool body)
         {
              ApiResponse<ExtensionPool> localVarResponse = PutTelephonyProvidersEdgesExtensionpoolWithHttpInfo(extensionPoolId, body);
@@ -28596,6 +29801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
+        
         
         public ApiResponse< ExtensionPool > PutTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId, ExtensionPool body)
         { 
@@ -28690,6 +29896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ExtensionPool</returns>
         
+        
         public async System.Threading.Tasks.Task<ExtensionPool> PutTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId, ExtensionPool body)
         {
              ApiResponse<ExtensionPool> localVarResponse = await PutTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo(extensionPoolId, body);
@@ -28704,6 +29911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body)
         { 
@@ -28801,6 +30009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone</param>
         /// <returns>Phone</returns>
         
+        
         public Phone PutTelephonyProvidersEdgesPhone (string phoneId, Phone body)
         {
              ApiResponse<Phone> localVarResponse = PutTelephonyProvidersEdgesPhoneWithHttpInfo(phoneId, body);
@@ -28814,6 +30023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body">Phone</param>
         /// <returns>ApiResponse of Phone</returns>
+        
         
         public ApiResponse< Phone > PutTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId, Phone body)
         { 
@@ -28908,6 +30118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone</param>
         /// <returns>Task of Phone</returns>
         
+        
         public async System.Threading.Tasks.Task<Phone> PutTelephonyProvidersEdgesPhoneAsync (string phoneId, Phone body)
         {
              ApiResponse<Phone> localVarResponse = await PutTelephonyProvidersEdgesPhoneAsyncWithHttpInfo(phoneId, body);
@@ -28922,6 +30133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body">Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Phone>> PutTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId, Phone body)
         { 
@@ -29019,6 +30231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone base settings</param>
         /// <returns>PhoneBase</returns>
         
+        
         public PhoneBase PutTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId, PhoneBase body)
         {
              ApiResponse<PhoneBase> localVarResponse = PutTelephonyProvidersEdgesPhonebasesettingWithHttpInfo(phoneBaseId, body);
@@ -29032,6 +30245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body">Phone base settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
+        
         
         public ApiResponse< PhoneBase > PutTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId, PhoneBase body)
         { 
@@ -29126,6 +30340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Phone base settings</param>
         /// <returns>Task of PhoneBase</returns>
         
+        
         public async System.Threading.Tasks.Task<PhoneBase> PutTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId, PhoneBase body)
         {
              ApiResponse<PhoneBase> localVarResponse = await PutTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo(phoneBaseId, body);
@@ -29140,6 +30355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body">Phone base settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId, PhoneBase body)
         { 
@@ -29237,6 +30453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Site</param>
         /// <returns>Site</returns>
         
+        
         public Site PutTelephonyProvidersEdgesSite (string siteId, Site body)
         {
              ApiResponse<Site> localVarResponse = PutTelephonyProvidersEdgesSiteWithHttpInfo(siteId, body);
@@ -29250,6 +30467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
+        
         
         public ApiResponse< Site > PutTelephonyProvidersEdgesSiteWithHttpInfo (string siteId, Site body)
         { 
@@ -29344,6 +30562,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
         
+        
         public async System.Threading.Tasks.Task<Site> PutTelephonyProvidersEdgesSiteAsync (string siteId, Site body)
         {
              ApiResponse<Site> localVarResponse = await PutTelephonyProvidersEdgesSiteAsyncWithHttpInfo(siteId, body);
@@ -29358,6 +30577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<Site>> PutTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId, Site body)
         { 
@@ -29455,6 +30675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of number plans</param>
         /// <returns>List&lt;NumberPlan&gt;</returns>
         
+        
         public List<NumberPlan> PutTelephonyProvidersEdgesSiteNumberplans (string siteId, List<NumberPlan> body)
         {
              ApiResponse<List<NumberPlan>> localVarResponse = PutTelephonyProvidersEdgesSiteNumberplansWithHttpInfo(siteId, body);
@@ -29468,6 +30689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">List of number plans</param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
+        
         
         public ApiResponse< List<NumberPlan> > PutTelephonyProvidersEdgesSiteNumberplansWithHttpInfo (string siteId, List<NumberPlan> body)
         { 
@@ -29562,6 +30784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of number plans</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
         
+        
         public async System.Threading.Tasks.Task<List<NumberPlan>> PutTelephonyProvidersEdgesSiteNumberplansAsync (string siteId, List<NumberPlan> body)
         {
              ApiResponse<List<NumberPlan>> localVarResponse = await PutTelephonyProvidersEdgesSiteNumberplansAsyncWithHttpInfo(siteId, body);
@@ -29576,6 +30799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">List of number plans</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutTelephonyProvidersEdgesSiteNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body)
         { 
@@ -29674,6 +30898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRouteBase</returns>
         
+        
         public OutboundRouteBase PutTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId, OutboundRouteBase body)
         {
              ApiResponse<OutboundRouteBase> localVarResponse = PutTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo(siteId, outboundRouteId, body);
@@ -29688,6 +30913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRouteBase</returns>
+        
         
         public ApiResponse< OutboundRouteBase > PutTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId, OutboundRouteBase body)
         { 
@@ -29787,6 +31013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRouteBase</returns>
         
+        
         public async System.Threading.Tasks.Task<OutboundRouteBase> PutTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId, OutboundRouteBase body)
         {
              ApiResponse<OutboundRouteBase> localVarResponse = await PutTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo(siteId, outboundRouteId, body);
@@ -29802,6 +31029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> PutTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId, OutboundRouteBase body)
         { 
@@ -29904,6 +31132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trunk base settings</param>
         /// <returns>TrunkBase</returns>
         
+        
         public TrunkBase PutTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId, TrunkBase body)
         {
              ApiResponse<TrunkBase> localVarResponse = PutTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo(trunkBaseSettingsId, body);
@@ -29917,6 +31146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body">Trunk base settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
+        
         
         public ApiResponse< TrunkBase > PutTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId, TrunkBase body)
         { 
@@ -30011,6 +31241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Trunk base settings</param>
         /// <returns>Task of TrunkBase</returns>
         
+        
         public async System.Threading.Tasks.Task<TrunkBase> PutTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId, TrunkBase body)
         {
              ApiResponse<TrunkBase> localVarResponse = await PutTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo(trunkBaseSettingsId, body);
@@ -30025,6 +31256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body">Trunk base settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body)
         { 

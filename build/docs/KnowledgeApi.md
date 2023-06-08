@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseLanguageCategories**](KnowledgeApi.html#getknowledgeknowledgebaselanguagecategories) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories | Get categories |
 | [**GetKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#getknowledgeknowledgebaselanguagecategory) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Get category |
 | [**GetKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocument) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Get document |
+| [**GetKnowledgeKnowledgebaseLanguageDocumentUpload**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocumentupload) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}/uploads/{uploadId} | Get document content upload status |
 | [**GetKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocuments) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Get documents |
 | [**GetKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocumentsimport) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Get import operation report |
 | [**GetKnowledgeKnowledgebaseLanguageTraining**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetraining) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId} | Get training detail |
@@ -67,12 +68,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseDocumentVariations**](KnowledgeApi.html#postknowledgeknowledgebasedocumentvariations) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations | Create a variation for a document. |
 | [**PostKnowledgeKnowledgebaseDocumentVersions**](KnowledgeApi.html#postknowledgeknowledgebasedocumentversions) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions | Creates or restores a document version. |
 | [**PostKnowledgeKnowledgebaseDocuments**](KnowledgeApi.html#postknowledgeknowledgebasedocuments) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents | Create document. |
+| [**PostKnowledgeKnowledgebaseDocumentsBulkRemove**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsbulkremove) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove | Bulk remove documents. |
+| [**PostKnowledgeKnowledgebaseDocumentsBulkUpdate**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsbulkupdate) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update | Bulk update documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsSearch**](KnowledgeApi.html#postknowledgeknowledgebasedocumentssearch) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search | Search the documents in a knowledge base. |
 | [**PostKnowledgeKnowledgebaseDocumentsSearchSuggestions**](KnowledgeApi.html#postknowledgeknowledgebasedocumentssearchsuggestions) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions | Query the knowledge documents to provide suggestions for auto completion. |
+| [**PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsversionsbulkadd) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add | Bulk add document versions. |
 | [**PostKnowledgeKnowledgebaseExportJobs**](KnowledgeApi.html#postknowledgeknowledgebaseexportjobs) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs | Create export job |
 | [**PostKnowledgeKnowledgebaseImportJobs**](KnowledgeApi.html#postknowledgeknowledgebaseimportjobs) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs | Create import job |
 | [**PostKnowledgeKnowledgebaseLabels**](KnowledgeApi.html#postknowledgeknowledgebaselabels) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels | Create new label |
 | [**PostKnowledgeKnowledgebaseLanguageCategories**](KnowledgeApi.html#postknowledgeknowledgebaselanguagecategories) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories | Create new category |
+| [**PostKnowledgeKnowledgebaseLanguageDocumentUploads**](KnowledgeApi.html#postknowledgeknowledgebaselanguagedocumentuploads) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}/uploads | Upload Article Content |
 | [**PostKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#postknowledgeknowledgebaselanguagedocuments) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Create document |
 | [**PostKnowledgeKnowledgebaseLanguageDocumentsImports**](KnowledgeApi.html#postknowledgeknowledgebaselanguagedocumentsimports) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports | Create import operation |
 | [**PostKnowledgeKnowledgebaseLanguageTrainingPromote**](KnowledgeApi.html#postknowledgeknowledgebaselanguagetrainingpromote) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}/promote | Promote trained documents from draft state to active. |
@@ -2251,6 +2256,77 @@ namespace Example
 
 [**KnowledgeDocument**](KnowledgeDocument.html)
 
+<a name="getknowledgeknowledgebaselanguagedocumentupload"></a>
+
+## [**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload.html) GetKnowledgeKnowledgebaseLanguageDocumentUpload (string documentId, string knowledgeBaseId, string languageCode, string uploadId)
+
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
+Get document content upload status
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseLanguageDocumentUploadExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var documentId = documentId_example;  // string | Document ID
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
+            var uploadId = uploadId_example;  // string | UploadId
+
+            try
+            { 
+                // Get document content upload status
+                KnowledgeDocumentContentUpload result = apiInstance.GetKnowledgeKnowledgebaseLanguageDocumentUpload(documentId, knowledgeBaseId, languageCode, uploadId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseLanguageDocumentUpload: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentId** | **string**| Document ID |  |
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
+| **uploadId** | **string**| UploadId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload.html)
+
 <a name="getknowledgeknowledgebaselanguagedocuments"></a>
 
 ## [**DocumentListing**](DocumentListing.html) GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
@@ -4255,6 +4331,140 @@ namespace Example
 
 [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html)
 
+<a name="postknowledgeknowledgebasedocumentsbulkremove"></a>
+
+## [**BulkResponse**](BulkResponse.html) PostKnowledgeKnowledgebaseDocumentsBulkRemove (string knowledgeBaseId, KnowledgeDocumentBulkRemoveRequest body)
+
+
+
+Bulk remove documents.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsBulkRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeDocumentBulkRemoveRequest(); // KnowledgeDocumentBulkRemoveRequest | 
+
+            try
+            { 
+                // Bulk remove documents.
+                BulkResponse result = apiInstance.PostKnowledgeKnowledgebaseDocumentsBulkRemove(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentsBulkRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeDocumentBulkRemoveRequest**](KnowledgeDocumentBulkRemoveRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkResponse**](BulkResponse.html)
+
+<a name="postknowledgeknowledgebasedocumentsbulkupdate"></a>
+
+## [**BulkResponse**](BulkResponse.html) PostKnowledgeKnowledgebaseDocumentsBulkUpdate (string knowledgeBaseId, KnowledgeDocumentBulkUpdateRequest body)
+
+
+
+Bulk update documents.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsBulkUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeDocumentBulkUpdateRequest(); // KnowledgeDocumentBulkUpdateRequest | 
+
+            try
+            { 
+                // Bulk update documents.
+                BulkResponse result = apiInstance.PostKnowledgeKnowledgebaseDocumentsBulkUpdate(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentsBulkUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeDocumentBulkUpdateRequest**](KnowledgeDocumentBulkUpdateRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkResponse**](BulkResponse.html)
+
 <a name="postknowledgeknowledgebasedocumentssearch"></a>
 
 ## [**KnowledgeDocumentSearch**](KnowledgeDocumentSearch.html) PostKnowledgeKnowledgebaseDocumentsSearch (string knowledgeBaseId, List<string> expand = null, KnowledgeDocumentSearchRequest body = null)
@@ -4390,6 +4600,73 @@ namespace Example
 ### Return type
 
 [**KnowledgeDocumentSuggestion**](KnowledgeDocumentSuggestion.html)
+
+<a name="postknowledgeknowledgebasedocumentsversionsbulkadd"></a>
+
+## [**BulkResponse**](BulkResponse.html) PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd (string knowledgeBaseId, KnowledgeDocumentBulkVersionAddRequest body)
+
+
+
+Bulk add document versions.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:documentVersion:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsVersionsBulkAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeDocumentBulkVersionAddRequest(); // KnowledgeDocumentBulkVersionAddRequest | 
+
+            try
+            { 
+                // Bulk add document versions.
+                BulkResponse result = apiInstance.PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeDocumentBulkVersionAddRequest**](KnowledgeDocumentBulkVersionAddRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkResponse**](BulkResponse.html)
 
 <a name="postknowledgeknowledgebaseexportjobs"></a>
 
@@ -4660,6 +4937,77 @@ namespace Example
 ### Return type
 
 [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory.html)
+
+<a name="postknowledgeknowledgebaselanguagedocumentuploads"></a>
+
+## [**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload.html) PostKnowledgeKnowledgebaseLanguageDocumentUploads (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentContentUpload body)
+
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
+Upload Article Content
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseLanguageDocumentUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var documentId = documentId_example;  // string | Document ID
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var languageCode = en-US;  // string | Language code, format: iso2-LOCALE
+            var body = new KnowledgeDocumentContentUpload(); // KnowledgeDocumentContentUpload | 
+
+            try
+            { 
+                // Upload Article Content
+                KnowledgeDocumentContentUpload result = apiInstance.PostKnowledgeKnowledgebaseLanguageDocumentUploads(documentId, knowledgeBaseId, languageCode, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseLanguageDocumentUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentId** | **string**| Document ID |  |
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
+| **body** | [**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload.html)
 
 <a name="postknowledgeknowledgebaselanguagedocuments"></a>
 

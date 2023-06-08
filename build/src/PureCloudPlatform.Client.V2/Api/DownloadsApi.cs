@@ -29,6 +29,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="redirectToAuth"> (optional, default to true)</param>
         /// <returns>UrlResponse</returns>
         
+        
         UrlResponse GetDownload (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
 
         /// <summary>
@@ -43,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="issueRedirect"> (optional, default to true)</param>
         /// <param name="redirectToAuth"> (optional, default to true)</param>
         /// <returns>ApiResponse of UrlResponse</returns>
+        
         
         ApiResponse<UrlResponse> GetDownloadWithHttpInfo (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
 
@@ -63,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="redirectToAuth"> (optional, default to true)</param>
         /// <returns>Task of UrlResponse</returns>
         
+        
         System.Threading.Tasks.Task<UrlResponse> GetDownloadAsync (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
 
         /// <summary>
@@ -77,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="issueRedirect"> (optional, default to true)</param>
         /// <param name="redirectToAuth"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
+        
         
         System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadAsyncWithHttpInfo (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
 
@@ -182,6 +186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="redirectToAuth"> (optional, default to true)</param>
         /// <returns>UrlResponse</returns>
         
+        
         public UrlResponse GetDownload (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
         {
              ApiResponse<UrlResponse> localVarResponse = GetDownloadWithHttpInfo(downloadId, contentDisposition, issueRedirect, redirectToAuth);
@@ -197,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="issueRedirect"> (optional, default to true)</param>
         /// <param name="redirectToAuth"> (optional, default to true)</param>
         /// <returns>ApiResponse of UrlResponse</returns>
+        
         
         public ApiResponse< UrlResponse > GetDownloadWithHttpInfo (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
         { 
@@ -287,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="redirectToAuth"> (optional, default to true)</param>
         /// <returns>Task of UrlResponse</returns>
         
+        
         public async System.Threading.Tasks.Task<UrlResponse> GetDownloadAsync (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
         {
              ApiResponse<UrlResponse> localVarResponse = await GetDownloadAsyncWithHttpInfo(downloadId, contentDisposition, issueRedirect, redirectToAuth);
@@ -303,6 +310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="issueRedirect"> (optional, default to true)</param>
         /// <param name="redirectToAuth"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
+        
         
         public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadAsyncWithHttpInfo (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
         { 
