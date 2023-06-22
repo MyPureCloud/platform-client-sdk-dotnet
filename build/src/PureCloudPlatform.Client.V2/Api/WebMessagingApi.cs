@@ -27,7 +27,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>WebMessagingMessageEntityList</returns>
         
-        
         WebMessagingMessageEntityList GetWebmessagingMessages (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -40,7 +39,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of WebMessagingMessageEntityList</returns>
-        
         
         ApiResponse<WebMessagingMessageEntityList> GetWebmessagingMessagesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
@@ -59,7 +57,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of WebMessagingMessageEntityList</returns>
         
-        
         System.Threading.Tasks.Task<WebMessagingMessageEntityList> GetWebmessagingMessagesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -72,7 +69,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (WebMessagingMessageEntityList)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<WebMessagingMessageEntityList>> GetWebmessagingMessagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
@@ -170,12 +166,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the messages for a web messaging session. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>WebMessagingMessageEntityList</returns>
-        
         
         public WebMessagingMessageEntityList GetWebmessagingMessages (int? pageSize = null, int? pageNumber = null)
         {
@@ -185,12 +181,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the messages for a web messaging session. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of WebMessagingMessageEntityList</returns>
-        
         
         public ApiResponse< WebMessagingMessageEntityList > GetWebmessagingMessagesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -261,12 +257,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the messages for a web messaging session. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of WebMessagingMessageEntityList</returns>
-        
         
         public async System.Threading.Tasks.Task<WebMessagingMessageEntityList> GetWebmessagingMessagesAsync (int? pageSize = null, int? pageNumber = null)
         {
@@ -277,12 +273,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the messages for a web messaging session. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (WebMessagingMessageEntityList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<WebMessagingMessageEntityList>> GetWebmessagingMessagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 

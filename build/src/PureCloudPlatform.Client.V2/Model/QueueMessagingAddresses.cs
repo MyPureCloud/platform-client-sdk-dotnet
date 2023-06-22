@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="SmsAddress">SmsAddress.</param>
         /// <param name="OpenMessagingRecipient">OpenMessagingRecipient.</param>
-        public QueueMessagingAddresses(DomainEntityRef SmsAddress = null, DomainEntityRef OpenMessagingRecipient = null)
+        /// <param name="WhatsAppRecipient">WhatsAppRecipient.</param>
+        public QueueMessagingAddresses(DomainEntityRef SmsAddress = null, DomainEntityRef OpenMessagingRecipient = null, DomainEntityRef WhatsAppRecipient = null)
         {
             this.SmsAddress = SmsAddress;
             this.OpenMessagingRecipient = OpenMessagingRecipient;
+            this.WhatsAppRecipient = WhatsAppRecipient;
             
         }
         
@@ -47,6 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DomainEntityRef OpenMessagingRecipient { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets WhatsAppRecipient
+        /// </summary>
+        [DataMember(Name="whatsAppRecipient", EmitDefaultValue=false)]
+        public DomainEntityRef WhatsAppRecipient { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -58,6 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  SmsAddress: ").Append(SmsAddress).Append("\n");
             sb.Append("  OpenMessagingRecipient: ").Append(OpenMessagingRecipient).Append("\n");
+            sb.Append("  WhatsAppRecipient: ").Append(WhatsAppRecipient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +118,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OpenMessagingRecipient == other.OpenMessagingRecipient ||
                     this.OpenMessagingRecipient != null &&
                     this.OpenMessagingRecipient.Equals(other.OpenMessagingRecipient)
+                ) &&
+                (
+                    this.WhatsAppRecipient == other.WhatsAppRecipient ||
+                    this.WhatsAppRecipient != null &&
+                    this.WhatsAppRecipient.Equals(other.WhatsAppRecipient)
                 );
         }
 
@@ -126,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OpenMessagingRecipient != null)
                     hash = hash * 59 + this.OpenMessagingRecipient.GetHashCode();
+
+                if (this.WhatsAppRecipient != null)
+                    hash = hash * 59 + this.WhatsAppRecipient.GetHashCode();
 
                 return hash;
             }

@@ -21,12 +21,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void DeleteTaskmanagementWorkbin (string workbinId);
 
         /// <summary>
@@ -34,12 +34,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> DeleteTaskmanagementWorkbinWithHttpInfo (string workbinId);
 
         /// <summary>
@@ -47,12 +47,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void DeleteTaskmanagementWorkitem (string workitemId);
 
         /// <summary>
@@ -60,12 +60,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> DeleteTaskmanagementWorkitemWithHttpInfo (string workitemId);
 
         /// <summary>
@@ -73,12 +73,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void DeleteTaskmanagementWorkitemsSchema (string schemaId);
 
         /// <summary>
@@ -86,12 +86,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> DeleteTaskmanagementWorkitemsSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -99,12 +99,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void DeleteTaskmanagementWorktype (string worktypeId);
 
         /// <summary>
@@ -112,12 +112,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> DeleteTaskmanagementWorktypeWithHttpInfo (string worktypeId);
 
         /// <summary>
@@ -125,13 +125,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void DeleteTaskmanagementWorktypeStatus (string worktypeId, string statusId);
 
         /// <summary>
@@ -139,13 +139,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> DeleteTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId);
 
         /// <summary>
@@ -153,12 +153,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Workbin</returns>
         
-        /// Preview Endpoint
         Workbin GetTaskmanagementWorkbin (string workbinId);
 
         /// <summary>
@@ -166,12 +166,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>ApiResponse of Workbin</returns>
         
-        /// Preview Endpoint
         ApiResponse<Workbin> GetTaskmanagementWorkbinWithHttpInfo (string workbinId);
 
         /// <summary>
@@ -179,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -187,7 +188,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkbinChangeListing</returns>
         
-        /// Preview Endpoint
         WorkbinChangeListing GetTaskmanagementWorkbinHistory (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -195,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -203,7 +204,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkbinChangeListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkbinChangeListing> GetTaskmanagementWorkbinHistoryWithHttpInfo (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -211,13 +211,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="entityVersion">Workbin version</param>
         /// <returns>WorkbinVersion</returns>
         
-        /// Preview Endpoint
         WorkbinVersion GetTaskmanagementWorkbinVersion (string workbinId, int? entityVersion);
 
         /// <summary>
@@ -225,13 +225,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="entityVersion">Workbin version</param>
         /// <returns>ApiResponse of WorkbinVersion</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkbinVersion> GetTaskmanagementWorkbinVersionWithHttpInfo (string workbinId, int? entityVersion);
 
         /// <summary>
@@ -239,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -247,7 +248,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkbinVersionListing</returns>
         
-        /// Preview Endpoint
         WorkbinVersionListing GetTaskmanagementWorkbinVersions (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -255,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -263,7 +264,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkbinVersionListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkbinVersionListing> GetTaskmanagementWorkbinVersionsWithHttpInfo (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -271,32 +271,35 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
+        /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
-        Workitem GetTaskmanagementWorkitem (string workitemId);
+        Workitem GetTaskmanagementWorkitem (string workitemId, string expands = null);
 
         /// <summary>
         /// Get a workitem
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
+        /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
-        ApiResponse<Workitem> GetTaskmanagementWorkitemWithHttpInfo (string workitemId);
+        ApiResponse<Workitem> GetTaskmanagementWorkitemWithHttpInfo (string workitemId, string expands = null);
 
         /// <summary>
         /// Get a listing of a workitem's attribute change history
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -305,7 +308,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkitemChangeListing</returns>
         
-        /// Preview Endpoint
         WorkitemChangeListing GetTaskmanagementWorkitemHistory (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -313,6 +315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -321,7 +324,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkitemChangeListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemChangeListing> GetTaskmanagementWorkitemHistoryWithHttpInfo (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -329,6 +331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -339,7 +342,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         WorkitemWrapup GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -347,6 +349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -357,7 +360,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemWrapup> GetTaskmanagementWorkitemUserWrapupsWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -365,13 +367,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="entityVersion">Workitem version</param>
         /// <returns>WorkitemVersion</returns>
         
-        /// Preview Endpoint
         WorkitemVersion GetTaskmanagementWorkitemVersion (string workitemId, int? entityVersion);
 
         /// <summary>
@@ -379,13 +381,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="entityVersion">Workitem version</param>
         /// <returns>ApiResponse of WorkitemVersion</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemVersion> GetTaskmanagementWorkitemVersionWithHttpInfo (string workitemId, int? entityVersion);
 
         /// <summary>
@@ -393,6 +395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -401,7 +404,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkitemVersionListing</returns>
         
-        /// Preview Endpoint
         WorkitemVersionListing GetTaskmanagementWorkitemVersions (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -409,6 +411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -417,7 +420,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkitemVersionListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemVersionListing> GetTaskmanagementWorkitemVersionsWithHttpInfo (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -425,6 +427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -434,7 +437,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkitemWrapupEntityListing</returns>
         
-        /// Preview Endpoint
         WorkitemWrapupEntityListing GetTaskmanagementWorkitemWrapups (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -442,6 +444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -451,7 +454,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkitemWrapupEntityListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemWrapupEntityListing> GetTaskmanagementWorkitemWrapupsWithHttpInfo (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -459,12 +461,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         DataSchema GetTaskmanagementWorkitemsSchema (string schemaId);
 
         /// <summary>
@@ -472,12 +474,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         ApiResponse<DataSchema> GetTaskmanagementWorkitemsSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -485,13 +487,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         DataSchema GetTaskmanagementWorkitemsSchemaVersion (string schemaId, string versionId);
 
         /// <summary>
@@ -499,13 +501,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         ApiResponse<DataSchema> GetTaskmanagementWorkitemsSchemaVersionWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
@@ -513,12 +515,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         DataSchema GetTaskmanagementWorkitemsSchemaVersions (string schemaId);
 
         /// <summary>
@@ -526,12 +528,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         ApiResponse<DataSchema> GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -539,11 +541,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataSchemaListing</returns>
         
-        /// Preview Endpoint
         DataSchemaListing GetTaskmanagementWorkitemsSchemas ();
 
         /// <summary>
@@ -551,11 +553,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<DataSchemaListing> GetTaskmanagementWorkitemsSchemasWithHttpInfo ();
 
         /// <summary>
@@ -563,13 +565,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="expands">Which fields, if any, to expand. (optional)</param>
         /// <returns>Worktype</returns>
         
-        /// Preview Endpoint
         Worktype GetTaskmanagementWorktype (string worktypeId, List<string> expands = null);
 
         /// <summary>
@@ -577,13 +579,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="expands">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        /// Preview Endpoint
         ApiResponse<Worktype> GetTaskmanagementWorktypeWithHttpInfo (string worktypeId, List<string> expands = null);
 
         /// <summary>
@@ -591,6 +593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -599,7 +602,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorktypeChangeListing</returns>
         
-        /// Preview Endpoint
         WorktypeChangeListing GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -607,6 +609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -615,7 +618,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorktypeChangeListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -623,13 +625,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>WorkitemStatus</returns>
         
-        /// Preview Endpoint
         WorkitemStatus GetTaskmanagementWorktypeStatus (string worktypeId, string statusId);
 
         /// <summary>
@@ -637,13 +639,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemStatus> GetTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId);
 
         /// <summary>
@@ -651,13 +653,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="entityVersion">Worktype version</param>
         /// <returns>WorktypeVersion</returns>
         
-        /// Preview Endpoint
         WorktypeVersion GetTaskmanagementWorktypeVersion (string worktypeId, int? entityVersion);
 
         /// <summary>
@@ -665,13 +667,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="entityVersion">Worktype version</param>
         /// <returns>ApiResponse of WorktypeVersion</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorktypeVersion> GetTaskmanagementWorktypeVersionWithHttpInfo (string worktypeId, int? entityVersion);
 
         /// <summary>
@@ -679,6 +681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -687,7 +690,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorktypeVersionListing</returns>
         
-        /// Preview Endpoint
         WorktypeVersionListing GetTaskmanagementWorktypeVersions (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -695,6 +697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -703,7 +706,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorktypeVersionListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorktypeVersionListing> GetTaskmanagementWorktypeVersionsWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -711,13 +713,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="body">Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}.</param>
         /// <returns>Workbin</returns>
         
-        /// Preview Endpoint
         Workbin PatchTaskmanagementWorkbin (string workbinId, WorkbinUpdate body);
 
         /// <summary>
@@ -725,13 +727,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="body">Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}.</param>
         /// <returns>ApiResponse of Workbin</returns>
         
-        /// Preview Endpoint
         ApiResponse<Workbin> PatchTaskmanagementWorkbinWithHttpInfo (string workbinId, WorkbinUpdate body);
 
         /// <summary>
@@ -739,13 +741,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Workitem</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         Workitem PatchTaskmanagementWorkitem (string workitemId, WorkitemUpdate body);
 
         /// <summary>
@@ -753,13 +755,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Workitem</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         ApiResponse<Workitem> PatchTaskmanagementWorkitemWithHttpInfo (string workitemId, WorkitemUpdate body);
 
         /// <summary>
@@ -767,13 +769,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Targeted user</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void PatchTaskmanagementWorkitemAssignment (string workitemId, WorkitemManualAssign body);
 
         /// <summary>
@@ -781,13 +783,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Targeted user</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> PatchTaskmanagementWorkitemAssignmentWithHttpInfo (string workitemId, WorkitemManualAssign body);
 
         /// <summary>
@@ -795,6 +797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -802,7 +805,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request body to add/remove a wrapup code for a workitem</param>
         /// <returns>WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         WorkitemWrapup PatchTaskmanagementWorkitemUserWrapups (string workitemId, string userId, WorkitemWrapupUpdate body);
 
         /// <summary>
@@ -810,6 +812,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -817,7 +820,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request body to add/remove a wrapup code for a workitem</param>
         /// <returns>ApiResponse of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemWrapup> PatchTaskmanagementWorkitemUserWrapupsWithHttpInfo (string workitemId, string userId, WorkitemWrapupUpdate body);
 
         /// <summary>
@@ -825,13 +827,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
         /// <param name="body">Request body to add/remove the wrapup code for workitem</param>
         /// <returns>WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         WorkitemWrapup PatchTaskmanagementWorkitemUsersMeWrapups (string workitemId, WorkitemWrapupUpdate body);
 
         /// <summary>
@@ -839,13 +841,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
         /// <param name="body">Request body to add/remove the wrapup code for workitem</param>
         /// <returns>ApiResponse of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemWrapup> PatchTaskmanagementWorkitemUsersMeWrapupsWithHttpInfo (string workitemId, WorkitemWrapupUpdate body);
 
         /// <summary>
@@ -853,13 +855,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Worktype</returns>
         
-        /// Preview Endpoint
         Worktype PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body = null);
 
         /// <summary>
@@ -867,13 +869,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        /// Preview Endpoint
         ApiResponse<Worktype> PatchTaskmanagementWorktypeWithHttpInfo (string worktypeId, WorktypeUpdate body = null);
 
         /// <summary>
@@ -881,6 +883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -888,7 +891,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkitemStatus</returns>
         
-        /// Preview Endpoint
         WorkitemStatus PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body = null);
 
         /// <summary>
@@ -896,6 +898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -903,7 +906,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemStatus> PatchTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body = null);
 
         /// <summary>
@@ -911,12 +913,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Workbin</returns>
         
-        /// Preview Endpoint
         Workbin PostTaskmanagementWorkbins (WorkbinCreate body = null);
 
         /// <summary>
@@ -924,12 +926,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Workbin</returns>
         
-        /// Preview Endpoint
         ApiResponse<Workbin> PostTaskmanagementWorkbinsWithHttpInfo (WorkbinCreate body = null);
 
         /// <summary>
@@ -937,12 +939,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>WorkbinQueryEntityListing</returns>
         
-        /// Preview Endpoint
         WorkbinQueryEntityListing PostTaskmanagementWorkbinsQuery (WorkbinQueryRequest body);
 
         /// <summary>
@@ -950,12 +952,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>ApiResponse of WorkbinQueryEntityListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkbinQueryEntityListing> PostTaskmanagementWorkbinsQueryWithHttpInfo (WorkbinQueryRequest body);
 
         /// <summary>
@@ -963,12 +965,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         Workitem PostTaskmanagementWorkitemAcdCancel (string workitemId);
 
         /// <summary>
@@ -976,12 +978,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         ApiResponse<Workitem> PostTaskmanagementWorkitemAcdCancelWithHttpInfo (string workitemId);
 
         /// <summary>
@@ -989,12 +991,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         Workitem PostTaskmanagementWorkitemDisconnect (string workitemId);
 
         /// <summary>
@@ -1002,12 +1004,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         ApiResponse<Workitem> PostTaskmanagementWorkitemDisconnectWithHttpInfo (string workitemId);
 
         /// <summary>
@@ -1015,13 +1017,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Terminated request (optional)</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         Workitem PostTaskmanagementWorkitemTerminate (string workitemId, WorkitemTerminate body = null);
 
         /// <summary>
@@ -1029,13 +1031,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Terminated request (optional)</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         ApiResponse<Workitem> PostTaskmanagementWorkitemTerminateWithHttpInfo (string workitemId, WorkitemTerminate body = null);
 
         /// <summary>
@@ -1043,12 +1045,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workitem</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         Workitem PostTaskmanagementWorkitems (WorkitemCreate body);
 
         /// <summary>
@@ -1056,12 +1058,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workitem</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         ApiResponse<Workitem> PostTaskmanagementWorkitemsWithHttpInfo (WorkitemCreate body);
 
         /// <summary>
@@ -1069,12 +1071,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// PostTaskmanagementWorkitemsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WorkitemQueryPostRequest</param>
         /// <returns>WorkitemPostQueryEntityListing</returns>
         
-        /// Preview Endpoint
         WorkitemPostQueryEntityListing PostTaskmanagementWorkitemsQuery (WorkitemQueryPostRequest body);
 
         /// <summary>
@@ -1082,12 +1084,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// PostTaskmanagementWorkitemsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WorkitemQueryPostRequest</param>
         /// <returns>ApiResponse of WorkitemPostQueryEntityListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemPostQueryEntityListing> PostTaskmanagementWorkitemsQueryWithHttpInfo (WorkitemQueryPostRequest body);
 
         /// <summary>
@@ -1095,12 +1097,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         DataSchema PostTaskmanagementWorkitemsSchemas (DataSchema body);
 
         /// <summary>
@@ -1108,12 +1110,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         ApiResponse<DataSchema> PostTaskmanagementWorkitemsSchemasWithHttpInfo (DataSchema body);
 
         /// <summary>
@@ -1121,13 +1123,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WorkitemStatus</returns>
         
-        /// Preview Endpoint
         WorkitemStatus PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body = null);
 
         /// <summary>
@@ -1135,13 +1137,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorkitemStatus> PostTaskmanagementWorktypeStatusesWithHttpInfo (string worktypeId, WorkitemStatusCreate body = null);
 
         /// <summary>
@@ -1149,12 +1151,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Worktype</returns>
         
-        /// Preview Endpoint
         Worktype PostTaskmanagementWorktypes (WorktypeCreate body = null);
 
         /// <summary>
@@ -1162,12 +1164,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        /// Preview Endpoint
         ApiResponse<Worktype> PostTaskmanagementWorktypesWithHttpInfo (WorktypeCreate body = null);
 
         /// <summary>
@@ -1175,12 +1177,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>WorktypeQueryEntityListing</returns>
         
-        /// Preview Endpoint
         WorktypeQueryEntityListing PostTaskmanagementWorktypesQuery (WorktypeQueryRequest body);
 
         /// <summary>
@@ -1188,12 +1190,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>ApiResponse of WorktypeQueryEntityListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<WorktypeQueryEntityListing> PostTaskmanagementWorktypesQueryWithHttpInfo (WorktypeQueryRequest body);
 
         /// <summary>
@@ -1201,13 +1203,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         DataSchema PutTaskmanagementWorkitemsSchema (string schemaId, DataSchema body);
 
         /// <summary>
@@ -1215,13 +1217,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         ApiResponse<DataSchema> PutTaskmanagementWorkitemsSchemaWithHttpInfo (string schemaId, DataSchema body);
 
         #endregion Synchronous Operations
@@ -1233,12 +1235,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task DeleteTaskmanagementWorkbinAsync (string workbinId);
 
         /// <summary>
@@ -1246,12 +1248,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkbinAsyncWithHttpInfo (string workbinId);
 
         /// <summary>
@@ -1259,12 +1261,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task DeleteTaskmanagementWorkitemAsync (string workitemId);
 
         /// <summary>
@@ -1272,12 +1274,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId);
 
         /// <summary>
@@ -1285,12 +1287,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task DeleteTaskmanagementWorkitemsSchemaAsync (string schemaId);
 
         /// <summary>
@@ -1298,12 +1300,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemsSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -1311,12 +1313,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task DeleteTaskmanagementWorktypeAsync (string worktypeId);
 
         /// <summary>
@@ -1324,12 +1326,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId);
 
         /// <summary>
@@ -1337,13 +1339,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task DeleteTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId);
 
         /// <summary>
@@ -1351,13 +1353,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId);
 
         /// <summary>
@@ -1365,12 +1367,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Task of Workbin</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Workbin> GetTaskmanagementWorkbinAsync (string workbinId);
 
         /// <summary>
@@ -1378,12 +1380,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Task of ApiResponse (Workbin)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Workbin>> GetTaskmanagementWorkbinAsyncWithHttpInfo (string workbinId);
 
         /// <summary>
@@ -1391,6 +1393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -1399,7 +1402,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkbinChangeListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkbinChangeListing> GetTaskmanagementWorkbinHistoryAsync (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1407,6 +1409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -1415,7 +1418,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkbinChangeListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkbinChangeListing>> GetTaskmanagementWorkbinHistoryAsyncWithHttpInfo (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1423,13 +1425,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="entityVersion">Workbin version</param>
         /// <returns>Task of WorkbinVersion</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkbinVersion> GetTaskmanagementWorkbinVersionAsync (string workbinId, int? entityVersion);
 
         /// <summary>
@@ -1437,13 +1439,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="entityVersion">Workbin version</param>
         /// <returns>Task of ApiResponse (WorkbinVersion)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkbinVersion>> GetTaskmanagementWorkbinVersionAsyncWithHttpInfo (string workbinId, int? entityVersion);
 
         /// <summary>
@@ -1451,6 +1453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -1459,7 +1462,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkbinVersionListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkbinVersionListing> GetTaskmanagementWorkbinVersionsAsync (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1467,6 +1469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -1475,7 +1478,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkbinVersionListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkbinVersionListing>> GetTaskmanagementWorkbinVersionsAsyncWithHttpInfo (string workbinId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1483,32 +1485,35 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
+        /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
-        System.Threading.Tasks.Task<Workitem> GetTaskmanagementWorkitemAsync (string workitemId);
+        System.Threading.Tasks.Task<Workitem> GetTaskmanagementWorkitemAsync (string workitemId, string expands = null);
 
         /// <summary>
         /// Get a workitem
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
+        /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
-        System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId);
+        System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, string expands = null);
 
         /// <summary>
         /// Get a listing of a workitem's attribute change history
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -1517,7 +1522,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkitemChangeListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemChangeListing> GetTaskmanagementWorkitemHistoryAsync (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1525,6 +1529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -1533,7 +1538,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkitemChangeListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemChangeListing>> GetTaskmanagementWorkitemHistoryAsyncWithHttpInfo (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1541,6 +1545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -1551,7 +1556,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemWrapup> GetTaskmanagementWorkitemUserWrapupsAsync (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1559,6 +1563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -1569,7 +1574,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkitemWrapup)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1577,13 +1581,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="entityVersion">Workitem version</param>
         /// <returns>Task of WorkitemVersion</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemVersion> GetTaskmanagementWorkitemVersionAsync (string workitemId, int? entityVersion);
 
         /// <summary>
@@ -1591,13 +1595,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="entityVersion">Workitem version</param>
         /// <returns>Task of ApiResponse (WorkitemVersion)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemVersion>> GetTaskmanagementWorkitemVersionAsyncWithHttpInfo (string workitemId, int? entityVersion);
 
         /// <summary>
@@ -1605,6 +1609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -1613,7 +1618,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkitemVersionListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemVersionListing> GetTaskmanagementWorkitemVersionsAsync (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1621,6 +1625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -1629,7 +1634,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkitemVersionListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemVersionListing>> GetTaskmanagementWorkitemVersionsAsyncWithHttpInfo (string workitemId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1637,6 +1641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -1646,7 +1651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkitemWrapupEntityListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemWrapupEntityListing> GetTaskmanagementWorkitemWrapupsAsync (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1654,6 +1658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -1663,7 +1668,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkitemWrapupEntityListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemWrapupEntityListing>> GetTaskmanagementWorkitemWrapupsAsyncWithHttpInfo (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1671,12 +1675,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<DataSchema> GetTaskmanagementWorkitemsSchemaAsync (string schemaId);
 
         /// <summary>
@@ -1684,12 +1688,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetTaskmanagementWorkitemsSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -1697,13 +1701,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<DataSchema> GetTaskmanagementWorkitemsSchemaVersionAsync (string schemaId, string versionId);
 
         /// <summary>
@@ -1711,13 +1715,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetTaskmanagementWorkitemsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
@@ -1725,12 +1729,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<DataSchema> GetTaskmanagementWorkitemsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
@@ -1738,12 +1742,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -1751,11 +1755,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataSchemaListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<DataSchemaListing> GetTaskmanagementWorkitemsSchemasAsync ();
 
         /// <summary>
@@ -1763,11 +1767,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetTaskmanagementWorkitemsSchemasAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1775,13 +1779,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="expands">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Worktype</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Worktype> GetTaskmanagementWorktypeAsync (string worktypeId, List<string> expands = null);
 
         /// <summary>
@@ -1789,13 +1793,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="expands">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Worktype>> GetTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, List<string> expands = null);
 
         /// <summary>
@@ -1803,6 +1807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -1811,7 +1816,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorktypeChangeListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1819,6 +1823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -1827,7 +1832,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorktypeChangeListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorktypeChangeListing>> GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1835,13 +1839,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemStatus> GetTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId);
 
         /// <summary>
@@ -1849,13 +1853,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> GetTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId);
 
         /// <summary>
@@ -1863,13 +1867,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="entityVersion">Worktype version</param>
         /// <returns>Task of WorktypeVersion</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorktypeVersion> GetTaskmanagementWorktypeVersionAsync (string worktypeId, int? entityVersion);
 
         /// <summary>
@@ -1877,13 +1881,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="entityVersion">Worktype version</param>
         /// <returns>Task of ApiResponse (WorktypeVersion)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorktypeVersion>> GetTaskmanagementWorktypeVersionAsyncWithHttpInfo (string worktypeId, int? entityVersion);
 
         /// <summary>
@@ -1891,6 +1895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -1899,7 +1904,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorktypeVersionListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorktypeVersionListing> GetTaskmanagementWorktypeVersionsAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1907,6 +1911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -1915,7 +1920,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorktypeVersionListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorktypeVersionListing>> GetTaskmanagementWorktypeVersionsAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
@@ -1923,13 +1927,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="body">Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}.</param>
         /// <returns>Task of Workbin</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Workbin> PatchTaskmanagementWorkbinAsync (string workbinId, WorkbinUpdate body);
 
         /// <summary>
@@ -1937,13 +1941,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="body">Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}.</param>
         /// <returns>Task of ApiResponse (Workbin)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Workbin>> PatchTaskmanagementWorkbinAsyncWithHttpInfo (string workbinId, WorkbinUpdate body);
 
         /// <summary>
@@ -1951,13 +1955,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Workitem</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Workitem> PatchTaskmanagementWorkitemAsync (string workitemId, WorkitemUpdate body);
 
         /// <summary>
@@ -1965,13 +1969,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Workitem</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Workitem>> PatchTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, WorkitemUpdate body);
 
         /// <summary>
@@ -1979,13 +1983,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Targeted user</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task PatchTaskmanagementWorkitemAssignmentAsync (string workitemId, WorkitemManualAssign body);
 
         /// <summary>
@@ -1993,13 +1997,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Targeted user</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchTaskmanagementWorkitemAssignmentAsyncWithHttpInfo (string workitemId, WorkitemManualAssign body);
 
         /// <summary>
@@ -2007,6 +2011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -2014,7 +2019,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request body to add/remove a wrapup code for a workitem</param>
         /// <returns>Task of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemWrapup> PatchTaskmanagementWorkitemUserWrapupsAsync (string workitemId, string userId, WorkitemWrapupUpdate body);
 
         /// <summary>
@@ -2022,6 +2026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -2029,7 +2034,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request body to add/remove a wrapup code for a workitem</param>
         /// <returns>Task of ApiResponse (WorkitemWrapup)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> PatchTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo (string workitemId, string userId, WorkitemWrapupUpdate body);
 
         /// <summary>
@@ -2037,13 +2041,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
         /// <param name="body">Request body to add/remove the wrapup code for workitem</param>
         /// <returns>Task of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemWrapup> PatchTaskmanagementWorkitemUsersMeWrapupsAsync (string workitemId, WorkitemWrapupUpdate body);
 
         /// <summary>
@@ -2051,13 +2055,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
         /// <param name="body">Request body to add/remove the wrapup code for workitem</param>
         /// <returns>Task of ApiResponse (WorkitemWrapup)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> PatchTaskmanagementWorkitemUsersMeWrapupsAsyncWithHttpInfo (string workitemId, WorkitemWrapupUpdate body);
 
         /// <summary>
@@ -2065,13 +2069,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of Worktype</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Worktype> PatchTaskmanagementWorktypeAsync (string worktypeId, WorktypeUpdate body = null);
 
         /// <summary>
@@ -2079,13 +2083,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Worktype>> PatchTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, WorktypeUpdate body = null);
 
         /// <summary>
@@ -2093,6 +2097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -2100,7 +2105,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemStatus> PatchTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId, WorkitemStatusUpdate body = null);
 
         /// <summary>
@@ -2108,6 +2112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -2115,7 +2120,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PatchTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body = null);
 
         /// <summary>
@@ -2123,12 +2127,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of Workbin</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Workbin> PostTaskmanagementWorkbinsAsync (WorkbinCreate body = null);
 
         /// <summary>
@@ -2136,12 +2140,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (Workbin)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Workbin>> PostTaskmanagementWorkbinsAsyncWithHttpInfo (WorkbinCreate body = null);
 
         /// <summary>
@@ -2149,12 +2153,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>Task of WorkbinQueryEntityListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkbinQueryEntityListing> PostTaskmanagementWorkbinsQueryAsync (WorkbinQueryRequest body);
 
         /// <summary>
@@ -2162,12 +2166,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>Task of ApiResponse (WorkbinQueryEntityListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkbinQueryEntityListing>> PostTaskmanagementWorkbinsQueryAsyncWithHttpInfo (WorkbinQueryRequest body);
 
         /// <summary>
@@ -2175,12 +2179,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Workitem> PostTaskmanagementWorkitemAcdCancelAsync (string workitemId);
 
         /// <summary>
@@ -2188,12 +2192,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemAcdCancelAsyncWithHttpInfo (string workitemId);
 
         /// <summary>
@@ -2201,12 +2205,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Workitem> PostTaskmanagementWorkitemDisconnectAsync (string workitemId);
 
         /// <summary>
@@ -2214,12 +2218,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemDisconnectAsyncWithHttpInfo (string workitemId);
 
         /// <summary>
@@ -2227,13 +2231,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Terminated request (optional)</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Workitem> PostTaskmanagementWorkitemTerminateAsync (string workitemId, WorkitemTerminate body = null);
 
         /// <summary>
@@ -2241,13 +2245,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Terminated request (optional)</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemTerminateAsyncWithHttpInfo (string workitemId, WorkitemTerminate body = null);
 
         /// <summary>
@@ -2255,12 +2259,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workitem</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Workitem> PostTaskmanagementWorkitemsAsync (WorkitemCreate body);
 
         /// <summary>
@@ -2268,12 +2272,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workitem</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemsAsyncWithHttpInfo (WorkitemCreate body);
 
         /// <summary>
@@ -2281,12 +2285,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// PostTaskmanagementWorkitemsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WorkitemQueryPostRequest</param>
         /// <returns>Task of WorkitemPostQueryEntityListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemPostQueryEntityListing> PostTaskmanagementWorkitemsQueryAsync (WorkitemQueryPostRequest body);
 
         /// <summary>
@@ -2294,12 +2298,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// PostTaskmanagementWorkitemsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WorkitemQueryPostRequest</param>
         /// <returns>Task of ApiResponse (WorkitemPostQueryEntityListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemPostQueryEntityListing>> PostTaskmanagementWorkitemsQueryAsyncWithHttpInfo (WorkitemQueryPostRequest body);
 
         /// <summary>
@@ -2307,12 +2311,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<DataSchema> PostTaskmanagementWorkitemsSchemasAsync (DataSchema body);
 
         /// <summary>
@@ -2320,12 +2324,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostTaskmanagementWorkitemsSchemasAsyncWithHttpInfo (DataSchema body);
 
         /// <summary>
@@ -2333,13 +2337,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorkitemStatus> PostTaskmanagementWorktypeStatusesAsync (string worktypeId, WorkitemStatusCreate body = null);
 
         /// <summary>
@@ -2347,13 +2351,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PostTaskmanagementWorktypeStatusesAsyncWithHttpInfo (string worktypeId, WorkitemStatusCreate body = null);
 
         /// <summary>
@@ -2361,12 +2365,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of Worktype</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<Worktype> PostTaskmanagementWorktypesAsync (WorktypeCreate body = null);
 
         /// <summary>
@@ -2374,12 +2378,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Worktype>> PostTaskmanagementWorktypesAsyncWithHttpInfo (WorktypeCreate body = null);
 
         /// <summary>
@@ -2387,12 +2391,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>Task of WorktypeQueryEntityListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<WorktypeQueryEntityListing> PostTaskmanagementWorktypesQueryAsync (WorktypeQueryRequest body);
 
         /// <summary>
@@ -2400,12 +2404,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>Task of ApiResponse (WorktypeQueryEntityListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<WorktypeQueryEntityListing>> PostTaskmanagementWorktypesQueryAsyncWithHttpInfo (WorktypeQueryRequest body);
 
         /// <summary>
@@ -2413,13 +2417,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<DataSchema> PutTaskmanagementWorkitemsSchemaAsync (string schemaId, DataSchema body);
 
         /// <summary>
@@ -2427,13 +2431,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutTaskmanagementWorkitemsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
 
         #endregion Asynchronous Operations
@@ -2530,12 +2534,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a workbin 
+        /// 
+        /// DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void DeleteTaskmanagementWorkbin (string workbinId)
         {
              DeleteTaskmanagementWorkbinWithHttpInfo(workbinId);
@@ -2543,12 +2548,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a workbin 
+        /// 
+        /// DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> DeleteTaskmanagementWorkbinWithHttpInfo (string workbinId)
         { 
             // verify the required parameter 'workbinId' is set
@@ -2627,12 +2633,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a workbin 
+        /// 
+        /// DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task DeleteTaskmanagementWorkbinAsync (string workbinId)
         {
              await DeleteTaskmanagementWorkbinAsyncWithHttpInfo(workbinId);
@@ -2641,12 +2648,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a workbin 
+        /// 
+        /// DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkbinAsyncWithHttpInfo (string workbinId)
         { 
             // verify the required parameter 'workbinId' is set
@@ -2727,12 +2735,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a workitem 
+        /// 
+        /// DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void DeleteTaskmanagementWorkitem (string workitemId)
         {
              DeleteTaskmanagementWorkitemWithHttpInfo(workitemId);
@@ -2740,12 +2749,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a workitem 
+        /// 
+        /// DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> DeleteTaskmanagementWorkitemWithHttpInfo (string workitemId)
         { 
             // verify the required parameter 'workitemId' is set
@@ -2824,12 +2834,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a workitem 
+        /// 
+        /// DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task DeleteTaskmanagementWorkitemAsync (string workitemId)
         {
              await DeleteTaskmanagementWorkitemAsyncWithHttpInfo(workitemId);
@@ -2838,12 +2849,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a workitem 
+        /// 
+        /// DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId)
         { 
             // verify the required parameter 'workitemId' is set
@@ -2924,12 +2936,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a schema 
+        /// 
+        /// DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void DeleteTaskmanagementWorkitemsSchema (string schemaId)
         {
              DeleteTaskmanagementWorkitemsSchemaWithHttpInfo(schemaId);
@@ -2937,12 +2950,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a schema 
+        /// 
+        /// DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> DeleteTaskmanagementWorkitemsSchemaWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -3021,12 +3035,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a schema 
+        /// 
+        /// DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task DeleteTaskmanagementWorkitemsSchemaAsync (string schemaId)
         {
              await DeleteTaskmanagementWorkitemsSchemaAsyncWithHttpInfo(schemaId);
@@ -3035,12 +3050,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a schema 
+        /// 
+        /// DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorkitemsSchemaAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -3121,12 +3137,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a worktype 
+        /// 
+        /// DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void DeleteTaskmanagementWorktype (string worktypeId)
         {
              DeleteTaskmanagementWorktypeWithHttpInfo(worktypeId);
@@ -3134,12 +3151,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a worktype 
+        /// 
+        /// DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> DeleteTaskmanagementWorktypeWithHttpInfo (string worktypeId)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -3218,12 +3236,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a worktype 
+        /// 
+        /// DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task DeleteTaskmanagementWorktypeAsync (string worktypeId)
         {
              await DeleteTaskmanagementWorktypeAsyncWithHttpInfo(worktypeId);
@@ -3232,12 +3251,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a worktype 
+        /// 
+        /// DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -3318,13 +3338,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a status 
+        /// 
+        /// DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void DeleteTaskmanagementWorktypeStatus (string worktypeId, string statusId)
         {
              DeleteTaskmanagementWorktypeStatusWithHttpInfo(worktypeId, statusId);
@@ -3332,13 +3353,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a status 
+        /// 
+        /// DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> DeleteTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -3421,13 +3443,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a status 
+        /// 
+        /// DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task DeleteTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId)
         {
              await DeleteTaskmanagementWorktypeStatusAsyncWithHttpInfo(worktypeId, statusId);
@@ -3436,13 +3459,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a status 
+        /// 
+        /// DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -3528,12 +3552,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a workbin 
+        /// 
+        /// GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Workbin</returns>
         
-        /// Preview Endpoint
         public Workbin GetTaskmanagementWorkbin (string workbinId)
         {
              ApiResponse<Workbin> localVarResponse = GetTaskmanagementWorkbinWithHttpInfo(workbinId);
@@ -3542,12 +3567,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a workbin 
+        /// 
+        /// GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>ApiResponse of Workbin</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Workbin > GetTaskmanagementWorkbinWithHttpInfo (string workbinId)
         { 
             // verify the required parameter 'workbinId' is set
@@ -3626,12 +3652,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a workbin 
+        /// 
+        /// GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Task of Workbin</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Workbin> GetTaskmanagementWorkbinAsync (string workbinId)
         {
              ApiResponse<Workbin> localVarResponse = await GetTaskmanagementWorkbinAsyncWithHttpInfo(workbinId);
@@ -3641,12 +3668,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a workbin 
+        /// 
+        /// GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <returns>Task of ApiResponse (Workbin)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Workbin>> GetTaskmanagementWorkbinAsyncWithHttpInfo (string workbinId)
         { 
             // verify the required parameter 'workbinId' is set
@@ -3727,6 +3755,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a workbin's attribute change history 
+        /// 
+        /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -3735,7 +3765,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkbinChangeListing</returns>
         
-        /// Preview Endpoint
         public WorkbinChangeListing GetTaskmanagementWorkbinHistory (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkbinChangeListing> localVarResponse = GetTaskmanagementWorkbinHistoryWithHttpInfo(workbinId, after, pageSize, sortOrder);
@@ -3744,6 +3773,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a workbin's attribute change history 
+        /// 
+        /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -3752,7 +3783,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkbinChangeListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkbinChangeListing > GetTaskmanagementWorkbinHistoryWithHttpInfo (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workbinId' is set
@@ -3834,6 +3864,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a workbin's attribute change history 
+        /// 
+        /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -3842,7 +3874,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkbinChangeListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkbinChangeListing> GetTaskmanagementWorkbinHistoryAsync (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkbinChangeListing> localVarResponse = await GetTaskmanagementWorkbinHistoryAsyncWithHttpInfo(workbinId, after, pageSize, sortOrder);
@@ -3852,6 +3883,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a workbin's attribute change history 
+        /// 
+        /// GetTaskmanagementWorkbinHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -3860,7 +3893,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkbinChangeListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkbinChangeListing>> GetTaskmanagementWorkbinHistoryAsyncWithHttpInfo (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workbinId' is set
@@ -3944,13 +3976,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a workbin 
+        /// 
+        /// GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="entityVersion">Workbin version</param>
         /// <returns>WorkbinVersion</returns>
         
-        /// Preview Endpoint
         public WorkbinVersion GetTaskmanagementWorkbinVersion (string workbinId, int? entityVersion)
         {
              ApiResponse<WorkbinVersion> localVarResponse = GetTaskmanagementWorkbinVersionWithHttpInfo(workbinId, entityVersion);
@@ -3959,13 +3992,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a workbin 
+        /// 
+        /// GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="entityVersion">Workbin version</param>
         /// <returns>ApiResponse of WorkbinVersion</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkbinVersion > GetTaskmanagementWorkbinVersionWithHttpInfo (string workbinId, int? entityVersion)
         { 
             // verify the required parameter 'workbinId' is set
@@ -4048,13 +4082,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a workbin 
+        /// 
+        /// GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="entityVersion">Workbin version</param>
         /// <returns>Task of WorkbinVersion</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkbinVersion> GetTaskmanagementWorkbinVersionAsync (string workbinId, int? entityVersion)
         {
              ApiResponse<WorkbinVersion> localVarResponse = await GetTaskmanagementWorkbinVersionAsyncWithHttpInfo(workbinId, entityVersion);
@@ -4064,13 +4099,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a workbin 
+        /// 
+        /// GetTaskmanagementWorkbinVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="entityVersion">Workbin version</param>
         /// <returns>Task of ApiResponse (WorkbinVersion)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkbinVersion>> GetTaskmanagementWorkbinVersionAsyncWithHttpInfo (string workbinId, int? entityVersion)
         { 
             // verify the required parameter 'workbinId' is set
@@ -4156,6 +4192,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a workbin 
+        /// 
+        /// GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -4164,7 +4202,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkbinVersionListing</returns>
         
-        /// Preview Endpoint
         public WorkbinVersionListing GetTaskmanagementWorkbinVersions (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkbinVersionListing> localVarResponse = GetTaskmanagementWorkbinVersionsWithHttpInfo(workbinId, after, pageSize, sortOrder);
@@ -4173,6 +4210,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a workbin 
+        /// 
+        /// GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -4181,7 +4220,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkbinVersionListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkbinVersionListing > GetTaskmanagementWorkbinVersionsWithHttpInfo (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workbinId' is set
@@ -4263,6 +4301,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a workbin 
+        /// 
+        /// GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -4271,7 +4311,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkbinVersionListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkbinVersionListing> GetTaskmanagementWorkbinVersionsAsync (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkbinVersionListing> localVarResponse = await GetTaskmanagementWorkbinVersionsAsyncWithHttpInfo(workbinId, after, pageSize, sortOrder);
@@ -4281,6 +4320,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a workbin 
+        /// 
+        /// GetTaskmanagementWorkbinVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
@@ -4289,7 +4330,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkbinVersionListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkbinVersionListing>> GetTaskmanagementWorkbinVersionsAsyncWithHttpInfo (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workbinId' is set
@@ -4373,27 +4413,31 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a workitem 
+        /// 
+        /// GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
+        /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
-        public Workitem GetTaskmanagementWorkitem (string workitemId)
+        public Workitem GetTaskmanagementWorkitem (string workitemId, string expands = null)
         {
-             ApiResponse<Workitem> localVarResponse = GetTaskmanagementWorkitemWithHttpInfo(workitemId);
+             ApiResponse<Workitem> localVarResponse = GetTaskmanagementWorkitemWithHttpInfo(workitemId, expands);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a workitem 
+        /// 
+        /// GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
+        /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
-        public ApiResponse< Workitem > GetTaskmanagementWorkitemWithHttpInfo (string workitemId)
+        public ApiResponse< Workitem > GetTaskmanagementWorkitemWithHttpInfo (string workitemId, string expands = null)
         { 
             // verify the required parameter 'workitemId' is set
             if (workitemId == null)
@@ -4432,6 +4476,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (workitemId != null) localVarPathParams.Add("workitemId", this.Configuration.ApiClient.ParameterToString(workitemId));
 
             // Query params
+            if (expands != null) localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(expands)));
 
             // Header params
 
@@ -4471,28 +4516,32 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a workitem 
+        /// 
+        /// GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
+        /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
-        public async System.Threading.Tasks.Task<Workitem> GetTaskmanagementWorkitemAsync (string workitemId)
+        public async System.Threading.Tasks.Task<Workitem> GetTaskmanagementWorkitemAsync (string workitemId, string expands = null)
         {
-             ApiResponse<Workitem> localVarResponse = await GetTaskmanagementWorkitemAsyncWithHttpInfo(workitemId);
+             ApiResponse<Workitem> localVarResponse = await GetTaskmanagementWorkitemAsyncWithHttpInfo(workitemId, expands);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get a workitem 
+        /// 
+        /// GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
+        /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
-        public async System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId)
+        public async System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, string expands = null)
         { 
             // verify the required parameter 'workitemId' is set
             if (workitemId == null)
@@ -4532,6 +4581,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (workitemId != null) localVarPathParams.Add("workitemId", this.Configuration.ApiClient.ParameterToString(workitemId));
 
             // Query params
+            if (expands != null) localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(expands)));
 
             // Header params
 
@@ -4572,6 +4622,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a workitem's attribute change history 
+        /// 
+        /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -4580,7 +4632,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkitemChangeListing</returns>
         
-        /// Preview Endpoint
         public WorkitemChangeListing GetTaskmanagementWorkitemHistory (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkitemChangeListing> localVarResponse = GetTaskmanagementWorkitemHistoryWithHttpInfo(workitemId, after, pageSize, sortOrder);
@@ -4589,6 +4640,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a workitem's attribute change history 
+        /// 
+        /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -4597,7 +4650,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkitemChangeListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemChangeListing > GetTaskmanagementWorkitemHistoryWithHttpInfo (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -4679,6 +4731,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a workitem's attribute change history 
+        /// 
+        /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -4687,7 +4741,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkitemChangeListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemChangeListing> GetTaskmanagementWorkitemHistoryAsync (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkitemChangeListing> localVarResponse = await GetTaskmanagementWorkitemHistoryAsyncWithHttpInfo(workitemId, after, pageSize, sortOrder);
@@ -4697,6 +4750,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a workitem's attribute change history 
+        /// 
+        /// GetTaskmanagementWorkitemHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -4705,7 +4760,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkitemChangeListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemChangeListing>> GetTaskmanagementWorkitemHistoryAsyncWithHttpInfo (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -4789,6 +4843,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all wrapup codes added for the given user for a workitem. 
+        /// 
+        /// GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -4799,7 +4855,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public WorkitemWrapup GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkitemWrapup> localVarResponse = GetTaskmanagementWorkitemUserWrapupsWithHttpInfo(workitemId, userId, expands, after, pageSize, sortOrder);
@@ -4808,6 +4863,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all wrapup codes added for the given user for a workitem. 
+        /// 
+        /// GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -4818,7 +4875,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemWrapup > GetTaskmanagementWorkitemUserWrapupsWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -4905,6 +4961,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all wrapup codes added for the given user for a workitem. 
+        /// 
+        /// GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -4915,7 +4973,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemWrapup> GetTaskmanagementWorkitemUserWrapupsAsync (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkitemWrapup> localVarResponse = await GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo(workitemId, userId, expands, after, pageSize, sortOrder);
@@ -4925,6 +4982,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all wrapup codes added for the given user for a workitem. 
+        /// 
+        /// GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -4935,7 +4994,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkitemWrapup)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -5025,13 +5083,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a workitem 
+        /// 
+        /// GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="entityVersion">Workitem version</param>
         /// <returns>WorkitemVersion</returns>
         
-        /// Preview Endpoint
         public WorkitemVersion GetTaskmanagementWorkitemVersion (string workitemId, int? entityVersion)
         {
              ApiResponse<WorkitemVersion> localVarResponse = GetTaskmanagementWorkitemVersionWithHttpInfo(workitemId, entityVersion);
@@ -5040,13 +5099,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a workitem 
+        /// 
+        /// GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="entityVersion">Workitem version</param>
         /// <returns>ApiResponse of WorkitemVersion</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemVersion > GetTaskmanagementWorkitemVersionWithHttpInfo (string workitemId, int? entityVersion)
         { 
             // verify the required parameter 'workitemId' is set
@@ -5129,13 +5189,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a workitem 
+        /// 
+        /// GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="entityVersion">Workitem version</param>
         /// <returns>Task of WorkitemVersion</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemVersion> GetTaskmanagementWorkitemVersionAsync (string workitemId, int? entityVersion)
         {
              ApiResponse<WorkitemVersion> localVarResponse = await GetTaskmanagementWorkitemVersionAsyncWithHttpInfo(workitemId, entityVersion);
@@ -5145,13 +5206,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a workitem 
+        /// 
+        /// GetTaskmanagementWorkitemVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="entityVersion">Workitem version</param>
         /// <returns>Task of ApiResponse (WorkitemVersion)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemVersion>> GetTaskmanagementWorkitemVersionAsyncWithHttpInfo (string workitemId, int? entityVersion)
         { 
             // verify the required parameter 'workitemId' is set
@@ -5237,6 +5299,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a workitem 
+        /// 
+        /// GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -5245,7 +5309,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkitemVersionListing</returns>
         
-        /// Preview Endpoint
         public WorkitemVersionListing GetTaskmanagementWorkitemVersions (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkitemVersionListing> localVarResponse = GetTaskmanagementWorkitemVersionsWithHttpInfo(workitemId, after, pageSize, sortOrder);
@@ -5254,6 +5317,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a workitem 
+        /// 
+        /// GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -5262,7 +5327,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkitemVersionListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemVersionListing > GetTaskmanagementWorkitemVersionsWithHttpInfo (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -5344,6 +5408,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a workitem 
+        /// 
+        /// GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -5352,7 +5418,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkitemVersionListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemVersionListing> GetTaskmanagementWorkitemVersionsAsync (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkitemVersionListing> localVarResponse = await GetTaskmanagementWorkitemVersionsAsyncWithHttpInfo(workitemId, after, pageSize, sortOrder);
@@ -5362,6 +5427,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a workitem 
+        /// 
+        /// GetTaskmanagementWorkitemVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
@@ -5370,7 +5437,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkitemVersionListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemVersionListing>> GetTaskmanagementWorkitemVersionsAsyncWithHttpInfo (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -5454,6 +5520,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all wrapup codes added for all users for a workitem. 
+        /// 
+        /// GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -5463,7 +5531,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorkitemWrapupEntityListing</returns>
         
-        /// Preview Endpoint
         public WorkitemWrapupEntityListing GetTaskmanagementWorkitemWrapups (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkitemWrapupEntityListing> localVarResponse = GetTaskmanagementWorkitemWrapupsWithHttpInfo(workitemId, expands, after, pageSize, sortOrder);
@@ -5472,6 +5539,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all wrapup codes added for all users for a workitem. 
+        /// 
+        /// GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -5481,7 +5550,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorkitemWrapupEntityListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemWrapupEntityListing > GetTaskmanagementWorkitemWrapupsWithHttpInfo (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -5564,6 +5632,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all wrapup codes added for all users for a workitem. 
+        /// 
+        /// GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -5573,7 +5643,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorkitemWrapupEntityListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemWrapupEntityListing> GetTaskmanagementWorkitemWrapupsAsync (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorkitemWrapupEntityListing> localVarResponse = await GetTaskmanagementWorkitemWrapupsAsyncWithHttpInfo(workitemId, expands, after, pageSize, sortOrder);
@@ -5583,6 +5652,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all wrapup codes added for all users for a workitem. 
+        /// 
+        /// GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -5592,7 +5663,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorkitemWrapupEntityListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemWrapupEntityListing>> GetTaskmanagementWorkitemWrapupsAsyncWithHttpInfo (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -5677,12 +5747,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         public DataSchema GetTaskmanagementWorkitemsSchema (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = GetTaskmanagementWorkitemsSchemaWithHttpInfo(schemaId);
@@ -5691,12 +5762,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         public ApiResponse< DataSchema > GetTaskmanagementWorkitemsSchemaWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -5775,12 +5847,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<DataSchema> GetTaskmanagementWorkitemsSchemaAsync (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetTaskmanagementWorkitemsSchemaAsyncWithHttpInfo(schemaId);
@@ -5790,12 +5863,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetTaskmanagementWorkitemsSchemaAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -5876,13 +5950,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a specific version of a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         public DataSchema GetTaskmanagementWorkitemsSchemaVersion (string schemaId, string versionId)
         {
              ApiResponse<DataSchema> localVarResponse = GetTaskmanagementWorkitemsSchemaVersionWithHttpInfo(schemaId, versionId);
@@ -5891,13 +5966,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a specific version of a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         public ApiResponse< DataSchema > GetTaskmanagementWorkitemsSchemaVersionWithHttpInfo (string schemaId, string versionId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -5980,13 +6056,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a specific version of a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<DataSchema> GetTaskmanagementWorkitemsSchemaVersionAsync (string schemaId, string versionId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetTaskmanagementWorkitemsSchemaVersionAsyncWithHttpInfo(schemaId, versionId);
@@ -5996,13 +6073,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a specific version of a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetTaskmanagementWorkitemsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6088,12 +6166,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         public DataSchema GetTaskmanagementWorkitemsSchemaVersions (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo(schemaId);
@@ -6102,12 +6181,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         public ApiResponse< DataSchema > GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6186,12 +6266,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<DataSchema> GetTaskmanagementWorkitemsSchemaVersionsAsync (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo(schemaId);
@@ -6201,12 +6282,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a schema 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6287,11 +6369,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of schemas. 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataSchemaListing</returns>
         
-        /// Preview Endpoint
         public DataSchemaListing GetTaskmanagementWorkitemsSchemas ()
         {
              ApiResponse<DataSchemaListing> localVarResponse = GetTaskmanagementWorkitemsSchemasWithHttpInfo();
@@ -6300,11 +6383,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of schemas. 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< DataSchemaListing > GetTaskmanagementWorkitemsSchemasWithHttpInfo ()
         { 
 
@@ -6379,11 +6463,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of schemas. 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataSchemaListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<DataSchemaListing> GetTaskmanagementWorkitemsSchemasAsync ()
         {
              ApiResponse<DataSchemaListing> localVarResponse = await GetTaskmanagementWorkitemsSchemasAsyncWithHttpInfo();
@@ -6393,11 +6478,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of schemas. 
+        /// 
+        /// GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetTaskmanagementWorkitemsSchemasAsyncWithHttpInfo ()
         { 
 
@@ -6473,13 +6559,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a worktype 
+        /// 
+        /// GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="expands">Which fields, if any, to expand. (optional)</param>
         /// <returns>Worktype</returns>
         
-        /// Preview Endpoint
         public Worktype GetTaskmanagementWorktype (string worktypeId, List<string> expands = null)
         {
              ApiResponse<Worktype> localVarResponse = GetTaskmanagementWorktypeWithHttpInfo(worktypeId, expands);
@@ -6488,13 +6575,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a worktype 
+        /// 
+        /// GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="expands">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Worktype > GetTaskmanagementWorktypeWithHttpInfo (string worktypeId, List<string> expands = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -6574,13 +6662,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a worktype 
+        /// 
+        /// GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="expands">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Worktype</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Worktype> GetTaskmanagementWorktypeAsync (string worktypeId, List<string> expands = null)
         {
              ApiResponse<Worktype> localVarResponse = await GetTaskmanagementWorktypeAsyncWithHttpInfo(worktypeId, expands);
@@ -6590,13 +6679,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a worktype 
+        /// 
+        /// GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="expands">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Worktype>> GetTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, List<string> expands = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -6678,6 +6768,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a worktype's attribute change history 
+        /// 
+        /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -6686,7 +6778,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorktypeChangeListing</returns>
         
-        /// Preview Endpoint
         public WorktypeChangeListing GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorktypeChangeListing> localVarResponse = GetTaskmanagementWorktypeHistoryWithHttpInfo(worktypeId, after, pageSize, sortOrder);
@@ -6695,6 +6786,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a worktype's attribute change history 
+        /// 
+        /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -6703,7 +6796,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorktypeChangeListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorktypeChangeListing > GetTaskmanagementWorktypeHistoryWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -6785,6 +6877,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a worktype's attribute change history 
+        /// 
+        /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -6793,7 +6887,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorktypeChangeListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorktypeChangeListing> localVarResponse = await GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo(worktypeId, after, pageSize, sortOrder);
@@ -6803,6 +6896,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a listing of a worktype's attribute change history 
+        /// 
+        /// GetTaskmanagementWorktypeHistory is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -6811,7 +6906,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorktypeChangeListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorktypeChangeListing>> GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -6895,13 +6989,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a status 
+        /// 
+        /// GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public WorkitemStatus GetTaskmanagementWorktypeStatus (string worktypeId, string statusId)
         {
              ApiResponse<WorkitemStatus> localVarResponse = GetTaskmanagementWorktypeStatusWithHttpInfo(worktypeId, statusId);
@@ -6910,13 +7005,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a status 
+        /// 
+        /// GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemStatus > GetTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -6999,13 +7095,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a status 
+        /// 
+        /// GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemStatus> GetTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId)
         {
              ApiResponse<WorkitemStatus> localVarResponse = await GetTaskmanagementWorktypeStatusAsyncWithHttpInfo(worktypeId, statusId);
@@ -7015,13 +7112,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a status 
+        /// 
+        /// GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> GetTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -7107,13 +7205,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a worktype 
+        /// 
+        /// GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="entityVersion">Worktype version</param>
         /// <returns>WorktypeVersion</returns>
         
-        /// Preview Endpoint
         public WorktypeVersion GetTaskmanagementWorktypeVersion (string worktypeId, int? entityVersion)
         {
              ApiResponse<WorktypeVersion> localVarResponse = GetTaskmanagementWorktypeVersionWithHttpInfo(worktypeId, entityVersion);
@@ -7122,13 +7221,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a worktype 
+        /// 
+        /// GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="entityVersion">Worktype version</param>
         /// <returns>ApiResponse of WorktypeVersion</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorktypeVersion > GetTaskmanagementWorktypeVersionWithHttpInfo (string worktypeId, int? entityVersion)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -7211,13 +7311,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a worktype 
+        /// 
+        /// GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="entityVersion">Worktype version</param>
         /// <returns>Task of WorktypeVersion</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorktypeVersion> GetTaskmanagementWorktypeVersionAsync (string worktypeId, int? entityVersion)
         {
              ApiResponse<WorktypeVersion> localVarResponse = await GetTaskmanagementWorktypeVersionAsyncWithHttpInfo(worktypeId, entityVersion);
@@ -7227,13 +7328,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a version of a worktype 
+        /// 
+        /// GetTaskmanagementWorktypeVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="entityVersion">Worktype version</param>
         /// <returns>Task of ApiResponse (WorktypeVersion)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorktypeVersion>> GetTaskmanagementWorktypeVersionAsyncWithHttpInfo (string worktypeId, int? entityVersion)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -7319,6 +7421,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a worktype 
+        /// 
+        /// GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -7327,7 +7431,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>WorktypeVersionListing</returns>
         
-        /// Preview Endpoint
         public WorktypeVersionListing GetTaskmanagementWorktypeVersions (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorktypeVersionListing> localVarResponse = GetTaskmanagementWorktypeVersionsWithHttpInfo(worktypeId, after, pageSize, sortOrder);
@@ -7336,6 +7439,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a worktype 
+        /// 
+        /// GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -7344,7 +7449,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>ApiResponse of WorktypeVersionListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorktypeVersionListing > GetTaskmanagementWorktypeVersionsWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -7426,6 +7530,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a worktype 
+        /// 
+        /// GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -7434,7 +7540,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of WorktypeVersionListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorktypeVersionListing> GetTaskmanagementWorktypeVersionsAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
         {
              ApiResponse<WorktypeVersionListing> localVarResponse = await GetTaskmanagementWorktypeVersionsAsyncWithHttpInfo(worktypeId, after, pageSize, sortOrder);
@@ -7444,6 +7549,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all versions of a worktype 
+        /// 
+        /// GetTaskmanagementWorktypeVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -7452,7 +7559,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
         /// <returns>Task of ApiResponse (WorktypeVersionListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorktypeVersionListing>> GetTaskmanagementWorktypeVersionsAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -7536,13 +7642,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a workbin 
+        /// 
+        /// PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="body">Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}.</param>
         /// <returns>Workbin</returns>
         
-        /// Preview Endpoint
         public Workbin PatchTaskmanagementWorkbin (string workbinId, WorkbinUpdate body)
         {
              ApiResponse<Workbin> localVarResponse = PatchTaskmanagementWorkbinWithHttpInfo(workbinId, body);
@@ -7551,13 +7658,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a workbin 
+        /// 
+        /// PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="body">Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}.</param>
         /// <returns>ApiResponse of Workbin</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Workbin > PatchTaskmanagementWorkbinWithHttpInfo (string workbinId, WorkbinUpdate body)
         { 
             // verify the required parameter 'workbinId' is set
@@ -7645,13 +7753,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a workbin 
+        /// 
+        /// PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="body">Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}.</param>
         /// <returns>Task of Workbin</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Workbin> PatchTaskmanagementWorkbinAsync (string workbinId, WorkbinUpdate body)
         {
              ApiResponse<Workbin> localVarResponse = await PatchTaskmanagementWorkbinAsyncWithHttpInfo(workbinId, body);
@@ -7661,13 +7770,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a workbin 
+        /// 
+        /// PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workbinId">Workbin ID</param>
         /// <param name="body">Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}.</param>
         /// <returns>Task of ApiResponse (Workbin)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Workbin>> PatchTaskmanagementWorkbinAsyncWithHttpInfo (string workbinId, WorkbinUpdate body)
         { 
             // verify the required parameter 'workbinId' is set
@@ -7758,13 +7868,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a workitem 
+        /// 
+        /// PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Workitem</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         public Workitem PatchTaskmanagementWorkitem (string workitemId, WorkitemUpdate body)
         {
              ApiResponse<Workitem> localVarResponse = PatchTaskmanagementWorkitemWithHttpInfo(workitemId, body);
@@ -7773,13 +7884,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a workitem 
+        /// 
+        /// PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Workitem</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Workitem > PatchTaskmanagementWorkitemWithHttpInfo (string workitemId, WorkitemUpdate body)
         { 
             // verify the required parameter 'workitemId' is set
@@ -7867,13 +7979,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a workitem 
+        /// 
+        /// PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Workitem</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Workitem> PatchTaskmanagementWorkitemAsync (string workitemId, WorkitemUpdate body)
         {
              ApiResponse<Workitem> localVarResponse = await PatchTaskmanagementWorkitemAsyncWithHttpInfo(workitemId, body);
@@ -7883,13 +7996,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a workitem 
+        /// 
+        /// PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Workitem</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Workitem>> PatchTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, WorkitemUpdate body)
         { 
             // verify the required parameter 'workitemId' is set
@@ -7980,13 +8094,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. 
+        /// 
+        /// PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Targeted user</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void PatchTaskmanagementWorkitemAssignment (string workitemId, WorkitemManualAssign body)
         {
              PatchTaskmanagementWorkitemAssignmentWithHttpInfo(workitemId, body);
@@ -7994,13 +8109,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. 
+        /// 
+        /// PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Targeted user</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> PatchTaskmanagementWorkitemAssignmentWithHttpInfo (string workitemId, WorkitemManualAssign body)
         { 
             // verify the required parameter 'workitemId' is set
@@ -8088,13 +8204,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. 
+        /// 
+        /// PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Targeted user</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task PatchTaskmanagementWorkitemAssignmentAsync (string workitemId, WorkitemManualAssign body)
         {
              await PatchTaskmanagementWorkitemAssignmentAsyncWithHttpInfo(workitemId, body);
@@ -8103,13 +8220,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. 
+        /// 
+        /// PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Targeted user</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchTaskmanagementWorkitemAssignmentAsyncWithHttpInfo (string workitemId, WorkitemManualAssign body)
         { 
             // verify the required parameter 'workitemId' is set
@@ -8200,6 +8318,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add/Remove a wrapup code for a given user in a workitem. 
+        /// 
+        /// PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -8207,7 +8327,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request body to add/remove a wrapup code for a workitem</param>
         /// <returns>WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public WorkitemWrapup PatchTaskmanagementWorkitemUserWrapups (string workitemId, string userId, WorkitemWrapupUpdate body)
         {
              ApiResponse<WorkitemWrapup> localVarResponse = PatchTaskmanagementWorkitemUserWrapupsWithHttpInfo(workitemId, userId, body);
@@ -8216,6 +8335,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add/Remove a wrapup code for a given user in a workitem. 
+        /// 
+        /// PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -8223,7 +8344,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request body to add/remove a wrapup code for a workitem</param>
         /// <returns>ApiResponse of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemWrapup > PatchTaskmanagementWorkitemUserWrapupsWithHttpInfo (string workitemId, string userId, WorkitemWrapupUpdate body)
         { 
             // verify the required parameter 'workitemId' is set
@@ -8315,6 +8435,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add/Remove a wrapup code for a given user in a workitem. 
+        /// 
+        /// PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -8322,7 +8444,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request body to add/remove a wrapup code for a workitem</param>
         /// <returns>Task of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemWrapup> PatchTaskmanagementWorkitemUserWrapupsAsync (string workitemId, string userId, WorkitemWrapupUpdate body)
         {
              ApiResponse<WorkitemWrapup> localVarResponse = await PatchTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo(workitemId, userId, body);
@@ -8332,6 +8453,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add/Remove a wrapup code for a given user in a workitem. 
+        /// 
+        /// PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
@@ -8339,7 +8462,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Request body to add/remove a wrapup code for a workitem</param>
         /// <returns>Task of ApiResponse (WorkitemWrapup)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> PatchTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo (string workitemId, string userId, WorkitemWrapupUpdate body)
         { 
             // verify the required parameter 'workitemId' is set
@@ -8435,13 +8557,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add/Remove a wrapup code for the current user in a workitem. 
+        /// 
+        /// PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
         /// <param name="body">Request body to add/remove the wrapup code for workitem</param>
         /// <returns>WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public WorkitemWrapup PatchTaskmanagementWorkitemUsersMeWrapups (string workitemId, WorkitemWrapupUpdate body)
         {
              ApiResponse<WorkitemWrapup> localVarResponse = PatchTaskmanagementWorkitemUsersMeWrapupsWithHttpInfo(workitemId, body);
@@ -8450,13 +8573,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add/Remove a wrapup code for the current user in a workitem. 
+        /// 
+        /// PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
         /// <param name="body">Request body to add/remove the wrapup code for workitem</param>
         /// <returns>ApiResponse of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemWrapup > PatchTaskmanagementWorkitemUsersMeWrapupsWithHttpInfo (string workitemId, WorkitemWrapupUpdate body)
         { 
             // verify the required parameter 'workitemId' is set
@@ -8544,13 +8668,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add/Remove a wrapup code for the current user in a workitem. 
+        /// 
+        /// PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
         /// <param name="body">Request body to add/remove the wrapup code for workitem</param>
         /// <returns>Task of WorkitemWrapup</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemWrapup> PatchTaskmanagementWorkitemUsersMeWrapupsAsync (string workitemId, WorkitemWrapupUpdate body)
         {
              ApiResponse<WorkitemWrapup> localVarResponse = await PatchTaskmanagementWorkitemUsersMeWrapupsAsyncWithHttpInfo(workitemId, body);
@@ -8560,13 +8685,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add/Remove a wrapup code for the current user in a workitem. 
+        /// 
+        /// PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">The ID of the Workitem.</param>
         /// <param name="body">Request body to add/remove the wrapup code for workitem</param>
         /// <returns>Task of ApiResponse (WorkitemWrapup)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> PatchTaskmanagementWorkitemUsersMeWrapupsAsyncWithHttpInfo (string workitemId, WorkitemWrapupUpdate body)
         { 
             // verify the required parameter 'workitemId' is set
@@ -8657,13 +8783,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a worktype 
+        /// 
+        /// PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Worktype</returns>
         
-        /// Preview Endpoint
         public Worktype PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body = null)
         {
              ApiResponse<Worktype> localVarResponse = PatchTaskmanagementWorktypeWithHttpInfo(worktypeId, body);
@@ -8672,13 +8799,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a worktype 
+        /// 
+        /// PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Worktype > PatchTaskmanagementWorktypeWithHttpInfo (string worktypeId, WorktypeUpdate body = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -8763,13 +8891,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a worktype 
+        /// 
+        /// PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of Worktype</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Worktype> PatchTaskmanagementWorktypeAsync (string worktypeId, WorktypeUpdate body = null)
         {
              ApiResponse<Worktype> localVarResponse = await PatchTaskmanagementWorktypeAsyncWithHttpInfo(worktypeId, body);
@@ -8779,13 +8908,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a worktype 
+        /// 
+        /// PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Worktype>> PatchTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, WorktypeUpdate body = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -8872,6 +9002,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a status 
+        /// 
+        /// PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -8879,7 +9011,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public WorkitemStatus PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
         {
              ApiResponse<WorkitemStatus> localVarResponse = PatchTaskmanagementWorktypeStatusWithHttpInfo(worktypeId, statusId, body);
@@ -8888,6 +9019,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a status 
+        /// 
+        /// PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -8895,7 +9028,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemStatus > PatchTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -8984,6 +9116,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a status 
+        /// 
+        /// PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -8991,7 +9125,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemStatus> PatchTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
         {
              ApiResponse<WorkitemStatus> localVarResponse = await PatchTaskmanagementWorktypeStatusAsyncWithHttpInfo(worktypeId, statusId, body);
@@ -9001,6 +9134,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes of a status 
+        /// 
+        /// PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
@@ -9008,7 +9143,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PatchTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -9100,12 +9234,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a workbin 
+        /// 
+        /// PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Workbin</returns>
         
-        /// Preview Endpoint
         public Workbin PostTaskmanagementWorkbins (WorkbinCreate body = null)
         {
              ApiResponse<Workbin> localVarResponse = PostTaskmanagementWorkbinsWithHttpInfo(body);
@@ -9114,12 +9249,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a workbin 
+        /// 
+        /// PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Workbin</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Workbin > PostTaskmanagementWorkbinsWithHttpInfo (WorkbinCreate body = null)
         { 
 
@@ -9200,12 +9336,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a workbin 
+        /// 
+        /// PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of Workbin</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Workbin> PostTaskmanagementWorkbinsAsync (WorkbinCreate body = null)
         {
              ApiResponse<Workbin> localVarResponse = await PostTaskmanagementWorkbinsAsyncWithHttpInfo(body);
@@ -9215,12 +9352,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a workbin 
+        /// 
+        /// PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (Workbin)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Workbin>> PostTaskmanagementWorkbinsAsyncWithHttpInfo (WorkbinCreate body = null)
         { 
 
@@ -9302,12 +9440,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for workbins 
+        /// 
+        /// PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>WorkbinQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public WorkbinQueryEntityListing PostTaskmanagementWorkbinsQuery (WorkbinQueryRequest body)
         {
              ApiResponse<WorkbinQueryEntityListing> localVarResponse = PostTaskmanagementWorkbinsQueryWithHttpInfo(body);
@@ -9316,12 +9455,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for workbins 
+        /// 
+        /// PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>ApiResponse of WorkbinQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkbinQueryEntityListing > PostTaskmanagementWorkbinsQueryWithHttpInfo (WorkbinQueryRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -9405,12 +9545,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for workbins 
+        /// 
+        /// PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>Task of WorkbinQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkbinQueryEntityListing> PostTaskmanagementWorkbinsQueryAsync (WorkbinQueryRequest body)
         {
              ApiResponse<WorkbinQueryEntityListing> localVarResponse = await PostTaskmanagementWorkbinsQueryAsyncWithHttpInfo(body);
@@ -9420,12 +9561,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for workbins 
+        /// 
+        /// PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>Task of ApiResponse (WorkbinQueryEntityListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkbinQueryEntityListing>> PostTaskmanagementWorkbinsQueryAsyncWithHttpInfo (WorkbinQueryRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -9511,12 +9653,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Cancel the assignment process for a workitem that is currently queued for assignment through ACD. 
+        /// 
+        /// PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         public Workitem PostTaskmanagementWorkitemAcdCancel (string workitemId)
         {
              ApiResponse<Workitem> localVarResponse = PostTaskmanagementWorkitemAcdCancelWithHttpInfo(workitemId);
@@ -9525,12 +9668,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Cancel the assignment process for a workitem that is currently queued for assignment through ACD. 
+        /// 
+        /// PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Workitem > PostTaskmanagementWorkitemAcdCancelWithHttpInfo (string workitemId)
         { 
             // verify the required parameter 'workitemId' is set
@@ -9609,12 +9753,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Cancel the assignment process for a workitem that is currently queued for assignment through ACD. 
+        /// 
+        /// PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Workitem> PostTaskmanagementWorkitemAcdCancelAsync (string workitemId)
         {
              ApiResponse<Workitem> localVarResponse = await PostTaskmanagementWorkitemAcdCancelAsyncWithHttpInfo(workitemId);
@@ -9624,12 +9769,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Cancel the assignment process for a workitem that is currently queued for assignment through ACD. 
+        /// 
+        /// PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemAcdCancelAsyncWithHttpInfo (string workitemId)
         { 
             // verify the required parameter 'workitemId' is set
@@ -9710,12 +9856,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Disconnect the assignee of the workitem 
+        /// 
+        /// PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         public Workitem PostTaskmanagementWorkitemDisconnect (string workitemId)
         {
              ApiResponse<Workitem> localVarResponse = PostTaskmanagementWorkitemDisconnectWithHttpInfo(workitemId);
@@ -9724,12 +9871,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Disconnect the assignee of the workitem 
+        /// 
+        /// PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Workitem > PostTaskmanagementWorkitemDisconnectWithHttpInfo (string workitemId)
         { 
             // verify the required parameter 'workitemId' is set
@@ -9808,12 +9956,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Disconnect the assignee of the workitem 
+        /// 
+        /// PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Workitem> PostTaskmanagementWorkitemDisconnectAsync (string workitemId)
         {
              ApiResponse<Workitem> localVarResponse = await PostTaskmanagementWorkitemDisconnectAsyncWithHttpInfo(workitemId);
@@ -9823,12 +9972,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Disconnect the assignee of the workitem 
+        /// 
+        /// PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemDisconnectAsyncWithHttpInfo (string workitemId)
         { 
             // verify the required parameter 'workitemId' is set
@@ -9909,13 +10059,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Terminate a workitem 
+        /// 
+        /// PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Terminated request (optional)</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         public Workitem PostTaskmanagementWorkitemTerminate (string workitemId, WorkitemTerminate body = null)
         {
              ApiResponse<Workitem> localVarResponse = PostTaskmanagementWorkitemTerminateWithHttpInfo(workitemId, body);
@@ -9924,13 +10075,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Terminate a workitem 
+        /// 
+        /// PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Terminated request (optional)</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Workitem > PostTaskmanagementWorkitemTerminateWithHttpInfo (string workitemId, WorkitemTerminate body = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -10015,13 +10167,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Terminate a workitem 
+        /// 
+        /// PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Terminated request (optional)</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Workitem> PostTaskmanagementWorkitemTerminateAsync (string workitemId, WorkitemTerminate body = null)
         {
              ApiResponse<Workitem> localVarResponse = await PostTaskmanagementWorkitemTerminateAsyncWithHttpInfo(workitemId, body);
@@ -10031,13 +10184,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Terminate a workitem 
+        /// 
+        /// PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workitemId">Workitem ID</param>
         /// <param name="body">Terminated request (optional)</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemTerminateAsyncWithHttpInfo (string workitemId, WorkitemTerminate body = null)
         { 
             // verify the required parameter 'workitemId' is set
@@ -10124,12 +10278,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a workitem 
+        /// 
+        /// PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workitem</param>
         /// <returns>Workitem</returns>
         
-        /// Preview Endpoint
         public Workitem PostTaskmanagementWorkitems (WorkitemCreate body)
         {
              ApiResponse<Workitem> localVarResponse = PostTaskmanagementWorkitemsWithHttpInfo(body);
@@ -10138,12 +10293,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a workitem 
+        /// 
+        /// PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workitem</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Workitem > PostTaskmanagementWorkitemsWithHttpInfo (WorkitemCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -10227,12 +10383,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a workitem 
+        /// 
+        /// PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workitem</param>
         /// <returns>Task of Workitem</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Workitem> PostTaskmanagementWorkitemsAsync (WorkitemCreate body)
         {
              ApiResponse<Workitem> localVarResponse = await PostTaskmanagementWorkitemsAsyncWithHttpInfo(body);
@@ -10242,12 +10399,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a workitem 
+        /// 
+        /// PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Workitem</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Workitem>> PostTaskmanagementWorkitemsAsyncWithHttpInfo (WorkitemCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -10332,13 +10490,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for workitems This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// Query for workitems 
+        /// This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// PostTaskmanagementWorkitemsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WorkitemQueryPostRequest</param>
         /// <returns>WorkitemPostQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public WorkitemPostQueryEntityListing PostTaskmanagementWorkitemsQuery (WorkitemQueryPostRequest body)
         {
              ApiResponse<WorkitemPostQueryEntityListing> localVarResponse = PostTaskmanagementWorkitemsQueryWithHttpInfo(body);
@@ -10346,13 +10505,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for workitems This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// Query for workitems 
+        /// This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// PostTaskmanagementWorkitemsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WorkitemQueryPostRequest</param>
         /// <returns>ApiResponse of WorkitemPostQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemPostQueryEntityListing > PostTaskmanagementWorkitemsQueryWithHttpInfo (WorkitemQueryPostRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -10435,13 +10595,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for workitems This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// Query for workitems 
+        /// This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// PostTaskmanagementWorkitemsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WorkitemQueryPostRequest</param>
         /// <returns>Task of WorkitemPostQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemPostQueryEntityListing> PostTaskmanagementWorkitemsQueryAsync (WorkitemQueryPostRequest body)
         {
              ApiResponse<WorkitemPostQueryEntityListing> localVarResponse = await PostTaskmanagementWorkitemsQueryAsyncWithHttpInfo(body);
@@ -10450,13 +10611,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for workitems This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// Query for workitems 
+        /// This query requires at least one EQ filter on the workbinId, assigneeId or typeId attributes.
+        /// PostTaskmanagementWorkitemsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">WorkitemQueryPostRequest</param>
         /// <returns>Task of ApiResponse (WorkitemPostQueryEntityListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemPostQueryEntityListing>> PostTaskmanagementWorkitemsQueryAsyncWithHttpInfo (WorkitemQueryPostRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -10542,12 +10704,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a schema 
+        /// 
+        /// PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         public DataSchema PostTaskmanagementWorkitemsSchemas (DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = PostTaskmanagementWorkitemsSchemasWithHttpInfo(body);
@@ -10556,12 +10719,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a schema 
+        /// 
+        /// PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         public ApiResponse< DataSchema > PostTaskmanagementWorkitemsSchemasWithHttpInfo (DataSchema body)
         { 
             // verify the required parameter 'body' is set
@@ -10645,12 +10809,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a schema 
+        /// 
+        /// PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<DataSchema> PostTaskmanagementWorkitemsSchemasAsync (DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = await PostTaskmanagementWorkitemsSchemasAsyncWithHttpInfo(body);
@@ -10660,12 +10825,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a schema 
+        /// 
+        /// PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostTaskmanagementWorkitemsSchemasAsyncWithHttpInfo (DataSchema body)
         { 
             // verify the required parameter 'body' is set
@@ -10751,13 +10917,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add a status to a worktype 
+        /// 
+        /// PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public WorkitemStatus PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body = null)
         {
              ApiResponse<WorkitemStatus> localVarResponse = PostTaskmanagementWorktypeStatusesWithHttpInfo(worktypeId, body);
@@ -10766,13 +10933,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add a status to a worktype 
+        /// 
+        /// PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorkitemStatus > PostTaskmanagementWorktypeStatusesWithHttpInfo (string worktypeId, WorkitemStatusCreate body = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -10857,13 +11025,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add a status to a worktype 
+        /// 
+        /// PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorkitemStatus> PostTaskmanagementWorktypeStatusesAsync (string worktypeId, WorkitemStatusCreate body = null)
         {
              ApiResponse<WorkitemStatus> localVarResponse = await PostTaskmanagementWorktypeStatusesAsyncWithHttpInfo(worktypeId, body);
@@ -10873,13 +11042,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add a status to a worktype 
+        /// 
+        /// PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PostTaskmanagementWorktypeStatusesAsyncWithHttpInfo (string worktypeId, WorkitemStatusCreate body = null)
         { 
             // verify the required parameter 'worktypeId' is set
@@ -10966,12 +11136,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a worktype 
+        /// 
+        /// PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Worktype</returns>
         
-        /// Preview Endpoint
         public Worktype PostTaskmanagementWorktypes (WorktypeCreate body = null)
         {
              ApiResponse<Worktype> localVarResponse = PostTaskmanagementWorktypesWithHttpInfo(body);
@@ -10980,12 +11151,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a worktype 
+        /// 
+        /// PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        /// Preview Endpoint
         public ApiResponse< Worktype > PostTaskmanagementWorktypesWithHttpInfo (WorktypeCreate body = null)
         { 
 
@@ -11066,12 +11238,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a worktype 
+        /// 
+        /// PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of Worktype</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<Worktype> PostTaskmanagementWorktypesAsync (WorktypeCreate body = null)
         {
              ApiResponse<Worktype> localVarResponse = await PostTaskmanagementWorktypesAsyncWithHttpInfo(body);
@@ -11081,12 +11254,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a worktype 
+        /// 
+        /// PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Worktype>> PostTaskmanagementWorktypesAsyncWithHttpInfo (WorktypeCreate body = null)
         { 
 
@@ -11168,12 +11342,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for worktypes 
+        /// 
+        /// PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>WorktypeQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public WorktypeQueryEntityListing PostTaskmanagementWorktypesQuery (WorktypeQueryRequest body)
         {
              ApiResponse<WorktypeQueryEntityListing> localVarResponse = PostTaskmanagementWorktypesQueryWithHttpInfo(body);
@@ -11182,12 +11357,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for worktypes 
+        /// 
+        /// PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>ApiResponse of WorktypeQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< WorktypeQueryEntityListing > PostTaskmanagementWorktypesQueryWithHttpInfo (WorktypeQueryRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11271,12 +11447,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for worktypes 
+        /// 
+        /// PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>Task of WorktypeQueryEntityListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<WorktypeQueryEntityListing> PostTaskmanagementWorktypesQueryAsync (WorktypeQueryRequest body)
         {
              ApiResponse<WorktypeQueryEntityListing> localVarResponse = await PostTaskmanagementWorktypesQueryAsyncWithHttpInfo(body);
@@ -11286,12 +11463,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for worktypes 
+        /// 
+        /// PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
         /// <returns>Task of ApiResponse (WorktypeQueryEntityListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<WorktypeQueryEntityListing>> PostTaskmanagementWorktypesQueryAsyncWithHttpInfo (WorktypeQueryRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11377,13 +11555,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a schema 
+        /// 
+        /// PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>DataSchema</returns>
         
-        /// Preview Endpoint
         public DataSchema PutTaskmanagementWorkitemsSchema (string schemaId, DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = PutTaskmanagementWorkitemsSchemaWithHttpInfo(schemaId, body);
@@ -11392,13 +11571,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a schema 
+        /// 
+        /// PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
         
-        /// Preview Endpoint
         public ApiResponse< DataSchema > PutTaskmanagementWorkitemsSchemaWithHttpInfo (string schemaId, DataSchema body)
         { 
             // verify the required parameter 'schemaId' is set
@@ -11486,13 +11666,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a schema 
+        /// 
+        /// PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of DataSchema</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<DataSchema> PutTaskmanagementWorkitemsSchemaAsync (string schemaId, DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = await PutTaskmanagementWorkitemsSchemaAsyncWithHttpInfo(schemaId, body);
@@ -11502,13 +11683,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a schema 
+        /// 
+        /// PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutTaskmanagementWorkitemsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body)
         { 
             // verify the required parameter 'schemaId' is set

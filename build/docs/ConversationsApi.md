@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsCallParticipantConsult**](ConversationsApi.html#deleteconversationscallparticipantconsult) | **DELETE** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
 | [**DeleteConversationsEmailMessagesDraftAttachment**](ConversationsApi.html#deleteconversationsemailmessagesdraftattachment) | **DELETE** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
 | [**DeleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsfacebookintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Delete a Facebook messaging integration |
+| [**DeleteConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsinstagramintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Delete Instagram messaging integration |
 | [**DeleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationslineintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/line/{integrationId} | Delete a LINE messenger integration |
 | [**DeleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsopenintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/open/{integrationId} | Delete an Open messaging integration |
 | [**DeleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationstwitterintegrationid) | **DELETE** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Delete a Twitter messaging integration |
@@ -79,6 +80,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIntegrations**](ConversationsApi.html#getconversationsmessagingintegrations) | **GET** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
 | [**GetConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#getconversationsmessagingintegrationsfacebook) | **GET** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
 | [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsfacebookintegrationid) | **GET** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
+| [**GetConversationsMessagingIntegrationsInstagram**](ConversationsApi.html#getconversationsmessagingintegrationsinstagram) | **GET** /api/v2/conversations/messaging/integrations/instagram | Get a list of Instagram Integrations |
+| [**GetConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsinstagramintegrationid) | **GET** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Get Instagram messaging integration |
 | [**GetConversationsMessagingIntegrationsLine**](ConversationsApi.html#getconversationsmessagingintegrationsline) | **GET** /api/v2/conversations/messaging/integrations/line | Get a list of LINE messenger Integrations |
 | [**GetConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationslineintegrationid) | **GET** /api/v2/conversations/messaging/integrations/line/{integrationId} | Get a LINE messenger integration |
 | [**GetConversationsMessagingIntegrationsOpen**](ConversationsApi.html#getconversationsmessagingintegrationsopen) | **GET** /api/v2/conversations/messaging/integrations/open | Get a list of Open messaging integrations |
@@ -129,6 +132,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessageParticipantAttributes**](ConversationsApi.html#patchconversationsmessageparticipantattributes) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsMessageParticipantCommunication**](ConversationsApi.html#patchconversationsmessageparticipantcommunication) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PatchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsfacebookintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Update Facebook messaging integration |
+| [**PatchConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsinstagramintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Update Instagram messaging integration |
 | [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsopenintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
 | [**PatchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationstwitterintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Update Twitter messaging integration |
 | [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappintegrationid) | **PATCH** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update or activate a WhatsApp messaging integration |
@@ -146,11 +150,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
 | [**PostConversationParticipantDigits**](ConversationsApi.html#postconversationparticipantdigits) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/digits | Sends DTMF to the participant |
 | [**PostConversationParticipantReplace**](ConversationsApi.html#postconversationparticipantreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationParticipantReplaceAgent**](ConversationsApi.html#postconversationparticipantreplaceagent) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent | Replace this participant with the specified agent |
+| [**PostConversationParticipantReplaceExternal**](ConversationsApi.html#postconversationparticipantreplaceexternal) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external | Replace this participant with the an external contact |
+| [**PostConversationParticipantReplaceQueue**](ConversationsApi.html#postconversationparticipantreplacequeue) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue | Replace this participant with the specified queue |
 | [**PostConversationParticipantSecureivrsessions**](ConversationsApi.html#postconversationparticipantsecureivrsessions) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **POST** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
 | [**PostConversationsCallParticipantCoach**](ConversationsApi.html#postconversationscallparticipantcoach) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**PostConversationsCallParticipantCommunicationWrapup**](ConversationsApi.html#postconversationscallparticipantcommunicationwrapup) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsCallParticipantConsult**](ConversationsApi.html#postconversationscallparticipantconsult) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
+| [**PostConversationsCallParticipantConsultAgent**](ConversationsApi.html#postconversationscallparticipantconsultagent) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent | Initiate a consult transfer to an agent |
+| [**PostConversationsCallParticipantConsultExternal**](ConversationsApi.html#postconversationscallparticipantconsultexternal) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external | Initiate a consult transfer to an external contact |
+| [**PostConversationsCallParticipantConsultQueue**](ConversationsApi.html#postconversationscallparticipantconsultqueue) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue | Initiate a consult transfer to a queue |
 | [**PostConversationsCallParticipantMonitor**](ConversationsApi.html#postconversationscallparticipantmonitor) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostConversationsCallParticipantReplace**](ConversationsApi.html#postconversationscallparticipantreplace) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsCallParticipants**](ConversationsApi.html#postconversationscallparticipants) | **POST** /api/v2/conversations/calls/{conversationId}/participants | Add participants to a conversation |
@@ -188,6 +198,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessagesAgentless**](ConversationsApi.html#postconversationsmessagesagentless) | **POST** /api/v2/conversations/messages/agentless | Send an agentless outbound message |
 | [**PostConversationsMessagesInboundOpen**](ConversationsApi.html#postconversationsmessagesinboundopen) | **POST** /api/v2/conversations/messages/inbound/open | Send an inbound Open Message |
 | [**PostConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#postconversationsmessagingintegrationsfacebook) | **POST** /api/v2/conversations/messaging/integrations/facebook | Create a Facebook Integration |
+| [**PostConversationsMessagingIntegrationsInstagram**](ConversationsApi.html#postconversationsmessagingintegrationsinstagram) | **POST** /api/v2/conversations/messaging/integrations/instagram | Create Instagram Integration |
 | [**PostConversationsMessagingIntegrationsLine**](ConversationsApi.html#postconversationsmessagingintegrationsline) | **POST** /api/v2/conversations/messaging/integrations/line | Create a LINE messenger Integration |
 | [**PostConversationsMessagingIntegrationsOpen**](ConversationsApi.html#postconversationsmessagingintegrationsopen) | **POST** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
 | [**PostConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#postconversationsmessagingintegrationstwitter) | **POST** /api/v2/conversations/messaging/integrations/twitter | Create a Twitter Integration |
@@ -224,8 +235,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 Delete/cancel an async details job
-
-
 
 Requires ANY permissions: 
 
@@ -289,8 +298,6 @@ void (empty response body)
 
 
 Delete a code used to add a communication to this participant
-
-
 
 Requires NO permissions: 
 
@@ -357,8 +364,6 @@ void (empty response body)
 
 Remove flagged reason from conversation participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -421,8 +426,6 @@ void (empty response body)
 
 
 Cancel the transfer
-
-
 
 Requires NO permissions: 
 
@@ -487,8 +490,6 @@ void (empty response body)
 
 Delete attachment from draft
 
-
-
 Requires NO permissions: 
 
 
@@ -552,8 +553,6 @@ void (empty response body)
 
 Delete a Facebook messaging integration
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:delete
@@ -608,6 +607,68 @@ namespace Example
 
 void (empty response body)
 
+<a name="deleteconversationsmessagingintegrationsinstagramintegrationid"></a>
+
+## void DeleteConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId)
+
+
+
+Delete Instagram messaging integration
+
+Requires ALL permissions: 
+
+* messaging:integration:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingIntegrationsInstagramIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Delete Instagram messaging integration
+                apiInstance.DeleteConversationsMessagingIntegrationsInstagramIntegrationId(integrationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsInstagramIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="deleteconversationsmessagingintegrationslineintegrationid"></a>
 
 ## void DeleteConversationsMessagingIntegrationsLineIntegrationId (string integrationId)
@@ -615,8 +676,6 @@ void (empty response body)
 
 
 Delete a LINE messenger integration
-
-
 
 Requires ALL permissions: 
 
@@ -682,8 +741,6 @@ Delete an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:delete
@@ -746,8 +803,6 @@ void (empty response body)
 
 Delete a Twitter messaging integration
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:delete
@@ -809,8 +864,6 @@ void (empty response body)
 
 
 Delete a WhatsApp messaging integration
-
-
 
 Requires ALL permissions: 
 
@@ -875,8 +928,6 @@ namespace Example
 
 Delete a supported content profile
 
-
-
 Requires ALL permissions: 
 
 * messaging:supportedContent:delete
@@ -938,8 +989,6 @@ void (empty response body)
 
 
 Get a conversation by id
-
-
 
 Requires ANY permissions: 
 
@@ -1005,7 +1054,7 @@ namespace Example
 
 Get status for async query for conversation aggregates
 
-
+GetAnalyticsConversationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1070,7 +1119,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsConversationsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1137,8 +1186,6 @@ namespace Example
 
 Gets multiple conversations by id
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -1203,8 +1250,6 @@ namespace Example
 
 Get status for async query for conversation details
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -1268,8 +1313,6 @@ namespace Example
 
 
 Fetch a page of results for an async details job
-
-
 
 Requires ANY permissions: 
 
@@ -1339,8 +1382,6 @@ namespace Example
 
 Lookup the datalake availability date and time
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -1398,8 +1439,6 @@ This endpoint does require any parameters.
 
 
 Get conversation
-
-
 
 Requires ANY permissions: 
 
@@ -1463,8 +1502,6 @@ namespace Example
 
 
 Fetch info on a secure session
-
-
 
 Requires NO permissions: 
 
@@ -1532,8 +1569,6 @@ namespace Example
 
 Get a list of secure sessions for this participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -1597,8 +1632,6 @@ namespace Example
 
 
 Get the wrap-up for this conversation participant. 
-
-
 
 Requires NO permissions: 
 
@@ -1666,8 +1699,6 @@ namespace Example
 
 Get list of wrapup codes for this conversation participant
 
-
-
 Requires NO permissions: 
 
 
@@ -1732,8 +1763,6 @@ namespace Example
 
 Get the secure attributes on a conversation.
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:attributesview
@@ -1797,8 +1826,6 @@ namespace Example
 
 Get active conversations for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -1861,8 +1888,6 @@ namespace Example
 
 Get call conversation
 
-
-
 Requires NO permissions: 
 
 
@@ -1924,8 +1949,6 @@ namespace Example
 
 
 Get the wrap-up for this conversation communication. 
-
-
 
 Requires NO permissions: 
 
@@ -1995,8 +2018,6 @@ namespace Example
 
 Get the wrap-up for this conversation participant. 
 
-
-
 Requires NO permissions: 
 
 
@@ -2063,8 +2084,6 @@ namespace Example
 
 Get list of wrapup codes for this conversation participant
 
-
-
 Requires NO permissions: 
 
 
@@ -2129,8 +2148,6 @@ namespace Example
 
 Get callback conversation
 
-
-
 Requires NO permissions: 
 
 
@@ -2192,8 +2209,6 @@ namespace Example
 
 
 Get the wrap-up for this conversation communication. 
-
-
 
 Requires NO permissions: 
 
@@ -2263,8 +2278,6 @@ namespace Example
 
 Get the wrap-up for this conversation participant. 
 
-
-
 Requires NO permissions: 
 
 
@@ -2331,8 +2344,6 @@ namespace Example
 
 Get list of wrapup codes for this conversation participant
 
-
-
 Requires NO permissions: 
 
 
@@ -2397,8 +2408,6 @@ namespace Example
 
 Get active callback conversations for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -2456,8 +2465,6 @@ This endpoint does require any parameters.
 
 Get active call conversations for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -2514,8 +2521,6 @@ This endpoint does require any parameters.
 
 
 Get call history
-
-
 
 Requires NO permissions: 
 
@@ -2585,8 +2590,6 @@ namespace Example
 
 Get the maximum number of participants that this user can have on a conference
 
-
-
 Requires NO permissions: 
 
 
@@ -2643,8 +2646,6 @@ This endpoint does require any parameters.
 
 
 Get chat conversation
-
-
 
 Requires NO permissions: 
 
@@ -2709,8 +2710,6 @@ namespace Example
 Get a web chat conversation message
 
 The current user must be involved with the conversation to get its messages.
-
-
 
 Requires NO permissions: 
 
@@ -2777,8 +2776,6 @@ namespace Example
 Get the messages of a chat conversation.
 
 The current user must be involved with the conversation to get its messages.
-
-
 
 Requires NO permissions: 
 
@@ -2850,8 +2847,6 @@ namespace Example
 
 Get the wrap-up for this conversation communication. 
 
-
-
 Requires NO permissions: 
 
 
@@ -2920,8 +2915,6 @@ namespace Example
 
 Get the wrap-up for this conversation participant. 
 
-
-
 Requires NO permissions: 
 
 
@@ -2988,8 +2981,6 @@ namespace Example
 
 Get list of wrapup codes for this conversation participant
 
-
-
 Requires NO permissions: 
 
 
@@ -3054,8 +3045,6 @@ namespace Example
 
 Get active chat conversations for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -3112,8 +3101,6 @@ This endpoint does require any parameters.
 
 
 Get cobrowse conversation
-
-
 
 Requires NO permissions: 
 
@@ -3176,8 +3163,6 @@ namespace Example
 
 
 Get the wrap-up for this conversation communication. 
-
-
 
 Requires NO permissions: 
 
@@ -3247,8 +3232,6 @@ namespace Example
 
 Get the wrap-up for this conversation participant. 
 
-
-
 Requires NO permissions: 
 
 
@@ -3315,8 +3298,6 @@ namespace Example
 
 Get list of wrapup codes for this conversation participant
 
-
-
 Requires NO permissions: 
 
 
@@ -3381,8 +3362,6 @@ namespace Example
 
 Get active cobrowse conversations for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -3439,8 +3418,6 @@ This endpoint does require any parameters.
 
 
 Get email conversation
-
-
 
 Requires NO permissions: 
 
@@ -3503,8 +3480,6 @@ namespace Example
 
 
 Get conversation message
-
-
 
 Requires NO permissions: 
 
@@ -3570,8 +3545,6 @@ namespace Example
 
 Get conversation messages
 
-
-
 Requires NO permissions: 
 
 
@@ -3634,8 +3607,6 @@ namespace Example
 
 Get conversation draft reply
 
-
-
 Requires NO permissions: 
 
 
@@ -3697,8 +3668,6 @@ namespace Example
 
 
 Get the wrap-up for this conversation communication. 
-
-
 
 Requires NO permissions: 
 
@@ -3768,8 +3737,6 @@ namespace Example
 
 Get the wrap-up for this conversation participant. 
 
-
-
 Requires NO permissions: 
 
 
@@ -3836,8 +3803,6 @@ namespace Example
 
 Get list of wrapup codes for this conversation participant
 
-
-
 Requires NO permissions: 
 
 
@@ -3902,8 +3867,6 @@ namespace Example
 
 Get emails settings for a given conversation
 
-
-
 Requires NO permissions: 
 
 
@@ -3966,8 +3929,6 @@ namespace Example
 
 Get active email conversations for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -4024,8 +3985,6 @@ This endpoint does require any parameters.
 
 
 Get the encryption key configurations
-
-
 
 Requires ANY permissions: 
 
@@ -4090,8 +4049,6 @@ namespace Example
 
 Get a list of key configurations data
 
-
-
 Requires ANY permissions: 
 
 * conversation:encryptionKey:view
@@ -4149,8 +4106,6 @@ This endpoint does require any parameters.
 
 
 Get message conversation
-
-
 
 Requires NO permissions: 
 
@@ -4215,8 +4170,6 @@ namespace Example
 Get media
 
 See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-
-
 
 Requires ANY permissions: 
 
@@ -4286,8 +4239,6 @@ namespace Example
 
 Get message
 
-
-
 Requires ANY permissions: 
 
 * conversation:message:view
@@ -4353,8 +4304,6 @@ namespace Example
 
 
 Get conversation message
-
-
 
 Requires ANY permissions: 
 
@@ -4424,8 +4373,6 @@ namespace Example
 
 Get the wrap-up for this conversation communication. 
 
-
-
 Requires NO permissions: 
 
 
@@ -4494,8 +4441,6 @@ namespace Example
 
 Get the wrap-up for this conversation participant. 
 
-
-
 Requires NO permissions: 
 
 
@@ -4562,8 +4507,6 @@ namespace Example
 
 Get list of wrapup codes for this conversation participant
 
-
-
 Requires NO permissions: 
 
 
@@ -4628,8 +4571,6 @@ namespace Example
 
 Get active message conversations for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -4686,8 +4627,6 @@ This endpoint does require any parameters.
 
 
 Get Genesys Facebook App Id
-
-
 
 Requires ALL permissions: 
 
@@ -4746,8 +4685,6 @@ This endpoint does require any parameters.
 
 
 Get a list of Integrations
-
-
 
 Requires ALL permissions: 
 
@@ -4820,8 +4757,6 @@ namespace Example
 
 Get a list of Facebook Integrations
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -4893,8 +4828,6 @@ namespace Example
 
 Get a Facebook messaging integration
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -4952,6 +4885,142 @@ namespace Example
 
 [**FacebookIntegration**](FacebookIntegration.html)
 
+<a name="getconversationsmessagingintegrationsinstagram"></a>
+
+## [**InstagramIntegrationEntityListing**](InstagramIntegrationEntityListing.html) GetConversationsMessagingIntegrationsInstagram (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+
+
+
+Get a list of Instagram Integrations
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsInstagramExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
+
+            try
+            { 
+                // Get a list of Instagram Integrations
+                InstagramIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsInstagram(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsInstagram: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InstagramIntegrationEntityListing**](InstagramIntegrationEntityListing.html)
+
+<a name="getconversationsmessagingintegrationsinstagramintegrationid"></a>
+
+## [**InstagramIntegration**](InstagramIntegration.html) GetConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId, string expand = null)
+
+
+
+Get Instagram messaging integration
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsInstagramIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+
+            try
+            { 
+                // Get Instagram messaging integration
+                InstagramIntegration result = apiInstance.GetConversationsMessagingIntegrationsInstagramIntegrationId(integrationId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsInstagramIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
+{: class="table table-striped"}
+
+### Return type
+
+[**InstagramIntegration**](InstagramIntegration.html)
+
 <a name="getconversationsmessagingintegrationsline"></a>
 
 ## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
@@ -4959,8 +5028,6 @@ namespace Example
 
 
 Get a list of LINE messenger Integrations
-
-
 
 Requires ALL permissions: 
 
@@ -5033,8 +5100,6 @@ namespace Example
 
 Get a LINE messenger integration
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -5101,8 +5166,6 @@ namespace Example
 Get a list of Open messaging integrations
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
-
-
 
 Requires ALL permissions: 
 
@@ -5177,8 +5240,6 @@ Get an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -5243,8 +5304,6 @@ namespace Example
 
 
 Get a list of Twitter Integrations
-
-
 
 Requires ALL permissions: 
 
@@ -5317,8 +5376,6 @@ namespace Example
 
 Get a Twitter messaging integration
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -5383,8 +5440,6 @@ namespace Example
 
 
 Get a list of WhatsApp Integrations
-
-
 
 Requires ALL permissions: 
 
@@ -5457,8 +5512,6 @@ namespace Example
 
 Get a WhatsApp messaging integration
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -5523,8 +5576,6 @@ namespace Example
 
 
 Get a list of Messaging Stickers
-
-
 
 Requires ALL permissions: 
 
@@ -5593,8 +5644,6 @@ namespace Example
 
 Get a list of Supported Content profiles
 
-
-
 Requires ALL permissions: 
 
 * messaging:supportedContent:view
@@ -5662,8 +5711,6 @@ Get the organization's default supported content profile that will be used as th
 
 When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
 
-
-
 Requires ALL permissions: 
 
 * messaging:supportedContent:view
@@ -5721,8 +5768,6 @@ This endpoint does require any parameters.
 
 
 Get a supported content profile
-
-
 
 Requires ALL permissions: 
 
@@ -5789,8 +5834,6 @@ Get conversation threading window timeline for each messaging type
 
 Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
 
-
-
 Requires ALL permissions: 
 
 * conversation:threadingTimeline:view
@@ -5848,8 +5891,6 @@ This endpoint does require any parameters.
 
 
 Get the wrap-up for this conversation communication. 
-
-
 
 Requires NO permissions: 
 
@@ -5919,8 +5960,6 @@ namespace Example
 
 Get Settings
 
-
-
 Requires ANY permissions: 
 
 * conversation:settings:view
@@ -5978,8 +6017,6 @@ This endpoint does require any parameters.
 
 
 Get the wrap-up for this conversation communication. 
-
-
 
 Requires NO permissions: 
 
@@ -6049,7 +6086,7 @@ namespace Example
 
 Get video conference details (e.g. the current number of active participants).
 
-
+GetConversationsVideoDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6113,8 +6150,6 @@ namespace Example
 
 
 Get the wrap-up for this conversation communication. 
-
-
 
 Requires NO permissions: 
 
@@ -6186,8 +6221,6 @@ Update a participant.
 
 Update conversation participant.
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
@@ -6254,8 +6287,6 @@ void (empty response body)
 
 Update the attributes on a conversation participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -6321,8 +6352,6 @@ void (empty response body)
 
 Update the secure attributes on a conversation.
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:attributesedit
@@ -6387,8 +6416,6 @@ namespace Example
 
 
 Update after-call work for this conversation communication.
-
-
 
 Requires ANY permissions: 
 
@@ -6459,8 +6486,6 @@ namespace Example
 
 Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
 
-
-
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
@@ -6525,8 +6550,6 @@ namespace Example
 
 
 Update conversation participant
-
-
 
 Requires ANY permissions: 
 
@@ -6594,8 +6617,6 @@ void (empty response body)
 
 Update the attributes on a conversation participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -6660,8 +6681,6 @@ void (empty response body)
 
 
 Update conversation participant's communication by disconnecting it.
-
-
 
 Requires NO permissions: 
 
@@ -6731,8 +6750,6 @@ namespace Example
 
 Change who can speak
 
-
-
 Requires NO permissions: 
 
 
@@ -6799,8 +6816,6 @@ namespace Example
 
 Update a conversation by disconnecting all of the participants
 
-
-
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
@@ -6865,8 +6880,6 @@ namespace Example
 
 
 Update conversation participant
-
-
 
 Requires ANY permissions: 
 
@@ -6934,8 +6947,6 @@ void (empty response body)
 
 Update the attributes on a conversation participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -7000,8 +7011,6 @@ void (empty response body)
 
 
 Update conversation participant's communication by disconnecting it.
-
-
 
 Requires NO permissions: 
 
@@ -7071,8 +7080,6 @@ namespace Example
 
 Update a scheduled callback
 
-
-
 Requires ANY permissions: 
 
 * conversation:callback:edit
@@ -7135,8 +7142,6 @@ namespace Example
 
 
 Update a conversation by disconnecting all of the participants
-
-
 
 Requires ANY permissions: 
 
@@ -7202,8 +7207,6 @@ namespace Example
 
 
 Update conversation participant
-
-
 
 Requires ANY permissions: 
 
@@ -7271,8 +7274,6 @@ void (empty response body)
 
 Update the attributes on a conversation participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -7337,8 +7338,6 @@ void (empty response body)
 
 
 Update conversation participant's communication by disconnecting it.
-
-
 
 Requires NO permissions: 
 
@@ -7408,8 +7407,6 @@ namespace Example
 
 Update a conversation by disconnecting all of the participants
 
-
-
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
@@ -7474,8 +7471,6 @@ namespace Example
 
 
 Update conversation participant
-
-
 
 Requires ANY permissions: 
 
@@ -7543,8 +7538,6 @@ void (empty response body)
 
 Update the attributes on a conversation participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -7609,8 +7602,6 @@ void (empty response body)
 
 
 Update conversation participant's communication by disconnecting it.
-
-
 
 Requires NO permissions: 
 
@@ -7680,8 +7671,6 @@ namespace Example
 
 Update a conversation by disconnecting all of the participants
 
-
-
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
@@ -7746,8 +7735,6 @@ namespace Example
 
 
 Reset conversation draft to its initial state and/or auto-fill draft content
-
-
 
 Requires NO permissions: 
 
@@ -7817,8 +7804,6 @@ namespace Example
 
 Update conversation participant
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
@@ -7885,8 +7870,6 @@ void (empty response body)
 
 Update the attributes on a conversation participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -7951,8 +7934,6 @@ void (empty response body)
 
 
 Update conversation participant's communication by disconnecting it.
-
-
 
 Requires NO permissions: 
 
@@ -8022,8 +8003,6 @@ namespace Example
 
 Update a conversation by disconnecting all of the participants
 
-
-
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
@@ -8088,8 +8067,6 @@ namespace Example
 
 
 Update conversation participant
-
-
 
 Requires ANY permissions: 
 
@@ -8157,8 +8134,6 @@ void (empty response body)
 
 Update the attributes on a conversation participant.
 
-
-
 Requires NO permissions: 
 
 
@@ -8223,8 +8198,6 @@ void (empty response body)
 
 
 Update conversation participant's communication by disconnecting it.
-
-
 
 Requires NO permissions: 
 
@@ -8294,8 +8267,6 @@ namespace Example
 
 Update Facebook messaging integration
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:edit
@@ -8353,6 +8324,71 @@ namespace Example
 
 [**FacebookIntegration**](FacebookIntegration.html)
 
+<a name="patchconversationsmessagingintegrationsinstagramintegrationid"></a>
+
+## [**InstagramIntegration**](InstagramIntegration.html) PatchConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId, InstagramIntegrationUpdateRequest body)
+
+
+
+Update Instagram messaging integration
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessagingIntegrationsInstagramIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new InstagramIntegrationUpdateRequest(); // InstagramIntegrationUpdateRequest | InstagramIntegrationUpdateRequest
+
+            try
+            { 
+                // Update Instagram messaging integration
+                InstagramIntegration result = apiInstance.PatchConversationsMessagingIntegrationsInstagramIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessagingIntegrationsInstagramIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**InstagramIntegrationUpdateRequest**](InstagramIntegrationUpdateRequest.html)| InstagramIntegrationUpdateRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InstagramIntegration**](InstagramIntegration.html)
+
 <a name="patchconversationsmessagingintegrationsopenintegrationid"></a>
 
 ## [**OpenIntegration**](OpenIntegration.html) PatchConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, OpenIntegrationUpdateRequest body)
@@ -8362,8 +8398,6 @@ namespace Example
 Update an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
-
-
 
 Requires ALL permissions: 
 
@@ -8429,8 +8463,6 @@ namespace Example
 
 
 Update Twitter messaging integration
-
-
 
 Requires ALL permissions: 
 
@@ -8499,8 +8531,6 @@ Update or activate a WhatsApp messaging integration
 
 The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:edit
@@ -8565,8 +8595,6 @@ namespace Example
 
 
 Update a supported content profile
-
-
 
 Requires ALL permissions: 
 
@@ -8633,8 +8661,6 @@ namespace Example
 
 Update Settings
 
-
-
 Requires ANY permissions: 
 
 * conversation:settings:edit
@@ -8696,8 +8722,6 @@ void (empty response body)
 
 
 Index conversation properties
-
-
 
 Requires ANY permissions: 
 
@@ -8764,7 +8788,7 @@ namespace Example
 
 Query for conversation activity observations
 
-
+PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -8833,7 +8857,7 @@ namespace Example
 
 Query for conversation aggregates asynchronously
 
-
+PostAnalyticsConversationsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -8898,8 +8922,6 @@ namespace Example
 
 Query for conversation aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationAggregate:view
@@ -8962,8 +8984,6 @@ namespace Example
 
 
 Query for conversation details asynchronously
-
-
 
 Requires ANY permissions: 
 
@@ -9029,8 +9049,6 @@ namespace Example
 
 Query for conversation details
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -9094,8 +9112,6 @@ namespace Example
 
 
 Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.
-
-
 
 Requires ANY permissions: 
 
@@ -9171,8 +9187,6 @@ namespace Example
 
 Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
 
-
-
 Requires ANY permissions: 
 
 * conversation:cobrowse:add
@@ -9237,8 +9251,6 @@ namespace Example
 
 Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation.
 
-
-
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
@@ -9301,8 +9313,6 @@ namespace Example
 
 
 Create a new callback for the specified participant on the conversation.
-
-
 
 Requires ALL permissions: 
 
@@ -9370,8 +9380,6 @@ void (empty response body)
 
 Sends DTMF to the participant
 
-
-
 Requires NO permissions: 
 
 
@@ -9433,14 +9441,13 @@ void (empty response body)
 
 ## void PostConversationParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Replace this participant with the specified user and/or address
 
+Requires ANY permissions: 
 
-
-Requires NO permissions: 
-
+* conversation:communication:blindTransfer
 
 ### Example
 ```{"language":"csharp"}
@@ -9496,6 +9503,207 @@ namespace Example
 
 void (empty response body)
 
+<a name="postconversationparticipantreplaceagent"></a>
+
+## void PostConversationParticipantReplaceAgent (string conversationId, string participantId, TransferToAgentRequest body)
+
+
+
+Replace this participant with the specified agent
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferAgent
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationParticipantReplaceAgentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var participantId = participantId_example;  // string | participant ID
+            var body = new TransferToAgentRequest(); // TransferToAgentRequest | Transfer request
+
+            try
+            { 
+                // Replace this participant with the specified agent
+                apiInstance.PostConversationParticipantReplaceAgent(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantReplaceAgent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **body** | [**TransferToAgentRequest**](TransferToAgentRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postconversationparticipantreplaceexternal"></a>
+
+## void PostConversationParticipantReplaceExternal (string conversationId, string participantId, TransferToExternalRequest body)
+
+
+
+Replace this participant with the an external contact
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferExternal
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationParticipantReplaceExternalExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var participantId = participantId_example;  // string | participant ID
+            var body = new TransferToExternalRequest(); // TransferToExternalRequest | Transfer request
+
+            try
+            { 
+                // Replace this participant with the an external contact
+                apiInstance.PostConversationParticipantReplaceExternal(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantReplaceExternal: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **body** | [**TransferToExternalRequest**](TransferToExternalRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postconversationparticipantreplacequeue"></a>
+
+## void PostConversationParticipantReplaceQueue (string conversationId, string participantId, TransferToQueueRequest body)
+
+
+
+Replace this participant with the specified queue
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferQueue
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationParticipantReplaceQueueExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var participantId = participantId_example;  // string | participant ID
+            var body = new TransferToQueueRequest(); // TransferToQueueRequest | Transfer request
+
+            try
+            { 
+                // Replace this participant with the specified queue
+                apiInstance.PostConversationParticipantReplaceQueue(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantReplaceQueue: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **body** | [**TransferToQueueRequest**](TransferToQueueRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postconversationparticipantsecureivrsessions"></a>
 
 ## [**SecureSession**](SecureSession.html) PostConversationParticipantSecureivrsessions (string conversationId, string participantId, CreateSecureSession body = null)
@@ -9503,8 +9711,6 @@ void (empty response body)
 
 
 Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
-
-
 
 Requires NO permissions: 
 
@@ -9572,8 +9778,6 @@ namespace Example
 
 Place a new call as part of a callback conversation.
 
-
-
 Requires NO permissions: 
 
 
@@ -9637,8 +9841,6 @@ namespace Example
 
 
 Listen in on the conversation from the point of view of a given participant while speaking to just the given participant.
-
-
 
 Requires ANY permissions: 
 
@@ -9704,8 +9906,6 @@ void (empty response body)
 
 Apply wrap-up for this conversation communication
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
@@ -9770,14 +9970,13 @@ void (empty response body)
 
 ## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransfer body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Initiate and update consult transfer
 
+Requires ANY permissions: 
 
-
-Requires NO permissions: 
-
+* conversation:communication:consultTransfer
 
 ### Example
 ```{"language":"csharp"}
@@ -9834,6 +10033,210 @@ namespace Example
 
 [**ConsultTransferResponse**](ConsultTransferResponse.html)
 
+<a name="postconversationscallparticipantconsultagent"></a>
+
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsultAgent (string conversationId, string participantId, ConsultTransferToAgent body)
+
+
+
+Initiate a consult transfer to an agent
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferAgent
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantConsultAgentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ConsultTransferToAgent(); // ConsultTransferToAgent | Destination agent & initial speak to
+
+            try
+            { 
+                // Initiate a consult transfer to an agent
+                ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsultAgent(conversationId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantConsultAgent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ConsultTransferToAgent**](ConsultTransferToAgent.html)| Destination agent &amp; initial speak to |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postconversationscallparticipantconsultexternal"></a>
+
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsultExternal (string conversationId, string participantId, ConsultTransferToExternal body)
+
+
+
+Initiate a consult transfer to an external contact
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferExternal
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantConsultExternalExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ConsultTransferToExternal(); // ConsultTransferToExternal | Destination address & initial speak to
+
+            try
+            { 
+                // Initiate a consult transfer to an external contact
+                ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsultExternal(conversationId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantConsultExternal: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ConsultTransferToExternal**](ConsultTransferToExternal.html)| Destination address &amp; initial speak to |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postconversationscallparticipantconsultqueue"></a>
+
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsultQueue (string conversationId, string participantId, ConsultTransferToQueue body)
+
+
+
+Initiate a consult transfer to a queue
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferQueue
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantConsultQueueExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ConsultTransferToQueue(); // ConsultTransferToQueue | Destination queue & initial speak to
+
+            try
+            { 
+                // Initiate a consult transfer to a queue
+                ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsultQueue(conversationId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantConsultQueue: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ConsultTransferToQueue**](ConsultTransferToQueue.html)| Destination queue &amp; initial speak to |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
 <a name="postconversationscallparticipantmonitor"></a>
 
 ## void PostConversationsCallParticipantMonitor (string conversationId, string participantId)
@@ -9841,8 +10244,6 @@ namespace Example
 
 
 Listen in on the conversation from the point of view of a given participant.
-
-
 
 Requires ANY permissions: 
 
@@ -9904,14 +10305,13 @@ void (empty response body)
 
 ## void PostConversationsCallParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Replace this participant with the specified user and/or address
 
+Requires ANY permissions: 
 
-
-Requires NO permissions: 
-
+* conversation:communication:blindTransfer
 
 ### Example
 ```{"language":"csharp"}
@@ -9974,8 +10374,6 @@ void (empty response body)
 
 
 Add participants to a conversation
-
-
 
 Requires NO permissions: 
 
@@ -10041,8 +10439,6 @@ namespace Example
 
 Apply wrap-up for this conversation communication
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
@@ -10107,14 +10503,13 @@ void (empty response body)
 
 ## void PostConversationsCallbackParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Replace this participant with the specified user and/or address
 
+Requires ANY permissions: 
 
-
-Requires NO permissions: 
-
+* conversation:communication:blindTransfer
 
 ### Example
 ```{"language":"csharp"}
@@ -10177,8 +10572,6 @@ void (empty response body)
 
 
 Create a Callback
-
-
 
 Requires ALL permissions: 
 
@@ -10243,8 +10636,6 @@ namespace Example
 
 Disconnect multiple scheduled callbacks
 
-
-
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
@@ -10306,8 +10697,6 @@ void (empty response body)
 
 
 Update multiple scheduled callbacks
-
-
 
 Requires ANY permissions: 
 
@@ -10372,8 +10761,6 @@ namespace Example
 
 Create a call conversation
 
-
-
 Requires ANY permissions: 
 
 * conversation:conference:add
@@ -10436,8 +10823,6 @@ namespace Example
 
 
 Send a message on behalf of a communication in a chat conversation.
-
-
 
 Requires NO permissions: 
 
@@ -10505,8 +10890,6 @@ namespace Example
 
 Send a typing-indicator on behalf of a communication in a chat conversation.
 
-
-
 Requires NO permissions: 
 
 
@@ -10570,8 +10953,6 @@ namespace Example
 
 
 Apply wrap-up for this conversation communication
-
-
 
 Requires ANY permissions: 
 
@@ -10637,14 +11018,13 @@ void (empty response body)
 
 ## void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Replace this participant with the specified user and/or address
 
+Requires ANY permissions: 
 
-
-Requires NO permissions: 
-
+* conversation:communication:blindTransfer
 
 ### Example
 ```{"language":"csharp"}
@@ -10708,8 +11088,6 @@ void (empty response body)
 
 Create a web chat conversation
 
-
-
 Requires ALL permissions: 
 
 * conversation:webchat:create
@@ -10772,8 +11150,6 @@ namespace Example
 
 
 Apply wrap-up for this conversation communication
-
-
 
 Requires ANY permissions: 
 
@@ -10839,14 +11215,13 @@ void (empty response body)
 
 ## void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Replace this participant with the specified user and/or address
 
+Requires ANY permissions: 
 
-
-Requires NO permissions: 
-
+* conversation:communication:blindTransfer
 
 ### Example
 ```{"language":"csharp"}
@@ -10909,8 +11284,6 @@ void (empty response body)
 
 
 Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
-
-
 
 Requires NO permissions: 
 
@@ -10976,8 +11349,6 @@ namespace Example
 
 Send an email reply
 
-
-
 Requires NO permissions: 
 
 
@@ -11041,8 +11412,6 @@ namespace Example
 
 
 Copy attachments from an email message to the current draft.
-
-
 
 Requires NO permissions: 
 
@@ -11108,8 +11477,6 @@ namespace Example
 
 Apply wrap-up for this conversation communication
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
@@ -11174,14 +11541,13 @@ void (empty response body)
 
 ## void PostConversationsEmailParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Replace this participant with the specified user and/or address
 
+Requires ANY permissions: 
 
-
-Requires NO permissions: 
-
+* conversation:communication:blindTransfer
 
 ### Example
 ```{"language":"csharp"}
@@ -11247,8 +11613,6 @@ Create an email conversation
 
 If the direction of the request is INBOUND, this will create an external conversation with a third party provider. If the direction of the the request is OUTBOUND, this will create a conversation to send outbound emails on behalf of a queue.
 
-
-
 Requires ANY permissions: 
 
 * conversation:email:create
@@ -11311,8 +11675,6 @@ namespace Example
 
 
 Create an email conversation, per API
-
-
 
 Requires ANY permissions: 
 
@@ -11378,8 +11740,6 @@ namespace Example
 
 Create Fax Conversation
 
-
-
 Requires NO permissions: 
 
 
@@ -11441,8 +11801,6 @@ namespace Example
 
 
 Setup configurations for encryption key creation
-
-
 
 Requires ANY permissions: 
 
@@ -11506,8 +11864,6 @@ namespace Example
 
 
 Validate encryption key configurations without saving it
-
-
 
 Requires ANY permissions: 
 
@@ -11573,8 +11929,6 @@ namespace Example
 Send message
 
 Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
-
-
 
 Requires ANY permissions: 
 
@@ -11648,8 +12002,6 @@ Create media
 
 See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
 
-
-
 Requires ANY permissions: 
 
 * conversation:message:create
@@ -11717,8 +12069,6 @@ namespace Example
 Send message typing event
 
 Send message typing event for existing conversation/communication.
-
-
 
 Requires ANY permissions: 
 
@@ -11789,8 +12139,6 @@ Get messages in batch
 
 The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\"a3069a33b-bbb1-4703-9d68-061d9e9db96e\", \"55bc6be3-078c-4a49-a4e6-1e05776ed7e8\"]
 
-
-
 Requires ANY permissions: 
 
 * conversation:message:view
@@ -11858,8 +12206,6 @@ namespace Example
 
 
 Apply wrap-up for this conversation communication
-
-
 
 Requires ANY permissions: 
 
@@ -11929,7 +12275,7 @@ void (empty response body)
 
 Listen in on the conversation from the point of view of a given participant.
 
-
+PostConversationsMessageParticipantMonitor is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -11991,14 +12337,13 @@ void (empty response body)
 
 ## void PostConversationsMessageParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Replace this participant with the specified user and/or address
 
+Requires ANY permissions: 
 
-
-Requires NO permissions: 
-
+* conversation:communication:blindTransfer
 
 ### Example
 ```{"language":"csharp"}
@@ -12063,8 +12408,6 @@ void (empty response body)
 Create an outbound messaging conversation.
 
 If there is an existing conversation between the remote address and the address associated with the queue specified in createOutboundRequest then the result of this request depends on the state of that conversation and the useExistingConversation field of createOutboundRequest. If the existing conversation is in alerting or connected state, then the request will fail. If the existing conversation is disconnected but still within the conversation window then the request will fail unless useExistingConversation is set to true.
-
-
 
 Requires ALL permissions: 
 
@@ -12131,8 +12474,6 @@ Send an agentless outbound message
 
 Send an agentless (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. If there is already a connected conversation between the 'fromAddress' and 'toAddress' specified, the 'useExistingActiveConversation' param can be used to barge in to the ongoing conversation.
 
-
-
 Requires ALL permissions: 
 
 * conversation:message:create
@@ -12198,8 +12539,6 @@ Send an inbound Open Message
 
 Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 
-
-
 Requires ALL permissions: 
 
 * conversation:message:receive
@@ -12263,8 +12602,6 @@ namespace Example
 
 Create a Facebook Integration
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:add
@@ -12320,6 +12657,69 @@ namespace Example
 
 [**FacebookIntegration**](FacebookIntegration.html)
 
+<a name="postconversationsmessagingintegrationsinstagram"></a>
+
+## [**InstagramIntegration**](InstagramIntegration.html) PostConversationsMessagingIntegrationsInstagram (InstagramIntegrationRequest body)
+
+
+
+Create Instagram Integration
+
+Requires ALL permissions: 
+
+* messaging:conversationInstagramIntegration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingIntegrationsInstagramExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new InstagramIntegrationRequest(); // InstagramIntegrationRequest | InstagramIntegrationRequest
+
+            try
+            { 
+                // Create Instagram Integration
+                InstagramIntegration result = apiInstance.PostConversationsMessagingIntegrationsInstagram(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingIntegrationsInstagram: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**InstagramIntegrationRequest**](InstagramIntegrationRequest.html)| InstagramIntegrationRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InstagramIntegration**](InstagramIntegration.html)
+
 <a name="postconversationsmessagingintegrationsline"></a>
 
 ## [**LineIntegration**](LineIntegration.html) PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body)
@@ -12327,8 +12727,6 @@ namespace Example
 
 
 Create a LINE messenger Integration
-
-
 
 Requires ALL permissions: 
 
@@ -12395,8 +12793,6 @@ Create an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
-
-
 Requires ALL permissions: 
 
 * messaging:integration:add
@@ -12459,8 +12855,6 @@ namespace Example
 
 
 Create a Twitter Integration
-
-
 
 Requires ALL permissions: 
 
@@ -12527,8 +12921,6 @@ Create a WhatsApp Integration
 
 You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 
-
-
 Requires ALL permissions: 
 
 * messaging:whatsappIntegration:add
@@ -12591,8 +12983,6 @@ namespace Example
 
 
 Create a Supported Content profile
-
-
 
 Requires ANY permissions: 
 
@@ -12657,8 +13047,6 @@ namespace Example
 
 Search conversations
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:attributesview
@@ -12721,8 +13109,6 @@ namespace Example
 
 
 Apply wrap-up for this conversation communication
-
-
 
 Requires ANY permissions: 
 
@@ -12792,8 +13178,6 @@ void (empty response body)
 
 Apply wrap-up for this conversation communication
 
-
-
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
@@ -12861,8 +13245,6 @@ void (empty response body)
 
 
 Apply wrap-up for this conversation communication
-
-
 
 Requires ANY permissions: 
 
@@ -12932,8 +13314,6 @@ void (empty response body)
 
 Set flagged reason on conversation participant to indicate bad conversation quality.
 
-
-
 Requires NO permissions: 
 
 
@@ -12996,8 +13376,6 @@ void (empty response body)
 
 
 Set the secure attributes on a conversation.
-
-
 
 Requires ANY permissions: 
 
@@ -13064,8 +13442,6 @@ namespace Example
 
 Update the tags on a conversation.
 
-
-
 Requires ANY permissions: 
 
 * conversation:externalTag:edit
@@ -13130,8 +13506,6 @@ namespace Example
 
 
 Set uuiData to be sent on future commands.
-
-
 
 Requires NO permissions: 
 
@@ -13201,8 +13575,6 @@ namespace Example
 
 Update a conversation by setting its recording state
 
-
-
 Requires ANY permissions: 
 
 * conversation:recording:pauseOthers
@@ -13267,8 +13639,6 @@ namespace Example
 
 
 Update a conversation by setting its recording state
-
-
 
 Requires ANY permissions: 
 
@@ -13335,8 +13705,6 @@ namespace Example
 
 Update a conversation by setting its recording state
 
-
-
 Requires ANY permissions: 
 
 * conversation:recording:pauseOthers
@@ -13401,8 +13769,6 @@ namespace Example
 
 
 Update a conversation by setting its recording state
-
-
 
 Requires ANY permissions: 
 
@@ -13469,8 +13835,6 @@ namespace Example
 
 Update conversation draft reply
 
-
-
 Requires NO permissions: 
 
 
@@ -13534,8 +13898,6 @@ namespace Example
 
 
 Update a conversation by setting its recording state
-
-
 
 Requires ANY permissions: 
 
@@ -13602,8 +13964,6 @@ namespace Example
 
 Update the encryption key configurations
 
-
-
 Requires ANY permissions: 
 
 * conversation:encryptionKey:edit
@@ -13669,8 +14029,6 @@ namespace Example
 
 Update a conversation by setting its recording state
 
-
-
 Requires ANY permissions: 
 
 * conversation:recording:pauseOthers
@@ -13735,8 +14093,6 @@ namespace Example
 
 
 Update a LINE messenger integration
-
-
 
 Requires ALL permissions: 
 
@@ -13805,8 +14161,6 @@ Set the organization's default supported content profile that may be assigned to
 
 When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
 
-
-
 Requires ALL permissions: 
 
 * messaging:supportedContent:edit
@@ -13872,8 +14226,6 @@ Update conversation threading window timeline for each messaging type
 
 PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
 
-
-
 Requires ALL permissions: 
 
 * conversation:threadingTimeline:edit
@@ -13936,8 +14288,6 @@ namespace Example
 
 
 Update a conversation by setting its recording state
-
-
 
 Requires ANY permissions: 
 
@@ -14004,8 +14354,6 @@ namespace Example
 
 Update a conversation by setting its recording state
 
-
-
 Requires ANY permissions: 
 
 * conversation:recording:pauseOthers
@@ -14070,8 +14418,6 @@ namespace Example
 
 
 Update a conversation by setting its recording state
-
-
 
 Requires ANY permissions: 
 

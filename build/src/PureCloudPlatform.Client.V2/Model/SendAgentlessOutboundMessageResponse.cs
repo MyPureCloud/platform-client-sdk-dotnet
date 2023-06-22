@@ -67,8 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TextBody">The body of the text message..</param>
         /// <param name="MessagingTemplate">The messaging template sent.</param>
         /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false.</param>
+        /// <param name="Message">Sent agentless outbound message in normalized format.</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null, DateTime? Timestamp = null)
+        public SendAgentlessOutboundMessageResponse(string ConversationId = null, string FromAddress = null, string ToAddress = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, MessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null, MessageData Message = null, DateTime? Timestamp = null)
         {
             this.ConversationId = ConversationId;
             this.FromAddress = FromAddress;
@@ -77,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TextBody = TextBody;
             this.MessagingTemplate = MessagingTemplate;
             this.UseExistingActiveConversation = UseExistingActiveConversation;
+            this.Message = Message;
             this.Timestamp = Timestamp;
             
         }
@@ -149,6 +151,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Sent agentless outbound message in normalized format
+        /// </summary>
+        /// <value>Sent agentless outbound message in normalized format</value>
+        [DataMember(Name="message", EmitDefaultValue=false)]
+        public MessageData Message { get; set; }
+
+
+
+        /// <summary>
         /// The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -191,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
             sb.Append("  UseExistingActiveConversation: ").Append(UseExistingActiveConversation).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -275,6 +287,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UseExistingActiveConversation.Equals(other.UseExistingActiveConversation)
                 ) &&
                 (
+                    this.Message == other.Message ||
+                    this.Message != null &&
+                    this.Message.Equals(other.Message)
+                ) &&
+                (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
@@ -325,6 +342,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UseExistingActiveConversation != null)
                     hash = hash * 59 + this.UseExistingActiveConversation.GetHashCode();
+
+                if (this.Message != null)
+                    hash = hash * 59 + this.Message.GetHashCode();
 
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();

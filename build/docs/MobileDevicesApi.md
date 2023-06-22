@@ -22,8 +22,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete device
 
-
-
 Requires NO permissions: 
 
 
@@ -84,8 +82,6 @@ void (empty response body)
 
 
 Get device
-
-
 
 Requires NO permissions: 
 
@@ -148,8 +144,6 @@ namespace Example
 
 
 Get a list of all devices.
-
-
 
 Requires NO permissions: 
 
@@ -217,8 +211,6 @@ namespace Example
 
 Create User device
 
-
-
 Requires NO permissions: 
 
 
@@ -280,8 +272,6 @@ namespace Example
 
 
 Update device
-
-
 
 Requires NO permissions: 
 

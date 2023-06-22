@@ -21,8 +21,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Search using the q64 value returned from a previous search.
 
-
-
 Requires ANY permissions: 
 
 * directory:user:view
@@ -89,8 +87,6 @@ namespace Example
 
 
 Suggest resources using the q64 value returned from a previous suggest query.
-
-
 
 Requires ANY permissions: 
 
@@ -159,8 +155,6 @@ namespace Example
 
 Search resources.
 
-
-
 Requires ANY permissions: 
 
 * directory:user:view
@@ -225,8 +219,6 @@ namespace Example
 
 
 Suggest resources.
-
-
 
 Requires ANY permissions: 
 

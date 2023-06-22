@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="triggerId">triggerId</param>
         /// <returns></returns>
         
-        
         void DeleteProcessautomationTrigger (string triggerId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteProcessautomationTriggerWithHttpInfo (string triggerId);
 
@@ -52,7 +50,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="triggerId">triggerId</param>
         /// <returns>Trigger</returns>
         
-        
         Trigger GetProcessautomationTrigger (string triggerId);
 
         /// <summary>
@@ -64,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>ApiResponse of Trigger</returns>
-        
         
         ApiResponse<Trigger> GetProcessautomationTriggerWithHttpInfo (string triggerId);
 
@@ -83,7 +79,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>TriggerEntityListing</returns>
         
-        
         TriggerEntityListing GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null);
 
         /// <summary>
@@ -101,7 +96,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>ApiResponse of TriggerEntityListing</returns>
         
-        
         ApiResponse<TriggerEntityListing> GetProcessautomationTriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null);
 
         /// <summary>
@@ -115,7 +109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>TopicCursorEntityListing</returns>
-        
         
         TopicCursorEntityListing GetProcessautomationTriggersTopics (string before = null, string after = null, string pageSize = null);
 
@@ -131,7 +124,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>ApiResponse of TopicCursorEntityListing</returns>
         
-        
         ApiResponse<TopicCursorEntityListing> GetProcessautomationTriggersTopicsWithHttpInfo (string before = null, string after = null, string pageSize = null);
 
         /// <summary>
@@ -144,7 +136,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>TestModeResults</returns>
-        
         
         TestModeResults PostProcessautomationTriggerTest (string triggerId, string body = null);
 
@@ -159,7 +150,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">eventBody (optional)</param>
         /// <returns>ApiResponse of TestModeResults</returns>
         
-        
         ApiResponse<TestModeResults> PostProcessautomationTriggerTestWithHttpInfo (string triggerId, string body = null);
 
         /// <summary>
@@ -172,7 +162,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to create a Trigger.</param>
         /// <returns>Trigger</returns>
         
-        
         Trigger PostProcessautomationTriggers (CreateTriggerRequest body);
 
         /// <summary>
@@ -184,7 +173,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create a Trigger.</param>
         /// <returns>ApiResponse of Trigger</returns>
-        
         
         ApiResponse<Trigger> PostProcessautomationTriggersWithHttpInfo (CreateTriggerRequest body);
 
@@ -199,7 +187,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">eventBody (optional)</param>
         /// <returns>TestModeEventResults</returns>
         
-        
         TestModeEventResults PostProcessautomationTriggersTopicTest (string topicName, string body = null);
 
         /// <summary>
@@ -212,7 +199,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicName">topicName</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>ApiResponse of TestModeEventResults</returns>
-        
         
         ApiResponse<TestModeEventResults> PostProcessautomationTriggersTopicTestWithHttpInfo (string topicName, string body = null);
 
@@ -227,7 +213,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input to update Trigger. (topicName cannot be updated, a new trigger must be created to use a new topicName)</param>
         /// <returns>Trigger</returns>
         
-        
         Trigger PutProcessautomationTrigger (string triggerId, UpdateTriggerRequest body);
 
         /// <summary>
@@ -240,7 +225,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">Input to update Trigger. (topicName cannot be updated, a new trigger must be created to use a new topicName)</param>
         /// <returns>ApiResponse of Trigger</returns>
-        
         
         ApiResponse<Trigger> PutProcessautomationTriggerWithHttpInfo (string triggerId, UpdateTriggerRequest body);
 
@@ -258,7 +242,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="triggerId">triggerId</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteProcessautomationTriggerAsync (string triggerId);
 
         /// <summary>
@@ -270,7 +253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProcessautomationTriggerAsyncWithHttpInfo (string triggerId);
 
@@ -284,7 +266,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="triggerId">triggerId</param>
         /// <returns>Task of Trigger</returns>
         
-        
         System.Threading.Tasks.Task<Trigger> GetProcessautomationTriggerAsync (string triggerId);
 
         /// <summary>
@@ -296,7 +277,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>Task of ApiResponse (Trigger)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Trigger>> GetProcessautomationTriggerAsyncWithHttpInfo (string triggerId);
 
@@ -315,7 +295,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>Task of TriggerEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<TriggerEntityListing> GetProcessautomationTriggersAsync (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null);
 
         /// <summary>
@@ -333,7 +312,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>Task of ApiResponse (TriggerEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null);
 
         /// <summary>
@@ -347,7 +325,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>Task of TopicCursorEntityListing</returns>
-        
         
         System.Threading.Tasks.Task<TopicCursorEntityListing> GetProcessautomationTriggersTopicsAsync (string before = null, string after = null, string pageSize = null);
 
@@ -363,7 +340,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>Task of ApiResponse (TopicCursorEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TopicCursorEntityListing>> GetProcessautomationTriggersTopicsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null);
 
         /// <summary>
@@ -376,7 +352,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>Task of TestModeResults</returns>
-        
         
         System.Threading.Tasks.Task<TestModeResults> PostProcessautomationTriggerTestAsync (string triggerId, string body = null);
 
@@ -391,7 +366,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">eventBody (optional)</param>
         /// <returns>Task of ApiResponse (TestModeResults)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TestModeResults>> PostProcessautomationTriggerTestAsyncWithHttpInfo (string triggerId, string body = null);
 
         /// <summary>
@@ -404,7 +378,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to create a Trigger.</param>
         /// <returns>Task of Trigger</returns>
         
-        
         System.Threading.Tasks.Task<Trigger> PostProcessautomationTriggersAsync (CreateTriggerRequest body);
 
         /// <summary>
@@ -416,7 +389,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create a Trigger.</param>
         /// <returns>Task of ApiResponse (Trigger)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Trigger>> PostProcessautomationTriggersAsyncWithHttpInfo (CreateTriggerRequest body);
 
@@ -431,7 +403,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">eventBody (optional)</param>
         /// <returns>Task of TestModeEventResults</returns>
         
-        
         System.Threading.Tasks.Task<TestModeEventResults> PostProcessautomationTriggersTopicTestAsync (string topicName, string body = null);
 
         /// <summary>
@@ -444,7 +415,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicName">topicName</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>Task of ApiResponse (TestModeEventResults)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TestModeEventResults>> PostProcessautomationTriggersTopicTestAsyncWithHttpInfo (string topicName, string body = null);
 
@@ -459,7 +429,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input to update Trigger. (topicName cannot be updated, a new trigger must be created to use a new topicName)</param>
         /// <returns>Task of Trigger</returns>
         
-        
         System.Threading.Tasks.Task<Trigger> PutProcessautomationTriggerAsync (string triggerId, UpdateTriggerRequest body);
 
         /// <summary>
@@ -472,7 +441,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">Input to update Trigger. (topicName cannot be updated, a new trigger must be created to use a new topicName)</param>
         /// <returns>Task of ApiResponse (Trigger)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Trigger>> PutProcessautomationTriggerAsyncWithHttpInfo (string triggerId, UpdateTriggerRequest body);
 
@@ -570,11 +538,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns></returns>
-        
         
         public void DeleteProcessautomationTrigger (string triggerId)
         {
@@ -583,11 +551,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteProcessautomationTriggerWithHttpInfo (string triggerId)
         { 
@@ -667,11 +635,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteProcessautomationTriggerAsync (string triggerId)
         {
@@ -681,11 +649,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProcessautomationTriggerAsyncWithHttpInfo (string triggerId)
         { 
@@ -767,11 +735,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single Trigger matching id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>Trigger</returns>
-        
         
         public Trigger GetProcessautomationTrigger (string triggerId)
         {
@@ -781,11 +749,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single Trigger matching id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>ApiResponse of Trigger</returns>
-        
         
         public ApiResponse< Trigger > GetProcessautomationTriggerWithHttpInfo (string triggerId)
         { 
@@ -865,11 +833,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single Trigger matching id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>Task of Trigger</returns>
-        
         
         public async System.Threading.Tasks.Task<Trigger> GetProcessautomationTriggerAsync (string triggerId)
         {
@@ -880,11 +848,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single Trigger matching id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <returns>Task of ApiResponse (Trigger)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Trigger>> GetProcessautomationTriggerAsyncWithHttpInfo (string triggerId)
         { 
@@ -966,6 +934,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all triggers, optionally filtered by query parameters. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -976,7 +945,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>TriggerEntityListing</returns>
         
-        
         public TriggerEntityListing GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
         {
              ApiResponse<TriggerEntityListing> localVarResponse = GetProcessautomationTriggersWithHttpInfo(before, after, pageSize, topicName, enabled, hasDelayBy);
@@ -985,6 +953,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all triggers, optionally filtered by query parameters. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -994,7 +963,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>ApiResponse of TriggerEntityListing</returns>
-        
         
         public ApiResponse< TriggerEntityListing > GetProcessautomationTriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
         { 
@@ -1076,6 +1044,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all triggers, optionally filtered by query parameters. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -1086,7 +1055,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>Task of TriggerEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<TriggerEntityListing> GetProcessautomationTriggersAsync (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
         {
              ApiResponse<TriggerEntityListing> localVarResponse = await GetProcessautomationTriggersAsyncWithHttpInfo(before, after, pageSize, topicName, enabled, hasDelayBy);
@@ -1096,6 +1064,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all triggers, optionally filtered by query parameters. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -1105,7 +1074,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>Task of ApiResponse (TriggerEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
         { 
@@ -1188,13 +1156,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get topics available for organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>TopicCursorEntityListing</returns>
-        
         
         public TopicCursorEntityListing GetProcessautomationTriggersTopics (string before = null, string after = null, string pageSize = null)
         {
@@ -1204,13 +1172,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get topics available for organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>ApiResponse of TopicCursorEntityListing</returns>
-        
         
         public ApiResponse< TopicCursorEntityListing > GetProcessautomationTriggersTopicsWithHttpInfo (string before = null, string after = null, string pageSize = null)
         { 
@@ -1289,13 +1257,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get topics available for organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>Task of TopicCursorEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<TopicCursorEntityListing> GetProcessautomationTriggersTopicsAsync (string before = null, string after = null, string pageSize = null)
         {
@@ -1306,13 +1274,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get topics available for organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>Task of ApiResponse (TopicCursorEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TopicCursorEntityListing>> GetProcessautomationTriggersTopicsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null)
         { 
@@ -1392,12 +1360,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the matching of a Trigger based on provided event body 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>TestModeResults</returns>
-        
         
         public TestModeResults PostProcessautomationTriggerTest (string triggerId, string body = null)
         {
@@ -1407,12 +1375,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the matching of a Trigger based on provided event body 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>ApiResponse of TestModeResults</returns>
-        
         
         public ApiResponse< TestModeResults > PostProcessautomationTriggerTestWithHttpInfo (string triggerId, string body = null)
         { 
@@ -1498,12 +1466,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the matching of a Trigger based on provided event body 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>Task of TestModeResults</returns>
-        
         
         public async System.Threading.Tasks.Task<TestModeResults> PostProcessautomationTriggerTestAsync (string triggerId, string body = null)
         {
@@ -1514,12 +1482,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the matching of a Trigger based on provided event body 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>Task of ApiResponse (TestModeResults)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TestModeResults>> PostProcessautomationTriggerTestAsyncWithHttpInfo (string triggerId, string body = null)
         { 
@@ -1607,11 +1575,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create a Trigger.</param>
         /// <returns>Trigger</returns>
-        
         
         public Trigger PostProcessautomationTriggers (CreateTriggerRequest body)
         {
@@ -1621,11 +1589,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create a Trigger.</param>
         /// <returns>ApiResponse of Trigger</returns>
-        
         
         public ApiResponse< Trigger > PostProcessautomationTriggersWithHttpInfo (CreateTriggerRequest body)
         { 
@@ -1710,11 +1678,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create a Trigger.</param>
         /// <returns>Task of Trigger</returns>
-        
         
         public async System.Threading.Tasks.Task<Trigger> PostProcessautomationTriggersAsync (CreateTriggerRequest body)
         {
@@ -1725,11 +1693,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create a Trigger.</param>
         /// <returns>Task of ApiResponse (Trigger)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Trigger>> PostProcessautomationTriggersAsyncWithHttpInfo (CreateTriggerRequest body)
         { 
@@ -1816,12 +1784,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the matching of all organization Triggers on given topic using provided event body 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicName">topicName</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>TestModeEventResults</returns>
-        
         
         public TestModeEventResults PostProcessautomationTriggersTopicTest (string topicName, string body = null)
         {
@@ -1831,12 +1799,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the matching of all organization Triggers on given topic using provided event body 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicName">topicName</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>ApiResponse of TestModeEventResults</returns>
-        
         
         public ApiResponse< TestModeEventResults > PostProcessautomationTriggersTopicTestWithHttpInfo (string topicName, string body = null)
         { 
@@ -1922,12 +1890,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the matching of all organization Triggers on given topic using provided event body 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicName">topicName</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>Task of TestModeEventResults</returns>
-        
         
         public async System.Threading.Tasks.Task<TestModeEventResults> PostProcessautomationTriggersTopicTestAsync (string topicName, string body = null)
         {
@@ -1938,12 +1906,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the matching of all organization Triggers on given topic using provided event body 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicName">topicName</param>
         /// <param name="body">eventBody (optional)</param>
         /// <returns>Task of ApiResponse (TestModeEventResults)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TestModeEventResults>> PostProcessautomationTriggersTopicTestAsyncWithHttpInfo (string topicName, string body = null)
         { 
@@ -2031,12 +1999,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">Input to update Trigger. (topicName cannot be updated, a new trigger must be created to use a new topicName)</param>
         /// <returns>Trigger</returns>
-        
         
         public Trigger PutProcessautomationTrigger (string triggerId, UpdateTriggerRequest body)
         {
@@ -2046,12 +2014,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">Input to update Trigger. (topicName cannot be updated, a new trigger must be created to use a new topicName)</param>
         /// <returns>ApiResponse of Trigger</returns>
-        
         
         public ApiResponse< Trigger > PutProcessautomationTriggerWithHttpInfo (string triggerId, UpdateTriggerRequest body)
         { 
@@ -2140,12 +2108,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">Input to update Trigger. (topicName cannot be updated, a new trigger must be created to use a new topicName)</param>
         /// <returns>Task of Trigger</returns>
-        
         
         public async System.Threading.Tasks.Task<Trigger> PutProcessautomationTriggerAsync (string triggerId, UpdateTriggerRequest body)
         {
@@ -2156,12 +2124,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Trigger 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
         /// <param name="body">Input to update Trigger. (topicName cannot be updated, a new trigger must be created to use a new topicName)</param>
         /// <returns>Task of ApiResponse (Trigger)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Trigger>> PutProcessautomationTriggerAsyncWithHttpInfo (string triggerId, UpdateTriggerRequest body)
         { 

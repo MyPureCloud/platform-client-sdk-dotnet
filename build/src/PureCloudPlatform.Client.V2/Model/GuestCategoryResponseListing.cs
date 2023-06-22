@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="SessionId">SessionId.</param>
-        public GuestCategoryResponseListing(List<GuestCategoryResponse> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null, string SessionId = null)
+        public GuestCategoryResponseListing(List<GuestResponseCategory> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null, string SessionId = null)
         {
             this.Entities = Entities;
             this.NextUri = NextUri;
@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<GuestCategoryResponse> Entities { get; set; }
+        public List<GuestResponseCategory> Entities { get; set; }
 
 
 

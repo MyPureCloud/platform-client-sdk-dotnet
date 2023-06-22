@@ -18,8 +18,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get the messages for a web messaging session.
 
-
-
 Requires NO permissions: 
 
 

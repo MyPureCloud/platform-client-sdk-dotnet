@@ -33,8 +33,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Deletes a Greeting with the given GreetingId
 
-
-
 Requires NO permissions: 
 
 
@@ -95,8 +93,6 @@ void (empty response body)
 
 
 Get a Greeting with the given GreetingId
-
-
 
 Requires NO permissions: 
 
@@ -159,8 +155,6 @@ namespace Example
 
 
 Get media playback URI for this greeting
-
-
 
 Requires NO permissions: 
 
@@ -226,8 +220,6 @@ namespace Example
 
 Gets an Organization's Greetings
 
-
-
 Requires NO permissions: 
 
 
@@ -292,8 +284,6 @@ namespace Example
 
 Get an Organization's DefaultGreetingList
 
-
-
 Requires NO permissions: 
 
 
@@ -350,8 +340,6 @@ This endpoint does require any parameters.
 
 
 Get a list of the Group's Greetings
-
-
 
 Requires NO permissions: 
 
@@ -419,8 +407,6 @@ namespace Example
 
 Grabs the list of Default Greetings given a Group's ID
 
-
-
 Requires NO permissions: 
 
 
@@ -482,8 +468,6 @@ namespace Example
 
 
 Get a list of the User's Greetings
-
-
 
 Requires NO permissions: 
 
@@ -551,8 +535,6 @@ namespace Example
 
 Grabs the list of Default Greetings given a User's ID
 
-
-
 Requires NO permissions: 
 
 
@@ -615,8 +597,6 @@ namespace Example
 
 Create a Greeting for an Organization
 
-
-
 Requires NO permissions: 
 
 
@@ -678,8 +658,6 @@ namespace Example
 
 
 Creates a Greeting for a Group
-
-
 
 Requires NO permissions: 
 
@@ -745,8 +723,6 @@ namespace Example
 
 Creates a Greeting for a User
 
-
-
 Requires NO permissions: 
 
 
@@ -810,8 +786,6 @@ namespace Example
 
 
 Updates the Greeting with the given GreetingId
-
-
 
 Requires NO permissions: 
 
@@ -877,8 +851,6 @@ namespace Example
 
 Update an Organization's DefaultGreetingList
 
-
-
 Requires NO permissions: 
 
 
@@ -940,8 +912,6 @@ namespace Example
 
 
 Updates the DefaultGreetingList of the specified Group
-
-
 
 Requires NO permissions: 
 
@@ -1006,8 +976,6 @@ namespace Example
 
 
 Updates the DefaultGreetingList of the specified User
-
-
 
 Requires NO permissions: 
 

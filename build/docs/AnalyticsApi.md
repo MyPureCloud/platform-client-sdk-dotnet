@@ -109,8 +109,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete/cancel an async details job
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -174,8 +172,6 @@ void (empty response body)
 
 Delete a scheduled report job.
 
-
-
 Requires NO permissions: 
 
 
@@ -236,8 +232,6 @@ void (empty response body)
 
 
 Delete/cancel an async request
-
-
 
 Requires ANY permissions: 
 
@@ -301,7 +295,7 @@ void (empty response body)
 
 Get status for async query for action aggregates
 
-
+GetAnalyticsActionsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -367,7 +361,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsActionsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -436,8 +430,6 @@ namespace Example
 Get Reporting Turns.
 
 Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
-
-
 
 Requires ANY permissions: 
 
@@ -514,7 +506,7 @@ namespace Example
 
 Get status for async query for bot aggregates
 
-
+GetAnalyticsBotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -579,7 +571,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsBotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -646,8 +638,6 @@ namespace Example
 
 Get a conversation by id
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -712,7 +702,7 @@ namespace Example
 
 Get status for async query for conversation aggregates
 
-
+GetAnalyticsConversationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -777,7 +767,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsConversationsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -844,8 +834,6 @@ namespace Example
 
 Gets multiple conversations by id
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -910,8 +898,6 @@ namespace Example
 
 Get status for async query for conversation details
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -975,8 +961,6 @@ namespace Example
 
 
 Fetch a page of results for an async details job
-
-
 
 Requires ANY permissions: 
 
@@ -1046,8 +1030,6 @@ namespace Example
 
 Lookup the datalake availability date and time
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -1105,8 +1087,6 @@ This endpoint does require any parameters.
 
 
 Get analytics data retention setting
-
-
 
 Requires ANY permissions: 
 
@@ -1166,7 +1146,7 @@ This endpoint does require any parameters.
 
 Get status for async query for evaluation aggregates
 
-
+GetAnalyticsEvaluationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1231,7 +1211,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsEvaluationsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1298,7 +1278,7 @@ namespace Example
 
 Get status for async query for Flow aggregates
 
-
+GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1363,7 +1343,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1430,7 +1410,7 @@ namespace Example
 
 Get status for async query for journey aggregates
 
-
+GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1495,7 +1475,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1562,7 +1542,7 @@ namespace Example
 
 Get status for async query for knowledge aggregates
 
-
+GetAnalyticsKnowledgeAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1627,7 +1607,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsKnowledgeAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1694,8 +1674,6 @@ namespace Example
 
 Get all view export requests for a user
 
-
-
 Requires ALL permissions: 
 
 * analytics:dataExport:view
@@ -1761,8 +1739,6 @@ namespace Example
 
 Get all export metadata
 
-
-
 Requires ALL permissions: 
 
 * analytics:dataExport:view
@@ -1820,8 +1796,6 @@ This endpoint does require any parameters.
 
 
 Get list of reporting metadata.
-
-
 
 Requires ANY permissions: 
 
@@ -1890,8 +1864,6 @@ namespace Example
 
 Get a reporting metadata.
 
-
-
 Requires ANY permissions: 
 
 * reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
@@ -1959,8 +1931,6 @@ Get a list of report formats
 
 Get a list of report formats.
 
-
-
 Requires NO permissions: 
 
 
@@ -2017,8 +1987,6 @@ This endpoint does require any parameters.
 
 
 Get a scheduled report job.
-
-
 
 Requires NO permissions: 
 
@@ -2081,8 +2049,6 @@ namespace Example
 
 
 Get list of completed scheduled report jobs.
-
-
 
 Requires NO permissions: 
 
@@ -2150,8 +2116,6 @@ namespace Example
 
 Get most recently completed scheduled report job.
 
-
-
 Requires NO permissions: 
 
 
@@ -2215,8 +2179,6 @@ namespace Example
 A completed scheduled report job
 
 A completed scheduled report job.
-
-
 
 Requires NO permissions: 
 
@@ -2284,8 +2246,6 @@ Get a list of scheduled report jobs
 
 Get a list of scheduled report jobs.
 
-
-
 Requires ANY permissions: 
 
 * reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
@@ -2351,8 +2311,6 @@ namespace Example
 
 Get AnalyticsReportingSettings for an organization
 
-
-
 Requires NO permissions: 
 
 
@@ -2409,8 +2367,6 @@ This endpoint does require any parameters.
 
 
 Get a list of report time periods.
-
-
 
 Requires NO permissions: 
 
@@ -2469,7 +2425,7 @@ This endpoint does require any parameters.
 
 Get status for async query for resolution aggregates
 
-
+GetAnalyticsResolutionsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2534,7 +2490,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsResolutionsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2601,7 +2557,7 @@ namespace Example
 
 Get status for async query for survey aggregates
 
-
+GetAnalyticsSurveysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2666,7 +2622,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsSurveysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2733,7 +2689,7 @@ namespace Example
 
 Get status for async query for task management aggregates
 
-
+GetAnalyticsTaskmanagementAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2798,7 +2754,7 @@ namespace Example
 
 Fetch a page of results for an async task management query
 
-
+GetAnalyticsTaskmanagementAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2865,7 +2821,7 @@ namespace Example
 
 Get status for async query for transcript aggregates
 
-
+GetAnalyticsTranscriptsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2930,7 +2886,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsTranscriptsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2997,7 +2953,7 @@ namespace Example
 
 Get status for async query for user aggregates
 
-
+GetAnalyticsUsersAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3062,7 +3018,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsUsersAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3129,8 +3085,6 @@ namespace Example
 
 Get status for async query for user details
 
-
-
 Requires ANY permissions: 
 
 * analytics:userDetail:view
@@ -3193,8 +3147,6 @@ namespace Example
 
 
 Fetch a page of results for an async query
-
-
 
 Requires ANY permissions: 
 
@@ -3263,8 +3215,6 @@ namespace Example
 
 Lookup the datalake availability date and time
 
-
-
 Requires ANY permissions: 
 
 * analytics:userDetail:view
@@ -3322,8 +3272,6 @@ This endpoint does require any parameters.
 
 
 Patch AnalyticsReportingSettings values for an organization
-
-
 
 Requires ANY permissions: 
 
@@ -3391,7 +3339,7 @@ namespace Example
 
 Query for action aggregates asynchronously
 
-
+PostAnalyticsActionsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3457,8 +3405,6 @@ namespace Example
 
 Query for action aggregates
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:view
@@ -3523,7 +3469,7 @@ namespace Example
 
 Query for bot aggregates asynchronously
 
-
+PostAnalyticsBotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3588,8 +3534,6 @@ namespace Example
 
 Query for bot aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:botAggregate:view
@@ -3652,8 +3596,6 @@ namespace Example
 
 
 Index conversation properties
-
-
 
 Requires ANY permissions: 
 
@@ -3720,7 +3662,7 @@ namespace Example
 
 Query for conversation activity observations
 
-
+PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3789,7 +3731,7 @@ namespace Example
 
 Query for conversation aggregates asynchronously
 
-
+PostAnalyticsConversationsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3854,8 +3796,6 @@ namespace Example
 
 Query for conversation aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationAggregate:view
@@ -3918,8 +3858,6 @@ namespace Example
 
 
 Query for conversation details asynchronously
-
-
 
 Requires ANY permissions: 
 
@@ -3985,8 +3923,6 @@ namespace Example
 
 Query for conversation details
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -4051,8 +3987,6 @@ namespace Example
 
 Search resources.
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -4116,7 +4050,7 @@ namespace Example
 
 Query for evaluation aggregates asynchronously
 
-
+PostAnalyticsEvaluationsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4181,8 +4115,6 @@ namespace Example
 
 Query for evaluation aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:evaluationAggregate:view
@@ -4246,7 +4178,7 @@ namespace Example
 
 Query for flow activity observations
 
-
+PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4315,7 +4247,7 @@ namespace Example
 
 Query for flow aggregates asynchronously
 
-
+PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4380,8 +4312,6 @@ namespace Example
 
 Query for flow aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:flowAggregate:view
@@ -4444,8 +4374,6 @@ namespace Example
 
 
 Query for flow observations
-
-
 
 Requires ANY permissions: 
 
@@ -4510,7 +4438,7 @@ namespace Example
 
 Query for journey aggregates asynchronously
 
-
+PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4575,8 +4503,6 @@ namespace Example
 
 Query for journey aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:journeyAggregate:view
@@ -4640,7 +4566,7 @@ namespace Example
 
 Query for knowledge aggregates asynchronously
 
-
+PostAnalyticsKnowledgeAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4705,7 +4631,7 @@ namespace Example
 
 Query for knowledge aggregates
 
-
+PostAnalyticsKnowledgeAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4769,8 +4695,6 @@ namespace Example
 
 
 Query for queue observations
-
-
 
 Requires ANY permissions: 
 
@@ -4837,8 +4761,6 @@ Generate a view export request
 
 This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
 
-
-
 Requires ALL permissions: 
 
 * analytics:dataExport:add
@@ -4901,8 +4823,6 @@ namespace Example
 
 
 Place a scheduled report immediately into the reporting queue
-
-
 
 Requires ANY permissions: 
 
@@ -4969,8 +4889,6 @@ Create a scheduled report job
 
 Create a scheduled report job.
 
-
-
 Requires ANY permissions: 
 
 * reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
@@ -5034,7 +4952,7 @@ namespace Example
 
 Query for resolution aggregates asynchronously
 
-
+PostAnalyticsResolutionsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5099,7 +5017,7 @@ namespace Example
 
 Query for user activity observations
 
-
+PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5168,7 +5086,7 @@ namespace Example
 
 Query for survey aggregates asynchronously
 
-
+PostAnalyticsSurveysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5233,8 +5151,6 @@ namespace Example
 
 Query for survey aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:surveyAggregate:view
@@ -5298,7 +5214,7 @@ namespace Example
 
 Query for task management aggregates asynchronously
 
-
+PostAnalyticsTaskmanagementAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5363,7 +5279,7 @@ namespace Example
 
 Query for task management aggregates
 
-
+PostAnalyticsTaskmanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5428,7 +5344,7 @@ namespace Example
 
 Query for team activity observations
 
-
+PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5497,7 +5413,7 @@ namespace Example
 
 Query for transcript aggregates asynchronously
 
-
+PostAnalyticsTranscriptsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5562,8 +5478,6 @@ namespace Example
 
 Query for transcript aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:speechAndTextAnalyticsAggregates:view
@@ -5627,7 +5541,7 @@ namespace Example
 
 Query for user activity observations
 
-
+PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5696,7 +5610,7 @@ namespace Example
 
 Query for user aggregates asynchronously
 
-
+PostAnalyticsUsersAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5761,8 +5675,6 @@ namespace Example
 
 Query for user aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:userAggregate:view
@@ -5825,8 +5737,6 @@ namespace Example
 
 
 Query for user details asynchronously
-
-
 
 Requires ANY permissions: 
 
@@ -5891,8 +5801,6 @@ namespace Example
 
 Query for user details
 
-
-
 Requires ANY permissions: 
 
 * analytics:userDetail:view
@@ -5955,8 +5863,6 @@ namespace Example
 
 
 Query for user observations
-
-
 
 Requires ANY permissions: 
 
@@ -6021,8 +5927,6 @@ namespace Example
 
 Update analytics data retention setting
 
-
-
 Requires ANY permissions: 
 
 * analytics:dataRetention:edit
@@ -6085,8 +5989,6 @@ namespace Example
 
 
 Update a scheduled report job.
-
-
 
 Requires ANY permissions: 
 

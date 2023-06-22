@@ -105,8 +105,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete/cancel an async request
 
-
-
 Requires ANY permissions: 
 
 * analytics:userDetail:view
@@ -168,8 +166,6 @@ void (empty response body)
 
 
 Delete a grant of a role in a division
-
-
 
 Requires ALL permissions: 
 
@@ -237,8 +233,6 @@ void (empty response body)
 
 Delete the user's max utilization settings and revert to the organization-wide default.
 
-
-
 Requires ANY permissions: 
 
 * routing:utilization:manage
@@ -300,8 +294,6 @@ void (empty response body)
 
 
 Delete user
-
-
 
 Requires ANY permissions: 
 
@@ -366,8 +358,6 @@ namespace Example
 
 
 Remove routing language from user
-
-
 
 Requires ANY permissions: 
 
@@ -434,8 +424,6 @@ void (empty response body)
 
 Remove routing skill from user
 
-
-
 Requires ALL permissions: 
 
 * routing:skill:assign
@@ -500,8 +488,6 @@ void (empty response body)
 
 Clear associated station
 
-
-
 Requires NO permissions: 
 
 
@@ -562,8 +548,6 @@ void (empty response body)
 
 
 Clear default station
-
-
 
 Requires ANY permissions: 
 
@@ -628,7 +612,7 @@ void (empty response body)
 
 Get status for async query for user aggregates
 
-
+GetAnalyticsUsersAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -693,7 +677,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsUsersAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -760,8 +744,6 @@ namespace Example
 
 Get status for async query for user details
 
-
-
 Requires ANY permissions: 
 
 * analytics:userDetail:view
@@ -824,8 +806,6 @@ namespace Example
 
 
 Fetch a page of results for an async query
-
-
 
 Requires ANY permissions: 
 
@@ -894,8 +874,6 @@ namespace Example
 
 Lookup the datalake availability date and time
 
-
-
 Requires ANY permissions: 
 
 * analytics:userDetail:view
@@ -955,8 +933,6 @@ This endpoint does require any parameters.
 Returns which divisions the current user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
-
-
 
 Requires NO permissions: 
 
@@ -1021,8 +997,6 @@ namespace Example
 
 
 Returns which divisions the current user has the given permission in.
-
-
 
 Requires NO permissions: 
 
@@ -1092,8 +1066,6 @@ Returns which divisions the specified user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
 
-
-
 Requires NO permissions: 
 
 
@@ -1162,8 +1134,6 @@ namespace Example
 
 Returns a listing of roles and permissions for a user.
 
-
-
 Requires ANY permissions: 
 
 * authorization:grant:view
@@ -1227,8 +1197,6 @@ namespace Example
 
 Returns a listing of roles and permissions for the currently authenticated user.
 
-
-
 Requires NO permissions: 
 
 
@@ -1285,8 +1253,6 @@ This endpoint does require any parameters.
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Fetch field config for an entity type
-
-
 
 Requires NO permissions: 
 
@@ -1351,8 +1317,6 @@ namespace Example
 Get a user profile listing
 
 This api is deprecated. User /api/v2/users
-
-
 
 Requires NO permissions: 
 
@@ -1428,8 +1392,6 @@ namespace Example
 
 Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
 
-
-
 Requires ANY permissions: 
 
 * routing:utilization:manage
@@ -1493,8 +1455,6 @@ namespace Example
 
 
 Get user.
-
-
 
 Requires NO permissions: 
 
@@ -1564,8 +1524,6 @@ namespace Example
 
 Get adjacents
 
-
-
 Requires NO permissions: 
 
 
@@ -1630,8 +1588,6 @@ namespace Example
 
 Get a user's CallForwarding
 
-
-
 Requires NO permissions: 
 
 
@@ -1693,8 +1649,6 @@ namespace Example
 
 
 Get direct reports
-
-
 
 Requires NO permissions: 
 
@@ -1759,8 +1713,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Deprecated; will be revived with new contract
-
-
 
 Requires NO permissions: 
 
@@ -1832,8 +1784,6 @@ namespace Example
 
 Get a user's Geolocation
 
-
-
 Requires NO permissions: 
 
 
@@ -1898,8 +1848,6 @@ namespace Example
 
 Get a OutOfOffice
 
-
-
 Requires NO permissions: 
 
 
@@ -1963,8 +1911,6 @@ namespace Example
 Get user profile
 
 This api has been deprecated. Use api/v2/users instead
-
-
 
 Requires NO permissions: 
 
@@ -2032,8 +1978,6 @@ namespace Example
 
 List profile skills for a user
 
-
-
 Requires ANY permissions: 
 
 * directory:userProfile:view
@@ -2096,8 +2040,6 @@ namespace Example
 
 
 Get queues for user
-
-
 
 Requires ANY permissions: 
 
@@ -2172,8 +2114,6 @@ namespace Example
 
 Returns a listing of roles and permissions for a user.
 
-
-
 Requires ANY permissions: 
 
 * authorization:grant:view
@@ -2236,8 +2176,6 @@ namespace Example
 
 
 List routing language for user
-
-
 
 Requires NO permissions: 
 
@@ -2307,8 +2245,6 @@ namespace Example
 
 List routing skills for user
 
-
-
 Requires NO permissions: 
 
 
@@ -2377,8 +2313,6 @@ namespace Example
 
 Fetch the routing status of a user
 
-
-
 Requires NO permissions: 
 
 
@@ -2440,8 +2374,6 @@ namespace Example
 
 
 Get skill groups for a user
-
-
 
 Requires ANY permissions: 
 
@@ -2512,8 +2444,6 @@ namespace Example
 
 Get user state information.
 
-
-
 Requires ANY permissions: 
 
 * directory:userStateChange:view
@@ -2577,8 +2507,6 @@ namespace Example
 
 Get station information for user
 
-
-
 Requires NO permissions: 
 
 
@@ -2640,8 +2568,6 @@ namespace Example
 
 
 Get superiors
-
-
 
 Requires NO permissions: 
 
@@ -2706,8 +2632,6 @@ namespace Example
 
 
 List the organizations that have authorized/trusted the user.
-
-
 
 Requires ALL permissions: 
 
@@ -2775,8 +2699,6 @@ namespace Example
 
 
 Get the list of available users.
-
-
 
 Requires NO permissions: 
 
@@ -2855,8 +2777,6 @@ namespace Example
 Get list of Development Activities
 
 Either moduleId or userId is required. Results are filtered based on the applicable permissions.
-
-
 
 Requires ANY permissions: 
 
@@ -2946,8 +2866,6 @@ Get list of Development Activities for current user
 
 Results are filtered based on the applicable permissions.
 
-
-
 Requires NO permissions: 
 
 
@@ -3032,8 +2950,6 @@ Get a Development Activity
 
 Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
 
-
-
 Requires ANY permissions: 
 
 * learning:assignment:view
@@ -3102,8 +3018,6 @@ Get current user details.
 
 This request is not valid when using the Client Credentials OAuth grant.
 
-
-
 Requires NO permissions: 
 
 
@@ -3167,8 +3081,6 @@ namespace Example
 
 
 Search users using the q64 value returned from a previous search
-
-
 
 Requires ANY permissions: 
 
@@ -3237,8 +3149,6 @@ namespace Example
 
 Update user
 
-
-
 Requires ANY permissions: 
 
 * directory:user:edit
@@ -3303,8 +3213,6 @@ namespace Example
 
 
 Patch a user's CallForwarding
-
-
 
 Requires ANY permissions: 
 
@@ -3373,8 +3281,6 @@ Patch a user's Geolocation
 
 The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
 
-
-
 Requires NO permissions: 
 
 
@@ -3440,8 +3346,6 @@ namespace Example
 
 
 Join or unjoin a queue for a user
-
-
 
 Requires ANY permissions: 
 
@@ -3511,8 +3415,6 @@ namespace Example
 
 Join or unjoin a set of queues for a user
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:join
@@ -3580,8 +3482,6 @@ namespace Example
 
 
 Update routing language proficiency or state.
-
-
 
 Requires ANY permissions: 
 
@@ -3651,8 +3551,6 @@ namespace Example
 
 Add bulk routing language to user. Max limit 50 languages
 
-
-
 Requires ANY permissions: 
 
 * routing:skill:assign
@@ -3719,8 +3617,6 @@ namespace Example
 
 Bulk add routing skills to user
 
-
-
 Requires ANY permissions: 
 
 * routing:skill:assign
@@ -3786,8 +3682,6 @@ namespace Example
 
 Update bulk acd autoanswer on users
 
-
-
 Requires ANY permissions: 
 
 * directory:user:add
@@ -3852,7 +3746,7 @@ namespace Example
 
 Query for user activity observations
 
-
+PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3921,7 +3815,7 @@ namespace Example
 
 Query for user aggregates asynchronously
 
-
+PostAnalyticsUsersAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3986,8 +3880,6 @@ namespace Example
 
 Query for user aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:userAggregate:view
@@ -4050,8 +3942,6 @@ namespace Example
 
 
 Query for user details asynchronously
-
-
 
 Requires ANY permissions: 
 
@@ -4116,8 +4006,6 @@ namespace Example
 
 Query for user details
 
-
-
 Requires ANY permissions: 
 
 * analytics:userDetail:view
@@ -4181,8 +4069,6 @@ namespace Example
 
 Query for user observations
 
-
-
 Requires ANY permissions: 
 
 * analytics:userObservation:view
@@ -4245,8 +4131,6 @@ namespace Example
 
 
 Bulk-grant roles and divisions to a subject.
-
-
 
 Requires ALL permissions: 
 
@@ -4314,8 +4198,6 @@ void (empty response body)
 
 Bulk-remove grants from a subject.
 
-
-
 Requires ALL permissions: 
 
 * authorization:grant:delete
@@ -4381,8 +4263,6 @@ void (empty response body)
 Replace subject's roles and divisions with the exact list supplied in the request.
 
 This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
-
-
 
 Requires ALL permissions: 
 
@@ -4450,8 +4330,6 @@ void (empty response body)
 
 
 Make a grant of a role in a division
-
-
 
 Requires ALL permissions: 
 
@@ -4523,8 +4401,6 @@ Create mapping between external identifier and user. Limit 100 per entity.
 
 Authority Name and External key are case sensitive.
 
-
-
 Requires ANY permissions: 
 
 * directory:user:edit
@@ -4590,8 +4466,6 @@ namespace Example
 
 Send an activation email to the user
 
-
-
 Requires ANY permissions: 
 
 * directory:user:add
@@ -4656,8 +4530,6 @@ void (empty response body)
 
 Change a users password
 
-
-
 Requires ANY permissions: 
 
 * directory:user:setPassword
@@ -4721,8 +4593,6 @@ void (empty response body)
 
 
 Add routing language to user
-
-
 
 Requires ANY permissions: 
 
@@ -4789,8 +4659,6 @@ namespace Example
 
 
 Add routing skill to user
-
-
 
 Requires ALL permissions: 
 
@@ -4859,8 +4727,6 @@ Create user
 
 If user creation is successful but the provided password is invalid or configuration fails, POST api/v2/users/{userId}/password can be used to re-attempt password configuration.
 
-
-
 Requires ANY permissions: 
 
 * directory:user:add
@@ -4926,8 +4792,6 @@ Retrieve aggregated development activity data
 
 Results are filtered based on the applicable permissions.
 
-
-
 Requires ANY permissions: 
 
 * learning:assignment:view
@@ -4992,8 +4856,6 @@ namespace Example
 
 Change your password
 
-
-
 Requires NO permissions: 
 
 
@@ -5054,8 +4916,6 @@ void (empty response body)
 
 
 Search users
-
-
 
 Requires ANY permissions: 
 
@@ -5120,7 +4980,7 @@ namespace Example
 
 Search users as conversation targets
 
-
+PostUsersSearchConversationTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5185,7 +5045,7 @@ namespace Example
 
 Search manage queue member
 
-
+PostUsersSearchQueuemembersManage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5251,8 +5111,6 @@ namespace Example
 
 Search users assigned to teams
 
-
-
 Requires ANY permissions: 
 
 * groups:team:assign
@@ -5315,8 +5173,6 @@ namespace Example
 
 
 Update the user's max utilization settings.  Include only those media types requiring custom configuration.
-
-
 
 Requires ANY permissions: 
 
@@ -5383,8 +5239,6 @@ namespace Example
 
 Update a user's CallForwarding
 
-
-
 Requires ANY permissions: 
 
 * conversation:callForwarding:edit
@@ -5450,8 +5304,6 @@ namespace Example
 
 Update an OutOfOffice
 
-
-
 Requires NO permissions: 
 
 
@@ -5515,8 +5367,6 @@ namespace Example
 
 
 Update profile skills for a user
-
-
 
 Requires ANY permissions: 
 
@@ -5583,8 +5433,6 @@ namespace Example
 
 Sets the user's roles
 
-
-
 Requires ANY permissions: 
 
 * authorization:grant:add
@@ -5649,8 +5497,6 @@ namespace Example
 
 
 Update routing skill proficiency or state.
-
-
 
 Requires ALL permissions: 
 
@@ -5719,8 +5565,6 @@ namespace Example
 
 Replace all routing skills assigned to a user
 
-
-
 Requires ANY permissions: 
 
 * routing:skill:assign
@@ -5786,8 +5630,6 @@ namespace Example
 
 Update the routing status of a user
 
-
-
 Requires NO permissions: 
 
 
@@ -5851,8 +5693,6 @@ namespace Example
 
 
 Update user state information.
-
-
 
 Requires ANY permissions: 
 
@@ -5919,8 +5759,6 @@ namespace Example
 
 Set associated station
 
-
-
 Requires NO permissions: 
 
 
@@ -5983,8 +5821,6 @@ void (empty response body)
 
 
 Set default station
-
-
 
 Requires ANY permissions: 
 

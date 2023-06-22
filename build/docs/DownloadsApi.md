@@ -20,8 +20,6 @@ Issues a redirect to a signed secure download URL for specified download
 
 this method will issue a redirect to the url to the content
 
-
-
 Requires NO permissions: 
 
 

@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <returns></returns>
         
-        
         void DeleteTeam (string teamId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteTeamWithHttpInfo (string teamId);
 
@@ -53,7 +51,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of member ids to remove</param>
         /// <returns></returns>
         
-        
         void DeleteTeamMembers (string teamId, string id);
 
         /// <summary>
@@ -67,7 +64,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of member ids to remove</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteTeamMembersWithHttpInfo (string teamId, string id);
 
         /// <summary>
@@ -80,7 +76,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <returns>Team</returns>
         
-        
         Team GetTeam (string teamId);
 
         /// <summary>
@@ -92,7 +87,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>ApiResponse of Team</returns>
-        
         
         ApiResponse<Team> GetTeamWithHttpInfo (string teamId);
 
@@ -110,7 +104,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>TeamMemberEntityListing</returns>
         
-        
         TeamMemberEntityListing GetTeamMembers (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null);
 
         /// <summary>
@@ -126,7 +119,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>ApiResponse of TeamMemberEntityListing</returns>
-        
         
         ApiResponse<TeamMemberEntityListing> GetTeamMembersWithHttpInfo (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null);
 
@@ -144,7 +136,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>TeamEntityListing</returns>
         
-        
         TeamEntityListing GetTeams (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null);
 
         /// <summary>
@@ -161,7 +152,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>ApiResponse of TeamEntityListing</returns>
         
-        
         ApiResponse<TeamEntityListing> GetTeamsWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null);
 
         /// <summary>
@@ -174,7 +164,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <param name="body">Team</param>
         /// <returns>Team</returns>
-        
         
         Team PatchTeam (string teamId, Team body);
 
@@ -189,7 +178,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Team</param>
         /// <returns>ApiResponse of Team</returns>
         
-        
         ApiResponse<Team> PatchTeamWithHttpInfo (string teamId, Team body);
 
         /// <summary>
@@ -197,6 +185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -204,7 +193,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>TeamActivityResponse</returns>
         
-        /// Preview Endpoint
         TeamActivityResponse PostAnalyticsTeamsActivityQuery (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -212,6 +200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -219,7 +208,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>ApiResponse of TeamActivityResponse</returns>
         
-        /// Preview Endpoint
         ApiResponse<TeamActivityResponse> PostAnalyticsTeamsActivityQueryWithHttpInfo (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -232,7 +220,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <param name="body">TeamMembers</param>
         /// <returns>TeamMemberAddListingResponse</returns>
-        
         
         TeamMemberAddListingResponse PostTeamMembers (string teamId, TeamMembers body);
 
@@ -247,7 +234,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TeamMembers</param>
         /// <returns>ApiResponse of TeamMemberAddListingResponse</returns>
         
-        
         ApiResponse<TeamMemberAddListingResponse> PostTeamMembersWithHttpInfo (string teamId, TeamMembers body);
 
         /// <summary>
@@ -259,7 +245,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Team</param>
         /// <returns>Team</returns>
-        
         
         Team PostTeams (Team body);
 
@@ -273,7 +258,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Team</param>
         /// <returns>ApiResponse of Team</returns>
         
-        
         ApiResponse<Team> PostTeamsWithHttpInfo (Team body);
 
         /// <summary>
@@ -286,7 +270,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>TeamsSearchResponse</returns>
         
-        
         TeamsSearchResponse PostTeamsSearch (TeamSearchRequest body);
 
         /// <summary>
@@ -298,7 +281,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of TeamsSearchResponse</returns>
-        
         
         ApiResponse<TeamsSearchResponse> PostTeamsSearchWithHttpInfo (TeamSearchRequest body);
 
@@ -316,7 +298,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteTeamAsync (string teamId);
 
         /// <summary>
@@ -328,7 +309,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeamAsyncWithHttpInfo (string teamId);
 
@@ -343,7 +323,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of member ids to remove</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteTeamMembersAsync (string teamId, string id);
 
         /// <summary>
@@ -357,7 +336,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of member ids to remove</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeamMembersAsyncWithHttpInfo (string teamId, string id);
 
         /// <summary>
@@ -370,7 +348,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of Team</returns>
         
-        
         System.Threading.Tasks.Task<Team> GetTeamAsync (string teamId);
 
         /// <summary>
@@ -382,7 +359,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Team>> GetTeamAsyncWithHttpInfo (string teamId);
 
@@ -400,7 +376,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of TeamMemberEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<TeamMemberEntityListing> GetTeamMembersAsync (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null);
 
         /// <summary>
@@ -416,7 +391,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of ApiResponse (TeamMemberEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TeamMemberEntityListing>> GetTeamMembersAsyncWithHttpInfo (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null);
 
@@ -434,7 +408,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of TeamEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<TeamEntityListing> GetTeamsAsync (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null);
 
         /// <summary>
@@ -451,7 +424,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of ApiResponse (TeamEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TeamEntityListing>> GetTeamsAsyncWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null);
 
         /// <summary>
@@ -464,7 +436,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <param name="body">Team</param>
         /// <returns>Task of Team</returns>
-        
         
         System.Threading.Tasks.Task<Team> PatchTeamAsync (string teamId, Team body);
 
@@ -479,7 +450,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Team</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Team>> PatchTeamAsyncWithHttpInfo (string teamId, Team body);
 
         /// <summary>
@@ -487,6 +457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -494,7 +465,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>Task of TeamActivityResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<TeamActivityResponse> PostAnalyticsTeamsActivityQueryAsync (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -502,6 +472,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -509,7 +480,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>Task of ApiResponse (TeamActivityResponse)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<TeamActivityResponse>> PostAnalyticsTeamsActivityQueryAsyncWithHttpInfo (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -522,7 +492,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <param name="body">TeamMembers</param>
         /// <returns>Task of TeamMemberAddListingResponse</returns>
-        
         
         System.Threading.Tasks.Task<TeamMemberAddListingResponse> PostTeamMembersAsync (string teamId, TeamMembers body);
 
@@ -537,7 +506,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">TeamMembers</param>
         /// <returns>Task of ApiResponse (TeamMemberAddListingResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TeamMemberAddListingResponse>> PostTeamMembersAsyncWithHttpInfo (string teamId, TeamMembers body);
 
         /// <summary>
@@ -549,7 +517,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Team</param>
         /// <returns>Task of Team</returns>
-        
         
         System.Threading.Tasks.Task<Team> PostTeamsAsync (Team body);
 
@@ -563,7 +530,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Team</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Team>> PostTeamsAsyncWithHttpInfo (Team body);
 
         /// <summary>
@@ -576,7 +542,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of TeamsSearchResponse</returns>
         
-        
         System.Threading.Tasks.Task<TeamsSearchResponse> PostTeamsSearchAsync (TeamSearchRequest body);
 
         /// <summary>
@@ -588,7 +553,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (TeamsSearchResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TeamsSearchResponse>> PostTeamsSearchAsyncWithHttpInfo (TeamSearchRequest body);
 
@@ -686,11 +650,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns></returns>
-        
         
         public void DeleteTeam (string teamId)
         {
@@ -699,11 +663,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteTeamWithHttpInfo (string teamId)
         { 
@@ -783,11 +747,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteTeamAsync (string teamId)
         {
@@ -797,11 +761,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeamAsyncWithHttpInfo (string teamId)
         { 
@@ -883,12 +847,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete team members 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="id">Comma separated list of member ids to remove</param>
         /// <returns></returns>
-        
         
         public void DeleteTeamMembers (string teamId, string id)
         {
@@ -897,12 +861,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete team members 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="id">Comma separated list of member ids to remove</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteTeamMembersWithHttpInfo (string teamId, string id)
         { 
@@ -986,12 +950,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete team members 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="id">Comma separated list of member ids to remove</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteTeamMembersAsync (string teamId, string id)
         {
@@ -1001,12 +965,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete team members 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="id">Comma separated list of member ids to remove</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeamMembersAsyncWithHttpInfo (string teamId, string id)
         { 
@@ -1093,11 +1057,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>Team</returns>
-        
         
         public Team GetTeam (string teamId)
         {
@@ -1107,11 +1071,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>ApiResponse of Team</returns>
-        
         
         public ApiResponse< Team > GetTeamWithHttpInfo (string teamId)
         { 
@@ -1191,11 +1155,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of Team</returns>
-        
         
         public async System.Threading.Tasks.Task<Team> GetTeamAsync (string teamId)
         {
@@ -1206,11 +1170,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Team>> GetTeamAsyncWithHttpInfo (string teamId)
         { 
@@ -1292,6 +1256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get team membership 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
@@ -1301,7 +1266,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>TeamMemberEntityListing</returns>
         
-        
         public TeamMemberEntityListing GetTeamMembers (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
         {
              ApiResponse<TeamMemberEntityListing> localVarResponse = GetTeamMembersWithHttpInfo(teamId, pageSize, before, after, expand);
@@ -1310,6 +1274,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get team membership 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
@@ -1318,7 +1283,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>ApiResponse of TeamMemberEntityListing</returns>
-        
         
         public ApiResponse< TeamMemberEntityListing > GetTeamMembersWithHttpInfo (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
         { 
@@ -1402,6 +1366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get team membership 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
@@ -1410,7 +1375,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of TeamMemberEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<TeamMemberEntityListing> GetTeamMembersAsync (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
         {
@@ -1421,6 +1385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get team membership 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
@@ -1429,7 +1394,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of ApiResponse (TeamMemberEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TeamMemberEntityListing>> GetTeamMembersAsyncWithHttpInfo (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
         { 
@@ -1515,6 +1479,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Team listing 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1524,7 +1489,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>TeamEntityListing</returns>
         
-        
         public TeamEntityListing GetTeams (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
         {
              ApiResponse<TeamEntityListing> localVarResponse = GetTeamsWithHttpInfo(pageSize, name, after, before, expand);
@@ -1533,6 +1497,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Team listing 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1541,7 +1506,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>ApiResponse of TeamEntityListing</returns>
-        
         
         public ApiResponse< TeamEntityListing > GetTeamsWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
         { 
@@ -1622,6 +1586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Team listing 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1630,7 +1595,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of TeamEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<TeamEntityListing> GetTeamsAsync (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
         {
@@ -1641,6 +1605,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Team listing 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1649,7 +1614,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
         /// <param name="expand">Expand the name on each user (optional)</param>
         /// <returns>Task of ApiResponse (TeamEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TeamEntityListing>> GetTeamsAsyncWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
         { 
@@ -1731,12 +1695,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="body">Team</param>
         /// <returns>Team</returns>
-        
         
         public Team PatchTeam (string teamId, Team body)
         {
@@ -1746,12 +1710,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="body">Team</param>
         /// <returns>ApiResponse of Team</returns>
-        
         
         public ApiResponse< Team > PatchTeamWithHttpInfo (string teamId, Team body)
         { 
@@ -1840,12 +1804,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="body">Team</param>
         /// <returns>Task of Team</returns>
-        
         
         public async System.Threading.Tasks.Task<Team> PatchTeamAsync (string teamId, Team body)
         {
@@ -1856,12 +1820,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="body">Team</param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Team>> PatchTeamAsyncWithHttpInfo (string teamId, Team body)
         { 
@@ -1953,6 +1917,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for team activity observations 
+        /// 
+        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1960,7 +1926,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>TeamActivityResponse</returns>
         
-        /// Preview Endpoint
         public TeamActivityResponse PostAnalyticsTeamsActivityQuery (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TeamActivityResponse> localVarResponse = PostAnalyticsTeamsActivityQueryWithHttpInfo(body, pageSize, pageNumber);
@@ -1969,6 +1934,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for team activity observations 
+        /// 
+        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1976,7 +1943,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>ApiResponse of TeamActivityResponse</returns>
         
-        /// Preview Endpoint
         public ApiResponse< TeamActivityResponse > PostAnalyticsTeamsActivityQueryWithHttpInfo (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'body' is set
@@ -2062,6 +2028,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for team activity observations 
+        /// 
+        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2069,7 +2037,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>Task of TeamActivityResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<TeamActivityResponse> PostAnalyticsTeamsActivityQueryAsync (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TeamActivityResponse> localVarResponse = await PostAnalyticsTeamsActivityQueryAsyncWithHttpInfo(body, pageSize, pageNumber);
@@ -2079,6 +2046,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for team activity observations 
+        /// 
+        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2086,7 +2055,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>Task of ApiResponse (TeamActivityResponse)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<TeamActivityResponse>> PostAnalyticsTeamsActivityQueryAsyncWithHttpInfo (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'body' is set
@@ -2174,12 +2142,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add team members 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="body">TeamMembers</param>
         /// <returns>TeamMemberAddListingResponse</returns>
-        
         
         public TeamMemberAddListingResponse PostTeamMembers (string teamId, TeamMembers body)
         {
@@ -2189,12 +2157,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add team members 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="body">TeamMembers</param>
         /// <returns>ApiResponse of TeamMemberAddListingResponse</returns>
-        
         
         public ApiResponse< TeamMemberAddListingResponse > PostTeamMembersWithHttpInfo (string teamId, TeamMembers body)
         { 
@@ -2283,12 +2251,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add team members 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="body">TeamMembers</param>
         /// <returns>Task of TeamMemberAddListingResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<TeamMemberAddListingResponse> PostTeamMembersAsync (string teamId, TeamMembers body)
         {
@@ -2299,12 +2267,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add team members 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team ID</param>
         /// <param name="body">TeamMembers</param>
         /// <returns>Task of ApiResponse (TeamMemberAddListingResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TeamMemberAddListingResponse>> PostTeamMembersAsyncWithHttpInfo (string teamId, TeamMembers body)
         { 
@@ -2396,11 +2364,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Team</param>
         /// <returns>Team</returns>
-        
         
         public Team PostTeams (Team body)
         {
@@ -2410,11 +2378,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Team</param>
         /// <returns>ApiResponse of Team</returns>
-        
         
         public ApiResponse< Team > PostTeamsWithHttpInfo (Team body)
         { 
@@ -2499,11 +2467,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Team</param>
         /// <returns>Task of Team</returns>
-        
         
         public async System.Threading.Tasks.Task<Team> PostTeamsAsync (Team body)
         {
@@ -2514,11 +2482,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a team 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Team</param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Team>> PostTeamsAsyncWithHttpInfo (Team body)
         { 
@@ -2605,11 +2573,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>TeamsSearchResponse</returns>
-        
         
         public TeamsSearchResponse PostTeamsSearch (TeamSearchRequest body)
         {
@@ -2619,11 +2587,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of TeamsSearchResponse</returns>
-        
         
         public ApiResponse< TeamsSearchResponse > PostTeamsSearchWithHttpInfo (TeamSearchRequest body)
         { 
@@ -2708,11 +2676,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of TeamsSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<TeamsSearchResponse> PostTeamsSearchAsync (TeamSearchRequest body)
         {
@@ -2723,11 +2691,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (TeamsSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TeamsSearchResponse>> PostTeamsSearchAsyncWithHttpInfo (TeamSearchRequest body)
         { 

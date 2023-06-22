@@ -47,8 +47,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a user
 
-
-
 Requires ANY permissions: 
 
 * directory:user:delete
@@ -114,8 +112,6 @@ namespace Example
 
 Delete a user
 
-
-
 Requires ANY permissions: 
 
 * directory:user:delete
@@ -180,8 +176,6 @@ namespace Example
 
 
 Get a group
-
-
 
 Requires ANY permissions: 
 
@@ -251,8 +245,6 @@ namespace Example
 
 
 Get a list of groups
-
-
 
 Requires ANY permissions: 
 
@@ -325,8 +317,6 @@ namespace Example
 
 Get a resource type
 
-
-
 Requires NO permissions: 
 
 
@@ -389,8 +379,6 @@ namespace Example
 
 Get a list of resource types
 
-
-
 Requires NO permissions: 
 
 
@@ -447,8 +435,6 @@ This endpoint does require any parameters.
 
 
 Get a SCIM schema
-
-
 
 Requires NO permissions: 
 
@@ -512,8 +498,6 @@ namespace Example
 
 Get a list of SCIM schemas
 
-
-
 Requires NO permissions: 
 
 
@@ -576,8 +560,6 @@ namespace Example
 
 Get a service provider's configuration
 
-
-
 Requires NO permissions: 
 
 
@@ -639,8 +621,6 @@ namespace Example
 
 
 Get a user
-
-
 
 Requires NO permissions: 
 
@@ -712,8 +692,6 @@ Get a list of users
 
 To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \"active eq false\". By default, returns SCIM attributes \"externalId\", \"enterprise-user:manager\", and \"roles\". To exclude these attributes, set the attributes parameter to \"id,active\" or the excludeAttributes parameter to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
 
-
-
 Requires NO permissions: 
 
 
@@ -784,8 +762,6 @@ namespace Example
 
 Get a group
 
-
-
 Requires ANY permissions: 
 
 * directory:group:edit
@@ -854,8 +830,6 @@ namespace Example
 
 
 Get a list of groups
-
-
 
 Requires ANY permissions: 
 
@@ -928,8 +902,6 @@ namespace Example
 
 Get a resource type
 
-
-
 Requires NO permissions: 
 
 
@@ -992,8 +964,6 @@ namespace Example
 
 Get a list of resource types
 
-
-
 Requires NO permissions: 
 
 
@@ -1050,8 +1020,6 @@ This endpoint does require any parameters.
 
 
 Get a SCIM schema
-
-
 
 Requires NO permissions: 
 
@@ -1115,8 +1083,6 @@ namespace Example
 
 Get a list of SCIM schemas
 
-
-
 Requires NO permissions: 
 
 
@@ -1179,8 +1145,6 @@ namespace Example
 
 Get a service provider's configuration
 
-
-
 Requires NO permissions: 
 
 
@@ -1242,8 +1206,6 @@ namespace Example
 
 
 Get a user
-
-
 
 Requires NO permissions: 
 
@@ -1315,8 +1277,6 @@ Get a list of users
 
 To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \"active eq false\". By default, returns SCIM attributes \"externalId\", \"enterprise-user:manager\", and \"roles\". To exclude these attributes, set the attributes parameter to \"id,active\" or the excludeAttributes parameter to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
 
-
-
 Requires NO permissions: 
 
 
@@ -1387,8 +1347,6 @@ namespace Example
 
 Modify a group
 
-
-
 Requires ANY permissions: 
 
 * directory:group:edit
@@ -1455,8 +1413,6 @@ namespace Example
 
 
 Modify a user
-
-
 
 Requires ANY permissions: 
 
@@ -1530,8 +1486,6 @@ namespace Example
 
 Modify a group
 
-
-
 Requires ANY permissions: 
 
 * directory:group:edit
@@ -1598,8 +1552,6 @@ namespace Example
 
 
 Modify a user
-
-
 
 Requires ANY permissions: 
 
@@ -1673,8 +1625,6 @@ namespace Example
 
 Create a user
 
-
-
 Requires ANY permissions: 
 
 * directory:user:add
@@ -1741,8 +1691,6 @@ namespace Example
 
 
 Create a user
-
-
 
 Requires ANY permissions: 
 
@@ -1811,8 +1759,6 @@ namespace Example
 
 Replace a group
 
-
-
 Requires ANY permissions: 
 
 * directory:group:edit
@@ -1879,8 +1825,6 @@ namespace Example
 
 
 Replace a user
-
-
 
 Requires ANY permissions: 
 
@@ -1954,8 +1898,6 @@ namespace Example
 
 Replace a group
 
-
-
 Requires ANY permissions: 
 
 * directory:group:edit
@@ -2022,8 +1964,6 @@ namespace Example
 
 
 Replace a user
-
-
 
 Requires ANY permissions: 
 

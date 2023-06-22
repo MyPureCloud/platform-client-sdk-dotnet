@@ -50,8 +50,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete an NLU Domain.
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:nluDomain:delete
@@ -114,8 +112,6 @@ void (empty response body)
 
 
 Delete the feedback on the NLU Domain Version.
-
-
 
 Requires ANY permissions: 
 
@@ -182,8 +178,6 @@ void (empty response body)
 
 Delete an NLU Domain Version
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:nluDomainVersion:delete
@@ -249,8 +243,6 @@ void (empty response body)
 
 Delete a miner.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:miner:delete
@@ -312,8 +304,6 @@ void (empty response body)
 
 
 Delete a draft
-
-
 
 Requires ALL permissions: 
 
@@ -379,8 +369,6 @@ void (empty response body)
 
 Find an NLU Domain.
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:nluDomain:view
@@ -444,8 +432,6 @@ namespace Example
 
 
 Get all feedback in the given NLU Domain Version.
-
-
 
 Requires ANY permissions: 
 
@@ -535,8 +521,6 @@ namespace Example
 
 Find a Feedback
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:feedback:view
@@ -604,8 +588,6 @@ namespace Example
 
 
 Find an NLU Domain Version.
-
-
 
 Requires ANY permissions: 
 
@@ -675,8 +657,6 @@ namespace Example
 
 Retrieved quality report for the specified NLU Domain Version
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:nluDomainVersion:view
@@ -742,8 +722,6 @@ namespace Example
 
 
 Get all NLU Domain Versions for a given Domain.
-
-
 
 Requires ANY permissions: 
 
@@ -815,8 +793,6 @@ namespace Example
 
 Get all NLU Domains.
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:nluDomain:view
@@ -883,8 +859,6 @@ namespace Example
 
 Get information about a miner.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:miner:view
@@ -947,8 +921,6 @@ namespace Example
 
 
 Get information about a draft.
-
-
 
 Requires ALL permissions: 
 
@@ -1019,8 +991,6 @@ namespace Example
 
 Retrieve the list of drafts created.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:draft:view
@@ -1083,8 +1053,6 @@ namespace Example
 
 
 Get information about a mined intent
-
-
 
 Requires ALL permissions: 
 
@@ -1153,8 +1121,6 @@ namespace Example
 
 Retrieve a list of mined intents.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:minerIntent:view
@@ -1219,8 +1185,6 @@ namespace Example
 
 
 Retrieves details of a particular topic.
-
-
 
 Requires ALL permissions: 
 
@@ -1289,8 +1253,6 @@ namespace Example
 
 Retrieves utterances related to a phrase in a topic.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:miner:view
@@ -1358,8 +1320,6 @@ namespace Example
 
 Retrieve a list of mined topics.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:miner:view
@@ -1423,8 +1383,6 @@ namespace Example
 
 Retrieve the list of miners created.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:miner:view
@@ -1487,8 +1445,6 @@ namespace Example
 
 
 Update an NLU Domain.
-
-
 
 Requires ANY permissions: 
 
@@ -1555,8 +1511,6 @@ namespace Example
 
 
 Save information for the draft. Either topic draft or intent draft should be sent.
-
-
 
 Requires ALL permissions: 
 
@@ -1625,8 +1579,6 @@ namespace Example
 
 Create feedback for the NLU Domain Version.
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:feedback:add
@@ -1692,8 +1644,6 @@ namespace Example
 
 
 Detect intent, entities, etc. in the submitted text using the specified NLU domain version.
-
-
 
 Requires ANY permissions: 
 
@@ -1763,8 +1713,6 @@ namespace Example
 
 Publish the draft NLU Domain Version.
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:nluDomainVersion:add
@@ -1831,8 +1779,6 @@ namespace Example
 
 Train the draft NLU Domain Version.
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:nluDomainVersion:edit
@@ -1898,8 +1844,6 @@ namespace Example
 
 
 Create an NLU Domain Version.
-
-
 
 Requires ANY permissions: 
 
@@ -1969,8 +1913,6 @@ namespace Example
 
 Create an NLU Domain.
 
-
-
 Requires ANY permissions: 
 
 * languageUnderstanding:nluDomain:add
@@ -2034,8 +1976,6 @@ namespace Example
 
 
 Create a new draft resource.
-
-
 
 Requires ALL permissions: 
 
@@ -2102,8 +2042,6 @@ namespace Example
 
 Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:miner:execute
@@ -2169,8 +2107,6 @@ namespace Example
 
 Create a unique miner.
 
-
-
 Requires ALL permissions: 
 
 * languageUnderstanding:miner:add
@@ -2233,8 +2169,6 @@ namespace Example
 
 
 Update an NLU Domain Version.
-
-
 
 Requires ANY permissions: 
 

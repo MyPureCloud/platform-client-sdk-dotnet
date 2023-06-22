@@ -362,7 +362,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UuiData">User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567..</param>
         /// <param name="BargedTime">The timestamp when this participant was connected to the barge conference in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null)
+        /// <param name="Disposition">Call resolution data for Dialer bulk make calls commands..</param>
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -414,6 +415,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UuiData = UuiData;
             this.BargedTime = BargedTime;
             this.SecurePause = SecurePause;
+            this.Disposition = Disposition;
             
         }
         
@@ -833,6 +835,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? SecurePause { get; set; }
 
 
+
+        /// <summary>
+        /// Call resolution data for Dialer bulk make calls commands.
+        /// </summary>
+        /// <value>Call resolution data for Dialer bulk make calls commands.</value>
+        [DataMember(Name="disposition", EmitDefaultValue=false)]
+        public Disposition Disposition { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -892,6 +903,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             sb.Append("  BargedTime: ").Append(BargedTime).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
+            sb.Append("  Disposition: ").Append(Disposition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1181,6 +1193,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SecurePause == other.SecurePause ||
                     this.SecurePause != null &&
                     this.SecurePause.Equals(other.SecurePause)
+                ) &&
+                (
+                    this.Disposition == other.Disposition ||
+                    this.Disposition != null &&
+                    this.Disposition.Equals(other.Disposition)
                 );
         }
 
@@ -1344,6 +1361,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SecurePause != null)
                     hash = hash * 59 + this.SecurePause.GetHashCode();
+
+                if (this.Disposition != null)
+                    hash = hash * 59 + this.Disposition.GetHashCode();
 
                 return hash;
             }

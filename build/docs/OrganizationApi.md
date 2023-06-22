@@ -35,8 +35,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Fetch field config for an entity type
 
-
-
 Requires NO permissions: 
 
 
@@ -99,8 +97,6 @@ namespace Example
 
 Gets the organization's settings
 
-
-
 Requires ANY permissions: 
 
 * directory:organization:admin
@@ -161,8 +157,6 @@ Get the list of domains that will be allowed to embed PureCloud applications
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
-
-
 Requires NO permissions: 
 
 
@@ -222,8 +216,6 @@ Get organization IP address whitelist settings
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
-
-
 Requires ANY permissions: 
 
 * directory:organization:admin
@@ -281,8 +273,6 @@ This endpoint does require any parameters.
 
 
 Get a limit change request
-
-
 
 Requires ANY permissions: 
 
@@ -348,8 +338,6 @@ namespace Example
 Get the available limit change requests
 
 Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
-
-
 
 Requires ANY permissions: 
 
@@ -422,8 +410,6 @@ namespace Example
 
 Get a link to the limit documentation
 
-
-
 Requires NO permissions: 
 
 
@@ -480,8 +466,6 @@ This endpoint does require any parameters.
 
 
 Get the effective limits in a namespace for an organization
-
-
 
 Requires ANY permissions: 
 
@@ -546,8 +530,6 @@ namespace Example
 
 Get the default limits in a namespace for an organization
 
-
-
 Requires NO permissions: 
 
 
@@ -609,8 +591,6 @@ namespace Example
 
 
 Get the available limit namespaces
-
-
 
 Requires ANY permissions: 
 
@@ -677,8 +657,6 @@ namespace Example
 
 Get organization.
 
-
-
 Requires NO permissions: 
 
 
@@ -736,8 +714,6 @@ This endpoint does require any parameters.
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
-
-
 Requires NO permissions: 
 
 
@@ -794,8 +770,6 @@ This endpoint does require any parameters.
 
 
 Update the organization's settings
-
-
 
 Requires ANY permissions: 
 
@@ -859,8 +833,6 @@ namespace Example
 
 
 Update organization
-
-
 
 Requires ANY permissions: 
 
@@ -929,8 +901,6 @@ Update the list of domains that will be allowed to embed PureCloud applications
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
-
-
 Requires ANY permissions: 
 
 * directory:organization:admin
@@ -996,8 +966,6 @@ Update organization IP address whitelist settings
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
-
-
 Requires ANY permissions: 
 
 * directory:organization:admin
@@ -1061,8 +1029,6 @@ namespace Example
 
 Update organization.
 
-
-
 Requires ANY permissions: 
 
 * directory:organization:admin
@@ -1125,8 +1091,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
-
-
 
 Requires ANY permissions: 
 

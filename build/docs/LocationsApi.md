@@ -25,8 +25,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a location
 
-
-
 Requires ALL permissions: 
 
 * directory:location:delete
@@ -88,8 +86,6 @@ void (empty response body)
 
 
 Get Location by ID.
-
-
 
 Requires NO permissions: 
 
@@ -155,8 +151,6 @@ namespace Example
 
 Get sublocations for location ID.
 
-
-
 Requires NO permissions: 
 
 
@@ -218,8 +212,6 @@ namespace Example
 
 
 Get a list of all locations.
-
-
 
 Requires NO permissions: 
 
@@ -289,8 +281,6 @@ namespace Example
 
 Search locations using the q64 value returned from a previous search
 
-
-
 Requires NO permissions: 
 
 
@@ -354,8 +344,6 @@ namespace Example
 
 
 Update a location
-
-
 
 Requires ALL permissions: 
 
@@ -422,8 +410,6 @@ namespace Example
 
 Create a location
 
-
-
 Requires ALL permissions: 
 
 * directory:location:add
@@ -486,8 +472,6 @@ namespace Example
 
 
 Search locations
-
-
 
 Requires NO permissions: 
 

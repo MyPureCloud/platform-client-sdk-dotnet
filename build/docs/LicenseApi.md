@@ -26,8 +26,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get PureCloud license definition.
 
-
-
 Requires ANY permissions: 
 
 * authorization:grant:add
@@ -92,8 +90,6 @@ namespace Example
 
 Get all PureCloud license definitions available for the organization.
 
-
-
 Requires ANY permissions: 
 
 * authorization:grant:add
@@ -152,8 +148,6 @@ This endpoint does require any parameters.
 
 
 Get PureCloud license feature toggle value.
-
-
 
 Requires ANY permissions: 
 
@@ -217,8 +211,6 @@ namespace Example
 
 
 Get licenses for specified user.
-
-
 
 Requires ANY permissions: 
 
@@ -286,8 +278,6 @@ Get a page of users and their licenses
 
 Retrieve a page of users in an organization along with the licenses they possess.
 
-
-
 Requires NO permissions: 
 
 
@@ -352,8 +342,6 @@ namespace Example
 
 Get a list of licenses inferred based on a list of roleIds
 
-
-
 Requires NO permissions: 
 
 
@@ -415,8 +403,6 @@ namespace Example
 
 
 Update the organization's license assignments in a batch.
-
-
 
 Requires ANY permissions: 
 
@@ -481,8 +467,6 @@ namespace Example
 
 Switch PureCloud license feature toggle value.
 
-
-
 Requires ANY permissions: 
 
 * authorization:grant:add
@@ -545,8 +529,6 @@ namespace Example
 
 
 Fetch user licenses in a batch.
-
-
 
 Requires ANY permissions: 
 

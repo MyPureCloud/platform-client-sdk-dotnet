@@ -19,9 +19,8 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class TransferRequest :  IEquatable<TransferRequest>
     {
         /// <summary>
-        /// The type of transfer to perform.
+        /// Gets or Sets TransferType
         /// </summary>
-        /// <value>The type of transfer to perform.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TransferTypeEnum
         {
@@ -46,31 +45,32 @@ namespace PureCloudPlatform.Client.V2.Model
             Unattended
         }
         /// <summary>
-        /// The type of transfer to perform.
+        /// Gets or Sets TransferType
         /// </summary>
-        /// <value>The type of transfer to perform.</value>
         [DataMember(Name="transferType", EmitDefaultValue=false)]
         public TransferTypeEnum? TransferType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferRequest" /> class.
         /// </summary>
+        /// <param name="TransferType">TransferType.</param>
         /// <param name="UserId">The user ID of the transfer target..</param>
         /// <param name="Address">The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication..</param>
         /// <param name="UserName">The user name of the transfer target..</param>
         /// <param name="QueueId">The queue ID of the transfer target..</param>
         /// <param name="Voicemail">If true, transfer to the voicemail inbox of the participant that is being replaced..</param>
-        /// <param name="TransferType">The type of transfer to perform..</param>
-        public TransferRequest(string UserId = null, string Address = null, string UserName = null, string QueueId = null, bool? Voicemail = null, TransferTypeEnum? TransferType = null)
+        public TransferRequest(TransferTypeEnum? TransferType = null, string UserId = null, string Address = null, string UserName = null, string QueueId = null, bool? Voicemail = null)
         {
+            this.TransferType = TransferType;
             this.UserId = UserId;
             this.Address = Address;
             this.UserName = UserName;
             this.QueueId = QueueId;
             this.Voicemail = Voicemail;
-            this.TransferType = TransferType;
             
         }
         
+
+
 
 
         /// <summary>
@@ -117,8 +117,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Voicemail { get; set; }
 
 
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,12 +126,12 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class TransferRequest {\n");
 
+            sb.Append("  TransferType: ").Append(TransferType).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  UserName: ").Append(UserName).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
-            sb.Append("  TransferType: ").Append(TransferType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,6 +173,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.TransferType == other.TransferType ||
+                    this.TransferType != null &&
+                    this.TransferType.Equals(other.TransferType)
+                ) &&
+                (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
@@ -198,11 +201,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Voicemail == other.Voicemail ||
                     this.Voicemail != null &&
                     this.Voicemail.Equals(other.Voicemail)
-                ) &&
-                (
-                    this.TransferType == other.TransferType ||
-                    this.TransferType != null &&
-                    this.TransferType.Equals(other.TransferType)
                 );
         }
 
@@ -217,6 +215,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.TransferType != null)
+                    hash = hash * 59 + this.TransferType.GetHashCode();
+
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
 
@@ -231,9 +232,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Voicemail != null)
                     hash = hash * 59 + this.Voicemail.GetHashCode();
-
-                if (this.TransferType != null)
-                    hash = hash * 59 + this.TransferType.GetHashCode();
 
                 return hash;
             }

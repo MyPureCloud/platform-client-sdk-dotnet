@@ -18,6 +18,10 @@ Package info can be found at [https://www.nuget.org/packages/PureCloudPlatform.C
 
 **Warning:** This library is generated using the Genesys Cloud public API swagger definition. Function parameter ordering can change without notice and cause breaking changes. To avoid this, it is recommended to use [named arguments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments) when making API requests.
 
+## Preview API's
+
+**Warning:** Preview API's are included in this SDK. These resources are subject to both breaking and non-breaking changes at any time without notice. This includes, but is not limited to, changing resource names, paths, contracts, documentation, and removing resources entirely. For a full list of the preview API's see [here](https://developer.genesys.cloud/platform/preview-apis)
+
 ### Referencing the Library
 
 If you've used the [Package Manager Console](https://docs.nuget.org/consume/package-manager-console) to install the package, there are no additional steps.
@@ -412,11 +416,9 @@ Alternatively, the code can be compiled via the command line. The official build
 
 The SDK is automatically regenerated and published from the API's definition after each API release. For more information on the build process, see the [platform-client-sdk-common](https://github.com/MyPureCloud/platform-client-sdk-common) project.
 
-
 ## Versioning
 
 The SDK's version is incremented according to the [Semantic Versioning Specification](https://semver.org/). The decision to increment version numbers is determined by [diffing the Platform API's swagger](https://github.com/purecloudlabs/platform-client-sdk-common/blob/master/modules/swaggerDiff.js) for automated builds, and optionally forcing a version bump when a build is triggered manually (e.g. releasing a bugfix).
-
 
 ## Support
 

@@ -23,7 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get status for async query for Flow aggregates
 
-
+GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -88,7 +88,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -155,7 +155,7 @@ namespace Example
 
 Query for flow activity observations
 
-
+PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -224,7 +224,7 @@ namespace Example
 
 Query for flow aggregates asynchronously
 
-
+PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -289,8 +289,6 @@ namespace Example
 
 Query for flow aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:flowAggregate:view
@@ -353,8 +351,6 @@ namespace Example
 
 
 Query for flow observations
-
-
 
 Requires ANY permissions: 
 

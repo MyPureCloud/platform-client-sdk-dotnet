@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">The creation date and time of the label. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The last modification date and time of the label. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DocumentCount">Number of documents assigned to this label..</param>
-        public LabelResponse(string Name = null, string Color = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? DocumentCount = null)
+        /// <param name="ExternalId">The external id associated with the label..</param>
+        public LabelResponse(string Name = null, string Color = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? DocumentCount = null, string ExternalId = null)
         {
             this.Name = Name;
             this.Color = Color;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.DocumentCount = DocumentCount;
+            this.ExternalId = ExternalId;
             
         }
         
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The external id associated with the label.
+        /// </summary>
+        /// <value>The external id associated with the label.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -115,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DocumentCount: ").Append(DocumentCount).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -187,6 +199,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DocumentCount.Equals(other.DocumentCount)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -221,6 +238,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DocumentCount != null)
                     hash = hash * 59 + this.DocumentCount.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

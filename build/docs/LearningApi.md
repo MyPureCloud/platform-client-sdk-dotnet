@@ -45,8 +45,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a learning assignment
 
-
-
 Requires ANY permissions: 
 
 * learning:assignment:delete
@@ -111,8 +109,6 @@ Delete a learning module
 
 This will delete a learning module if it is unpublished or it will delete a published and archived learning module
 
-
-
 Requires ANY permissions: 
 
 * learning:module:delete
@@ -176,8 +172,6 @@ void (empty response body)
 Get Learning Assignment
 
 Permission not required if you are the assigned user of the learning assignment
-
-
 
 Requires ANY permissions: 
 
@@ -245,8 +239,6 @@ namespace Example
 List of Learning module Assignments
 
 Either moduleId or user value is required
-
-
 
 Requires ANY permissions: 
 
@@ -339,8 +331,6 @@ namespace Example
 
 List of Learning Assignments assigned to current user
 
-
-
 Requires NO permissions: 
 
 
@@ -429,8 +419,6 @@ namespace Example
 
 Get a learning module
 
-
-
 Requires ANY permissions: 
 
 * learning:module:view
@@ -495,8 +483,6 @@ namespace Example
 
 
 Get a specific Learning Module job status
-
-
 
 Requires ANY permissions: 
 
@@ -563,8 +549,6 @@ namespace Example
 
 Get a learning module rule
 
-
-
 Requires ANY permissions: 
 
 * learning:rule:view
@@ -627,8 +611,6 @@ namespace Example
 
 
 Get specific version of a published module
-
-
 
 Requires ANY permissions: 
 
@@ -696,8 +678,6 @@ namespace Example
 
 
 Get all learning modules of an organization
-
-
 
 Requires ANY permissions: 
 
@@ -780,8 +760,6 @@ namespace Example
 
 Get all learning modules of an organization including assignments for a specific user
 
-
-
 Requires ALL permissions: 
 
 * learning:module:view
@@ -858,8 +836,6 @@ namespace Example
 
 Get a specific Learning Module cover art using ID
 
-
-
 Requires ANY permissions: 
 
 * learning:coverart:view
@@ -922,8 +898,6 @@ namespace Example
 
 
 Update Learning Assignment
-
-
 
 Requires NO permissions: 
 
@@ -989,8 +963,6 @@ namespace Example
 
 Reschedule Learning Assignment
 
-
-
 Requires ANY permissions: 
 
 * learning:assignment:reschedule
@@ -1055,8 +1027,6 @@ namespace Example
 
 
 Score learning assessment for preview
-
-
 
 Requires ANY permissions: 
 
@@ -1125,8 +1095,6 @@ Reassign Learning Assignment
 
 This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
 
-
-
 Requires ANY permissions: 
 
 * learning:assignment:add
@@ -1192,8 +1160,6 @@ Reset Learning Assignment
 
 This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
 
-
-
 Requires ANY permissions: 
 
 * learning:assignment:reset
@@ -1256,8 +1222,6 @@ namespace Example
 
 
 Create Learning Assignment
-
-
 
 Requires ANY permissions: 
 
@@ -1322,8 +1286,6 @@ namespace Example
 
 Retrieve aggregated assignment data
 
-
-
 Requires ANY permissions: 
 
 * learning:assignment:view
@@ -1387,8 +1349,6 @@ namespace Example
 
 Add multiple learning assignments
 
-
-
 Requires ANY permissions: 
 
 * learning:assignment:add
@@ -1451,8 +1411,6 @@ namespace Example
 
 
 Remove multiple Learning Assignments
-
-
 
 Requires ANY permissions: 
 
@@ -1519,8 +1477,6 @@ Starts a specified operation on learning module
 
 This will initiate operation specified in the request body for a learning module
 
-
-
 Requires ANY permissions: 
 
 * learning:module:add
@@ -1585,8 +1541,6 @@ namespace Example
 
 
 Publish a Learning module
-
-
 
 Requires ANY permissions: 
 
@@ -1653,8 +1607,6 @@ Create a new learning module
 
 This will create a new unpublished learning module with the specified fields.
 
-
-
 Requires ANY permissions: 
 
 * learning:module:add
@@ -1719,8 +1671,6 @@ namespace Example
 Get users for learning module rule
 
 This will get the users who matches the given rule.
-
-
 
 Requires ANY permissions: 
 
@@ -1789,8 +1739,6 @@ namespace Example
 
 Get list of possible slots where a learning activity can be scheduled.
 
-
-
 Requires ANY permissions: 
 
 * learning:scheduleSlot:view
@@ -1855,8 +1803,6 @@ namespace Example
 Update a learning module
 
 This will update the name, description, completion time in days and inform steps for a learning module
-
-
 
 Requires ANY permissions: 
 
@@ -1924,8 +1870,6 @@ namespace Example
 Update a learning module rule
 
 This will update a learning module rule with the specified fields.
-
-
 
 Requires ANY permissions: 
 

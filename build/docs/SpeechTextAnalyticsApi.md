@@ -54,8 +54,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a Speech & Text Analytics program by id
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:delete
@@ -120,8 +118,6 @@ void (empty response body)
 
 Delete All Speech & Text Analytics SentimentFeedback
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:feedback:delete
@@ -178,8 +174,6 @@ void (empty response body)
 
 
 Delete a Speech & Text Analytics SentimentFeedback by Id
-
-
 
 Requires ALL permissions: 
 
@@ -243,8 +237,6 @@ void (empty response body)
 
 Delete a Speech & Text Analytics topic by id
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:topic:delete
@@ -306,8 +298,6 @@ void (empty response body)
 
 
 Get Speech and Text Analytics for a specific conversation
-
-
 
 Requires ANY permissions: 
 
@@ -371,8 +361,6 @@ namespace Example
 
 
 Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
-
-
 
 Requires ANY permissions: 
 
@@ -439,8 +427,6 @@ namespace Example
 
 Get a Speech & Text Analytics program by id
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:view
@@ -503,8 +489,6 @@ namespace Example
 
 
 Get Speech & Text Analytics program mappings to queues and flows by id
-
-
 
 Requires ALL permissions: 
 
@@ -569,8 +553,6 @@ namespace Example
 
 Get transcription engine settings of a program
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:view
@@ -633,8 +615,6 @@ namespace Example
 
 
 Get the list of Speech & Text Analytics programs
-
-
 
 Requires ALL permissions: 
 
@@ -703,8 +683,6 @@ namespace Example
 
 Get a Speech & Text Analytics general program job by id
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:add
@@ -771,8 +749,6 @@ namespace Example
 
 Get the list of Speech & Text Analytics programs mappings to queues and flows
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:view
@@ -838,8 +814,6 @@ namespace Example
 
 Get a Speech & Text Analytics publish programs job by id
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:publish
@@ -903,8 +877,6 @@ namespace Example
 
 Get supported dialects for each transcription engine
 
-
-
 Requires NO permissions: 
 
 
@@ -961,8 +933,6 @@ This endpoint does require any parameters.
 
 
 Get the list of Speech & Text Analytics unpublished programs
-
-
 
 Requires ALL permissions: 
 
@@ -1029,8 +999,6 @@ namespace Example
 
 Get the list of Speech & Text Analytics sentiment supported dialects
 
-
-
 Requires NO permissions: 
 
 
@@ -1087,8 +1055,6 @@ This endpoint does require any parameters.
 
 
 Get the list of Speech & Text Analytics SentimentFeedback
-
-
 
 Requires ALL permissions: 
 
@@ -1153,8 +1119,6 @@ namespace Example
 
 Get Speech And Text Analytics Settings
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:settings:view
@@ -1212,8 +1176,6 @@ This endpoint does require any parameters.
 
 
 Get a Speech & Text Analytics topic by id
-
-
 
 Requires ALL permissions: 
 
@@ -1277,8 +1239,6 @@ namespace Example
 
 
 Get the list of Speech & Text Analytics topics
-
-
 
 Requires ALL permissions: 
 
@@ -1355,8 +1315,6 @@ namespace Example
 
 Get list of supported Speech & Text Analytics topics dialects
 
-
-
 Requires NO permissions: 
 
 
@@ -1413,8 +1371,6 @@ This endpoint does require any parameters.
 
 
 Get the Speech & Text Analytics general topics for a given dialect
-
-
 
 Requires ALL permissions: 
 
@@ -1479,8 +1435,6 @@ namespace Example
 
 Get the list of general topics from the org and the system with their current status
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:topic:view
@@ -1543,8 +1497,6 @@ namespace Example
 
 
 Get a Speech & Text Analytics publish topics job by id
-
-
 
 Requires ALL permissions: 
 
@@ -1609,8 +1561,6 @@ namespace Example
 
 Patch Speech And Text Analytics Settings
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:settings:edit
@@ -1674,8 +1624,6 @@ namespace Example
 
 Create new Speech & Text Analytics program
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:add
@@ -1738,8 +1686,6 @@ namespace Example
 
 
 Create new Speech & Text Analytics general program job
-
-
 
 Requires ALL permissions: 
 
@@ -1807,8 +1753,6 @@ namespace Example
 
 Create new Speech & Text Analytics publish programs job
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:publish
@@ -1871,8 +1815,6 @@ namespace Example
 
 
 Create a Speech & Text Analytics SentimentFeedback
-
-
 
 Requires ALL permissions: 
 
@@ -1937,8 +1879,6 @@ namespace Example
 
 Create new Speech & Text Analytics topic
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:topic:add
@@ -2001,8 +1941,6 @@ namespace Example
 
 
 Create new Speech & Text Analytics publish topics job
-
-
 
 Requires ALL permissions: 
 
@@ -2067,8 +2005,6 @@ namespace Example
 
 Search resources.
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -2132,8 +2068,6 @@ namespace Example
 
 
 Update existing Speech & Text Analytics program
-
-
 
 Requires ALL permissions: 
 
@@ -2200,8 +2134,6 @@ namespace Example
 
 Set Speech & Text Analytics program mappings to queues and flows
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:program:edit
@@ -2266,8 +2198,6 @@ namespace Example
 
 
 Update transcription engine settings of a program
-
-
 
 Requires ALL permissions: 
 
@@ -2334,8 +2264,6 @@ namespace Example
 
 Update Speech And Text Analytics Settings
 
-
-
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:settings:edit
@@ -2398,8 +2326,6 @@ namespace Example
 
 
 Update existing Speech & Text Analytics topic
-
-
 
 Requires ALL permissions: 
 

@@ -25,8 +25,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Remove all subscriptions
 
-
-
 Requires NO permissions: 
 
 
@@ -87,8 +85,6 @@ void (empty response body)
 
 
 Get available notification topics.
-
-
 
 Requires NO permissions: 
 
@@ -154,8 +150,6 @@ namespace Example
 
 The list of all subscriptions for this channel
 
-
-
 Requires NO permissions: 
 
 
@@ -217,8 +211,6 @@ namespace Example
 
 
 The list of existing channels
-
-
 
 Requires NO permissions: 
 
@@ -284,8 +276,6 @@ Verify a channel still exists and is valid
 
 Returns a 200 OK if channel exists, and a 404 Not Found if it doesn't
 
-
-
 Requires NO permissions: 
 
 
@@ -346,8 +336,6 @@ void (empty response body)
 
 
 Add a list of subscriptions to the existing list of subscriptions
-
-
 
 Requires NO permissions: 
 
@@ -417,8 +405,6 @@ Create a new channel
 
 There is a limit of 20 channels per user/app combination. Creating a 21st channel will remove the channel with oldest last used date. Channels without an active connection will be removed first.
 
-
-
 Requires NO permissions: 
 
 
@@ -475,8 +461,6 @@ This endpoint does require any parameters.
 
 
 Replace the current list of subscriptions with a new list.
-
-
 
 Requires NO permissions: 
 

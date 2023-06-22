@@ -30,8 +30,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete OAuth Client
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:delete
@@ -93,8 +91,6 @@ void (empty response body)
 
 
 Get a client that is authorized by the resource owner
-
-
 
 Requires ANY permissions: 
 
@@ -161,8 +157,6 @@ namespace Example
 
 List clients that have been authorized, requested, or revoked by the resource owner
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:authorize
@@ -226,8 +220,6 @@ namespace Example
 
 Get OAuth Client
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:view
@@ -290,8 +282,6 @@ namespace Example
 
 
 Get the results of a usage query
-
-
 
 Requires ANY permissions: 
 
@@ -361,8 +351,6 @@ Get a summary of OAuth client API usage
 
 After calling this method, you will then need to poll for the query results based on the returned execution Id
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:view
@@ -429,8 +417,6 @@ namespace Example
 
 The list of OAuth clients
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:view
@@ -488,8 +474,6 @@ This endpoint does require any parameters.
 
 
 An OAuth scope
-
-
 
 Requires NO permissions: 
 
@@ -555,8 +539,6 @@ namespace Example
 
 The list of OAuth scopes
 
-
-
 Requires NO permissions: 
 
 
@@ -620,8 +602,6 @@ namespace Example
 Regenerate Client Secret
 
 This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-
-
 
 Requires ANY permissions: 
 
@@ -687,8 +667,6 @@ namespace Example
 Query for OAuth client API usage
 
 After calling this method, you will then need to poll for the query results based on the returned execution Id
-
-
 
 Requires ANY permissions: 
 
@@ -758,8 +736,6 @@ Create OAuth client
 
 The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:add
@@ -822,8 +798,6 @@ namespace Example
 
 
 Update OAuth Client
-
-
 
 Requires ANY permissions: 
 

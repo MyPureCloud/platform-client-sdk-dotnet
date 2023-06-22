@@ -27,8 +27,6 @@ Delete Language (Deprecated)
 
 This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
 
-
-
 Requires ANY permissions: 
 
 * routing:skill:manage
@@ -92,8 +90,6 @@ void (empty response body)
 Get Language (Deprecated)
 
 This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
-
-
 
 Requires ANY permissions: 
 
@@ -159,8 +155,6 @@ namespace Example
 Get the list of supported languages. (Deprecated)
 
 This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
-
-
 
 Requires ANY permissions: 
 
@@ -231,8 +225,6 @@ namespace Example
 
 Get all available languages for translation
 
-
-
 Requires NO permissions: 
 
 
@@ -289,8 +281,6 @@ This endpoint does require any parameters.
 
 
 Get the builtin translation for a language
-
-
 
 Requires NO permissions: 
 
@@ -354,8 +344,6 @@ namespace Example
 
 Get effective translation for an organization by language
 
-
-
 Requires NO permissions: 
 
 
@@ -417,8 +405,6 @@ namespace Example
 
 
 Get effective language translation for a user
-
-
 
 Requires NO permissions: 
 
@@ -483,8 +469,6 @@ namespace Example
 Create Language (Deprecated)
 
 This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
-
-
 
 Requires ANY permissions: 
 

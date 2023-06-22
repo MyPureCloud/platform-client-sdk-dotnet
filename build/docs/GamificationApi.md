@@ -80,8 +80,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete an External Metric Definition
 
-
-
 Requires ANY permissions: 
 
 * employeePerformance:externalMetricDefinition:delete
@@ -143,8 +141,6 @@ void (empty response body)
 
 
 Get an External Metric Definition
-
-
 
 Requires ANY permissions: 
 
@@ -208,8 +204,6 @@ namespace Example
 
 
 Get a list of External Metric Definitions of an organization, sorted by name in ascending order
-
-
 
 Requires ANY permissions: 
 
@@ -275,8 +269,6 @@ namespace Example
 
 
 Get insights summary
-
-
 
 Requires ANY permissions: 
 
@@ -361,8 +353,6 @@ namespace Example
 
 Get insights details for the current user
 
-
-
 Requires ANY permissions: 
 
 * gamification:insights:view
@@ -433,8 +423,6 @@ namespace Example
 
 
 Get insights overall trend for the current user
-
-
 
 Requires ANY permissions: 
 
@@ -511,8 +499,6 @@ namespace Example
 
 Get insights overall trend
 
-
-
 Requires ANY permissions: 
 
 * gamification:insights:viewAll
@@ -588,8 +574,6 @@ namespace Example
 
 Query users in a profile during a period of time
 
-
-
 Requires ANY permissions: 
 
 * gamification:insights:viewAll
@@ -658,8 +642,6 @@ namespace Example
 
 
 Get insights user trend for the current user
-
-
 
 Requires ANY permissions: 
 
@@ -736,8 +718,6 @@ namespace Example
 
 Get insights details for the user
 
-
-
 Requires ANY permissions: 
 
 * gamification:insights:viewAll
@@ -810,8 +790,6 @@ namespace Example
 
 
 Get insights user trend for the user
-
-
 
 Requires ANY permissions: 
 
@@ -890,8 +868,6 @@ namespace Example
 
 Leaderboard of the requesting user's division or performance profile
 
-
-
 Requires ANY permissions: 
 
 * gamification:leaderboard:view
@@ -958,8 +934,6 @@ namespace Example
 
 
 Leaderboard by filter type
-
-
 
 Requires ANY permissions: 
 
@@ -1032,8 +1006,6 @@ namespace Example
 
 Best Points by division or performance profile
 
-
-
 Requires ANY permissions: 
 
 * gamification:leaderboard:viewAll
@@ -1099,8 +1071,6 @@ namespace Example
 
 Best Points of the requesting user's current performance profile or division
 
-
-
 Requires ANY permissions: 
 
 * gamification:leaderboard:view
@@ -1158,8 +1128,6 @@ This endpoint does require any parameters.
 
 
 Metric definition by id
-
-
 
 Requires ANY permissions: 
 
@@ -1226,8 +1194,6 @@ All metric definitions
 
 Retrieves the metric definitions and their corresponding default objectives used to create a gamified metric
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:view
@@ -1285,8 +1251,6 @@ This endpoint does require any parameters.
 
 
 Performance profile by id
-
-
 
 Requires ANY permissions: 
 
@@ -1353,8 +1317,6 @@ namespace Example
 
 Members of a given performance profile
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:view
@@ -1417,8 +1379,6 @@ namespace Example
 
 
 Performance profile gamified metric by id
-
-
 
 Requires ANY permissions: 
 
@@ -1488,8 +1448,6 @@ namespace Example
 
 
 All gamified metrics for a given performance profile
-
-
 
 Requires ANY permissions: 
 
@@ -1562,8 +1520,6 @@ namespace Example
 
 All metrics for a given performance profile with objective details such as order and maxPoints
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:view
@@ -1631,8 +1587,6 @@ namespace Example
 
 All performance profiles
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:view
@@ -1692,8 +1646,6 @@ This endpoint does require any parameters.
 
 
 Performance profile of a user
-
-
 
 Requires ANY permissions: 
 
@@ -1762,8 +1714,6 @@ namespace Example
 
 Performance profile of the requesting user
 
-
-
 Requires NO permissions: 
 
 
@@ -1825,8 +1775,6 @@ namespace Example
 
 
 Workday performance metrics of the requesting user
-
-
 
 Requires ANY permissions: 
 
@@ -1893,8 +1841,6 @@ namespace Example
 
 Attendance status metrics of the requesting user
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:view
@@ -1960,8 +1906,6 @@ namespace Example
 
 Best points of the requesting user
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:view
@@ -2019,8 +1963,6 @@ This endpoint does require any parameters.
 
 
 All-time points of the requesting user
-
-
 
 Requires ANY permissions: 
 
@@ -2085,8 +2027,6 @@ namespace Example
 
 Average points of the requesting user's division or performance profile
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:view
@@ -2149,8 +2089,6 @@ namespace Example
 
 
 Points trends of the requesting user
-
-
 
 Requires ANY permissions: 
 
@@ -2218,8 +2156,6 @@ namespace Example
 
 
 Average performance values trends by metric of a user
-
-
 
 Requires ANY permissions: 
 
@@ -2295,8 +2231,6 @@ namespace Example
 
 
 Average performance values trends by metric of a division or a performance profile
-
-
 
 Requires ANY permissions: 
 
@@ -2375,8 +2309,6 @@ namespace Example
 
 Average performance values trends by metric of the requesting user
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:view
@@ -2452,8 +2384,6 @@ namespace Example
 
 Workday performance metrics for a user
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:viewAll
@@ -2520,8 +2450,6 @@ namespace Example
 
 
 Attendance status metrics for a user
-
-
 
 Requires ANY permissions: 
 
@@ -2590,8 +2518,6 @@ namespace Example
 
 Best points of a user
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:viewAll
@@ -2654,8 +2580,6 @@ namespace Example
 
 
 All-time points for a user
-
-
 
 Requires ANY permissions: 
 
@@ -2721,8 +2645,6 @@ namespace Example
 
 
 Points trend for a user
-
-
 
 Requires ANY permissions: 
 
@@ -2793,8 +2715,6 @@ namespace Example
 
 Values trends of a user
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:viewAll
@@ -2864,8 +2784,6 @@ namespace Example
 
 Workday average points by target group
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:viewAll
@@ -2932,8 +2850,6 @@ namespace Example
 
 
 Workday average values by target group
-
-
 
 Requires ANY permissions: 
 
@@ -3003,8 +2919,6 @@ namespace Example
 
 
 Values trend by target group
-
-
 
 Requires ANY permissions: 
 
@@ -3077,8 +2991,6 @@ namespace Example
 
 Average values of the requesting user's division or performance profile
 
-
-
 Requires ANY permissions: 
 
 * gamification:scorecard:view
@@ -3143,8 +3055,6 @@ namespace Example
 
 
 Values trends of the requesting user or group
-
-
 
 Requires ANY permissions: 
 
@@ -3217,8 +3127,6 @@ namespace Example
 
 Gamification activation status
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:view
@@ -3278,8 +3186,6 @@ This endpoint does require any parameters.
 
 
 Objective template by id
-
-
 
 Requires ANY permissions: 
 
@@ -3344,8 +3250,6 @@ namespace Example
 
 All objective templates
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:view
@@ -3403,8 +3307,6 @@ This endpoint does require any parameters.
 
 
 Update External Metric Definition
-
-
 
 Requires ANY permissions: 
 
@@ -3471,8 +3373,6 @@ namespace Example
 
 Write External Metric Data
 
-
-
 Requires ANY permissions: 
 
 * employeePerformance:externalMetricData:add
@@ -3535,8 +3435,6 @@ namespace Example
 
 
 Create External Metric Definition
-
-
 
 Requires ANY permissions: 
 
@@ -3601,8 +3499,6 @@ namespace Example
 
 Activate a performance profile
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:update
@@ -3666,8 +3562,6 @@ namespace Example
 
 Deactivate a performance profile
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:update
@@ -3730,8 +3624,6 @@ namespace Example
 
 
 Assign members to a given performance profile
-
-
 
 Requires ANY permissions: 
 
@@ -3798,8 +3690,6 @@ namespace Example
 
 Validate member assignment
 
-
-
 Requires ANY permissions: 
 
 * gamification:profile:update
@@ -3864,8 +3754,6 @@ namespace Example
 
 
 Creates a linked metric
-
-
 
 Requires ANY permissions: 
 
@@ -3934,8 +3822,6 @@ namespace Example
 
 Creates a gamified metric with a given metric definition and metric objective under in a performance profile
 
-
-
 Requires ALL permissions: 
 
 * gamification:profile:update
@@ -4000,8 +3886,6 @@ namespace Example
 
 
 Create a new custom performance profile
-
-
 
 Requires ANY permissions: 
 
@@ -4068,8 +3952,6 @@ namespace Example
 
 Query performance profiles in date range for a user
 
-
-
 Requires ANY permissions: 
 
 * gamification:agentProfileMembership:view
@@ -4135,8 +4017,6 @@ namespace Example
 
 Query performance profiles in date range for the current user
 
-
-
 Requires NO permissions: 
 
 
@@ -4198,8 +4078,6 @@ namespace Example
 
 
 Updates a performance profile
-
-
 
 Requires ANY permissions: 
 
@@ -4265,8 +4143,6 @@ namespace Example
 
 
 Updates a metric in performance profile
-
-
 
 Requires ALL permissions: 
 
@@ -4334,8 +4210,6 @@ namespace Example
 
 
 Update gamification activation status
-
-
 
 Requires ANY permissions: 
 

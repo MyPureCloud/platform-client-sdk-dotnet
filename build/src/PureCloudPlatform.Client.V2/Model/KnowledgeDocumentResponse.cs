@@ -74,7 +74,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Labels">The references to labels associated with the document..</param>
         /// <param name="KnowledgeBase">Knowledge base to which the document belongs to..</param>
         /// <param name="Variations">Variations of the document..</param>
-        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, List<DocumentVariation> Variations = null)
+        /// <param name="ExternalId">The reference to external id associated with the document..</param>
+        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, List<DocumentVariation> Variations = null, string ExternalId = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -90,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Labels = Labels;
             this.KnowledgeBase = KnowledgeBase;
             this.Variations = Variations;
+            this.ExternalId = ExternalId;
             
         }
         
@@ -242,6 +244,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The reference to external id associated with the document.
+        /// </summary>
+        /// <value>The reference to external id associated with the document.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -275,6 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Labels: ").Append(Labels).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("  Variations: ").Append(Variations).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -402,6 +414,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Variations.SequenceEqual(other.Variations)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -469,6 +486,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Variations != null)
                     hash = hash * 59 + this.Variations.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

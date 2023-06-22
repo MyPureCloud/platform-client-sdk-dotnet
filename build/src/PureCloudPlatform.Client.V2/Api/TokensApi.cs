@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns></returns>
         
-        
         void DeleteToken (string userId);
 
         /// <summary>
@@ -39,7 +38,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteTokenWithHttpInfo (string userId);
 
         /// <summary>
@@ -50,7 +48,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
-        
         
         void DeleteTokensMe ();
 
@@ -63,7 +60,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteTokensMeWithHttpInfo ();
 
         /// <summary>
@@ -74,7 +70,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TokenInfo</returns>
-        
         
         TokenInfo GetTokensMe ();
 
@@ -87,7 +82,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TokenInfo</returns>
         
-        
         ApiResponse<TokenInfo> GetTokensMeWithHttpInfo ();
 
         /// <summary>
@@ -95,11 +89,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         IdleTokenTimeout GetTokensTimeout ();
 
         /// <summary>
@@ -107,11 +101,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         ApiResponse<IdleTokenTimeout> GetTokensTimeoutWithHttpInfo ();
 
         /// <summary>
@@ -122,7 +116,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
-        
         
         void HeadTokensMe ();
 
@@ -135,7 +128,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> HeadTokensMeWithHttpInfo ();
 
         /// <summary>
@@ -143,12 +135,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         IdleTokenTimeout PutTokensTimeout (IdleTokenTimeout body = null);
 
         /// <summary>
@@ -156,12 +148,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         ApiResponse<IdleTokenTimeout> PutTokensTimeoutWithHttpInfo (IdleTokenTimeout body = null);
 
         #endregion Synchronous Operations
@@ -178,7 +170,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteTokenAsync (string userId);
 
         /// <summary>
@@ -191,7 +182,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokenAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -202,7 +192,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteTokensMeAsync ();
 
@@ -215,7 +204,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokensMeAsyncWithHttpInfo ();
 
         /// <summary>
@@ -226,7 +214,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of TokenInfo</returns>
-        
         
         System.Threading.Tasks.Task<TokenInfo> GetTokensMeAsync ();
 
@@ -239,7 +226,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (TokenInfo)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TokenInfo>> GetTokensMeAsyncWithHttpInfo ();
 
         /// <summary>
@@ -247,11 +233,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<IdleTokenTimeout> GetTokensTimeoutAsync ();
 
         /// <summary>
@@ -259,11 +245,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IdleTokenTimeout)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<IdleTokenTimeout>> GetTokensTimeoutAsyncWithHttpInfo ();
 
         /// <summary>
@@ -274,7 +260,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task HeadTokensMeAsync ();
 
@@ -287,7 +272,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> HeadTokensMeAsyncWithHttpInfo ();
 
         /// <summary>
@@ -295,12 +279,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<IdleTokenTimeout> PutTokensTimeoutAsync (IdleTokenTimeout body = null);
 
         /// <summary>
@@ -308,12 +292,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (IdleTokenTimeout)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<IdleTokenTimeout>> PutTokensTimeoutAsyncWithHttpInfo (IdleTokenTimeout body = null);
 
         #endregion Asynchronous Operations
@@ -410,11 +394,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete all auth tokens for the specified user. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns></returns>
-        
         
         public void DeleteToken (string userId)
         {
@@ -423,11 +407,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete all auth tokens for the specified user. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteTokenWithHttpInfo (string userId)
         { 
@@ -507,11 +491,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete all auth tokens for the specified user. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteTokenAsync (string userId)
         {
@@ -521,11 +505,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete all auth tokens for the specified user. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokenAsyncWithHttpInfo (string userId)
         { 
@@ -607,10 +591,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete auth token used to make the request. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
-        
         
         public void DeleteTokensMe ()
         {
@@ -619,10 +603,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete auth token used to make the request. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteTokensMeWithHttpInfo ()
         { 
@@ -698,10 +682,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete auth token used to make the request. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteTokensMeAsync ()
         {
@@ -711,10 +695,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete auth token used to make the request. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokensMeAsyncWithHttpInfo ()
         { 
@@ -791,10 +775,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch information about the current token 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TokenInfo</returns>
-        
         
         public TokenInfo GetTokensMe ()
         {
@@ -804,10 +788,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch information about the current token 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TokenInfo</returns>
-        
         
         public ApiResponse< TokenInfo > GetTokensMeWithHttpInfo ()
         { 
@@ -883,10 +867,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch information about the current token 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of TokenInfo</returns>
-        
         
         public async System.Threading.Tasks.Task<TokenInfo> GetTokensMeAsync ()
         {
@@ -897,10 +881,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch information about the current token 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (TokenInfo)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TokenInfo>> GetTokensMeAsyncWithHttpInfo ()
         { 
@@ -977,11 +961,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current Idle Token Timeout Value 
+        /// 
+        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         public IdleTokenTimeout GetTokensTimeout ()
         {
              ApiResponse<IdleTokenTimeout> localVarResponse = GetTokensTimeoutWithHttpInfo();
@@ -990,11 +975,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current Idle Token Timeout Value 
+        /// 
+        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         public ApiResponse< IdleTokenTimeout > GetTokensTimeoutWithHttpInfo ()
         { 
 
@@ -1069,11 +1055,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current Idle Token Timeout Value 
+        /// 
+        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<IdleTokenTimeout> GetTokensTimeoutAsync ()
         {
              ApiResponse<IdleTokenTimeout> localVarResponse = await GetTokensTimeoutAsyncWithHttpInfo();
@@ -1083,11 +1070,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current Idle Token Timeout Value 
+        /// 
+        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IdleTokenTimeout)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<IdleTokenTimeout>> GetTokensTimeoutAsyncWithHttpInfo ()
         { 
 
@@ -1163,10 +1151,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Verify user token 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
-        
         
         public void HeadTokensMe ()
         {
@@ -1175,10 +1163,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Verify user token 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> HeadTokensMeWithHttpInfo ()
         { 
@@ -1254,10 +1242,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Verify user token 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task HeadTokensMeAsync ()
         {
@@ -1267,10 +1255,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Verify user token 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadTokensMeAsyncWithHttpInfo ()
         { 
@@ -1347,12 +1335,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update or Enable/Disable the Idle Token Timeout 
+        /// 
+        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         public IdleTokenTimeout PutTokensTimeout (IdleTokenTimeout body = null)
         {
              ApiResponse<IdleTokenTimeout> localVarResponse = PutTokensTimeoutWithHttpInfo(body);
@@ -1361,12 +1350,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update or Enable/Disable the Idle Token Timeout 
+        /// 
+        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         public ApiResponse< IdleTokenTimeout > PutTokensTimeoutWithHttpInfo (IdleTokenTimeout body = null)
         { 
 
@@ -1447,12 +1437,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update or Enable/Disable the Idle Token Timeout 
+        /// 
+        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of IdleTokenTimeout</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<IdleTokenTimeout> PutTokensTimeoutAsync (IdleTokenTimeout body = null)
         {
              ApiResponse<IdleTokenTimeout> localVarResponse = await PutTokensTimeoutAsyncWithHttpInfo(body);
@@ -1462,12 +1453,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update or Enable/Disable the Idle Token Timeout 
+        /// 
+        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (IdleTokenTimeout)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<IdleTokenTimeout>> PutTokensTimeoutAsyncWithHttpInfo (IdleTokenTimeout body = null)
         { 
 

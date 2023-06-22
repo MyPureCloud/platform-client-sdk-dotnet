@@ -21,6 +21,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSystempresences**](PresenceApi.html#getsystempresences) | **GET** /api/v2/systempresences | Get the list of SystemPresences |
 | [**GetUserPresence**](PresenceApi.html#getuserpresence) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
 | [**GetUserPresencesPurecloud**](PresenceApi.html#getuserpresencespurecloud) | **GET** /api/v2/users/{userId}/presences/purecloud | Get a user&#39;s Genesys Cloud presence. |
+| [**GetUsersPresenceBulk**](PresenceApi.html#getuserspresencebulk) | **GET** /api/v2/users/presences/{sourceId}/bulk | Get bulk user presences for a single presence source |
+| [**GetUsersPresencesPurecloudBulk**](PresenceApi.html#getuserspresencespurecloudbulk) | **GET** /api/v2/users/presences/purecloud/bulk | Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source |
 | [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
 | [**PatchUserPresencesPurecloud**](PresenceApi.html#patchuserpresencespurecloud) | **PATCH** /api/v2/users/{userId}/presences/purecloud | Patch a Genesys Cloud user&#39;s presence |
 | [**PostPresenceDefinitions0**](PresenceApi.html#postpresencedefinitions0) | **POST** /api/v2/presence/definitions | Create a Presence Definition |
@@ -42,7 +44,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a Presence Definition
 
-
+DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -107,8 +109,6 @@ void (empty response body)
 
 Delete a Presence Source
 
-
-
 Requires ANY permissions: 
 
 * presence:source:delete
@@ -172,8 +172,6 @@ void (empty response body)
 
 Delete a Presence Definition
 
-
-
 Requires ALL permissions: 
 
 * presence:presenceDefinition:delete
@@ -236,7 +234,7 @@ void (empty response body)
 
 Get a Presence Definition
 
-
+GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -301,7 +299,7 @@ namespace Example
 
 Get a list of Presence Definitions
 
-
+GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -368,8 +366,6 @@ namespace Example
 
 Get the presence settings
 
-
-
 Requires ALL permissions: 
 
 * presence:settings:view
@@ -427,8 +423,6 @@ This endpoint does require any parameters.
 
 
 Get a Presence Source
-
-
 
 Requires ALL permissions: 
 
@@ -493,8 +487,6 @@ namespace Example
 
 Get a list of Presence Sources
 
-
-
 Requires ALL permissions: 
 
 * presence:source:view
@@ -558,8 +550,6 @@ namespace Example
 
 Get a user's Primary Presence Source
 
-
-
 Requires ALL permissions: 
 
 * presence:userPrimarySource:view
@@ -622,8 +612,6 @@ namespace Example
 
 
 Get a Presence Definition
-
-
 
 Requires ALL permissions: 
 
@@ -689,8 +677,6 @@ namespace Example
 
 
 Get an Organization's list of Presence Definitions
-
-
 
 Requires NO permissions: 
 
@@ -760,8 +746,6 @@ namespace Example
 
 Get the list of SystemPresences
 
-
-
 Requires NO permissions: 
 
 
@@ -820,8 +804,6 @@ This endpoint does require any parameters.
 Get a user's Presence
 
 Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
-
-
 
 Requires NO permissions: 
 
@@ -889,8 +871,6 @@ Get a user's Genesys Cloud presence.
 
 Get the default Genesys Cloud user presence source PURECLOUD
 
-
-
 Requires NO permissions: 
 
 
@@ -945,6 +925,132 @@ namespace Example
 
 [**UserPresence**](UserPresence.html)
 
+<a name="getuserspresencebulk"></a>
+
+## [**List&lt;UcUserPresence&gt;**](UcUserPresence.html) GetUsersPresenceBulk (string sourceId, List<string> id = null)
+
+
+
+Get bulk user presences for a single presence source
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUsersPresenceBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var sourceId = sourceId_example;  // string | The requested presence source ID.
+            var id = new List<string>(); // List<string> | A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional) 
+
+            try
+            { 
+                // Get bulk user presences for a single presence source
+                List<UcUserPresence> result = apiInstance.GetUsersPresenceBulk(sourceId, id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetUsersPresenceBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| The requested presence source ID. |  |
+| **id** | [**List<string>**](string.html)| A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<UcUserPresence>**](UcUserPresence.html)
+
+<a name="getuserspresencespurecloudbulk"></a>
+
+## [**List&lt;UcUserPresence&gt;**](UcUserPresence.html) GetUsersPresencesPurecloudBulk (List<string> id = null)
+
+
+
+Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUsersPresencesPurecloudBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var id = new List<string>(); // List<string> | A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional) 
+
+            try
+            { 
+                // Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+                List<UcUserPresence> result = apiInstance.GetUsersPresencesPurecloudBulk(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetUsersPresencesPurecloudBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<UcUserPresence>**](UcUserPresence.html)
+
 <a name="patchuserpresence"></a>
 
 ## [**UserPresence**](UserPresence.html) PatchUserPresence (string userId, string sourceId, UserPresence body)
@@ -954,8 +1060,6 @@ namespace Example
 Patch a user's Presence
 
 Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
-
-
 
 Requires NO permissions: 
 
@@ -1025,8 +1129,6 @@ Patch a Genesys Cloud user's presence
 
 The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
 
-
-
 Requires NO permissions: 
 
 
@@ -1091,7 +1193,7 @@ namespace Example
 
 Create a Presence Definition
 
-
+PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1156,8 +1258,6 @@ namespace Example
 
 Create a Presence Source
 
-
-
 Requires ALL permissions: 
 
 * presence:source:add
@@ -1220,8 +1320,6 @@ namespace Example
 
 
 Create a Presence Definition
-
-
 
 Requires ALL permissions: 
 
@@ -1286,7 +1384,7 @@ namespace Example
 
 Update a Presence Definition
 
-
+PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1353,8 +1451,6 @@ namespace Example
 
 Update the presence settings
 
-
-
 Requires ALL permissions: 
 
 * presence:settings:edit
@@ -1417,8 +1513,6 @@ namespace Example
 
 
 Update a Presence Source
-
-
 
 Requires ALL permissions: 
 
@@ -1485,8 +1579,6 @@ namespace Example
 
 Update a user's Primary Presence Source
 
-
-
 Requires ALL permissions: 
 
 * presence:userPrimarySource:edit
@@ -1552,8 +1644,6 @@ namespace Example
 
 Update a Presence Definition
 
-
-
 Requires ALL permissions: 
 
 * presence:presenceDefinition:edit
@@ -1618,8 +1708,6 @@ namespace Example
 
 
 Update bulk user Presences
-
-
 
 Requires ANY permissions: 
 

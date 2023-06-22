@@ -27,7 +27,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns></returns>
         
-        
         void DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null);
 
         /// <summary>
@@ -41,7 +40,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null);
 
         /// <summary>
@@ -53,7 +51,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
-        
         void DeleteSpeechandtextanalyticsSentimentfeedback ();
 
         /// <summary>
@@ -64,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackWithHttpInfo ();
 
@@ -78,7 +74,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns></returns>
         
-        
         void DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId (string sentimentFeedbackId);
 
         /// <summary>
@@ -90,7 +85,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdWithHttpInfo (string sentimentFeedbackId);
 
@@ -104,7 +98,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <returns></returns>
         
-        
         void DeleteSpeechandtextanalyticsTopic (string topicId);
 
         /// <summary>
@@ -116,7 +109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteSpeechandtextanalyticsTopicWithHttpInfo (string topicId);
 
@@ -130,7 +122,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>ConversationMetrics</returns>
         
-        
         ConversationMetrics GetSpeechandtextanalyticsConversation (string conversationId);
 
         /// <summary>
@@ -142,7 +133,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>ApiResponse of ConversationMetrics</returns>
-        
         
         ApiResponse<ConversationMetrics> GetSpeechandtextanalyticsConversationWithHttpInfo (string conversationId);
 
@@ -157,7 +147,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">Communication ID</param>
         /// <returns>TranscriptUrl</returns>
         
-        
         TranscriptUrl GetSpeechandtextanalyticsConversationCommunicationTranscripturl (string conversationId, string communicationId);
 
         /// <summary>
@@ -171,7 +160,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">Communication ID</param>
         /// <returns>ApiResponse of TranscriptUrl</returns>
         
-        
         ApiResponse<TranscriptUrl> GetSpeechandtextanalyticsConversationCommunicationTranscripturlWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
@@ -183,7 +171,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Program</returns>
-        
         
         Program GetSpeechandtextanalyticsProgram (string programId);
 
@@ -197,7 +184,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>ApiResponse of Program</returns>
         
-        
         ApiResponse<Program> GetSpeechandtextanalyticsProgramWithHttpInfo (string programId);
 
         /// <summary>
@@ -209,7 +195,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>ProgramMappings</returns>
-        
         
         ProgramMappings GetSpeechandtextanalyticsProgramMappings (string programId);
 
@@ -223,7 +208,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>ApiResponse of ProgramMappings</returns>
         
-        
         ApiResponse<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId);
 
         /// <summary>
@@ -236,7 +220,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>ProgramTranscriptionEngines</returns>
         
-        
         ProgramTranscriptionEngines GetSpeechandtextanalyticsProgramTranscriptionengines (string programId);
 
         /// <summary>
@@ -248,7 +231,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>ApiResponse of ProgramTranscriptionEngines</returns>
-        
         
         ApiResponse<ProgramTranscriptionEngines> GetSpeechandtextanalyticsProgramTranscriptionenginesWithHttpInfo (string programId);
 
@@ -264,7 +246,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <returns>ProgramsEntityListing</returns>
         
-        
         ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null);
 
         /// <summary>
@@ -279,7 +260,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <returns>ApiResponse of ProgramsEntityListing</returns>
         
-        
         ApiResponse<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null);
 
         /// <summary>
@@ -292,7 +272,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>GeneralProgramJob</returns>
         
-        
         GeneralProgramJob GetSpeechandtextanalyticsProgramsGeneralJob (string jobId);
 
         /// <summary>
@@ -304,7 +283,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>ApiResponse of GeneralProgramJob</returns>
-        
         
         ApiResponse<GeneralProgramJob> GetSpeechandtextanalyticsProgramsGeneralJobWithHttpInfo (string jobId);
 
@@ -319,7 +297,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ProgramsMappingsEntityListing</returns>
         
-        
         ProgramsMappingsEntityListing GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null);
 
         /// <summary>
@@ -333,7 +310,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ApiResponse of ProgramsMappingsEntityListing</returns>
         
-        
         ApiResponse<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
@@ -345,7 +321,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>ProgramJob</returns>
-        
         
         ProgramJob GetSpeechandtextanalyticsProgramsPublishjob (string jobId);
 
@@ -359,7 +334,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>ApiResponse of ProgramJob</returns>
         
-        
         ApiResponse<ProgramJob> GetSpeechandtextanalyticsProgramsPublishjobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -371,7 +345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SupportedDialectsEntityListing</returns>
         
-        
         SupportedDialectsEntityListing GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects ();
 
         /// <summary>
@@ -382,7 +355,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SupportedDialectsEntityListing</returns>
-        
         
         ApiResponse<SupportedDialectsEntityListing> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsWithHttpInfo ();
 
@@ -397,7 +369,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>UnpublishedProgramsEntityListing</returns>
         
-        
         UnpublishedProgramsEntityListing GetSpeechandtextanalyticsProgramsUnpublished (string nextPage = null, int? pageSize = null);
 
         /// <summary>
@@ -411,7 +382,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ApiResponse of UnpublishedProgramsEntityListing</returns>
         
-        
         ApiResponse<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
@@ -423,7 +393,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EntityListing</returns>
         
-        
         EntityListing GetSpeechandtextanalyticsSentimentDialects ();
 
         /// <summary>
@@ -434,7 +403,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EntityListing</returns>
-        
         
         ApiResponse<EntityListing> GetSpeechandtextanalyticsSentimentDialectsWithHttpInfo ();
 
@@ -448,7 +416,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>SentimentFeedbackEntityListing</returns>
         
-        
         SentimentFeedbackEntityListing GetSpeechandtextanalyticsSentimentfeedback (string dialect = null);
 
         /// <summary>
@@ -461,7 +428,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>ApiResponse of SentimentFeedbackEntityListing</returns>
         
-        
         ApiResponse<SentimentFeedbackEntityListing> GetSpeechandtextanalyticsSentimentfeedbackWithHttpInfo (string dialect = null);
 
         /// <summary>
@@ -473,7 +439,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SpeechTextAnalyticsSettingsResponse</returns>
         
-        
         SpeechTextAnalyticsSettingsResponse GetSpeechandtextanalyticsSettings ();
 
         /// <summary>
@@ -484,7 +449,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         ApiResponse<SpeechTextAnalyticsSettingsResponse> GetSpeechandtextanalyticsSettingsWithHttpInfo ();
 
@@ -498,7 +462,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Topic</returns>
         
-        
         Topic GetSpeechandtextanalyticsTopic (string topicId);
 
         /// <summary>
@@ -510,7 +473,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>ApiResponse of Topic</returns>
-        
         
         ApiResponse<Topic> GetSpeechandtextanalyticsTopicWithHttpInfo (string topicId);
 
@@ -530,7 +492,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>TopicsEntityListing</returns>
         
-        
         TopicsEntityListing GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -549,7 +510,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of TopicsEntityListing</returns>
         
-        
         ApiResponse<TopicsEntityListing> GetSpeechandtextanalyticsTopicsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -561,7 +521,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EntityListing</returns>
         
-        
         EntityListing GetSpeechandtextanalyticsTopicsDialects ();
 
         /// <summary>
@@ -572,7 +531,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EntityListing</returns>
-        
         
         ApiResponse<EntityListing> GetSpeechandtextanalyticsTopicsDialectsWithHttpInfo ();
 
@@ -586,7 +544,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>GeneralTopicsEntityListing</returns>
         
-        
         GeneralTopicsEntityListing GetSpeechandtextanalyticsTopicsGeneral (string dialect = null);
 
         /// <summary>
@@ -598,7 +555,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>ApiResponse of GeneralTopicsEntityListing</returns>
-        
         
         ApiResponse<GeneralTopicsEntityListing> GetSpeechandtextanalyticsTopicsGeneralWithHttpInfo (string dialect = null);
 
@@ -612,7 +568,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>UnifiedGeneralTopicEntityListing</returns>
         
-        
         UnifiedGeneralTopicEntityListing GetSpeechandtextanalyticsTopicsGeneralStatus (string dialect = null);
 
         /// <summary>
@@ -624,7 +579,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>ApiResponse of UnifiedGeneralTopicEntityListing</returns>
-        
         
         ApiResponse<UnifiedGeneralTopicEntityListing> GetSpeechandtextanalyticsTopicsGeneralStatusWithHttpInfo (string dialect = null);
 
@@ -638,7 +592,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>TopicJob</returns>
         
-        
         TopicJob GetSpeechandtextanalyticsTopicsPublishjob (string jobId);
 
         /// <summary>
@@ -650,7 +603,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>ApiResponse of TopicJob</returns>
-        
         
         ApiResponse<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobWithHttpInfo (string jobId);
 
@@ -664,7 +616,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>SpeechTextAnalyticsSettingsResponse</returns>
         
-        
         SpeechTextAnalyticsSettingsResponse PatchSpeechandtextanalyticsSettings (SpeechTextAnalyticsSettingsRequest body);
 
         /// <summary>
@@ -676,7 +627,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         ApiResponse<SpeechTextAnalyticsSettingsResponse> PatchSpeechandtextanalyticsSettingsWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
 
@@ -690,7 +640,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to create</param>
         /// <returns>Program</returns>
         
-        
         Program PostSpeechandtextanalyticsPrograms (ProgramRequest body);
 
         /// <summary>
@@ -702,7 +651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
         /// <returns>ApiResponse of Program</returns>
-        
         
         ApiResponse<Program> PostSpeechandtextanalyticsProgramsWithHttpInfo (ProgramRequest body);
 
@@ -716,7 +664,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The general programs job to create</param>
         /// <returns>GeneralProgramJob</returns>
         
-        
         GeneralProgramJob PostSpeechandtextanalyticsProgramsGeneralJobs (GeneralProgramJobRequest body);
 
         /// <summary>
@@ -728,7 +675,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
         /// <returns>ApiResponse of GeneralProgramJob</returns>
-        
         
         ApiResponse<GeneralProgramJob> PostSpeechandtextanalyticsProgramsGeneralJobsWithHttpInfo (GeneralProgramJobRequest body);
 
@@ -742,7 +688,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The publish programs job to create</param>
         /// <returns>ProgramJob</returns>
         
-        
         ProgramJob PostSpeechandtextanalyticsProgramsPublishjobs (ProgramJobRequest body);
 
         /// <summary>
@@ -754,7 +699,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
         /// <returns>ApiResponse of ProgramJob</returns>
-        
         
         ApiResponse<ProgramJob> PostSpeechandtextanalyticsProgramsPublishjobsWithHttpInfo (ProgramJobRequest body);
 
@@ -768,7 +712,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>SentimentFeedback</returns>
         
-        
         SentimentFeedback PostSpeechandtextanalyticsSentimentfeedback (SentimentFeedback body);
 
         /// <summary>
@@ -780,7 +723,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>ApiResponse of SentimentFeedback</returns>
-        
         
         ApiResponse<SentimentFeedback> PostSpeechandtextanalyticsSentimentfeedbackWithHttpInfo (SentimentFeedback body);
 
@@ -794,7 +736,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The topic to create</param>
         /// <returns>Topic</returns>
         
-        
         Topic PostSpeechandtextanalyticsTopics (TopicRequest body);
 
         /// <summary>
@@ -806,7 +747,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
         /// <returns>ApiResponse of Topic</returns>
-        
         
         ApiResponse<Topic> PostSpeechandtextanalyticsTopicsWithHttpInfo (TopicRequest body);
 
@@ -820,7 +760,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The publish topics job to create</param>
         /// <returns>TopicJob</returns>
         
-        
         TopicJob PostSpeechandtextanalyticsTopicsPublishjobs (TopicJobRequest body);
 
         /// <summary>
@@ -832,7 +771,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
         /// <returns>ApiResponse of TopicJob</returns>
-        
         
         ApiResponse<TopicJob> PostSpeechandtextanalyticsTopicsPublishjobsWithHttpInfo (TopicJobRequest body);
 
@@ -846,7 +784,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>JsonSearchResponse</returns>
         
-        
         JsonSearchResponse PostSpeechandtextanalyticsTranscriptsSearch (TranscriptSearchRequest body);
 
         /// <summary>
@@ -858,7 +795,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of JsonSearchResponse</returns>
-        
         
         ApiResponse<JsonSearchResponse> PostSpeechandtextanalyticsTranscriptsSearchWithHttpInfo (TranscriptSearchRequest body);
 
@@ -873,7 +809,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to update</param>
         /// <returns>Program</returns>
         
-        
         Program PutSpeechandtextanalyticsProgram (string programId, ProgramRequest body);
 
         /// <summary>
@@ -886,7 +821,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to update</param>
         /// <returns>ApiResponse of Program</returns>
-        
         
         ApiResponse<Program> PutSpeechandtextanalyticsProgramWithHttpInfo (string programId, ProgramRequest body);
 
@@ -901,7 +835,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to set mappings for</param>
         /// <returns>ProgramMappings</returns>
         
-        
         ProgramMappings PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body);
 
         /// <summary>
@@ -914,7 +847,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
         /// <returns>ApiResponse of ProgramMappings</returns>
-        
         
         ApiResponse<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId, ProgramMappingsRequest body);
 
@@ -929,7 +861,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Program transcription engine setting</param>
         /// <returns>ProgramTranscriptionEngines</returns>
         
-        
         ProgramTranscriptionEngines PutSpeechandtextanalyticsProgramTranscriptionengines (string programId, TranscriptionEnginesRequest body);
 
         /// <summary>
@@ -943,7 +874,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Program transcription engine setting</param>
         /// <returns>ApiResponse of ProgramTranscriptionEngines</returns>
         
-        
         ApiResponse<ProgramTranscriptionEngines> PutSpeechandtextanalyticsProgramTranscriptionenginesWithHttpInfo (string programId, TranscriptionEnginesRequest body);
 
         /// <summary>
@@ -956,7 +886,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>SpeechTextAnalyticsSettingsResponse</returns>
         
-        
         SpeechTextAnalyticsSettingsResponse PutSpeechandtextanalyticsSettings (SpeechTextAnalyticsSettingsRequest body);
 
         /// <summary>
@@ -968,7 +897,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         ApiResponse<SpeechTextAnalyticsSettingsResponse> PutSpeechandtextanalyticsSettingsWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
 
@@ -983,7 +911,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The topic to update</param>
         /// <returns>Topic</returns>
         
-        
         Topic PutSpeechandtextanalyticsTopic (string topicId, TopicRequest body);
 
         /// <summary>
@@ -996,7 +923,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <param name="body">The topic to update</param>
         /// <returns>ApiResponse of Topic</returns>
-        
         
         ApiResponse<Topic> PutSpeechandtextanalyticsTopicWithHttpInfo (string topicId, TopicRequest body);
 
@@ -1015,7 +941,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsProgramAsync (string programId, bool? forceDelete = null);
 
         /// <summary>
@@ -1029,7 +954,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null);
 
         /// <summary>
@@ -1041,7 +965,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsSentimentfeedbackAsync ();
 
         /// <summary>
@@ -1052,7 +975,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo ();
 
@@ -1066,7 +988,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdAsync (string sentimentFeedbackId);
 
         /// <summary>
@@ -1078,7 +999,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdAsyncWithHttpInfo (string sentimentFeedbackId);
 
@@ -1092,7 +1012,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteSpeechandtextanalyticsTopicAsync (string topicId);
 
         /// <summary>
@@ -1104,7 +1023,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId);
 
@@ -1118,7 +1036,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>Task of ConversationMetrics</returns>
         
-        
         System.Threading.Tasks.Task<ConversationMetrics> GetSpeechandtextanalyticsConversationAsync (string conversationId);
 
         /// <summary>
@@ -1130,7 +1047,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>Task of ApiResponse (ConversationMetrics)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ConversationMetrics>> GetSpeechandtextanalyticsConversationAsyncWithHttpInfo (string conversationId);
 
@@ -1145,7 +1061,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">Communication ID</param>
         /// <returns>Task of TranscriptUrl</returns>
         
-        
         System.Threading.Tasks.Task<TranscriptUrl> GetSpeechandtextanalyticsConversationCommunicationTranscripturlAsync (string conversationId, string communicationId);
 
         /// <summary>
@@ -1159,7 +1074,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">Communication ID</param>
         /// <returns>Task of ApiResponse (TranscriptUrl)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TranscriptUrl>> GetSpeechandtextanalyticsConversationCommunicationTranscripturlAsyncWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
@@ -1171,7 +1085,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of Program</returns>
-        
         
         System.Threading.Tasks.Task<Program> GetSpeechandtextanalyticsProgramAsync (string programId);
 
@@ -1185,7 +1098,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ApiResponse (Program)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Program>> GetSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId);
 
         /// <summary>
@@ -1197,7 +1109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ProgramMappings</returns>
-        
         
         System.Threading.Tasks.Task<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsAsync (string programId);
 
@@ -1211,7 +1122,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ApiResponse (ProgramMappings)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId);
 
         /// <summary>
@@ -1224,7 +1134,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ProgramTranscriptionEngines</returns>
         
-        
         System.Threading.Tasks.Task<ProgramTranscriptionEngines> GetSpeechandtextanalyticsProgramTranscriptionenginesAsync (string programId);
 
         /// <summary>
@@ -1236,7 +1145,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ApiResponse (ProgramTranscriptionEngines)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ProgramTranscriptionEngines>> GetSpeechandtextanalyticsProgramTranscriptionenginesAsyncWithHttpInfo (string programId);
 
@@ -1252,7 +1160,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <returns>Task of ProgramsEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null);
 
         /// <summary>
@@ -1267,7 +1174,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <returns>Task of ApiResponse (ProgramsEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null);
 
         /// <summary>
@@ -1280,7 +1186,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of GeneralProgramJob</returns>
         
-        
         System.Threading.Tasks.Task<GeneralProgramJob> GetSpeechandtextanalyticsProgramsGeneralJobAsync (string jobId);
 
         /// <summary>
@@ -1292,7 +1197,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of ApiResponse (GeneralProgramJob)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<GeneralProgramJob>> GetSpeechandtextanalyticsProgramsGeneralJobAsyncWithHttpInfo (string jobId);
 
@@ -1307,7 +1211,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ProgramsMappingsEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsAsync (string nextPage = null, int? pageSize = null);
 
         /// <summary>
@@ -1321,7 +1224,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ApiResponse (ProgramsMappingsEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
@@ -1333,7 +1235,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of ProgramJob</returns>
-        
         
         System.Threading.Tasks.Task<ProgramJob> GetSpeechandtextanalyticsProgramsPublishjobAsync (string jobId);
 
@@ -1347,7 +1248,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of ApiResponse (ProgramJob)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ProgramJob>> GetSpeechandtextanalyticsProgramsPublishjobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1359,7 +1259,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SupportedDialectsEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<SupportedDialectsEntityListing> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsAsync ();
 
         /// <summary>
@@ -1370,7 +1269,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SupportedDialectsEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<SupportedDialectsEntityListing>> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsAsyncWithHttpInfo ();
 
@@ -1385,7 +1283,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of UnpublishedProgramsEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedAsync (string nextPage = null, int? pageSize = null);
 
         /// <summary>
@@ -1399,7 +1296,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ApiResponse (UnpublishedProgramsEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UnpublishedProgramsEntityListing>> GetSpeechandtextanalyticsProgramsUnpublishedAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
@@ -1411,7 +1307,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EntityListing</returns>
         
-        
         System.Threading.Tasks.Task<EntityListing> GetSpeechandtextanalyticsSentimentDialectsAsync ();
 
         /// <summary>
@@ -1422,7 +1317,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsSentimentDialectsAsyncWithHttpInfo ();
 
@@ -1436,7 +1330,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of SentimentFeedbackEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<SentimentFeedbackEntityListing> GetSpeechandtextanalyticsSentimentfeedbackAsync (string dialect = null);
 
         /// <summary>
@@ -1449,7 +1342,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of ApiResponse (SentimentFeedbackEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<SentimentFeedbackEntityListing>> GetSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo (string dialect = null);
 
         /// <summary>
@@ -1461,7 +1353,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SpeechTextAnalyticsSettingsResponse</returns>
         
-        
         System.Threading.Tasks.Task<SpeechTextAnalyticsSettingsResponse> GetSpeechandtextanalyticsSettingsAsync ();
 
         /// <summary>
@@ -1472,7 +1363,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> GetSpeechandtextanalyticsSettingsAsyncWithHttpInfo ();
 
@@ -1486,7 +1376,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of Topic</returns>
         
-        
         System.Threading.Tasks.Task<Topic> GetSpeechandtextanalyticsTopicAsync (string topicId);
 
         /// <summary>
@@ -1498,7 +1387,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Topic>> GetSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId);
 
@@ -1518,7 +1406,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of TopicsEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<TopicsEntityListing> GetSpeechandtextanalyticsTopicsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1537,7 +1424,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (TopicsEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1549,7 +1435,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EntityListing</returns>
         
-        
         System.Threading.Tasks.Task<EntityListing> GetSpeechandtextanalyticsTopicsDialectsAsync ();
 
         /// <summary>
@@ -1560,7 +1445,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsTopicsDialectsAsyncWithHttpInfo ();
 
@@ -1574,7 +1458,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of GeneralTopicsEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<GeneralTopicsEntityListing> GetSpeechandtextanalyticsTopicsGeneralAsync (string dialect = null);
 
         /// <summary>
@@ -1586,7 +1469,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of ApiResponse (GeneralTopicsEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<GeneralTopicsEntityListing>> GetSpeechandtextanalyticsTopicsGeneralAsyncWithHttpInfo (string dialect = null);
 
@@ -1600,7 +1482,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of UnifiedGeneralTopicEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<UnifiedGeneralTopicEntityListing> GetSpeechandtextanalyticsTopicsGeneralStatusAsync (string dialect = null);
 
         /// <summary>
@@ -1612,7 +1493,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of ApiResponse (UnifiedGeneralTopicEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<UnifiedGeneralTopicEntityListing>> GetSpeechandtextanalyticsTopicsGeneralStatusAsyncWithHttpInfo (string dialect = null);
 
@@ -1626,7 +1506,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>Task of TopicJob</returns>
         
-        
         System.Threading.Tasks.Task<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobAsync (string jobId);
 
         /// <summary>
@@ -1638,7 +1517,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>Task of ApiResponse (TopicJob)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> GetSpeechandtextanalyticsTopicsPublishjobAsyncWithHttpInfo (string jobId);
 
@@ -1652,7 +1530,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of SpeechTextAnalyticsSettingsResponse</returns>
         
-        
         System.Threading.Tasks.Task<SpeechTextAnalyticsSettingsResponse> PatchSpeechandtextanalyticsSettingsAsync (SpeechTextAnalyticsSettingsRequest body);
 
         /// <summary>
@@ -1664,7 +1541,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> PatchSpeechandtextanalyticsSettingsAsyncWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
 
@@ -1678,7 +1554,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to create</param>
         /// <returns>Task of Program</returns>
         
-        
         System.Threading.Tasks.Task<Program> PostSpeechandtextanalyticsProgramsAsync (ProgramRequest body);
 
         /// <summary>
@@ -1690,7 +1565,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
         /// <returns>Task of ApiResponse (Program)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Program>> PostSpeechandtextanalyticsProgramsAsyncWithHttpInfo (ProgramRequest body);
 
@@ -1704,7 +1578,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The general programs job to create</param>
         /// <returns>Task of GeneralProgramJob</returns>
         
-        
         System.Threading.Tasks.Task<GeneralProgramJob> PostSpeechandtextanalyticsProgramsGeneralJobsAsync (GeneralProgramJobRequest body);
 
         /// <summary>
@@ -1716,7 +1589,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
         /// <returns>Task of ApiResponse (GeneralProgramJob)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<GeneralProgramJob>> PostSpeechandtextanalyticsProgramsGeneralJobsAsyncWithHttpInfo (GeneralProgramJobRequest body);
 
@@ -1730,7 +1602,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The publish programs job to create</param>
         /// <returns>Task of ProgramJob</returns>
         
-        
         System.Threading.Tasks.Task<ProgramJob> PostSpeechandtextanalyticsProgramsPublishjobsAsync (ProgramJobRequest body);
 
         /// <summary>
@@ -1742,7 +1613,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
         /// <returns>Task of ApiResponse (ProgramJob)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ProgramJob>> PostSpeechandtextanalyticsProgramsPublishjobsAsyncWithHttpInfo (ProgramJobRequest body);
 
@@ -1756,7 +1626,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>Task of SentimentFeedback</returns>
         
-        
         System.Threading.Tasks.Task<SentimentFeedback> PostSpeechandtextanalyticsSentimentfeedbackAsync (SentimentFeedback body);
 
         /// <summary>
@@ -1768,7 +1637,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>Task of ApiResponse (SentimentFeedback)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<SentimentFeedback>> PostSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo (SentimentFeedback body);
 
@@ -1782,7 +1650,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The topic to create</param>
         /// <returns>Task of Topic</returns>
         
-        
         System.Threading.Tasks.Task<Topic> PostSpeechandtextanalyticsTopicsAsync (TopicRequest body);
 
         /// <summary>
@@ -1794,7 +1661,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Topic>> PostSpeechandtextanalyticsTopicsAsyncWithHttpInfo (TopicRequest body);
 
@@ -1808,7 +1674,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The publish topics job to create</param>
         /// <returns>Task of TopicJob</returns>
         
-        
         System.Threading.Tasks.Task<TopicJob> PostSpeechandtextanalyticsTopicsPublishjobsAsync (TopicJobRequest body);
 
         /// <summary>
@@ -1820,7 +1685,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
         /// <returns>Task of ApiResponse (TopicJob)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> PostSpeechandtextanalyticsTopicsPublishjobsAsyncWithHttpInfo (TopicJobRequest body);
 
@@ -1834,7 +1698,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of JsonSearchResponse</returns>
         
-        
         System.Threading.Tasks.Task<JsonSearchResponse> PostSpeechandtextanalyticsTranscriptsSearchAsync (TranscriptSearchRequest body);
 
         /// <summary>
@@ -1846,7 +1709,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (JsonSearchResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<JsonSearchResponse>> PostSpeechandtextanalyticsTranscriptsSearchAsyncWithHttpInfo (TranscriptSearchRequest body);
 
@@ -1861,7 +1723,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to update</param>
         /// <returns>Task of Program</returns>
         
-        
         System.Threading.Tasks.Task<Program> PutSpeechandtextanalyticsProgramAsync (string programId, ProgramRequest body);
 
         /// <summary>
@@ -1874,7 +1735,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to update</param>
         /// <returns>Task of ApiResponse (Program)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Program>> PutSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, ProgramRequest body);
 
@@ -1889,7 +1749,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The program to set mappings for</param>
         /// <returns>Task of ProgramMappings</returns>
         
-        
         System.Threading.Tasks.Task<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsAsync (string programId, ProgramMappingsRequest body);
 
         /// <summary>
@@ -1902,7 +1761,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
         /// <returns>Task of ApiResponse (ProgramMappings)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId, ProgramMappingsRequest body);
 
@@ -1917,7 +1775,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Program transcription engine setting</param>
         /// <returns>Task of ProgramTranscriptionEngines</returns>
         
-        
         System.Threading.Tasks.Task<ProgramTranscriptionEngines> PutSpeechandtextanalyticsProgramTranscriptionenginesAsync (string programId, TranscriptionEnginesRequest body);
 
         /// <summary>
@@ -1931,7 +1788,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Program transcription engine setting</param>
         /// <returns>Task of ApiResponse (ProgramTranscriptionEngines)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ProgramTranscriptionEngines>> PutSpeechandtextanalyticsProgramTranscriptionenginesAsyncWithHttpInfo (string programId, TranscriptionEnginesRequest body);
 
         /// <summary>
@@ -1944,7 +1800,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of SpeechTextAnalyticsSettingsResponse</returns>
         
-        
         System.Threading.Tasks.Task<SpeechTextAnalyticsSettingsResponse> PutSpeechandtextanalyticsSettingsAsync (SpeechTextAnalyticsSettingsRequest body);
 
         /// <summary>
@@ -1956,7 +1811,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> PutSpeechandtextanalyticsSettingsAsyncWithHttpInfo (SpeechTextAnalyticsSettingsRequest body);
 
@@ -1971,7 +1825,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The topic to update</param>
         /// <returns>Task of Topic</returns>
         
-        
         System.Threading.Tasks.Task<Topic> PutSpeechandtextanalyticsTopicAsync (string topicId, TopicRequest body);
 
         /// <summary>
@@ -1984,7 +1837,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The id of the topic</param>
         /// <param name="body">The topic to update</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Topic>> PutSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId, TopicRequest body);
 
@@ -2082,12 +1934,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics program by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns></returns>
-        
         
         public void DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null)
         {
@@ -2096,12 +1948,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics program by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null)
         { 
@@ -2182,12 +2034,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics program by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteSpeechandtextanalyticsProgramAsync (string programId, bool? forceDelete = null)
         {
@@ -2197,12 +2049,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics program by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null)
         { 
@@ -2285,10 +2137,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete All Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
-        
         
         public void DeleteSpeechandtextanalyticsSentimentfeedback ()
         {
@@ -2297,10 +2149,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete All Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackWithHttpInfo ()
         { 
@@ -2376,10 +2228,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete All Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteSpeechandtextanalyticsSentimentfeedbackAsync ()
         {
@@ -2389,10 +2241,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete All Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo ()
         { 
@@ -2469,11 +2321,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics SentimentFeedback by Id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns></returns>
-        
         
         public void DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId (string sentimentFeedbackId)
         {
@@ -2482,11 +2334,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics SentimentFeedback by Id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdWithHttpInfo (string sentimentFeedbackId)
         { 
@@ -2566,11 +2418,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics SentimentFeedback by Id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdAsync (string sentimentFeedbackId)
         {
@@ -2580,11 +2432,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics SentimentFeedback by Id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sentimentFeedbackId">The Id of the SentimentFeedback</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdAsyncWithHttpInfo (string sentimentFeedbackId)
         { 
@@ -2666,11 +2518,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics topic by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns></returns>
-        
         
         public void DeleteSpeechandtextanalyticsTopic (string topicId)
         {
@@ -2679,11 +2531,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics topic by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteSpeechandtextanalyticsTopicWithHttpInfo (string topicId)
         { 
@@ -2763,11 +2615,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics topic by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteSpeechandtextanalyticsTopicAsync (string topicId)
         {
@@ -2777,11 +2629,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Speech & Text Analytics topic by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId)
         { 
@@ -2863,11 +2715,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech and Text Analytics for a specific conversation 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>ConversationMetrics</returns>
-        
         
         public ConversationMetrics GetSpeechandtextanalyticsConversation (string conversationId)
         {
@@ -2877,11 +2729,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech and Text Analytics for a specific conversation 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>ApiResponse of ConversationMetrics</returns>
-        
         
         public ApiResponse< ConversationMetrics > GetSpeechandtextanalyticsConversationWithHttpInfo (string conversationId)
         { 
@@ -2961,11 +2813,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech and Text Analytics for a specific conversation 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>Task of ConversationMetrics</returns>
-        
         
         public async System.Threading.Tasks.Task<ConversationMetrics> GetSpeechandtextanalyticsConversationAsync (string conversationId)
         {
@@ -2976,11 +2828,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech and Text Analytics for a specific conversation 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation Id</param>
         /// <returns>Task of ApiResponse (ConversationMetrics)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ConversationMetrics>> GetSpeechandtextanalyticsConversationAsyncWithHttpInfo (string conversationId)
         { 
@@ -3062,12 +2914,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="communicationId">Communication ID</param>
         /// <returns>TranscriptUrl</returns>
-        
         
         public TranscriptUrl GetSpeechandtextanalyticsConversationCommunicationTranscripturl (string conversationId, string communicationId)
         {
@@ -3077,12 +2929,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="communicationId">Communication ID</param>
         /// <returns>ApiResponse of TranscriptUrl</returns>
-        
         
         public ApiResponse< TranscriptUrl > GetSpeechandtextanalyticsConversationCommunicationTranscripturlWithHttpInfo (string conversationId, string communicationId)
         { 
@@ -3166,12 +3018,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="communicationId">Communication ID</param>
         /// <returns>Task of TranscriptUrl</returns>
-        
         
         public async System.Threading.Tasks.Task<TranscriptUrl> GetSpeechandtextanalyticsConversationCommunicationTranscripturlAsync (string conversationId, string communicationId)
         {
@@ -3182,12 +3034,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="communicationId">Communication ID</param>
         /// <returns>Task of ApiResponse (TranscriptUrl)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TranscriptUrl>> GetSpeechandtextanalyticsConversationCommunicationTranscripturlAsyncWithHttpInfo (string conversationId, string communicationId)
         { 
@@ -3274,11 +3126,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics program by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Program</returns>
-        
         
         public Program GetSpeechandtextanalyticsProgram (string programId)
         {
@@ -3288,11 +3140,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics program by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>ApiResponse of Program</returns>
-        
         
         public ApiResponse< Program > GetSpeechandtextanalyticsProgramWithHttpInfo (string programId)
         { 
@@ -3372,11 +3224,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics program by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of Program</returns>
-        
         
         public async System.Threading.Tasks.Task<Program> GetSpeechandtextanalyticsProgramAsync (string programId)
         {
@@ -3387,11 +3239,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics program by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ApiResponse (Program)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Program>> GetSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId)
         { 
@@ -3473,11 +3325,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech & Text Analytics program mappings to queues and flows by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>ProgramMappings</returns>
-        
         
         public ProgramMappings GetSpeechandtextanalyticsProgramMappings (string programId)
         {
@@ -3487,11 +3339,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech & Text Analytics program mappings to queues and flows by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>ApiResponse of ProgramMappings</returns>
-        
         
         public ApiResponse< ProgramMappings > GetSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId)
         { 
@@ -3571,11 +3423,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech & Text Analytics program mappings to queues and flows by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ProgramMappings</returns>
-        
         
         public async System.Threading.Tasks.Task<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsAsync (string programId)
         {
@@ -3586,11 +3438,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech & Text Analytics program mappings to queues and flows by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ApiResponse (ProgramMappings)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId)
         { 
@@ -3672,11 +3524,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get transcription engine settings of a program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>ProgramTranscriptionEngines</returns>
-        
         
         public ProgramTranscriptionEngines GetSpeechandtextanalyticsProgramTranscriptionengines (string programId)
         {
@@ -3686,11 +3538,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get transcription engine settings of a program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>ApiResponse of ProgramTranscriptionEngines</returns>
-        
         
         public ApiResponse< ProgramTranscriptionEngines > GetSpeechandtextanalyticsProgramTranscriptionenginesWithHttpInfo (string programId)
         { 
@@ -3770,11 +3622,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get transcription engine settings of a program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ProgramTranscriptionEngines</returns>
-        
         
         public async System.Threading.Tasks.Task<ProgramTranscriptionEngines> GetSpeechandtextanalyticsProgramTranscriptionenginesAsync (string programId)
         {
@@ -3785,11 +3637,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get transcription engine settings of a program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <returns>Task of ApiResponse (ProgramTranscriptionEngines)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ProgramTranscriptionEngines>> GetSpeechandtextanalyticsProgramTranscriptionenginesAsyncWithHttpInfo (string programId)
         { 
@@ -3871,13 +3723,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics programs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <returns>ProgramsEntityListing</returns>
-        
         
         public ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null)
         {
@@ -3887,13 +3739,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics programs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <returns>ApiResponse of ProgramsEntityListing</returns>
-        
         
         public ApiResponse< ProgramsEntityListing > GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null)
         { 
@@ -3972,13 +3824,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics programs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <returns>Task of ProgramsEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null)
         {
@@ -3989,13 +3841,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics programs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <returns>Task of ApiResponse (ProgramsEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null)
         { 
@@ -4075,11 +3927,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics general program job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>GeneralProgramJob</returns>
-        
         
         public GeneralProgramJob GetSpeechandtextanalyticsProgramsGeneralJob (string jobId)
         {
@@ -4089,11 +3941,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics general program job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>ApiResponse of GeneralProgramJob</returns>
-        
         
         public ApiResponse< GeneralProgramJob > GetSpeechandtextanalyticsProgramsGeneralJobWithHttpInfo (string jobId)
         { 
@@ -4173,11 +4025,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics general program job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of GeneralProgramJob</returns>
-        
         
         public async System.Threading.Tasks.Task<GeneralProgramJob> GetSpeechandtextanalyticsProgramsGeneralJobAsync (string jobId)
         {
@@ -4188,11 +4040,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics general program job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of ApiResponse (GeneralProgramJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<GeneralProgramJob>> GetSpeechandtextanalyticsProgramsGeneralJobAsyncWithHttpInfo (string jobId)
         { 
@@ -4274,12 +4126,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ProgramsMappingsEntityListing</returns>
-        
         
         public ProgramsMappingsEntityListing GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null)
         {
@@ -4289,12 +4141,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ApiResponse of ProgramsMappingsEntityListing</returns>
-        
         
         public ApiResponse< ProgramsMappingsEntityListing > GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo (string nextPage = null, int? pageSize = null)
         { 
@@ -4372,12 +4224,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ProgramsMappingsEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsAsync (string nextPage = null, int? pageSize = null)
         {
@@ -4388,12 +4240,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics programs mappings to queues and flows 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ApiResponse (ProgramsMappingsEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null)
         { 
@@ -4472,11 +4324,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics publish programs job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>ProgramJob</returns>
-        
         
         public ProgramJob GetSpeechandtextanalyticsProgramsPublishjob (string jobId)
         {
@@ -4486,11 +4338,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics publish programs job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>ApiResponse of ProgramJob</returns>
-        
         
         public ApiResponse< ProgramJob > GetSpeechandtextanalyticsProgramsPublishjobWithHttpInfo (string jobId)
         { 
@@ -4570,11 +4422,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics publish programs job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of ProgramJob</returns>
-        
         
         public async System.Threading.Tasks.Task<ProgramJob> GetSpeechandtextanalyticsProgramsPublishjobAsync (string jobId)
         {
@@ -4585,11 +4437,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics publish programs job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish programs job</param>
         /// <returns>Task of ApiResponse (ProgramJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ProgramJob>> GetSpeechandtextanalyticsProgramsPublishjobAsyncWithHttpInfo (string jobId)
         { 
@@ -4671,10 +4523,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get supported dialects for each transcription engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SupportedDialectsEntityListing</returns>
-        
         
         public SupportedDialectsEntityListing GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects ()
         {
@@ -4684,10 +4536,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get supported dialects for each transcription engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SupportedDialectsEntityListing</returns>
-        
         
         public ApiResponse< SupportedDialectsEntityListing > GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsWithHttpInfo ()
         { 
@@ -4763,10 +4615,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get supported dialects for each transcription engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SupportedDialectsEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<SupportedDialectsEntityListing> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsAsync ()
         {
@@ -4777,10 +4629,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get supported dialects for each transcription engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SupportedDialectsEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SupportedDialectsEntityListing>> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsAsyncWithHttpInfo ()
         { 
@@ -4857,12 +4709,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics unpublished programs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>UnpublishedProgramsEntityListing</returns>
-        
         
         public UnpublishedProgramsEntityListing GetSpeechandtextanalyticsProgramsUnpublished (string nextPage = null, int? pageSize = null)
         {
@@ -4872,12 +4724,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics unpublished programs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>ApiResponse of UnpublishedProgramsEntityListing</returns>
-        
         
         public ApiResponse< UnpublishedProgramsEntityListing > GetSpeechandtextanalyticsProgramsUnpublishedWithHttpInfo (string nextPage = null, int? pageSize = null)
         { 
@@ -4955,12 +4807,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics unpublished programs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of UnpublishedProgramsEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedAsync (string nextPage = null, int? pageSize = null)
         {
@@ -4971,12 +4823,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics unpublished programs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <returns>Task of ApiResponse (UnpublishedProgramsEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UnpublishedProgramsEntityListing>> GetSpeechandtextanalyticsProgramsUnpublishedAsyncWithHttpInfo (string nextPage = null, int? pageSize = null)
         { 
@@ -5055,10 +4907,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics sentiment supported dialects 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EntityListing</returns>
-        
         
         public EntityListing GetSpeechandtextanalyticsSentimentDialects ()
         {
@@ -5068,10 +4920,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics sentiment supported dialects 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EntityListing</returns>
-        
         
         public ApiResponse< EntityListing > GetSpeechandtextanalyticsSentimentDialectsWithHttpInfo ()
         { 
@@ -5147,10 +4999,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics sentiment supported dialects 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<EntityListing> GetSpeechandtextanalyticsSentimentDialectsAsync ()
         {
@@ -5161,10 +5013,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics sentiment supported dialects 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsSentimentDialectsAsyncWithHttpInfo ()
         { 
@@ -5241,11 +5093,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>SentimentFeedbackEntityListing</returns>
-        
         
         public SentimentFeedbackEntityListing GetSpeechandtextanalyticsSentimentfeedback (string dialect = null)
         {
@@ -5255,11 +5107,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>ApiResponse of SentimentFeedbackEntityListing</returns>
-        
         
         public ApiResponse< SentimentFeedbackEntityListing > GetSpeechandtextanalyticsSentimentfeedbackWithHttpInfo (string dialect = null)
         { 
@@ -5336,11 +5188,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of SentimentFeedbackEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<SentimentFeedbackEntityListing> GetSpeechandtextanalyticsSentimentfeedbackAsync (string dialect = null)
         {
@@ -5351,11 +5203,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of ApiResponse (SentimentFeedbackEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SentimentFeedbackEntityListing>> GetSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo (string dialect = null)
         { 
@@ -5433,10 +5285,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public SpeechTextAnalyticsSettingsResponse GetSpeechandtextanalyticsSettings ()
         {
@@ -5446,10 +5298,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public ApiResponse< SpeechTextAnalyticsSettingsResponse > GetSpeechandtextanalyticsSettingsWithHttpInfo ()
         { 
@@ -5525,10 +5377,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<SpeechTextAnalyticsSettingsResponse> GetSpeechandtextanalyticsSettingsAsync ()
         {
@@ -5539,10 +5391,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> GetSpeechandtextanalyticsSettingsAsyncWithHttpInfo ()
         { 
@@ -5619,11 +5471,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics topic by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Topic</returns>
-        
         
         public Topic GetSpeechandtextanalyticsTopic (string topicId)
         {
@@ -5633,11 +5485,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics topic by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>ApiResponse of Topic</returns>
-        
         
         public ApiResponse< Topic > GetSpeechandtextanalyticsTopicWithHttpInfo (string topicId)
         { 
@@ -5717,11 +5569,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics topic by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of Topic</returns>
-        
         
         public async System.Threading.Tasks.Task<Topic> GetSpeechandtextanalyticsTopicAsync (string topicId)
         {
@@ -5732,11 +5584,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics topic by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Topic>> GetSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId)
         { 
@@ -5818,6 +5670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics topics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -5829,7 +5682,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>TopicsEntityListing</returns>
         
-        
         public TopicsEntityListing GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<TopicsEntityListing> localVarResponse = GetSpeechandtextanalyticsTopicsWithHttpInfo(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
@@ -5838,6 +5690,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics topics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -5848,7 +5701,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of TopicsEntityListing</returns>
-        
         
         public ApiResponse< TopicsEntityListing > GetSpeechandtextanalyticsTopicsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
         { 
@@ -5931,6 +5783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics topics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -5942,7 +5795,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of TopicsEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<TopicsEntityListing> GetSpeechandtextanalyticsTopicsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<TopicsEntityListing> localVarResponse = await GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
@@ -5952,6 +5804,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of Speech & Text Analytics topics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
@@ -5962,7 +5815,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (TopicsEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
         { 
@@ -6046,10 +5898,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of supported Speech & Text Analytics topics dialects 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EntityListing</returns>
-        
         
         public EntityListing GetSpeechandtextanalyticsTopicsDialects ()
         {
@@ -6059,10 +5911,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of supported Speech & Text Analytics topics dialects 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EntityListing</returns>
-        
         
         public ApiResponse< EntityListing > GetSpeechandtextanalyticsTopicsDialectsWithHttpInfo ()
         { 
@@ -6138,10 +5990,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of supported Speech & Text Analytics topics dialects 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<EntityListing> GetSpeechandtextanalyticsTopicsDialectsAsync ()
         {
@@ -6152,10 +6004,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of supported Speech & Text Analytics topics dialects 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsTopicsDialectsAsyncWithHttpInfo ()
         { 
@@ -6232,11 +6084,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Speech & Text Analytics general topics for a given dialect 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>GeneralTopicsEntityListing</returns>
-        
         
         public GeneralTopicsEntityListing GetSpeechandtextanalyticsTopicsGeneral (string dialect = null)
         {
@@ -6246,11 +6098,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Speech & Text Analytics general topics for a given dialect 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>ApiResponse of GeneralTopicsEntityListing</returns>
-        
         
         public ApiResponse< GeneralTopicsEntityListing > GetSpeechandtextanalyticsTopicsGeneralWithHttpInfo (string dialect = null)
         { 
@@ -6327,11 +6179,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Speech & Text Analytics general topics for a given dialect 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of GeneralTopicsEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<GeneralTopicsEntityListing> GetSpeechandtextanalyticsTopicsGeneralAsync (string dialect = null)
         {
@@ -6342,11 +6194,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Speech & Text Analytics general topics for a given dialect 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of ApiResponse (GeneralTopicsEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<GeneralTopicsEntityListing>> GetSpeechandtextanalyticsTopicsGeneralAsyncWithHttpInfo (string dialect = null)
         { 
@@ -6424,11 +6276,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of general topics from the org and the system with their current status 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>UnifiedGeneralTopicEntityListing</returns>
-        
         
         public UnifiedGeneralTopicEntityListing GetSpeechandtextanalyticsTopicsGeneralStatus (string dialect = null)
         {
@@ -6438,11 +6290,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of general topics from the org and the system with their current status 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>ApiResponse of UnifiedGeneralTopicEntityListing</returns>
-        
         
         public ApiResponse< UnifiedGeneralTopicEntityListing > GetSpeechandtextanalyticsTopicsGeneralStatusWithHttpInfo (string dialect = null)
         { 
@@ -6519,11 +6371,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of general topics from the org and the system with their current status 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of UnifiedGeneralTopicEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<UnifiedGeneralTopicEntityListing> GetSpeechandtextanalyticsTopicsGeneralStatusAsync (string dialect = null)
         {
@@ -6534,11 +6386,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of general topics from the org and the system with their current status 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <returns>Task of ApiResponse (UnifiedGeneralTopicEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UnifiedGeneralTopicEntityListing>> GetSpeechandtextanalyticsTopicsGeneralStatusAsyncWithHttpInfo (string dialect = null)
         { 
@@ -6616,11 +6468,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics publish topics job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>TopicJob</returns>
-        
         
         public TopicJob GetSpeechandtextanalyticsTopicsPublishjob (string jobId)
         {
@@ -6630,11 +6482,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics publish topics job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>ApiResponse of TopicJob</returns>
-        
         
         public ApiResponse< TopicJob > GetSpeechandtextanalyticsTopicsPublishjobWithHttpInfo (string jobId)
         { 
@@ -6714,11 +6566,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics publish topics job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>Task of TopicJob</returns>
-        
         
         public async System.Threading.Tasks.Task<TopicJob> GetSpeechandtextanalyticsTopicsPublishjobAsync (string jobId)
         {
@@ -6729,11 +6581,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Speech & Text Analytics publish topics job by id 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the publish topics job</param>
         /// <returns>Task of ApiResponse (TopicJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TopicJob>> GetSpeechandtextanalyticsTopicsPublishjobAsyncWithHttpInfo (string jobId)
         { 
@@ -6815,11 +6667,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Patch Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public SpeechTextAnalyticsSettingsResponse PatchSpeechandtextanalyticsSettings (SpeechTextAnalyticsSettingsRequest body)
         {
@@ -6829,11 +6681,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Patch Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public ApiResponse< SpeechTextAnalyticsSettingsResponse > PatchSpeechandtextanalyticsSettingsWithHttpInfo (SpeechTextAnalyticsSettingsRequest body)
         { 
@@ -6918,11 +6770,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Patch Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<SpeechTextAnalyticsSettingsResponse> PatchSpeechandtextanalyticsSettingsAsync (SpeechTextAnalyticsSettingsRequest body)
         {
@@ -6933,11 +6785,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Patch Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> PatchSpeechandtextanalyticsSettingsAsyncWithHttpInfo (SpeechTextAnalyticsSettingsRequest body)
         { 
@@ -7024,11 +6876,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
         /// <returns>Program</returns>
-        
         
         public Program PostSpeechandtextanalyticsPrograms (ProgramRequest body)
         {
@@ -7038,11 +6890,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
         /// <returns>ApiResponse of Program</returns>
-        
         
         public ApiResponse< Program > PostSpeechandtextanalyticsProgramsWithHttpInfo (ProgramRequest body)
         { 
@@ -7127,11 +6979,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
         /// <returns>Task of Program</returns>
-        
         
         public async System.Threading.Tasks.Task<Program> PostSpeechandtextanalyticsProgramsAsync (ProgramRequest body)
         {
@@ -7142,11 +6994,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The program to create</param>
         /// <returns>Task of ApiResponse (Program)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Program>> PostSpeechandtextanalyticsProgramsAsyncWithHttpInfo (ProgramRequest body)
         { 
@@ -7233,11 +7085,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics general program job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
         /// <returns>GeneralProgramJob</returns>
-        
         
         public GeneralProgramJob PostSpeechandtextanalyticsProgramsGeneralJobs (GeneralProgramJobRequest body)
         {
@@ -7247,11 +7099,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics general program job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
         /// <returns>ApiResponse of GeneralProgramJob</returns>
-        
         
         public ApiResponse< GeneralProgramJob > PostSpeechandtextanalyticsProgramsGeneralJobsWithHttpInfo (GeneralProgramJobRequest body)
         { 
@@ -7336,11 +7188,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics general program job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
         /// <returns>Task of GeneralProgramJob</returns>
-        
         
         public async System.Threading.Tasks.Task<GeneralProgramJob> PostSpeechandtextanalyticsProgramsGeneralJobsAsync (GeneralProgramJobRequest body)
         {
@@ -7351,11 +7203,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics general program job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The general programs job to create</param>
         /// <returns>Task of ApiResponse (GeneralProgramJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<GeneralProgramJob>> PostSpeechandtextanalyticsProgramsGeneralJobsAsyncWithHttpInfo (GeneralProgramJobRequest body)
         { 
@@ -7442,11 +7294,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics publish programs job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
         /// <returns>ProgramJob</returns>
-        
         
         public ProgramJob PostSpeechandtextanalyticsProgramsPublishjobs (ProgramJobRequest body)
         {
@@ -7456,11 +7308,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics publish programs job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
         /// <returns>ApiResponse of ProgramJob</returns>
-        
         
         public ApiResponse< ProgramJob > PostSpeechandtextanalyticsProgramsPublishjobsWithHttpInfo (ProgramJobRequest body)
         { 
@@ -7545,11 +7397,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics publish programs job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
         /// <returns>Task of ProgramJob</returns>
-        
         
         public async System.Threading.Tasks.Task<ProgramJob> PostSpeechandtextanalyticsProgramsPublishjobsAsync (ProgramJobRequest body)
         {
@@ -7560,11 +7412,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics publish programs job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish programs job to create</param>
         /// <returns>Task of ApiResponse (ProgramJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ProgramJob>> PostSpeechandtextanalyticsProgramsPublishjobsAsyncWithHttpInfo (ProgramJobRequest body)
         { 
@@ -7651,11 +7503,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>SentimentFeedback</returns>
-        
         
         public SentimentFeedback PostSpeechandtextanalyticsSentimentfeedback (SentimentFeedback body)
         {
@@ -7665,11 +7517,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>ApiResponse of SentimentFeedback</returns>
-        
         
         public ApiResponse< SentimentFeedback > PostSpeechandtextanalyticsSentimentfeedbackWithHttpInfo (SentimentFeedback body)
         { 
@@ -7754,11 +7606,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>Task of SentimentFeedback</returns>
-        
         
         public async System.Threading.Tasks.Task<SentimentFeedback> PostSpeechandtextanalyticsSentimentfeedbackAsync (SentimentFeedback body)
         {
@@ -7769,11 +7621,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Speech & Text Analytics SentimentFeedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The SentimentFeedback to create</param>
         /// <returns>Task of ApiResponse (SentimentFeedback)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SentimentFeedback>> PostSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo (SentimentFeedback body)
         { 
@@ -7860,11 +7712,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics topic 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
         /// <returns>Topic</returns>
-        
         
         public Topic PostSpeechandtextanalyticsTopics (TopicRequest body)
         {
@@ -7874,11 +7726,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics topic 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
         /// <returns>ApiResponse of Topic</returns>
-        
         
         public ApiResponse< Topic > PostSpeechandtextanalyticsTopicsWithHttpInfo (TopicRequest body)
         { 
@@ -7963,11 +7815,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics topic 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
         /// <returns>Task of Topic</returns>
-        
         
         public async System.Threading.Tasks.Task<Topic> PostSpeechandtextanalyticsTopicsAsync (TopicRequest body)
         {
@@ -7978,11 +7830,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics topic 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The topic to create</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Topic>> PostSpeechandtextanalyticsTopicsAsyncWithHttpInfo (TopicRequest body)
         { 
@@ -8069,11 +7921,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics publish topics job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
         /// <returns>TopicJob</returns>
-        
         
         public TopicJob PostSpeechandtextanalyticsTopicsPublishjobs (TopicJobRequest body)
         {
@@ -8083,11 +7935,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics publish topics job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
         /// <returns>ApiResponse of TopicJob</returns>
-        
         
         public ApiResponse< TopicJob > PostSpeechandtextanalyticsTopicsPublishjobsWithHttpInfo (TopicJobRequest body)
         { 
@@ -8172,11 +8024,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics publish topics job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
         /// <returns>Task of TopicJob</returns>
-        
         
         public async System.Threading.Tasks.Task<TopicJob> PostSpeechandtextanalyticsTopicsPublishjobsAsync (TopicJobRequest body)
         {
@@ -8187,11 +8039,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create new Speech & Text Analytics publish topics job 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The publish topics job to create</param>
         /// <returns>Task of ApiResponse (TopicJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TopicJob>> PostSpeechandtextanalyticsTopicsPublishjobsAsyncWithHttpInfo (TopicJobRequest body)
         { 
@@ -8278,11 +8130,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>JsonSearchResponse</returns>
-        
         
         public JsonSearchResponse PostSpeechandtextanalyticsTranscriptsSearch (TranscriptSearchRequest body)
         {
@@ -8292,11 +8144,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of JsonSearchResponse</returns>
-        
         
         public ApiResponse< JsonSearchResponse > PostSpeechandtextanalyticsTranscriptsSearchWithHttpInfo (TranscriptSearchRequest body)
         { 
@@ -8381,11 +8233,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of JsonSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<JsonSearchResponse> PostSpeechandtextanalyticsTranscriptsSearchAsync (TranscriptSearchRequest body)
         {
@@ -8396,11 +8248,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (JsonSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JsonSearchResponse>> PostSpeechandtextanalyticsTranscriptsSearchAsyncWithHttpInfo (TranscriptSearchRequest body)
         { 
@@ -8487,12 +8339,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update existing Speech & Text Analytics program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to update</param>
         /// <returns>Program</returns>
-        
         
         public Program PutSpeechandtextanalyticsProgram (string programId, ProgramRequest body)
         {
@@ -8502,12 +8354,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update existing Speech & Text Analytics program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to update</param>
         /// <returns>ApiResponse of Program</returns>
-        
         
         public ApiResponse< Program > PutSpeechandtextanalyticsProgramWithHttpInfo (string programId, ProgramRequest body)
         { 
@@ -8596,12 +8448,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update existing Speech & Text Analytics program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to update</param>
         /// <returns>Task of Program</returns>
-        
         
         public async System.Threading.Tasks.Task<Program> PutSpeechandtextanalyticsProgramAsync (string programId, ProgramRequest body)
         {
@@ -8612,12 +8464,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update existing Speech & Text Analytics program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to update</param>
         /// <returns>Task of ApiResponse (Program)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Program>> PutSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, ProgramRequest body)
         { 
@@ -8709,12 +8561,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Set Speech & Text Analytics program mappings to queues and flows 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
         /// <returns>ProgramMappings</returns>
-        
         
         public ProgramMappings PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body)
         {
@@ -8724,12 +8576,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Set Speech & Text Analytics program mappings to queues and flows 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
         /// <returns>ApiResponse of ProgramMappings</returns>
-        
         
         public ApiResponse< ProgramMappings > PutSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId, ProgramMappingsRequest body)
         { 
@@ -8818,12 +8670,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Set Speech & Text Analytics program mappings to queues and flows 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
         /// <returns>Task of ProgramMappings</returns>
-        
         
         public async System.Threading.Tasks.Task<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsAsync (string programId, ProgramMappingsRequest body)
         {
@@ -8834,12 +8686,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Set Speech & Text Analytics program mappings to queues and flows 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
         /// <returns>Task of ApiResponse (ProgramMappings)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId, ProgramMappingsRequest body)
         { 
@@ -8931,12 +8783,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update transcription engine settings of a program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">Program transcription engine setting</param>
         /// <returns>ProgramTranscriptionEngines</returns>
-        
         
         public ProgramTranscriptionEngines PutSpeechandtextanalyticsProgramTranscriptionengines (string programId, TranscriptionEnginesRequest body)
         {
@@ -8946,12 +8798,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update transcription engine settings of a program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">Program transcription engine setting</param>
         /// <returns>ApiResponse of ProgramTranscriptionEngines</returns>
-        
         
         public ApiResponse< ProgramTranscriptionEngines > PutSpeechandtextanalyticsProgramTranscriptionenginesWithHttpInfo (string programId, TranscriptionEnginesRequest body)
         { 
@@ -9040,12 +8892,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update transcription engine settings of a program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">Program transcription engine setting</param>
         /// <returns>Task of ProgramTranscriptionEngines</returns>
-        
         
         public async System.Threading.Tasks.Task<ProgramTranscriptionEngines> PutSpeechandtextanalyticsProgramTranscriptionenginesAsync (string programId, TranscriptionEnginesRequest body)
         {
@@ -9056,12 +8908,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update transcription engine settings of a program 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">Program transcription engine setting</param>
         /// <returns>Task of ApiResponse (ProgramTranscriptionEngines)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ProgramTranscriptionEngines>> PutSpeechandtextanalyticsProgramTranscriptionenginesAsyncWithHttpInfo (string programId, TranscriptionEnginesRequest body)
         { 
@@ -9153,11 +9005,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public SpeechTextAnalyticsSettingsResponse PutSpeechandtextanalyticsSettings (SpeechTextAnalyticsSettingsRequest body)
         {
@@ -9167,11 +9019,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>ApiResponse of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public ApiResponse< SpeechTextAnalyticsSettingsResponse > PutSpeechandtextanalyticsSettingsWithHttpInfo (SpeechTextAnalyticsSettingsRequest body)
         { 
@@ -9256,11 +9108,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of SpeechTextAnalyticsSettingsResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<SpeechTextAnalyticsSettingsResponse> PutSpeechandtextanalyticsSettingsAsync (SpeechTextAnalyticsSettingsRequest body)
         {
@@ -9271,11 +9123,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Speech And Text Analytics Settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Speech And Text Analytics Settings</param>
         /// <returns>Task of ApiResponse (SpeechTextAnalyticsSettingsResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> PutSpeechandtextanalyticsSettingsAsyncWithHttpInfo (SpeechTextAnalyticsSettingsRequest body)
         { 
@@ -9362,12 +9214,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update existing Speech & Text Analytics topic 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <param name="body">The topic to update</param>
         /// <returns>Topic</returns>
-        
         
         public Topic PutSpeechandtextanalyticsTopic (string topicId, TopicRequest body)
         {
@@ -9377,12 +9229,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update existing Speech & Text Analytics topic 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <param name="body">The topic to update</param>
         /// <returns>ApiResponse of Topic</returns>
-        
         
         public ApiResponse< Topic > PutSpeechandtextanalyticsTopicWithHttpInfo (string topicId, TopicRequest body)
         { 
@@ -9471,12 +9323,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update existing Speech & Text Analytics topic 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <param name="body">The topic to update</param>
         /// <returns>Task of Topic</returns>
-        
         
         public async System.Threading.Tasks.Task<Topic> PutSpeechandtextanalyticsTopicAsync (string topicId, TopicRequest body)
         {
@@ -9487,12 +9339,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update existing Speech & Text Analytics topic 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">The id of the topic</param>
         /// <param name="body">The topic to update</param>
         /// <returns>Task of ApiResponse (Topic)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Topic>> PutSpeechandtextanalyticsTopicAsyncWithHttpInfo (string topicId, TopicRequest body)
         { 

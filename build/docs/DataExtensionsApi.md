@@ -20,8 +20,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get a specific named core type.
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:view
@@ -85,8 +83,6 @@ namespace Example
 
 Get the core types from which all schemas are built.
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:view
@@ -144,8 +140,6 @@ This endpoint does require any parameters.
 
 
 Get quantitative limits on schemas
-
-
 
 Requires ANY permissions: 
 

@@ -20,8 +20,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Unassigns the user assigned to this station
 
-
-
 Requires NO permissions: 
 
 
@@ -82,8 +80,6 @@ void (empty response body)
 
 
 Get station.
-
-
 
 Requires NO permissions: 
 
@@ -146,8 +142,6 @@ namespace Example
 
 
 Get the list of available stations.
-
-
 
 Requires NO permissions: 
 

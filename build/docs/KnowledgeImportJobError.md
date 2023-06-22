@@ -17,6 +17,7 @@ title: KnowledgeImportJobError
 | **ContextId** | **string** |  | [optional] |
 | **Details** | [**List&lt;Detail&gt;**](Detail.html) |  | [optional] |
 | **Errors** | [**List&lt;ErrorBody&gt;**](ErrorBody.html) |  | [optional] |
+| **Limit** | [**Limit**](Limit.html) |  | [optional] |
 | **DocumentIndex** | **int?** | Index of the faulty document. | [optional] |
 {: class="table table-striped"}
 

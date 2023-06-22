@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the label. (required).</param>
         /// <param name="Color">The color for the label. (required).</param>
-        public LabelCreateRequest(string Name = null, string Color = null)
+        /// <param name="ExternalId">The external id associated with the label..</param>
+        public LabelCreateRequest(string Name = null, string Color = null, string ExternalId = null)
         {
             this.Name = Name;
             this.Color = Color;
+            this.ExternalId = ExternalId;
             
         }
         
@@ -66,6 +68,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The external id associated with the label.
+        /// </summary>
+        /// <value>The external id associated with the label.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -85,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Color: ").Append(Color).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -142,6 +154,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Color.Equals(other.Color)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -167,6 +184,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Color != null)
                     hash = hash * 59 + this.Color.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

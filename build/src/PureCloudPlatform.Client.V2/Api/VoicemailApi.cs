@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <returns></returns>
         
-        
         void DeleteVoicemailMessage (string messageId);
 
         /// <summary>
@@ -39,7 +38,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteVoicemailMessageWithHttpInfo (string messageId);
 
         /// <summary>
@@ -51,7 +49,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         
-        
         void DeleteVoicemailMessages ();
 
         /// <summary>
@@ -62,7 +59,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteVoicemailMessagesWithHttpInfo ();
 
@@ -76,7 +72,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">groupId</param>
         /// <returns>VoicemailMailboxInfo</returns>
         
-        
         VoicemailMailboxInfo GetVoicemailGroupMailbox (string groupId);
 
         /// <summary>
@@ -88,7 +83,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
-        
         
         ApiResponse<VoicemailMailboxInfo> GetVoicemailGroupMailboxWithHttpInfo (string groupId);
 
@@ -104,7 +98,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
         
-        
         VoicemailMessageEntityListing GetVoicemailGroupMessages (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -119,7 +112,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         
-        
         ApiResponse<VoicemailMessageEntityListing> GetVoicemailGroupMessagesWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -131,7 +123,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>VoicemailGroupPolicy</returns>
-        
         
         VoicemailGroupPolicy GetVoicemailGroupPolicy (string groupId);
 
@@ -145,7 +136,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
         
-        
         ApiResponse<VoicemailGroupPolicy> GetVoicemailGroupPolicyWithHttpInfo (string groupId);
 
         /// <summary>
@@ -156,7 +146,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailMailboxInfo</returns>
-        
         
         VoicemailMailboxInfo GetVoicemailMailbox ();
 
@@ -169,7 +158,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
         
-        
         ApiResponse<VoicemailMailboxInfo> GetVoicemailMailboxWithHttpInfo ();
 
         /// <summary>
@@ -181,7 +169,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailMailboxInfo</returns>
         
-        
         VoicemailMailboxInfo GetVoicemailMeMailbox ();
 
         /// <summary>
@@ -192,7 +179,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
-        
         
         ApiResponse<VoicemailMailboxInfo> GetVoicemailMeMailboxWithHttpInfo ();
 
@@ -207,7 +193,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
         
-        
         VoicemailMessageEntityListing GetVoicemailMeMessages (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -221,7 +206,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         
-        
         ApiResponse<VoicemailMessageEntityListing> GetVoicemailMeMessagesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -233,7 +217,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailUserPolicy</returns>
         
-        
         VoicemailUserPolicy GetVoicemailMePolicy ();
 
         /// <summary>
@@ -244,7 +227,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         ApiResponse<VoicemailUserPolicy> GetVoicemailMePolicyWithHttpInfo ();
 
@@ -259,7 +241,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>VoicemailMessage</returns>
         
-        
         VoicemailMessage GetVoicemailMessage (string messageId, List<string> expand = null);
 
         /// <summary>
@@ -272,7 +253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        
         
         ApiResponse<VoicemailMessage> GetVoicemailMessageWithHttpInfo (string messageId, List<string> expand = null);
 
@@ -287,7 +267,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>VoicemailMediaInfo</returns>
         
-        
         VoicemailMediaInfo GetVoicemailMessageMedia (string messageId, string formatId = null);
 
         /// <summary>
@@ -300,7 +279,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>ApiResponse of VoicemailMediaInfo</returns>
-        
         
         ApiResponse<VoicemailMediaInfo> GetVoicemailMessageMediaWithHttpInfo (string messageId, string formatId = null);
 
@@ -315,7 +293,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
         
-        
         VoicemailMessageEntityListing GetVoicemailMessages (string ids = null, List<string> expand = null);
 
         /// <summary>
@@ -329,7 +306,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         
-        
         ApiResponse<VoicemailMessageEntityListing> GetVoicemailMessagesWithHttpInfo (string ids = null, List<string> expand = null);
 
         /// <summary>
@@ -341,7 +317,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailOrganizationPolicy</returns>
         
-        
         VoicemailOrganizationPolicy GetVoicemailPolicy ();
 
         /// <summary>
@@ -352,7 +327,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        
         
         ApiResponse<VoicemailOrganizationPolicy> GetVoicemailPolicyWithHttpInfo ();
 
@@ -368,7 +342,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
         
-        
         VoicemailMessageEntityListing GetVoicemailQueueMessages (string queueId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -383,7 +356,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         
-        
         ApiResponse<VoicemailMessageEntityListing> GetVoicemailQueueMessagesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -396,7 +368,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>VoicemailsSearchResponse</returns>
-        
         
         VoicemailsSearchResponse GetVoicemailSearch (string q64, List<string> expand = null);
 
@@ -411,7 +382,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
         
-        
         ApiResponse<VoicemailsSearchResponse> GetVoicemailSearchWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -424,7 +394,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>VoicemailUserPolicy</returns>
         
-        
         VoicemailUserPolicy GetVoicemailUserpolicy (string userId);
 
         /// <summary>
@@ -436,7 +405,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         ApiResponse<VoicemailUserPolicy> GetVoicemailUserpolicyWithHttpInfo (string userId);
 
@@ -451,7 +419,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>VoicemailGroupPolicy</returns>
         
-        
         VoicemailGroupPolicy PatchVoicemailGroupPolicy (string groupId, VoicemailGroupPolicy body);
 
         /// <summary>
@@ -465,7 +432,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
         
-        
         ApiResponse<VoicemailGroupPolicy> PatchVoicemailGroupPolicyWithHttpInfo (string groupId, VoicemailGroupPolicy body);
 
         /// <summary>
@@ -478,7 +444,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
         
-        
         VoicemailUserPolicy PatchVoicemailMePolicy (VoicemailUserPolicy body);
 
         /// <summary>
@@ -490,7 +455,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         ApiResponse<VoicemailUserPolicy> PatchVoicemailMePolicyWithHttpInfo (VoicemailUserPolicy body);
 
@@ -505,7 +469,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">VoicemailMessage</param>
         /// <returns>VoicemailMessage</returns>
         
-        
         VoicemailMessage PatchVoicemailMessage (string messageId, VoicemailMessage body);
 
         /// <summary>
@@ -518,7 +481,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        
         
         ApiResponse<VoicemailMessage> PatchVoicemailMessageWithHttpInfo (string messageId, VoicemailMessage body);
 
@@ -533,7 +495,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
         
-        
         VoicemailUserPolicy PatchVoicemailUserpolicy (string userId, VoicemailUserPolicy body);
 
         /// <summary>
@@ -547,7 +508,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         
-        
         ApiResponse<VoicemailUserPolicy> PatchVoicemailUserpolicyWithHttpInfo (string userId, VoicemailUserPolicy body);
 
         /// <summary>
@@ -559,7 +519,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>VoicemailMessage</returns>
-        
         
         VoicemailMessage PostVoicemailMessages (CopyVoicemailMessage body = null);
 
@@ -573,7 +532,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
         
-        
         ApiResponse<VoicemailMessage> PostVoicemailMessagesWithHttpInfo (CopyVoicemailMessage body = null);
 
         /// <summary>
@@ -586,7 +544,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>VoicemailsSearchResponse</returns>
         
-        
         VoicemailsSearchResponse PostVoicemailSearch (VoicemailSearchRequest body);
 
         /// <summary>
@@ -598,7 +555,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
-        
         
         ApiResponse<VoicemailsSearchResponse> PostVoicemailSearchWithHttpInfo (VoicemailSearchRequest body);
 
@@ -613,7 +569,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">VoicemailMessage</param>
         /// <returns>VoicemailMessage</returns>
         
-        
         VoicemailMessage PutVoicemailMessage (string messageId, VoicemailMessage body);
 
         /// <summary>
@@ -627,7 +582,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
         
-        
         ApiResponse<VoicemailMessage> PutVoicemailMessageWithHttpInfo (string messageId, VoicemailMessage body);
 
         /// <summary>
@@ -640,7 +594,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>VoicemailOrganizationPolicy</returns>
         
-        
         VoicemailOrganizationPolicy PutVoicemailPolicy (VoicemailOrganizationPolicy body);
 
         /// <summary>
@@ -652,7 +605,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        
         
         ApiResponse<VoicemailOrganizationPolicy> PutVoicemailPolicyWithHttpInfo (VoicemailOrganizationPolicy body);
 
@@ -667,7 +619,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
         
-        
         VoicemailUserPolicy PutVoicemailUserpolicy (string userId, VoicemailUserPolicy body);
 
         /// <summary>
@@ -680,7 +631,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         ApiResponse<VoicemailUserPolicy> PutVoicemailUserpolicyWithHttpInfo (string userId, VoicemailUserPolicy body);
 
@@ -698,7 +648,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteVoicemailMessageAsync (string messageId);
 
         /// <summary>
@@ -711,7 +660,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessageAsyncWithHttpInfo (string messageId);
 
         /// <summary>
@@ -723,7 +671,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteVoicemailMessagesAsync ();
 
         /// <summary>
@@ -734,7 +681,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessagesAsyncWithHttpInfo ();
 
@@ -748,7 +694,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">groupId</param>
         /// <returns>Task of VoicemailMailboxInfo</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMailboxInfo> GetVoicemailGroupMailboxAsync (string groupId);
 
         /// <summary>
@@ -760,7 +705,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailGroupMailboxAsyncWithHttpInfo (string groupId);
 
@@ -776,7 +720,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetVoicemailGroupMessagesAsync (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -791,7 +734,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailGroupMessagesAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -803,7 +745,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of VoicemailGroupPolicy</returns>
-        
         
         System.Threading.Tasks.Task<VoicemailGroupPolicy> GetVoicemailGroupPolicyAsync (string groupId);
 
@@ -817,7 +758,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> GetVoicemailGroupPolicyAsyncWithHttpInfo (string groupId);
 
         /// <summary>
@@ -828,7 +768,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailMailboxInfo</returns>
-        
         
         System.Threading.Tasks.Task<VoicemailMailboxInfo> GetVoicemailMailboxAsync ();
 
@@ -841,7 +780,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMailboxAsyncWithHttpInfo ();
 
         /// <summary>
@@ -853,7 +791,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailMailboxInfo</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMailboxInfo> GetVoicemailMeMailboxAsync ();
 
         /// <summary>
@@ -864,7 +801,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMeMailboxAsyncWithHttpInfo ();
 
@@ -879,7 +815,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetVoicemailMeMessagesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -893,7 +828,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMeMessagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -905,7 +839,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailUserPolicy</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailUserPolicy> GetVoicemailMePolicyAsync ();
 
         /// <summary>
@@ -916,7 +849,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailMePolicyAsyncWithHttpInfo ();
 
@@ -931,7 +863,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of VoicemailMessage</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMessage> GetVoicemailMessageAsync (string messageId, List<string> expand = null);
 
         /// <summary>
@@ -944,7 +875,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetVoicemailMessageAsyncWithHttpInfo (string messageId, List<string> expand = null);
 
@@ -959,7 +889,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of VoicemailMediaInfo</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMediaInfo> GetVoicemailMessageMediaAsync (string messageId, string formatId = null);
 
         /// <summary>
@@ -972,7 +901,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (VoicemailMediaInfo)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetVoicemailMessageMediaAsyncWithHttpInfo (string messageId, string formatId = null);
 
@@ -987,7 +915,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetVoicemailMessagesAsync (string ids = null, List<string> expand = null);
 
         /// <summary>
@@ -1001,7 +928,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMessagesAsyncWithHttpInfo (string ids = null, List<string> expand = null);
 
         /// <summary>
@@ -1013,7 +939,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetVoicemailPolicyAsync ();
 
         /// <summary>
@@ -1024,7 +949,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailPolicyAsyncWithHttpInfo ();
 
@@ -1040,7 +964,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetVoicemailQueueMessagesAsync (string queueId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1055,7 +978,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailQueueMessagesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1068,7 +990,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of VoicemailsSearchResponse</returns>
-        
         
         System.Threading.Tasks.Task<VoicemailsSearchResponse> GetVoicemailSearchAsync (string q64, List<string> expand = null);
 
@@ -1083,7 +1004,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetVoicemailSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -1096,7 +1016,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailUserPolicy> GetVoicemailUserpolicyAsync (string userId);
 
         /// <summary>
@@ -1108,7 +1027,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailUserpolicyAsyncWithHttpInfo (string userId);
 
@@ -1123,7 +1041,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailGroupPolicy</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailGroupPolicy> PatchVoicemailGroupPolicyAsync (string groupId, VoicemailGroupPolicy body);
 
         /// <summary>
@@ -1137,7 +1054,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> PatchVoicemailGroupPolicyAsyncWithHttpInfo (string groupId, VoicemailGroupPolicy body);
 
         /// <summary>
@@ -1150,7 +1066,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailUserPolicy> PatchVoicemailMePolicyAsync (VoicemailUserPolicy body);
 
         /// <summary>
@@ -1162,7 +1077,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailMePolicyAsyncWithHttpInfo (VoicemailUserPolicy body);
 
@@ -1177,7 +1091,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMessage> PatchVoicemailMessageAsync (string messageId, VoicemailMessage body);
 
         /// <summary>
@@ -1190,7 +1103,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PatchVoicemailMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body);
 
@@ -1205,7 +1117,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailUserPolicy> PatchVoicemailUserpolicyAsync (string userId, VoicemailUserPolicy body);
 
         /// <summary>
@@ -1219,7 +1130,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailUserpolicyAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
 
         /// <summary>
@@ -1231,7 +1141,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of VoicemailMessage</returns>
-        
         
         System.Threading.Tasks.Task<VoicemailMessage> PostVoicemailMessagesAsync (CopyVoicemailMessage body = null);
 
@@ -1245,7 +1154,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PostVoicemailMessagesAsyncWithHttpInfo (CopyVoicemailMessage body = null);
 
         /// <summary>
@@ -1258,7 +1166,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of VoicemailsSearchResponse</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailsSearchResponse> PostVoicemailSearchAsync (VoicemailSearchRequest body);
 
         /// <summary>
@@ -1270,7 +1177,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostVoicemailSearchAsyncWithHttpInfo (VoicemailSearchRequest body);
 
@@ -1285,7 +1191,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailMessage> PutVoicemailMessageAsync (string messageId, VoicemailMessage body);
 
         /// <summary>
@@ -1299,7 +1204,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutVoicemailMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body);
 
         /// <summary>
@@ -1312,7 +1216,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutVoicemailPolicyAsync (VoicemailOrganizationPolicy body);
 
         /// <summary>
@@ -1324,7 +1227,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutVoicemailPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body);
 
@@ -1339,7 +1241,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
         
-        
         System.Threading.Tasks.Task<VoicemailUserPolicy> PutVoicemailUserpolicyAsync (string userId, VoicemailUserPolicy body);
 
         /// <summary>
@@ -1352,7 +1253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PutVoicemailUserpolicyAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
 
@@ -1449,12 +1349,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a voicemail message. A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
+        /// Delete a voicemail message. 
+        /// A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns></returns>
-        
         
         public void DeleteVoicemailMessage (string messageId)
         {
@@ -1462,12 +1362,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a voicemail message. A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
+        /// Delete a voicemail message. 
+        /// A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteVoicemailMessageWithHttpInfo (string messageId)
         { 
@@ -1546,12 +1446,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a voicemail message. A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
+        /// Delete a voicemail message. 
+        /// A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteVoicemailMessageAsync (string messageId)
         {
@@ -1560,12 +1460,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a voicemail message. A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
+        /// Delete a voicemail message. 
+        /// A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessageAsyncWithHttpInfo (string messageId)
         { 
@@ -1647,10 +1547,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete all voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
-        
         
         public void DeleteVoicemailMessages ()
         {
@@ -1659,10 +1559,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete all voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteVoicemailMessagesWithHttpInfo ()
         { 
@@ -1738,10 +1638,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete all voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteVoicemailMessagesAsync ()
         {
@@ -1751,10 +1651,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete all voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessagesAsyncWithHttpInfo ()
         { 
@@ -1831,11 +1731,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the group's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
         /// <returns>VoicemailMailboxInfo</returns>
-        
         
         public VoicemailMailboxInfo GetVoicemailGroupMailbox (string groupId)
         {
@@ -1845,11 +1745,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the group's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
-        
         
         public ApiResponse< VoicemailMailboxInfo > GetVoicemailGroupMailboxWithHttpInfo (string groupId)
         { 
@@ -1929,11 +1829,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the group's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
         /// <returns>Task of VoicemailMailboxInfo</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMailboxInfo> GetVoicemailGroupMailboxAsync (string groupId)
         {
@@ -1944,11 +1844,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the group's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailGroupMailboxAsyncWithHttpInfo (string groupId)
         { 
@@ -2030,13 +1930,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
-        
         
         public VoicemailMessageEntityListing GetVoicemailGroupMessages (string groupId, int? pageSize = null, int? pageNumber = null)
         {
@@ -2046,13 +1946,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        
         
         public ApiResponse< VoicemailMessageEntityListing > GetVoicemailGroupMessagesWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -2134,13 +2034,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetVoicemailGroupMessagesAsync (string groupId, int? pageSize = null, int? pageNumber = null)
         {
@@ -2151,13 +2051,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailGroupMessagesAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -2241,11 +2141,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a group's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>VoicemailGroupPolicy</returns>
-        
         
         public VoicemailGroupPolicy GetVoicemailGroupPolicy (string groupId)
         {
@@ -2255,11 +2155,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a group's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
-        
         
         public ApiResponse< VoicemailGroupPolicy > GetVoicemailGroupPolicyWithHttpInfo (string groupId)
         { 
@@ -2339,11 +2239,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a group's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of VoicemailGroupPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailGroupPolicy> GetVoicemailGroupPolicyAsync (string groupId)
         {
@@ -2354,11 +2254,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a group's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> GetVoicemailGroupPolicyAsyncWithHttpInfo (string groupId)
         { 
@@ -2440,10 +2340,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailMailboxInfo</returns>
-        
         
         public VoicemailMailboxInfo GetVoicemailMailbox ()
         {
@@ -2453,10 +2353,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
-        
         
         public ApiResponse< VoicemailMailboxInfo > GetVoicemailMailboxWithHttpInfo ()
         { 
@@ -2532,10 +2432,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailMailboxInfo</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMailboxInfo> GetVoicemailMailboxAsync ()
         {
@@ -2546,10 +2446,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMailboxAsyncWithHttpInfo ()
         { 
@@ -2626,10 +2526,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailMailboxInfo</returns>
-        
         
         public VoicemailMailboxInfo GetVoicemailMeMailbox ()
         {
@@ -2639,10 +2539,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
-        
         
         public ApiResponse< VoicemailMailboxInfo > GetVoicemailMeMailboxWithHttpInfo ()
         { 
@@ -2718,10 +2618,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailMailboxInfo</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMailboxInfo> GetVoicemailMeMailboxAsync ()
         {
@@ -2732,10 +2632,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's mailbox information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMeMailboxAsyncWithHttpInfo ()
         { 
@@ -2812,12 +2712,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
-        
         
         public VoicemailMessageEntityListing GetVoicemailMeMessages (int? pageSize = null, int? pageNumber = null)
         {
@@ -2827,12 +2727,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        
         
         public ApiResponse< VoicemailMessageEntityListing > GetVoicemailMeMessagesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -2910,12 +2810,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetVoicemailMeMessagesAsync (int? pageSize = null, int? pageNumber = null)
         {
@@ -2926,12 +2826,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMeMessagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -3010,10 +2910,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailUserPolicy</returns>
-        
         
         public VoicemailUserPolicy GetVoicemailMePolicy ()
         {
@@ -3023,10 +2923,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         public ApiResponse< VoicemailUserPolicy > GetVoicemailMePolicyWithHttpInfo ()
         { 
@@ -3102,10 +3002,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailUserPolicy> GetVoicemailMePolicyAsync ()
         {
@@ -3116,10 +3016,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailMePolicyAsyncWithHttpInfo ()
         { 
@@ -3196,12 +3096,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a voicemail message 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>VoicemailMessage</returns>
-        
         
         public VoicemailMessage GetVoicemailMessage (string messageId, List<string> expand = null)
         {
@@ -3211,12 +3111,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a voicemail message 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        
         
         public ApiResponse< VoicemailMessage > GetVoicemailMessageWithHttpInfo (string messageId, List<string> expand = null)
         { 
@@ -3297,12 +3197,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a voicemail message 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of VoicemailMessage</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMessage> GetVoicemailMessageAsync (string messageId, List<string> expand = null)
         {
@@ -3313,12 +3213,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a voicemail message 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetVoicemailMessageAsyncWithHttpInfo (string messageId, List<string> expand = null)
         { 
@@ -3401,12 +3301,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this voicemail message 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>VoicemailMediaInfo</returns>
-        
         
         public VoicemailMediaInfo GetVoicemailMessageMedia (string messageId, string formatId = null)
         {
@@ -3416,12 +3316,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this voicemail message 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>ApiResponse of VoicemailMediaInfo</returns>
-        
         
         public ApiResponse< VoicemailMediaInfo > GetVoicemailMessageMediaWithHttpInfo (string messageId, string formatId = null)
         { 
@@ -3502,12 +3402,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this voicemail message 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of VoicemailMediaInfo</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMediaInfo> GetVoicemailMessageMediaAsync (string messageId, string formatId = null)
         {
@@ -3518,12 +3418,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get media playback URI for this voicemail message 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (VoicemailMediaInfo)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetVoicemailMessageMediaAsyncWithHttpInfo (string messageId, string formatId = null)
         { 
@@ -3606,12 +3506,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
-        
         
         public VoicemailMessageEntityListing GetVoicemailMessages (string ids = null, List<string> expand = null)
         {
@@ -3621,12 +3521,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        
         
         public ApiResponse< VoicemailMessageEntityListing > GetVoicemailMessagesWithHttpInfo (string ids = null, List<string> expand = null)
         { 
@@ -3704,12 +3604,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetVoicemailMessagesAsync (string ids = null, List<string> expand = null)
         {
@@ -3720,12 +3620,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMessagesAsyncWithHttpInfo (string ids = null, List<string> expand = null)
         { 
@@ -3804,10 +3704,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        
         
         public VoicemailOrganizationPolicy GetVoicemailPolicy ()
         {
@@ -3817,10 +3717,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        
         
         public ApiResponse< VoicemailOrganizationPolicy > GetVoicemailPolicyWithHttpInfo ()
         { 
@@ -3896,10 +3796,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetVoicemailPolicyAsync ()
         {
@@ -3910,10 +3810,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailPolicyAsyncWithHttpInfo ()
         { 
@@ -3990,13 +3890,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
-        
         
         public VoicemailMessageEntityListing GetVoicemailQueueMessages (string queueId, int? pageSize = null, int? pageNumber = null)
         {
@@ -4006,13 +3906,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        
         
         public ApiResponse< VoicemailMessageEntityListing > GetVoicemailQueueMessagesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -4094,13 +3994,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetVoicemailQueueMessagesAsync (string queueId, int? pageSize = null, int? pageNumber = null)
         {
@@ -4111,13 +4011,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List voicemail messages 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailQueueMessagesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
         { 
@@ -4201,12 +4101,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>VoicemailsSearchResponse</returns>
-        
         
         public VoicemailsSearchResponse GetVoicemailSearch (string q64, List<string> expand = null)
         {
@@ -4216,12 +4116,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
-        
         
         public ApiResponse< VoicemailsSearchResponse > GetVoicemailSearchWithHttpInfo (string q64, List<string> expand = null)
         { 
@@ -4302,12 +4202,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of VoicemailsSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailsSearchResponse> GetVoicemailSearchAsync (string q64, List<string> expand = null)
         {
@@ -4318,12 +4218,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetVoicemailSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         { 
@@ -4406,11 +4306,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>VoicemailUserPolicy</returns>
-        
         
         public VoicemailUserPolicy GetVoicemailUserpolicy (string userId)
         {
@@ -4420,11 +4320,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         public ApiResponse< VoicemailUserPolicy > GetVoicemailUserpolicyWithHttpInfo (string userId)
         { 
@@ -4504,11 +4404,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailUserPolicy> GetVoicemailUserpolicyAsync (string userId)
         {
@@ -4519,11 +4419,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailUserpolicyAsyncWithHttpInfo (string userId)
         { 
@@ -4605,12 +4505,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a group's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>VoicemailGroupPolicy</returns>
-        
         
         public VoicemailGroupPolicy PatchVoicemailGroupPolicy (string groupId, VoicemailGroupPolicy body)
         {
@@ -4620,12 +4520,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a group's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
-        
         
         public ApiResponse< VoicemailGroupPolicy > PatchVoicemailGroupPolicyWithHttpInfo (string groupId, VoicemailGroupPolicy body)
         { 
@@ -4714,12 +4614,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a group's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailGroupPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailGroupPolicy> PatchVoicemailGroupPolicyAsync (string groupId, VoicemailGroupPolicy body)
         {
@@ -4730,12 +4630,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a group's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> PatchVoicemailGroupPolicyAsyncWithHttpInfo (string groupId, VoicemailGroupPolicy body)
         { 
@@ -4827,11 +4727,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the current user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
-        
         
         public VoicemailUserPolicy PatchVoicemailMePolicy (VoicemailUserPolicy body)
         {
@@ -4841,11 +4741,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the current user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         public ApiResponse< VoicemailUserPolicy > PatchVoicemailMePolicyWithHttpInfo (VoicemailUserPolicy body)
         { 
@@ -4930,11 +4830,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the current user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailUserPolicy> PatchVoicemailMePolicyAsync (VoicemailUserPolicy body)
         {
@@ -4945,11 +4845,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the current user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailMePolicyAsyncWithHttpInfo (VoicemailUserPolicy body)
         { 
@@ -5035,13 +4935,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// Update a voicemail message 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>VoicemailMessage</returns>
-        
         
         public VoicemailMessage PatchVoicemailMessage (string messageId, VoicemailMessage body)
         {
@@ -5050,13 +4950,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// Update a voicemail message 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        
         
         public ApiResponse< VoicemailMessage > PatchVoicemailMessageWithHttpInfo (string messageId, VoicemailMessage body)
         { 
@@ -5144,13 +5044,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// Update a voicemail message 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMessage> PatchVoicemailMessageAsync (string messageId, VoicemailMessage body)
         {
@@ -5160,13 +5060,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// Update a voicemail message 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PatchVoicemailMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body)
         { 
@@ -5258,12 +5158,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
-        
         
         public VoicemailUserPolicy PatchVoicemailUserpolicy (string userId, VoicemailUserPolicy body)
         {
@@ -5273,12 +5173,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         public ApiResponse< VoicemailUserPolicy > PatchVoicemailUserpolicyWithHttpInfo (string userId, VoicemailUserPolicy body)
         { 
@@ -5367,12 +5267,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailUserPolicy> PatchVoicemailUserpolicyAsync (string userId, VoicemailUserPolicy body)
         {
@@ -5383,12 +5283,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailUserpolicyAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
         { 
@@ -5480,11 +5380,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Copy a voicemail message to a user or group 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>VoicemailMessage</returns>
-        
         
         public VoicemailMessage PostVoicemailMessages (CopyVoicemailMessage body = null)
         {
@@ -5494,11 +5394,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Copy a voicemail message to a user or group 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        
         
         public ApiResponse< VoicemailMessage > PostVoicemailMessagesWithHttpInfo (CopyVoicemailMessage body = null)
         { 
@@ -5580,11 +5480,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Copy a voicemail message to a user or group 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of VoicemailMessage</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMessage> PostVoicemailMessagesAsync (CopyVoicemailMessage body = null)
         {
@@ -5595,11 +5495,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Copy a voicemail message to a user or group 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PostVoicemailMessagesAsyncWithHttpInfo (CopyVoicemailMessage body = null)
         { 
@@ -5682,11 +5582,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search voicemails 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>VoicemailsSearchResponse</returns>
-        
         
         public VoicemailsSearchResponse PostVoicemailSearch (VoicemailSearchRequest body)
         {
@@ -5696,11 +5596,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search voicemails 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
-        
         
         public ApiResponse< VoicemailsSearchResponse > PostVoicemailSearchWithHttpInfo (VoicemailSearchRequest body)
         { 
@@ -5785,11 +5685,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search voicemails 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of VoicemailsSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailsSearchResponse> PostVoicemailSearchAsync (VoicemailSearchRequest body)
         {
@@ -5800,11 +5700,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search voicemails 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostVoicemailSearchAsyncWithHttpInfo (VoicemailSearchRequest body)
         { 
@@ -5890,13 +5790,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// Update a voicemail message 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>VoicemailMessage</returns>
-        
         
         public VoicemailMessage PutVoicemailMessage (string messageId, VoicemailMessage body)
         {
@@ -5905,13 +5805,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// Update a voicemail message 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        
         
         public ApiResponse< VoicemailMessage > PutVoicemailMessageWithHttpInfo (string messageId, VoicemailMessage body)
         { 
@@ -5999,13 +5899,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// Update a voicemail message 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailMessage> PutVoicemailMessageAsync (string messageId, VoicemailMessage body)
         {
@@ -6015,13 +5915,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// Update a voicemail message 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutVoicemailMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body)
         { 
@@ -6113,11 +6013,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        
         
         public VoicemailOrganizationPolicy PutVoicemailPolicy (VoicemailOrganizationPolicy body)
         {
@@ -6127,11 +6027,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        
         
         public ApiResponse< VoicemailOrganizationPolicy > PutVoicemailPolicyWithHttpInfo (VoicemailOrganizationPolicy body)
         { 
@@ -6216,11 +6116,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutVoicemailPolicyAsync (VoicemailOrganizationPolicy body)
         {
@@ -6231,11 +6131,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutVoicemailPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body)
         { 
@@ -6322,12 +6222,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
-        
         
         public VoicemailUserPolicy PutVoicemailUserpolicy (string userId, VoicemailUserPolicy body)
         {
@@ -6337,12 +6237,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        
         
         public ApiResponse< VoicemailUserPolicy > PutVoicemailUserpolicyWithHttpInfo (string userId, VoicemailUserPolicy body)
         { 
@@ -6431,12 +6331,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        
         
         public async System.Threading.Tasks.Task<VoicemailUserPolicy> PutVoicemailUserpolicyAsync (string userId, VoicemailUserPolicy body)
         {
@@ -6447,12 +6347,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's voicemail policy 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PutVoicemailUserpolicyAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
         { 

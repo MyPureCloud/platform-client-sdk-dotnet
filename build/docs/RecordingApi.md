@@ -75,8 +75,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete annotation
 
-
-
 Requires ANY permissions: 
 
 * recording:annotation:delete
@@ -143,8 +141,6 @@ void (empty response body)
 
 Deletes a single orphan recording
 
-
-
 Requires ANY permissions: 
 
 * recording:orphan:delete
@@ -210,8 +206,6 @@ Delete media retention policies
 
 Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
 
-
-
 Requires ANY permissions: 
 
 * recording:crossPlatformRetentionPolicy:delete
@@ -274,8 +268,6 @@ void (empty response body)
 
 Delete a media retention policy
 
-
-
 Requires ANY permissions: 
 
 * recording:crossPlatformRetentionPolicy:delete
@@ -337,8 +329,6 @@ void (empty response body)
 
 
 Delete the recording bulk job
-
-
 
 Requires ALL permissions: 
 
@@ -404,8 +394,6 @@ Delete media retention policies
 
 Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
 
-
-
 Requires ANY permissions: 
 
 * recording:retentionPolicy:delete
@@ -468,8 +456,6 @@ void (empty response body)
 
 Delete a media retention policy
 
-
-
 Requires ANY permissions: 
 
 * recording:retentionPolicy:delete
@@ -531,8 +517,6 @@ void (empty response body)
 
 
 Gets a specific recording.
-
-
 
 Requires ANY permissions: 
 
@@ -616,8 +600,6 @@ namespace Example
 
 Get annotation
 
-
-
 Requires ANY permissions: 
 
 * recording:annotation:view
@@ -685,8 +667,6 @@ namespace Example
 
 Get annotations for recording
 
-
-
 Requires ANY permissions: 
 
 * recording:annotation:view
@@ -752,8 +732,6 @@ namespace Example
 
 Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
 
-
-
 Requires ANY permissions: 
 
 * recording:recording:view
@@ -817,8 +795,6 @@ namespace Example
 
 
 Get metadata for a specific recording. Does not return playable media.
-
-
 
 Requires ANY permissions: 
 
@@ -885,8 +861,6 @@ namespace Example
 
 
 Get all of a Conversation's Recordings.
-
-
 
 Requires ANY permissions: 
 
@@ -958,8 +932,6 @@ namespace Example
 
 Gets a single orphan recording
 
-
-
 Requires ANY permissions: 
 
 * recording:orphan:view
@@ -1024,8 +996,6 @@ namespace Example
 Gets the media of a single orphan recording
 
 A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
-
-
 
 Requires ANY permissions: 
 
@@ -1106,8 +1076,6 @@ namespace Example
 
 Gets all orphan recordings
 
-
-
 Requires ANY permissions: 
 
 * recording:orphan:view
@@ -1185,8 +1153,6 @@ namespace Example
 
 Get the status and results for a batch request job, only the user that submitted the job may retrieve results
 
-
-
 Requires NO permissions: 
 
 
@@ -1250,8 +1216,6 @@ namespace Example
 Gets media retention policy list with query options to filter on name and enabled.
 
 for a less verbose response, add summary=true to this endpoint
-
-
 
 Requires ANY permissions: 
 
@@ -1336,8 +1300,6 @@ namespace Example
 
 Get a media retention policy
 
-
-
 Requires ANY permissions: 
 
 * recording:crossPlatformRetentionPolicy:view
@@ -1401,8 +1363,6 @@ namespace Example
 
 Get the status of the job associated with the job id.
 
-
-
 Requires ALL permissions: 
 
 * recording:job:view
@@ -1465,8 +1425,6 @@ namespace Example
 
 
 Get IDs of recordings that the bulk job failed for
-
-
 
 Requires ALL permissions: 
 
@@ -1538,8 +1496,6 @@ namespace Example
 
 
 Get the status of all jobs within the user's organization
-
-
 
 Requires ALL permissions: 
 
@@ -1618,8 +1574,6 @@ namespace Example
 
 Get the encryption key configurations
 
-
-
 Requires ANY permissions: 
 
 * recording:encryptionKey:view
@@ -1683,8 +1637,6 @@ namespace Example
 
 Get a list of key configurations data
 
-
-
 Requires ANY permissions: 
 
 * recording:encryptionKey:view
@@ -1744,8 +1696,6 @@ This endpoint does require any parameters.
 Gets media retention policy list with query options to filter on name and enabled.
 
 for a less verbose response, add summary=true to this endpoint
-
-
 
 Requires ANY permissions: 
 
@@ -1830,8 +1780,6 @@ namespace Example
 
 Get a media retention policy
 
-
-
 Requires ANY permissions: 
 
 * recording:retentionPolicy:view
@@ -1894,8 +1842,6 @@ namespace Example
 
 
 Get encryption key list
-
-
 
 Requires ANY permissions: 
 
@@ -1962,8 +1908,6 @@ namespace Example
 
 Get key rotation schedule
 
-
-
 Requires ANY permissions: 
 
 * recording:encryptionKey:view
@@ -2021,8 +1965,6 @@ This endpoint does require any parameters.
 
 
 Get the Recording Settings for the Organization
-
-
 
 Requires ANY permissions: 
 
@@ -2088,8 +2030,6 @@ namespace Example
 
 Get the status of a recording upload status report
 
-
-
 Requires ALL permissions: 
 
 * recording:uploadReport:view
@@ -2152,8 +2092,6 @@ namespace Example
 
 
 Query for recording retention data
-
-
 
 Requires ANY permissions: 
 
@@ -2222,8 +2160,6 @@ namespace Example
 
 Retrieves a paged listing of screen recording sessions
 
-
-
 Requires ANY permissions: 
 
 * recording:screenRecording:view
@@ -2288,8 +2224,6 @@ namespace Example
 
 
 Patch a media retention policy
-
-
 
 Requires ANY permissions: 
 
@@ -2356,8 +2290,6 @@ namespace Example
 
 Patch a media retention policy
 
-
-
 Requires ANY permissions: 
 
 * recording:retentionPolicy:edit
@@ -2423,8 +2355,6 @@ namespace Example
 
 Update a screen recording session
 
-
-
 Requires ANY permissions: 
 
 * recording:screenRecording:stop
@@ -2488,8 +2418,6 @@ void (empty response body)
 
 
 Create annotation
-
-
 
 Requires ANY permissions: 
 
@@ -2558,8 +2486,6 @@ namespace Example
 
 Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
 
-
-
 Requires ANY permissions: 
 
 * recording:recording:view
@@ -2626,8 +2552,6 @@ Create media retention policy
 
 Policy does not work retroactively
 
-
-
 Requires ANY permissions: 
 
 * recording:crossPlatformRetentionPolicy:add
@@ -2693,8 +2617,6 @@ Create a recording bulk job.
 
 Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. Furthermore, the recording:recording:viewSensitiveData permission is required to access recordings with PCI DSS and/or PII data when redaction is enabled for their organization. If the requester does not have that permission and includeRecordingsWithSensitiveData is set to true, then their request will be rejected.
 
-
-
 Requires ALL permissions: 
 
 * recording:job:add
@@ -2757,8 +2679,6 @@ namespace Example
 
 
 Setup configurations for encryption key creation
-
-
 
 Requires ANY permissions: 
 
@@ -2823,8 +2743,6 @@ namespace Example
 
 Validate encryption key configurations without saving it
 
-
-
 Requires ANY permissions: 
 
 * recording:encryptionKey:edit
@@ -2887,8 +2805,6 @@ namespace Example
 
 
 create a local key management recording key
-
-
 
 Requires ANY permissions: 
 
@@ -2955,8 +2871,6 @@ Create media retention policy
 
 Policy does not work retroactively
 
-
-
 Requires ANY permissions: 
 
 * recording:retentionPolicy:add
@@ -3020,8 +2934,6 @@ namespace Example
 
 Create encryption key
 
-
-
 Requires ANY permissions: 
 
 * recording:encryptionKey:edit
@@ -3079,8 +2991,6 @@ This endpoint does require any parameters.
 
 
 Creates a recording upload status report
-
-
 
 Requires ALL permissions: 
 
@@ -3145,8 +3055,6 @@ namespace Example
 
 Get a list of conversations with protected recordings
 
-
-
 Requires NO permissions: 
 
 
@@ -3209,8 +3117,6 @@ namespace Example
 
 Acknowledge a screen recording.
 
-
-
 Requires NO permissions: 
 
 
@@ -3271,8 +3177,6 @@ void (empty response body)
 
 
 Provide meta-data a screen recording.
-
-
 
 Requires NO permissions: 
 
@@ -3336,8 +3240,6 @@ void (empty response body)
 Updates the retention records on a recording.
 
 Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
-
-
 
 Requires ANY permissions: 
 
@@ -3409,8 +3311,6 @@ namespace Example
 
 
 Update annotation
-
-
 
 Requires ANY permissions: 
 
@@ -3485,8 +3385,6 @@ Updates an orphan recording to a regular recording with retention values
 
 If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
 
-
-
 Requires ANY permissions: 
 
 * recording:orphan:edit
@@ -3553,8 +3451,6 @@ namespace Example
 Update a media retention policy
 
 Policy does not work retroactively
-
-
 
 Requires ANY permissions: 
 
@@ -3623,8 +3519,6 @@ Execute the recording bulk job.
 
 A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
 
-
-
 Requires ALL permissions: 
 
 * recording:job:edit
@@ -3691,8 +3585,6 @@ namespace Example
 
 
 Update the encryption key configurations
-
-
 
 Requires ANY permissions: 
 
@@ -3761,8 +3653,6 @@ Update a media retention policy
 
 Policy does not work retroactively
 
-
-
 Requires ANY permissions: 
 
 * recording:retentionPolicy:edit
@@ -3828,8 +3718,6 @@ namespace Example
 
 Update key rotation schedule
 
-
-
 Requires ANY permissions: 
 
 * recording:encryptionKey:edit
@@ -3893,8 +3781,6 @@ namespace Example
 
 Update the Recording Settings for the Organization
 
-
-
 Requires ANY permissions: 
 
 * recording:settings:editScreenRecordings
@@ -3957,8 +3843,6 @@ namespace Example
 
 
 Apply or revoke recording protection for conversations
-
-
 
 Requires ANY permissions: 
 

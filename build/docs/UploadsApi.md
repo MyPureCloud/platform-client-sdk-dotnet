@@ -23,8 +23,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Creates a presigned URL for uploading a knowledge import file with a set of documents
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:upload
@@ -87,8 +85,6 @@ namespace Example
 
 
 Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
-
-
 
 Requires ALL permissions: 
 
@@ -155,8 +151,6 @@ namespace Example
 
 Generates pre-signed URL to upload cover art for learning modules
 
-
-
 Requires ALL permissions: 
 
 * learning:coverart:upload
@@ -219,8 +213,6 @@ namespace Example
 
 
 Creates presigned url for uploading a public asset image
-
-
 
 Requires ALL permissions: 
 
@@ -285,8 +277,6 @@ namespace Example
 
 Creates presigned url for uploading a recording file
 
-
-
 Requires ALL permissions: 
 
 * recording:recording:upload
@@ -349,8 +339,6 @@ namespace Example
 
 
 Creates presigned url for uploading WFM historical data file. Requires data in csv format.
-
-
 
 Requires ALL permissions: 
 

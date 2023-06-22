@@ -72,16 +72,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransfer" /> class.
         /// </summary>
-        /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. Defaults to DESTINATION.</param>
+        /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. Defaults to DESTINATION (required).</param>
+        /// <param name="ConsultingUserId">The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID.</param>
         /// <param name="Destination">Destination phone number and name. (required).</param>
-        public ConsultTransfer(SpeakToEnum? SpeakTo = null, Destination Destination = null)
+        public ConsultTransfer(SpeakToEnum? SpeakTo = null, string ConsultingUserId = null, Destination Destination = null)
         {
             this.SpeakTo = SpeakTo;
+            this.ConsultingUserId = ConsultingUserId;
             this.Destination = Destination;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID
+        /// </summary>
+        /// <value>The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID</value>
+        [DataMember(Name="consultingUserId", EmitDefaultValue=false)]
+        public string ConsultingUserId { get; set; }
 
 
 
@@ -103,6 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConsultTransfer {\n");
 
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
+            sb.Append("  ConsultingUserId: ").Append(ConsultingUserId).Append("\n");
             sb.Append("  Destination: ").Append(Destination).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -150,6 +162,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SpeakTo.Equals(other.SpeakTo)
                 ) &&
                 (
+                    this.ConsultingUserId == other.ConsultingUserId ||
+                    this.ConsultingUserId != null &&
+                    this.ConsultingUserId.Equals(other.ConsultingUserId)
+                ) &&
+                (
                     this.Destination == other.Destination ||
                     this.Destination != null &&
                     this.Destination.Equals(other.Destination)
@@ -169,6 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.SpeakTo != null)
                     hash = hash * 59 + this.SpeakTo.GetHashCode();
+
+                if (this.ConsultingUserId != null)
+                    hash = hash * 59 + this.ConsultingUserId.GetHashCode();
 
                 if (this.Destination != null)
                     hash = hash * 59 + this.Destination.GetHashCode();

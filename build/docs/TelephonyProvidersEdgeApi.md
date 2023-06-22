@@ -134,8 +134,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a edge.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -197,8 +195,6 @@ void (empty response body)
 
 
 Delete an edge logical interface
-
-
 
 Requires ANY permissions: 
 
@@ -264,8 +260,6 @@ void (empty response body)
 
 Cancels any in-progress update for this edge.
 
-
-
 Requires NO permissions: 
 
 
@@ -326,8 +320,6 @@ void (empty response body)
 
 
 Delete a certificate authority.
-
-
 
 Requires ANY permissions: 
 
@@ -391,8 +383,6 @@ void (empty response body)
 
 Delete a DID Pool by ID.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -454,8 +444,6 @@ void (empty response body)
 
 
 Delete an edge group.
-
-
 
 Requires ANY permissions: 
 
@@ -519,8 +507,6 @@ void (empty response body)
 
 Delete an extension pool by ID
 
-
-
 Requires ALL permissions: 
 
 * telephony:plugin:all
@@ -582,8 +568,6 @@ void (empty response body)
 
 
 Delete a Phone by ID
-
-
 
 Requires ANY permissions: 
 
@@ -647,8 +631,6 @@ void (empty response body)
 
 Delete a Phone Base Settings by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -711,8 +693,6 @@ void (empty response body)
 
 Delete a Site by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -774,8 +754,6 @@ void (empty response body)
 
 
 Delete Outbound Route
-
-
 
 Requires ANY permissions: 
 
@@ -841,8 +819,6 @@ void (empty response body)
 
 Delete a Trunk Base Settings object by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -904,8 +880,6 @@ void (empty response body)
 
 
 Get edge.
-
-
 
 Requires ANY permissions: 
 
@@ -972,8 +946,6 @@ namespace Example
 
 Get networking-related information from an Edge for a target IP or host.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -1036,8 +1008,6 @@ namespace Example
 
 
 Get networking-related information from an Edge for a target IP or host.
-
-
 
 Requires ANY permissions: 
 
@@ -1102,8 +1072,6 @@ namespace Example
 
 Get networking-related information from an Edge for a target IP or host.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -1167,8 +1135,6 @@ namespace Example
 
 Get networking-related information from an Edge for a target IP or host.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -1231,8 +1197,6 @@ namespace Example
 
 
 Get an edge logical interface
-
-
 
 Requires ANY permissions: 
 
@@ -1303,8 +1267,6 @@ Get edge logical interfaces.
 
 Retrieve a list of all configured logical interfaces from a specific edge.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -1369,8 +1331,6 @@ namespace Example
 
 
 Get an Edge logs job.
-
-
 
 Requires ANY permissions: 
 
@@ -1437,8 +1397,6 @@ namespace Example
 
 Get the edge metrics.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -1503,8 +1461,6 @@ namespace Example
 Get edge physical interface.
 
 Retrieve a physical interface from a specific edge.
-
-
 
 Requires ANY permissions: 
 
@@ -1571,8 +1527,6 @@ namespace Example
 
 Retrieve a list of all configured physical interfaces from a specific edge.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -1635,8 +1589,6 @@ namespace Example
 
 
 Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
-
-
 
 Requires ANY permissions: 
 
@@ -1701,8 +1653,6 @@ namespace Example
 
 Gets software update status information about any edge.
 
-
-
 Requires NO permissions: 
 
 
@@ -1764,8 +1714,6 @@ namespace Example
 
 
 Gets all the available software versions for this edge.
-
-
 
 Requires NO permissions: 
 
@@ -1830,8 +1778,6 @@ namespace Example
 Get the list of available trunks for the given Edge.
 
 Trunks are created by assigning trunk base settings to an Edge or Edge Group.
-
-
 
 Requires ANY permissions: 
 
@@ -1907,8 +1853,6 @@ namespace Example
 
 
 Get the list of edges.
-
-
 
 Requires ANY permissions: 
 
@@ -1987,8 +1931,6 @@ namespace Example
 
 Get the list of available languages.
 
-
-
 Requires NO permissions: 
 
 
@@ -2045,8 +1987,6 @@ This endpoint does require any parameters.
 
 
 Get the list of certificate authorities.
-
-
 
 Requires ANY permissions: 
 
@@ -2105,8 +2045,6 @@ This endpoint does require any parameters.
 
 
 Get a certificate authority.
-
-
 
 Requires ANY permissions: 
 
@@ -2171,8 +2109,6 @@ namespace Example
 
 Get a DID by ID.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -2236,8 +2172,6 @@ namespace Example
 
 Get a DID Pool by ID.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -2300,8 +2234,6 @@ namespace Example
 
 
 Get a listing of DID Pools
-
-
 
 Requires ANY permissions: 
 
@@ -2371,8 +2303,6 @@ namespace Example
 
 
 Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
-
-
 
 Requires ANY permissions: 
 
@@ -2446,8 +2376,6 @@ namespace Example
 
 
 Get a listing of DIDs
-
-
 
 Requires ANY permissions: 
 
@@ -2526,8 +2454,6 @@ namespace Example
 
 Get edge group.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -2593,8 +2519,6 @@ namespace Example
 
 Gets the edge trunk base associated with the edge group
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -2659,8 +2583,6 @@ namespace Example
 
 
 Get the list of edge groups.
-
-
 
 Requires ANY permissions: 
 
@@ -2735,8 +2657,6 @@ Get the edge version report.
 
 The report will not have consistent data about the edge version(s) until all edges have been reset.
 
-
-
 Requires NO permissions: 
 
 
@@ -2793,8 +2713,6 @@ This endpoint does require any parameters.
 
 
 List of edges more than 4 edge versions behind the latest software.
-
-
 
 Requires ANY permissions: 
 
@@ -2854,8 +2772,6 @@ This endpoint does require any parameters.
 
 
 Get an extension by ID.
-
-
 
 Requires ANY permissions: 
 
@@ -2920,8 +2836,6 @@ namespace Example
 
 Get an extension pool by ID
 
-
-
 Requires ALL permissions: 
 
 * telephony:plugin:all
@@ -2984,8 +2898,6 @@ namespace Example
 
 
 Get a listing of extension pools
-
-
 
 Requires ALL permissions: 
 
@@ -3058,7 +2970,7 @@ Get a pageable list of basic extension pool objects filterable by query paramete
 
 This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
 
-
+GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -3135,8 +3047,6 @@ namespace Example
 
 Get a listing of extensions
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3208,8 +3118,6 @@ namespace Example
 
 Get a Line by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3273,8 +3181,6 @@ namespace Example
 
 Get a line base settings object by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3337,8 +3243,6 @@ namespace Example
 
 
 Get a listing of line base settings objects
-
-
 
 Requires ANY permissions: 
 
@@ -3411,8 +3315,6 @@ namespace Example
 
 Get a list of Lines
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3484,8 +3386,6 @@ namespace Example
 
 Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3550,8 +3450,6 @@ namespace Example
 Get edge logical interfaces.
 
 Retrieve the configured logical interfaces for a list edges. Only 100 edges can be requested at a time.
-
-
 
 Requires ANY permissions: 
 
@@ -3618,8 +3516,6 @@ namespace Example
 
 Get the metrics for a list of edges.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3685,8 +3581,6 @@ Get outbound route
 
 This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3749,8 +3643,6 @@ namespace Example
 
 
 Get outbound routes
-
-
 
 Requires ANY permissions: 
 
@@ -3825,8 +3717,6 @@ namespace Example
 
 Get a Phone by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3890,8 +3780,6 @@ namespace Example
 
 Get a Phone Base Settings object by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -3954,8 +3842,6 @@ namespace Example
 
 
 Get a list of Phone Base Settings objects
-
-
 
 Requires ANY permissions: 
 
@@ -4030,8 +3916,6 @@ namespace Example
 
 Get a list of available makes and models to create a new Phone Base Settings
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -4097,8 +3981,6 @@ namespace Example
 
 Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -4162,8 +4044,6 @@ namespace Example
 
 Get a list of Phone Instances
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -4202,7 +4082,7 @@ namespace Example
             var phoneHardwareId = phoneHardwareId_example;  // string | Filter by phone_hardwareId (optional) 
             var linesId = linesId_example;  // string | Filter by lines.id (optional) 
             var linesName = linesName_example;  // string | Filter by lines.name (optional) 
-            var name = name_example;  // string | Name of the Phone to filter by (optional) 
+            var name = name_example;  // string | Name of the Phone to filter by, comma-separated (optional) 
             var statusOperationalStatus = statusOperationalStatus_example;  // string | The primary status to filter by (optional) 
             var secondaryStatusOperationalStatus = secondaryStatusOperationalStatus_example;  // string | The secondary status to filter by (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
@@ -4240,7 +4120,7 @@ namespace Example
 | **phoneHardwareId** | **string**| Filter by phone_hardwareId | [optional]  |
 | **linesId** | **string**| Filter by lines.id | [optional]  |
 | **linesName** | **string**| Filter by lines.name | [optional]  |
-| **name** | **string**| Name of the Phone to filter by | [optional]  |
+| **name** | **string**| Name of the Phone to filter by, comma-separated | [optional]  |
 | **statusOperationalStatus** | **string**| The primary status to filter by | [optional]  |
 | **secondaryStatusOperationalStatus** | **string**| The secondary status to filter by | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, status, status.primaryEdgesStatus, status.secondaryEdgesStatus, phoneBaseSettings, lines |
@@ -4258,8 +4138,6 @@ namespace Example
 
 
 Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
-
-
 
 Requires ANY permissions: 
 
@@ -4326,8 +4204,6 @@ Get physical interfaces for edges.
 
 Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -4390,8 +4266,6 @@ namespace Example
 
 
 Get a Site by ID.
-
-
 
 Requires ANY permissions: 
 
@@ -4456,8 +4330,6 @@ namespace Example
 
 
 Get a Number Plan by ID.
-
-
 
 Requires ANY permissions: 
 
@@ -4524,8 +4396,6 @@ namespace Example
 
 Get the list of Number Plans for this Site. Only fetches the first 200 records.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -4588,8 +4458,6 @@ namespace Example
 
 
 Get a list of Classifications for this Site
-
-
 
 Requires ANY permissions: 
 
@@ -4656,8 +4524,6 @@ namespace Example
 
 Get an outbound route
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -4722,8 +4588,6 @@ namespace Example
 
 
 Get outbound routes
-
-
 
 Requires ANY permissions: 
 
@@ -4797,8 +4661,6 @@ namespace Example
 
 
 Get the list of Sites.
-
-
 
 Requires NO permissions: 
 
@@ -4874,8 +4736,6 @@ namespace Example
 
 Get a list of Edge-compatible time zones
 
-
-
 Requires NO permissions: 
 
 
@@ -4940,8 +4800,6 @@ namespace Example
 
 Get a Trunk by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -5004,8 +4862,6 @@ namespace Example
 
 
 Get the trunk metrics.
-
-
 
 Requires ANY permissions: 
 
@@ -5071,8 +4927,6 @@ namespace Example
 Get a Trunk Base Settings object by ID
 
 Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
-
-
 
 Requires ANY permissions: 
 
@@ -5140,8 +4994,6 @@ namespace Example
 Get Trunk Base Settings listing
 
 Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
-
-
 
 Requires ANY permissions: 
 
@@ -5222,8 +5074,6 @@ namespace Example
 
 Get a list of available makes and models to create a new Trunk Base Settings
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -5291,8 +5141,6 @@ namespace Example
 
 Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -5357,8 +5205,6 @@ namespace Example
 Get the list of available trunks.
 
 Trunks are created by assigning trunk base settings to an Edge or Edge Group.
-
-
 
 Requires ANY permissions: 
 
@@ -5435,8 +5281,6 @@ namespace Example
 
 Get the metrics for a list of trunks.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -5499,8 +5343,6 @@ namespace Example
 
 
 Get Counts of trunks that have recording disabled or enabled
-
-
 
 Requires ANY permissions: 
 
@@ -5565,8 +5407,6 @@ namespace Example
 
 
 Nslookup request command to collect networking-related information from an Edge for a target IP or host.
-
-
 
 Requires ANY permissions: 
 
@@ -5633,8 +5473,6 @@ namespace Example
 
 Ping Request command to collect networking-related information from an Edge for a target IP or host.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -5700,8 +5538,6 @@ namespace Example
 
 Route request command to collect networking-related information from an Edge for a target IP or host.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -5766,8 +5602,6 @@ namespace Example
 
 
 Tracepath request command to collect networking-related information from an Edge for a target IP or host.
-
-
 
 Requires ANY permissions: 
 
@@ -5836,8 +5670,6 @@ Create an edge logical interface.
 
 Create
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -5902,8 +5734,6 @@ namespace Example
 
 
 Request that the specified fileIds be uploaded from the Edge.
-
-
 
 Requires ANY permissions: 
 
@@ -5971,8 +5801,6 @@ void (empty response body)
 
 Create a job to upload a list of Edge logs.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -6037,8 +5865,6 @@ namespace Example
 
 
 Reboot an Edge
-
-
 
 Requires ANY permissions: 
 
@@ -6105,8 +5931,6 @@ namespace Example
 
 Starts a software update for this edge.
 
-
-
 Requires NO permissions: 
 
 
@@ -6170,8 +5994,6 @@ namespace Example
 
 
 Take an Edge in or out of service
-
-
 
 Requires ANY permissions: 
 
@@ -6238,8 +6060,6 @@ namespace Example
 
 Unpair an Edge
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -6302,8 +6122,6 @@ namespace Example
 
 
 Create an edge.
-
-
 
 Requires ANY permissions: 
 
@@ -6368,8 +6186,6 @@ namespace Example
 
 Validates a street address
 
-
-
 Requires NO permissions: 
 
 
@@ -6431,8 +6247,6 @@ namespace Example
 
 
 Create a certificate authority.
-
-
 
 Requires ANY permissions: 
 
@@ -6497,8 +6311,6 @@ namespace Example
 
 Create a new DID pool
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -6561,8 +6373,6 @@ namespace Example
 
 
 Create an edge group.
-
-
 
 Requires ANY permissions: 
 
@@ -6627,8 +6437,6 @@ namespace Example
 
 Create a new extension pool
 
-
-
 Requires ALL permissions: 
 
 * telephony:plugin:all
@@ -6692,8 +6500,6 @@ namespace Example
 
 Reboot a Phone
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -6755,8 +6561,6 @@ void (empty response body)
 
 
 Create a new Phone Base Settings object
-
-
 
 Requires ANY permissions: 
 
@@ -6821,8 +6625,6 @@ namespace Example
 
 Create a new Phone
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -6886,8 +6688,6 @@ namespace Example
 
 Reboot Multiple Phones
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -6949,8 +6749,6 @@ void (empty response body)
 
 
 Create outbound route
-
-
 
 Requires ANY permissions: 
 
@@ -7017,8 +6815,6 @@ namespace Example
 
 Create a Site.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -7082,8 +6878,6 @@ namespace Example
 
 Create a Trunk Base Settings object
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -7146,8 +6940,6 @@ namespace Example
 
 
 Update a edge.
-
-
 
 Requires ANY permissions: 
 
@@ -7213,8 +7005,6 @@ namespace Example
 
 
 Update an edge logical interface.
-
-
 
 Requires ANY permissions: 
 
@@ -7283,8 +7073,6 @@ namespace Example
 
 Update a certificate authority.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -7349,8 +7137,6 @@ namespace Example
 
 
 Update a DID Pool by ID.
-
-
 
 Requires ANY permissions: 
 
@@ -7417,8 +7203,6 @@ namespace Example
 
 Update an edge group.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -7483,8 +7267,6 @@ namespace Example
 
 
 Update the edge trunk base associated with the edge group
-
-
 
 Requires ANY permissions: 
 
@@ -7553,8 +7335,6 @@ namespace Example
 
 Update an extension pool by ID
 
-
-
 Requires ALL permissions: 
 
 * telephony:plugin:all
@@ -7619,8 +7399,6 @@ namespace Example
 
 
 Update a Phone by ID
-
-
 
 Requires ANY permissions: 
 
@@ -7687,8 +7465,6 @@ namespace Example
 
 Update a Phone Base Settings by ID
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -7753,8 +7529,6 @@ namespace Example
 
 
 Update a Site by ID.
-
-
 
 Requires ANY permissions: 
 
@@ -7821,8 +7595,6 @@ namespace Example
 
 Update the list of Number Plans. A user can update maximum 200 number plans at a time.
 
-
-
 Requires ANY permissions: 
 
 * telephony:plugin:all
@@ -7887,8 +7659,6 @@ namespace Example
 
 
 Update outbound route
-
-
 
 Requires ANY permissions: 
 
@@ -7956,8 +7726,6 @@ namespace Example
 
 
 Update a Trunk Base Settings object by ID
-
-
 
 Requires ANY permissions: 
 

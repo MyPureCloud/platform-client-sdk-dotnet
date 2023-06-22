@@ -35,8 +35,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete group
 
-
-
 Requires ANY permissions: 
 
 * directory:group:delete
@@ -99,7 +97,7 @@ void (empty response body)
 
 Remove dynamic group definition
 
-
+DeleteGroupDynamicsettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -162,8 +160,6 @@ void (empty response body)
 
 
 Remove members
-
-
 
 Requires NO permissions: 
 
@@ -229,8 +225,6 @@ namespace Example
 
 Fetch field config for an entity type
 
-
-
 Requires NO permissions: 
 
 
@@ -292,8 +286,6 @@ namespace Example
 
 
 Get group
-
-
 
 Requires NO permissions: 
 
@@ -357,7 +349,7 @@ namespace Example
 
 Get dynamic group definition
 
-
+GetGroupDynamicsettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -422,8 +414,6 @@ namespace Example
 
 Get all individuals associated with the group
 
-
-
 Requires NO permissions: 
 
 
@@ -485,8 +475,6 @@ namespace Example
 
 
 Get group members, includes individuals, owners, and dynamically included people
-
-
 
 Requires NO permissions: 
 
@@ -560,8 +548,6 @@ Get group profile
 
 This api is deprecated. Use /api/v2/groups instead
 
-
-
 Requires NO permissions: 
 
 
@@ -625,8 +611,6 @@ namespace Example
 
 
 Get a group list
-
-
 
 Requires NO permissions: 
 
@@ -698,8 +682,6 @@ namespace Example
 
 Search groups using the q64 value returned from a previous search
 
-
-
 Requires NO permissions: 
 
 
@@ -765,8 +747,6 @@ namespace Example
 Get group profile listing
 
 This api is deprecated. Use /api/v2/groups instead.
-
-
 
 Requires NO permissions: 
 
@@ -838,8 +818,6 @@ namespace Example
 
 Add members
 
-
-
 Requires NO permissions: 
 
 
@@ -904,8 +882,6 @@ namespace Example
 
 Create a group
 
-
-
 Requires ANY permissions: 
 
 * directory:group:add
@@ -969,7 +945,7 @@ namespace Example
 
 Preview the number of users selected for a dynamic group definition query
 
-
+PostGroupsDynamicsettingsPreview is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1034,8 +1010,6 @@ namespace Example
 
 Search groups
 
-
-
 Requires NO permissions: 
 
 
@@ -1097,8 +1071,6 @@ namespace Example
 
 
 Update group
-
-
 
 Requires ANY permissions: 
 
@@ -1165,7 +1137,7 @@ namespace Example
 
 Create / Update dynamic group definition
 
-
+PutGroupDynamicsettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

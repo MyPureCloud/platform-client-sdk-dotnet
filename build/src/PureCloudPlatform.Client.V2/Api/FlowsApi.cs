@@ -21,12 +21,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         AsyncQueryStatus GetAnalyticsFlowsAggregatesJob (string jobId);
 
         /// <summary>
@@ -34,12 +34,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         ApiResponse<AsyncQueryStatus> GetAnalyticsFlowsAggregatesJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -47,13 +47,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>FlowAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         FlowAsyncAggregateQueryResponse GetAnalyticsFlowsAggregatesJobResults (string jobId, string cursor = null);
 
         /// <summary>
@@ -61,13 +61,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>ApiResponse of FlowAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         ApiResponse<FlowAsyncAggregateQueryResponse> GetAnalyticsFlowsAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
@@ -75,6 +75,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -82,7 +83,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>FlowActivityResponse</returns>
         
-        /// Preview Endpoint
         FlowActivityResponse PostAnalyticsFlowsActivityQuery (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -90,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -97,7 +98,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>ApiResponse of FlowActivityResponse</returns>
         
-        /// Preview Endpoint
         ApiResponse<FlowActivityResponse> PostAnalyticsFlowsActivityQueryWithHttpInfo (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -105,12 +105,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         AsyncQueryResponse PostAnalyticsFlowsAggregatesJobs (FlowAsyncAggregationQuery body);
 
         /// <summary>
@@ -118,12 +118,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         ApiResponse<AsyncQueryResponse> PostAnalyticsFlowsAggregatesJobsWithHttpInfo (FlowAsyncAggregationQuery body);
 
         /// <summary>
@@ -135,7 +135,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>FlowAggregateQueryResponse</returns>
-        
         
         FlowAggregateQueryResponse PostAnalyticsFlowsAggregatesQuery (FlowAggregationQuery body);
 
@@ -149,7 +148,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of FlowAggregateQueryResponse</returns>
         
-        
         ApiResponse<FlowAggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryWithHttpInfo (FlowAggregationQuery body);
 
         /// <summary>
@@ -161,7 +159,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>FlowObservationQueryResponse</returns>
-        
         
         FlowObservationQueryResponse PostAnalyticsFlowsObservationsQuery (FlowObservationQuery body);
 
@@ -175,7 +172,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of FlowObservationQueryResponse</returns>
         
-        
         ApiResponse<FlowObservationQueryResponse> PostAnalyticsFlowsObservationsQueryWithHttpInfo (FlowObservationQuery body);
 
         #endregion Synchronous Operations
@@ -187,12 +183,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsFlowsAggregatesJobAsync (string jobId);
 
         /// <summary>
@@ -200,12 +196,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsFlowsAggregatesJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -213,13 +209,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>Task of FlowAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<FlowAsyncAggregateQueryResponse> GetAnalyticsFlowsAggregatesJobResultsAsync (string jobId, string cursor = null);
 
         /// <summary>
@@ -227,13 +223,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>Task of ApiResponse (FlowAsyncAggregateQueryResponse)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<FlowAsyncAggregateQueryResponse>> GetAnalyticsFlowsAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
@@ -241,6 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -248,7 +245,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>Task of FlowActivityResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<FlowActivityResponse> PostAnalyticsFlowsActivityQueryAsync (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -256,6 +252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -263,7 +260,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>Task of ApiResponse (FlowActivityResponse)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<FlowActivityResponse>> PostAnalyticsFlowsActivityQueryAsyncWithHttpInfo (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -271,12 +267,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsFlowsAggregatesJobsAsync (FlowAsyncAggregationQuery body);
 
         /// <summary>
@@ -284,12 +280,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsFlowsAggregatesJobsAsyncWithHttpInfo (FlowAsyncAggregationQuery body);
 
         /// <summary>
@@ -301,7 +297,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of FlowAggregateQueryResponse</returns>
-        
         
         System.Threading.Tasks.Task<FlowAggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryAsync (FlowAggregationQuery body);
 
@@ -315,7 +310,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (FlowAggregateQueryResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<FlowAggregateQueryResponse>> PostAnalyticsFlowsAggregatesQueryAsyncWithHttpInfo (FlowAggregationQuery body);
 
         /// <summary>
@@ -328,7 +322,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of FlowObservationQueryResponse</returns>
         
-        
         System.Threading.Tasks.Task<FlowObservationQueryResponse> PostAnalyticsFlowsObservationsQueryAsync (FlowObservationQuery body);
 
         /// <summary>
@@ -340,7 +333,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (FlowObservationQueryResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<FlowObservationQueryResponse>> PostAnalyticsFlowsObservationsQueryAsyncWithHttpInfo (FlowObservationQuery body);
 
@@ -438,12 +430,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status for async query for Flow aggregates 
+        /// 
+        /// GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         public AsyncQueryStatus GetAnalyticsFlowsAggregatesJob (string jobId)
         {
              ApiResponse<AsyncQueryStatus> localVarResponse = GetAnalyticsFlowsAggregatesJobWithHttpInfo(jobId);
@@ -452,12 +445,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status for async query for Flow aggregates 
+        /// 
+        /// GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         public ApiResponse< AsyncQueryStatus > GetAnalyticsFlowsAggregatesJobWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -536,12 +530,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status for async query for Flow aggregates 
+        /// 
+        /// GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsFlowsAggregatesJobAsync (string jobId)
         {
              ApiResponse<AsyncQueryStatus> localVarResponse = await GetAnalyticsFlowsAggregatesJobAsyncWithHttpInfo(jobId);
@@ -551,12 +546,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status for async query for Flow aggregates 
+        /// 
+        /// GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsFlowsAggregatesJobAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -637,13 +633,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>FlowAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         public FlowAsyncAggregateQueryResponse GetAnalyticsFlowsAggregatesJobResults (string jobId, string cursor = null)
         {
              ApiResponse<FlowAsyncAggregateQueryResponse> localVarResponse = GetAnalyticsFlowsAggregatesJobResultsWithHttpInfo(jobId, cursor);
@@ -652,13 +649,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>ApiResponse of FlowAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         public ApiResponse< FlowAsyncAggregateQueryResponse > GetAnalyticsFlowsAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null)
         { 
             // verify the required parameter 'jobId' is set
@@ -738,13 +736,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>Task of FlowAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<FlowAsyncAggregateQueryResponse> GetAnalyticsFlowsAggregatesJobResultsAsync (string jobId, string cursor = null)
         {
              ApiResponse<FlowAsyncAggregateQueryResponse> localVarResponse = await GetAnalyticsFlowsAggregatesJobResultsAsyncWithHttpInfo(jobId, cursor);
@@ -754,13 +753,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>Task of ApiResponse (FlowAsyncAggregateQueryResponse)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<FlowAsyncAggregateQueryResponse>> GetAnalyticsFlowsAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null)
         { 
             // verify the required parameter 'jobId' is set
@@ -842,6 +842,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow activity observations 
+        /// 
+        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -849,7 +851,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>FlowActivityResponse</returns>
         
-        /// Preview Endpoint
         public FlowActivityResponse PostAnalyticsFlowsActivityQuery (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<FlowActivityResponse> localVarResponse = PostAnalyticsFlowsActivityQueryWithHttpInfo(body, pageSize, pageNumber);
@@ -858,6 +859,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow activity observations 
+        /// 
+        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -865,7 +868,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>ApiResponse of FlowActivityResponse</returns>
         
-        /// Preview Endpoint
         public ApiResponse< FlowActivityResponse > PostAnalyticsFlowsActivityQueryWithHttpInfo (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'body' is set
@@ -951,6 +953,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow activity observations 
+        /// 
+        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -958,7 +962,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>Task of FlowActivityResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<FlowActivityResponse> PostAnalyticsFlowsActivityQueryAsync (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<FlowActivityResponse> localVarResponse = await PostAnalyticsFlowsActivityQueryAsyncWithHttpInfo(body, pageSize, pageNumber);
@@ -968,6 +971,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow activity observations 
+        /// 
+        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -975,7 +980,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">The desired page number (optional)</param>
         /// <returns>Task of ApiResponse (FlowActivityResponse)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<FlowActivityResponse>> PostAnalyticsFlowsActivityQueryAsyncWithHttpInfo (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'body' is set
@@ -1063,12 +1067,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow aggregates asynchronously 
+        /// 
+        /// PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         public AsyncQueryResponse PostAnalyticsFlowsAggregatesJobs (FlowAsyncAggregationQuery body)
         {
              ApiResponse<AsyncQueryResponse> localVarResponse = PostAnalyticsFlowsAggregatesJobsWithHttpInfo(body);
@@ -1077,12 +1082,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow aggregates asynchronously 
+        /// 
+        /// PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         public ApiResponse< AsyncQueryResponse > PostAnalyticsFlowsAggregatesJobsWithHttpInfo (FlowAsyncAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -1166,12 +1172,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow aggregates asynchronously 
+        /// 
+        /// PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsFlowsAggregatesJobsAsync (FlowAsyncAggregationQuery body)
         {
              ApiResponse<AsyncQueryResponse> localVarResponse = await PostAnalyticsFlowsAggregatesJobsAsyncWithHttpInfo(body);
@@ -1181,12 +1188,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow aggregates asynchronously 
+        /// 
+        /// PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsFlowsAggregatesJobsAsyncWithHttpInfo (FlowAsyncAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -1272,11 +1280,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow aggregates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>FlowAggregateQueryResponse</returns>
-        
         
         public FlowAggregateQueryResponse PostAnalyticsFlowsAggregatesQuery (FlowAggregationQuery body)
         {
@@ -1286,11 +1294,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow aggregates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of FlowAggregateQueryResponse</returns>
-        
         
         public ApiResponse< FlowAggregateQueryResponse > PostAnalyticsFlowsAggregatesQueryWithHttpInfo (FlowAggregationQuery body)
         { 
@@ -1375,11 +1383,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow aggregates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of FlowAggregateQueryResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<FlowAggregateQueryResponse> PostAnalyticsFlowsAggregatesQueryAsync (FlowAggregationQuery body)
         {
@@ -1390,11 +1398,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow aggregates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (FlowAggregateQueryResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<FlowAggregateQueryResponse>> PostAnalyticsFlowsAggregatesQueryAsyncWithHttpInfo (FlowAggregationQuery body)
         { 
@@ -1481,11 +1489,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow observations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>FlowObservationQueryResponse</returns>
-        
         
         public FlowObservationQueryResponse PostAnalyticsFlowsObservationsQuery (FlowObservationQuery body)
         {
@@ -1495,11 +1503,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow observations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of FlowObservationQueryResponse</returns>
-        
         
         public ApiResponse< FlowObservationQueryResponse > PostAnalyticsFlowsObservationsQueryWithHttpInfo (FlowObservationQuery body)
         { 
@@ -1584,11 +1592,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow observations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of FlowObservationQueryResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<FlowObservationQueryResponse> PostAnalyticsFlowsObservationsQueryAsync (FlowObservationQuery body)
         {
@@ -1599,11 +1607,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for flow observations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (FlowObservationQueryResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<FlowObservationQueryResponse>> PostAnalyticsFlowsObservationsQueryAsyncWithHttpInfo (FlowObservationQuery body)
         { 

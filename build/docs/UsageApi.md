@@ -24,8 +24,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get the results of a usage query
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:view
@@ -94,8 +92,6 @@ Get a summary of OAuth client API usage
 
 After calling this method, you will then need to poll for the query results based on the returned execution Id
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:view
@@ -162,8 +158,6 @@ namespace Example
 
 Get the results of a usage query
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:view
@@ -227,8 +221,6 @@ namespace Example
 
 
 Get the results of a usage search
-
-
 
 Requires ANY permissions: 
 
@@ -295,8 +287,6 @@ namespace Example
 Query for OAuth client API usage
 
 After calling this method, you will then need to poll for the query results based on the returned execution Id
-
-
 
 Requires ANY permissions: 
 
@@ -366,8 +356,6 @@ Query organization API Usage -
 
 After calling this method, you will then need to poll for the query results based on the returned execution Id
 
-
-
 Requires ANY permissions: 
 
 * oauth:client:view
@@ -433,8 +421,6 @@ namespace Example
 Search organization API Usage - 
 
 After calling this method, you will then need to poll for the query results based on the returned execution Id
-
-
 
 Requires ANY permissions: 
 

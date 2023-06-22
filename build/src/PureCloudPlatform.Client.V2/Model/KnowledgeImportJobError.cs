@@ -31,8 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContextId">ContextId.</param>
         /// <param name="Details">Details.</param>
         /// <param name="Errors">Errors.</param>
+        /// <param name="Limit">Limit.</param>
         /// <param name="DocumentIndex">Index of the faulty document..</param>
-        public KnowledgeImportJobError(string Message = null, string Code = null, int? Status = null, string EntityId = null, string EntityName = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<Detail> Details = null, List<ErrorBody> Errors = null, int? DocumentIndex = null)
+        public KnowledgeImportJobError(string Message = null, string Code = null, int? Status = null, string EntityId = null, string EntityName = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<Detail> Details = null, List<ErrorBody> Errors = null, Limit Limit = null, int? DocumentIndex = null)
         {
             this.Message = Message;
             this.Code = Code;
@@ -44,6 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContextId = ContextId;
             this.Details = Details;
             this.Errors = Errors;
+            this.Limit = Limit;
             this.DocumentIndex = DocumentIndex;
             
         }
@@ -131,6 +133,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets Limit
+        /// </summary>
+        [DataMember(Name="limit", EmitDefaultValue=false)]
+        public Limit Limit { get; set; }
+
+
+
+        /// <summary>
         /// Index of the faulty document.
         /// </summary>
         /// <value>Index of the faulty document.</value>
@@ -157,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
+            sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("  DocumentIndex: ").Append(DocumentIndex).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -249,6 +260,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Errors.SequenceEqual(other.Errors)
                 ) &&
                 (
+                    this.Limit == other.Limit ||
+                    this.Limit != null &&
+                    this.Limit.Equals(other.Limit)
+                ) &&
+                (
                     this.DocumentIndex == other.DocumentIndex ||
                     this.DocumentIndex != null &&
                     this.DocumentIndex.Equals(other.DocumentIndex)
@@ -295,6 +311,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
+
+                if (this.Limit != null)
+                    hash = hash * 59 + this.Limit.GetHashCode();
 
                 if (this.DocumentIndex != null)
                     hash = hash * 59 + this.DocumentIndex.GetHashCode();

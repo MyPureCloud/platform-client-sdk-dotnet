@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
         
-        
         UploadUrlResponse PostKnowledgeDocumentuploads (UploadUrlRequest body);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        
         
         ApiResponse<UploadUrlResponse> PostKnowledgeDocumentuploadsWithHttpInfo (UploadUrlRequest body);
 
@@ -53,7 +51,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
         
-        
         UploadUrlResponse PostLanguageunderstandingMinerUploads (string minerId, Object body);
 
         /// <summary>
@@ -67,7 +64,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         
-        
         ApiResponse<UploadUrlResponse> PostLanguageunderstandingMinerUploadsWithHttpInfo (string minerId, Object body);
 
         /// <summary>
@@ -79,7 +75,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         UploadUrlResponse PostUploadsLearningCoverart (LearningCoverArtUploadUrlRequest body);
 
@@ -93,7 +88,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         
-        
         ApiResponse<UploadUrlResponse> PostUploadsLearningCoverartWithHttpInfo (LearningCoverArtUploadUrlRequest body);
 
         /// <summary>
@@ -105,7 +99,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         UploadUrlResponse PostUploadsPublicassetsImages (UploadUrlRequest body);
 
@@ -119,7 +112,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         
-        
         ApiResponse<UploadUrlResponse> PostUploadsPublicassetsImagesWithHttpInfo (UploadUrlRequest body);
 
         /// <summary>
@@ -131,7 +123,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         UploadUrlResponse PostUploadsRecordings (UploadUrlRequest body);
 
@@ -145,7 +136,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         
-        
         ApiResponse<UploadUrlResponse> PostUploadsRecordingsWithHttpInfo (UploadUrlRequest body);
 
         /// <summary>
@@ -158,7 +148,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
         
-        
         UploadUrlResponse PostUploadsWorkforcemanagementHistoricaldataCsv (UploadUrlRequest body);
 
         /// <summary>
@@ -170,7 +159,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        
         
         ApiResponse<UploadUrlResponse> PostUploadsWorkforcemanagementHistoricaldataCsvWithHttpInfo (UploadUrlRequest body);
 
@@ -188,7 +176,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
         
-        
         System.Threading.Tasks.Task<UploadUrlResponse> PostKnowledgeDocumentuploadsAsync (UploadUrlRequest body);
 
         /// <summary>
@@ -200,7 +187,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostKnowledgeDocumentuploadsAsyncWithHttpInfo (UploadUrlRequest body);
 
@@ -215,7 +201,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
         
-        
         System.Threading.Tasks.Task<UploadUrlResponse> PostLanguageunderstandingMinerUploadsAsync (string minerId, Object body);
 
         /// <summary>
@@ -229,7 +214,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostLanguageunderstandingMinerUploadsAsyncWithHttpInfo (string minerId, Object body);
 
         /// <summary>
@@ -241,7 +225,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         System.Threading.Tasks.Task<UploadUrlResponse> PostUploadsLearningCoverartAsync (LearningCoverArtUploadUrlRequest body);
 
@@ -255,7 +238,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsLearningCoverartAsyncWithHttpInfo (LearningCoverArtUploadUrlRequest body);
 
         /// <summary>
@@ -267,7 +249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         System.Threading.Tasks.Task<UploadUrlResponse> PostUploadsPublicassetsImagesAsync (UploadUrlRequest body);
 
@@ -281,7 +262,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsPublicassetsImagesAsyncWithHttpInfo (UploadUrlRequest body);
 
         /// <summary>
@@ -293,7 +273,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         System.Threading.Tasks.Task<UploadUrlResponse> PostUploadsRecordingsAsync (UploadUrlRequest body);
 
@@ -307,7 +286,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsRecordingsAsyncWithHttpInfo (UploadUrlRequest body);
 
         /// <summary>
@@ -320,7 +298,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
         
-        
         System.Threading.Tasks.Task<UploadUrlResponse> PostUploadsWorkforcemanagementHistoricaldataCsvAsync (UploadUrlRequest body);
 
         /// <summary>
@@ -332,7 +309,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsWorkforcemanagementHistoricaldataCsvAsyncWithHttpInfo (UploadUrlRequest body);
 
@@ -430,11 +406,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         public UploadUrlResponse PostKnowledgeDocumentuploads (UploadUrlRequest body)
         {
@@ -444,11 +420,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        
         
         public ApiResponse< UploadUrlResponse > PostKnowledgeDocumentuploadsWithHttpInfo (UploadUrlRequest body)
         { 
@@ -533,11 +509,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<UploadUrlResponse> PostKnowledgeDocumentuploadsAsync (UploadUrlRequest body)
         {
@@ -548,11 +524,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostKnowledgeDocumentuploadsAsyncWithHttpInfo (UploadUrlRequest body)
         { 
@@ -639,12 +615,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         public UploadUrlResponse PostLanguageunderstandingMinerUploads (string minerId, Object body)
         {
@@ -654,12 +630,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        
         
         public ApiResponse< UploadUrlResponse > PostLanguageunderstandingMinerUploadsWithHttpInfo (string minerId, Object body)
         { 
@@ -748,12 +724,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<UploadUrlResponse> PostLanguageunderstandingMinerUploadsAsync (string minerId, Object body)
         {
@@ -764,12 +740,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostLanguageunderstandingMinerUploadsAsyncWithHttpInfo (string minerId, Object body)
         { 
@@ -861,11 +837,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Generates pre-signed URL to upload cover art for learning modules 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         public UploadUrlResponse PostUploadsLearningCoverart (LearningCoverArtUploadUrlRequest body)
         {
@@ -875,11 +851,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Generates pre-signed URL to upload cover art for learning modules 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        
         
         public ApiResponse< UploadUrlResponse > PostUploadsLearningCoverartWithHttpInfo (LearningCoverArtUploadUrlRequest body)
         { 
@@ -964,11 +940,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Generates pre-signed URL to upload cover art for learning modules 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<UploadUrlResponse> PostUploadsLearningCoverartAsync (LearningCoverArtUploadUrlRequest body)
         {
@@ -979,11 +955,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Generates pre-signed URL to upload cover art for learning modules 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsLearningCoverartAsyncWithHttpInfo (LearningCoverArtUploadUrlRequest body)
         { 
@@ -1070,11 +1046,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading a public asset image 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         public UploadUrlResponse PostUploadsPublicassetsImages (UploadUrlRequest body)
         {
@@ -1084,11 +1060,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading a public asset image 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        
         
         public ApiResponse< UploadUrlResponse > PostUploadsPublicassetsImagesWithHttpInfo (UploadUrlRequest body)
         { 
@@ -1173,11 +1149,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading a public asset image 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<UploadUrlResponse> PostUploadsPublicassetsImagesAsync (UploadUrlRequest body)
         {
@@ -1188,11 +1164,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading a public asset image 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsPublicassetsImagesAsyncWithHttpInfo (UploadUrlRequest body)
         { 
@@ -1279,11 +1255,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading a recording file 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         public UploadUrlResponse PostUploadsRecordings (UploadUrlRequest body)
         {
@@ -1293,11 +1269,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading a recording file 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        
         
         public ApiResponse< UploadUrlResponse > PostUploadsRecordingsWithHttpInfo (UploadUrlRequest body)
         { 
@@ -1382,11 +1358,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading a recording file 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<UploadUrlResponse> PostUploadsRecordingsAsync (UploadUrlRequest body)
         {
@@ -1397,11 +1373,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading a recording file 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsRecordingsAsyncWithHttpInfo (UploadUrlRequest body)
         { 
@@ -1488,11 +1464,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading WFM historical data file. Requires data in csv format. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>UploadUrlResponse</returns>
-        
         
         public UploadUrlResponse PostUploadsWorkforcemanagementHistoricaldataCsv (UploadUrlRequest body)
         {
@@ -1502,11 +1478,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading WFM historical data file. Requires data in csv format. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of UploadUrlResponse</returns>
-        
         
         public ApiResponse< UploadUrlResponse > PostUploadsWorkforcemanagementHistoricaldataCsvWithHttpInfo (UploadUrlRequest body)
         { 
@@ -1591,11 +1567,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading WFM historical data file. Requires data in csv format. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of UploadUrlResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<UploadUrlResponse> PostUploadsWorkforcemanagementHistoricaldataCsvAsync (UploadUrlRequest body)
         {
@@ -1606,11 +1582,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates presigned url for uploading WFM historical data file. Requires data in csv format. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostUploadsWorkforcemanagementHistoricaldataCsvAsyncWithHttpInfo (UploadUrlRequest body)
         { 

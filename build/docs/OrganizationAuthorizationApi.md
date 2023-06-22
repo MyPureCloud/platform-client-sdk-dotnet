@@ -63,8 +63,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete Org Trust
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrustee:delete
@@ -126,8 +124,6 @@ void (empty response body)
 
 
 Deletes cloned user
-
-
 
 Requires ANY permissions: 
 
@@ -193,8 +189,6 @@ void (empty response body)
 
 Delete Trustee Group
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeGroup:delete
@@ -258,8 +252,6 @@ void (empty response body)
 
 
 Delete Trustee Group Roles
-
-
 
 Requires ANY permissions: 
 
@@ -325,8 +317,6 @@ void (empty response body)
 
 Delete Trustee User
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:delete
@@ -390,8 +380,6 @@ void (empty response body)
 
 
 Delete Trustee User Roles
-
-
 
 Requires ANY permissions: 
 
@@ -457,7 +445,7 @@ void (empty response body)
 
 Delete Bulk Org Trustees
 
-
+DeleteOrgauthorizationTrustees is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -521,8 +509,6 @@ void (empty response body)
 
 Delete Org Trust
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrustor:delete
@@ -584,8 +570,6 @@ void (empty response body)
 
 
 Delete Cloned User
-
-
 
 Requires ANY permissions: 
 
@@ -651,8 +635,6 @@ void (empty response body)
 
 Delete Trustee Group
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeGroup:delete
@@ -716,8 +698,6 @@ void (empty response body)
 
 
 Delete Trustee User
-
-
 
 Requires ANY permissions: 
 
@@ -783,7 +763,7 @@ void (empty response body)
 
 Delete Bulk Org Trustors
 
-
+DeleteOrgauthorizationTrustors is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -846,8 +826,6 @@ void (empty response body)
 
 
 Get Pairing Info
-
-
 
 Requires ANY permissions: 
 
@@ -912,8 +890,6 @@ namespace Example
 
 
 Get Org Trust
-
-
 
 Requires ANY permissions: 
 
@@ -980,8 +956,6 @@ The list of cloned users from the trustee organization (i.e. users with a native
 
 There can be no more than 5 cloned users per organization, so results are represented as simple list and not paged
 
-
-
 Requires ANY permissions: 
 
 * directory:user:view
@@ -1044,8 +1018,6 @@ namespace Example
 
 
 Get Trustee Group
-
-
 
 Requires ANY permissions: 
 
@@ -1112,8 +1084,6 @@ namespace Example
 
 Get Trustee Group Roles
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeGroup:view
@@ -1178,8 +1148,6 @@ namespace Example
 
 
 The list of trustee groups for this organization (i.e. groups granted access to this organization).
-
-
 
 Requires ANY permissions: 
 
@@ -1248,8 +1216,6 @@ namespace Example
 
 Get Trustee User
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:view
@@ -1315,8 +1281,6 @@ namespace Example
 
 Get Trustee User Roles
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:view
@@ -1381,8 +1345,6 @@ namespace Example
 
 
 The list of trustee users for this organization (i.e. users granted access to this organization).
-
-
 
 Requires ANY permissions: 
 
@@ -1451,8 +1413,6 @@ namespace Example
 
 The list of trustees for this organization (i.e. organizations granted access to this organization).
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrustee:view
@@ -1518,8 +1478,6 @@ namespace Example
 
 Get organization authorization trust with Customer Care, if one exists.
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrustee:view
@@ -1578,8 +1536,6 @@ This endpoint does require any parameters.
 
 
 Get Org Trust
-
-
 
 Requires ANY permissions: 
 
@@ -1643,8 +1599,6 @@ namespace Example
 
 
 Get Cloned User
-
-
 
 Requires ANY permissions: 
 
@@ -1711,8 +1665,6 @@ namespace Example
 
 The list of cloned users in the trustor organization (i.e. users with a native user record).
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:view
@@ -1775,8 +1727,6 @@ namespace Example
 
 
 Get Trustee Group
-
-
 
 Requires ANY permissions: 
 
@@ -1842,8 +1792,6 @@ namespace Example
 
 
 The list of groups in the trustor organization (i.e. groups granted access).
-
-
 
 Requires ANY permissions: 
 
@@ -1912,8 +1860,6 @@ namespace Example
 
 Get Trustee User
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:view
@@ -1978,8 +1924,6 @@ namespace Example
 
 
 The list of users in the trustor organization (i.e. users granted access).
-
-
 
 Requires ANY permissions: 
 
@@ -2048,8 +1992,6 @@ namespace Example
 
 The list of organizations that have authorized/trusted your organization.
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrustor:view
@@ -2115,8 +2057,6 @@ namespace Example
 
 A pairing id is created by the trustee and given to the trustor to create a trust.
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrustee:add
@@ -2179,8 +2119,6 @@ namespace Example
 
 
 Add a group to the trust.
-
-
 
 Requires ANY permissions: 
 
@@ -2247,8 +2185,6 @@ namespace Example
 
 Add a user to the trust.
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:add
@@ -2314,8 +2250,6 @@ namespace Example
 
 Create a new organization authorization trust. This is required to grant other organizations access to your organization.
 
-
-
 Requires ALL permissions: 
 
 * authorization:orgTrustee:add
@@ -2379,8 +2313,6 @@ namespace Example
 
 
 Get Org Trustee Audits
-
-
 
 Requires ANY permissions: 
 
@@ -2453,8 +2385,6 @@ namespace Example
 
 Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
 
-
-
 Requires ALL permissions: 
 
 * authorization:orgTrustee:add
@@ -2520,8 +2450,6 @@ namespace Example
 
 
 Get Org Trustor Audits
-
-
 
 Requires ANY permissions: 
 
@@ -2594,8 +2522,6 @@ namespace Example
 
 Update Org Trust
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrustee:edit
@@ -2660,8 +2586,6 @@ namespace Example
 
 
 Update Trustee Group Roles
-
-
 
 Requires ANY permissions: 
 
@@ -2730,8 +2654,6 @@ namespace Example
 
 Update Trustee Group Roles
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeGroup:edit
@@ -2798,8 +2720,6 @@ namespace Example
 
 
 Update Trustee User Roles
-
-
 
 Requires ANY permissions: 
 
@@ -2868,8 +2788,6 @@ namespace Example
 
 Update Trustee User Roles
 
-
-
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:edit
@@ -2937,8 +2855,6 @@ namespace Example
 
 Creates a clone of the trustee user in the trustor org.
 
-
-
 Requires ALL permissions: 
 
 * authorization:orgTrusteeUser:add
@@ -3004,8 +2920,6 @@ namespace Example
 
 Add a Trustee Group to the trust.
 
-
-
 Requires ALL permissions: 
 
 * authorization:orgTrusteeGroup:add
@@ -3070,8 +2984,6 @@ namespace Example
 
 
 Add a Trustee user to the trust.
-
-
 
 Requires ALL permissions: 
 

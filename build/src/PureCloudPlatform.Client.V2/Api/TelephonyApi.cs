@@ -25,7 +25,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>MediaRegions</returns>
         
-        
         MediaRegions GetTelephonyMediaregions ();
 
         /// <summary>
@@ -36,7 +35,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of MediaRegions</returns>
-        
         
         ApiResponse<MediaRegions> GetTelephonyMediaregionsWithHttpInfo ();
 
@@ -55,7 +53,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>SipSearchResult</returns>
         
-        
         SipSearchResult GetTelephonySiptraces (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null);
 
         /// <summary>
@@ -73,7 +70,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>ApiResponse of SipSearchResult</returns>
         
-        
         ApiResponse<SipSearchResult> GetTelephonySiptracesWithHttpInfo (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null);
 
         /// <summary>
@@ -85,7 +81,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>SignedUrlResponse</returns>
-        
         
         SignedUrlResponse GetTelephonySiptracesDownloadDownloadId (string downloadId);
 
@@ -99,7 +94,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>ApiResponse of SignedUrlResponse</returns>
         
-        
         ApiResponse<SignedUrlResponse> GetTelephonySiptracesDownloadDownloadIdWithHttpInfo (string downloadId);
 
         /// <summary>
@@ -112,7 +106,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>SipDownloadResponse</returns>
         
-        
         SipDownloadResponse PostTelephonySiptracesDownload (SIPSearchPublicRequest sIPSearchPublicRequest);
 
         /// <summary>
@@ -124,7 +117,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>ApiResponse of SipDownloadResponse</returns>
-        
         
         ApiResponse<SipDownloadResponse> PostTelephonySiptracesDownloadWithHttpInfo (SIPSearchPublicRequest sIPSearchPublicRequest);
 
@@ -141,7 +133,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of MediaRegions</returns>
         
-        
         System.Threading.Tasks.Task<MediaRegions> GetTelephonyMediaregionsAsync ();
 
         /// <summary>
@@ -152,7 +143,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (MediaRegions)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<MediaRegions>> GetTelephonyMediaregionsAsyncWithHttpInfo ();
 
@@ -171,7 +161,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>Task of SipSearchResult</returns>
         
-        
         System.Threading.Tasks.Task<SipSearchResult> GetTelephonySiptracesAsync (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null);
 
         /// <summary>
@@ -189,7 +178,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>Task of ApiResponse (SipSearchResult)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<SipSearchResult>> GetTelephonySiptracesAsyncWithHttpInfo (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null);
 
         /// <summary>
@@ -201,7 +189,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>Task of SignedUrlResponse</returns>
-        
         
         System.Threading.Tasks.Task<SignedUrlResponse> GetTelephonySiptracesDownloadDownloadIdAsync (string downloadId);
 
@@ -215,7 +202,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>Task of ApiResponse (SignedUrlResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<SignedUrlResponse>> GetTelephonySiptracesDownloadDownloadIdAsyncWithHttpInfo (string downloadId);
 
         /// <summary>
@@ -228,7 +214,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>Task of SipDownloadResponse</returns>
         
-        
         System.Threading.Tasks.Task<SipDownloadResponse> PostTelephonySiptracesDownloadAsync (SIPSearchPublicRequest sIPSearchPublicRequest);
 
         /// <summary>
@@ -240,7 +225,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>Task of ApiResponse (SipDownloadResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<SipDownloadResponse>> PostTelephonySiptracesDownloadAsyncWithHttpInfo (SIPSearchPublicRequest sIPSearchPublicRequest);
 
@@ -338,10 +322,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of AWS regions media can stream through. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>MediaRegions</returns>
-        
         
         public MediaRegions GetTelephonyMediaregions ()
         {
@@ -351,10 +335,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of AWS regions media can stream through. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of MediaRegions</returns>
-        
         
         public ApiResponse< MediaRegions > GetTelephonyMediaregionsWithHttpInfo ()
         { 
@@ -430,10 +414,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of AWS regions media can stream through. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of MediaRegions</returns>
-        
         
         public async System.Threading.Tasks.Task<MediaRegions> GetTelephonyMediaregionsAsync ()
         {
@@ -444,10 +428,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of AWS regions media can stream through. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (MediaRegions)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MediaRegions>> GetTelephonyMediaregionsAsyncWithHttpInfo ()
         { 
@@ -523,7 +507,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Fetch SIP metadata Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
+        /// Fetch SIP metadata 
+        /// Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateStart">Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
@@ -534,7 +519,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>SipSearchResult</returns>
         
-        
         public SipSearchResult GetTelephonySiptraces (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null)
         {
              ApiResponse<SipSearchResult> localVarResponse = GetTelephonySiptracesWithHttpInfo(dateStart, dateEnd, callId, toUser, fromUser, conversationId);
@@ -542,7 +526,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Fetch SIP metadata Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
+        /// Fetch SIP metadata 
+        /// Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateStart">Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
@@ -552,7 +537,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fromUser">user who placed the call (optional)</param>
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>ApiResponse of SipSearchResult</returns>
-        
         
         public ApiResponse< SipSearchResult > GetTelephonySiptracesWithHttpInfo (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null)
         { 
@@ -639,7 +623,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Fetch SIP metadata Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
+        /// Fetch SIP metadata 
+        /// Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateStart">Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
@@ -650,7 +635,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>Task of SipSearchResult</returns>
         
-        
         public async System.Threading.Tasks.Task<SipSearchResult> GetTelephonySiptracesAsync (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null)
         {
              ApiResponse<SipSearchResult> localVarResponse = await GetTelephonySiptracesAsyncWithHttpInfo(dateStart, dateEnd, callId, toUser, fromUser, conversationId);
@@ -659,7 +643,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Fetch SIP metadata Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
+        /// Fetch SIP metadata 
+        /// Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateStart">Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
@@ -669,7 +654,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fromUser">user who placed the call (optional)</param>
         /// <param name="conversationId">Unique identification of the conversation (optional)</param>
         /// <returns>Task of ApiResponse (SipSearchResult)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SipSearchResult>> GetTelephonySiptracesAsyncWithHttpInfo (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null)
         { 
@@ -760,11 +744,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get signed S3 URL for a pcap download 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>SignedUrlResponse</returns>
-        
         
         public SignedUrlResponse GetTelephonySiptracesDownloadDownloadId (string downloadId)
         {
@@ -774,11 +758,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get signed S3 URL for a pcap download 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>ApiResponse of SignedUrlResponse</returns>
-        
         
         public ApiResponse< SignedUrlResponse > GetTelephonySiptracesDownloadDownloadIdWithHttpInfo (string downloadId)
         { 
@@ -858,11 +842,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get signed S3 URL for a pcap download 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>Task of SignedUrlResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<SignedUrlResponse> GetTelephonySiptracesDownloadDownloadIdAsync (string downloadId)
         {
@@ -873,11 +857,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get signed S3 URL for a pcap download 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">unique id for the downloaded file in S3</param>
         /// <returns>Task of ApiResponse (SignedUrlResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SignedUrlResponse>> GetTelephonySiptracesDownloadDownloadIdAsyncWithHttpInfo (string downloadId)
         { 
@@ -959,11 +943,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Request a download of a pcap file to S3 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>SipDownloadResponse</returns>
-        
         
         public SipDownloadResponse PostTelephonySiptracesDownload (SIPSearchPublicRequest sIPSearchPublicRequest)
         {
@@ -973,11 +957,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Request a download of a pcap file to S3 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>ApiResponse of SipDownloadResponse</returns>
-        
         
         public ApiResponse< SipDownloadResponse > PostTelephonySiptracesDownloadWithHttpInfo (SIPSearchPublicRequest sIPSearchPublicRequest)
         { 
@@ -1062,11 +1046,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Request a download of a pcap file to S3 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>Task of SipDownloadResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<SipDownloadResponse> PostTelephonySiptracesDownloadAsync (SIPSearchPublicRequest sIPSearchPublicRequest)
         {
@@ -1077,11 +1061,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Request a download of a pcap file to S3 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sIPSearchPublicRequest"></param>
         /// <returns>Task of ApiResponse (SipDownloadResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SipDownloadResponse>> PostTelephonySiptracesDownloadAsyncWithHttpInfo (SIPSearchPublicRequest sIPSearchPublicRequest)
         { 

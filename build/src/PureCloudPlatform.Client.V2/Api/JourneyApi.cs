@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns></returns>
         
-        
         void DeleteJourneyActionmap (string actionMapId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteJourneyActionmapWithHttpInfo (string actionMapId);
 
@@ -53,7 +51,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hardDelete">Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)</param>
         /// <returns></returns>
         
-        
         void DeleteJourneyActiontemplate (string actionTemplateId, bool? hardDelete = null);
 
         /// <summary>
@@ -67,7 +64,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hardDelete">Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteJourneyActiontemplateWithHttpInfo (string actionTemplateId, bool? hardDelete = null);
 
         /// <summary>
@@ -79,7 +75,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns></returns>
-        
         
         void DeleteJourneyOutcome (string outcomeId);
 
@@ -93,7 +88,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteJourneyOutcomeWithHttpInfo (string outcomeId);
 
         /// <summary>
@@ -105,7 +99,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns></returns>
-        
         
         void DeleteJourneyOutcomesPredictor (string predictorId);
 
@@ -119,7 +112,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteJourneyOutcomesPredictorWithHttpInfo (string predictorId);
 
         /// <summary>
@@ -131,7 +123,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns></returns>
-        
         
         void DeleteJourneySegment (string segmentId);
 
@@ -145,7 +136,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteJourneySegmentWithHttpInfo (string segmentId);
 
         /// <summary>
@@ -153,12 +143,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         AsyncQueryStatus GetAnalyticsJourneysAggregatesJob (string jobId);
 
         /// <summary>
@@ -166,12 +156,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         ApiResponse<AsyncQueryStatus> GetAnalyticsJourneysAggregatesJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -179,13 +169,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>JourneyAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         JourneyAsyncAggregateQueryResponse GetAnalyticsJourneysAggregatesJobResults (string jobId, string cursor = null);
 
         /// <summary>
@@ -193,13 +183,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>ApiResponse of JourneyAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         ApiResponse<JourneyAsyncAggregateQueryResponse> GetAnalyticsJourneysAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
@@ -212,7 +202,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>ActionMap</returns>
         
-        
         ActionMap GetJourneyActionmap (string actionMapId);
 
         /// <summary>
@@ -224,7 +213,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>ApiResponse of ActionMap</returns>
-        
         
         ApiResponse<ActionMap> GetJourneyActionmapWithHttpInfo (string actionMapId);
 
@@ -245,7 +233,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ActionMapListing</returns>
         
-        
         ActionMapListing GetJourneyActionmaps (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -265,7 +252,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of ActionMapListing</returns>
         
-        
         ApiResponse<ActionMapListing> GetJourneyActionmapsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -277,7 +263,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>string</returns>
-        
         
         string GetJourneyActionmapsEstimatesJob (string jobId);
 
@@ -291,7 +276,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of string</returns>
         
-        
         ApiResponse<string> GetJourneyActionmapsEstimatesJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -303,7 +287,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ActionMapEstimateResult</returns>
-        
         
         ActionMapEstimateResult GetJourneyActionmapsEstimatesJobResults (string jobId);
 
@@ -317,7 +300,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of ActionMapEstimateResult</returns>
         
-        
         ApiResponse<ActionMapEstimateResult> GetJourneyActionmapsEstimatesJobResultsWithHttpInfo (string jobId);
 
         /// <summary>
@@ -330,7 +312,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>ActionTarget</returns>
         
-        
         ActionTarget GetJourneyActiontarget (string actionTargetId);
 
         /// <summary>
@@ -342,7 +323,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>ApiResponse of ActionTarget</returns>
-        
         
         ApiResponse<ActionTarget> GetJourneyActiontargetWithHttpInfo (string actionTargetId);
 
@@ -357,7 +337,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ActionTargetListing</returns>
         
-        
         ActionTargetListing GetJourneyActiontargets (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -371,7 +350,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ActionTargetListing</returns>
         
-        
         ApiResponse<ActionTargetListing> GetJourneyActiontargetsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -384,7 +362,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <returns>ActionTemplate</returns>
         
-        
         ActionTemplate GetJourneyActiontemplate (string actionTemplateId);
 
         /// <summary>
@@ -396,7 +373,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <returns>ApiResponse of ActionTemplate</returns>
-        
         
         ApiResponse<ActionTemplate> GetJourneyActiontemplateWithHttpInfo (string actionTemplateId);
 
@@ -416,7 +392,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ActionTemplateListing</returns>
         
-        
         ActionTemplateListing GetJourneyActiontemplates (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -435,40 +410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of ActionTemplateListing</returns>
         
-        
         ApiResponse<ActionTemplateListing> GetJourneyActiontemplatesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null);
-
-        /// <summary>
-        /// Retrieve all sessions for a given customer.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerIdType">Type of ID used to identify customer (e.g. email, cookie, and phone).</param>
-        /// <param name="customerId">Primary identifier of the customer in the source of the session.</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <returns>SessionListing</returns>
-        
-        /// Preview Endpoint
-        SessionListing GetJourneyCustomerCustomerIdSessions (string customerIdType, string customerId, string pageSize = null, string after = null);
-
-        /// <summary>
-        /// Retrieve all sessions for a given customer.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerIdType">Type of ID used to identify customer (e.g. email, cookie, and phone).</param>
-        /// <param name="customerId">Primary identifier of the customer in the source of the session.</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <returns>ApiResponse of SessionListing</returns>
-        
-        /// Preview Endpoint
-        ApiResponse<SessionListing> GetJourneyCustomerCustomerIdSessionsWithHttpInfo (string customerIdType, string customerId, string pageSize = null, string after = null);
 
         /// <summary>
         /// Retrieve a single outcome.
@@ -479,7 +421,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Outcome</returns>
-        
         
         Outcome GetJourneyOutcome (string outcomeId);
 
@@ -492,7 +433,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
         
         ApiResponse<Outcome> GetJourneyOutcomeWithHttpInfo (string outcomeId);
 
@@ -511,7 +451,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>OutcomeListing</returns>
         
-        
         OutcomeListing GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -529,7 +468,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of OutcomeListing</returns>
         
-        
         ApiResponse<OutcomeListing> GetJourneyOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -537,12 +475,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>OutcomeAttributionJobStateResponse</returns>
         
-        /// Preview Endpoint
         OutcomeAttributionJobStateResponse GetJourneyOutcomesAttributionsJob (string jobId);
 
         /// <summary>
@@ -550,12 +488,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of OutcomeAttributionJobStateResponse</returns>
         
-        /// Preview Endpoint
         ApiResponse<OutcomeAttributionJobStateResponse> GetJourneyOutcomesAttributionsJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -563,12 +501,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>OutcomeAttributionResponseListing</returns>
         
-        /// Preview Endpoint
         OutcomeAttributionResponseListing GetJourneyOutcomesAttributionsJobResults (string jobId);
 
         /// <summary>
@@ -576,12 +514,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of OutcomeAttributionResponseListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<OutcomeAttributionResponseListing> GetJourneyOutcomesAttributionsJobResultsWithHttpInfo (string jobId);
 
         /// <summary>
@@ -593,7 +531,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>OutcomePredictor</returns>
-        
         
         OutcomePredictor GetJourneyOutcomesPredictor (string predictorId);
 
@@ -607,7 +544,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>ApiResponse of OutcomePredictor</returns>
         
-        
         ApiResponse<OutcomePredictor> GetJourneyOutcomesPredictorWithHttpInfo (string predictorId);
 
         /// <summary>
@@ -619,7 +555,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OutcomePredictorListing</returns>
         
-        
         OutcomePredictorListing GetJourneyOutcomesPredictors ();
 
         /// <summary>
@@ -630,7 +565,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OutcomePredictorListing</returns>
-        
         
         ApiResponse<OutcomePredictorListing> GetJourneyOutcomesPredictorsWithHttpInfo ();
 
@@ -644,7 +578,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>JourneySegment</returns>
         
-        
         JourneySegment GetJourneySegment (string segmentId);
 
         /// <summary>
@@ -656,7 +589,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>ApiResponse of JourneySegment</returns>
-        
         
         ApiResponse<JourneySegment> GetJourneySegmentWithHttpInfo (string segmentId);
 
@@ -676,7 +608,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>SegmentListing</returns>
         
-        
         SegmentListing GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -695,7 +626,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of SegmentListing</returns>
         
-        
         ApiResponse<SegmentListing> GetJourneySegmentsWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -707,7 +637,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Session</returns>
-        
         
         Session GetJourneySession (string sessionId);
 
@@ -721,7 +650,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>ApiResponse of Session</returns>
         
-        
         ApiResponse<Session> GetJourneySessionWithHttpInfo (string sessionId);
 
         /// <summary>
@@ -729,6 +657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
@@ -736,7 +665,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>EventListing</returns>
         
-        /// Preview Endpoint
         EventListing GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null);
 
         /// <summary>
@@ -744,6 +672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
@@ -751,7 +680,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>ApiResponse of EventListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<EventListing> GetJourneySessionEventsWithHttpInfo (string sessionId, string pageSize = null, string after = null);
 
         /// <summary>
@@ -763,7 +691,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>OutcomeScoresResult</returns>
-        
         
         OutcomeScoresResult GetJourneySessionOutcomescores (string sessionId);
 
@@ -777,7 +704,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>ApiResponse of OutcomeScoresResult</returns>
         
-        
         ApiResponse<OutcomeScoresResult> GetJourneySessionOutcomescoresWithHttpInfo (string sessionId);
 
         /// <summary>
@@ -785,6 +711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session to query for segment assignments.</param>
@@ -794,7 +721,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentState">Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional)</param>
         /// <returns>SegmentAssignmentListing</returns>
         
-        /// Preview Endpoint
         SegmentAssignmentListing GetJourneySessionSegments (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null);
 
         /// <summary>
@@ -802,6 +728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session to query for segment assignments.</param>
@@ -811,7 +738,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentState">Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional)</param>
         /// <returns>ApiResponse of SegmentAssignmentListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<SegmentAssignmentListing> GetJourneySessionSegmentsWithHttpInfo (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null);
 
         /// <summary>
@@ -824,7 +750,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionMapId">ID of the action map.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionMap</returns>
-        
         
         ActionMap PatchJourneyActionmap (string actionMapId, PatchActionMap body = null);
 
@@ -839,7 +764,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionMap</returns>
         
-        
         ApiResponse<ActionMap> PatchJourneyActionmapWithHttpInfo (string actionMapId, PatchActionMap body = null);
 
         /// <summary>
@@ -852,7 +776,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionTarget</returns>
-        
         
         ActionTarget PatchJourneyActiontarget (string actionTargetId, PatchActionTarget body = null);
 
@@ -867,7 +790,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionTarget</returns>
         
-        
         ApiResponse<ActionTarget> PatchJourneyActiontargetWithHttpInfo (string actionTargetId, PatchActionTarget body = null);
 
         /// <summary>
@@ -880,7 +802,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionTemplate</returns>
-        
         
         ActionTemplate PatchJourneyActiontemplate (string actionTemplateId, PatchActionTemplate body = null);
 
@@ -895,7 +816,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionTemplate</returns>
         
-        
         ApiResponse<ActionTemplate> PatchJourneyActiontemplateWithHttpInfo (string actionTemplateId, PatchActionTemplate body = null);
 
         /// <summary>
@@ -908,7 +828,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
-        
         
         Outcome PatchJourneyOutcome (string outcomeId, PatchOutcome body = null);
 
@@ -923,7 +842,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
         
-        
         ApiResponse<Outcome> PatchJourneyOutcomeWithHttpInfo (string outcomeId, PatchOutcome body = null);
 
         /// <summary>
@@ -936,7 +854,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="segmentId">ID of the segment.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>JourneySegment</returns>
-        
         
         JourneySegment PatchJourneySegment (string segmentId, PatchSegment body = null);
 
@@ -951,7 +868,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of JourneySegment</returns>
         
-        
         ApiResponse<JourneySegment> PatchJourneySegmentWithHttpInfo (string segmentId, PatchSegment body = null);
 
         /// <summary>
@@ -959,12 +875,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         AsyncQueryResponse PostAnalyticsJourneysAggregatesJobs (JourneyAsyncAggregationQuery body);
 
         /// <summary>
@@ -972,12 +888,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         ApiResponse<AsyncQueryResponse> PostAnalyticsJourneysAggregatesJobsWithHttpInfo (JourneyAsyncAggregationQuery body);
 
         /// <summary>
@@ -989,7 +905,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>JourneyAggregateQueryResponse</returns>
-        
         
         JourneyAggregateQueryResponse PostAnalyticsJourneysAggregatesQuery (JourneyAggregationQuery body);
 
@@ -1003,7 +918,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of JourneyAggregateQueryResponse</returns>
         
-        
         ApiResponse<JourneyAggregateQueryResponse> PostAnalyticsJourneysAggregatesQueryWithHttpInfo (JourneyAggregationQuery body);
 
         /// <summary>
@@ -1015,7 +929,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionMap</returns>
-        
         
         ActionMap PostJourneyActionmaps (ActionMap body = null);
 
@@ -1029,7 +942,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionMap</returns>
         
-        
         ApiResponse<ActionMap> PostJourneyActionmapsWithHttpInfo (ActionMap body = null);
 
         /// <summary>
@@ -1041,7 +953,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>EstimateJobAsyncResponse</returns>
-        
         
         EstimateJobAsyncResponse PostJourneyActionmapsEstimatesJobs (ActionMapEstimateRequest body);
 
@@ -1055,7 +966,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">audience estimator request</param>
         /// <returns>ApiResponse of EstimateJobAsyncResponse</returns>
         
-        
         ApiResponse<EstimateJobAsyncResponse> PostJourneyActionmapsEstimatesJobsWithHttpInfo (ActionMapEstimateRequest body);
 
         /// <summary>
@@ -1067,7 +977,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionTemplate</returns>
-        
         
         ActionTemplate PostJourneyActiontemplates (ActionTemplate body = null);
 
@@ -1081,7 +990,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionTemplate</returns>
         
-        
         ApiResponse<ActionTemplate> PostJourneyActiontemplatesWithHttpInfo (ActionTemplate body = null);
 
         /// <summary>
@@ -1093,7 +1001,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
-        
         
         Outcome PostJourneyOutcomes (Outcome body = null);
 
@@ -1107,7 +1014,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
         
-        
         ApiResponse<Outcome> PostJourneyOutcomesWithHttpInfo (Outcome body = null);
 
         /// <summary>
@@ -1115,12 +1021,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>OutcomeAttributionAsyncResponse</returns>
         
-        /// Preview Endpoint
         OutcomeAttributionAsyncResponse PostJourneyOutcomesAttributionsJobs (OutcomeAttributionListing body = null);
 
         /// <summary>
@@ -1128,12 +1034,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>ApiResponse of OutcomeAttributionAsyncResponse</returns>
         
-        /// Preview Endpoint
         ApiResponse<OutcomeAttributionAsyncResponse> PostJourneyOutcomesAttributionsJobsWithHttpInfo (OutcomeAttributionListing body = null);
 
         /// <summary>
@@ -1145,7 +1051,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>OutcomePredictor</returns>
-        
         
         OutcomePredictor PostJourneyOutcomesPredictors (OutcomePredictorRequest body = null);
 
@@ -1159,7 +1064,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of OutcomePredictor</returns>
         
-        
         ApiResponse<OutcomePredictor> PostJourneyOutcomesPredictorsWithHttpInfo (OutcomePredictorRequest body = null);
 
         /// <summary>
@@ -1172,7 +1076,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>JourneySegment</returns>
         
-        
         JourneySegment PostJourneySegments (JourneySegment body = null);
 
         /// <summary>
@@ -1184,7 +1087,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of JourneySegment</returns>
-        
         
         ApiResponse<JourneySegment> PostJourneySegmentsWithHttpInfo (JourneySegment body = null);
 
@@ -1202,7 +1104,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteJourneyActionmapAsync (string actionMapId);
 
         /// <summary>
@@ -1214,7 +1115,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyActionmapAsyncWithHttpInfo (string actionMapId);
 
@@ -1229,7 +1129,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hardDelete">Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteJourneyActiontemplateAsync (string actionTemplateId, bool? hardDelete = null);
 
         /// <summary>
@@ -1243,7 +1142,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hardDelete">Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyActiontemplateAsyncWithHttpInfo (string actionTemplateId, bool? hardDelete = null);
 
         /// <summary>
@@ -1255,7 +1153,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteJourneyOutcomeAsync (string outcomeId);
 
@@ -1269,7 +1166,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyOutcomeAsyncWithHttpInfo (string outcomeId);
 
         /// <summary>
@@ -1281,7 +1177,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteJourneyOutcomesPredictorAsync (string predictorId);
 
@@ -1295,7 +1190,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyOutcomesPredictorAsyncWithHttpInfo (string predictorId);
 
         /// <summary>
@@ -1307,7 +1201,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteJourneySegmentAsync (string segmentId);
 
@@ -1321,7 +1214,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneySegmentAsyncWithHttpInfo (string segmentId);
 
         /// <summary>
@@ -1329,12 +1221,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsJourneysAggregatesJobAsync (string jobId);
 
         /// <summary>
@@ -1342,12 +1234,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsJourneysAggregatesJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1355,13 +1247,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>Task of JourneyAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<JourneyAsyncAggregateQueryResponse> GetAnalyticsJourneysAggregatesJobResultsAsync (string jobId, string cursor = null);
 
         /// <summary>
@@ -1369,13 +1261,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>Task of ApiResponse (JourneyAsyncAggregateQueryResponse)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<JourneyAsyncAggregateQueryResponse>> GetAnalyticsJourneysAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
@@ -1388,7 +1280,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>Task of ActionMap</returns>
         
-        
         System.Threading.Tasks.Task<ActionMap> GetJourneyActionmapAsync (string actionMapId);
 
         /// <summary>
@@ -1400,7 +1291,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>Task of ApiResponse (ActionMap)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ActionMap>> GetJourneyActionmapAsyncWithHttpInfo (string actionMapId);
 
@@ -1421,7 +1311,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ActionMapListing</returns>
         
-        
         System.Threading.Tasks.Task<ActionMapListing> GetJourneyActionmapsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -1441,7 +1330,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (ActionMapListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionMapListing>> GetJourneyActionmapsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -1453,7 +1341,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of string</returns>
-        
         
         System.Threading.Tasks.Task<string> GetJourneyActionmapsEstimatesJobAsync (string jobId);
 
@@ -1467,7 +1354,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (string)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<string>> GetJourneyActionmapsEstimatesJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1479,7 +1365,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ActionMapEstimateResult</returns>
-        
         
         System.Threading.Tasks.Task<ActionMapEstimateResult> GetJourneyActionmapsEstimatesJobResultsAsync (string jobId);
 
@@ -1493,7 +1378,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (ActionMapEstimateResult)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionMapEstimateResult>> GetJourneyActionmapsEstimatesJobResultsAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1506,7 +1390,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>Task of ActionTarget</returns>
         
-        
         System.Threading.Tasks.Task<ActionTarget> GetJourneyActiontargetAsync (string actionTargetId);
 
         /// <summary>
@@ -1518,7 +1401,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>Task of ApiResponse (ActionTarget)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ActionTarget>> GetJourneyActiontargetAsyncWithHttpInfo (string actionTargetId);
 
@@ -1533,7 +1415,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ActionTargetListing</returns>
         
-        
         System.Threading.Tasks.Task<ActionTargetListing> GetJourneyActiontargetsAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1547,7 +1428,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ActionTargetListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionTargetListing>> GetJourneyActiontargetsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1560,7 +1440,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <returns>Task of ActionTemplate</returns>
         
-        
         System.Threading.Tasks.Task<ActionTemplate> GetJourneyActiontemplateAsync (string actionTemplateId);
 
         /// <summary>
@@ -1572,7 +1451,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <returns>Task of ApiResponse (ActionTemplate)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> GetJourneyActiontemplateAsyncWithHttpInfo (string actionTemplateId);
 
@@ -1592,7 +1470,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ActionTemplateListing</returns>
         
-        
         System.Threading.Tasks.Task<ActionTemplateListing> GetJourneyActiontemplatesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -1611,40 +1488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (ActionTemplateListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionTemplateListing>> GetJourneyActiontemplatesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null);
-
-        /// <summary>
-        /// Retrieve all sessions for a given customer.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerIdType">Type of ID used to identify customer (e.g. email, cookie, and phone).</param>
-        /// <param name="customerId">Primary identifier of the customer in the source of the session.</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <returns>Task of SessionListing</returns>
-        
-        /// Preview Endpoint
-        System.Threading.Tasks.Task<SessionListing> GetJourneyCustomerCustomerIdSessionsAsync (string customerIdType, string customerId, string pageSize = null, string after = null);
-
-        /// <summary>
-        /// Retrieve all sessions for a given customer.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerIdType">Type of ID used to identify customer (e.g. email, cookie, and phone).</param>
-        /// <param name="customerId">Primary identifier of the customer in the source of the session.</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <returns>Task of ApiResponse (SessionListing)</returns>
-        
-        /// Preview Endpoint
-        System.Threading.Tasks.Task<ApiResponse<SessionListing>> GetJourneyCustomerCustomerIdSessionsAsyncWithHttpInfo (string customerIdType, string customerId, string pageSize = null, string after = null);
 
         /// <summary>
         /// Retrieve a single outcome.
@@ -1655,7 +1499,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of Outcome</returns>
-        
         
         System.Threading.Tasks.Task<Outcome> GetJourneyOutcomeAsync (string outcomeId);
 
@@ -1668,7 +1511,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Outcome>> GetJourneyOutcomeAsyncWithHttpInfo (string outcomeId);
 
@@ -1687,7 +1529,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of OutcomeListing</returns>
         
-        
         System.Threading.Tasks.Task<OutcomeListing> GetJourneyOutcomesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -1705,7 +1546,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<OutcomeListing>> GetJourneyOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -1713,12 +1553,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of OutcomeAttributionJobStateResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<OutcomeAttributionJobStateResponse> GetJourneyOutcomesAttributionsJobAsync (string jobId);
 
         /// <summary>
@@ -1726,12 +1566,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionJobStateResponse)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionJobStateResponse>> GetJourneyOutcomesAttributionsJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1739,12 +1579,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of OutcomeAttributionResponseListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<OutcomeAttributionResponseListing> GetJourneyOutcomesAttributionsJobResultsAsync (string jobId);
 
         /// <summary>
@@ -1752,12 +1592,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionResponseListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionResponseListing>> GetJourneyOutcomesAttributionsJobResultsAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1769,7 +1609,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of OutcomePredictor</returns>
-        
         
         System.Threading.Tasks.Task<OutcomePredictor> GetJourneyOutcomesPredictorAsync (string predictorId);
 
@@ -1783,7 +1622,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of ApiResponse (OutcomePredictor)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> GetJourneyOutcomesPredictorAsyncWithHttpInfo (string predictorId);
 
         /// <summary>
@@ -1795,7 +1633,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OutcomePredictorListing</returns>
         
-        
         System.Threading.Tasks.Task<OutcomePredictorListing> GetJourneyOutcomesPredictorsAsync ();
 
         /// <summary>
@@ -1806,7 +1643,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OutcomePredictorListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<OutcomePredictorListing>> GetJourneyOutcomesPredictorsAsyncWithHttpInfo ();
 
@@ -1820,7 +1656,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>Task of JourneySegment</returns>
         
-        
         System.Threading.Tasks.Task<JourneySegment> GetJourneySegmentAsync (string segmentId);
 
         /// <summary>
@@ -1832,7 +1667,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>Task of ApiResponse (JourneySegment)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<JourneySegment>> GetJourneySegmentAsyncWithHttpInfo (string segmentId);
 
@@ -1852,7 +1686,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of SegmentListing</returns>
         
-        
         System.Threading.Tasks.Task<SegmentListing> GetJourneySegmentsAsync (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -1871,7 +1704,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (SegmentListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<SegmentListing>> GetJourneySegmentsAsyncWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
@@ -1883,7 +1715,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of Session</returns>
-        
         
         System.Threading.Tasks.Task<Session> GetJourneySessionAsync (string sessionId);
 
@@ -1897,7 +1728,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of ApiResponse (Session)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Session>> GetJourneySessionAsyncWithHttpInfo (string sessionId);
 
         /// <summary>
@@ -1905,6 +1735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
@@ -1912,7 +1743,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>Task of EventListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<EventListing> GetJourneySessionEventsAsync (string sessionId, string pageSize = null, string after = null);
 
         /// <summary>
@@ -1920,6 +1750,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
@@ -1927,7 +1758,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>Task of ApiResponse (EventListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<EventListing>> GetJourneySessionEventsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null);
 
         /// <summary>
@@ -1939,7 +1769,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of OutcomeScoresResult</returns>
-        
         
         System.Threading.Tasks.Task<OutcomeScoresResult> GetJourneySessionOutcomescoresAsync (string sessionId);
 
@@ -1953,7 +1782,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of ApiResponse (OutcomeScoresResult)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<OutcomeScoresResult>> GetJourneySessionOutcomescoresAsyncWithHttpInfo (string sessionId);
 
         /// <summary>
@@ -1961,6 +1789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session to query for segment assignments.</param>
@@ -1970,7 +1799,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentState">Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional)</param>
         /// <returns>Task of SegmentAssignmentListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<SegmentAssignmentListing> GetJourneySessionSegmentsAsync (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null);
 
         /// <summary>
@@ -1978,6 +1806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session to query for segment assignments.</param>
@@ -1987,7 +1816,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentState">Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional)</param>
         /// <returns>Task of ApiResponse (SegmentAssignmentListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetJourneySessionSegmentsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null);
 
         /// <summary>
@@ -2000,7 +1828,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionMapId">ID of the action map.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionMap</returns>
-        
         
         System.Threading.Tasks.Task<ActionMap> PatchJourneyActionmapAsync (string actionMapId, PatchActionMap body = null);
 
@@ -2015,7 +1842,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionMap)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionMap>> PatchJourneyActionmapAsyncWithHttpInfo (string actionMapId, PatchActionMap body = null);
 
         /// <summary>
@@ -2028,7 +1854,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionTarget</returns>
-        
         
         System.Threading.Tasks.Task<ActionTarget> PatchJourneyActiontargetAsync (string actionTargetId, PatchActionTarget body = null);
 
@@ -2043,7 +1868,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionTarget)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionTarget>> PatchJourneyActiontargetAsyncWithHttpInfo (string actionTargetId, PatchActionTarget body = null);
 
         /// <summary>
@@ -2056,7 +1880,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionTemplate</returns>
-        
         
         System.Threading.Tasks.Task<ActionTemplate> PatchJourneyActiontemplateAsync (string actionTemplateId, PatchActionTemplate body = null);
 
@@ -2071,7 +1894,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionTemplate)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> PatchJourneyActiontemplateAsyncWithHttpInfo (string actionTemplateId, PatchActionTemplate body = null);
 
         /// <summary>
@@ -2084,7 +1906,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
-        
         
         System.Threading.Tasks.Task<Outcome> PatchJourneyOutcomeAsync (string outcomeId, PatchOutcome body = null);
 
@@ -2099,7 +1920,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Outcome>> PatchJourneyOutcomeAsyncWithHttpInfo (string outcomeId, PatchOutcome body = null);
 
         /// <summary>
@@ -2112,7 +1932,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="segmentId">ID of the segment.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of JourneySegment</returns>
-        
         
         System.Threading.Tasks.Task<JourneySegment> PatchJourneySegmentAsync (string segmentId, PatchSegment body = null);
 
@@ -2127,7 +1946,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (JourneySegment)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PatchJourneySegmentAsyncWithHttpInfo (string segmentId, PatchSegment body = null);
 
         /// <summary>
@@ -2135,12 +1953,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsJourneysAggregatesJobsAsync (JourneyAsyncAggregationQuery body);
 
         /// <summary>
@@ -2148,12 +1966,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsJourneysAggregatesJobsAsyncWithHttpInfo (JourneyAsyncAggregationQuery body);
 
         /// <summary>
@@ -2165,7 +1983,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of JourneyAggregateQueryResponse</returns>
-        
         
         System.Threading.Tasks.Task<JourneyAggregateQueryResponse> PostAnalyticsJourneysAggregatesQueryAsync (JourneyAggregationQuery body);
 
@@ -2179,7 +1996,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (JourneyAggregateQueryResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<JourneyAggregateQueryResponse>> PostAnalyticsJourneysAggregatesQueryAsyncWithHttpInfo (JourneyAggregationQuery body);
 
         /// <summary>
@@ -2191,7 +2007,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionMap</returns>
-        
         
         System.Threading.Tasks.Task<ActionMap> PostJourneyActionmapsAsync (ActionMap body = null);
 
@@ -2205,7 +2020,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionMap)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionMap>> PostJourneyActionmapsAsyncWithHttpInfo (ActionMap body = null);
 
         /// <summary>
@@ -2217,7 +2031,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>Task of EstimateJobAsyncResponse</returns>
-        
         
         System.Threading.Tasks.Task<EstimateJobAsyncResponse> PostJourneyActionmapsEstimatesJobsAsync (ActionMapEstimateRequest body);
 
@@ -2231,7 +2044,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">audience estimator request</param>
         /// <returns>Task of ApiResponse (EstimateJobAsyncResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<EstimateJobAsyncResponse>> PostJourneyActionmapsEstimatesJobsAsyncWithHttpInfo (ActionMapEstimateRequest body);
 
         /// <summary>
@@ -2243,7 +2055,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionTemplate</returns>
-        
         
         System.Threading.Tasks.Task<ActionTemplate> PostJourneyActiontemplatesAsync (ActionTemplate body = null);
 
@@ -2257,7 +2068,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionTemplate)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> PostJourneyActiontemplatesAsyncWithHttpInfo (ActionTemplate body = null);
 
         /// <summary>
@@ -2269,7 +2079,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
-        
         
         System.Threading.Tasks.Task<Outcome> PostJourneyOutcomesAsync (Outcome body = null);
 
@@ -2283,7 +2092,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo (Outcome body = null);
 
         /// <summary>
@@ -2291,12 +2099,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>Task of OutcomeAttributionAsyncResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<OutcomeAttributionAsyncResponse> PostJourneyOutcomesAttributionsJobsAsync (OutcomeAttributionListing body = null);
 
         /// <summary>
@@ -2304,12 +2112,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionAsyncResponse)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionAsyncResponse>> PostJourneyOutcomesAttributionsJobsAsyncWithHttpInfo (OutcomeAttributionListing body = null);
 
         /// <summary>
@@ -2321,7 +2129,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of OutcomePredictor</returns>
-        
         
         System.Threading.Tasks.Task<OutcomePredictor> PostJourneyOutcomesPredictorsAsync (OutcomePredictorRequest body = null);
 
@@ -2335,7 +2142,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (OutcomePredictor)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> PostJourneyOutcomesPredictorsAsyncWithHttpInfo (OutcomePredictorRequest body = null);
 
         /// <summary>
@@ -2348,7 +2154,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of JourneySegment</returns>
         
-        
         System.Threading.Tasks.Task<JourneySegment> PostJourneySegmentsAsync (JourneySegment body = null);
 
         /// <summary>
@@ -2360,7 +2165,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (JourneySegment)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PostJourneySegmentsAsyncWithHttpInfo (JourneySegment body = null);
 
@@ -2458,11 +2262,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns></returns>
-        
         
         public void DeleteJourneyActionmap (string actionMapId)
         {
@@ -2471,11 +2275,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteJourneyActionmapWithHttpInfo (string actionMapId)
         { 
@@ -2555,11 +2359,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteJourneyActionmapAsync (string actionMapId)
         {
@@ -2569,11 +2373,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyActionmapAsyncWithHttpInfo (string actionMapId)
         { 
@@ -2655,12 +2459,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="hardDelete">Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)</param>
         /// <returns></returns>
-        
         
         public void DeleteJourneyActiontemplate (string actionTemplateId, bool? hardDelete = null)
         {
@@ -2669,12 +2473,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="hardDelete">Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteJourneyActiontemplateWithHttpInfo (string actionTemplateId, bool? hardDelete = null)
         { 
@@ -2755,12 +2559,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="hardDelete">Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteJourneyActiontemplateAsync (string actionTemplateId, bool? hardDelete = null)
         {
@@ -2770,12 +2574,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="hardDelete">Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyActiontemplateAsyncWithHttpInfo (string actionTemplateId, bool? hardDelete = null)
         { 
@@ -2858,11 +2662,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns></returns>
-        
         
         public void DeleteJourneyOutcome (string outcomeId)
         {
@@ -2871,11 +2675,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteJourneyOutcomeWithHttpInfo (string outcomeId)
         { 
@@ -2955,11 +2759,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteJourneyOutcomeAsync (string outcomeId)
         {
@@ -2969,11 +2773,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyOutcomeAsyncWithHttpInfo (string outcomeId)
         { 
@@ -3055,11 +2859,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns></returns>
-        
         
         public void DeleteJourneyOutcomesPredictor (string predictorId)
         {
@@ -3068,11 +2872,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteJourneyOutcomesPredictorWithHttpInfo (string predictorId)
         { 
@@ -3152,11 +2956,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteJourneyOutcomesPredictorAsync (string predictorId)
         {
@@ -3166,11 +2970,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyOutcomesPredictorAsyncWithHttpInfo (string predictorId)
         { 
@@ -3252,11 +3056,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns></returns>
-        
         
         public void DeleteJourneySegment (string segmentId)
         {
@@ -3265,11 +3069,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteJourneySegmentWithHttpInfo (string segmentId)
         { 
@@ -3349,11 +3153,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteJourneySegmentAsync (string segmentId)
         {
@@ -3363,11 +3167,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneySegmentAsyncWithHttpInfo (string segmentId)
         { 
@@ -3449,12 +3253,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status for async query for journey aggregates 
+        /// 
+        /// GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         public AsyncQueryStatus GetAnalyticsJourneysAggregatesJob (string jobId)
         {
              ApiResponse<AsyncQueryStatus> localVarResponse = GetAnalyticsJourneysAggregatesJobWithHttpInfo(jobId);
@@ -3463,12 +3268,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status for async query for journey aggregates 
+        /// 
+        /// GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         public ApiResponse< AsyncQueryStatus > GetAnalyticsJourneysAggregatesJobWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -3547,12 +3353,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status for async query for journey aggregates 
+        /// 
+        /// GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of AsyncQueryStatus</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsJourneysAggregatesJobAsync (string jobId)
         {
              ApiResponse<AsyncQueryStatus> localVarResponse = await GetAnalyticsJourneysAggregatesJobAsyncWithHttpInfo(jobId);
@@ -3562,12 +3369,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status for async query for journey aggregates 
+        /// 
+        /// GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsJourneysAggregatesJobAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -3648,13 +3456,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>JourneyAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         public JourneyAsyncAggregateQueryResponse GetAnalyticsJourneysAggregatesJobResults (string jobId, string cursor = null)
         {
              ApiResponse<JourneyAsyncAggregateQueryResponse> localVarResponse = GetAnalyticsJourneysAggregatesJobResultsWithHttpInfo(jobId, cursor);
@@ -3663,13 +3472,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>ApiResponse of JourneyAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         public ApiResponse< JourneyAsyncAggregateQueryResponse > GetAnalyticsJourneysAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null)
         { 
             // verify the required parameter 'jobId' is set
@@ -3749,13 +3559,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>Task of JourneyAsyncAggregateQueryResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<JourneyAsyncAggregateQueryResponse> GetAnalyticsJourneysAggregatesJobResultsAsync (string jobId, string cursor = null)
         {
              ApiResponse<JourneyAsyncAggregateQueryResponse> localVarResponse = await GetAnalyticsJourneysAggregatesJobResultsAsyncWithHttpInfo(jobId, cursor);
@@ -3765,13 +3576,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
         /// <returns>Task of ApiResponse (JourneyAsyncAggregateQueryResponse)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<JourneyAsyncAggregateQueryResponse>> GetAnalyticsJourneysAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null)
         { 
             // verify the required parameter 'jobId' is set
@@ -3853,11 +3665,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>ActionMap</returns>
-        
         
         public ActionMap GetJourneyActionmap (string actionMapId)
         {
@@ -3867,11 +3679,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>ApiResponse of ActionMap</returns>
-        
         
         public ApiResponse< ActionMap > GetJourneyActionmapWithHttpInfo (string actionMapId)
         { 
@@ -3951,11 +3763,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>Task of ActionMap</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionMap> GetJourneyActionmapAsync (string actionMapId)
         {
@@ -3966,11 +3778,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <returns>Task of ApiResponse (ActionMap)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionMap>> GetJourneyActionmapAsyncWithHttpInfo (string actionMapId)
         { 
@@ -4052,6 +3864,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action maps. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4064,7 +3877,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ActionMapListing</returns>
         
-        
         public ActionMapListing GetJourneyActionmaps (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<ActionMapListing> localVarResponse = GetJourneyActionmapsWithHttpInfo(pageNumber, pageSize, sortBy, filterField, filterValue, actionMapIds, queryFields, queryValue);
@@ -4073,6 +3885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action maps. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4084,7 +3897,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of ActionMapListing</returns>
-        
         
         public ApiResponse< ActionMapListing > GetJourneyActionmapsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
         { 
@@ -4168,6 +3980,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action maps. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4180,7 +3993,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ActionMapListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ActionMapListing> GetJourneyActionmapsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<ActionMapListing> localVarResponse = await GetJourneyActionmapsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, filterField, filterValue, actionMapIds, queryFields, queryValue);
@@ -4190,6 +4002,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action maps. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4201,7 +4014,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (ActionMapListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionMapListing>> GetJourneyActionmapsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
         { 
@@ -4286,11 +4098,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status of job. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>string</returns>
-        
         
         public string GetJourneyActionmapsEstimatesJob (string jobId)
         {
@@ -4300,11 +4112,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status of job. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of string</returns>
-        
         
         public ApiResponse< string > GetJourneyActionmapsEstimatesJobWithHttpInfo (string jobId)
         { 
@@ -4384,11 +4196,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status of job. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of string</returns>
-        
         
         public async System.Threading.Tasks.Task<string> GetJourneyActionmapsEstimatesJobAsync (string jobId)
         {
@@ -4399,11 +4211,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get status of job. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetJourneyActionmapsEstimatesJobAsyncWithHttpInfo (string jobId)
         { 
@@ -4485,11 +4297,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get estimates from completed job. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ActionMapEstimateResult</returns>
-        
         
         public ActionMapEstimateResult GetJourneyActionmapsEstimatesJobResults (string jobId)
         {
@@ -4499,11 +4311,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get estimates from completed job. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of ActionMapEstimateResult</returns>
-        
         
         public ApiResponse< ActionMapEstimateResult > GetJourneyActionmapsEstimatesJobResultsWithHttpInfo (string jobId)
         { 
@@ -4583,11 +4395,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get estimates from completed job. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ActionMapEstimateResult</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionMapEstimateResult> GetJourneyActionmapsEstimatesJobResultsAsync (string jobId)
         {
@@ -4598,11 +4410,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get estimates from completed job. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (ActionMapEstimateResult)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionMapEstimateResult>> GetJourneyActionmapsEstimatesJobResultsAsyncWithHttpInfo (string jobId)
         { 
@@ -4684,11 +4496,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action target. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>ActionTarget</returns>
-        
         
         public ActionTarget GetJourneyActiontarget (string actionTargetId)
         {
@@ -4698,11 +4510,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action target. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>ApiResponse of ActionTarget</returns>
-        
         
         public ApiResponse< ActionTarget > GetJourneyActiontargetWithHttpInfo (string actionTargetId)
         { 
@@ -4782,11 +4594,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action target. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>Task of ActionTarget</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionTarget> GetJourneyActiontargetAsync (string actionTargetId)
         {
@@ -4797,11 +4609,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action target. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>Task of ApiResponse (ActionTarget)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionTarget>> GetJourneyActiontargetAsyncWithHttpInfo (string actionTargetId)
         { 
@@ -4883,12 +4695,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action targets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ActionTargetListing</returns>
-        
         
         public ActionTargetListing GetJourneyActiontargets (int? pageNumber = null, int? pageSize = null)
         {
@@ -4898,12 +4710,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action targets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ActionTargetListing</returns>
-        
         
         public ApiResponse< ActionTargetListing > GetJourneyActiontargetsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
@@ -4981,12 +4793,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action targets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ActionTargetListing</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionTargetListing> GetJourneyActiontargetsAsync (int? pageNumber = null, int? pageSize = null)
         {
@@ -4997,12 +4809,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action targets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ActionTargetListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionTargetListing>> GetJourneyActiontargetsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
@@ -5081,11 +4893,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <returns>ActionTemplate</returns>
-        
         
         public ActionTemplate GetJourneyActiontemplate (string actionTemplateId)
         {
@@ -5095,11 +4907,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <returns>ApiResponse of ActionTemplate</returns>
-        
         
         public ApiResponse< ActionTemplate > GetJourneyActiontemplateWithHttpInfo (string actionTemplateId)
         { 
@@ -5179,11 +4991,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <returns>Task of ActionTemplate</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionTemplate> GetJourneyActiontemplateAsync (string actionTemplateId)
         {
@@ -5194,11 +5006,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <returns>Task of ApiResponse (ActionTemplate)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> GetJourneyActiontemplateAsyncWithHttpInfo (string actionTemplateId)
         { 
@@ -5280,6 +5092,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action templates. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -5291,7 +5104,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ActionTemplateListing</returns>
         
-        
         public ActionTemplateListing GetJourneyActiontemplates (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<ActionTemplateListing> localVarResponse = GetJourneyActiontemplatesWithHttpInfo(pageNumber, pageSize, sortBy, mediaType, state, queryFields, queryValue);
@@ -5300,6 +5112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action templates. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -5310,7 +5123,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of ActionTemplateListing</returns>
-        
         
         public ApiResponse< ActionTemplateListing > GetJourneyActiontemplatesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
         { 
@@ -5393,6 +5205,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action templates. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -5404,7 +5217,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ActionTemplateListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ActionTemplateListing> GetJourneyActiontemplatesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<ActionTemplateListing> localVarResponse = await GetJourneyActiontemplatesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, mediaType, state, queryFields, queryValue);
@@ -5414,6 +5226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all action templates. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -5424,7 +5237,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (ActionTemplateListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionTemplateListing>> GetJourneyActiontemplatesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
         { 
@@ -5507,236 +5319,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve all sessions for a given customer. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerIdType">Type of ID used to identify customer (e.g. email, cookie, and phone).</param>
-        /// <param name="customerId">Primary identifier of the customer in the source of the session.</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <returns>SessionListing</returns>
-        
-        /// Preview Endpoint
-        public SessionListing GetJourneyCustomerCustomerIdSessions (string customerIdType, string customerId, string pageSize = null, string after = null)
-        {
-             ApiResponse<SessionListing> localVarResponse = GetJourneyCustomerCustomerIdSessionsWithHttpInfo(customerIdType, customerId, pageSize, after);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve all sessions for a given customer. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerIdType">Type of ID used to identify customer (e.g. email, cookie, and phone).</param>
-        /// <param name="customerId">Primary identifier of the customer in the source of the session.</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <returns>ApiResponse of SessionListing</returns>
-        
-        /// Preview Endpoint
-        public ApiResponse< SessionListing > GetJourneyCustomerCustomerIdSessionsWithHttpInfo (string customerIdType, string customerId, string pageSize = null, string after = null)
-        { 
-            // verify the required parameter 'customerIdType' is set
-            if (customerIdType == null)
-                throw new ApiException(400, "Missing required parameter 'customerIdType' when calling JourneyApi->GetJourneyCustomerCustomerIdSessions");
-            // verify the required parameter 'customerId' is set
-            if (customerId == null)
-                throw new ApiException(400, "Missing required parameter 'customerId' when calling JourneyApi->GetJourneyCustomerCustomerIdSessions");
-
-            var localVarPath = "/api/v2/journey/customers/{customerIdType}/{customerId}/sessions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (customerIdType != null) localVarPathParams.Add("customerIdType", this.Configuration.ApiClient.ParameterToString(customerIdType));
-            if (customerId != null) localVarPathParams.Add("customerId", this.Configuration.ApiClient.ParameterToString(customerId));
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetJourneyCustomerCustomerIdSessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetJourneyCustomerCustomerIdSessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<SessionListing>(localVarStatusCode,
-                localVarHeaders,
-                (SessionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Retrieve all sessions for a given customer. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerIdType">Type of ID used to identify customer (e.g. email, cookie, and phone).</param>
-        /// <param name="customerId">Primary identifier of the customer in the source of the session.</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <returns>Task of SessionListing</returns>
-        
-        /// Preview Endpoint
-        public async System.Threading.Tasks.Task<SessionListing> GetJourneyCustomerCustomerIdSessionsAsync (string customerIdType, string customerId, string pageSize = null, string after = null)
-        {
-             ApiResponse<SessionListing> localVarResponse = await GetJourneyCustomerCustomerIdSessionsAsyncWithHttpInfo(customerIdType, customerId, pageSize, after);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Retrieve all sessions for a given customer. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerIdType">Type of ID used to identify customer (e.g. email, cookie, and phone).</param>
-        /// <param name="customerId">Primary identifier of the customer in the source of the session.</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <returns>Task of ApiResponse (SessionListing)</returns>
-        
-        /// Preview Endpoint
-        public async System.Threading.Tasks.Task<ApiResponse<SessionListing>> GetJourneyCustomerCustomerIdSessionsAsyncWithHttpInfo (string customerIdType, string customerId, string pageSize = null, string after = null)
-        { 
-            // verify the required parameter 'customerIdType' is set
-            if (customerIdType == null)
-                throw new ApiException(400, "Missing required parameter 'customerIdType' when calling JourneyApi->GetJourneyCustomerCustomerIdSessions");
-            
-            // verify the required parameter 'customerId' is set
-            if (customerId == null)
-                throw new ApiException(400, "Missing required parameter 'customerId' when calling JourneyApi->GetJourneyCustomerCustomerIdSessions");
-            
-
-            var localVarPath = "/api/v2/journey/customers/{customerIdType}/{customerId}/sessions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (customerIdType != null) localVarPathParams.Add("customerIdType", this.Configuration.ApiClient.ParameterToString(customerIdType));
-            if (customerId != null) localVarPathParams.Add("customerId", this.Configuration.ApiClient.ParameterToString(customerId));
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetJourneyCustomerCustomerIdSessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetJourneyCustomerCustomerIdSessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<SessionListing>(localVarStatusCode,
-                localVarHeaders,
-                (SessionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
         /// Retrieve a single outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Outcome</returns>
-        
         
         public Outcome GetJourneyOutcome (string outcomeId)
         {
@@ -5746,11 +5334,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
         
         public ApiResponse< Outcome > GetJourneyOutcomeWithHttpInfo (string outcomeId)
         { 
@@ -5830,11 +5418,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of Outcome</returns>
-        
         
         public async System.Threading.Tasks.Task<Outcome> GetJourneyOutcomeAsync (string outcomeId)
         {
@@ -5845,11 +5433,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Outcome>> GetJourneyOutcomeAsyncWithHttpInfo (string outcomeId)
         { 
@@ -5931,6 +5519,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all outcomes. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -5941,7 +5530,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>OutcomeListing</returns>
         
-        
         public OutcomeListing GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<OutcomeListing> localVarResponse = GetJourneyOutcomesWithHttpInfo(pageNumber, pageSize, sortBy, outcomeIds, queryFields, queryValue);
@@ -5950,6 +5538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all outcomes. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -5959,7 +5548,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of OutcomeListing</returns>
-        
         
         public ApiResponse< OutcomeListing > GetJourneyOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
         { 
@@ -6041,6 +5629,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all outcomes. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -6051,7 +5640,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of OutcomeListing</returns>
         
-        
         public async System.Threading.Tasks.Task<OutcomeListing> GetJourneyOutcomesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<OutcomeListing> localVarResponse = await GetJourneyOutcomesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, outcomeIds, queryFields, queryValue);
@@ -6061,6 +5649,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all outcomes. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -6070,7 +5659,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeListing>> GetJourneyOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
         { 
@@ -6153,12 +5741,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get job status. 
+        /// 
+        /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>OutcomeAttributionJobStateResponse</returns>
         
-        /// Preview Endpoint
         public OutcomeAttributionJobStateResponse GetJourneyOutcomesAttributionsJob (string jobId)
         {
              ApiResponse<OutcomeAttributionJobStateResponse> localVarResponse = GetJourneyOutcomesAttributionsJobWithHttpInfo(jobId);
@@ -6167,12 +5756,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get job status. 
+        /// 
+        /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of OutcomeAttributionJobStateResponse</returns>
         
-        /// Preview Endpoint
         public ApiResponse< OutcomeAttributionJobStateResponse > GetJourneyOutcomesAttributionsJobWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -6251,12 +5841,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get job status. 
+        /// 
+        /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of OutcomeAttributionJobStateResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<OutcomeAttributionJobStateResponse> GetJourneyOutcomesAttributionsJobAsync (string jobId)
         {
              ApiResponse<OutcomeAttributionJobStateResponse> localVarResponse = await GetJourneyOutcomesAttributionsJobAsyncWithHttpInfo(jobId);
@@ -6266,12 +5857,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get job status. 
+        /// 
+        /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionJobStateResponse)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionJobStateResponse>> GetJourneyOutcomesAttributionsJobAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -6352,12 +5944,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get outcome attribution entities from completed job. 
+        /// 
+        /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>OutcomeAttributionResponseListing</returns>
         
-        /// Preview Endpoint
         public OutcomeAttributionResponseListing GetJourneyOutcomesAttributionsJobResults (string jobId)
         {
              ApiResponse<OutcomeAttributionResponseListing> localVarResponse = GetJourneyOutcomesAttributionsJobResultsWithHttpInfo(jobId);
@@ -6366,12 +5959,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get outcome attribution entities from completed job. 
+        /// 
+        /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of OutcomeAttributionResponseListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< OutcomeAttributionResponseListing > GetJourneyOutcomesAttributionsJobResultsWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -6450,12 +6044,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get outcome attribution entities from completed job. 
+        /// 
+        /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of OutcomeAttributionResponseListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<OutcomeAttributionResponseListing> GetJourneyOutcomesAttributionsJobResultsAsync (string jobId)
         {
              ApiResponse<OutcomeAttributionResponseListing> localVarResponse = await GetJourneyOutcomesAttributionsJobResultsAsyncWithHttpInfo(jobId);
@@ -6465,12 +6060,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get outcome attribution entities from completed job. 
+        /// 
+        /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionResponseListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionResponseListing>> GetJourneyOutcomesAttributionsJobResultsAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -6551,11 +6147,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>OutcomePredictor</returns>
-        
         
         public OutcomePredictor GetJourneyOutcomesPredictor (string predictorId)
         {
@@ -6565,11 +6161,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>ApiResponse of OutcomePredictor</returns>
-        
         
         public ApiResponse< OutcomePredictor > GetJourneyOutcomesPredictorWithHttpInfo (string predictorId)
         { 
@@ -6649,11 +6245,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of OutcomePredictor</returns>
-        
         
         public async System.Threading.Tasks.Task<OutcomePredictor> GetJourneyOutcomesPredictorAsync (string predictorId)
         {
@@ -6664,11 +6260,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of ApiResponse (OutcomePredictor)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> GetJourneyOutcomesPredictorAsyncWithHttpInfo (string predictorId)
         { 
@@ -6750,10 +6346,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all outcome predictors. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OutcomePredictorListing</returns>
-        
         
         public OutcomePredictorListing GetJourneyOutcomesPredictors ()
         {
@@ -6763,10 +6359,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all outcome predictors. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OutcomePredictorListing</returns>
-        
         
         public ApiResponse< OutcomePredictorListing > GetJourneyOutcomesPredictorsWithHttpInfo ()
         { 
@@ -6842,10 +6438,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all outcome predictors. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OutcomePredictorListing</returns>
-        
         
         public async System.Threading.Tasks.Task<OutcomePredictorListing> GetJourneyOutcomesPredictorsAsync ()
         {
@@ -6856,10 +6452,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all outcome predictors. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OutcomePredictorListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutcomePredictorListing>> GetJourneyOutcomesPredictorsAsyncWithHttpInfo ()
         { 
@@ -6936,11 +6532,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>JourneySegment</returns>
-        
         
         public JourneySegment GetJourneySegment (string segmentId)
         {
@@ -6950,11 +6546,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>ApiResponse of JourneySegment</returns>
-        
         
         public ApiResponse< JourneySegment > GetJourneySegmentWithHttpInfo (string segmentId)
         { 
@@ -7034,11 +6630,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>Task of JourneySegment</returns>
-        
         
         public async System.Threading.Tasks.Task<JourneySegment> GetJourneySegmentAsync (string segmentId)
         {
@@ -7049,11 +6645,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <returns>Task of ApiResponse (JourneySegment)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JourneySegment>> GetJourneySegmentAsyncWithHttpInfo (string segmentId)
         { 
@@ -7135,6 +6731,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all segments. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
@@ -7146,7 +6743,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>SegmentListing</returns>
         
-        
         public SegmentListing GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<SegmentListing> localVarResponse = GetJourneySegmentsWithHttpInfo(sortBy, pageSize, pageNumber, isActive, segmentIds, queryFields, queryValue);
@@ -7155,6 +6751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all segments. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
@@ -7165,7 +6762,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of SegmentListing</returns>
-        
         
         public ApiResponse< SegmentListing > GetJourneySegmentsWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
         { 
@@ -7248,6 +6844,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all segments. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
@@ -7259,7 +6856,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of SegmentListing</returns>
         
-        
         public async System.Threading.Tasks.Task<SegmentListing> GetJourneySegmentsAsync (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<SegmentListing> localVarResponse = await GetJourneySegmentsAsyncWithHttpInfo(sortBy, pageSize, pageNumber, isActive, segmentIds, queryFields, queryValue);
@@ -7269,6 +6865,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all segments. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
@@ -7279,7 +6876,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (SegmentListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SegmentListing>> GetJourneySegmentsAsyncWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
         { 
@@ -7363,11 +6959,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single session. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Session</returns>
-        
         
         public Session GetJourneySession (string sessionId)
         {
@@ -7377,11 +6973,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single session. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>ApiResponse of Session</returns>
-        
         
         public ApiResponse< Session > GetJourneySessionWithHttpInfo (string sessionId)
         { 
@@ -7461,11 +7057,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single session. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of Session</returns>
-        
         
         public async System.Threading.Tasks.Task<Session> GetJourneySessionAsync (string sessionId)
         {
@@ -7476,11 +7072,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a single session. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of ApiResponse (Session)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Session>> GetJourneySessionAsyncWithHttpInfo (string sessionId)
         { 
@@ -7562,6 +7158,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all events for a given session. 
+        /// 
+        /// GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
@@ -7569,7 +7167,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>EventListing</returns>
         
-        /// Preview Endpoint
         public EventListing GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null)
         {
              ApiResponse<EventListing> localVarResponse = GetJourneySessionEventsWithHttpInfo(sessionId, pageSize, after);
@@ -7578,6 +7175,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all events for a given session. 
+        /// 
+        /// GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
@@ -7585,7 +7184,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>ApiResponse of EventListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< EventListing > GetJourneySessionEventsWithHttpInfo (string sessionId, string pageSize = null, string after = null)
         { 
             // verify the required parameter 'sessionId' is set
@@ -7666,6 +7264,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all events for a given session. 
+        /// 
+        /// GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
@@ -7673,7 +7273,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>Task of EventListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<EventListing> GetJourneySessionEventsAsync (string sessionId, string pageSize = null, string after = null)
         {
              ApiResponse<EventListing> localVarResponse = await GetJourneySessionEventsAsyncWithHttpInfo(sessionId, pageSize, after);
@@ -7683,6 +7282,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve all events for a given session. 
+        /// 
+        /// GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
@@ -7690,7 +7291,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>Task of ApiResponse (EventListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<EventListing>> GetJourneySessionEventsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null)
         { 
             // verify the required parameter 'sessionId' is set
@@ -7773,11 +7373,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve latest outcome score associated with a session for all outcomes. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>OutcomeScoresResult</returns>
-        
         
         public OutcomeScoresResult GetJourneySessionOutcomescores (string sessionId)
         {
@@ -7787,11 +7387,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve latest outcome score associated with a session for all outcomes. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>ApiResponse of OutcomeScoresResult</returns>
-        
         
         public ApiResponse< OutcomeScoresResult > GetJourneySessionOutcomescoresWithHttpInfo (string sessionId)
         { 
@@ -7871,11 +7471,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve latest outcome score associated with a session for all outcomes. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of OutcomeScoresResult</returns>
-        
         
         public async System.Threading.Tasks.Task<OutcomeScoresResult> GetJourneySessionOutcomescoresAsync (string sessionId)
         {
@@ -7886,11 +7486,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve latest outcome score associated with a session for all outcomes. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of ApiResponse (OutcomeScoresResult)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeScoresResult>> GetJourneySessionOutcomescoresAsyncWithHttpInfo (string sessionId)
         { 
@@ -7972,6 +7572,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve segment assignments by session ID. 
+        /// 
+        /// GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session to query for segment assignments.</param>
@@ -7981,7 +7583,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentState">Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional)</param>
         /// <returns>SegmentAssignmentListing</returns>
         
-        /// Preview Endpoint
         public SegmentAssignmentListing GetJourneySessionSegments (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null)
         {
              ApiResponse<SegmentAssignmentListing> localVarResponse = GetJourneySessionSegmentsWithHttpInfo(sessionId, pageSize, after, segmentScope, assignmentState);
@@ -7990,6 +7591,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve segment assignments by session ID. 
+        /// 
+        /// GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session to query for segment assignments.</param>
@@ -7999,7 +7602,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentState">Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional)</param>
         /// <returns>ApiResponse of SegmentAssignmentListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< SegmentAssignmentListing > GetJourneySessionSegmentsWithHttpInfo (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null)
         { 
             // verify the required parameter 'sessionId' is set
@@ -8082,6 +7684,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve segment assignments by session ID. 
+        /// 
+        /// GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session to query for segment assignments.</param>
@@ -8091,7 +7695,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentState">Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional)</param>
         /// <returns>Task of SegmentAssignmentListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<SegmentAssignmentListing> GetJourneySessionSegmentsAsync (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null)
         {
              ApiResponse<SegmentAssignmentListing> localVarResponse = await GetJourneySessionSegmentsAsyncWithHttpInfo(sessionId, pageSize, after, segmentScope, assignmentState);
@@ -8101,6 +7704,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve segment assignments by session ID. 
+        /// 
+        /// GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session to query for segment assignments.</param>
@@ -8110,7 +7715,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentState">Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional)</param>
         /// <returns>Task of ApiResponse (SegmentAssignmentListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetJourneySessionSegmentsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null)
         { 
             // verify the required parameter 'sessionId' is set
@@ -8195,12 +7799,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionMap</returns>
-        
         
         public ActionMap PatchJourneyActionmap (string actionMapId, PatchActionMap body = null)
         {
@@ -8210,12 +7814,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionMap</returns>
-        
         
         public ApiResponse< ActionMap > PatchJourneyActionmapWithHttpInfo (string actionMapId, PatchActionMap body = null)
         { 
@@ -8301,12 +7905,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionMap</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionMap> PatchJourneyActionmapAsync (string actionMapId, PatchActionMap body = null)
         {
@@ -8317,12 +7921,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update single action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionMapId">ID of the action map.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionMap)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionMap>> PatchJourneyActionmapAsyncWithHttpInfo (string actionMapId, PatchActionMap body = null)
         { 
@@ -8410,12 +8014,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a single action target. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionTarget</returns>
-        
         
         public ActionTarget PatchJourneyActiontarget (string actionTargetId, PatchActionTarget body = null)
         {
@@ -8425,12 +8029,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a single action target. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionTarget</returns>
-        
         
         public ApiResponse< ActionTarget > PatchJourneyActiontargetWithHttpInfo (string actionTargetId, PatchActionTarget body = null)
         { 
@@ -8516,12 +8120,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a single action target. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionTarget</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionTarget> PatchJourneyActiontargetAsync (string actionTargetId, PatchActionTarget body = null)
         {
@@ -8532,12 +8136,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a single action target. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionTarget)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionTarget>> PatchJourneyActiontargetAsyncWithHttpInfo (string actionTargetId, PatchActionTarget body = null)
         { 
@@ -8625,12 +8229,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionTemplate</returns>
-        
         
         public ActionTemplate PatchJourneyActiontemplate (string actionTemplateId, PatchActionTemplate body = null)
         {
@@ -8640,12 +8244,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionTemplate</returns>
-        
         
         public ApiResponse< ActionTemplate > PatchJourneyActiontemplateWithHttpInfo (string actionTemplateId, PatchActionTemplate body = null)
         { 
@@ -8731,12 +8335,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionTemplate</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionTemplate> PatchJourneyActiontemplateAsync (string actionTemplateId, PatchActionTemplate body = null)
         {
@@ -8747,12 +8351,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTemplateId">ID of the action template.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionTemplate)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> PatchJourneyActiontemplateAsyncWithHttpInfo (string actionTemplateId, PatchActionTemplate body = null)
         { 
@@ -8840,12 +8444,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
-        
         
         public Outcome PatchJourneyOutcome (string outcomeId, PatchOutcome body = null)
         {
@@ -8855,12 +8459,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
         
         public ApiResponse< Outcome > PatchJourneyOutcomeWithHttpInfo (string outcomeId, PatchOutcome body = null)
         { 
@@ -8946,12 +8550,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
-        
         
         public async System.Threading.Tasks.Task<Outcome> PatchJourneyOutcomeAsync (string outcomeId, PatchOutcome body = null)
         {
@@ -8962,12 +8566,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Outcome>> PatchJourneyOutcomeAsyncWithHttpInfo (string outcomeId, PatchOutcome body = null)
         { 
@@ -9055,12 +8659,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>JourneySegment</returns>
-        
         
         public JourneySegment PatchJourneySegment (string segmentId, PatchSegment body = null)
         {
@@ -9070,12 +8674,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of JourneySegment</returns>
-        
         
         public ApiResponse< JourneySegment > PatchJourneySegmentWithHttpInfo (string segmentId, PatchSegment body = null)
         { 
@@ -9161,12 +8765,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of JourneySegment</returns>
-        
         
         public async System.Threading.Tasks.Task<JourneySegment> PatchJourneySegmentAsync (string segmentId, PatchSegment body = null)
         {
@@ -9177,12 +8781,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="segmentId">ID of the segment.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (JourneySegment)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PatchJourneySegmentAsyncWithHttpInfo (string segmentId, PatchSegment body = null)
         { 
@@ -9270,12 +8874,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for journey aggregates asynchronously 
+        /// 
+        /// PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         public AsyncQueryResponse PostAnalyticsJourneysAggregatesJobs (JourneyAsyncAggregationQuery body)
         {
              ApiResponse<AsyncQueryResponse> localVarResponse = PostAnalyticsJourneysAggregatesJobsWithHttpInfo(body);
@@ -9284,12 +8889,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for journey aggregates asynchronously 
+        /// 
+        /// PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         public ApiResponse< AsyncQueryResponse > PostAnalyticsJourneysAggregatesJobsWithHttpInfo (JourneyAsyncAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -9373,12 +8979,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for journey aggregates asynchronously 
+        /// 
+        /// PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of AsyncQueryResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsJourneysAggregatesJobsAsync (JourneyAsyncAggregationQuery body)
         {
              ApiResponse<AsyncQueryResponse> localVarResponse = await PostAnalyticsJourneysAggregatesJobsAsyncWithHttpInfo(body);
@@ -9388,12 +8995,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for journey aggregates asynchronously 
+        /// 
+        /// PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsJourneysAggregatesJobsAsyncWithHttpInfo (JourneyAsyncAggregationQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -9479,11 +9087,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for journey aggregates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>JourneyAggregateQueryResponse</returns>
-        
         
         public JourneyAggregateQueryResponse PostAnalyticsJourneysAggregatesQuery (JourneyAggregationQuery body)
         {
@@ -9493,11 +9101,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for journey aggregates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of JourneyAggregateQueryResponse</returns>
-        
         
         public ApiResponse< JourneyAggregateQueryResponse > PostAnalyticsJourneysAggregatesQueryWithHttpInfo (JourneyAggregationQuery body)
         { 
@@ -9582,11 +9190,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for journey aggregates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of JourneyAggregateQueryResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<JourneyAggregateQueryResponse> PostAnalyticsJourneysAggregatesQueryAsync (JourneyAggregationQuery body)
         {
@@ -9597,11 +9205,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for journey aggregates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (JourneyAggregateQueryResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JourneyAggregateQueryResponse>> PostAnalyticsJourneysAggregatesQueryAsyncWithHttpInfo (JourneyAggregationQuery body)
         { 
@@ -9688,11 +9296,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionMap</returns>
-        
         
         public ActionMap PostJourneyActionmaps (ActionMap body = null)
         {
@@ -9702,11 +9310,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionMap</returns>
-        
         
         public ApiResponse< ActionMap > PostJourneyActionmapsWithHttpInfo (ActionMap body = null)
         { 
@@ -9788,11 +9396,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionMap</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionMap> PostJourneyActionmapsAsync (ActionMap body = null)
         {
@@ -9803,11 +9411,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an action map. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionMap)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionMap>> PostJourneyActionmapsAsyncWithHttpInfo (ActionMap body = null)
         { 
@@ -9890,11 +9498,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for estimates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>EstimateJobAsyncResponse</returns>
-        
         
         public EstimateJobAsyncResponse PostJourneyActionmapsEstimatesJobs (ActionMapEstimateRequest body)
         {
@@ -9904,11 +9512,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for estimates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>ApiResponse of EstimateJobAsyncResponse</returns>
-        
         
         public ApiResponse< EstimateJobAsyncResponse > PostJourneyActionmapsEstimatesJobsWithHttpInfo (ActionMapEstimateRequest body)
         { 
@@ -9993,11 +9601,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for estimates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>Task of EstimateJobAsyncResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<EstimateJobAsyncResponse> PostJourneyActionmapsEstimatesJobsAsync (ActionMapEstimateRequest body)
         {
@@ -10008,11 +9616,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for estimates 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>Task of ApiResponse (EstimateJobAsyncResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<EstimateJobAsyncResponse>> PostJourneyActionmapsEstimatesJobsAsyncWithHttpInfo (ActionMapEstimateRequest body)
         { 
@@ -10099,11 +9707,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionTemplate</returns>
-        
         
         public ActionTemplate PostJourneyActiontemplates (ActionTemplate body = null)
         {
@@ -10113,11 +9721,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionTemplate</returns>
-        
         
         public ApiResponse< ActionTemplate > PostJourneyActiontemplatesWithHttpInfo (ActionTemplate body = null)
         { 
@@ -10199,11 +9807,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionTemplate</returns>
-        
         
         public async System.Threading.Tasks.Task<ActionTemplate> PostJourneyActiontemplatesAsync (ActionTemplate body = null)
         {
@@ -10214,11 +9822,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a single action template. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionTemplate)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> PostJourneyActiontemplatesAsyncWithHttpInfo (ActionTemplate body = null)
         { 
@@ -10301,11 +9909,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
-        
         
         public Outcome PostJourneyOutcomes (Outcome body = null)
         {
@@ -10315,11 +9923,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
         
         public ApiResponse< Outcome > PostJourneyOutcomesWithHttpInfo (Outcome body = null)
         { 
@@ -10401,11 +10009,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
-        
         
         public async System.Threading.Tasks.Task<Outcome> PostJourneyOutcomesAsync (Outcome body = null)
         {
@@ -10416,11 +10024,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an outcome. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo (Outcome body = null)
         { 
@@ -10503,12 +10111,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Outcome Attributions 
+        /// 
+        /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>OutcomeAttributionAsyncResponse</returns>
         
-        /// Preview Endpoint
         public OutcomeAttributionAsyncResponse PostJourneyOutcomesAttributionsJobs (OutcomeAttributionListing body = null)
         {
              ApiResponse<OutcomeAttributionAsyncResponse> localVarResponse = PostJourneyOutcomesAttributionsJobsWithHttpInfo(body);
@@ -10517,12 +10126,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Outcome Attributions 
+        /// 
+        /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>ApiResponse of OutcomeAttributionAsyncResponse</returns>
         
-        /// Preview Endpoint
         public ApiResponse< OutcomeAttributionAsyncResponse > PostJourneyOutcomesAttributionsJobsWithHttpInfo (OutcomeAttributionListing body = null)
         { 
 
@@ -10603,12 +10213,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Outcome Attributions 
+        /// 
+        /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>Task of OutcomeAttributionAsyncResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<OutcomeAttributionAsyncResponse> PostJourneyOutcomesAttributionsJobsAsync (OutcomeAttributionListing body = null)
         {
              ApiResponse<OutcomeAttributionAsyncResponse> localVarResponse = await PostJourneyOutcomesAttributionsJobsAsyncWithHttpInfo(body);
@@ -10618,12 +10229,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Outcome Attributions 
+        /// 
+        /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionAsyncResponse)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionAsyncResponse>> PostJourneyOutcomesAttributionsJobsAsyncWithHttpInfo (OutcomeAttributionListing body = null)
         { 
 
@@ -10705,11 +10317,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>OutcomePredictor</returns>
-        
         
         public OutcomePredictor PostJourneyOutcomesPredictors (OutcomePredictorRequest body = null)
         {
@@ -10719,11 +10331,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of OutcomePredictor</returns>
-        
         
         public ApiResponse< OutcomePredictor > PostJourneyOutcomesPredictorsWithHttpInfo (OutcomePredictorRequest body = null)
         { 
@@ -10805,11 +10417,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of OutcomePredictor</returns>
-        
         
         public async System.Threading.Tasks.Task<OutcomePredictor> PostJourneyOutcomesPredictorsAsync (OutcomePredictorRequest body = null)
         {
@@ -10820,11 +10432,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an outcome predictor. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (OutcomePredictor)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> PostJourneyOutcomesPredictorsAsyncWithHttpInfo (OutcomePredictorRequest body = null)
         { 
@@ -10907,11 +10519,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>JourneySegment</returns>
-        
         
         public JourneySegment PostJourneySegments (JourneySegment body = null)
         {
@@ -10921,11 +10533,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of JourneySegment</returns>
-        
         
         public ApiResponse< JourneySegment > PostJourneySegmentsWithHttpInfo (JourneySegment body = null)
         { 
@@ -11007,11 +10619,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of JourneySegment</returns>
-        
         
         public async System.Threading.Tasks.Task<JourneySegment> PostJourneySegmentsAsync (JourneySegment body = null)
         {
@@ -11022,11 +10634,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a segment. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (JourneySegment)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PostJourneySegmentsAsyncWithHttpInfo (JourneySegment body = null)
         { 

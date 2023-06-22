@@ -25,8 +25,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a Trigger
 
-
-
 Requires ANY permissions: 
 
 * processautomation:trigger:delete
@@ -88,8 +86,6 @@ void (empty response body)
 
 
 Retrieve a single Trigger matching id
-
-
 
 Requires ANY permissions: 
 
@@ -154,8 +150,6 @@ namespace Example
 
 
 Retrieves all triggers, optionally filtered by query parameters.
-
-
 
 Requires ANY permissions: 
 
@@ -231,8 +225,6 @@ namespace Example
 
 Get topics available for organization
 
-
-
 Requires ANY permissions: 
 
 * processautomation:trigger:edit
@@ -301,8 +293,6 @@ namespace Example
 
 Test the matching of a Trigger based on provided event body
 
-
-
 Requires ANY permissions: 
 
 * processautomation:trigger:test
@@ -368,8 +358,6 @@ namespace Example
 
 Create a Trigger
 
-
-
 Requires ANY permissions: 
 
 * processautomation:trigger:add
@@ -432,8 +420,6 @@ namespace Example
 
 
 Test the matching of all organization Triggers on given topic using provided event body
-
-
 
 Requires ANY permissions: 
 
@@ -499,8 +485,6 @@ namespace Example
 
 
 Update a Trigger
-
-
 
 Requires ANY permissions: 
 

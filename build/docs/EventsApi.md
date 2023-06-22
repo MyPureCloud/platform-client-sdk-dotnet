@@ -20,8 +20,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Publish Conversation Batch Events
 
-
-
 Requires ANY permissions: 
 
 * conversation:conversation:inject
@@ -85,8 +83,6 @@ namespace Example
 
 Publish User Presence Status Batch Events
 
-
-
 Requires ANY permissions: 
 
 * presence:userPresence:inject
@@ -149,8 +145,6 @@ namespace Example
 
 
 Publish Agent Routing Status Batch Events
-
-
 
 Requires ANY permissions: 
 

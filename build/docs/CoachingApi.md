@@ -38,8 +38,6 @@ Delete an existing appointment
 
 Permission not required if you are the creator of the appointment
 
-
-
 Requires ANY permissions: 
 
 * coaching:appointment:delete
@@ -104,8 +102,6 @@ namespace Example
 Delete an existing annotation
 
 You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
-
-
 
 Requires ANY permissions: 
 
@@ -174,8 +170,6 @@ Retrieve an appointment
 
 Permission not required if you are the attendee, creator or facilitator of the appointment
 
-
-
 Requires ANY permissions: 
 
 * coaching:appointment:view
@@ -240,8 +234,6 @@ namespace Example
 Retrieve an annotation.
 
 You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
-
-
 
 Requires ANY permissions: 
 
@@ -310,8 +302,6 @@ namespace Example
 Get a list of annotations.
 
 You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
-
-
 
 Requires ANY permissions: 
 
@@ -383,8 +373,6 @@ Get the list of status changes for a coaching appointment.
 
 Permission not required if you are an attendee, creator or facilitator of the appointment
 
-
-
 Requires ANY permissions: 
 
 * coaching:appointmentStatus:view
@@ -451,8 +439,6 @@ namespace Example
 
 
 Get appointments for users and optional date range
-
-
 
 Requires ANY permissions: 
 
@@ -537,8 +523,6 @@ namespace Example
 
 Get my appointments for a given date range
 
-
-
 Requires NO permissions: 
 
 
@@ -621,8 +605,6 @@ Get an existing notification
 
 Permission not required if you are the owner of the notification.
 
-
-
 Requires ANY permissions: 
 
 * coaching:notification:view
@@ -687,8 +669,6 @@ namespace Example
 
 
 Retrieve the list of your notifications.
-
-
 
 Requires NO permissions: 
 
@@ -758,8 +738,6 @@ Update an existing appointment
 
 Permission not required if you are the creator or facilitator of the appointment
 
-
-
 Requires ANY permissions: 
 
 * coaching:appointment:edit
@@ -826,8 +804,6 @@ namespace Example
 Update an existing annotation.
 
 You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
-
-
 
 Requires ANY permissions: 
 
@@ -899,8 +875,6 @@ Update the status of a coaching appointment
 
 Permission not required if you are an attendee, creator or facilitator of the appointment
 
-
-
 Requires ANY permissions: 
 
 * coaching:appointmentStatus:edit
@@ -968,8 +942,6 @@ Update an existing notification.
 
 Can only update your own notifications.
 
-
-
 Requires NO permissions: 
 
 
@@ -1035,8 +1007,6 @@ namespace Example
 Create a new annotation.
 
 You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
-
-
 
 Requires ANY permissions: 
 
@@ -1106,8 +1076,6 @@ Add a conversation to an appointment
 
 Permission not required if you are the creator or facilitator of the appointment
 
-
-
 Requires ANY permissions: 
 
 * coaching:appointment:edit
@@ -1174,8 +1142,6 @@ namespace Example
 
 Create a new appointment
 
-
-
 Requires ANY permissions: 
 
 * coaching:appointment:add
@@ -1239,8 +1205,6 @@ namespace Example
 
 Retrieve aggregated appointment data
 
-
-
 Requires ANY permissions: 
 
 * coaching:appointment:view
@@ -1303,8 +1267,6 @@ namespace Example
 
 
 Get list of possible slots where a coaching appointment can be scheduled.
-
-
 
 Requires ANY permissions: 
 

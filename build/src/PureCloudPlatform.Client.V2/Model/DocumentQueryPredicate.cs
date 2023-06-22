@@ -96,7 +96,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Title for "title"
             /// </summary>
             [EnumMember(Value = "title")]
-            Title
+            Title,
+            
+            /// <summary>
+            /// Enum Visible for "visible"
+            /// </summary>
+            [EnumMember(Value = "visible")]
+            Visible,
+            
+            /// <summary>
+            /// Enum State for "state"
+            /// </summary>
+            [EnumMember(Value = "state")]
+            State
         }
         /// <summary>
         /// Specifies the matching criteria between the fields and values.

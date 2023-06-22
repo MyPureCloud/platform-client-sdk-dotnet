@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">The time zone for this forecast.</param>
         /// <param name="PlanningGroupsVersion">The version of the planning groups that was used for this forecast.</param>
         /// <param name="PlanningGroups">A snapshot of the planning groups used for this forecast as of the version number indicated.</param>
-        public BuShortTermForecast(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null, DateTime? ReferenceStartDate = null, List<ForecastSourceDayPointer> SourceDays = null, List<BuForecastModification> Modifications = null, BuForecastGenerationResult GenerationResults = null, string TimeZone = null, int? PlanningGroupsVersion = null, ForecastPlanningGroupsResponse PlanningGroups = null)
+        public BuShortTermForecast(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null, DateTime? ReferenceStartDate = null, List<ForecastSourceDayPointer> SourceDays = null, List<BuForecastModificationResponse> Modifications = null, BuForecastGenerationResult GenerationResults = null, string TimeZone = null, int? PlanningGroupsVersion = null, ForecastPlanningGroupsResponse PlanningGroups = null)
         {
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
@@ -187,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Any manual modifications applied to this forecast</value>
         [DataMember(Name="modifications", EmitDefaultValue=false)]
-        public List<BuForecastModification> Modifications { get; set; }
+        public List<BuForecastModificationResponse> Modifications { get; set; }
 
 
 

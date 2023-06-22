@@ -24,8 +24,6 @@ Get information about an accelerator
 
 Get the complete metadata specification for an accelerator, including requirements and parameters.
 
-
-
 Requires ANY permissions: 
 
 * infrastructureascode:accelerator:view
@@ -92,8 +90,6 @@ namespace Example
 Get a list of available accelerators
 
 Search for accelerators that can be run.
-
-
 
 Requires ANY permissions: 
 
@@ -178,8 +174,6 @@ Get job status and results
 
 Get the execution status of a submitted job, optionally including results and error details.
 
-
-
 Requires ALL permissions: 
 
 * infrastructureascode:job:view
@@ -246,8 +240,6 @@ namespace Example
 Get job history
 
 Get a history of submitted jobs, optionally including error messages.
-
-
 
 Requires ANY permissions: 
 
@@ -325,8 +317,6 @@ namespace Example
 Create a Job
 
 Create and submit a job for remote execution or see job planning results.
-
-
 
 Requires ANY permissions: 
 

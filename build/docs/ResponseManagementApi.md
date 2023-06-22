@@ -36,8 +36,6 @@ Delete an existing response library.
 
 This will remove any responses associated with the library.
 
-
-
 Requires ANY permissions: 
 
 * responses:library:delete
@@ -102,8 +100,6 @@ Delete an existing response.
 
 This will remove the response from any libraries associated with it.
 
-
-
 Requires ANY permissions: 
 
 * responses:response:delete
@@ -166,8 +162,6 @@ void (empty response body)
 
 Delete response asset
 
-
-
 Requires ANY permissions: 
 
 * responseAssets:asset:delete
@@ -229,8 +223,6 @@ void (empty response body)
 
 
 Gets a list of existing response libraries.
-
-
 
 Requires ANY permissions: 
 
@@ -301,8 +293,6 @@ namespace Example
 
 Get details about an existing response library.
 
-
-
 Requires ANY permissions: 
 
 * responses:library:view
@@ -365,8 +355,6 @@ namespace Example
 
 
 Get details about an existing response.
-
-
 
 Requires ANY permissions: 
 
@@ -433,8 +421,6 @@ namespace Example
 
 Get response asset information
 
-
-
 Requires ANY permissions: 
 
 * responseAssets:asset:view
@@ -498,8 +484,6 @@ namespace Example
 
 Get response asset upload status
 
-
-
 Requires ANY permissions: 
 
 * responseAssets:asset:view
@@ -562,8 +546,6 @@ namespace Example
 
 
 Gets a list of existing responses.
-
-
 
 Requires ANY permissions: 
 
@@ -634,8 +616,6 @@ namespace Example
 
 Create a response library.
 
-
-
 Requires ANY permissions: 
 
 * responses:library:add
@@ -698,8 +678,6 @@ namespace Example
 
 
 Search response assets
-
-
 
 Requires ALL permissions: 
 
@@ -766,8 +744,6 @@ namespace Example
 
 Creates pre-signed url for uploading response asset
 
-
-
 Requires ANY permissions: 
 
 * responseAssets:asset:add
@@ -830,8 +806,6 @@ namespace Example
 
 
 Create a response.
-
-
 
 Requires ANY permissions: 
 
@@ -898,8 +872,6 @@ namespace Example
 
 Query responses
 
-
-
 Requires ANY permissions: 
 
 * responses:response:view
@@ -964,8 +936,6 @@ namespace Example
 Update an existing response library.
 
 Fields that can be updated: name. The most recent version is required for updates.
-
-
 
 Requires ANY permissions: 
 
@@ -1034,8 +1004,6 @@ Update an existing response.
 
 Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
 
-
-
 Requires ANY permissions: 
 
 * responses:response:edit
@@ -1102,8 +1070,6 @@ namespace Example
 
 
 Update response asset
-
-
 
 Requires ALL permissions: 
 

@@ -30,8 +30,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get a script
 
-
-
 Requires ANY permissions: 
 
 * scripter:script:view
@@ -94,8 +92,6 @@ namespace Example
 
 
 Get a page
-
-
 
 Requires ANY permissions: 
 
@@ -164,8 +160,6 @@ namespace Example
 
 Get the list of pages
 
-
-
 Requires ANY permissions: 
 
 * scripter:script:view
@@ -230,8 +224,6 @@ namespace Example
 
 
 Get the list of scripts
-
-
 
 Requires ANY permissions: 
 
@@ -314,8 +306,6 @@ namespace Example
 
 Get the metadata for a list of scripts
 
-
-
 Requires ANY permissions: 
 
 * scripter:script:search
@@ -397,8 +387,6 @@ namespace Example
 
 Get the published scripts.
 
-
-
 Requires ANY permissions: 
 
 * scripter:publishedScript:view
@@ -475,8 +463,6 @@ namespace Example
 
 
 Get the published scripts metadata.
-
-
 
 Requires ANY permissions: 
 
@@ -555,8 +541,6 @@ namespace Example
 
 Get the published script.
 
-
-
 Requires ANY permissions: 
 
 * scripter:publishedScript:view
@@ -621,8 +605,6 @@ namespace Example
 
 
 Get the published page.
-
-
 
 Requires ANY permissions: 
 
@@ -691,8 +673,6 @@ namespace Example
 
 Get the list of published pages
 
-
-
 Requires ANY permissions: 
 
 * scripter:publishedScript:view
@@ -757,8 +737,6 @@ namespace Example
 
 
 Get the published variables
-
-
 
 Requires ANY permissions: 
 
@@ -831,8 +809,6 @@ namespace Example
 
 Get the upload status of an imported script
 
-
-
 Requires ANY permissions: 
 
 * scripter:script:search
@@ -897,8 +873,6 @@ namespace Example
 
 
 Export a script via download service.
-
-
 
 Requires ANY permissions: 
 

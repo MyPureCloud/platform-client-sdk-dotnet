@@ -59,8 +59,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a division.
 
-
-
 Requires ANY permissions: 
 
 * authorization:division:delete
@@ -125,8 +123,6 @@ void (empty response body)
 
 Delete an organization role.
 
-
-
 Requires ANY permissions: 
 
 * authorization:role:delete
@@ -188,8 +184,6 @@ void (empty response body)
 
 
 Delete a grant of a role in a division
-
-
 
 Requires ALL permissions: 
 
@@ -257,8 +251,6 @@ void (empty response body)
 
 Returns an authorization division.
 
-
-
 Requires NO permissions: 
 
 
@@ -324,8 +316,6 @@ namespace Example
 Gets all grants for a given division.
 
 Returns all grants assigned to a given division. Maximum page size is 500.
-
-
 
 Requires ANY permissions: 
 
@@ -395,8 +385,6 @@ namespace Example
 Retrieve a list of all divisions defined for the organization
 
 Request specific divisions by id using a query param \"id\", e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&id=72e9fb25-c484-488d-9312-7acba82435b3
-
-
 
 Requires NO permissions: 
 
@@ -478,8 +466,6 @@ Retrieve the home division for the organization.
 
 Will not include object counts.
 
-
-
 Requires NO permissions: 
 
 
@@ -536,8 +522,6 @@ This endpoint does require any parameters.
 
 
 Returns the maximum allowed number of divisions.
-
-
 
 Requires NO permissions: 
 
@@ -597,8 +581,6 @@ This endpoint does require any parameters.
 Returns which divisions the current user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
-
-
 
 Requires NO permissions: 
 
@@ -663,8 +645,6 @@ namespace Example
 
 
 Returns which divisions the current user has the given permission in.
-
-
 
 Requires NO permissions: 
 
@@ -733,8 +713,6 @@ namespace Example
 Returns which divisions the specified user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
-
-
 
 Requires NO permissions: 
 
@@ -806,8 +784,6 @@ Get all permissions.
 
 Retrieve a list of all permission defined in the system.
 
-
-
 Requires NO permissions: 
 
 
@@ -878,8 +854,6 @@ Get the list of enabled products
 
 Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
 
-
-
 Requires NO permissions: 
 
 
@@ -938,8 +912,6 @@ This endpoint does require any parameters.
 Get a single organization role.
 
 Get the organization role specified by its ID.
-
-
 
 Requires ANY permissions: 
 
@@ -1010,8 +982,6 @@ Get an org role to default role comparison
 
 Compares any organization role to a default role id and show differences
 
-
-
 Requires ANY permissions: 
 
 * authorization:role:view
@@ -1078,8 +1048,6 @@ namespace Example
 Get the subjects' granted divisions in the specified role.
 
 Includes the divisions for which the subject has a grant.
-
-
 
 Requires ANY permissions: 
 
@@ -1158,8 +1126,6 @@ Get a list of the users in a specified role.
 
 Get an array of the UUIDs of the users in the specified role.
 
-
-
 Requires NO permissions: 
 
 
@@ -1225,8 +1191,6 @@ namespace Example
 
 
 Retrieve a list of all roles defined for the organization
-
-
 
 Requires ANY permissions: 
 
@@ -1311,8 +1275,6 @@ namespace Example
 
 Get authorization settings
 
-
-
 Requires ANY permissions: 
 
 * directory:organization:admin
@@ -1371,8 +1333,6 @@ This endpoint does require any parameters.
 
 
 Returns a listing of roles and permissions for a user.
-
-
 
 Requires ANY permissions: 
 
@@ -1437,8 +1397,6 @@ namespace Example
 
 Returns a listing of roles and permissions for the currently authenticated user.
 
-
-
 Requires NO permissions: 
 
 
@@ -1495,8 +1453,6 @@ This endpoint does require any parameters.
 
 
 Get the count of roles granted to a list of subjects
-
-
 
 Requires ANY permissions: 
 
@@ -1560,8 +1516,6 @@ namespace Example
 
 
 Returns a listing of roles and permissions for a user.
-
-
 
 Requires ANY permissions: 
 
@@ -1627,8 +1581,6 @@ namespace Example
 Patch Organization Role for needsUpdate Field
 
 Patch Organization Role for needsUpdate Field
-
-
 
 Requires ANY permissions: 
 
@@ -1697,8 +1649,6 @@ Change authorization settings
 
 Change authorization settings
 
-
-
 Requires ANY permissions: 
 
 * directory:organization:admin
@@ -1765,8 +1715,6 @@ Assign a list of objects to a division
 
 Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, DATATABLES or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\"206ce31f-61ec-40ed-a8b1-be6f06303998\",\"250a754e-f5e4-4f51-800f-a92f09d3bf8c\"]
 
-
-
 Requires NO permissions: 
 
 
@@ -1831,8 +1779,6 @@ void (empty response body)
 
 
 Recreate a previously deleted division.
-
-
 
 Requires ANY permissions: 
 
@@ -1899,8 +1845,6 @@ namespace Example
 
 Create a division.
 
-
-
 Requires ALL permissions: 
 
 * authorization:division:add
@@ -1964,8 +1908,6 @@ namespace Example
 
 
 Bulk-grant subjects and divisions with an organization role.
-
-
 
 Requires ALL permissions: 
 
@@ -2035,8 +1977,6 @@ Get an unsaved org role to default role comparison
 
 Allows users to compare their existing roles in an unsaved state to its default role
 
-
-
 Requires ANY permissions: 
 
 * authorization:role:view
@@ -2104,8 +2044,6 @@ namespace Example
 
 Create an organization role.
 
-
-
 Requires ANY permissions: 
 
 * authorization:role:add
@@ -2171,8 +2109,6 @@ Restores all default roles
 
 This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
 
-
-
 Requires ANY permissions: 
 
 * authorization:role:edit
@@ -2235,8 +2171,6 @@ namespace Example
 
 
 Bulk-grant roles and divisions to a subject.
-
-
 
 Requires ALL permissions: 
 
@@ -2304,8 +2238,6 @@ void (empty response body)
 
 Bulk-remove grants from a subject.
 
-
-
 Requires ALL permissions: 
 
 * authorization:grant:delete
@@ -2371,8 +2303,6 @@ void (empty response body)
 Replace subject's roles and divisions with the exact list supplied in the request.
 
 This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
-
-
 
 Requires ALL permissions: 
 
@@ -2440,8 +2370,6 @@ void (empty response body)
 
 
 Make a grant of a role in a division
-
-
 
 Requires ALL permissions: 
 
@@ -2511,8 +2439,6 @@ void (empty response body)
 
 Update a division.
 
-
-
 Requires ANY permissions: 
 
 * authorization:division:edit
@@ -2580,8 +2506,6 @@ Update an organization role.
 
 Update
 
-
-
 Requires ANY permissions: 
 
 * authorization:role:edit
@@ -2646,8 +2570,6 @@ namespace Example
 
 
 Sets the users for the role
-
-
 
 Requires ANY permissions: 
 
@@ -2714,8 +2636,6 @@ namespace Example
 
 Removes the users from the role
 
-
-
 Requires ANY permissions: 
 
 * authorization:grant:delete
@@ -2781,8 +2701,6 @@ namespace Example
 
 Restore specified default roles
 
-
-
 Requires ANY permissions: 
 
 * authorization:role:edit
@@ -2845,8 +2763,6 @@ namespace Example
 
 
 Sets the user's roles
-
-
 
 Requires ANY permissions: 
 

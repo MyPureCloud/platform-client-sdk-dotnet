@@ -7,8 +7,9 @@ title: Limit
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Key** | **string** | The limit key | [optional] |
-| **Value** | **double?** | The limit value | [optional] |
+| **Key** | **string** |  | [optional] |
+| **Namespace** | **string** |  | [optional] |
+| **Value** | **long?** |  | [optional] |
 {: class="table table-striped"}
 
 

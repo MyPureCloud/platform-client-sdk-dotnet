@@ -13,6 +13,7 @@ title: KnowledgeDocumentReq
 | **Alternatives** | [**List&lt;KnowledgeDocumentAlternative&gt;**](KnowledgeDocumentAlternative.html) | List of alternate phrases related to the title which improves search results. | [optional] |
 | **CategoryId** | **string** | The category associated with the document. | [optional] |
 | **LabelIds** | **List&lt;string&gt;** | The ids of labels associated with the document. | [optional] |
+| **ExternalId** | **string** | The external id associated with the document. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

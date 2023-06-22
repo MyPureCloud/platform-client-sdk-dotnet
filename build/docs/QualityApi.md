@@ -78,8 +78,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a calibration by id.
 
-
-
 Requires ANY permissions: 
 
 * quality:calibration:delete
@@ -144,8 +142,6 @@ namespace Example
 
 
 Delete an evaluation
-
-
 
 Requires ANY permissions: 
 
@@ -214,8 +210,6 @@ namespace Example
 
 Delete an evaluation form.
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:delete
@@ -277,8 +271,6 @@ void (empty response body)
 
 
 Delete an evaluation form.
-
-
 
 Requires ANY permissions: 
 
@@ -342,8 +334,6 @@ void (empty response body)
 
 Delete a survey form.
 
-
-
 Requires ALL permissions: 
 
 * quality:surveyForm:delete
@@ -406,7 +396,7 @@ void (empty response body)
 
 Get status for async query for evaluation aggregates
 
-
+GetAnalyticsEvaluationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -471,7 +461,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsEvaluationsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -538,7 +528,7 @@ namespace Example
 
 Get status for async query for survey aggregates
 
-
+GetAnalyticsSurveysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -603,7 +593,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsSurveysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -671,8 +661,6 @@ namespace Example
 Gets a list of Agent Activities
 
 Each item on the list shows one agent's evaluation activity comprised of the number of evaluations and the highest, average, and lowest standard and critical scores, as well as a sub list showing the number and average score of evaluations for each evaluator for that agent.  evaluatorUserId, startTime, and endTime are all filtering criteria. If specified, the only evaluations used to compile the agent activity response will be ones that match the filtering criteria. agentUserId, name, group, and agentTeamId are all agent selection criteria. criteria.  If one or more agent selection criteria are specified, then the returned activity will include users that match the criteria even if those users did not have any agent activity or evaluations that do not match any filtering criteria.  If no agent selection criteria are specified but an evaluatorUserId is, then the returned activity will be only for those agents that had evaluations where the evaluator is the evaluatorUserId.  If no agent selection criteria are specified and no evaluatorUserId is specified, then the returned activity will be for all users
-
-
 
 Requires ANY permissions: 
 
@@ -759,8 +747,6 @@ namespace Example
 
 Get a calibration by id.  Requires either calibrator id or conversation id
 
-
-
 Requires ANY permissions: 
 
 * quality:calibration:view
@@ -827,8 +813,6 @@ namespace Example
 
 
 Get the list of calibrations
-
-
 
 Requires ANY permissions: 
 
@@ -911,8 +895,6 @@ namespace Example
 
 Get an evaluation
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluation:view
@@ -982,8 +964,6 @@ namespace Example
 
 Get the surveys for a conversation
 
-
-
 Requires ANY permissions: 
 
 * quality:survey:view
@@ -1047,8 +1027,6 @@ namespace Example
 
 Get status of audit query execution
 
-
-
 Requires ALL permissions: 
 
 * audits:interactionDetails:view
@@ -1111,8 +1089,6 @@ namespace Example
 
 
 Get results of audit query
-
-
 
 Requires ALL permissions: 
 
@@ -1184,8 +1160,6 @@ namespace Example
 Queries Evaluations and returns a paged list
 
 Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
-
-
 
 Requires ANY permissions: 
 
@@ -1286,8 +1260,6 @@ namespace Example
 
 Get an evaluator activity
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluation:view
@@ -1371,8 +1343,6 @@ namespace Example
 
 Get an evaluation form
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:view
@@ -1435,8 +1405,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Gets all the revisions for a specific evaluation.
-
-
 
 Requires ANY permissions: 
 
@@ -1504,8 +1472,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the list of evaluation forms
-
-
 
 Requires ANY permissions: 
 
@@ -1584,8 +1550,6 @@ namespace Example
 
 Get an evaluation form
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:view
@@ -1648,8 +1612,6 @@ namespace Example
 
 
 Gets all the revisions for a specific evaluation.
-
-
 
 Requires ANY permissions: 
 
@@ -1719,8 +1681,6 @@ namespace Example
 
 
 Get the list of evaluation forms
-
-
 
 Requires ANY permissions: 
 
@@ -1799,8 +1759,6 @@ namespace Example
 
 Retrieve a list of the latest published evaluation form versions by context ids
 
-
-
 Requires ALL permissions: 
 
 * quality:evaluationForm:view
@@ -1864,8 +1822,6 @@ namespace Example
 
 Get a survey form
 
-
-
 Requires ALL permissions: 
 
 * quality:surveyForm:view
@@ -1928,8 +1884,6 @@ namespace Example
 
 
 Gets all the revisions for a specific survey.
-
-
 
 Requires ALL permissions: 
 
@@ -1997,8 +1951,6 @@ namespace Example
 
 
 Get the list of survey forms
-
-
 
 Requires ALL permissions: 
 
@@ -2077,8 +2029,6 @@ namespace Example
 
 Retrieve a list of survey forms by their ids
 
-
-
 Requires ALL permissions: 
 
 * quality:surveyForm:view
@@ -2141,8 +2091,6 @@ namespace Example
 
 
 Retrieve a list of the latest form versions by context ids
-
-
 
 Requires ALL permissions: 
 
@@ -2209,8 +2157,6 @@ namespace Example
 
 Get the published evaluation forms.
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:view
@@ -2273,8 +2219,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the published evaluation forms.
-
-
 
 Requires ANY permissions: 
 
@@ -2345,8 +2289,6 @@ namespace Example
 
 Get the most recent published version of an evaluation form.
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:view
@@ -2409,8 +2351,6 @@ namespace Example
 
 
 Get the published evaluation forms.
-
-
 
 Requires ANY permissions: 
 
@@ -2481,8 +2421,6 @@ namespace Example
 
 Get the most recent published version of a survey form.
 
-
-
 Requires ALL permissions: 
 
 * quality:surveyForm:view
@@ -2545,8 +2483,6 @@ namespace Example
 
 
 Get the published survey forms.
-
-
 
 Requires ALL permissions: 
 
@@ -2617,8 +2553,6 @@ namespace Example
 
 Get a survey for a conversation
 
-
-
 Requires ANY permissions: 
 
 * quality:survey:view
@@ -2682,8 +2616,6 @@ namespace Example
 
 Get a survey as an end-customer, for the purposes of scoring it.
 
-
-
 Requires NO permissions: 
 
 
@@ -2739,8 +2671,6 @@ namespace Example
 
 
 Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
-
-
 
 Requires ALL permissions: 
 
@@ -2807,7 +2737,7 @@ namespace Example
 
 Query for evaluation aggregates asynchronously
 
-
+PostAnalyticsEvaluationsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2872,8 +2802,6 @@ namespace Example
 
 Query for evaluation aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:evaluationAggregate:view
@@ -2937,7 +2865,7 @@ namespace Example
 
 Query for survey aggregates asynchronously
 
-
+PostAnalyticsSurveysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3002,8 +2930,6 @@ namespace Example
 
 Query for survey aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:surveyAggregate:view
@@ -3066,8 +2992,6 @@ namespace Example
 
 
 Create a calibration
-
-
 
 Requires ANY permissions: 
 
@@ -3133,8 +3057,6 @@ namespace Example
 
 
 Create an evaluation
-
-
 
 Requires ANY permissions: 
 
@@ -3203,8 +3125,6 @@ namespace Example
 
 Create audit query execution
 
-
-
 Requires ALL permissions: 
 
 * audits:interactionDetails:view
@@ -3268,8 +3188,6 @@ namespace Example
 
 Query for evaluation aggregates for the current user
 
-
-
 Requires NO permissions: 
 
 
@@ -3332,8 +3250,6 @@ namespace Example
 
 Score evaluation
 
-
-
 Requires NO permissions: 
 
 
@@ -3395,8 +3311,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create an evaluation form.
-
-
 
 Requires ANY permissions: 
 
@@ -3461,8 +3375,6 @@ namespace Example
 
 Create an evaluation form.
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:add
@@ -3525,8 +3437,6 @@ namespace Example
 
 
 Create a survey form.
-
-
 
 Requires ALL permissions: 
 
@@ -3591,8 +3501,6 @@ namespace Example
 
 Publish an evaluation form.
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:add
@@ -3655,8 +3563,6 @@ namespace Example
 
 
 Publish an evaluation form.
-
-
 
 Requires ANY permissions: 
 
@@ -3721,8 +3627,6 @@ namespace Example
 
 Publish a survey form.
 
-
-
 Requires ALL permissions: 
 
 * quality:surveyForm:add
@@ -3786,8 +3690,6 @@ namespace Example
 
 Score survey
 
-
-
 Requires NO permissions: 
 
 
@@ -3849,8 +3751,6 @@ namespace Example
 
 
 Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
-
-
 
 Requires ANY permissions: 
 
@@ -3918,8 +3818,6 @@ namespace Example
 Update an evaluation
 
 The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
-
-
 
 Requires ANY permissions: 
 
@@ -3992,8 +3890,6 @@ namespace Example
 
 Update an evaluation form.
 
-
-
 Requires ANY permissions: 
 
 * quality:evaluationForm:edit
@@ -4058,8 +3954,6 @@ namespace Example
 
 
 Update an evaluation form.
-
-
 
 Requires ANY permissions: 
 
@@ -4126,8 +4020,6 @@ namespace Example
 
 Update a survey form.
 
-
-
 Requires ALL permissions: 
 
 * quality:surveyForm:edit
@@ -4192,8 +4084,6 @@ namespace Example
 
 
 Update a survey as an end-customer, for the purposes of scoring it.
-
-
 
 Requires NO permissions: 
 

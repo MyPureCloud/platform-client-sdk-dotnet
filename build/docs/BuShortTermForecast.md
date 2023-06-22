@@ -17,7 +17,7 @@ title: BuShortTermForecast
 | **CanUseForScheduling** | **bool?** | Whether this forecast can be used for scheduling | [optional] |
 | **ReferenceStartDate** | **DateTime?** | The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SourceDays** | [**List&lt;ForecastSourceDayPointer&gt;**](ForecastSourceDayPointer.html) | The source day pointers for this forecast | [optional] |
-| **Modifications** | [**List&lt;BuForecastModification&gt;**](BuForecastModification.html) | Any manual modifications applied to this forecast | [optional] |
+| **Modifications** | [**List&lt;BuForecastModificationResponse&gt;**](BuForecastModificationResponse.html) | Any manual modifications applied to this forecast | [optional] |
 | **GenerationResults** | [**BuForecastGenerationResult**](BuForecastGenerationResult.html) | Generation result metadata | [optional] |
 | **TimeZone** | **string** | The time zone for this forecast | [optional] |
 | **PlanningGroupsVersion** | **int?** | The version of the planning groups that was used for this forecast | [optional] |

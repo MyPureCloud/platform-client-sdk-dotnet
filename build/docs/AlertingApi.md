@@ -28,8 +28,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete an interaction stats alert
 
-
-
 Requires ALL permissions: 
 
 * alerting:alert:delete
@@ -91,8 +89,6 @@ void (empty response body)
 
 
 Delete an interaction stats rule.
-
-
 
 Requires ALL permissions: 
 
@@ -156,8 +152,6 @@ void (empty response body)
 
 Gets active alert count for a user.
 
-
-
 Requires NO permissions: 
 
 
@@ -214,8 +208,6 @@ This endpoint does require any parameters.
 
 
 Get an interaction stats alert
-
-
 
 Requires ALL permissions: 
 
@@ -282,8 +274,6 @@ namespace Example
 
 Get interaction stats alert list.
 
-
-
 Requires ALL permissions: 
 
 * alerting:alert:view
@@ -347,8 +337,6 @@ namespace Example
 
 Gets user unread count of interaction stats alerts.
 
-
-
 Requires NO permissions: 
 
 
@@ -405,8 +393,6 @@ This endpoint does require any parameters.
 
 
 Get an interaction stats rule.
-
-
 
 Requires ALL permissions: 
 
@@ -473,8 +459,6 @@ namespace Example
 
 Get an interaction stats rule list.
 
-
-
 Requires ALL permissions: 
 
 * alerting:rule:view
@@ -537,8 +521,6 @@ namespace Example
 
 
 Create an interaction stats rule.
-
-
 
 Requires ALL permissions: 
 
@@ -604,8 +586,6 @@ namespace Example
 
 
 Update an interaction stats alert read status
-
-
 
 Requires ALL permissions: 
 
@@ -673,8 +653,6 @@ namespace Example
 
 
 Update an interaction stats rule
-
-
 
 Requires ALL permissions: 
 

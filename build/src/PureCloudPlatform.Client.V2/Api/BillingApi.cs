@@ -27,7 +27,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <returns>BillingUsageReport</returns>
         
-        
         BillingUsageReport GetBillingReportsBillableusage (DateTime? startDate, DateTime? endDate);
 
         /// <summary>
@@ -40,7 +39,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <returns>ApiResponse of BillingUsageReport</returns>
-        
         
         ApiResponse<BillingUsageReport> GetBillingReportsBillableusageWithHttpInfo (DateTime? startDate, DateTime? endDate);
 
@@ -55,7 +53,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="billingPeriodIndex">0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)</param>
         /// <returns>TrusteeBillingOverview</returns>
         
-        
         TrusteeBillingOverview GetBillingTrusteebillingoverviewTrustorOrgId (string trustorOrgId, int? billingPeriodIndex = null);
 
         /// <summary>
@@ -68,7 +65,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
         /// <param name="billingPeriodIndex">0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)</param>
         /// <returns>ApiResponse of TrusteeBillingOverview</returns>
-        
         
         ApiResponse<TrusteeBillingOverview> GetBillingTrusteebillingoverviewTrustorOrgIdWithHttpInfo (string trustorOrgId, int? billingPeriodIndex = null);
 
@@ -87,7 +83,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <returns>Task of BillingUsageReport</returns>
         
-        
         System.Threading.Tasks.Task<BillingUsageReport> GetBillingReportsBillableusageAsync (DateTime? startDate, DateTime? endDate);
 
         /// <summary>
@@ -100,7 +95,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <returns>Task of ApiResponse (BillingUsageReport)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<BillingUsageReport>> GetBillingReportsBillableusageAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate);
 
@@ -115,7 +109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="billingPeriodIndex">0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)</param>
         /// <returns>Task of TrusteeBillingOverview</returns>
         
-        
         System.Threading.Tasks.Task<TrusteeBillingOverview> GetBillingTrusteebillingoverviewTrustorOrgIdAsync (string trustorOrgId, int? billingPeriodIndex = null);
 
         /// <summary>
@@ -128,7 +121,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
         /// <param name="billingPeriodIndex">0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (TrusteeBillingOverview)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TrusteeBillingOverview>> GetBillingTrusteebillingoverviewTrustorOrgIdAsyncWithHttpInfo (string trustorOrgId, int? billingPeriodIndex = null);
 
@@ -225,13 +217,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a report of the billable license usages Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
+        /// Get a report of the billable license usages 
+        /// Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <returns>BillingUsageReport</returns>
-        
         
         public BillingUsageReport GetBillingReportsBillableusage (DateTime? startDate, DateTime? endDate)
         {
@@ -240,13 +232,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a report of the billable license usages Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
+        /// Get a report of the billable license usages 
+        /// Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <returns>ApiResponse of BillingUsageReport</returns>
-        
         
         public ApiResponse< BillingUsageReport > GetBillingReportsBillableusageWithHttpInfo (DateTime? startDate, DateTime? endDate)
         { 
@@ -329,13 +321,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a report of the billable license usages Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
+        /// Get a report of the billable license usages 
+        /// Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <returns>Task of BillingUsageReport</returns>
-        
         
         public async System.Threading.Tasks.Task<BillingUsageReport> GetBillingReportsBillableusageAsync (DateTime? startDate, DateTime? endDate)
         {
@@ -345,13 +337,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a report of the billable license usages Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
+        /// Get a report of the billable license usages 
+        /// Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <param name="endDate">The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</param>
         /// <returns>Task of ApiResponse (BillingUsageReport)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<BillingUsageReport>> GetBillingReportsBillableusageAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate)
         { 
@@ -437,13 +429,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the billing overview for an organization that is managed by a partner. Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// Get the billing overview for an organization that is managed by a partner. 
+        /// Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
         /// <param name="billingPeriodIndex">0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)</param>
         /// <returns>TrusteeBillingOverview</returns>
-        
         
         public TrusteeBillingOverview GetBillingTrusteebillingoverviewTrustorOrgId (string trustorOrgId, int? billingPeriodIndex = null)
         {
@@ -452,13 +444,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the billing overview for an organization that is managed by a partner. Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// Get the billing overview for an organization that is managed by a partner. 
+        /// Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
         /// <param name="billingPeriodIndex">0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)</param>
         /// <returns>ApiResponse of TrusteeBillingOverview</returns>
-        
         
         public ApiResponse< TrusteeBillingOverview > GetBillingTrusteebillingoverviewTrustorOrgIdWithHttpInfo (string trustorOrgId, int? billingPeriodIndex = null)
         { 
@@ -538,13 +530,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the billing overview for an organization that is managed by a partner. Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// Get the billing overview for an organization that is managed by a partner. 
+        /// Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
         /// <param name="billingPeriodIndex">0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)</param>
         /// <returns>Task of TrusteeBillingOverview</returns>
-        
         
         public async System.Threading.Tasks.Task<TrusteeBillingOverview> GetBillingTrusteebillingoverviewTrustorOrgIdAsync (string trustorOrgId, int? billingPeriodIndex = null)
         {
@@ -554,13 +546,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the billing overview for an organization that is managed by a partner. Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+        /// Get the billing overview for an organization that is managed by a partner. 
+        /// Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">The organization ID of the trustor (customer) organization.</param>
         /// <param name="billingPeriodIndex">0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (TrusteeBillingOverview)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TrusteeBillingOverview>> GetBillingTrusteebillingoverviewTrustorOrgIdAsyncWithHttpInfo (string trustorOrgId, int? billingPeriodIndex = null)
         { 

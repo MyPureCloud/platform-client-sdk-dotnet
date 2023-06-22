@@ -149,8 +149,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete attempt limits
 
-
-
 Requires ANY permissions: 
 
 * outbound:attemptLimits:delete
@@ -212,8 +210,6 @@ void (empty response body)
 
 
 Delete callable time set
-
-
 
 Requires ANY permissions: 
 
@@ -277,8 +273,6 @@ void (empty response body)
 
 Delete a dialer call analysis response set.
 
-
-
 Requires ANY permissions: 
 
 * outbound:responseSet:delete
@@ -340,8 +334,6 @@ void (empty response body)
 
 
 Delete a campaign.
-
-
 
 Requires ANY permissions: 
 
@@ -406,8 +398,6 @@ namespace Example
 
 Reset campaign progress and recycle the campaign
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaign:edit
@@ -469,8 +459,6 @@ void (empty response body)
 
 
 Delete Campaign Rule
-
-
 
 Requires ANY permissions: 
 
@@ -534,8 +522,6 @@ void (empty response body)
 
 Delete a contact list.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactList:delete
@@ -597,8 +583,6 @@ void (empty response body)
 
 
 Delete a contact.
-
-
 
 Requires ANY permissions: 
 
@@ -664,8 +648,6 @@ void (empty response body)
 
 Delete contacts from a contact list.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contact:delete
@@ -730,8 +712,6 @@ void (empty response body)
 
 Delete Contact List Filter
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactListFilter:delete
@@ -793,8 +773,6 @@ void (empty response body)
 
 
 Delete multiple contact lists.
-
-
 
 Requires ANY permissions: 
 
@@ -858,8 +836,6 @@ void (empty response body)
 
 Delete an Outbound Digital Rule Set
 
-
-
 Requires ANY permissions: 
 
 * outbound:digitalRuleSet:delete
@@ -921,8 +897,6 @@ void (empty response body)
 
 
 Delete dialer DNC list
-
-
 
 Requires ANY permissions: 
 
@@ -987,8 +961,6 @@ void (empty response body)
 Deletes all or expired custom exclusion column entries from a DNC list.
 
 This operation is only for Internal DNC lists of custom exclusion column entries
-
-
 
 Requires ANY permissions: 
 
@@ -1056,8 +1028,6 @@ Deletes all or expired email addresses from a DNC list.
 
 This operation is Only for Internal DNC lists of email addresses
 
-
-
 Requires ANY permissions: 
 
 * outbound:dnc:delete
@@ -1124,8 +1094,6 @@ Deletes all or expired phone numbers from a DNC list.
 
 This operation is Only for Internal DNC lists of phone numbers
 
-
-
 Requires ANY permissions: 
 
 * outbound:dnc:delete
@@ -1189,8 +1157,6 @@ void (empty response body)
 
 
 Delete an Outbound Messaging Campaign
-
-
 
 Requires ANY permissions: 
 
@@ -1256,8 +1222,6 @@ namespace Example
 
 Reset messaging campaign progress and recycle the messaging campaign
 
-
-
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:edit
@@ -1321,8 +1285,6 @@ void (empty response body)
 
 Delete a Rule Set.
 
-
-
 Requires ANY permissions: 
 
 * outbound:ruleSet:delete
@@ -1384,8 +1346,6 @@ void (empty response body)
 
 
 Delete a dialer campaign schedule.
-
-
 
 Requires ANY permissions: 
 
@@ -1449,8 +1409,6 @@ void (empty response body)
 
 Delete an email campaign schedule.
 
-
-
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:delete
@@ -1512,8 +1470,6 @@ void (empty response body)
 
 
 Delete a messaging campaign schedule.
-
-
 
 Requires ANY permissions: 
 
@@ -1577,8 +1533,6 @@ void (empty response body)
 
 Delete a dialer sequence schedule.
 
-
-
 Requires ANY permissions: 
 
 * outbound:schedule:delete
@@ -1640,8 +1594,6 @@ void (empty response body)
 
 
 Delete a dialer campaign sequence.
-
-
 
 Requires ANY permissions: 
 
@@ -1705,8 +1657,6 @@ void (empty response body)
 
 Get attempt limits
 
-
-
 Requires ANY permissions: 
 
 * outbound:attemptLimits:view
@@ -1769,8 +1719,6 @@ namespace Example
 
 
 Query attempt limits list
-
-
 
 Requires ANY permissions: 
 
@@ -1847,8 +1795,6 @@ namespace Example
 
 Get callable time set
 
-
-
 Requires ANY permissions: 
 
 * outbound:callableTimeSet:view
@@ -1911,8 +1857,6 @@ namespace Example
 
 
 Query callable time set list
-
-
 
 Requires ANY permissions: 
 
@@ -1989,8 +1933,6 @@ namespace Example
 
 Get a dialer call analysis response set.
 
-
-
 Requires ANY permissions: 
 
 * outbound:responseSet:view
@@ -2053,8 +1995,6 @@ namespace Example
 
 
 Query a list of dialer call analysis response sets.
-
-
 
 Requires ANY permissions: 
 
@@ -2131,8 +2071,6 @@ namespace Example
 
 Get dialer campaign.
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaign:view
@@ -2195,8 +2133,6 @@ namespace Example
 
 
 Get a preview of how agents will be mapped to this campaign's contact list.
-
-
 
 Requires ALL permissions: 
 
@@ -2263,8 +2199,6 @@ namespace Example
 
 Get campaign diagnostics
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaign:view
@@ -2327,8 +2261,6 @@ namespace Example
 
 
 Get dialer campaign interactions.
-
-
 
 Requires ANY permissions: 
 
@@ -2393,8 +2325,6 @@ namespace Example
 
 Get campaign progress
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaign:view
@@ -2457,8 +2387,6 @@ namespace Example
 
 
 Get statistics about a Dialer Campaign
-
-
 
 Requires ANY permissions: 
 
@@ -2523,8 +2451,6 @@ namespace Example
 
 Get Campaign Rule
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaignRule:view
@@ -2587,8 +2513,6 @@ namespace Example
 
 
 Query Campaign Rule list
-
-
 
 Requires ANY permissions: 
 
@@ -2664,8 +2588,6 @@ namespace Example
 
 
 Query a list of dialer campaigns.
-
-
 
 Requires ANY permissions: 
 
@@ -2754,8 +2676,6 @@ namespace Example
 
 Query across all types of campaigns by division
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaign:view
@@ -2832,8 +2752,6 @@ namespace Example
 
 
 Query across all types of campaigns
-
-
 
 Requires ANY permissions: 
 
@@ -2914,8 +2832,6 @@ Get a basic Campaign information object
 
 This returns a simplified version of a Campaign, consisting of name and division.
 
-
-
 Requires ALL permissions: 
 
 * outbound:campaign:search
@@ -2980,8 +2896,6 @@ namespace Example
 Query a list of basic Campaign information objects
 
 This returns a simplified version of a Campaign, consisting of name and division.
-
-
 
 Requires ALL permissions: 
 
@@ -3058,8 +2972,6 @@ namespace Example
 
 Get a dialer contact list.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactList:view
@@ -3127,8 +3039,6 @@ namespace Example
 
 Get a contact.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contact:view
@@ -3193,8 +3103,6 @@ namespace Example
 
 
 Get the URI of a contact list export.
-
-
 
 Requires ALL permissions: 
 
@@ -3262,8 +3170,6 @@ namespace Example
 
 Get dialer contactList import status.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactList:view
@@ -3326,8 +3232,6 @@ namespace Example
 
 
 Preview the result of applying Automatic Time Zone Mapping to a contact list
-
-
 
 Requires ANY permissions: 
 
@@ -3392,8 +3296,6 @@ namespace Example
 
 Get Contact list filter
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactListFilter:view
@@ -3456,8 +3358,6 @@ namespace Example
 
 
 Query Contact list filters
-
-
 
 Requires ANY permissions: 
 
@@ -3535,8 +3435,6 @@ namespace Example
 
 
 Query a list of contact lists.
-
-
 
 Requires ANY permissions: 
 
@@ -3623,8 +3521,6 @@ Get a basic ContactList information object
 
 This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
 
-
-
 Requires ALL permissions: 
 
 * outbound:contactList:search
@@ -3693,8 +3589,6 @@ namespace Example
 Query a list of simplified contact list objects.
 
 This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
-
-
 
 Requires ALL permissions: 
 
@@ -3775,8 +3669,6 @@ namespace Example
 
 Get an Outbound Digital Rule Set
 
-
-
 Requires ANY permissions: 
 
 * outbound:digitalRuleSet:view
@@ -3839,8 +3731,6 @@ namespace Example
 
 
 Query a list of Outbound Digital Rule Sets
-
-
 
 Requires ANY permissions: 
 
@@ -3915,8 +3805,6 @@ namespace Example
 
 Get dialer DNC list
 
-
-
 Requires ANY permissions: 
 
 * outbound:dncList:view
@@ -3984,8 +3872,6 @@ namespace Example
 
 Get the URI of a DNC list export.
 
-
-
 Requires ALL permissions: 
 
 * outbound:dnc:view
@@ -4052,8 +3938,6 @@ namespace Example
 
 Get dialer dncList import status.
 
-
-
 Requires ANY permissions: 
 
 * outbound:dncList:view
@@ -4116,8 +4000,6 @@ namespace Example
 
 
 Query dialer DNC lists
-
-
 
 Requires ANY permissions: 
 
@@ -4204,8 +4086,6 @@ Get a basic DncList information object
 
 This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
 
-
-
 Requires ALL permissions: 
 
 * outbound:dncList:search
@@ -4274,8 +4154,6 @@ namespace Example
 Query a list of simplified dnc list objects.
 
 This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
-
-
 
 Requires ALL permissions: 
 
@@ -4358,8 +4236,6 @@ namespace Example
 
 Get Dialer Event
 
-
-
 Requires ANY permissions: 
 
 * outbound:eventLog:view
@@ -4422,8 +4298,6 @@ namespace Example
 
 
 Query Event Logs
-
-
 
 Requires ANY permissions: 
 
@@ -4500,8 +4374,6 @@ namespace Example
 
 Get an Outbound Messaging Campaign
 
-
-
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:view
@@ -4565,8 +4437,6 @@ namespace Example
 
 
 Get messaging campaign diagnostics
-
-
 
 Requires ANY permissions: 
 
@@ -4632,8 +4502,6 @@ namespace Example
 
 Get messaging campaign's progress
 
-
-
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:view
@@ -4697,8 +4565,6 @@ namespace Example
 
 
 Query a list of Messaging Campaigns
-
-
 
 Requires ANY permissions: 
 
@@ -4784,8 +4650,6 @@ Get a basic Messaging Campaign information object
 
 This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
 
-
-
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:search
@@ -4851,8 +4715,6 @@ namespace Example
 Query a list of basic Messaging Campaign information objects
 
 This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
-
-
 
 Requires ANY permissions: 
 
@@ -4930,8 +4792,6 @@ namespace Example
 
 Get a Rule Set by ID.
 
-
-
 Requires ANY permissions: 
 
 * outbound:ruleSet:view
@@ -4994,8 +4854,6 @@ namespace Example
 
 
 Query a list of Rule Sets.
-
-
 
 Requires ANY permissions: 
 
@@ -5072,8 +4930,6 @@ namespace Example
 
 Get a dialer campaign schedule.
 
-
-
 Requires ANY permissions: 
 
 * outbound:schedule:view
@@ -5137,8 +4993,6 @@ namespace Example
 
 Query for a list of dialer campaign schedules.
 
-
-
 Requires ANY permissions: 
 
 * outbound:schedule:view
@@ -5196,8 +5050,6 @@ This endpoint does require any parameters.
 
 
 Get an email campaign schedule.
-
-
 
 Requires ANY permissions: 
 
@@ -5262,8 +5114,6 @@ namespace Example
 
 Query for a list of email campaign schedules.
 
-
-
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:view
@@ -5321,8 +5171,6 @@ This endpoint does require any parameters.
 
 
 Get a messaging campaign schedule.
-
-
 
 Requires ANY permissions: 
 
@@ -5387,8 +5235,6 @@ namespace Example
 
 Query for a list of messaging campaign schedules.
 
-
-
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:view
@@ -5446,8 +5292,6 @@ This endpoint does require any parameters.
 
 
 Get a dialer sequence schedule.
-
-
 
 Requires ANY permissions: 
 
@@ -5512,8 +5356,6 @@ namespace Example
 
 Query for a list of dialer sequence schedules.
 
-
-
 Requires ANY permissions: 
 
 * outbound:schedule:view
@@ -5571,8 +5413,6 @@ This endpoint does require any parameters.
 
 
 Get a dialer campaign sequence.
-
-
 
 Requires ANY permissions: 
 
@@ -5636,8 +5476,6 @@ namespace Example
 
 
 Query a list of dialer campaign sequences.
-
-
 
 Requires ANY permissions: 
 
@@ -5714,8 +5552,6 @@ namespace Example
 
 Get the outbound settings for this organization
 
-
-
 Requires ANY permissions: 
 
 * outbound:settings:view
@@ -5773,8 +5609,6 @@ This endpoint does require any parameters.
 
 
 Get the Dialer wrap up code mapping.
-
-
 
 Requires ANY permissions: 
 
@@ -5835,8 +5669,6 @@ This endpoint does require any parameters.
 Add entries to or delete entries from a DNC list.
 
 Only Internal DNC lists may be deleted from
-
-
 
 Requires ANY permissions: 
 
@@ -5904,8 +5736,6 @@ Add emails to or Delete emails from a DNC list.
 
 Only Internal DNC lists may be added to or deleted from
 
-
-
 Requires ANY permissions: 
 
 * outbound:dnc:edit
@@ -5972,8 +5802,6 @@ Add numbers to or delete numbers from a DNC list.
 
 Only Internal DNC lists may be added to deleted from
 
-
-
 Requires ANY permissions: 
 
 * outbound:dnc:edit
@@ -6038,8 +5866,6 @@ void (empty response body)
 
 Update the outbound settings for this organization
 
-
-
 Requires ANY permissions: 
 
 * outbound:settings:edit
@@ -6101,8 +5927,6 @@ void (empty response body)
 
 
 Create attempt limits
-
-
 
 Requires ANY permissions: 
 
@@ -6166,8 +5990,6 @@ namespace Example
 
 
 Retrieves audits for dialer.
-
-
 
 Requires ANY permissions: 
 
@@ -6242,8 +6064,6 @@ namespace Example
 
 Create callable time set
 
-
-
 Requires ANY permissions: 
 
 * outbound:callableTimeSet:add
@@ -6307,8 +6127,6 @@ namespace Example
 
 Create a dialer call analysis response set.
 
-
-
 Requires ANY permissions: 
 
 * outbound:responseSet:add
@@ -6371,8 +6189,6 @@ namespace Example
 
 
 Initiate request for a preview of how agents will be mapped to this campaign's contact list.
-
-
 
 Requires ALL permissions: 
 
@@ -6441,8 +6257,6 @@ Schedule a Callback for a Dialer Campaign (Deprecated)
 
 This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
 
-
-
 Requires NO permissions: 
 
 
@@ -6507,8 +6321,6 @@ namespace Example
 
 Create Campaign Rule
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaignRule:add
@@ -6571,8 +6383,6 @@ namespace Example
 
 
 Create a campaign.
-
-
 
 Requires ANY permissions: 
 
@@ -6637,8 +6447,6 @@ namespace Example
 
 Get progress for a list of campaigns
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaign:view
@@ -6702,8 +6510,6 @@ namespace Example
 
 Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contact:delete
@@ -6765,8 +6571,6 @@ void (empty response body)
 
 
 Add contacts to a contact list.
-
-
 
 Requires ANY permissions: 
 
@@ -6839,8 +6643,6 @@ namespace Example
 
 Get contacts from a contact list.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contact:view
@@ -6908,8 +6710,6 @@ Initiate the export of a contact list.
 
 Returns 200 if received OK.
 
-
-
 Requires ALL permissions: 
 
 * outbound:contact:view
@@ -6974,8 +6774,6 @@ namespace Example
 
 Create Contact List Filter
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactListFilter:add
@@ -7038,8 +6836,6 @@ namespace Example
 
 
 Get a preview of the output of a contact list filter
-
-
 
 Requires ANY permissions: 
 
@@ -7104,8 +6900,6 @@ namespace Example
 
 Create a contact List.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactList:add
@@ -7169,8 +6963,6 @@ namespace Example
 
 Add phone numbers to a Dialer DNC list.
 
-
-
 Requires ANY permissions: 
 
 * outbound:dnc:add
@@ -7232,8 +7024,6 @@ void (empty response body)
 
 
 Create an Outbound Digital Rule Set
-
-
 
 Requires ANY permissions: 
 
@@ -7299,8 +7089,6 @@ namespace Example
 Add email addresses to a DNC list.
 
 Only Internal DNC lists may be appended to
-
-
 
 Requires ANY permissions: 
 
@@ -7368,8 +7156,6 @@ Initiate the export of a dnc list.
 
 Returns 200 if received OK.
 
-
-
 Requires ALL permissions: 
 
 * outbound:dnc:view
@@ -7435,8 +7221,6 @@ namespace Example
 Add phone numbers to a DNC list.
 
 Only Internal DNC lists may be appended to
-
-
 
 Requires ANY permissions: 
 
@@ -7504,8 +7288,6 @@ void (empty response body)
 
 Create dialer DNC list
 
-
-
 Requires ANY permissions: 
 
 * outbound:dncList:add
@@ -7568,8 +7350,6 @@ namespace Example
 
 
 Create a Messaging Campaign
-
-
 
 Requires ANY permissions: 
 
@@ -7635,8 +7415,6 @@ namespace Example
 
 Get progress for a list of messaging campaigns
 
-
-
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:view
@@ -7701,8 +7479,6 @@ namespace Example
 
 Create a Rule Set.
 
-
-
 Requires ANY permissions: 
 
 * outbound:ruleSet:add
@@ -7766,8 +7542,6 @@ namespace Example
 
 Create a new campaign sequence.
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaignSequence:add
@@ -7830,8 +7604,6 @@ namespace Example
 
 
 Update attempt limits
-
-
 
 Requires ANY permissions: 
 
@@ -7898,8 +7670,6 @@ namespace Example
 
 Update callable time set
 
-
-
 Requires ANY permissions: 
 
 * outbound:callableTimeSet:edit
@@ -7965,8 +7735,6 @@ namespace Example
 
 Update a dialer call analysis response set.
 
-
-
 Requires ANY permissions: 
 
 * outbound:responseSet:edit
@@ -8031,8 +7799,6 @@ namespace Example
 
 
 Update a campaign.
-
-
 
 Requires ALL permissions: 
 
@@ -8101,8 +7867,6 @@ Send notification that an agent's state changed
 
 New agent state.
 
-
-
 Requires NO permissions: 
 
 
@@ -8169,8 +7933,6 @@ namespace Example
 
 Update Campaign Rule
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaignRule:edit
@@ -8236,8 +7998,6 @@ namespace Example
 
 Update a contact list.
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactList:edit
@@ -8302,8 +8062,6 @@ namespace Example
 
 
 Update a contact.
-
-
 
 Requires ANY permissions: 
 
@@ -8372,8 +8130,6 @@ namespace Example
 
 Update Contact List Filter
 
-
-
 Requires ANY permissions: 
 
 * outbound:contactListFilter:edit
@@ -8438,8 +8194,6 @@ namespace Example
 
 
 Update an Outbound Digital Rule Set
-
-
 
 Requires ANY permissions: 
 
@@ -8506,8 +8260,6 @@ namespace Example
 
 Update dialer DNC list
 
-
-
 Requires ANY permissions: 
 
 * outbound:dncList:edit
@@ -8572,8 +8324,6 @@ namespace Example
 
 
 Update an Outbound Messaging Campaign
-
-
 
 Requires ANY permissions: 
 
@@ -8641,8 +8391,6 @@ namespace Example
 
 Update a Rule Set.
 
-
-
 Requires ANY permissions: 
 
 * outbound:ruleSet:edit
@@ -8707,8 +8455,6 @@ namespace Example
 
 
 Update a new campaign schedule.
-
-
 
 Requires ANY permissions: 
 
@@ -8775,8 +8521,6 @@ namespace Example
 
 Update an email campaign schedule.
 
-
-
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:edit
@@ -8841,8 +8585,6 @@ namespace Example
 
 
 Update a new messaging campaign schedule.
-
-
 
 Requires ANY permissions: 
 
@@ -8909,8 +8651,6 @@ namespace Example
 
 Update a new sequence schedule.
 
-
-
 Requires ANY permissions: 
 
 * outbound:schedule:edit
@@ -8976,8 +8716,6 @@ namespace Example
 
 Update a new campaign sequence.
 
-
-
 Requires ANY permissions: 
 
 * outbound:campaignSequence:edit
@@ -9042,8 +8780,6 @@ namespace Example
 
 
 Update the Dialer wrap up code mapping.
-
-
 
 Requires ANY permissions: 
 

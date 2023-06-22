@@ -13,26 +13,30 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// GuestCategoryResponse
+    /// CategoryCreateRequest
     /// </summary>
     [DataContract]
-    public partial class GuestCategoryResponse :  IEquatable<GuestCategoryResponse>
+    public partial class CategoryCreateRequest :  IEquatable<CategoryCreateRequest>
     {
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GuestCategoryResponse" /> class.
+        /// Initializes a new instance of the <see cref="CategoryCreateRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected GuestCategoryResponse() { }
+        protected CategoryCreateRequest() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="GuestCategoryResponse" /> class.
+        /// Initializes a new instance of the <see cref="CategoryCreateRequest" /> class.
         /// </summary>
         /// <param name="Name">The name of the category. (required).</param>
+        /// <param name="ParentCategoryId">ParentCategoryId.</param>
         /// <param name="Description">The description for the category..</param>
-        public GuestCategoryResponse(string Name = null, string Description = null)
+        /// <param name="ExternalId">The external id associated with the category..</param>
+        public CategoryCreateRequest(string Name = null, string ParentCategoryId = null, string Description = null, string ExternalId = null)
         {
             this.Name = Name;
+            this.ParentCategoryId = ParentCategoryId;
             this.Description = Description;
+            this.ExternalId = ExternalId;
             
         }
         
@@ -57,6 +61,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ParentCategoryId
+        /// </summary>
+        [DataMember(Name="parentCategoryId", EmitDefaultValue=false)]
+        public string ParentCategoryId { get; set; }
+
+
+
+        /// <summary>
         /// The description for the category.
         /// </summary>
         /// <value>The description for the category.</value>
@@ -66,29 +78,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The creation date-time for the category. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The external id associated with the category.
         /// </summary>
-        /// <value>The creation date-time for the category. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; private set; }
-
-
-
-        /// <summary>
-        /// The last modification date-time for the category. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>The last modification date-time for the category. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; private set; }
-
-
-
-        /// <summary>
-        /// The reference to category to which this category belongs.
-        /// </summary>
-        /// <value>The reference to category to which this category belongs.</value>
-        [DataMember(Name="parentCategory", EmitDefaultValue=false)]
-        public GuestCategoryReference ParentCategory { get; private set; }
+        /// <value>The external id associated with the category.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
 
 
 
@@ -107,14 +101,13 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class GuestCategoryResponse {\n");
+            sb.Append("class CategoryCreateRequest {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ParentCategoryId: ").Append(ParentCategoryId).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  ParentCategory: ").Append(ParentCategory).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -141,15 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as GuestCategoryResponse);
+            return this.Equals(obj as CategoryCreateRequest);
         }
 
         /// <summary>
-        /// Returns true if GuestCategoryResponse instances are equal
+        /// Returns true if CategoryCreateRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of GuestCategoryResponse to be compared</param>
+        /// <param name="other">Instance of CategoryCreateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GuestCategoryResponse other)
+        public bool Equals(CategoryCreateRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -167,24 +160,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.ParentCategoryId == other.ParentCategoryId ||
+                    this.ParentCategoryId != null &&
+                    this.ParentCategoryId.Equals(other.ParentCategoryId)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
                 ) &&
                 (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.ParentCategory == other.ParentCategory ||
-                    this.ParentCategory != null &&
-                    this.ParentCategory.Equals(other.ParentCategory)
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -210,17 +198,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
 
+                if (this.ParentCategoryId != null)
+                    hash = hash * 59 + this.ParentCategoryId.GetHashCode();
+
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
 
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-
-                if (this.ParentCategory != null)
-                    hash = hash * 59 + this.ParentCategory.GetHashCode();
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

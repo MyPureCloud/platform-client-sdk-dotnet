@@ -23,8 +23,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a user recording.
 
-
-
 Requires NO permissions: 
 
 
@@ -85,8 +83,6 @@ void (empty response body)
 
 
 Get a user recording.
-
-
 
 Requires NO permissions: 
 
@@ -151,8 +147,6 @@ namespace Example
 
 
 Download a user recording.
-
-
 
 Requires NO permissions: 
 
@@ -220,8 +214,6 @@ namespace Example
 
 Get a list of user recordings.
 
-
-
 Requires NO permissions: 
 
 
@@ -288,8 +280,6 @@ namespace Example
 
 Get user recording summary
 
-
-
 Requires NO permissions: 
 
 
@@ -346,8 +336,6 @@ This endpoint does require any parameters.
 
 
 Update a user recording.
-
-
 
 Requires NO permissions: 
 

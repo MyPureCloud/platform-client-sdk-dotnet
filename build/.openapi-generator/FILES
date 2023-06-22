@@ -349,7 +349,7 @@ docs/BuCreateBlankScheduleRequest.md
 docs/BuCurrentAgentScheduleSearchResponse.md
 docs/BuForecastGenerationPlanningGroupResult.md
 docs/BuForecastGenerationResult.md
-docs/BuForecastModification.md
+docs/BuForecastModificationResponse.md
 docs/BuForecastResult.md
 docs/BuForecastResultResponse.md
 docs/BuForecastTimeSeriesResult.md
@@ -502,12 +502,13 @@ docs/CardAction.md
 docs/CarrierServicesApi.json
 docs/CarrierServicesApi.md
 docs/Category.md
+docs/CategoryCreateRequest.md
 docs/CategoryEntityListing.md
 docs/CategoryListing.md
 docs/CategoryReference.md
-docs/CategoryRequest.md
 docs/CategoryResponse.md
 docs/CategoryResponseListing.md
+docs/CategoryUpdateRequest.md
 docs/Certificate.md
 docs/CertificateAuthorityEntityListing.md
 docs/CertificateDetails.md
@@ -590,6 +591,9 @@ docs/ConstraintConflictMessage.md
 docs/ConsultTransfer.md
 docs/ConsultTransferEvent.md
 docs/ConsultTransferResponse.md
+docs/ConsultTransferToAgent.md
+docs/ConsultTransferToExternal.md
+docs/ConsultTransferToQueue.md
 docs/ConsultTransferUpdate.md
 docs/ConsumedResourcesEntityListing.md
 docs/ConsumingResourcesEntityListing.md
@@ -1062,6 +1066,7 @@ docs/DeleteConversationRecordingAnnotation-example.txt
 docs/DeleteConversationsCallParticipantConsult-example.txt
 docs/DeleteConversationsEmailMessagesDraftAttachment-example.txt
 docs/DeleteConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
+docs/DeleteConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
@@ -2046,6 +2051,8 @@ docs/GetConversationsMessagingFacebookApp-example.txt
 docs/GetConversationsMessagingIntegrations-example.txt
 docs/GetConversationsMessagingIntegrationsFacebook-example.txt
 docs/GetConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
+docs/GetConversationsMessagingIntegrationsInstagram-example.txt
+docs/GetConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsLine-example.txt
 docs/GetConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsOpen-example.txt
@@ -2266,7 +2273,6 @@ docs/GetJourneyActiontarget-example.txt
 docs/GetJourneyActiontargets-example.txt
 docs/GetJourneyActiontemplate-example.txt
 docs/GetJourneyActiontemplates-example.txt
-docs/GetJourneyCustomerCustomerIdSessions-example.txt
 docs/GetJourneyOutcome-example.txt
 docs/GetJourneyOutcomes-example.txt
 docs/GetJourneyOutcomesAttributionsJob-example.txt
@@ -2780,6 +2786,8 @@ docs/GetUsersDevelopmentActivities-example.txt
 docs/GetUsersDevelopmentActivitiesMe-example.txt
 docs/GetUsersDevelopmentActivity-example.txt
 docs/GetUsersMe-example.txt
+docs/GetUsersPresenceBulk-example.txt
+docs/GetUsersPresencesPurecloudBulk-example.txt
 docs/GetUsersSearch-example.txt
 docs/GetUsersSearch-example.txt
 docs/GetVoicemailGroupMailbox-example.txt
@@ -2911,9 +2919,9 @@ docs/GroupsApi.json
 docs/GroupsApi.md
 docs/GroupsSearchResponse.md
 docs/GuestCategoryReference.md
-docs/GuestCategoryResponse.md
 docs/GuestCategoryResponseListing.md
 docs/GuestMemberInfo.md
+docs/GuestResponseCategory.md
 docs/HeadNotificationsChannel-example.txt
 docs/HeadTokensMe-example.txt
 docs/HeadcountForecast.md
@@ -2988,6 +2996,10 @@ docs/InsightsTrendMetricItem.md
 docs/InsightsTrendTotalItem.md
 docs/InsightsTrends.md
 docs/InstagramId.md
+docs/InstagramIntegration.md
+docs/InstagramIntegrationEntityListing.md
+docs/InstagramIntegrationRequest.md
+docs/InstagramIntegrationUpdateRequest.md
 docs/InstagramScopedId.md
 docs/Integration.md
 docs/IntegrationAction.md
@@ -3678,6 +3690,7 @@ docs/PatchConversationsMessageParticipant-example.txt
 docs/PatchConversationsMessageParticipantAttributes-example.txt
 docs/PatchConversationsMessageParticipantCommunication-example.txt
 docs/PatchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
+docs/PatchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
@@ -3957,12 +3970,18 @@ docs/PostConversationDisconnect-example.txt
 docs/PostConversationParticipantCallbacks-example.txt
 docs/PostConversationParticipantDigits-example.txt
 docs/PostConversationParticipantReplace-example.txt
+docs/PostConversationParticipantReplaceAgent-example.txt
+docs/PostConversationParticipantReplaceExternal-example.txt
+docs/PostConversationParticipantReplaceQueue-example.txt
 docs/PostConversationParticipantSecureivrsessions-example.txt
 docs/PostConversationRecordingAnnotations-example.txt
 docs/PostConversationsCall-example.txt
 docs/PostConversationsCallParticipantCoach-example.txt
 docs/PostConversationsCallParticipantCommunicationWrapup-example.txt
 docs/PostConversationsCallParticipantConsult-example.txt
+docs/PostConversationsCallParticipantConsultAgent-example.txt
+docs/PostConversationsCallParticipantConsultExternal-example.txt
+docs/PostConversationsCallParticipantConsultQueue-example.txt
 docs/PostConversationsCallParticipantMonitor-example.txt
 docs/PostConversationsCallParticipantReplace-example.txt
 docs/PostConversationsCallParticipants-example.txt
@@ -4000,6 +4019,7 @@ docs/PostConversationsMessages-example.txt
 docs/PostConversationsMessagesAgentless-example.txt
 docs/PostConversationsMessagesInboundOpen-example.txt
 docs/PostConversationsMessagingIntegrationsFacebook-example.txt
+docs/PostConversationsMessagingIntegrationsInstagram-example.txt
 docs/PostConversationsMessagingIntegrationsLine-example.txt
 docs/PostConversationsMessagingIntegrationsOpen-example.txt
 docs/PostConversationsMessagingIntegrationsTwitter-example.txt
@@ -4548,6 +4568,7 @@ docs/PutIntegrationsBotconnectorIntegrationIdBots-example.txt
 docs/PutIntegrationsCredential-example.txt
 docs/PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings-example.txt
 docs/PutIntegrationsSpeechTtsSettings-example.txt
+docs/PutIntegrationsUnifiedcommunicationThirdpartypresences-example.txt
 docs/PutLanguageunderstandingDomainVersion-example.txt
 docs/PutLearningModule-example.txt
 docs/PutLearningModuleRule-example.txt
@@ -5512,6 +5533,9 @@ docs/TransferInitiator.md
 docs/TransferRequest.md
 docs/TransferResponse.md
 docs/TransferResponseModifiedBy.md
+docs/TransferToAgentRequest.md
+docs/TransferToExternalRequest.md
+docs/TransferToQueueRequest.md
 docs/TrendData.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
@@ -5575,6 +5599,8 @@ docs/UCI10n.md
 docs/UCIcon.md
 docs/UCIntegration.md
 docs/UCIntegrationListing.md
+docs/UCThirdPartyPresence.md
+docs/UcUserPresence.md
 docs/UnansweredGroup.md
 docs/UnansweredGroupSuggestedDocument.md
 docs/UnansweredGroups.md
@@ -6592,7 +6618,7 @@ src/PureCloudPlatform.Client.V2/Model/BuCreateBlankScheduleRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BuCurrentAgentScheduleSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastGenerationPlanningGroupResult.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastGenerationResult.cs
-src/PureCloudPlatform.Client.V2/Model/BuForecastModification.cs
+src/PureCloudPlatform.Client.V2/Model/BuForecastModificationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastResult.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastResultResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastTimeSeriesResult.cs
@@ -6743,12 +6769,13 @@ src/PureCloudPlatform.Client.V2/Model/CampaignTimeSlot.cs
 src/PureCloudPlatform.Client.V2/Model/Card.cs
 src/PureCloudPlatform.Client.V2/Model/CardAction.cs
 src/PureCloudPlatform.Client.V2/Model/Category.cs
+src/PureCloudPlatform.Client.V2/Model/CategoryCreateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryListing.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryReference.cs
-src/PureCloudPlatform.Client.V2/Model/CategoryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryResponseListing.cs
+src/PureCloudPlatform.Client.V2/Model/CategoryUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Certificate.cs
 src/PureCloudPlatform.Client.V2/Model/CertificateAuthorityEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CertificateDetails.cs
@@ -6827,6 +6854,9 @@ src/PureCloudPlatform.Client.V2/Model/ConstraintConflictMessage.cs
 src/PureCloudPlatform.Client.V2/Model/ConsultTransfer.cs
 src/PureCloudPlatform.Client.V2/Model/ConsultTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ConsultTransferResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ConsultTransferToAgent.cs
+src/PureCloudPlatform.Client.V2/Model/ConsultTransferToExternal.cs
+src/PureCloudPlatform.Client.V2/Model/ConsultTransferToQueue.cs
 src/PureCloudPlatform.Client.V2/Model/ConsultTransferUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/ConsumedResourcesEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ConsumingResourcesEntityListing.cs
@@ -7830,9 +7860,9 @@ src/PureCloudPlatform.Client.V2/Model/GroupSearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GroupUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/GroupsSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GuestCategoryReference.cs
-src/PureCloudPlatform.Client.V2/Model/GuestCategoryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GuestCategoryResponseListing.cs
 src/PureCloudPlatform.Client.V2/Model/GuestMemberInfo.cs
+src/PureCloudPlatform.Client.V2/Model/GuestResponseCategory.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountForecast.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountInterval.cs
 src/PureCloudPlatform.Client.V2/Model/HelpLink.cs
@@ -7901,6 +7931,10 @@ src/PureCloudPlatform.Client.V2/Model/InsightsTrendMetricItem.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsTrendTotalItem.cs
 src/PureCloudPlatform.Client.V2/Model/InsightsTrends.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramId.cs
+src/PureCloudPlatform.Client.V2/Model/InstagramIntegration.cs
+src/PureCloudPlatform.Client.V2/Model/InstagramIntegrationEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/InstagramIntegrationRequest.cs
+src/PureCloudPlatform.Client.V2/Model/InstagramIntegrationUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramScopedId.cs
 src/PureCloudPlatform.Client.V2/Model/Integration.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationAction.cs
@@ -9439,6 +9473,9 @@ src/PureCloudPlatform.Client.V2/Model/TransferInitiator.cs
 src/PureCloudPlatform.Client.V2/Model/TransferRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TransferResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TransferResponseModifiedBy.cs
+src/PureCloudPlatform.Client.V2/Model/TransferToAgentRequest.cs
+src/PureCloudPlatform.Client.V2/Model/TransferToExternalRequest.cs
+src/PureCloudPlatform.Client.V2/Model/TransferToQueueRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TrendData.cs
 src/PureCloudPlatform.Client.V2/Model/Trigger.cs
 src/PureCloudPlatform.Client.V2/Model/TriggerEntityListing.cs
@@ -9502,6 +9539,8 @@ src/PureCloudPlatform.Client.V2/Model/UCI10n.cs
 src/PureCloudPlatform.Client.V2/Model/UCIcon.cs
 src/PureCloudPlatform.Client.V2/Model/UCIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/UCIntegrationListing.cs
+src/PureCloudPlatform.Client.V2/Model/UCThirdPartyPresence.cs
+src/PureCloudPlatform.Client.V2/Model/UcUserPresence.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredGroup.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredGroupSuggestedDocument.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredGroups.cs

@@ -21,12 +21,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void DeletePresenceDefinition0 (string definitionId);
 
         /// <summary>
@@ -34,12 +34,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> DeletePresenceDefinition0WithHttpInfo (string definitionId);
 
         /// <summary>
@@ -51,7 +51,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns></returns>
-        
         
         void DeletePresenceSource (string sourceId);
 
@@ -65,7 +64,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeletePresenceSourceWithHttpInfo (string sourceId);
 
         /// <summary>
@@ -77,7 +75,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns></returns>
-        
         
         void DeletePresencedefinition (string presenceId);
 
@@ -91,7 +88,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeletePresencedefinitionWithHttpInfo (string presenceId);
 
         /// <summary>
@@ -99,12 +95,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         OrganizationPresenceDefinition GetPresenceDefinition0 (string definitionId);
 
         /// <summary>
@@ -112,12 +108,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         ApiResponse<OrganizationPresenceDefinition> GetPresenceDefinition0WithHttpInfo (string definitionId);
 
         /// <summary>
@@ -125,13 +121,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>OrganizationPresenceDefinitionEntityListing</returns>
         
-        /// Preview Endpoint
         OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null);
 
         /// <summary>
@@ -139,13 +135,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinitionEntityListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0WithHttpInfo (string deactivated = null, List<string> divisionId = null);
 
         /// <summary>
@@ -157,7 +153,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PresenceSettings</returns>
         
-        
         PresenceSettings GetPresenceSettings ();
 
         /// <summary>
@@ -168,7 +163,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PresenceSettings</returns>
-        
         
         ApiResponse<PresenceSettings> GetPresenceSettingsWithHttpInfo ();
 
@@ -182,7 +176,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Source</returns>
         
-        
         Source GetPresenceSource (string sourceId);
 
         /// <summary>
@@ -194,7 +187,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>ApiResponse of Source</returns>
-        
         
         ApiResponse<Source> GetPresenceSourceWithHttpInfo (string sourceId);
 
@@ -208,7 +200,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>SourceEntityListing</returns>
         
-        
         SourceEntityListing GetPresenceSources (string deactivated = null);
 
         /// <summary>
@@ -220,7 +211,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>ApiResponse of SourceEntityListing</returns>
-        
         
         ApiResponse<SourceEntityListing> GetPresenceSourcesWithHttpInfo (string deactivated = null);
 
@@ -234,7 +224,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user ID</param>
         /// <returns>UserPrimarySource</returns>
         
-        
         UserPrimarySource GetPresenceUserPrimarysource (string userId);
 
         /// <summary>
@@ -246,7 +235,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <returns>ApiResponse of UserPrimarySource</returns>
-        
         
         ApiResponse<UserPrimarySource> GetPresenceUserPrimarysourceWithHttpInfo (string userId);
 
@@ -261,7 +249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresence</returns>
         
-        
         OrganizationPresence GetPresencedefinition (string presenceId, string localeCode = null);
 
         /// <summary>
@@ -274,7 +261,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
         
         ApiResponse<OrganizationPresence> GetPresencedefinitionWithHttpInfo (string presenceId, string localeCode = null);
 
@@ -291,7 +277,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
         
-        
         OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
@@ -307,7 +292,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
         
-        
         ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
@@ -319,7 +303,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;SystemPresence&gt;</returns>
         
-        
         List<SystemPresence> GetSystempresences ();
 
         /// <summary>
@@ -330,7 +313,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;SystemPresence&gt;</returns>
-        
         
         ApiResponse<List<SystemPresence>> GetSystempresencesWithHttpInfo ();
 
@@ -345,7 +327,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>UserPresence</returns>
         
-        
         UserPresence GetUserPresence (string userId, string sourceId);
 
         /// <summary>
@@ -359,7 +340,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
-        
         ApiResponse<UserPresence> GetUserPresenceWithHttpInfo (string userId, string sourceId);
 
         /// <summary>
@@ -371,7 +351,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <returns>UserPresence</returns>
-        
         
         UserPresence GetUserPresencesPurecloud (string userId);
 
@@ -385,8 +364,57 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
-        
         ApiResponse<UserPresence> GetUserPresencesPurecloudWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get bulk user presences for a single presence source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">The requested presence source ID.</param>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>List&lt;UcUserPresence&gt;</returns>
+        
+        List<UcUserPresence> GetUsersPresenceBulk (string sourceId, List<string> id = null);
+
+        /// <summary>
+        /// Get bulk user presences for a single presence source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">The requested presence source ID.</param>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>ApiResponse of List&lt;UcUserPresence&gt;</returns>
+        
+        ApiResponse<List<UcUserPresence>> GetUsersPresenceBulkWithHttpInfo (string sourceId, List<string> id = null);
+
+        /// <summary>
+        /// Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>List&lt;UcUserPresence&gt;</returns>
+        
+        List<UcUserPresence> GetUsersPresencesPurecloudBulk (List<string> id = null);
+
+        /// <summary>
+        /// Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>ApiResponse of List&lt;UcUserPresence&gt;</returns>
+        
+        ApiResponse<List<UcUserPresence>> GetUsersPresencesPurecloudBulkWithHttpInfo (List<string> id = null);
 
         /// <summary>
         /// Patch a user's Presence
@@ -399,7 +427,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
-        
         
         UserPresence PatchUserPresence (string userId, string sourceId, UserPresence body);
 
@@ -415,7 +442,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
-        
         ApiResponse<UserPresence> PatchUserPresenceWithHttpInfo (string userId, string sourceId, UserPresence body);
 
         /// <summary>
@@ -428,7 +454,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
-        
         
         UserPresence PatchUserPresencesPurecloud (string userId, UserPresence body);
 
@@ -443,7 +468,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
-        
         ApiResponse<UserPresence> PatchUserPresencesPurecloudWithHttpInfo (string userId, UserPresence body);
 
         /// <summary>
@@ -451,12 +475,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         OrganizationPresenceDefinition PostPresenceDefinitions0 (OrganizationPresenceDefinition body);
 
         /// <summary>
@@ -464,12 +488,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         ApiResponse<OrganizationPresenceDefinition> PostPresenceDefinitions0WithHttpInfo (OrganizationPresenceDefinition body);
 
         /// <summary>
@@ -481,7 +505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Source to create</param>
         /// <returns>Source</returns>
-        
         
         Source PostPresenceSources (Source body);
 
@@ -495,7 +518,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Source to create</param>
         /// <returns>ApiResponse of Source</returns>
         
-        
         ApiResponse<Source> PostPresenceSourcesWithHttpInfo (Source body);
 
         /// <summary>
@@ -507,7 +529,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresence</returns>
-        
         
         OrganizationPresence PostPresencedefinitions (OrganizationPresence body);
 
@@ -521,7 +542,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
         
-        
         ApiResponse<OrganizationPresence> PostPresencedefinitionsWithHttpInfo (OrganizationPresence body);
 
         /// <summary>
@@ -529,13 +549,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         OrganizationPresenceDefinition PutPresenceDefinition0 (string definitionId, OrganizationPresenceDefinition body);
 
         /// <summary>
@@ -543,13 +563,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         ApiResponse<OrganizationPresenceDefinition> PutPresenceDefinition0WithHttpInfo (string definitionId, OrganizationPresenceDefinition body);
 
         /// <summary>
@@ -562,7 +582,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Presence Settings</param>
         /// <returns>PresenceSettings</returns>
         
-        
         PresenceSettings PutPresenceSettings (PresenceSettings body);
 
         /// <summary>
@@ -574,7 +593,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Presence Settings</param>
         /// <returns>ApiResponse of PresenceSettings</returns>
-        
         
         ApiResponse<PresenceSettings> PutPresenceSettingsWithHttpInfo (PresenceSettings body);
 
@@ -589,7 +607,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Source</param>
         /// <returns>Source</returns>
         
-        
         Source PutPresenceSource (string sourceId, Source body);
 
         /// <summary>
@@ -602,7 +619,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence Source ID</param>
         /// <param name="body">The updated Presence Source</param>
         /// <returns>ApiResponse of Source</returns>
-        
         
         ApiResponse<Source> PutPresenceSourceWithHttpInfo (string sourceId, Source body);
 
@@ -617,7 +633,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Primary Source</param>
         /// <returns>UserPrimarySource</returns>
         
-        
         UserPrimarySource PutPresenceUserPrimarysource (string userId, UserPrimarySource body);
 
         /// <summary>
@@ -630,7 +645,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user ID</param>
         /// <param name="body">Primary Source</param>
         /// <returns>ApiResponse of UserPrimarySource</returns>
-        
         
         ApiResponse<UserPrimarySource> PutPresenceUserPrimarysourceWithHttpInfo (string userId, UserPrimarySource body);
 
@@ -645,7 +659,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>OrganizationPresence</returns>
         
-        
         OrganizationPresence PutPresencedefinition (string presenceId, OrganizationPresence body);
 
         /// <summary>
@@ -659,7 +672,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
         
-        
         ApiResponse<OrganizationPresence> PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body);
 
         /// <summary>
@@ -671,7 +683,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of User presences</param>
         /// <returns>List&lt;UserPresence&gt;</returns>
-        
         
         List<UserPresence> PutUsersPresencesBulk (List<UserPresence> body);
 
@@ -685,7 +696,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>ApiResponse of List&lt;UserPresence&gt;</returns>
         
-        
         ApiResponse<List<UserPresence>> PutUsersPresencesBulkWithHttpInfo (List<UserPresence> body);
 
         #endregion Synchronous Operations
@@ -697,12 +707,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task DeletePresenceDefinition0Async (string definitionId);
 
         /// <summary>
@@ -710,12 +720,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceDefinition0AsyncWithHttpInfo (string definitionId);
 
         /// <summary>
@@ -727,7 +737,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeletePresenceSourceAsync (string sourceId);
 
@@ -741,7 +750,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceSourceAsyncWithHttpInfo (string sourceId);
 
         /// <summary>
@@ -753,7 +761,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeletePresencedefinitionAsync (string presenceId);
 
@@ -767,7 +774,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId);
 
         /// <summary>
@@ -775,12 +781,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetPresenceDefinition0Async (string definitionId);
 
         /// <summary>
@@ -788,12 +794,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId);
 
         /// <summary>
@@ -801,13 +807,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinitionEntityListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null);
 
         /// <summary>
@@ -815,13 +821,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinitionEntityListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null);
 
         /// <summary>
@@ -833,7 +839,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PresenceSettings</returns>
         
-        
         System.Threading.Tasks.Task<PresenceSettings> GetPresenceSettingsAsync ();
 
         /// <summary>
@@ -844,7 +849,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PresenceSettings)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<PresenceSettings>> GetPresenceSettingsAsyncWithHttpInfo ();
 
@@ -858,7 +862,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Task of Source</returns>
         
-        
         System.Threading.Tasks.Task<Source> GetPresenceSourceAsync (string sourceId);
 
         /// <summary>
@@ -870,7 +873,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Task of ApiResponse (Source)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Source>> GetPresenceSourceAsyncWithHttpInfo (string sourceId);
 
@@ -884,7 +886,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>Task of SourceEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<SourceEntityListing> GetPresenceSourcesAsync (string deactivated = null);
 
         /// <summary>
@@ -896,7 +897,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>Task of ApiResponse (SourceEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<SourceEntityListing>> GetPresenceSourcesAsyncWithHttpInfo (string deactivated = null);
 
@@ -910,7 +910,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user ID</param>
         /// <returns>Task of UserPrimarySource</returns>
         
-        
         System.Threading.Tasks.Task<UserPrimarySource> GetPresenceUserPrimarysourceAsync (string userId);
 
         /// <summary>
@@ -922,7 +921,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <returns>Task of ApiResponse (UserPrimarySource)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<UserPrimarySource>> GetPresenceUserPrimarysourceAsyncWithHttpInfo (string userId);
 
@@ -937,7 +935,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresence</returns>
         
-        
         System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync (string presenceId, string localeCode = null);
 
         /// <summary>
@@ -950,7 +947,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId, string localeCode = null);
 
@@ -967,7 +963,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
@@ -983,7 +978,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
@@ -995,7 +989,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;SystemPresence&gt;</returns>
         
-        
         System.Threading.Tasks.Task<List<SystemPresence>> GetSystempresencesAsync ();
 
         /// <summary>
@@ -1006,7 +999,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;SystemPresence&gt;)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<List<SystemPresence>>> GetSystempresencesAsyncWithHttpInfo ();
 
@@ -1021,7 +1013,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of UserPresence</returns>
         
-        
         System.Threading.Tasks.Task<UserPresence> GetUserPresenceAsync (string userId, string sourceId);
 
         /// <summary>
@@ -1035,7 +1026,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresenceAsyncWithHttpInfo (string userId, string sourceId);
 
         /// <summary>
@@ -1047,7 +1037,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <returns>Task of UserPresence</returns>
-        
         
         System.Threading.Tasks.Task<UserPresence> GetUserPresencesPurecloudAsync (string userId);
 
@@ -1061,8 +1050,57 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresencesPurecloudAsyncWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get bulk user presences for a single presence source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">The requested presence source ID.</param>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>Task of List&lt;UcUserPresence&gt;</returns>
+        
+        System.Threading.Tasks.Task<List<UcUserPresence>> GetUsersPresenceBulkAsync (string sourceId, List<string> id = null);
+
+        /// <summary>
+        /// Get bulk user presences for a single presence source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">The requested presence source ID.</param>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;UcUserPresence&gt;)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<UcUserPresence>>> GetUsersPresenceBulkAsyncWithHttpInfo (string sourceId, List<string> id = null);
+
+        /// <summary>
+        /// Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>Task of List&lt;UcUserPresence&gt;</returns>
+        
+        System.Threading.Tasks.Task<List<UcUserPresence>> GetUsersPresencesPurecloudBulkAsync (List<string> id = null);
+
+        /// <summary>
+        /// Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;UcUserPresence&gt;)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<UcUserPresence>>> GetUsersPresencesPurecloudBulkAsyncWithHttpInfo (List<string> id = null);
 
         /// <summary>
         /// Patch a user's Presence
@@ -1075,7 +1113,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
-        
         
         System.Threading.Tasks.Task<UserPresence> PatchUserPresenceAsync (string userId, string sourceId, UserPresence body);
 
@@ -1091,7 +1128,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresenceAsyncWithHttpInfo (string userId, string sourceId, UserPresence body);
 
         /// <summary>
@@ -1104,7 +1140,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user Id</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
-        
         
         System.Threading.Tasks.Task<UserPresence> PatchUserPresencesPurecloudAsync (string userId, UserPresence body);
 
@@ -1119,7 +1154,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresencesPurecloudAsyncWithHttpInfo (string userId, UserPresence body);
 
         /// <summary>
@@ -1127,12 +1161,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<OrganizationPresenceDefinition> PostPresenceDefinitions0Async (OrganizationPresenceDefinition body);
 
         /// <summary>
@@ -1140,12 +1174,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PostPresenceDefinitions0AsyncWithHttpInfo (OrganizationPresenceDefinition body);
 
         /// <summary>
@@ -1157,7 +1191,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Source to create</param>
         /// <returns>Task of Source</returns>
-        
         
         System.Threading.Tasks.Task<Source> PostPresenceSourcesAsync (Source body);
 
@@ -1171,7 +1204,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Source to create</param>
         /// <returns>Task of ApiResponse (Source)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Source>> PostPresenceSourcesAsyncWithHttpInfo (Source body);
 
         /// <summary>
@@ -1183,7 +1215,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
         
         System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync (OrganizationPresence body);
 
@@ -1197,7 +1228,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body);
 
         /// <summary>
@@ -1205,13 +1235,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<OrganizationPresenceDefinition> PutPresenceDefinition0Async (string definitionId, OrganizationPresenceDefinition body);
 
         /// <summary>
@@ -1219,13 +1249,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PutPresenceDefinition0AsyncWithHttpInfo (string definitionId, OrganizationPresenceDefinition body);
 
         /// <summary>
@@ -1238,7 +1268,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Presence Settings</param>
         /// <returns>Task of PresenceSettings</returns>
         
-        
         System.Threading.Tasks.Task<PresenceSettings> PutPresenceSettingsAsync (PresenceSettings body);
 
         /// <summary>
@@ -1250,7 +1279,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Presence Settings</param>
         /// <returns>Task of ApiResponse (PresenceSettings)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<PresenceSettings>> PutPresenceSettingsAsyncWithHttpInfo (PresenceSettings body);
 
@@ -1265,7 +1293,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Presence Source</param>
         /// <returns>Task of Source</returns>
         
-        
         System.Threading.Tasks.Task<Source> PutPresenceSourceAsync (string sourceId, Source body);
 
         /// <summary>
@@ -1278,7 +1305,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Presence Source ID</param>
         /// <param name="body">The updated Presence Source</param>
         /// <returns>Task of ApiResponse (Source)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Source>> PutPresenceSourceAsyncWithHttpInfo (string sourceId, Source body);
 
@@ -1293,7 +1319,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Primary Source</param>
         /// <returns>Task of UserPrimarySource</returns>
         
-        
         System.Threading.Tasks.Task<UserPrimarySource> PutPresenceUserPrimarysourceAsync (string userId, UserPrimarySource body);
 
         /// <summary>
@@ -1306,7 +1331,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">user ID</param>
         /// <param name="body">Primary Source</param>
         /// <returns>Task of ApiResponse (UserPrimarySource)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<UserPrimarySource>> PutPresenceUserPrimarysourceAsyncWithHttpInfo (string userId, UserPrimarySource body);
 
@@ -1321,7 +1345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of OrganizationPresence</returns>
         
-        
         System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync (string presenceId, OrganizationPresence body);
 
         /// <summary>
@@ -1335,7 +1358,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body);
 
         /// <summary>
@@ -1348,7 +1370,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>Task of List&lt;UserPresence&gt;</returns>
         
-        
         System.Threading.Tasks.Task<List<UserPresence>> PutUsersPresencesBulkAsync (List<UserPresence> body);
 
         /// <summary>
@@ -1360,7 +1381,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of User presences</param>
         /// <returns>Task of ApiResponse (List&lt;UserPresence&gt;)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<List<UserPresence>>> PutUsersPresencesBulkAsyncWithHttpInfo (List<UserPresence> body);
 
@@ -1458,12 +1478,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Definition 
+        /// 
+        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void DeletePresenceDefinition0 (string definitionId)
         {
              DeletePresenceDefinition0WithHttpInfo(definitionId);
@@ -1471,12 +1492,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Definition 
+        /// 
+        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> DeletePresenceDefinition0WithHttpInfo (string definitionId)
         { 
             // verify the required parameter 'definitionId' is set
@@ -1555,12 +1577,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Definition 
+        /// 
+        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task DeletePresenceDefinition0Async (string definitionId)
         {
              await DeletePresenceDefinition0AsyncWithHttpInfo(definitionId);
@@ -1569,12 +1592,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Definition 
+        /// 
+        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceDefinition0AsyncWithHttpInfo (string definitionId)
         { 
             // verify the required parameter 'definitionId' is set
@@ -1655,11 +1679,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns></returns>
-        
         
         public void DeletePresenceSource (string sourceId)
         {
@@ -1668,11 +1692,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeletePresenceSourceWithHttpInfo (string sourceId)
         { 
@@ -1752,11 +1776,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeletePresenceSourceAsync (string sourceId)
         {
@@ -1766,11 +1790,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceSourceAsyncWithHttpInfo (string sourceId)
         { 
@@ -1852,11 +1876,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns></returns>
-        
         
         public void DeletePresencedefinition (string presenceId)
         {
@@ -1865,11 +1889,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeletePresencedefinitionWithHttpInfo (string presenceId)
         { 
@@ -1949,11 +1973,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeletePresencedefinitionAsync (string presenceId)
         {
@@ -1963,11 +1987,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId)
         { 
@@ -2049,12 +2073,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Definition 
+        /// 
+        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public OrganizationPresenceDefinition GetPresenceDefinition0 (string definitionId)
         {
              ApiResponse<OrganizationPresenceDefinition> localVarResponse = GetPresenceDefinition0WithHttpInfo(definitionId);
@@ -2063,12 +2088,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Definition 
+        /// 
+        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public ApiResponse< OrganizationPresenceDefinition > GetPresenceDefinition0WithHttpInfo (string definitionId)
         { 
             // verify the required parameter 'definitionId' is set
@@ -2147,12 +2173,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Definition 
+        /// 
+        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetPresenceDefinition0Async (string definitionId)
         {
              ApiResponse<OrganizationPresenceDefinition> localVarResponse = await GetPresenceDefinition0AsyncWithHttpInfo(definitionId);
@@ -2162,12 +2189,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Definition 
+        /// 
+        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId)
         { 
             // verify the required parameter 'definitionId' is set
@@ -2248,13 +2276,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Presence Definitions 
+        /// 
+        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>OrganizationPresenceDefinitionEntityListing</returns>
         
-        /// Preview Endpoint
         public OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null)
         {
              ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = GetPresenceDefinitions0WithHttpInfo(deactivated, divisionId);
@@ -2263,13 +2292,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Presence Definitions 
+        /// 
+        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinitionEntityListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< OrganizationPresenceDefinitionEntityListing > GetPresenceDefinitions0WithHttpInfo (string deactivated = null, List<string> divisionId = null)
         { 
 
@@ -2346,13 +2376,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Presence Definitions 
+        /// 
+        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinitionEntityListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null)
         {
              ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = await GetPresenceDefinitions0AsyncWithHttpInfo(deactivated, divisionId);
@@ -2362,13 +2393,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Presence Definitions 
+        /// 
+        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinitionEntityListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null)
         { 
 
@@ -2446,10 +2478,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the presence settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PresenceSettings</returns>
-        
         
         public PresenceSettings GetPresenceSettings ()
         {
@@ -2459,10 +2491,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the presence settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PresenceSettings</returns>
-        
         
         public ApiResponse< PresenceSettings > GetPresenceSettingsWithHttpInfo ()
         { 
@@ -2538,10 +2570,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the presence settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PresenceSettings</returns>
-        
         
         public async System.Threading.Tasks.Task<PresenceSettings> GetPresenceSettingsAsync ()
         {
@@ -2552,10 +2584,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the presence settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PresenceSettings)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PresenceSettings>> GetPresenceSettingsAsyncWithHttpInfo ()
         { 
@@ -2632,11 +2664,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Source</returns>
-        
         
         public Source GetPresenceSource (string sourceId)
         {
@@ -2646,11 +2678,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>ApiResponse of Source</returns>
-        
         
         public ApiResponse< Source > GetPresenceSourceWithHttpInfo (string sourceId)
         { 
@@ -2730,11 +2762,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Task of Source</returns>
-        
         
         public async System.Threading.Tasks.Task<Source> GetPresenceSourceAsync (string sourceId)
         {
@@ -2745,11 +2777,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <returns>Task of ApiResponse (Source)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Source>> GetPresenceSourceAsyncWithHttpInfo (string sourceId)
         { 
@@ -2831,11 +2863,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Presence Sources 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>SourceEntityListing</returns>
-        
         
         public SourceEntityListing GetPresenceSources (string deactivated = null)
         {
@@ -2845,11 +2877,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Presence Sources 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>ApiResponse of SourceEntityListing</returns>
-        
         
         public ApiResponse< SourceEntityListing > GetPresenceSourcesWithHttpInfo (string deactivated = null)
         { 
@@ -2926,11 +2958,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Presence Sources 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>Task of SourceEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<SourceEntityListing> GetPresenceSourcesAsync (string deactivated = null)
         {
@@ -2941,11 +2973,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Presence Sources 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>Task of ApiResponse (SourceEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SourceEntityListing>> GetPresenceSourcesAsyncWithHttpInfo (string deactivated = null)
         { 
@@ -3023,11 +3055,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a user's Primary Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <returns>UserPrimarySource</returns>
-        
         
         public UserPrimarySource GetPresenceUserPrimarysource (string userId)
         {
@@ -3037,11 +3069,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a user's Primary Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <returns>ApiResponse of UserPrimarySource</returns>
-        
         
         public ApiResponse< UserPrimarySource > GetPresenceUserPrimarysourceWithHttpInfo (string userId)
         { 
@@ -3121,11 +3153,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a user's Primary Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <returns>Task of UserPrimarySource</returns>
-        
         
         public async System.Threading.Tasks.Task<UserPrimarySource> GetPresenceUserPrimarysourceAsync (string userId)
         {
@@ -3136,11 +3168,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a user's Primary Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <returns>Task of ApiResponse (UserPrimarySource)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserPrimarySource>> GetPresenceUserPrimarysourceAsyncWithHttpInfo (string userId)
         { 
@@ -3222,12 +3254,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresence</returns>
-        
         
         public OrganizationPresence GetPresencedefinition (string presenceId, string localeCode = null)
         {
@@ -3237,12 +3269,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
         
         public ApiResponse< OrganizationPresence > GetPresencedefinitionWithHttpInfo (string presenceId, string localeCode = null)
         { 
@@ -3323,12 +3355,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
         
         public async System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync (string presenceId, string localeCode = null)
         {
@@ -3339,12 +3371,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId, string localeCode = null)
         { 
@@ -3427,6 +3459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Organization's list of Presence Definitions 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3434,7 +3467,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
-        
         
         public OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         {
@@ -3444,6 +3476,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Organization's list of Presence Definitions 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3451,7 +3484,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        
         
         public ApiResponse< OrganizationPresenceEntityListing > GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         { 
@@ -3531,6 +3563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Organization's list of Presence Definitions 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3538,7 +3571,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         {
@@ -3549,6 +3581,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Organization's list of Presence Definitions 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3556,7 +3589,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         { 
@@ -3637,10 +3669,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of SystemPresences 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;SystemPresence&gt;</returns>
-        
         
         public List<SystemPresence> GetSystempresences ()
         {
@@ -3650,10 +3682,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of SystemPresences 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;SystemPresence&gt;</returns>
-        
         
         public ApiResponse< List<SystemPresence> > GetSystempresencesWithHttpInfo ()
         { 
@@ -3729,10 +3761,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of SystemPresences 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;SystemPresence&gt;</returns>
-        
         
         public async System.Threading.Tasks.Task<List<SystemPresence>> GetSystempresencesAsync ()
         {
@@ -3743,10 +3775,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of SystemPresences 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;SystemPresence&gt;)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<SystemPresence>>> GetSystempresencesAsyncWithHttpInfo ()
         { 
@@ -3822,13 +3854,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's Presence Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
+        /// Get a user's Presence 
+        /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>UserPresence</returns>
-        
         
         public UserPresence GetUserPresence (string userId, string sourceId)
         {
@@ -3837,13 +3869,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's Presence Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
+        /// Get a user's Presence 
+        /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        
         
         public ApiResponse< UserPresence > GetUserPresenceWithHttpInfo (string userId, string sourceId)
         { 
@@ -3926,13 +3958,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's Presence Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
+        /// Get a user's Presence 
+        /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of UserPresence</returns>
-        
         
         public async System.Threading.Tasks.Task<UserPresence> GetUserPresenceAsync (string userId, string sourceId)
         {
@@ -3942,13 +3974,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's Presence Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
+        /// Get a user's Presence 
+        /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresenceAsyncWithHttpInfo (string userId, string sourceId)
         { 
@@ -4034,12 +4066,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's Genesys Cloud presence. Get the default Genesys Cloud user presence source PURECLOUD
+        /// Get a user's Genesys Cloud presence. 
+        /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <returns>UserPresence</returns>
-        
         
         public UserPresence GetUserPresencesPurecloud (string userId)
         {
@@ -4048,12 +4080,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's Genesys Cloud presence. Get the default Genesys Cloud user presence source PURECLOUD
+        /// Get a user's Genesys Cloud presence. 
+        /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        
         
         public ApiResponse< UserPresence > GetUserPresencesPurecloudWithHttpInfo (string userId)
         { 
@@ -4132,12 +4164,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a user's Genesys Cloud presence. Get the default Genesys Cloud user presence source PURECLOUD
+        /// Get a user's Genesys Cloud presence. 
+        /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <returns>Task of UserPresence</returns>
-        
         
         public async System.Threading.Tasks.Task<UserPresence> GetUserPresencesPurecloudAsync (string userId)
         {
@@ -4147,12 +4179,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a user's Genesys Cloud presence. Get the default Genesys Cloud user presence source PURECLOUD
+        /// Get a user's Genesys Cloud presence. 
+        /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresencesPurecloudAsyncWithHttpInfo (string userId)
         { 
@@ -4233,14 +4265,411 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a user's Presence Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Get bulk user presences for a single presence source 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">The requested presence source ID.</param>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>List&lt;UcUserPresence&gt;</returns>
+        
+        public List<UcUserPresence> GetUsersPresenceBulk (string sourceId, List<string> id = null)
+        {
+             ApiResponse<List<UcUserPresence>> localVarResponse = GetUsersPresenceBulkWithHttpInfo(sourceId, id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get bulk user presences for a single presence source 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">The requested presence source ID.</param>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>ApiResponse of List&lt;UcUserPresence&gt;</returns>
+        
+        public ApiResponse< List<UcUserPresence> > GetUsersPresenceBulkWithHttpInfo (string sourceId, List<string> id = null)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUsersPresenceBulk");
+
+            var localVarPath = "/api/v2/users/presences/{sourceId}/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersPresenceBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersPresenceBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UcUserPresence>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UcUserPresence>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UcUserPresence>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get bulk user presences for a single presence source 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">The requested presence source ID.</param>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>Task of List&lt;UcUserPresence&gt;</returns>
+        
+        public async System.Threading.Tasks.Task<List<UcUserPresence>> GetUsersPresenceBulkAsync (string sourceId, List<string> id = null)
+        {
+             ApiResponse<List<UcUserPresence>> localVarResponse = await GetUsersPresenceBulkAsyncWithHttpInfo(sourceId, id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get bulk user presences for a single presence source 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">The requested presence source ID.</param>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;UcUserPresence&gt;)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<UcUserPresence>>> GetUsersPresenceBulkAsyncWithHttpInfo (string sourceId, List<string> id = null)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUsersPresenceBulk");
+            
+
+            var localVarPath = "/api/v2/users/presences/{sourceId}/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersPresenceBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersPresenceBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UcUserPresence>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UcUserPresence>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UcUserPresence>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>List&lt;UcUserPresence&gt;</returns>
+        
+        public List<UcUserPresence> GetUsersPresencesPurecloudBulk (List<string> id = null)
+        {
+             ApiResponse<List<UcUserPresence>> localVarResponse = GetUsersPresencesPurecloudBulkWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>ApiResponse of List&lt;UcUserPresence&gt;</returns>
+        
+        public ApiResponse< List<UcUserPresence> > GetUsersPresencesPurecloudBulkWithHttpInfo (List<string> id = null)
+        { 
+
+            var localVarPath = "/api/v2/users/presences/purecloud/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersPresencesPurecloudBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersPresencesPurecloudBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UcUserPresence>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UcUserPresence>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UcUserPresence>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>Task of List&lt;UcUserPresence&gt;</returns>
+        
+        public async System.Threading.Tasks.Task<List<UcUserPresence>> GetUsersPresencesPurecloudBulkAsync (List<string> id = null)
+        {
+             ApiResponse<List<UcUserPresence>> localVarResponse = await GetUsersPresencesPurecloudBulkAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;UcUserPresence&gt;)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<UcUserPresence>>> GetUsersPresencesPurecloudBulkAsyncWithHttpInfo (List<string> id = null)
+        { 
+
+            var localVarPath = "/api/v2/users/presences/purecloud/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersPresencesPurecloudBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersPresencesPurecloudBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UcUserPresence>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UcUserPresence>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UcUserPresence>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Patch a user's Presence 
+        /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
-        
         
         public UserPresence PatchUserPresence (string userId, string sourceId, UserPresence body)
         {
@@ -4249,14 +4678,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user's Presence Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user's Presence 
+        /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        
         
         public ApiResponse< UserPresence > PatchUserPresenceWithHttpInfo (string userId, string sourceId, UserPresence body)
         { 
@@ -4348,14 +4777,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a user's Presence Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user's Presence 
+        /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
-        
         
         public async System.Threading.Tasks.Task<UserPresence> PatchUserPresenceAsync (string userId, string sourceId, UserPresence body)
         {
@@ -4365,14 +4794,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a user's Presence Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a user's Presence 
+        /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresenceAsyncWithHttpInfo (string userId, string sourceId, UserPresence body)
         { 
@@ -4468,13 +4897,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a Genesys Cloud user's presence The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a Genesys Cloud user's presence 
+        /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
-        
         
         public UserPresence PatchUserPresencesPurecloud (string userId, UserPresence body)
         {
@@ -4483,13 +4912,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a Genesys Cloud user's presence The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a Genesys Cloud user's presence 
+        /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        
         
         public ApiResponse< UserPresence > PatchUserPresencesPurecloudWithHttpInfo (string userId, UserPresence body)
         { 
@@ -4577,13 +5006,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch a Genesys Cloud user's presence The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a Genesys Cloud user's presence 
+        /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
-        
         
         public async System.Threading.Tasks.Task<UserPresence> PatchUserPresencesPurecloudAsync (string userId, UserPresence body)
         {
@@ -4593,13 +5022,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch a Genesys Cloud user's presence The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+        /// Patch a Genesys Cloud user's presence 
+        /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresencesPurecloudAsyncWithHttpInfo (string userId, UserPresence body)
         { 
@@ -4691,12 +5120,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Definition 
+        /// 
+        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public OrganizationPresenceDefinition PostPresenceDefinitions0 (OrganizationPresenceDefinition body)
         {
              ApiResponse<OrganizationPresenceDefinition> localVarResponse = PostPresenceDefinitions0WithHttpInfo(body);
@@ -4705,12 +5135,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Definition 
+        /// 
+        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public ApiResponse< OrganizationPresenceDefinition > PostPresenceDefinitions0WithHttpInfo (OrganizationPresenceDefinition body)
         { 
             // verify the required parameter 'body' is set
@@ -4794,12 +5225,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Definition 
+        /// 
+        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> PostPresenceDefinitions0Async (OrganizationPresenceDefinition body)
         {
              ApiResponse<OrganizationPresenceDefinition> localVarResponse = await PostPresenceDefinitions0AsyncWithHttpInfo(body);
@@ -4809,12 +5241,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Definition 
+        /// 
+        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PostPresenceDefinitions0AsyncWithHttpInfo (OrganizationPresenceDefinition body)
         { 
             // verify the required parameter 'body' is set
@@ -4900,11 +5333,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Source to create</param>
         /// <returns>Source</returns>
-        
         
         public Source PostPresenceSources (Source body)
         {
@@ -4914,11 +5347,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Source to create</param>
         /// <returns>ApiResponse of Source</returns>
-        
         
         public ApiResponse< Source > PostPresenceSourcesWithHttpInfo (Source body)
         { 
@@ -5003,11 +5436,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Source to create</param>
         /// <returns>Task of Source</returns>
-        
         
         public async System.Threading.Tasks.Task<Source> PostPresenceSourcesAsync (Source body)
         {
@@ -5018,11 +5451,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Source to create</param>
         /// <returns>Task of ApiResponse (Source)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Source>> PostPresenceSourcesAsyncWithHttpInfo (Source body)
         { 
@@ -5109,11 +5542,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresence</returns>
-        
         
         public OrganizationPresence PostPresencedefinitions (OrganizationPresence body)
         {
@@ -5123,11 +5556,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
         
         public ApiResponse< OrganizationPresence > PostPresencedefinitionsWithHttpInfo (OrganizationPresence body)
         { 
@@ -5212,11 +5645,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
         
         public async System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync (OrganizationPresence body)
         {
@@ -5227,11 +5660,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body)
         { 
@@ -5318,13 +5751,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Definition 
+        /// 
+        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public OrganizationPresenceDefinition PutPresenceDefinition0 (string definitionId, OrganizationPresenceDefinition body)
         {
              ApiResponse<OrganizationPresenceDefinition> localVarResponse = PutPresenceDefinition0WithHttpInfo(definitionId, body);
@@ -5333,13 +5767,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Definition 
+        /// 
+        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public ApiResponse< OrganizationPresenceDefinition > PutPresenceDefinition0WithHttpInfo (string definitionId, OrganizationPresenceDefinition body)
         { 
             // verify the required parameter 'definitionId' is set
@@ -5427,13 +5862,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Definition 
+        /// 
+        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> PutPresenceDefinition0Async (string definitionId, OrganizationPresenceDefinition body)
         {
              ApiResponse<OrganizationPresenceDefinition> localVarResponse = await PutPresenceDefinition0AsyncWithHttpInfo(definitionId, body);
@@ -5443,13 +5879,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Definition 
+        /// 
+        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
         /// <param name="body">The updated Presence Definition</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> PutPresenceDefinition0AsyncWithHttpInfo (string definitionId, OrganizationPresenceDefinition body)
         { 
             // verify the required parameter 'definitionId' is set
@@ -5540,11 +5977,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the presence settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Presence Settings</param>
         /// <returns>PresenceSettings</returns>
-        
         
         public PresenceSettings PutPresenceSettings (PresenceSettings body)
         {
@@ -5554,11 +5991,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the presence settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Presence Settings</param>
         /// <returns>ApiResponse of PresenceSettings</returns>
-        
         
         public ApiResponse< PresenceSettings > PutPresenceSettingsWithHttpInfo (PresenceSettings body)
         { 
@@ -5643,11 +6080,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the presence settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Presence Settings</param>
         /// <returns>Task of PresenceSettings</returns>
-        
         
         public async System.Threading.Tasks.Task<PresenceSettings> PutPresenceSettingsAsync (PresenceSettings body)
         {
@@ -5658,11 +6095,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the presence settings 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Presence Settings</param>
         /// <returns>Task of ApiResponse (PresenceSettings)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PresenceSettings>> PutPresenceSettingsAsyncWithHttpInfo (PresenceSettings body)
         { 
@@ -5749,12 +6186,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <param name="body">The updated Presence Source</param>
         /// <returns>Source</returns>
-        
         
         public Source PutPresenceSource (string sourceId, Source body)
         {
@@ -5764,12 +6201,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <param name="body">The updated Presence Source</param>
         /// <returns>ApiResponse of Source</returns>
-        
         
         public ApiResponse< Source > PutPresenceSourceWithHttpInfo (string sourceId, Source body)
         { 
@@ -5858,12 +6295,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <param name="body">The updated Presence Source</param>
         /// <returns>Task of Source</returns>
-        
         
         public async System.Threading.Tasks.Task<Source> PutPresenceSourceAsync (string sourceId, Source body)
         {
@@ -5874,12 +6311,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Presence Source ID</param>
         /// <param name="body">The updated Presence Source</param>
         /// <returns>Task of ApiResponse (Source)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Source>> PutPresenceSourceAsyncWithHttpInfo (string sourceId, Source body)
         { 
@@ -5971,12 +6408,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's Primary Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <param name="body">Primary Source</param>
         /// <returns>UserPrimarySource</returns>
-        
         
         public UserPrimarySource PutPresenceUserPrimarysource (string userId, UserPrimarySource body)
         {
@@ -5986,12 +6423,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's Primary Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <param name="body">Primary Source</param>
         /// <returns>ApiResponse of UserPrimarySource</returns>
-        
         
         public ApiResponse< UserPrimarySource > PutPresenceUserPrimarysourceWithHttpInfo (string userId, UserPrimarySource body)
         { 
@@ -6080,12 +6517,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's Primary Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <param name="body">Primary Source</param>
         /// <returns>Task of UserPrimarySource</returns>
-        
         
         public async System.Threading.Tasks.Task<UserPrimarySource> PutPresenceUserPrimarysourceAsync (string userId, UserPrimarySource body)
         {
@@ -6096,12 +6533,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a user's Primary Presence Source 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
         /// <param name="body">Primary Source</param>
         /// <returns>Task of ApiResponse (UserPrimarySource)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserPrimarySource>> PutPresenceUserPrimarysourceAsyncWithHttpInfo (string userId, UserPrimarySource body)
         { 
@@ -6193,12 +6630,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>OrganizationPresence</returns>
-        
         
         public OrganizationPresence PutPresencedefinition (string presenceId, OrganizationPresence body)
         {
@@ -6208,12 +6645,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
         
         public ApiResponse< OrganizationPresence > PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body)
         { 
@@ -6302,12 +6739,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
         
         public async System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync (string presenceId, OrganizationPresence body)
         {
@@ -6318,12 +6755,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Presence Definition 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body)
         { 
@@ -6415,11 +6852,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update bulk user Presences 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of User presences</param>
         /// <returns>List&lt;UserPresence&gt;</returns>
-        
         
         public List<UserPresence> PutUsersPresencesBulk (List<UserPresence> body)
         {
@@ -6429,11 +6866,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update bulk user Presences 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of User presences</param>
         /// <returns>ApiResponse of List&lt;UserPresence&gt;</returns>
-        
         
         public ApiResponse< List<UserPresence> > PutUsersPresencesBulkWithHttpInfo (List<UserPresence> body)
         { 
@@ -6518,11 +6955,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update bulk user Presences 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of User presences</param>
         /// <returns>Task of List&lt;UserPresence&gt;</returns>
-        
         
         public async System.Threading.Tasks.Task<List<UserPresence>> PutUsersPresencesBulkAsync (List<UserPresence> body)
         {
@@ -6533,11 +6970,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update bulk user Presences 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of User presences</param>
         /// <returns>Task of ApiResponse (List&lt;UserPresence&gt;)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<UserPresence>>> PutUsersPresencesBulkAsyncWithHttpInfo (List<UserPresence> body)
         { 

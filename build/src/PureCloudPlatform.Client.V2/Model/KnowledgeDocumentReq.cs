@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Alternatives">List of alternate phrases related to the title which improves search results..</param>
         /// <param name="CategoryId">The category associated with the document..</param>
         /// <param name="LabelIds">The ids of labels associated with the document..</param>
-        public KnowledgeDocumentReq(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, string CategoryId = null, List<string> LabelIds = null)
+        /// <param name="ExternalId">The external id associated with the document..</param>
+        public KnowledgeDocumentReq(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, string CategoryId = null, List<string> LabelIds = null, string ExternalId = null)
         {
             this.Title = Title;
             this.Visible = Visible;
             this.Alternatives = Alternatives;
             this.CategoryId = CategoryId;
             this.LabelIds = LabelIds;
+            this.ExternalId = ExternalId;
             
         }
         
@@ -99,6 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The external id associated with the document.
+        /// </summary>
+        /// <value>The external id associated with the document.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -121,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Alternatives: ").Append(Alternatives).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
             sb.Append("  LabelIds: ").Append(LabelIds).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -193,6 +205,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LabelIds.SequenceEqual(other.LabelIds)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -227,6 +244,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LabelIds != null)
                     hash = hash * 59 + this.LabelIds.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

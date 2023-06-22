@@ -150,8 +150,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete single benefit assessment.
 
-
-
 Requires ANY permissions: 
 
 * routing:assessment:delete
@@ -214,8 +212,6 @@ void (empty response body)
 
 Delete a domain
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -277,8 +273,6 @@ void (empty response body)
 
 
 Delete a route
-
-
 
 Requires ALL permissions: 
 
@@ -344,8 +338,6 @@ void (empty response body)
 
 Delete an outbound domain
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -408,8 +400,6 @@ void (empty response body)
 
 Delete a routing language
 
-
-
 Requires ANY permissions: 
 
 * routing:skill:manage
@@ -471,8 +461,6 @@ void (empty response body)
 
 
 Delete single predictor.
-
-
 
 Requires ALL permissions: 
 
@@ -537,8 +525,6 @@ void (empty response body)
 
 Delete a queue
 
-
-
 Requires ALL permissions: 
 
 * routing:queue:delete
@@ -602,8 +588,6 @@ void (empty response body)
 
 
 Delete a queue member.
-
-
 
 Requires ANY permissions: 
 
@@ -670,8 +654,6 @@ void (empty response body)
 
 DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:edit
@@ -737,8 +719,6 @@ void (empty response body)
 
 Delete a wrap-up code from a queue
 
-
-
 Requires ALL permissions: 
 
 * routing:queue:edit
@@ -803,8 +783,6 @@ void (empty response body)
 
 Delete an organization's routing settings
 
-
-
 Requires ANY permissions: 
 
 * routing:settings:edit
@@ -861,8 +839,6 @@ void (empty response body)
 
 
 Delete Routing Skill
-
-
 
 Requires ALL permissions: 
 
@@ -926,8 +902,6 @@ void (empty response body)
 
 Remove skill group definition
 
-
-
 Requires ANY permissions: 
 
 * routing:skillGroup:delete
@@ -989,8 +963,6 @@ void (empty response body)
 
 
 Delete an Address by Id for SMS
-
-
 
 Requires ALL permissions: 
 
@@ -1054,8 +1026,6 @@ void (empty response body)
 
 Delete a phone number provisioned for SMS.
 
-
-
 Requires ALL permissions: 
 
 * sms:phoneNumber:delete
@@ -1117,8 +1087,6 @@ void (empty response body)
 
 
 Delete the user's max utilization settings and revert to the organization-wide default.
-
-
 
 Requires ANY permissions: 
 
@@ -1182,8 +1150,6 @@ void (empty response body)
 
 Delete the organization-wide max utilization settings and revert to the system default.
 
-
-
 Requires ALL permissions: 
 
 * routing:utilization:manage
@@ -1241,7 +1207,7 @@ void (empty response body)
 
 Delete an utilization tag
 
-
+DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1307,8 +1273,6 @@ void (empty response body)
 
 Delete wrap-up code
 
-
-
 Requires ALL permissions: 
 
 * routing:wrapupCode:delete
@@ -1370,8 +1334,6 @@ void (empty response body)
 
 
 Remove routing language from user
-
-
 
 Requires ANY permissions: 
 
@@ -1438,8 +1400,6 @@ void (empty response body)
 
 Remove routing skill from user
 
-
-
 Requires ALL permissions: 
 
 * routing:skill:assign
@@ -1504,8 +1464,6 @@ void (empty response body)
 
 Retrieve a single benefit assessment.
 
-
-
 Requires ANY permissions: 
 
 * routing:assessment:view
@@ -1568,8 +1526,6 @@ namespace Example
 
 
 Retrieve all benefit assessments.
-
-
 
 Requires ANY permissions: 
 
@@ -1643,8 +1599,6 @@ namespace Example
 
 Retrieve a single benefit assessments job.
 
-
-
 Requires ANY permissions: 
 
 * routing:assessment:view
@@ -1707,8 +1661,6 @@ namespace Example
 
 
 Retrieve all benefit assessment jobs.
-
-
 
 Requires ANY permissions: 
 
@@ -1773,8 +1725,6 @@ namespace Example
 
 Get available media types
 
-
-
 Requires NO permissions: 
 
 
@@ -1831,8 +1781,6 @@ This endpoint does require any parameters.
 
 
 Get domain
-
-
 
 Requires ALL permissions: 
 
@@ -1896,8 +1844,6 @@ namespace Example
 
 
 Get a route
-
-
 
 Requires ALL permissions: 
 
@@ -1963,8 +1909,6 @@ namespace Example
 
 
 Get routes
-
-
 
 Requires ALL permissions: 
 
@@ -2035,8 +1979,6 @@ namespace Example
 
 Get domains
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -2106,8 +2048,6 @@ namespace Example
 
 Get domain
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -2170,8 +2110,6 @@ namespace Example
 
 
 Get activation status (cname + dkim) of an outbound domain
-
-
 
 Requires ALL permissions: 
 
@@ -2236,8 +2174,6 @@ namespace Example
 
 Search a domain across organizations
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -2300,8 +2236,6 @@ namespace Example
 
 
 Get outbound domains
-
-
 
 Requires ALL permissions: 
 
@@ -2366,8 +2300,6 @@ namespace Example
 
 Get email setup
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -2425,8 +2357,6 @@ This endpoint does require any parameters.
 
 
 Get a routing language
-
-
 
 Requires NO permissions: 
 
@@ -2489,8 +2419,6 @@ namespace Example
 
 
 Get the list of supported languages.
-
-
 
 Requires NO permissions: 
 
@@ -2562,8 +2490,6 @@ namespace Example
 
 Get a recipient
 
-
-
 Requires ALL permissions: 
 
 * routing:message:manage
@@ -2626,8 +2552,6 @@ namespace Example
 
 
 Get recipients
-
-
 
 Requires ALL permissions: 
 
@@ -2696,8 +2620,6 @@ namespace Example
 
 Retrieve a single predictor.
 
-
-
 Requires ANY permissions: 
 
 * routing:predictor:view
@@ -2760,8 +2682,6 @@ namespace Example
 
 
 Retrieve Predictor Model Features.
-
-
 
 Requires ALL permissions: 
 
@@ -2828,8 +2748,6 @@ namespace Example
 
 Retrieve Predictor Models and Top Features.
 
-
-
 Requires ALL permissions: 
 
 * routing:predictorModel:view
@@ -2892,8 +2810,6 @@ namespace Example
 
 
 Retrieve all predictors.
-
-
 
 Requires ANY permissions: 
 
@@ -2967,8 +2883,6 @@ namespace Example
 
 Get a list of Key Performance Indicators
 
-
-
 Requires ANY permissions: 
 
 * routing:keyPerformanceIndicator:view
@@ -3034,8 +2948,6 @@ namespace Example
 
 Get details about this queue.
 
-
-
 Requires ALL permissions: 
 
 * routing:queue:view
@@ -3098,8 +3010,6 @@ namespace Example
 
 
 Get a Comparison Period.
-
-
 
 Requires ALL permissions: 
 
@@ -3167,8 +3077,6 @@ namespace Example
 
 Get list of comparison periods
 
-
-
 Requires ALL permissions: 
 
 * routing:comparisonPeriod:view
@@ -3232,8 +3140,6 @@ namespace Example
 
 
 Get Estimated Wait Time
-
-
 
 Requires ALL permissions: 
 
@@ -3300,8 +3206,6 @@ namespace Example
 
 Get Estimated Wait Time
 
-
-
 Requires ALL permissions: 
 
 * routing:queue:view
@@ -3366,8 +3270,6 @@ namespace Example
 
 
 Get the members of this queue.
-
-
 
 Requires ANY permissions: 
 
@@ -3459,8 +3361,6 @@ namespace Example
 
 DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:view
@@ -3547,8 +3447,6 @@ namespace Example
 
 Get the wrap-up codes for a queue
 
-
-
 Requires ALL permissions: 
 
 * routing:queue:view
@@ -3615,8 +3513,6 @@ namespace Example
 
 
 Get list of queues.
-
-
 
 Requires ANY permissions: 
 
@@ -3695,8 +3591,6 @@ namespace Example
 
 Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
 
-
-
 Requires ALL permissions: 
 
 * routing:queue:search
@@ -3772,8 +3666,6 @@ namespace Example
 
 Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
 
-
-
 Requires ALL permissions: 
 
 * routing:queue:search
@@ -3840,8 +3732,6 @@ namespace Example
 
 
 Get a paged listing of queues the user is a member of.
-
-
 
 Requires NO permissions: 
 
@@ -3911,8 +3801,6 @@ namespace Example
 
 Get an organization's routing settings
 
-
-
 Requires NO permissions: 
 
 
@@ -3969,8 +3857,6 @@ This endpoint does require any parameters.
 
 
 Get Contact Center Settings
-
-
 
 Requires NO permissions: 
 
@@ -4029,8 +3915,6 @@ This endpoint does require any parameters.
 
 Get Transcription Settings
 
-
-
 Requires ANY permissions: 
 
 * routing:transcriptionSettings:view
@@ -4088,8 +3972,6 @@ This endpoint does require any parameters.
 
 
 Get Routing Skill
-
-
 
 Requires NO permissions: 
 
@@ -4153,8 +4035,6 @@ namespace Example
 
 Get skill group
 
-
-
 Requires ANY permissions: 
 
 * routing:skillGroup:view
@@ -4217,8 +4097,6 @@ namespace Example
 
 
 Get skill group members
-
-
 
 Requires ANY permissions: 
 
@@ -4291,8 +4169,6 @@ namespace Example
 
 Get list of member divisions for this skill group.
 
-
-
 Requires ANY permissions: 
 
 * routing:skillGroup:view
@@ -4357,8 +4233,6 @@ namespace Example
 
 
 Get skill group listing
-
-
 
 Requires ANY permissions: 
 
@@ -4429,8 +4303,6 @@ namespace Example
 
 Get the list of routing skills.
 
-
-
 Requires NO permissions: 
 
 
@@ -4499,8 +4371,6 @@ namespace Example
 
 Get an Address by Id for SMS
 
-
-
 Requires ALL permissions: 
 
 * sms:phoneNumber:view
@@ -4563,8 +4433,6 @@ namespace Example
 
 
 Get a list of Addresses for SMS
-
-
 
 Requires ALL permissions: 
 
@@ -4632,8 +4500,6 @@ namespace Example
 Get a list of available phone numbers for SMS provisioning.
 
 This request will return up to 30 random phone numbers matching the criteria specified.  To get additional phone numbers repeat the request.
-
-
 
 Requires ALL permissions: 
 
@@ -4710,8 +4576,6 @@ namespace Example
 
 Get a phone number provisioned for SMS.
 
-
-
 Requires ALL permissions: 
 
 * sms:phoneNumber:view
@@ -4776,8 +4640,6 @@ namespace Example
 
 
 Get a list of provisioned phone numbers.
-
-
 
 Requires ALL permissions: 
 
@@ -4860,8 +4722,6 @@ namespace Example
 
 Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
 
-
-
 Requires ANY permissions: 
 
 * routing:utilization:manage
@@ -4926,8 +4786,6 @@ namespace Example
 
 Get the organization-wide max utilization settings.
 
-
-
 Requires ANY permissions: 
 
 * routing:utilization:manage
@@ -4987,7 +4845,7 @@ This endpoint does require any parameters.
 
 Get details about this utilization tag
 
-
+GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -5052,7 +4910,7 @@ namespace Example
 
 Get list of agent ids associated with a utilization tag
 
-
+GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -5117,7 +4975,7 @@ namespace Example
 
 Get list of utilization tags
 
-
+GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -5188,8 +5046,6 @@ namespace Example
 
 Get details about this wrap-up code.
 
-
-
 Requires ALL permissions: 
 
 * routing:wrapupCode:view
@@ -5252,8 +5108,6 @@ namespace Example
 
 
 Get list of wrapup codes.
-
-
 
 Requires ALL permissions: 
 
@@ -5330,8 +5184,6 @@ namespace Example
 
 Get queues for user
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:view
@@ -5405,8 +5257,6 @@ namespace Example
 
 List routing language for user
 
-
-
 Requires NO permissions: 
 
 
@@ -5475,8 +5325,6 @@ namespace Example
 
 List routing skills for user
 
-
-
 Requires NO permissions: 
 
 
@@ -5544,8 +5392,6 @@ namespace Example
 
 
 Get skill groups for a user
-
-
 
 Requires ANY permissions: 
 
@@ -5618,8 +5464,6 @@ Update attributes of an in-queue conversation
 
 Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
 
-
-
 Requires ANY permissions: 
 
 * routing:conversation:edit
@@ -5684,8 +5528,6 @@ namespace Example
 
 
 Update domain settings
-
-
 
 Requires ALL permissions: 
 
@@ -5752,8 +5594,6 @@ namespace Example
 
 Validate domain settings
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -5818,8 +5658,6 @@ namespace Example
 
 
 Update single predictor.
-
-
 
 Requires ALL permissions: 
 
@@ -5886,8 +5724,6 @@ namespace Example
 
 
 Update the ring number OR joined status for a queue member.
-
-
 
 Requires ANY permissions: 
 
@@ -5956,8 +5792,6 @@ void (empty response body)
 
 Join or unjoin a set of users for a queue
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:edit
@@ -6023,8 +5857,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
-
-
 
 Requires ANY permissions: 
 
@@ -6093,8 +5925,6 @@ void (empty response body)
 
 DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:edit
@@ -6161,8 +5991,6 @@ namespace Example
 
 Update Contact Center Settings
 
-
-
 Requires ANY permissions: 
 
 * routing:settings:edit
@@ -6224,8 +6052,6 @@ void (empty response body)
 
 
 Update skill group definition
-
-
 
 Requires ANY permissions: 
 
@@ -6291,8 +6117,6 @@ namespace Example
 
 
 Join or unjoin a queue for a user
-
-
 
 Requires ANY permissions: 
 
@@ -6362,8 +6186,6 @@ namespace Example
 
 Join or unjoin a set of queues for a user
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:join
@@ -6431,8 +6253,6 @@ namespace Example
 
 
 Update routing language proficiency or state.
-
-
 
 Requires ANY permissions: 
 
@@ -6502,8 +6322,6 @@ namespace Example
 
 Add bulk routing language to user. Max limit 50 languages
 
-
-
 Requires ANY permissions: 
 
 * routing:skill:assign
@@ -6570,8 +6388,6 @@ namespace Example
 
 Bulk add routing skills to user
 
-
-
 Requires ANY permissions: 
 
 * routing:skill:assign
@@ -6637,8 +6453,6 @@ namespace Example
 
 Query for queue observations
 
-
-
 Requires ANY permissions: 
 
 * analytics:queueObservation:view
@@ -6702,7 +6516,7 @@ namespace Example
 
 Query for user activity observations
 
-
+PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6771,8 +6585,6 @@ namespace Example
 
 Create a benefit assessment.
 
-
-
 Requires ALL permissions: 
 
 * routing:assessment:add
@@ -6837,8 +6649,6 @@ namespace Example
 
 Create a benefit assessment job.
 
-
-
 Requires ANY permissions: 
 
 * routing:assessment:add
@@ -6901,8 +6711,6 @@ namespace Example
 
 
 Create a route
-
-
 
 Requires ALL permissions: 
 
@@ -6971,8 +6779,6 @@ Tests the custom SMTP server integration connection set on this domain
 
 The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -7038,8 +6844,6 @@ namespace Example
 
 Create a domain
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -7102,8 +6906,6 @@ namespace Example
 
 
 Create a domain
-
-
 
 Requires ALL permissions: 
 
@@ -7168,8 +6970,6 @@ namespace Example
 
 Create a simulated domain
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -7232,8 +7032,6 @@ namespace Example
 
 
 Create Language
-
-
 
 Requires ANY permissions: 
 
@@ -7298,8 +7096,6 @@ namespace Example
 
 Create a predictor.
 
-
-
 Requires ALL permissions: 
 
 * routing:predictor:add
@@ -7363,8 +7159,6 @@ namespace Example
 
 
 Bulk add or delete up to 100 queue members
-
-
 
 Requires ANY permissions: 
 
@@ -7433,8 +7227,6 @@ void (empty response body)
 
 DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:edit
@@ -7502,8 +7294,6 @@ void (empty response body)
 
 Add up to 100 wrap-up codes to a queue
 
-
-
 Requires ALL permissions: 
 
 * routing:queue:edit
@@ -7569,8 +7359,6 @@ namespace Example
 
 Create a queue
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:add
@@ -7633,8 +7421,6 @@ namespace Example
 
 
 Add or remove member divisions for this skill group.
-
-
 
 Requires ALL permissions: 
 
@@ -7700,8 +7486,6 @@ void (empty response body)
 
 Create a skill group
 
-
-
 Requires ANY permissions: 
 
 * routing:skillGroup:add
@@ -7764,8 +7548,6 @@ namespace Example
 
 
 Create Skill
-
-
 
 Requires ANY permissions: 
 
@@ -7830,8 +7612,6 @@ namespace Example
 
 Provision an Address for SMS
 
-
-
 Requires ALL permissions: 
 
 * sms:phoneNumber:add
@@ -7894,8 +7674,6 @@ namespace Example
 
 
 Provision a phone number for SMS
-
-
 
 Requires ALL permissions: 
 
@@ -7960,7 +7738,7 @@ namespace Example
 
 Imports a phone number for SMS
 
-
+PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -8025,7 +7803,7 @@ namespace Example
 
 Create an utilization tag
 
-
+PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -8090,8 +7868,6 @@ namespace Example
 
 Create a wrap-up code
 
-
-
 Requires ALL permissions: 
 
 * routing:wrapupCode:add
@@ -8154,8 +7930,6 @@ namespace Example
 
 
 Add routing language to user
-
-
 
 Requires ANY permissions: 
 
@@ -8223,8 +7997,6 @@ namespace Example
 
 Add routing skill to user
 
-
-
 Requires ALL permissions: 
 
 * routing:skill:assign
@@ -8289,8 +8061,6 @@ namespace Example
 
 
 Update a route
-
-
 
 Requires ALL permissions: 
 
@@ -8359,8 +8129,6 @@ namespace Example
 
 Request an activation status (cname + dkim) update of an outbound domain
 
-
-
 Requires ALL permissions: 
 
 * routing:email:manage
@@ -8423,8 +8191,6 @@ namespace Example
 
 
 Update a recipient
-
-
 
 Requires ALL permissions: 
 
@@ -8491,8 +8257,6 @@ namespace Example
 
 Update a queue
 
-
-
 Requires ANY permissions: 
 
 * routing:queue:edit
@@ -8558,8 +8322,6 @@ namespace Example
 
 Update an organization's routing settings
 
-
-
 Requires ANY permissions: 
 
 * routing:settings:edit
@@ -8623,8 +8385,6 @@ namespace Example
 
 Update Transcription Settings
 
-
-
 Requires ANY permissions: 
 
 * routing:transcriptionSettings:edit
@@ -8687,8 +8447,6 @@ namespace Example
 
 
 Update a phone number provisioned for SMS.
-
-
 
 Requires ALL permissions: 
 
@@ -8755,8 +8513,6 @@ namespace Example
 
 Update the user's max utilization settings.  Include only those media types requiring custom configuration.
 
-
-
 Requires ANY permissions: 
 
 * routing:utilization:manage
@@ -8822,8 +8578,6 @@ namespace Example
 
 Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
 
-
-
 Requires ALL permissions: 
 
 * routing:utilization:manage
@@ -8886,8 +8640,6 @@ namespace Example
 
 
 Update wrap-up code
-
-
 
 Requires ALL permissions: 
 
@@ -8953,8 +8705,6 @@ namespace Example
 
 
 Update routing skill proficiency or state.
-
-
 
 Requires ALL permissions: 
 
@@ -9022,8 +8772,6 @@ namespace Example
 
 
 Replace all routing skills assigned to a user
-
-
 
 Requires ANY permissions: 
 

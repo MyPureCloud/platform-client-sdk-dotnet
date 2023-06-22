@@ -26,8 +26,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a division.
 
-
-
 Requires ANY permissions: 
 
 * authorization:division:delete
@@ -91,8 +89,6 @@ void (empty response body)
 
 
 Returns an authorization division.
-
-
 
 Requires NO permissions: 
 
@@ -159,8 +155,6 @@ namespace Example
 Retrieve a list of all divisions defined for the organization
 
 Request specific divisions by id using a query param \"id\", e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&id=72e9fb25-c484-488d-9312-7acba82435b3
-
-
 
 Requires NO permissions: 
 
@@ -242,8 +236,6 @@ Retrieve the home division for the organization.
 
 Will not include object counts.
 
-
-
 Requires NO permissions: 
 
 
@@ -300,8 +292,6 @@ This endpoint does require any parameters.
 
 
 Returns the maximum allowed number of divisions.
-
-
 
 Requires NO permissions: 
 
@@ -361,8 +351,6 @@ This endpoint does require any parameters.
 Assign a list of objects to a division
 
 Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, DATATABLES or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\"206ce31f-61ec-40ed-a8b1-be6f06303998\",\"250a754e-f5e4-4f51-800f-a92f09d3bf8c\"]
-
-
 
 Requires NO permissions: 
 
@@ -429,8 +417,6 @@ void (empty response body)
 
 Recreate a previously deleted division.
 
-
-
 Requires ANY permissions: 
 
 * authorization:division:add
@@ -496,8 +482,6 @@ namespace Example
 
 Create a division.
 
-
-
 Requires ALL permissions: 
 
 * authorization:division:add
@@ -561,8 +545,6 @@ namespace Example
 
 
 Update a division.
-
-
 
 Requires ANY permissions: 
 

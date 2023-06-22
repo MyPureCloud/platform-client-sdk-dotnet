@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Integration</returns>
         
-        
         Integration DeleteIntegration (string integrationId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>ApiResponse of Integration</returns>
-        
         
         ApiResponse<Integration> DeleteIntegrationWithHttpInfo (string integrationId);
 
@@ -52,7 +50,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <returns></returns>
         
-        
         void DeleteIntegrationsAction (string actionId);
 
         /// <summary>
@@ -64,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteIntegrationsActionWithHttpInfo (string actionId);
 
@@ -78,7 +74,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <returns></returns>
         
-        
         void DeleteIntegrationsActionDraft (string actionId);
 
         /// <summary>
@@ -90,7 +85,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteIntegrationsActionDraftWithHttpInfo (string actionId);
 
@@ -104,7 +98,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="credentialId">Credential ID</param>
         /// <returns></returns>
         
-        
         void DeleteIntegrationsCredential (string credentialId);
 
         /// <summary>
@@ -116,7 +109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteIntegrationsCredentialWithHttpInfo (string credentialId);
 
@@ -136,7 +128,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Integration</returns>
         
-        
         Integration GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -155,7 +146,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
         
-        
         ApiResponse<Integration> GetIntegrationWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -168,7 +158,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration Id</param>
         /// <returns>IntegrationConfiguration</returns>
         
-        
         IntegrationConfiguration GetIntegrationConfigCurrent (string integrationId);
 
         /// <summary>
@@ -180,7 +169,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>ApiResponse of IntegrationConfiguration</returns>
-        
         
         ApiResponse<IntegrationConfiguration> GetIntegrationConfigCurrentWithHttpInfo (string integrationId);
 
@@ -199,7 +187,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>IntegrationEntityListing</returns>
         
-        
         IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -217,7 +204,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of IntegrationEntityListing</returns>
         
-        
         ApiResponse<IntegrationEntityListing> GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -231,7 +217,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         PureCloudPlatform.Client.V2.Model.Action GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null);
 
@@ -247,7 +232,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
 
         /// <summary>
@@ -261,7 +245,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         PureCloudPlatform.Client.V2.Model.Action GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null);
 
@@ -277,7 +260,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
 
         /// <summary>
@@ -290,7 +272,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
         /// <returns>JsonSchemaDocument</returns>
-        
         
         JsonSchemaDocument GetIntegrationsActionDraftSchema (string actionId, string fileName);
 
@@ -305,7 +286,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
         
-        
         ApiResponse<JsonSchemaDocument> GetIntegrationsActionDraftSchemaWithHttpInfo (string actionId, string fileName);
 
         /// <summary>
@@ -318,7 +298,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action draft.</param>
         /// <returns>string</returns>
-        
         
         string GetIntegrationsActionDraftTemplate (string actionId, string fileName);
 
@@ -333,7 +312,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">Name of template file to be retrieved for this action draft.</param>
         /// <returns>ApiResponse of string</returns>
         
-        
         ApiResponse<string> GetIntegrationsActionDraftTemplateWithHttpInfo (string actionId, string fileName);
 
         /// <summary>
@@ -346,7 +324,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <returns>DraftValidationResult</returns>
         
-        
         DraftValidationResult GetIntegrationsActionDraftValidation (string actionId);
 
         /// <summary>
@@ -358,7 +335,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>ApiResponse of DraftValidationResult</returns>
-        
         
         ApiResponse<DraftValidationResult> GetIntegrationsActionDraftValidationWithHttpInfo (string actionId);
 
@@ -373,7 +349,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
         /// <returns>JsonSchemaDocument</returns>
         
-        
         JsonSchemaDocument GetIntegrationsActionSchema (string actionId, string fileName);
 
         /// <summary>
@@ -386,7 +361,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        
         
         ApiResponse<JsonSchemaDocument> GetIntegrationsActionSchemaWithHttpInfo (string actionId, string fileName);
 
@@ -401,7 +375,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">Name of template file to be retrieved for this action.</param>
         /// <returns>string</returns>
         
-        
         string GetIntegrationsActionTemplate (string actionId, string fileName);
 
         /// <summary>
@@ -414,7 +387,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action.</param>
         /// <returns>ApiResponse of string</returns>
-        
         
         ApiResponse<string> GetIntegrationsActionTemplateWithHttpInfo (string actionId, string fileName);
 
@@ -438,7 +410,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ActionEntityListing</returns>
         
-        
         ActionEntityListing GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
@@ -461,7 +432,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
         
-        
         ApiResponse<ActionEntityListing> GetIntegrationsActionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
@@ -480,7 +450,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>CategoryEntityListing</returns>
         
-        
         CategoryEntityListing GetIntegrationsActionsCategories (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
 
         /// <summary>
@@ -498,7 +467,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>ApiResponse of CategoryEntityListing</returns>
-        
         
         ApiResponse<CategoryEntityListing> GetIntegrationsActionsCategoriesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
 
@@ -522,7 +490,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ActionEntityListing</returns>
         
-        
         ActionEntityListing GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
@@ -545,7 +512,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
         
-        
         ApiResponse<ActionEntityListing> GetIntegrationsActionsDraftsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
@@ -560,7 +526,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="version">Specific Version (optional)</param>
         /// <returns>BotConnectorBot</returns>
         
-        
         BotConnectorBot GetIntegrationsBotconnectorIntegrationIdBot (string integrationId, string botId, string version = null);
 
         /// <summary>
@@ -574,7 +539,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botId">The botID for this bot</param>
         /// <param name="version">Specific Version (optional)</param>
         /// <returns>ApiResponse of BotConnectorBot</returns>
-        
         
         ApiResponse<BotConnectorBot> GetIntegrationsBotconnectorIntegrationIdBotWithHttpInfo (string integrationId, string botId, string version = null);
 
@@ -591,7 +555,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>BotConnectorBotVersionSummaryEntityListing</returns>
         
-        
         BotConnectorBotVersionSummaryEntityListing GetIntegrationsBotconnectorIntegrationIdBotVersions (string integrationId, string botId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -607,7 +570,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of BotConnectorBotVersionSummaryEntityListing</returns>
         
-        
         ApiResponse<BotConnectorBotVersionSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotVersionsWithHttpInfo (string integrationId, string botId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -620,7 +582,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <returns>BotList</returns>
         
-        
         BotList GetIntegrationsBotconnectorIntegrationIdBots (string integrationId);
 
         /// <summary>
@@ -632,7 +593,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <returns>ApiResponse of BotList</returns>
-        
         
         ApiResponse<BotList> GetIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo (string integrationId);
 
@@ -648,7 +608,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>BotConnectorBotSummaryEntityListing</returns>
         
-        
         BotConnectorBotSummaryEntityListing GetIntegrationsBotconnectorIntegrationIdBotsSummaries (string integrationId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -662,7 +621,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of BotConnectorBotSummaryEntityListing</returns>
-        
         
         ApiResponse<BotConnectorBotSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotsSummariesWithHttpInfo (string integrationId, int? pageNumber = null, int? pageSize = null);
 
@@ -681,7 +639,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ClientAppEntityListing</returns>
         
-        
         ClientAppEntityListing GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -698,7 +655,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of ClientAppEntityListing</returns>
-        
         
         ApiResponse<ClientAppEntityListing> GetIntegrationsClientappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
@@ -717,7 +673,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>UCIntegrationListing</returns>
         
-        
         UCIntegrationListing GetIntegrationsClientappsUnifiedcommunications (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -735,7 +690,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of UCIntegrationListing</returns>
         
-        
         ApiResponse<UCIntegrationListing> GetIntegrationsClientappsUnifiedcommunicationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -748,7 +702,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Credential</returns>
         
-        
         Credential GetIntegrationsCredential (string credentialId);
 
         /// <summary>
@@ -760,7 +713,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>ApiResponse of Credential</returns>
-        
         
         ApiResponse<Credential> GetIntegrationsCredentialWithHttpInfo (string credentialId);
 
@@ -775,7 +727,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>CredentialInfoListing</returns>
         
-        
         CredentialInfoListing GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -789,7 +740,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CredentialInfoListing</returns>
         
-        
         ApiResponse<CredentialInfoListing> GetIntegrationsCredentialsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -801,7 +751,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CredentialTypeListing</returns>
         
-        
         CredentialTypeListing GetIntegrationsCredentialsTypes ();
 
         /// <summary>
@@ -812,7 +761,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CredentialTypeListing</returns>
-        
         
         ApiResponse<CredentialTypeListing> GetIntegrationsCredentialsTypesWithHttpInfo ();
 
@@ -826,7 +774,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent ID</param>
         /// <returns>DialogflowAgent</returns>
         
-        
         DialogflowAgent GetIntegrationsSpeechDialogflowAgent (string agentId);
 
         /// <summary>
@@ -838,7 +785,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The agent ID</param>
         /// <returns>ApiResponse of DialogflowAgent</returns>
-        
         
         ApiResponse<DialogflowAgent> GetIntegrationsSpeechDialogflowAgentWithHttpInfo (string agentId);
 
@@ -854,7 +800,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on agent name (optional)</param>
         /// <returns>DialogflowAgentSummaryEntityListing</returns>
         
-        
         DialogflowAgentSummaryEntityListing GetIntegrationsSpeechDialogflowAgents (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
@@ -869,7 +814,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on agent name (optional)</param>
         /// <returns>ApiResponse of DialogflowAgentSummaryEntityListing</returns>
         
-        
         ApiResponse<DialogflowAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowAgentsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
@@ -882,7 +826,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="aliasId">The alias ID</param>
         /// <returns>LexBotAlias</returns>
         
-        
         LexBotAlias GetIntegrationsSpeechLexBotAlias (string aliasId);
 
         /// <summary>
@@ -894,7 +837,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aliasId">The alias ID</param>
         /// <returns>ApiResponse of LexBotAlias</returns>
-        
         
         ApiResponse<LexBotAlias> GetIntegrationsSpeechLexBotAliasWithHttpInfo (string aliasId);
 
@@ -912,7 +854,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on alias name (optional)</param>
         /// <returns>LexBotAliasEntityListing</returns>
         
-        
         LexBotAliasEntityListing GetIntegrationsSpeechLexBotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
 
         /// <summary>
@@ -929,7 +870,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on alias name (optional)</param>
         /// <returns>ApiResponse of LexBotAliasEntityListing</returns>
         
-        
         ApiResponse<LexBotAliasEntityListing> GetIntegrationsSpeechLexBotBotIdAliasesWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
 
         /// <summary>
@@ -943,7 +883,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on bot name (optional)</param>
         /// <returns>LexBotEntityListing</returns>
-        
         
         LexBotEntityListing GetIntegrationsSpeechLexBots (int? pageNumber = null, int? pageSize = null, string name = null);
 
@@ -959,7 +898,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on bot name (optional)</param>
         /// <returns>ApiResponse of LexBotEntityListing</returns>
         
-        
         ApiResponse<LexBotEntityListing> GetIntegrationsSpeechLexBotsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
@@ -967,6 +905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -975,7 +914,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="targetChannel">targetChannel (optional)</param>
         /// <returns>NuanceBot</returns>
         
-        /// Preview Endpoint
         NuanceBot GetIntegrationsSpeechNuanceNuanceIntegrationIdBot (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null);
 
         /// <summary>
@@ -983,6 +921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -991,7 +930,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="targetChannel">targetChannel (optional)</param>
         /// <returns>ApiResponse of NuanceBot</returns>
         
-        /// Preview Endpoint
         ApiResponse<NuanceBot> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotWithHttpInfo (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null);
 
         /// <summary>
@@ -999,6 +937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1006,7 +945,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>AsyncJob</returns>
         
-        /// Preview Endpoint
         AsyncJob GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob (string nuanceIntegrationId, string botId, string jobId);
 
         /// <summary>
@@ -1014,6 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1021,7 +960,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>ApiResponse of AsyncJob</returns>
         
-        /// Preview Endpoint
         ApiResponse<AsyncJob> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobWithHttpInfo (string nuanceIntegrationId, string botId, string jobId);
 
         /// <summary>
@@ -1029,6 +967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1036,7 +975,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>NuanceBot</returns>
         
-        /// Preview Endpoint
         NuanceBot GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults (string nuanceIntegrationId, string botId, string jobId);
 
         /// <summary>
@@ -1044,6 +982,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1051,7 +990,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>ApiResponse of NuanceBot</returns>
         
-        /// Preview Endpoint
         ApiResponse<NuanceBot> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsWithHttpInfo (string nuanceIntegrationId, string botId, string jobId);
 
         /// <summary>
@@ -1059,6 +997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1067,7 +1006,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         NuanceBotEntityListing GetIntegrationsSpeechNuanceNuanceIntegrationIdBots (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null);
 
         /// <summary>
@@ -1075,6 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1083,7 +1022,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>ApiResponse of NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<NuanceBotEntityListing> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsWithHttpInfo (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null);
 
         /// <summary>
@@ -1091,13 +1029,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>AsyncJob</returns>
         
-        /// Preview Endpoint
         AsyncJob GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob (string nuanceIntegrationId, string jobId);
 
         /// <summary>
@@ -1105,13 +1043,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>ApiResponse of AsyncJob</returns>
         
-        /// Preview Endpoint
         ApiResponse<AsyncJob> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobWithHttpInfo (string nuanceIntegrationId, string jobId);
 
         /// <summary>
@@ -1119,13 +1057,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         NuanceBotEntityListing GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults (string nuanceIntegrationId, string jobId);
 
         /// <summary>
@@ -1133,13 +1071,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>ApiResponse of NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         ApiResponse<NuanceBotEntityListing> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsWithHttpInfo (string nuanceIntegrationId, string jobId);
 
         /// <summary>
@@ -1152,7 +1090,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="engineId">The engine ID</param>
         /// <param name="includeVoices">Include voices for the engine (optional, default to false)</param>
         /// <returns>TtsEngineEntity</returns>
-        
         
         TtsEngineEntity GetIntegrationsSpeechTtsEngine (string engineId, bool? includeVoices = null);
 
@@ -1167,7 +1104,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeVoices">Include voices for the engine (optional, default to false)</param>
         /// <returns>ApiResponse of TtsEngineEntity</returns>
         
-        
         ApiResponse<TtsEngineEntity> GetIntegrationsSpeechTtsEngineWithHttpInfo (string engineId, bool? includeVoices = null);
 
         /// <summary>
@@ -1181,7 +1117,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="voiceId">The voice ID</param>
         /// <returns>TtsVoiceEntity</returns>
         
-        
         TtsVoiceEntity GetIntegrationsSpeechTtsEngineVoice (string engineId, string voiceId);
 
         /// <summary>
@@ -1194,7 +1129,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="engineId">The engine ID</param>
         /// <param name="voiceId">The voice ID</param>
         /// <returns>ApiResponse of TtsVoiceEntity</returns>
-        
         
         ApiResponse<TtsVoiceEntity> GetIntegrationsSpeechTtsEngineVoiceWithHttpInfo (string engineId, string voiceId);
 
@@ -1210,7 +1144,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>TtsVoiceEntityListing</returns>
         
-        
         TtsVoiceEntityListing GetIntegrationsSpeechTtsEngineVoices (string engineId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1224,7 +1157,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of TtsVoiceEntityListing</returns>
-        
         
         ApiResponse<TtsVoiceEntityListing> GetIntegrationsSpeechTtsEngineVoicesWithHttpInfo (string engineId, int? pageNumber = null, int? pageSize = null);
 
@@ -1242,7 +1174,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)</param>
         /// <returns>TtsEngineEntityListing</returns>
         
-        
         TtsEngineEntityListing GetIntegrationsSpeechTtsEngines (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null);
 
         /// <summary>
@@ -1259,7 +1190,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)</param>
         /// <returns>ApiResponse of TtsEngineEntityListing</returns>
         
-        
         ApiResponse<TtsEngineEntityListing> GetIntegrationsSpeechTtsEnginesWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null);
 
         /// <summary>
@@ -1271,7 +1201,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TtsSettings</returns>
         
-        
         TtsSettings GetIntegrationsSpeechTtsSettings ();
 
         /// <summary>
@@ -1282,7 +1211,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TtsSettings</returns>
-        
         
         ApiResponse<TtsSettings> GetIntegrationsSpeechTtsSettingsWithHttpInfo ();
 
@@ -1296,7 +1224,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="typeId">Integration Type Id</param>
         /// <returns>IntegrationType</returns>
         
-        
         IntegrationType GetIntegrationsType (string typeId);
 
         /// <summary>
@@ -1308,7 +1235,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <returns>ApiResponse of IntegrationType</returns>
-        
         
         ApiResponse<IntegrationType> GetIntegrationsTypeWithHttpInfo (string typeId);
 
@@ -1323,7 +1249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configType">Config schema type</param>
         /// <returns>JsonSchemaDocument</returns>
         
-        
         JsonSchemaDocument GetIntegrationsTypeConfigschema (string typeId, string configType);
 
         /// <summary>
@@ -1336,7 +1261,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="typeId">Integration Type Id</param>
         /// <param name="configType">Config schema type</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        
         
         ApiResponse<JsonSchemaDocument> GetIntegrationsTypeConfigschemaWithHttpInfo (string typeId, string configType);
 
@@ -1355,7 +1279,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>IntegrationTypeEntityListing</returns>
         
-        
         IntegrationTypeEntityListing GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -1372,7 +1295,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of IntegrationTypeEntityListing</returns>
-        
         
         ApiResponse<IntegrationTypeEntityListing> GetIntegrationsTypesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
@@ -1392,7 +1314,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appHost">The type of UserApp to filter by (optional)</param>
         /// <returns>UserAppEntityListing</returns>
         
-        
         UserAppEntityListing GetIntegrationsUserapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null);
 
         /// <summary>
@@ -1410,7 +1331,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="appHost">The type of UserApp to filter by (optional)</param>
         /// <returns>ApiResponse of UserAppEntityListing</returns>
-        
         
         ApiResponse<UserAppEntityListing> GetIntegrationsUserappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null);
 
@@ -1431,7 +1351,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Update (optional)</param>
         /// <returns>Integration</returns>
         
-        
         Integration PatchIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null);
 
         /// <summary>
@@ -1451,7 +1370,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Update (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
         
-        
         ApiResponse<Integration> PatchIntegrationWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null);
 
         /// <summary>
@@ -1464,7 +1382,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         PureCloudPlatform.Client.V2.Model.Action PatchIntegrationsAction (string actionId, UpdateActionInput body);
 
@@ -1479,7 +1396,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> PatchIntegrationsActionWithHttpInfo (string actionId, UpdateActionInput body);
 
         /// <summary>
@@ -1492,7 +1408,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action Draft.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         PureCloudPlatform.Client.V2.Model.Action PatchIntegrationsActionDraft (string actionId, UpdateDraftInput body);
 
@@ -1507,7 +1422,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to patch the Action Draft.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> PatchIntegrationsActionDraftWithHttpInfo (string actionId, UpdateDraftInput body);
 
         /// <summary>
@@ -1519,7 +1433,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Integration (optional)</param>
         /// <returns>Integration</returns>
-        
         
         Integration PostIntegrations (CreateIntegrationRequest body = null);
 
@@ -1533,7 +1446,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
         
-        
         ApiResponse<Integration> PostIntegrationsWithHttpInfo (CreateIntegrationRequest body = null);
 
         /// <summary>
@@ -1546,7 +1458,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActionDraft (string actionId);
 
         /// <summary>
@@ -1558,7 +1469,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionDraftWithHttpInfo (string actionId);
 
@@ -1573,7 +1483,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body);
 
         /// <summary>
@@ -1586,7 +1495,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionDraftPublishWithHttpInfo (string actionId, PublishDraftInput body);
 
@@ -1601,7 +1509,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>TestExecutionResult</returns>
         
-        
         TestExecutionResult PostIntegrationsActionDraftTest (string actionId, Object body);
 
         /// <summary>
@@ -1614,7 +1521,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>ApiResponse of TestExecutionResult</returns>
-        
         
         ApiResponse<TestExecutionResult> PostIntegrationsActionDraftTestWithHttpInfo (string actionId, Object body);
 
@@ -1629,7 +1535,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Object</returns>
         
-        
         Object PostIntegrationsActionExecute (string actionId, Object body);
 
         /// <summary>
@@ -1642,7 +1547,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>ApiResponse of Object</returns>
-        
         
         ApiResponse<Object> PostIntegrationsActionExecuteWithHttpInfo (string actionId, Object body);
 
@@ -1657,7 +1561,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>TestExecutionResult</returns>
         
-        
         TestExecutionResult PostIntegrationsActionTest (string actionId, Object body);
 
         /// <summary>
@@ -1671,7 +1574,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>ApiResponse of TestExecutionResult</returns>
         
-        
         ApiResponse<TestExecutionResult> PostIntegrationsActionTestWithHttpInfo (string actionId, Object body);
 
         /// <summary>
@@ -1683,7 +1585,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActions (PostActionInput body);
 
@@ -1697,7 +1598,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to create Action.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionsWithHttpInfo (PostActionInput body);
 
         /// <summary>
@@ -1709,7 +1609,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action Draft.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActionsDrafts (PostActionInput body);
 
@@ -1723,7 +1622,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to create Action Draft.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionsDraftsWithHttpInfo (PostActionInput body);
 
         /// <summary>
@@ -1735,7 +1633,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Credential (optional)</param>
         /// <returns>CredentialInfo</returns>
-        
         
         CredentialInfo PostIntegrationsCredentials (Credential body = null);
 
@@ -1749,7 +1646,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Credential (optional)</param>
         /// <returns>ApiResponse of CredentialInfo</returns>
         
-        
         ApiResponse<CredentialInfo> PostIntegrationsCredentialsWithHttpInfo (Credential body = null);
 
         /// <summary>
@@ -1757,6 +1653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1765,7 +1662,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">targetChannel (optional)</param>
         /// <returns>AsyncJob</returns>
         
-        /// Preview Endpoint
         AsyncJob PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null);
 
         /// <summary>
@@ -1773,6 +1669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1781,7 +1678,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">targetChannel (optional)</param>
         /// <returns>ApiResponse of AsyncJob</returns>
         
-        /// Preview Endpoint
         ApiResponse<AsyncJob> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsWithHttpInfo (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null);
 
         /// <summary>
@@ -1789,6 +1685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1797,7 +1694,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>AsyncJob</returns>
         
-        /// Preview Endpoint
         AsyncJob PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null);
 
         /// <summary>
@@ -1805,6 +1701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1813,7 +1710,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>ApiResponse of AsyncJob</returns>
         
-        /// Preview Endpoint
         ApiResponse<AsyncJob> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsWithHttpInfo (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null);
 
         /// <summary>
@@ -1821,13 +1717,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate (string nuanceIntegrationId, BotExecutionConfiguration settings);
 
         /// <summary>
@@ -1835,13 +1731,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateWithHttpInfo (string nuanceIntegrationId, BotExecutionConfiguration settings);
 
         /// <summary>
@@ -1854,7 +1750,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>IntegrationConfiguration</returns>
-        
         
         IntegrationConfiguration PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null);
 
@@ -1869,7 +1764,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>ApiResponse of IntegrationConfiguration</returns>
         
-        
         ApiResponse<IntegrationConfiguration> PutIntegrationConfigCurrentWithHttpInfo (string integrationId, IntegrationConfiguration body = null);
 
         /// <summary>
@@ -1882,7 +1776,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botList"></param>
         /// <returns></returns>
-        
         
         void PutIntegrationsBotconnectorIntegrationIdBots (string integrationId, BotList botList);
 
@@ -1897,7 +1790,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botList"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> PutIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo (string integrationId, BotList botList);
 
         /// <summary>
@@ -1910,7 +1802,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="credentialId">Credential ID</param>
         /// <param name="body">Credential (optional)</param>
         /// <returns>CredentialInfo</returns>
-        
         
         CredentialInfo PutIntegrationsCredential (string credentialId, Credential body = null);
 
@@ -1925,7 +1816,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Credential (optional)</param>
         /// <returns>ApiResponse of CredentialInfo</returns>
         
-        
         ApiResponse<CredentialInfo> PutIntegrationsCredentialWithHttpInfo (string credentialId, Credential body = null);
 
         /// <summary>
@@ -1933,13 +1823,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         void PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings (string nuanceIntegrationId, NuanceBotLaunchSettings settings);
 
         /// <summary>
@@ -1947,13 +1837,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         ApiResponse<Object> PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsWithHttpInfo (string nuanceIntegrationId, NuanceBotLaunchSettings settings);
 
         /// <summary>
@@ -1965,7 +1855,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Updated TtsSettings</param>
         /// <returns>TtsSettings</returns>
-        
         
         TtsSettings PutIntegrationsSpeechTtsSettings (TtsSettings body);
 
@@ -1979,8 +1868,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated TtsSettings</param>
         /// <returns>ApiResponse of TtsSettings</returns>
         
-        
         ApiResponse<TtsSettings> PutIntegrationsSpeechTtsSettingsWithHttpInfo (TtsSettings body);
+
+        /// <summary>
+        /// Bulk integration presence ingestion
+        /// </summary>
+        /// <remarks>
+        /// This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">UC Integration ID</param>
+        /// <param name="body">List of User presences</param>
+        /// <returns>string</returns>
+        
+        string PutIntegrationsUnifiedcommunicationThirdpartypresences (string ucIntegrationId, List<UCThirdPartyPresence> body);
+
+        /// <summary>
+        /// Bulk integration presence ingestion
+        /// </summary>
+        /// <remarks>
+        /// This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">UC Integration ID</param>
+        /// <param name="body">List of User presences</param>
+        /// <returns>ApiResponse of string</returns>
+        
+        ApiResponse<string> PutIntegrationsUnifiedcommunicationThirdpartypresencesWithHttpInfo (string ucIntegrationId, List<UCThirdPartyPresence> body);
 
         #endregion Synchronous Operations
 
@@ -1996,7 +1910,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Task of Integration</returns>
         
-        
         System.Threading.Tasks.Task<Integration> DeleteIntegrationAsync (string integrationId);
 
         /// <summary>
@@ -2008,7 +1921,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Integration>> DeleteIntegrationAsyncWithHttpInfo (string integrationId);
 
@@ -2022,7 +1934,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteIntegrationsActionAsync (string actionId);
 
         /// <summary>
@@ -2034,7 +1945,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIntegrationsActionAsyncWithHttpInfo (string actionId);
 
@@ -2048,7 +1958,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteIntegrationsActionDraftAsync (string actionId);
 
         /// <summary>
@@ -2060,7 +1969,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIntegrationsActionDraftAsyncWithHttpInfo (string actionId);
 
@@ -2074,7 +1982,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteIntegrationsCredentialAsync (string credentialId);
 
         /// <summary>
@@ -2086,7 +1993,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIntegrationsCredentialAsyncWithHttpInfo (string credentialId);
 
@@ -2106,7 +2012,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of Integration</returns>
         
-        
         System.Threading.Tasks.Task<Integration> GetIntegrationAsync (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -2125,7 +2030,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Integration>> GetIntegrationAsyncWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -2138,7 +2042,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Task of IntegrationConfiguration</returns>
         
-        
         System.Threading.Tasks.Task<IntegrationConfiguration> GetIntegrationConfigCurrentAsync (string integrationId);
 
         /// <summary>
@@ -2150,7 +2053,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Task of ApiResponse (IntegrationConfiguration)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<IntegrationConfiguration>> GetIntegrationConfigCurrentAsyncWithHttpInfo (string integrationId);
 
@@ -2169,7 +2071,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of IntegrationEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -2187,7 +2088,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -2201,7 +2101,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionAsync (string actionId, string expand = null, bool? includeConfig = null);
 
@@ -2217,7 +2116,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
 
         /// <summary>
@@ -2231,7 +2129,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftAsync (string actionId, string expand = null, bool? includeConfig = null);
 
@@ -2247,7 +2144,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
 
         /// <summary>
@@ -2260,7 +2156,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
         /// <returns>Task of JsonSchemaDocument</returns>
-        
         
         System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionDraftSchemaAsync (string actionId, string fileName);
 
@@ -2275,7 +2170,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionDraftSchemaAsyncWithHttpInfo (string actionId, string fileName);
 
         /// <summary>
@@ -2288,7 +2182,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action draft.</param>
         /// <returns>Task of string</returns>
-        
         
         System.Threading.Tasks.Task<string> GetIntegrationsActionDraftTemplateAsync (string actionId, string fileName);
 
@@ -2303,7 +2196,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">Name of template file to be retrieved for this action draft.</param>
         /// <returns>Task of ApiResponse (string)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<string>> GetIntegrationsActionDraftTemplateAsyncWithHttpInfo (string actionId, string fileName);
 
         /// <summary>
@@ -2316,7 +2208,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <returns>Task of DraftValidationResult</returns>
         
-        
         System.Threading.Tasks.Task<DraftValidationResult> GetIntegrationsActionDraftValidationAsync (string actionId);
 
         /// <summary>
@@ -2328,7 +2219,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of ApiResponse (DraftValidationResult)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<DraftValidationResult>> GetIntegrationsActionDraftValidationAsyncWithHttpInfo (string actionId);
 
@@ -2343,7 +2233,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
         /// <returns>Task of JsonSchemaDocument</returns>
         
-        
         System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionSchemaAsync (string actionId, string fileName);
 
         /// <summary>
@@ -2356,7 +2245,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionSchemaAsyncWithHttpInfo (string actionId, string fileName);
 
@@ -2371,7 +2259,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">Name of template file to be retrieved for this action.</param>
         /// <returns>Task of string</returns>
         
-        
         System.Threading.Tasks.Task<string> GetIntegrationsActionTemplateAsync (string actionId, string fileName);
 
         /// <summary>
@@ -2384,7 +2271,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<string>> GetIntegrationsActionTemplateAsyncWithHttpInfo (string actionId, string fileName);
 
@@ -2408,7 +2294,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ActionEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
@@ -2431,7 +2316,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
@@ -2450,7 +2334,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of CategoryEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
 
         /// <summary>
@@ -2468,7 +2351,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
 
@@ -2492,7 +2374,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ActionEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
@@ -2515,7 +2396,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
 
         /// <summary>
@@ -2530,7 +2410,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="version">Specific Version (optional)</param>
         /// <returns>Task of BotConnectorBot</returns>
         
-        
         System.Threading.Tasks.Task<BotConnectorBot> GetIntegrationsBotconnectorIntegrationIdBotAsync (string integrationId, string botId, string version = null);
 
         /// <summary>
@@ -2544,7 +2423,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botId">The botID for this bot</param>
         /// <param name="version">Specific Version (optional)</param>
         /// <returns>Task of ApiResponse (BotConnectorBot)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<BotConnectorBot>> GetIntegrationsBotconnectorIntegrationIdBotAsyncWithHttpInfo (string integrationId, string botId, string version = null);
 
@@ -2561,7 +2439,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of BotConnectorBotVersionSummaryEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<BotConnectorBotVersionSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotVersionsAsync (string integrationId, string botId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -2577,7 +2454,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotConnectorBotVersionSummaryEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<BotConnectorBotVersionSummaryEntityListing>> GetIntegrationsBotconnectorIntegrationIdBotVersionsAsyncWithHttpInfo (string integrationId, string botId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -2590,7 +2466,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <returns>Task of BotList</returns>
         
-        
         System.Threading.Tasks.Task<BotList> GetIntegrationsBotconnectorIntegrationIdBotsAsync (string integrationId);
 
         /// <summary>
@@ -2602,7 +2477,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <returns>Task of ApiResponse (BotList)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<BotList>> GetIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo (string integrationId);
 
@@ -2618,7 +2492,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of BotConnectorBotSummaryEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<BotConnectorBotSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsync (string integrationId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -2632,7 +2505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotConnectorBotSummaryEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<BotConnectorBotSummaryEntityListing>> GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsyncWithHttpInfo (string integrationId, int? pageNumber = null, int? pageSize = null);
 
@@ -2651,7 +2523,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ClientAppEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ClientAppEntityListing> GetIntegrationsClientappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -2668,7 +2539,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (ClientAppEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ClientAppEntityListing>> GetIntegrationsClientappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
@@ -2687,7 +2557,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of UCIntegrationListing</returns>
         
-        
         System.Threading.Tasks.Task<UCIntegrationListing> GetIntegrationsClientappsUnifiedcommunicationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -2705,7 +2574,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (UCIntegrationListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<UCIntegrationListing>> GetIntegrationsClientappsUnifiedcommunicationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -2718,7 +2586,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Task of Credential</returns>
         
-        
         System.Threading.Tasks.Task<Credential> GetIntegrationsCredentialAsync (string credentialId);
 
         /// <summary>
@@ -2730,7 +2597,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Task of ApiResponse (Credential)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Credential>> GetIntegrationsCredentialAsyncWithHttpInfo (string credentialId);
 
@@ -2745,7 +2611,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of CredentialInfoListing</returns>
         
-        
         System.Threading.Tasks.Task<CredentialInfoListing> GetIntegrationsCredentialsAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -2759,7 +2624,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CredentialInfoListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CredentialInfoListing>> GetIntegrationsCredentialsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -2771,7 +2635,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CredentialTypeListing</returns>
         
-        
         System.Threading.Tasks.Task<CredentialTypeListing> GetIntegrationsCredentialsTypesAsync ();
 
         /// <summary>
@@ -2782,7 +2645,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CredentialTypeListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CredentialTypeListing>> GetIntegrationsCredentialsTypesAsyncWithHttpInfo ();
 
@@ -2796,7 +2658,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">The agent ID</param>
         /// <returns>Task of DialogflowAgent</returns>
         
-        
         System.Threading.Tasks.Task<DialogflowAgent> GetIntegrationsSpeechDialogflowAgentAsync (string agentId);
 
         /// <summary>
@@ -2808,7 +2669,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The agent ID</param>
         /// <returns>Task of ApiResponse (DialogflowAgent)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<DialogflowAgent>> GetIntegrationsSpeechDialogflowAgentAsyncWithHttpInfo (string agentId);
 
@@ -2824,7 +2684,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on agent name (optional)</param>
         /// <returns>Task of DialogflowAgentSummaryEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<DialogflowAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowAgentsAsync (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
@@ -2839,7 +2698,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on agent name (optional)</param>
         /// <returns>Task of ApiResponse (DialogflowAgentSummaryEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DialogflowAgentSummaryEntityListing>> GetIntegrationsSpeechDialogflowAgentsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
@@ -2852,7 +2710,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="aliasId">The alias ID</param>
         /// <returns>Task of LexBotAlias</returns>
         
-        
         System.Threading.Tasks.Task<LexBotAlias> GetIntegrationsSpeechLexBotAliasAsync (string aliasId);
 
         /// <summary>
@@ -2864,7 +2721,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aliasId">The alias ID</param>
         /// <returns>Task of ApiResponse (LexBotAlias)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<LexBotAlias>> GetIntegrationsSpeechLexBotAliasAsyncWithHttpInfo (string aliasId);
 
@@ -2882,7 +2738,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on alias name (optional)</param>
         /// <returns>Task of LexBotAliasEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<LexBotAliasEntityListing> GetIntegrationsSpeechLexBotBotIdAliasesAsync (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
 
         /// <summary>
@@ -2899,7 +2754,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on alias name (optional)</param>
         /// <returns>Task of ApiResponse (LexBotAliasEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<LexBotAliasEntityListing>> GetIntegrationsSpeechLexBotBotIdAliasesAsyncWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
 
         /// <summary>
@@ -2913,7 +2767,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on bot name (optional)</param>
         /// <returns>Task of LexBotEntityListing</returns>
-        
         
         System.Threading.Tasks.Task<LexBotEntityListing> GetIntegrationsSpeechLexBotsAsync (int? pageNumber = null, int? pageSize = null, string name = null);
 
@@ -2929,7 +2782,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on bot name (optional)</param>
         /// <returns>Task of ApiResponse (LexBotEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<LexBotEntityListing>> GetIntegrationsSpeechLexBotsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
@@ -2937,6 +2789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -2945,7 +2798,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="targetChannel">targetChannel (optional)</param>
         /// <returns>Task of NuanceBot</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<NuanceBot> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotAsync (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null);
 
         /// <summary>
@@ -2953,6 +2805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -2961,7 +2814,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="targetChannel">targetChannel (optional)</param>
         /// <returns>Task of ApiResponse (NuanceBot)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<NuanceBot>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotAsyncWithHttpInfo (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null);
 
         /// <summary>
@@ -2969,6 +2821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -2976,7 +2829,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of AsyncJob</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<AsyncJob> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobAsync (string nuanceIntegrationId, string botId, string jobId);
 
         /// <summary>
@@ -2984,6 +2836,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -2991,7 +2844,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of ApiResponse (AsyncJob)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<AsyncJob>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobAsyncWithHttpInfo (string nuanceIntegrationId, string botId, string jobId);
 
         /// <summary>
@@ -2999,6 +2851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3006,7 +2859,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of NuanceBot</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<NuanceBot> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsAsync (string nuanceIntegrationId, string botId, string jobId);
 
         /// <summary>
@@ -3014,6 +2866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3021,7 +2874,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of ApiResponse (NuanceBot)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<NuanceBot>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsAsyncWithHttpInfo (string nuanceIntegrationId, string botId, string jobId);
 
         /// <summary>
@@ -3029,6 +2881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3037,7 +2890,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>Task of NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<NuanceBotEntityListing> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsAsync (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null);
 
         /// <summary>
@@ -3045,6 +2897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3053,7 +2906,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>Task of ApiResponse (NuanceBotEntityListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<NuanceBotEntityListing>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsAsyncWithHttpInfo (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null);
 
         /// <summary>
@@ -3061,13 +2913,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of AsyncJob</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<AsyncJob> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobAsync (string nuanceIntegrationId, string jobId);
 
         /// <summary>
@@ -3075,13 +2927,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of ApiResponse (AsyncJob)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<AsyncJob>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobAsyncWithHttpInfo (string nuanceIntegrationId, string jobId);
 
         /// <summary>
@@ -3089,13 +2941,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<NuanceBotEntityListing> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsAsync (string nuanceIntegrationId, string jobId);
 
         /// <summary>
@@ -3103,13 +2955,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of ApiResponse (NuanceBotEntityListing)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<NuanceBotEntityListing>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsAsyncWithHttpInfo (string nuanceIntegrationId, string jobId);
 
         /// <summary>
@@ -3122,7 +2974,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="engineId">The engine ID</param>
         /// <param name="includeVoices">Include voices for the engine (optional, default to false)</param>
         /// <returns>Task of TtsEngineEntity</returns>
-        
         
         System.Threading.Tasks.Task<TtsEngineEntity> GetIntegrationsSpeechTtsEngineAsync (string engineId, bool? includeVoices = null);
 
@@ -3137,7 +2988,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeVoices">Include voices for the engine (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TtsEngineEntity)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TtsEngineEntity>> GetIntegrationsSpeechTtsEngineAsyncWithHttpInfo (string engineId, bool? includeVoices = null);
 
         /// <summary>
@@ -3151,7 +3001,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="voiceId">The voice ID</param>
         /// <returns>Task of TtsVoiceEntity</returns>
         
-        
         System.Threading.Tasks.Task<TtsVoiceEntity> GetIntegrationsSpeechTtsEngineVoiceAsync (string engineId, string voiceId);
 
         /// <summary>
@@ -3164,7 +3013,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="engineId">The engine ID</param>
         /// <param name="voiceId">The voice ID</param>
         /// <returns>Task of ApiResponse (TtsVoiceEntity)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TtsVoiceEntity>> GetIntegrationsSpeechTtsEngineVoiceAsyncWithHttpInfo (string engineId, string voiceId);
 
@@ -3180,7 +3028,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of TtsVoiceEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<TtsVoiceEntityListing> GetIntegrationsSpeechTtsEngineVoicesAsync (string engineId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3194,7 +3041,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (TtsVoiceEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TtsVoiceEntityListing>> GetIntegrationsSpeechTtsEngineVoicesAsyncWithHttpInfo (string engineId, int? pageNumber = null, int? pageSize = null);
 
@@ -3212,7 +3058,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)</param>
         /// <returns>Task of TtsEngineEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<TtsEngineEntityListing> GetIntegrationsSpeechTtsEnginesAsync (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null);
 
         /// <summary>
@@ -3229,7 +3074,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)</param>
         /// <returns>Task of ApiResponse (TtsEngineEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TtsEngineEntityListing>> GetIntegrationsSpeechTtsEnginesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null);
 
         /// <summary>
@@ -3241,7 +3085,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of TtsSettings</returns>
         
-        
         System.Threading.Tasks.Task<TtsSettings> GetIntegrationsSpeechTtsSettingsAsync ();
 
         /// <summary>
@@ -3252,7 +3095,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (TtsSettings)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TtsSettings>> GetIntegrationsSpeechTtsSettingsAsyncWithHttpInfo ();
 
@@ -3266,7 +3108,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="typeId">Integration Type Id</param>
         /// <returns>Task of IntegrationType</returns>
         
-        
         System.Threading.Tasks.Task<IntegrationType> GetIntegrationsTypeAsync (string typeId);
 
         /// <summary>
@@ -3278,7 +3119,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <returns>Task of ApiResponse (IntegrationType)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<IntegrationType>> GetIntegrationsTypeAsyncWithHttpInfo (string typeId);
 
@@ -3293,7 +3133,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="configType">Config schema type</param>
         /// <returns>Task of JsonSchemaDocument</returns>
         
-        
         System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsTypeConfigschemaAsync (string typeId, string configType);
 
         /// <summary>
@@ -3306,7 +3145,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="typeId">Integration Type Id</param>
         /// <param name="configType">Config schema type</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsTypeConfigschemaAsyncWithHttpInfo (string typeId, string configType);
 
@@ -3325,7 +3163,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of IntegrationTypeEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<IntegrationTypeEntityListing> GetIntegrationsTypesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -3342,7 +3179,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationTypeEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
@@ -3362,7 +3198,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appHost">The type of UserApp to filter by (optional)</param>
         /// <returns>Task of UserAppEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<UserAppEntityListing> GetIntegrationsUserappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null);
 
         /// <summary>
@@ -3380,7 +3215,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="appHost">The type of UserApp to filter by (optional)</param>
         /// <returns>Task of ApiResponse (UserAppEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<UserAppEntityListing>> GetIntegrationsUserappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null);
 
@@ -3401,7 +3235,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Update (optional)</param>
         /// <returns>Task of Integration</returns>
         
-        
         System.Threading.Tasks.Task<Integration> PatchIntegrationAsync (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null);
 
         /// <summary>
@@ -3421,7 +3254,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Update (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Integration>> PatchIntegrationAsyncWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null);
 
         /// <summary>
@@ -3434,7 +3266,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PatchIntegrationsActionAsync (string actionId, UpdateActionInput body);
 
@@ -3449,7 +3280,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PatchIntegrationsActionAsyncWithHttpInfo (string actionId, UpdateActionInput body);
 
         /// <summary>
@@ -3462,7 +3292,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action Draft.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PatchIntegrationsActionDraftAsync (string actionId, UpdateDraftInput body);
 
@@ -3477,7 +3306,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to patch the Action Draft.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PatchIntegrationsActionDraftAsyncWithHttpInfo (string actionId, UpdateDraftInput body);
 
         /// <summary>
@@ -3489,7 +3317,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Integration (optional)</param>
         /// <returns>Task of Integration</returns>
-        
         
         System.Threading.Tasks.Task<Integration> PostIntegrationsAsync (CreateIntegrationRequest body = null);
 
@@ -3503,7 +3330,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Integration>> PostIntegrationsAsyncWithHttpInfo (CreateIntegrationRequest body = null);
 
         /// <summary>
@@ -3516,7 +3342,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionDraftAsync (string actionId);
 
         /// <summary>
@@ -3528,7 +3353,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionDraftAsyncWithHttpInfo (string actionId);
 
@@ -3543,7 +3367,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
         
-        
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionDraftPublishAsync (string actionId, PublishDraftInput body);
 
         /// <summary>
@@ -3556,7 +3379,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionDraftPublishAsyncWithHttpInfo (string actionId, PublishDraftInput body);
 
@@ -3571,7 +3393,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of TestExecutionResult</returns>
         
-        
         System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionDraftTestAsync (string actionId, Object body);
 
         /// <summary>
@@ -3584,7 +3405,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of ApiResponse (TestExecutionResult)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionDraftTestAsyncWithHttpInfo (string actionId, Object body);
 
@@ -3599,7 +3419,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of Object</returns>
         
-        
         System.Threading.Tasks.Task<Object> PostIntegrationsActionExecuteAsync (string actionId, Object body);
 
         /// <summary>
@@ -3612,7 +3431,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostIntegrationsActionExecuteAsyncWithHttpInfo (string actionId, Object body);
 
@@ -3627,7 +3445,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of TestExecutionResult</returns>
         
-        
         System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionTestAsync (string actionId, Object body);
 
         /// <summary>
@@ -3641,7 +3458,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of ApiResponse (TestExecutionResult)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionTestAsyncWithHttpInfo (string actionId, Object body);
 
         /// <summary>
@@ -3653,7 +3469,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionsAsync (PostActionInput body);
 
@@ -3667,7 +3482,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to create Action.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionsAsyncWithHttpInfo (PostActionInput body);
 
         /// <summary>
@@ -3679,7 +3493,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action Draft.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionsDraftsAsync (PostActionInput body);
 
@@ -3693,7 +3506,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Input used to create Action Draft.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionsDraftsAsyncWithHttpInfo (PostActionInput body);
 
         /// <summary>
@@ -3705,7 +3517,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Credential (optional)</param>
         /// <returns>Task of CredentialInfo</returns>
-        
         
         System.Threading.Tasks.Task<CredentialInfo> PostIntegrationsCredentialsAsync (Credential body = null);
 
@@ -3719,7 +3530,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Credential (optional)</param>
         /// <returns>Task of ApiResponse (CredentialInfo)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CredentialInfo>> PostIntegrationsCredentialsAsyncWithHttpInfo (Credential body = null);
 
         /// <summary>
@@ -3727,6 +3537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3735,7 +3546,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">targetChannel (optional)</param>
         /// <returns>Task of AsyncJob</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<AsyncJob> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsAsync (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null);
 
         /// <summary>
@@ -3743,6 +3553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3751,7 +3562,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">targetChannel (optional)</param>
         /// <returns>Task of ApiResponse (AsyncJob)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<AsyncJob>> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsAsyncWithHttpInfo (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null);
 
         /// <summary>
@@ -3759,6 +3569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3767,7 +3578,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>Task of AsyncJob</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<AsyncJob> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsAsync (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null);
 
         /// <summary>
@@ -3775,6 +3585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3783,7 +3594,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AsyncJob)</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<AsyncJob>> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsAsyncWithHttpInfo (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null);
 
         /// <summary>
@@ -3791,13 +3601,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateAsync (string nuanceIntegrationId, BotExecutionConfiguration settings);
 
         /// <summary>
@@ -3805,13 +3615,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateAsyncWithHttpInfo (string nuanceIntegrationId, BotExecutionConfiguration settings);
 
         /// <summary>
@@ -3824,7 +3634,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>Task of IntegrationConfiguration</returns>
-        
         
         System.Threading.Tasks.Task<IntegrationConfiguration> PutIntegrationConfigCurrentAsync (string integrationId, IntegrationConfiguration body = null);
 
@@ -3839,7 +3648,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationConfiguration)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<IntegrationConfiguration>> PutIntegrationConfigCurrentAsyncWithHttpInfo (string integrationId, IntegrationConfiguration body = null);
 
         /// <summary>
@@ -3852,7 +3660,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botList"></param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task PutIntegrationsBotconnectorIntegrationIdBotsAsync (string integrationId, BotList botList);
 
@@ -3867,7 +3674,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botList"></param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> PutIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo (string integrationId, BotList botList);
 
         /// <summary>
@@ -3880,7 +3686,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="credentialId">Credential ID</param>
         /// <param name="body">Credential (optional)</param>
         /// <returns>Task of CredentialInfo</returns>
-        
         
         System.Threading.Tasks.Task<CredentialInfo> PutIntegrationsCredentialAsync (string credentialId, Credential body = null);
 
@@ -3895,7 +3700,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Credential (optional)</param>
         /// <returns>Task of ApiResponse (CredentialInfo)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CredentialInfo>> PutIntegrationsCredentialAsyncWithHttpInfo (string credentialId, Credential body = null);
 
         /// <summary>
@@ -3903,13 +3707,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsAsync (string nuanceIntegrationId, NuanceBotLaunchSettings settings);
 
         /// <summary>
@@ -3917,13 +3721,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
+        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         System.Threading.Tasks.Task<ApiResponse<Object>> PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsAsyncWithHttpInfo (string nuanceIntegrationId, NuanceBotLaunchSettings settings);
 
         /// <summary>
@@ -3935,7 +3739,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Updated TtsSettings</param>
         /// <returns>Task of TtsSettings</returns>
-        
         
         System.Threading.Tasks.Task<TtsSettings> PutIntegrationsSpeechTtsSettingsAsync (TtsSettings body);
 
@@ -3949,8 +3752,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated TtsSettings</param>
         /// <returns>Task of ApiResponse (TtsSettings)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TtsSettings>> PutIntegrationsSpeechTtsSettingsAsyncWithHttpInfo (TtsSettings body);
+
+        /// <summary>
+        /// Bulk integration presence ingestion
+        /// </summary>
+        /// <remarks>
+        /// This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">UC Integration ID</param>
+        /// <param name="body">List of User presences</param>
+        /// <returns>Task of string</returns>
+        
+        System.Threading.Tasks.Task<string> PutIntegrationsUnifiedcommunicationThirdpartypresencesAsync (string ucIntegrationId, List<UCThirdPartyPresence> body);
+
+        /// <summary>
+        /// Bulk integration presence ingestion
+        /// </summary>
+        /// <remarks>
+        /// This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">UC Integration ID</param>
+        /// <param name="body">List of User presences</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<string>> PutIntegrationsUnifiedcommunicationThirdpartypresencesAsyncWithHttpInfo (string ucIntegrationId, List<UCThirdPartyPresence> body);
 
         #endregion Asynchronous Operations
 
@@ -4046,11 +3874,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Integration</returns>
-        
         
         public Integration DeleteIntegration (string integrationId)
         {
@@ -4060,11 +3888,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>ApiResponse of Integration</returns>
-        
         
         public ApiResponse< Integration > DeleteIntegrationWithHttpInfo (string integrationId)
         { 
@@ -4144,11 +3972,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Task of Integration</returns>
-        
         
         public async System.Threading.Tasks.Task<Integration> DeleteIntegrationAsync (string integrationId)
         {
@@ -4159,11 +3987,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Integration>> DeleteIntegrationAsyncWithHttpInfo (string integrationId)
         { 
@@ -4245,11 +4073,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns></returns>
-        
         
         public void DeleteIntegrationsAction (string actionId)
         {
@@ -4258,11 +4086,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteIntegrationsActionWithHttpInfo (string actionId)
         { 
@@ -4342,11 +4170,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteIntegrationsActionAsync (string actionId)
         {
@@ -4356,11 +4184,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIntegrationsActionAsyncWithHttpInfo (string actionId)
         { 
@@ -4442,11 +4270,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns></returns>
-        
         
         public void DeleteIntegrationsActionDraft (string actionId)
         {
@@ -4455,11 +4283,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteIntegrationsActionDraftWithHttpInfo (string actionId)
         { 
@@ -4539,11 +4367,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteIntegrationsActionDraftAsync (string actionId)
         {
@@ -4553,11 +4381,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIntegrationsActionDraftAsyncWithHttpInfo (string actionId)
         { 
@@ -4639,11 +4467,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns></returns>
-        
         
         public void DeleteIntegrationsCredential (string credentialId)
         {
@@ -4652,11 +4480,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteIntegrationsCredentialWithHttpInfo (string credentialId)
         { 
@@ -4736,11 +4564,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteIntegrationsCredentialAsync (string credentialId)
         {
@@ -4750,11 +4578,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIntegrationsCredentialAsyncWithHttpInfo (string credentialId)
         { 
@@ -4836,6 +4664,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
@@ -4847,7 +4676,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Integration</returns>
         
-        
         public Integration GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<Integration> localVarResponse = GetIntegrationWithHttpInfo(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -4856,6 +4684,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
@@ -4866,7 +4695,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
-        
         
         public ApiResponse< Integration > GetIntegrationWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -4952,6 +4780,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
@@ -4963,7 +4792,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of Integration</returns>
         
-        
         public async System.Threading.Tasks.Task<Integration> GetIntegrationAsync (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<Integration> localVarResponse = await GetIntegrationAsyncWithHttpInfo(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -4973,6 +4801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
@@ -4983,7 +4812,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Integration>> GetIntegrationAsyncWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -5071,11 +4899,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>IntegrationConfiguration</returns>
-        
         
         public IntegrationConfiguration GetIntegrationConfigCurrent (string integrationId)
         {
@@ -5085,11 +4913,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>ApiResponse of IntegrationConfiguration</returns>
-        
         
         public ApiResponse< IntegrationConfiguration > GetIntegrationConfigCurrentWithHttpInfo (string integrationId)
         { 
@@ -5169,11 +4997,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Task of IntegrationConfiguration</returns>
-        
         
         public async System.Threading.Tasks.Task<IntegrationConfiguration> GetIntegrationConfigCurrentAsync (string integrationId)
         {
@@ -5184,11 +5012,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <returns>Task of ApiResponse (IntegrationConfiguration)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<IntegrationConfiguration>> GetIntegrationConfigCurrentAsyncWithHttpInfo (string integrationId)
         { 
@@ -5270,6 +5098,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List integrations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -5280,7 +5109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>IntegrationEntityListing</returns>
         
-        
         public IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<IntegrationEntityListing> localVarResponse = GetIntegrationsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -5289,6 +5117,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List integrations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -5298,7 +5127,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of IntegrationEntityListing</returns>
-        
         
         public ApiResponse< IntegrationEntityListing > GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -5380,6 +5208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List integrations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -5390,7 +5219,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of IntegrationEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<IntegrationEntityListing> localVarResponse = await GetIntegrationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -5400,6 +5228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List integrations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -5409,7 +5238,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -5492,13 +5320,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves a single Action matching id. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public PureCloudPlatform.Client.V2.Model.Action GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
         {
@@ -5508,13 +5336,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves a single Action matching id. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > GetIntegrationsActionWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
         { 
@@ -5596,13 +5424,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves a single Action matching id. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionAsync (string actionId, string expand = null, bool? includeConfig = null)
         {
@@ -5613,13 +5441,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves a single Action matching id. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
         { 
@@ -5703,13 +5531,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public PureCloudPlatform.Client.V2.Model.Action GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
         {
@@ -5719,13 +5547,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
         { 
@@ -5807,13 +5635,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftAsync (string actionId, string expand = null, bool? includeConfig = null)
         {
@@ -5824,13 +5652,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <param name="includeConfig">Return config in response. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null)
         { 
@@ -5914,12 +5742,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve schema for a Draft based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
         /// <returns>JsonSchemaDocument</returns>
-        
         
         public JsonSchemaDocument GetIntegrationsActionDraftSchema (string actionId, string fileName)
         {
@@ -5929,12 +5757,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve schema for a Draft based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        
         
         public ApiResponse< JsonSchemaDocument > GetIntegrationsActionDraftSchemaWithHttpInfo (string actionId, string fileName)
         { 
@@ -6018,12 +5846,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve schema for a Draft based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
         /// <returns>Task of JsonSchemaDocument</returns>
-        
         
         public async System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionDraftSchemaAsync (string actionId, string fileName)
         {
@@ -6034,12 +5862,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve schema for a Draft based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this draft.</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionDraftSchemaAsyncWithHttpInfo (string actionId, string fileName)
         { 
@@ -6126,12 +5954,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve templates for a Draft based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action draft.</param>
         /// <returns>string</returns>
-        
         
         public string GetIntegrationsActionDraftTemplate (string actionId, string fileName)
         {
@@ -6141,12 +5969,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve templates for a Draft based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action draft.</param>
         /// <returns>ApiResponse of string</returns>
-        
         
         public ApiResponse< string > GetIntegrationsActionDraftTemplateWithHttpInfo (string actionId, string fileName)
         { 
@@ -6230,12 +6058,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve templates for a Draft based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action draft.</param>
         /// <returns>Task of string</returns>
-        
         
         public async System.Threading.Tasks.Task<string> GetIntegrationsActionDraftTemplateAsync (string actionId, string fileName)
         {
@@ -6246,12 +6074,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve templates for a Draft based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action draft.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetIntegrationsActionDraftTemplateAsyncWithHttpInfo (string actionId, string fileName)
         { 
@@ -6338,11 +6166,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Validate current Draft configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>DraftValidationResult</returns>
-        
         
         public DraftValidationResult GetIntegrationsActionDraftValidation (string actionId)
         {
@@ -6352,11 +6180,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Validate current Draft configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>ApiResponse of DraftValidationResult</returns>
-        
         
         public ApiResponse< DraftValidationResult > GetIntegrationsActionDraftValidationWithHttpInfo (string actionId)
         { 
@@ -6436,11 +6264,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Validate current Draft configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of DraftValidationResult</returns>
-        
         
         public async System.Threading.Tasks.Task<DraftValidationResult> GetIntegrationsActionDraftValidationAsync (string actionId)
         {
@@ -6451,11 +6279,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Validate current Draft configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of ApiResponse (DraftValidationResult)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DraftValidationResult>> GetIntegrationsActionDraftValidationAsyncWithHttpInfo (string actionId)
         { 
@@ -6537,12 +6365,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve schema for an action based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
         /// <returns>JsonSchemaDocument</returns>
-        
         
         public JsonSchemaDocument GetIntegrationsActionSchema (string actionId, string fileName)
         {
@@ -6552,12 +6380,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve schema for an action based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        
         
         public ApiResponse< JsonSchemaDocument > GetIntegrationsActionSchemaWithHttpInfo (string actionId, string fileName)
         { 
@@ -6641,12 +6469,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve schema for an action based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
         /// <returns>Task of JsonSchemaDocument</returns>
-        
         
         public async System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsActionSchemaAsync (string actionId, string fileName)
         {
@@ -6657,12 +6485,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve schema for an action based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of schema file to be retrieved for this action.</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsActionSchemaAsyncWithHttpInfo (string actionId, string fileName)
         { 
@@ -6749,12 +6577,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve text of templates for an action based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action.</param>
         /// <returns>string</returns>
-        
         
         public string GetIntegrationsActionTemplate (string actionId, string fileName)
         {
@@ -6764,12 +6592,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve text of templates for an action based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action.</param>
         /// <returns>ApiResponse of string</returns>
-        
         
         public ApiResponse< string > GetIntegrationsActionTemplateWithHttpInfo (string actionId, string fileName)
         { 
@@ -6853,12 +6681,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve text of templates for an action based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action.</param>
         /// <returns>Task of string</returns>
-        
         
         public async System.Threading.Tasks.Task<string> GetIntegrationsActionTemplateAsync (string actionId, string fileName)
         {
@@ -6869,12 +6697,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve text of templates for an action based on filename. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="fileName">Name of template file to be retrieved for this action.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetIntegrationsActionTemplateAsyncWithHttpInfo (string actionId, string fileName)
         { 
@@ -6961,6 +6789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all actions associated with filters passed in via query param. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -6976,7 +6805,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ActionEntityListing</returns>
         
-        
         public ActionEntityListing GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
         {
              ApiResponse<ActionEntityListing> localVarResponse = GetIntegrationsActionsWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions);
@@ -6985,6 +6813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all actions associated with filters passed in via query param. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -6999,7 +6828,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        
         
         public ApiResponse< ActionEntityListing > GetIntegrationsActionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
         { 
@@ -7086,6 +6914,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all actions associated with filters passed in via query param. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7101,7 +6930,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ActionEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
         {
              ApiResponse<ActionEntityListing> localVarResponse = await GetIntegrationsActionsAsyncWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions);
@@ -7111,6 +6939,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all actions associated with filters passed in via query param. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7125,7 +6954,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
         { 
@@ -7213,6 +7041,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all categories of available Actions 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7224,7 +7053,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>CategoryEntityListing</returns>
         
-        
         public CategoryEntityListing GetIntegrationsActionsCategories (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
         {
              ApiResponse<CategoryEntityListing> localVarResponse = GetIntegrationsActionsCategoriesWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, secure);
@@ -7233,6 +7061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all categories of available Actions 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7243,7 +7072,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>ApiResponse of CategoryEntityListing</returns>
-        
         
         public ApiResponse< CategoryEntityListing > GetIntegrationsActionsCategoriesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
         { 
@@ -7326,6 +7154,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all categories of available Actions 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7337,7 +7166,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of CategoryEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
         {
              ApiResponse<CategoryEntityListing> localVarResponse = await GetIntegrationsActionsCategoriesAsyncWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, secure);
@@ -7347,6 +7175,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all categories of available Actions 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7357,7 +7186,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Direction to sort &#39;sortBy&#39; field. (optional, default to asc)</param>
         /// <param name="secure">Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
         { 
@@ -7441,6 +7269,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7456,7 +7285,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ActionEntityListing</returns>
         
-        
         public ActionEntityListing GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
         {
              ApiResponse<ActionEntityListing> localVarResponse = GetIntegrationsActionsDraftsWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions);
@@ -7465,6 +7293,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7479,7 +7308,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        
         
         public ApiResponse< ActionEntityListing > GetIntegrationsActionsDraftsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
         { 
@@ -7566,6 +7394,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7581,7 +7410,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ActionEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
         {
              ApiResponse<ActionEntityListing> localVarResponse = await GetIntegrationsActionsDraftsAsyncWithHttpInfo(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions);
@@ -7591,6 +7419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7605,7 +7434,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)</param>
         /// <param name="includeAuthActions">Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
         { 
@@ -7693,13 +7521,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a specific botConnector bot, plus versions, for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botId">The botID for this bot</param>
         /// <param name="version">Specific Version (optional)</param>
         /// <returns>BotConnectorBot</returns>
-        
         
         public BotConnectorBot GetIntegrationsBotconnectorIntegrationIdBot (string integrationId, string botId, string version = null)
         {
@@ -7709,13 +7537,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a specific botConnector bot, plus versions, for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botId">The botID for this bot</param>
         /// <param name="version">Specific Version (optional)</param>
         /// <returns>ApiResponse of BotConnectorBot</returns>
-        
         
         public ApiResponse< BotConnectorBot > GetIntegrationsBotconnectorIntegrationIdBotWithHttpInfo (string integrationId, string botId, string version = null)
         { 
@@ -7800,13 +7628,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a specific botConnector bot, plus versions, for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botId">The botID for this bot</param>
         /// <param name="version">Specific Version (optional)</param>
         /// <returns>Task of BotConnectorBot</returns>
-        
         
         public async System.Threading.Tasks.Task<BotConnectorBot> GetIntegrationsBotconnectorIntegrationIdBotAsync (string integrationId, string botId, string version = null)
         {
@@ -7817,13 +7645,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a specific botConnector bot, plus versions, for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botId">The botID for this bot</param>
         /// <param name="version">Specific Version (optional)</param>
         /// <returns>Task of ApiResponse (BotConnectorBot)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<BotConnectorBot>> GetIntegrationsBotconnectorIntegrationIdBotAsyncWithHttpInfo (string integrationId, string botId, string version = null)
         { 
@@ -7911,6 +7739,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of bot versions for a bot 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this bot group</param>
@@ -7918,7 +7747,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>BotConnectorBotVersionSummaryEntityListing</returns>
-        
         
         public BotConnectorBotVersionSummaryEntityListing GetIntegrationsBotconnectorIntegrationIdBotVersions (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
         {
@@ -7928,6 +7756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of bot versions for a bot 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this bot group</param>
@@ -7935,7 +7764,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of BotConnectorBotVersionSummaryEntityListing</returns>
-        
         
         public ApiResponse< BotConnectorBotVersionSummaryEntityListing > GetIntegrationsBotconnectorIntegrationIdBotVersionsWithHttpInfo (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -8021,6 +7849,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of bot versions for a bot 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this bot group</param>
@@ -8028,7 +7857,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of BotConnectorBotVersionSummaryEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<BotConnectorBotVersionSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotVersionsAsync (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
         {
@@ -8039,6 +7867,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of bot versions for a bot 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this bot group</param>
@@ -8046,7 +7875,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotConnectorBotVersionSummaryEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<BotConnectorBotVersionSummaryEntityListing>> GetIntegrationsBotconnectorIntegrationIdBotVersionsAsyncWithHttpInfo (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -8135,11 +7963,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of botConnector bots for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <returns>BotList</returns>
-        
         
         public BotList GetIntegrationsBotconnectorIntegrationIdBots (string integrationId)
         {
@@ -8149,11 +7977,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of botConnector bots for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <returns>ApiResponse of BotList</returns>
-        
         
         public ApiResponse< BotList > GetIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo (string integrationId)
         { 
@@ -8233,11 +8061,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of botConnector bots for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <returns>Task of BotList</returns>
-        
         
         public async System.Threading.Tasks.Task<BotList> GetIntegrationsBotconnectorIntegrationIdBotsAsync (string integrationId)
         {
@@ -8248,11 +8076,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of botConnector bots for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <returns>Task of ApiResponse (BotList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<BotList>> GetIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo (string integrationId)
         { 
@@ -8334,13 +8162,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a summary list of botConnector bots for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>BotConnectorBotSummaryEntityListing</returns>
-        
         
         public BotConnectorBotSummaryEntityListing GetIntegrationsBotconnectorIntegrationIdBotsSummaries (string integrationId, int? pageNumber = null, int? pageSize = null)
         {
@@ -8350,13 +8178,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a summary list of botConnector bots for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of BotConnectorBotSummaryEntityListing</returns>
-        
         
         public ApiResponse< BotConnectorBotSummaryEntityListing > GetIntegrationsBotconnectorIntegrationIdBotsSummariesWithHttpInfo (string integrationId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -8438,13 +8266,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a summary list of botConnector bots for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of BotConnectorBotSummaryEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<BotConnectorBotSummaryEntityListing> GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsync (string integrationId, int? pageNumber = null, int? pageSize = null)
         {
@@ -8455,13 +8283,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a summary list of botConnector bots for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (BotConnectorBotSummaryEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<BotConnectorBotSummaryEntityListing>> GetIntegrationsBotconnectorIntegrationIdBotsSummariesAsyncWithHttpInfo (string integrationId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -8545,6 +8373,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List permitted client app integrations for the logged in user 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8555,7 +8384,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ClientAppEntityListing</returns>
         
-        
         public ClientAppEntityListing GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<ClientAppEntityListing> localVarResponse = GetIntegrationsClientappsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -8564,6 +8392,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List permitted client app integrations for the logged in user 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8573,7 +8402,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of ClientAppEntityListing</returns>
-        
         
         public ApiResponse< ClientAppEntityListing > GetIntegrationsClientappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -8655,6 +8483,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List permitted client app integrations for the logged in user 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8665,7 +8494,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ClientAppEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ClientAppEntityListing> GetIntegrationsClientappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<ClientAppEntityListing> localVarResponse = await GetIntegrationsClientappsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -8675,6 +8503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List permitted client app integrations for the logged in user 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8684,7 +8513,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (ClientAppEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ClientAppEntityListing>> GetIntegrationsClientappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -8766,7 +8594,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// UC integration client application configuration. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// UC integration client application configuration. 
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8777,7 +8606,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>UCIntegrationListing</returns>
         
-        
         public UCIntegrationListing GetIntegrationsClientappsUnifiedcommunications (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<UCIntegrationListing> localVarResponse = GetIntegrationsClientappsUnifiedcommunicationsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -8785,7 +8613,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// UC integration client application configuration. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// UC integration client application configuration. 
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8795,7 +8624,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of UCIntegrationListing</returns>
-        
         
         public ApiResponse< UCIntegrationListing > GetIntegrationsClientappsUnifiedcommunicationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -8876,7 +8704,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// UC integration client application configuration. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// UC integration client application configuration. 
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8887,7 +8716,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of UCIntegrationListing</returns>
         
-        
         public async System.Threading.Tasks.Task<UCIntegrationListing> GetIntegrationsClientappsUnifiedcommunicationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<UCIntegrationListing> localVarResponse = await GetIntegrationsClientappsUnifiedcommunicationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -8896,7 +8724,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// UC integration client application configuration. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// UC integration client application configuration. 
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8906,7 +8735,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (UCIntegrationListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UCIntegrationListing>> GetIntegrationsClientappsUnifiedcommunicationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -8989,11 +8817,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a single credential with sensitive fields redacted 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Credential</returns>
-        
         
         public Credential GetIntegrationsCredential (string credentialId)
         {
@@ -9003,11 +8831,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a single credential with sensitive fields redacted 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>ApiResponse of Credential</returns>
-        
         
         public ApiResponse< Credential > GetIntegrationsCredentialWithHttpInfo (string credentialId)
         { 
@@ -9087,11 +8915,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a single credential with sensitive fields redacted 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Task of Credential</returns>
-        
         
         public async System.Threading.Tasks.Task<Credential> GetIntegrationsCredentialAsync (string credentialId)
         {
@@ -9102,11 +8930,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a single credential with sensitive fields redacted 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <returns>Task of ApiResponse (Credential)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Credential>> GetIntegrationsCredentialAsyncWithHttpInfo (string credentialId)
         { 
@@ -9188,12 +9016,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List multiple sets of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>CredentialInfoListing</returns>
-        
         
         public CredentialInfoListing GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null)
         {
@@ -9203,12 +9031,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List multiple sets of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CredentialInfoListing</returns>
-        
         
         public ApiResponse< CredentialInfoListing > GetIntegrationsCredentialsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
@@ -9286,12 +9114,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List multiple sets of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of CredentialInfoListing</returns>
-        
         
         public async System.Threading.Tasks.Task<CredentialInfoListing> GetIntegrationsCredentialsAsync (int? pageNumber = null, int? pageSize = null)
         {
@@ -9302,12 +9130,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List multiple sets of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CredentialInfoListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CredentialInfoListing>> GetIntegrationsCredentialsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
@@ -9386,10 +9214,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List all credential types 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CredentialTypeListing</returns>
-        
         
         public CredentialTypeListing GetIntegrationsCredentialsTypes ()
         {
@@ -9399,10 +9227,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List all credential types 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CredentialTypeListing</returns>
-        
         
         public ApiResponse< CredentialTypeListing > GetIntegrationsCredentialsTypesWithHttpInfo ()
         { 
@@ -9478,10 +9306,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List all credential types 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CredentialTypeListing</returns>
-        
         
         public async System.Threading.Tasks.Task<CredentialTypeListing> GetIntegrationsCredentialsTypesAsync ()
         {
@@ -9492,10 +9320,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List all credential types 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CredentialTypeListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CredentialTypeListing>> GetIntegrationsCredentialsTypesAsyncWithHttpInfo ()
         { 
@@ -9572,11 +9400,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a Dialogflow agent 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The agent ID</param>
         /// <returns>DialogflowAgent</returns>
-        
         
         public DialogflowAgent GetIntegrationsSpeechDialogflowAgent (string agentId)
         {
@@ -9586,11 +9414,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a Dialogflow agent 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The agent ID</param>
         /// <returns>ApiResponse of DialogflowAgent</returns>
-        
         
         public ApiResponse< DialogflowAgent > GetIntegrationsSpeechDialogflowAgentWithHttpInfo (string agentId)
         { 
@@ -9670,11 +9498,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a Dialogflow agent 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The agent ID</param>
         /// <returns>Task of DialogflowAgent</returns>
-        
         
         public async System.Threading.Tasks.Task<DialogflowAgent> GetIntegrationsSpeechDialogflowAgentAsync (string agentId)
         {
@@ -9685,11 +9513,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a Dialogflow agent 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">The agent ID</param>
         /// <returns>Task of ApiResponse (DialogflowAgent)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DialogflowAgent>> GetIntegrationsSpeechDialogflowAgentAsyncWithHttpInfo (string agentId)
         { 
@@ -9771,13 +9599,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Dialogflow agents in the customers' Google accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on agent name (optional)</param>
         /// <returns>DialogflowAgentSummaryEntityListing</returns>
-        
         
         public DialogflowAgentSummaryEntityListing GetIntegrationsSpeechDialogflowAgents (int? pageNumber = null, int? pageSize = null, string name = null)
         {
@@ -9787,13 +9615,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Dialogflow agents in the customers' Google accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on agent name (optional)</param>
         /// <returns>ApiResponse of DialogflowAgentSummaryEntityListing</returns>
-        
         
         public ApiResponse< DialogflowAgentSummaryEntityListing > GetIntegrationsSpeechDialogflowAgentsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
         { 
@@ -9872,13 +9700,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Dialogflow agents in the customers' Google accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on agent name (optional)</param>
         /// <returns>Task of DialogflowAgentSummaryEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<DialogflowAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowAgentsAsync (int? pageNumber = null, int? pageSize = null, string name = null)
         {
@@ -9889,13 +9717,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Dialogflow agents in the customers' Google accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on agent name (optional)</param>
         /// <returns>Task of ApiResponse (DialogflowAgentSummaryEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DialogflowAgentSummaryEntityListing>> GetIntegrationsSpeechDialogflowAgentsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
         { 
@@ -9975,11 +9803,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a Lex bot alias 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aliasId">The alias ID</param>
         /// <returns>LexBotAlias</returns>
-        
         
         public LexBotAlias GetIntegrationsSpeechLexBotAlias (string aliasId)
         {
@@ -9989,11 +9817,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a Lex bot alias 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aliasId">The alias ID</param>
         /// <returns>ApiResponse of LexBotAlias</returns>
-        
         
         public ApiResponse< LexBotAlias > GetIntegrationsSpeechLexBotAliasWithHttpInfo (string aliasId)
         { 
@@ -10073,11 +9901,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a Lex bot alias 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aliasId">The alias ID</param>
         /// <returns>Task of LexBotAlias</returns>
-        
         
         public async System.Threading.Tasks.Task<LexBotAlias> GetIntegrationsSpeechLexBotAliasAsync (string aliasId)
         {
@@ -10088,11 +9916,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a Lex bot alias 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aliasId">The alias ID</param>
         /// <returns>Task of ApiResponse (LexBotAlias)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LexBotAlias>> GetIntegrationsSpeechLexBotAliasAsyncWithHttpInfo (string aliasId)
         { 
@@ -10174,6 +10002,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of aliases for a bot in the customer's AWS accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID</param>
@@ -10183,7 +10012,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on alias name (optional)</param>
         /// <returns>LexBotAliasEntityListing</returns>
         
-        
         public LexBotAliasEntityListing GetIntegrationsSpeechLexBotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
         {
              ApiResponse<LexBotAliasEntityListing> localVarResponse = GetIntegrationsSpeechLexBotBotIdAliasesWithHttpInfo(botId, pageNumber, pageSize, status, name);
@@ -10192,6 +10020,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of aliases for a bot in the customer's AWS accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID</param>
@@ -10200,7 +10029,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Filter on alias status (optional)</param>
         /// <param name="name">Filter on alias name (optional)</param>
         /// <returns>ApiResponse of LexBotAliasEntityListing</returns>
-        
         
         public ApiResponse< LexBotAliasEntityListing > GetIntegrationsSpeechLexBotBotIdAliasesWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
         { 
@@ -10284,6 +10112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of aliases for a bot in the customer's AWS accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID</param>
@@ -10292,7 +10121,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Filter on alias status (optional)</param>
         /// <param name="name">Filter on alias name (optional)</param>
         /// <returns>Task of LexBotAliasEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<LexBotAliasEntityListing> GetIntegrationsSpeechLexBotBotIdAliasesAsync (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
         {
@@ -10303,6 +10131,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of aliases for a bot in the customer's AWS accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID</param>
@@ -10311,7 +10140,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Filter on alias status (optional)</param>
         /// <param name="name">Filter on alias name (optional)</param>
         /// <returns>Task of ApiResponse (LexBotAliasEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LexBotAliasEntityListing>> GetIntegrationsSpeechLexBotBotIdAliasesAsyncWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
         { 
@@ -10397,13 +10225,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Lex bots in the customers' AWS accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on bot name (optional)</param>
         /// <returns>LexBotEntityListing</returns>
-        
         
         public LexBotEntityListing GetIntegrationsSpeechLexBots (int? pageNumber = null, int? pageSize = null, string name = null)
         {
@@ -10413,13 +10241,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Lex bots in the customers' AWS accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on bot name (optional)</param>
         /// <returns>ApiResponse of LexBotEntityListing</returns>
-        
         
         public ApiResponse< LexBotEntityListing > GetIntegrationsSpeechLexBotsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
         { 
@@ -10498,13 +10326,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Lex bots in the customers' AWS accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on bot name (optional)</param>
         /// <returns>Task of LexBotEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<LexBotEntityListing> GetIntegrationsSpeechLexBotsAsync (int? pageNumber = null, int? pageSize = null, string name = null)
         {
@@ -10515,13 +10343,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Lex bots in the customers' AWS accounts 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="name">Filter on bot name (optional)</param>
         /// <returns>Task of ApiResponse (LexBotEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LexBotEntityListing>> GetIntegrationsSpeechLexBotsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
         { 
@@ -10601,6 +10429,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Nuance bot in the specified Integration 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -10609,7 +10439,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="targetChannel">targetChannel (optional)</param>
         /// <returns>NuanceBot</returns>
         
-        /// Preview Endpoint
         public NuanceBot GetIntegrationsSpeechNuanceNuanceIntegrationIdBot (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
         {
              ApiResponse<NuanceBot> localVarResponse = GetIntegrationsSpeechNuanceNuanceIntegrationIdBotWithHttpInfo(nuanceIntegrationId, botId, expand, targetChannel);
@@ -10618,6 +10447,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Nuance bot in the specified Integration 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -10626,7 +10457,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="targetChannel">targetChannel (optional)</param>
         /// <returns>ApiResponse of NuanceBot</returns>
         
-        /// Preview Endpoint
         public ApiResponse< NuanceBot > GetIntegrationsSpeechNuanceNuanceIntegrationIdBotWithHttpInfo (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -10711,6 +10541,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Nuance bot in the specified Integration 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -10719,7 +10551,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="targetChannel">targetChannel (optional)</param>
         /// <returns>Task of NuanceBot</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<NuanceBot> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotAsync (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
         {
              ApiResponse<NuanceBot> localVarResponse = await GetIntegrationsSpeechNuanceNuanceIntegrationIdBotAsyncWithHttpInfo(nuanceIntegrationId, botId, expand, targetChannel);
@@ -10729,6 +10560,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Nuance bot in the specified Integration 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -10737,7 +10570,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="targetChannel">targetChannel (optional)</param>
         /// <returns>Task of ApiResponse (NuanceBot)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<NuanceBot>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotAsyncWithHttpInfo (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -10825,6 +10657,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the status of an asynchronous Nuance bot GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -10832,7 +10666,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>AsyncJob</returns>
         
-        /// Preview Endpoint
         public AsyncJob GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob (string nuanceIntegrationId, string botId, string jobId)
         {
              ApiResponse<AsyncJob> localVarResponse = GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobWithHttpInfo(nuanceIntegrationId, botId, jobId);
@@ -10841,6 +10674,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the status of an asynchronous Nuance bot GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -10848,7 +10683,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>ApiResponse of AsyncJob</returns>
         
-        /// Preview Endpoint
         public ApiResponse< AsyncJob > GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobWithHttpInfo (string nuanceIntegrationId, string botId, string jobId)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -10935,6 +10769,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the status of an asynchronous Nuance bot GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -10942,7 +10778,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of AsyncJob</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<AsyncJob> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobAsync (string nuanceIntegrationId, string botId, string jobId)
         {
              ApiResponse<AsyncJob> localVarResponse = await GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobAsyncWithHttpInfo(nuanceIntegrationId, botId, jobId);
@@ -10952,6 +10787,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the status of an asynchronous Nuance bot GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -10959,7 +10796,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of ApiResponse (AsyncJob)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<AsyncJob>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobAsyncWithHttpInfo (string nuanceIntegrationId, string botId, string jobId)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11050,6 +10886,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of an asynchronous Nuance bot GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11057,7 +10895,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>NuanceBot</returns>
         
-        /// Preview Endpoint
         public NuanceBot GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults (string nuanceIntegrationId, string botId, string jobId)
         {
              ApiResponse<NuanceBot> localVarResponse = GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsWithHttpInfo(nuanceIntegrationId, botId, jobId);
@@ -11066,6 +10903,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of an asynchronous Nuance bot GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11073,7 +10912,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>ApiResponse of NuanceBot</returns>
         
-        /// Preview Endpoint
         public ApiResponse< NuanceBot > GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsWithHttpInfo (string nuanceIntegrationId, string botId, string jobId)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11160,6 +10998,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of an asynchronous Nuance bot GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11167,7 +11007,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of NuanceBot</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<NuanceBot> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsAsync (string nuanceIntegrationId, string botId, string jobId)
         {
              ApiResponse<NuanceBot> localVarResponse = await GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsAsyncWithHttpInfo(nuanceIntegrationId, botId, jobId);
@@ -11177,6 +11016,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of an asynchronous Nuance bot GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11184,7 +11025,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of ApiResponse (NuanceBot)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<NuanceBot>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsAsyncWithHttpInfo (string nuanceIntegrationId, string botId, string jobId)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11274,7 +11114,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Nuance bots available in the specified Integration If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// Get a list of Nuance bots available in the specified Integration 
+        /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11283,7 +11125,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         public NuanceBotEntityListing GetIntegrationsSpeechNuanceNuanceIntegrationIdBots (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
         {
              ApiResponse<NuanceBotEntityListing> localVarResponse = GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsWithHttpInfo(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots);
@@ -11291,7 +11132,9 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Nuance bots available in the specified Integration If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// Get a list of Nuance bots available in the specified Integration 
+        /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11300,7 +11143,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>ApiResponse of NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< NuanceBotEntityListing > GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsWithHttpInfo (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11381,7 +11223,9 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Nuance bots available in the specified Integration If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// Get a list of Nuance bots available in the specified Integration 
+        /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11390,7 +11234,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>Task of NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<NuanceBotEntityListing> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsAsync (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
         {
              ApiResponse<NuanceBotEntityListing> localVarResponse = await GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsAsyncWithHttpInfo(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots);
@@ -11399,7 +11242,9 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Nuance bots available in the specified Integration If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// Get a list of Nuance bots available in the specified Integration 
+        /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11408,7 +11253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>Task of ApiResponse (NuanceBotEntityListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<NuanceBotEntityListing>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsAsyncWithHttpInfo (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11492,13 +11336,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the status of an asynchronous Nuance bots GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>AsyncJob</returns>
         
-        /// Preview Endpoint
         public AsyncJob GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob (string nuanceIntegrationId, string jobId)
         {
              ApiResponse<AsyncJob> localVarResponse = GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobWithHttpInfo(nuanceIntegrationId, jobId);
@@ -11507,13 +11352,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the status of an asynchronous Nuance bots GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>ApiResponse of AsyncJob</returns>
         
-        /// Preview Endpoint
         public ApiResponse< AsyncJob > GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobWithHttpInfo (string nuanceIntegrationId, string jobId)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11596,13 +11442,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the status of an asynchronous Nuance bots GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of AsyncJob</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<AsyncJob> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobAsync (string nuanceIntegrationId, string jobId)
         {
              ApiResponse<AsyncJob> localVarResponse = await GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobAsyncWithHttpInfo(nuanceIntegrationId, jobId);
@@ -11612,13 +11459,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the status of an asynchronous Nuance bots GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of ApiResponse (AsyncJob)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<AsyncJob>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobAsyncWithHttpInfo (string nuanceIntegrationId, string jobId)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11704,13 +11552,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of an asynchronous Nuance bots GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         public NuanceBotEntityListing GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults (string nuanceIntegrationId, string jobId)
         {
              ApiResponse<NuanceBotEntityListing> localVarResponse = GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsWithHttpInfo(nuanceIntegrationId, jobId);
@@ -11719,13 +11568,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of an asynchronous Nuance bots GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>ApiResponse of NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         public ApiResponse< NuanceBotEntityListing > GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsWithHttpInfo (string nuanceIntegrationId, string jobId)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11808,13 +11658,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of an asynchronous Nuance bots GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of NuanceBotEntityListing</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<NuanceBotEntityListing> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsAsync (string nuanceIntegrationId, string jobId)
         {
              ApiResponse<NuanceBotEntityListing> localVarResponse = await GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsAsyncWithHttpInfo(nuanceIntegrationId, jobId);
@@ -11824,13 +11675,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the result of an asynchronous Nuance bots GET job 
+        /// 
+        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="jobId">The asynchronous job ID</param>
         /// <returns>Task of ApiResponse (NuanceBotEntityListing)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<NuanceBotEntityListing>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsAsyncWithHttpInfo (string nuanceIntegrationId, string jobId)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -11916,12 +11768,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="includeVoices">Include voices for the engine (optional, default to false)</param>
         /// <returns>TtsEngineEntity</returns>
-        
         
         public TtsEngineEntity GetIntegrationsSpeechTtsEngine (string engineId, bool? includeVoices = null)
         {
@@ -11931,12 +11783,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="includeVoices">Include voices for the engine (optional, default to false)</param>
         /// <returns>ApiResponse of TtsEngineEntity</returns>
-        
         
         public ApiResponse< TtsEngineEntity > GetIntegrationsSpeechTtsEngineWithHttpInfo (string engineId, bool? includeVoices = null)
         { 
@@ -12017,12 +11869,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="includeVoices">Include voices for the engine (optional, default to false)</param>
         /// <returns>Task of TtsEngineEntity</returns>
-        
         
         public async System.Threading.Tasks.Task<TtsEngineEntity> GetIntegrationsSpeechTtsEngineAsync (string engineId, bool? includeVoices = null)
         {
@@ -12033,12 +11885,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="includeVoices">Include voices for the engine (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TtsEngineEntity)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TtsEngineEntity>> GetIntegrationsSpeechTtsEngineAsyncWithHttpInfo (string engineId, bool? includeVoices = null)
         { 
@@ -12121,12 +11973,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a specific voice for a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="voiceId">The voice ID</param>
         /// <returns>TtsVoiceEntity</returns>
-        
         
         public TtsVoiceEntity GetIntegrationsSpeechTtsEngineVoice (string engineId, string voiceId)
         {
@@ -12136,12 +11988,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a specific voice for a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="voiceId">The voice ID</param>
         /// <returns>ApiResponse of TtsVoiceEntity</returns>
-        
         
         public ApiResponse< TtsVoiceEntity > GetIntegrationsSpeechTtsEngineVoiceWithHttpInfo (string engineId, string voiceId)
         { 
@@ -12225,12 +12077,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a specific voice for a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="voiceId">The voice ID</param>
         /// <returns>Task of TtsVoiceEntity</returns>
-        
         
         public async System.Threading.Tasks.Task<TtsVoiceEntity> GetIntegrationsSpeechTtsEngineVoiceAsync (string engineId, string voiceId)
         {
@@ -12241,12 +12093,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about a specific voice for a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="voiceId">The voice ID</param>
         /// <returns>Task of ApiResponse (TtsVoiceEntity)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TtsVoiceEntity>> GetIntegrationsSpeechTtsEngineVoiceAsyncWithHttpInfo (string engineId, string voiceId)
         { 
@@ -12333,13 +12185,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of voices for a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>TtsVoiceEntityListing</returns>
-        
         
         public TtsVoiceEntityListing GetIntegrationsSpeechTtsEngineVoices (string engineId, int? pageNumber = null, int? pageSize = null)
         {
@@ -12349,13 +12201,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of voices for a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of TtsVoiceEntityListing</returns>
-        
         
         public ApiResponse< TtsVoiceEntityListing > GetIntegrationsSpeechTtsEngineVoicesWithHttpInfo (string engineId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -12437,13 +12289,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of voices for a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of TtsVoiceEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<TtsVoiceEntityListing> GetIntegrationsSpeechTtsEngineVoicesAsync (string engineId, int? pageNumber = null, int? pageSize = null)
         {
@@ -12454,13 +12306,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of voices for a TTS engine 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="engineId">The engine ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (TtsVoiceEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TtsVoiceEntityListing>> GetIntegrationsSpeechTtsEngineVoicesAsyncWithHttpInfo (string engineId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -12544,6 +12396,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of TTS engines enabled for org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -12553,7 +12406,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)</param>
         /// <returns>TtsEngineEntityListing</returns>
         
-        
         public TtsEngineEntityListing GetIntegrationsSpeechTtsEngines (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
         {
              ApiResponse<TtsEngineEntityListing> localVarResponse = GetIntegrationsSpeechTtsEnginesWithHttpInfo(pageNumber, pageSize, includeVoices, name, language);
@@ -12562,6 +12414,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of TTS engines enabled for org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -12570,7 +12423,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on engine name (optional)</param>
         /// <param name="language">Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)</param>
         /// <returns>ApiResponse of TtsEngineEntityListing</returns>
-        
         
         public ApiResponse< TtsEngineEntityListing > GetIntegrationsSpeechTtsEnginesWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
         { 
@@ -12651,6 +12503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of TTS engines enabled for org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -12659,7 +12512,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on engine name (optional)</param>
         /// <param name="language">Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)</param>
         /// <returns>Task of TtsEngineEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<TtsEngineEntityListing> GetIntegrationsSpeechTtsEnginesAsync (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
         {
@@ -12670,6 +12522,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of TTS engines enabled for org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -12678,7 +12531,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter on engine name (optional)</param>
         /// <param name="language">Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)</param>
         /// <returns>Task of ApiResponse (TtsEngineEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TtsEngineEntityListing>> GetIntegrationsSpeechTtsEnginesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
         { 
@@ -12760,10 +12612,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get TTS settings for an org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TtsSettings</returns>
-        
         
         public TtsSettings GetIntegrationsSpeechTtsSettings ()
         {
@@ -12773,10 +12625,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get TTS settings for an org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TtsSettings</returns>
-        
         
         public ApiResponse< TtsSettings > GetIntegrationsSpeechTtsSettingsWithHttpInfo ()
         { 
@@ -12852,10 +12704,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get TTS settings for an org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of TtsSettings</returns>
-        
         
         public async System.Threading.Tasks.Task<TtsSettings> GetIntegrationsSpeechTtsSettingsAsync ()
         {
@@ -12866,10 +12718,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get TTS settings for an org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (TtsSettings)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TtsSettings>> GetIntegrationsSpeechTtsSettingsAsyncWithHttpInfo ()
         { 
@@ -12946,11 +12798,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration type. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <returns>IntegrationType</returns>
-        
         
         public IntegrationType GetIntegrationsType (string typeId)
         {
@@ -12960,11 +12812,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration type. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <returns>ApiResponse of IntegrationType</returns>
-        
         
         public ApiResponse< IntegrationType > GetIntegrationsTypeWithHttpInfo (string typeId)
         { 
@@ -13044,11 +12896,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration type. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <returns>Task of IntegrationType</returns>
-        
         
         public async System.Threading.Tasks.Task<IntegrationType> GetIntegrationsTypeAsync (string typeId)
         {
@@ -13059,11 +12911,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get integration type. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <returns>Task of ApiResponse (IntegrationType)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<IntegrationType>> GetIntegrationsTypeAsyncWithHttpInfo (string typeId)
         { 
@@ -13145,12 +12997,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get properties config schema for an integration type. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <param name="configType">Config schema type</param>
         /// <returns>JsonSchemaDocument</returns>
-        
         
         public JsonSchemaDocument GetIntegrationsTypeConfigschema (string typeId, string configType)
         {
@@ -13160,12 +13012,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get properties config schema for an integration type. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <param name="configType">Config schema type</param>
         /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        
         
         public ApiResponse< JsonSchemaDocument > GetIntegrationsTypeConfigschemaWithHttpInfo (string typeId, string configType)
         { 
@@ -13249,12 +13101,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get properties config schema for an integration type. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <param name="configType">Config schema type</param>
         /// <returns>Task of JsonSchemaDocument</returns>
-        
         
         public async System.Threading.Tasks.Task<JsonSchemaDocument> GetIntegrationsTypeConfigschemaAsync (string typeId, string configType)
         {
@@ -13265,12 +13117,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get properties config schema for an integration type. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Integration Type Id</param>
         /// <param name="configType">Config schema type</param>
         /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetIntegrationsTypeConfigschemaAsyncWithHttpInfo (string typeId, string configType)
         { 
@@ -13357,6 +13209,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List integration types 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -13367,7 +13220,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>IntegrationTypeEntityListing</returns>
         
-        
         public IntegrationTypeEntityListing GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<IntegrationTypeEntityListing> localVarResponse = GetIntegrationsTypesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -13376,6 +13228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List integration types 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -13385,7 +13238,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of IntegrationTypeEntityListing</returns>
-        
         
         public ApiResponse< IntegrationTypeEntityListing > GetIntegrationsTypesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -13467,6 +13319,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List integration types 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -13477,7 +13330,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of IntegrationTypeEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<IntegrationTypeEntityListing> GetIntegrationsTypesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<IntegrationTypeEntityListing> localVarResponse = await GetIntegrationsTypesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -13487,6 +13339,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List integration types 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -13496,7 +13349,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationTypeEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
@@ -13579,6 +13431,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List permitted user app integrations for the logged in user 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -13590,7 +13443,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appHost">The type of UserApp to filter by (optional)</param>
         /// <returns>UserAppEntityListing</returns>
         
-        
         public UserAppEntityListing GetIntegrationsUserapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
         {
              ApiResponse<UserAppEntityListing> localVarResponse = GetIntegrationsUserappsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, appHost);
@@ -13599,6 +13451,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List permitted user app integrations for the logged in user 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -13609,7 +13462,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="appHost">The type of UserApp to filter by (optional)</param>
         /// <returns>ApiResponse of UserAppEntityListing</returns>
-        
         
         public ApiResponse< UserAppEntityListing > GetIntegrationsUserappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
         { 
@@ -13692,6 +13544,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List permitted user app integrations for the logged in user 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -13703,7 +13556,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appHost">The type of UserApp to filter by (optional)</param>
         /// <returns>Task of UserAppEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<UserAppEntityListing> GetIntegrationsUserappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
         {
              ApiResponse<UserAppEntityListing> localVarResponse = await GetIntegrationsUserappsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, appHost);
@@ -13713,6 +13565,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List permitted user app integrations for the logged in user 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -13723,7 +13576,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="appHost">The type of UserApp to filter by (optional)</param>
         /// <returns>Task of ApiResponse (UserAppEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<UserAppEntityListing>> GetIntegrationsUserappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
         { 
@@ -13807,6 +13659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
@@ -13819,7 +13672,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Update (optional)</param>
         /// <returns>Integration</returns>
         
-        
         public Integration PatchIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null)
         {
              ApiResponse<Integration> localVarResponse = PatchIntegrationWithHttpInfo(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, body);
@@ -13828,6 +13680,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
@@ -13839,7 +13692,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="body">Integration Update (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
-        
         
         public ApiResponse< Integration > PatchIntegrationWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null)
         { 
@@ -13931,6 +13783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
@@ -13943,7 +13796,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Integration Update (optional)</param>
         /// <returns>Task of Integration</returns>
         
-        
         public async System.Threading.Tasks.Task<Integration> PatchIntegrationAsync (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null)
         {
              ApiResponse<Integration> localVarResponse = await PatchIntegrationAsyncWithHttpInfo(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, body);
@@ -13953,6 +13805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
@@ -13964,7 +13817,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="body">Integration Update (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Integration>> PatchIntegrationAsyncWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null)
         { 
@@ -14058,12 +13910,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Patch an Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public PureCloudPlatform.Client.V2.Model.Action PatchIntegrationsAction (string actionId, UpdateActionInput body)
         {
@@ -14073,12 +13925,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Patch an Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > PatchIntegrationsActionWithHttpInfo (string actionId, UpdateActionInput body)
         { 
@@ -14167,12 +14019,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Patch an Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PatchIntegrationsActionAsync (string actionId, UpdateActionInput body)
         {
@@ -14183,12 +14035,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Patch an Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PatchIntegrationsActionAsyncWithHttpInfo (string actionId, UpdateActionInput body)
         { 
@@ -14280,12 +14132,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an existing Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action Draft.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public PureCloudPlatform.Client.V2.Model.Action PatchIntegrationsActionDraft (string actionId, UpdateDraftInput body)
         {
@@ -14295,12 +14147,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an existing Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action Draft.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > PatchIntegrationsActionDraftWithHttpInfo (string actionId, UpdateDraftInput body)
         { 
@@ -14389,12 +14241,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an existing Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action Draft.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PatchIntegrationsActionDraftAsync (string actionId, UpdateDraftInput body)
         {
@@ -14405,12 +14257,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an existing Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action Draft.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PatchIntegrationsActionDraftAsyncWithHttpInfo (string actionId, UpdateDraftInput body)
         { 
@@ -14502,11 +14354,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Integration (optional)</param>
         /// <returns>Integration</returns>
-        
         
         public Integration PostIntegrations (CreateIntegrationRequest body = null)
         {
@@ -14516,11 +14368,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Integration (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
-        
         
         public ApiResponse< Integration > PostIntegrationsWithHttpInfo (CreateIntegrationRequest body = null)
         { 
@@ -14602,11 +14454,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Integration (optional)</param>
         /// <returns>Task of Integration</returns>
-        
         
         public async System.Threading.Tasks.Task<Integration> PostIntegrationsAsync (CreateIntegrationRequest body = null)
         {
@@ -14617,11 +14469,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an integration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Integration (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Integration>> PostIntegrationsAsyncWithHttpInfo (CreateIntegrationRequest body = null)
         { 
@@ -14704,11 +14556,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Draft from existing Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActionDraft (string actionId)
         {
@@ -14718,11 +14570,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Draft from existing Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > PostIntegrationsActionDraftWithHttpInfo (string actionId)
         { 
@@ -14802,11 +14654,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Draft from existing Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionDraftAsync (string actionId)
         {
@@ -14817,11 +14669,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Draft from existing Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionDraftAsyncWithHttpInfo (string actionId)
         { 
@@ -14903,12 +14755,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Publish a Draft and make it the active Action configuration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body)
         {
@@ -14918,12 +14770,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Publish a Draft and make it the active Action configuration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > PostIntegrationsActionDraftPublishWithHttpInfo (string actionId, PublishDraftInput body)
         { 
@@ -15012,12 +14864,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Publish a Draft and make it the active Action configuration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionDraftPublishAsync (string actionId, PublishDraftInput body)
         {
@@ -15028,12 +14880,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Publish a Draft and make it the active Action configuration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Input used to patch the Action.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionDraftPublishAsyncWithHttpInfo (string actionId, PublishDraftInput body)
         { 
@@ -15125,12 +14977,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>TestExecutionResult</returns>
-        
         
         public TestExecutionResult PostIntegrationsActionDraftTest (string actionId, Object body)
         {
@@ -15140,12 +14992,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>ApiResponse of TestExecutionResult</returns>
-        
         
         public ApiResponse< TestExecutionResult > PostIntegrationsActionDraftTestWithHttpInfo (string actionId, Object body)
         { 
@@ -15234,12 +15086,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of TestExecutionResult</returns>
-        
         
         public async System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionDraftTestAsync (string actionId, Object body)
         {
@@ -15250,12 +15102,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of ApiResponse (TestExecutionResult)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionDraftTestAsyncWithHttpInfo (string actionId, Object body)
         { 
@@ -15347,12 +15199,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Object</returns>
-        
         
         public Object PostIntegrationsActionExecute (string actionId, Object body)
         {
@@ -15362,12 +15214,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>ApiResponse of Object</returns>
-        
         
         public ApiResponse< Object > PostIntegrationsActionExecuteWithHttpInfo (string actionId, Object body)
         { 
@@ -15456,12 +15308,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of Object</returns>
-        
         
         public async System.Threading.Tasks.Task<Object> PostIntegrationsActionExecuteAsync (string actionId, Object body)
         {
@@ -15472,12 +15324,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostIntegrationsActionExecuteAsyncWithHttpInfo (string actionId, Object body)
         { 
@@ -15569,12 +15421,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>TestExecutionResult</returns>
-        
         
         public TestExecutionResult PostIntegrationsActionTest (string actionId, Object body)
         {
@@ -15584,12 +15436,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>ApiResponse of TestExecutionResult</returns>
-        
         
         public ApiResponse< TestExecutionResult > PostIntegrationsActionTestWithHttpInfo (string actionId, Object body)
         { 
@@ -15678,12 +15530,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of TestExecutionResult</returns>
-        
         
         public async System.Threading.Tasks.Task<TestExecutionResult> PostIntegrationsActionTestAsync (string actionId, Object body)
         {
@@ -15694,12 +15546,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionId">actionId</param>
         /// <param name="body">Map of parameters used for variable substitution.</param>
         /// <returns>Task of ApiResponse (TestExecutionResult)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TestExecutionResult>> PostIntegrationsActionTestAsyncWithHttpInfo (string actionId, Object body)
         { 
@@ -15791,11 +15643,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActions (PostActionInput body)
         {
@@ -15805,11 +15657,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > PostIntegrationsActionsWithHttpInfo (PostActionInput body)
         { 
@@ -15894,11 +15746,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionsAsync (PostActionInput body)
         {
@@ -15909,11 +15761,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Action 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionsAsyncWithHttpInfo (PostActionInput body)
         { 
@@ -16000,11 +15852,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action Draft.</param>
         /// <returns>PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public PureCloudPlatform.Client.V2.Model.Action PostIntegrationsActionsDrafts (PostActionInput body)
         {
@@ -16014,11 +15866,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action Draft.</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Action > PostIntegrationsActionsDraftsWithHttpInfo (PostActionInput body)
         { 
@@ -16103,11 +15955,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action Draft.</param>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.Action</returns>
-        
         
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionsDraftsAsync (PostActionInput body)
         {
@@ -16118,11 +15970,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new Draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Input used to create Action Draft.</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Action)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionsDraftsAsyncWithHttpInfo (PostActionInput body)
         { 
@@ -16209,11 +16061,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Credential (optional)</param>
         /// <returns>CredentialInfo</returns>
-        
         
         public CredentialInfo PostIntegrationsCredentials (Credential body = null)
         {
@@ -16223,11 +16075,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Credential (optional)</param>
         /// <returns>ApiResponse of CredentialInfo</returns>
-        
         
         public ApiResponse< CredentialInfo > PostIntegrationsCredentialsWithHttpInfo (Credential body = null)
         { 
@@ -16309,11 +16161,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Credential (optional)</param>
         /// <returns>Task of CredentialInfo</returns>
-        
         
         public async System.Threading.Tasks.Task<CredentialInfo> PostIntegrationsCredentialsAsync (Credential body = null)
         {
@@ -16324,11 +16176,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Credential (optional)</param>
         /// <returns>Task of ApiResponse (CredentialInfo)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CredentialInfo>> PostIntegrationsCredentialsAsyncWithHttpInfo (Credential body = null)
         { 
@@ -16411,6 +16263,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Nuance bot in the specified Integration asynchronously 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -16419,7 +16273,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">targetChannel (optional)</param>
         /// <returns>AsyncJob</returns>
         
-        /// Preview Endpoint
         public AsyncJob PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null)
         {
              ApiResponse<AsyncJob> localVarResponse = PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsWithHttpInfo(nuanceIntegrationId, botId, expand, body);
@@ -16428,6 +16281,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Nuance bot in the specified Integration asynchronously 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -16436,7 +16291,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">targetChannel (optional)</param>
         /// <returns>ApiResponse of AsyncJob</returns>
         
-        /// Preview Endpoint
         public ApiResponse< AsyncJob > PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsWithHttpInfo (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -16526,6 +16380,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Nuance bot in the specified Integration asynchronously 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -16534,7 +16390,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">targetChannel (optional)</param>
         /// <returns>Task of AsyncJob</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<AsyncJob> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsAsync (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null)
         {
              ApiResponse<AsyncJob> localVarResponse = await PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsAsyncWithHttpInfo(nuanceIntegrationId, botId, expand, body);
@@ -16544,6 +16399,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Nuance bot in the specified Integration asynchronously 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -16552,7 +16409,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">targetChannel (optional)</param>
         /// <returns>Task of ApiResponse (AsyncJob)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<AsyncJob>> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsAsyncWithHttpInfo (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -16645,6 +16501,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Nuance bots in the specified Integration asynchronously 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -16653,7 +16511,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>AsyncJob</returns>
         
-        /// Preview Endpoint
         public AsyncJob PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
         {
              ApiResponse<AsyncJob> localVarResponse = PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsWithHttpInfo(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots);
@@ -16662,6 +16519,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Nuance bots in the specified Integration asynchronously 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -16670,7 +16529,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>ApiResponse of AsyncJob</returns>
         
-        /// Preview Endpoint
         public ApiResponse< AsyncJob > PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsWithHttpInfo (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -16752,6 +16610,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Nuance bots in the specified Integration asynchronously 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -16760,7 +16620,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>Task of AsyncJob</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<AsyncJob> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsAsync (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
         {
              ApiResponse<AsyncJob> localVarResponse = await PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsAsyncWithHttpInfo(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots);
@@ -16770,6 +16629,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of Nuance bots in the specified Integration asynchronously 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -16778,7 +16639,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="onlyRegisteredBots">Limit bots to the ones configured for Genesys Cloud usage (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AsyncJob)</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<AsyncJob>> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsAsyncWithHttpInfo (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -16862,13 +16722,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Try out a single credential for a Nuance bot to know if the secret is correct 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate (string nuanceIntegrationId, BotExecutionConfiguration settings)
         {
              PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateWithHttpInfo(nuanceIntegrationId, settings);
@@ -16876,13 +16737,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Try out a single credential for a Nuance bot to know if the secret is correct 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateWithHttpInfo (string nuanceIntegrationId, BotExecutionConfiguration settings)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -16970,13 +16832,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Try out a single credential for a Nuance bot to know if the secret is correct 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateAsync (string nuanceIntegrationId, BotExecutionConfiguration settings)
         {
              await PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateAsyncWithHttpInfo(nuanceIntegrationId, settings);
@@ -16985,13 +16848,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Try out a single credential for a Nuance bot to know if the secret is correct 
+        /// 
+        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateAsyncWithHttpInfo (string nuanceIntegrationId, BotExecutionConfiguration settings)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -17082,12 +16946,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update integration configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>IntegrationConfiguration</returns>
-        
         
         public IntegrationConfiguration PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null)
         {
@@ -17097,12 +16961,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update integration configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>ApiResponse of IntegrationConfiguration</returns>
-        
         
         public ApiResponse< IntegrationConfiguration > PutIntegrationConfigCurrentWithHttpInfo (string integrationId, IntegrationConfiguration body = null)
         { 
@@ -17188,12 +17052,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update integration configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>Task of IntegrationConfiguration</returns>
-        
         
         public async System.Threading.Tasks.Task<IntegrationConfiguration> PutIntegrationConfigCurrentAsync (string integrationId, IntegrationConfiguration body = null)
         {
@@ -17204,12 +17068,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update integration configuration. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">Integration Configuration (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationConfiguration)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<IntegrationConfiguration>> PutIntegrationConfigCurrentAsyncWithHttpInfo (string integrationId, IntegrationConfiguration body = null)
         { 
@@ -17297,12 +17161,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Set a list of botConnector bots plus versions for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botList"></param>
         /// <returns></returns>
-        
         
         public void PutIntegrationsBotconnectorIntegrationIdBots (string integrationId, BotList botList)
         {
@@ -17311,12 +17175,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Set a list of botConnector bots plus versions for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botList"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PutIntegrationsBotconnectorIntegrationIdBotsWithHttpInfo (string integrationId, BotList botList)
         { 
@@ -17405,12 +17269,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Set a list of botConnector bots plus versions for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botList"></param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PutIntegrationsBotconnectorIntegrationIdBotsAsync (string integrationId, BotList botList)
         {
@@ -17420,12 +17284,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Set a list of botConnector bots plus versions for this integration 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">The integration ID for this group of bots</param>
         /// <param name="botList"></param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutIntegrationsBotconnectorIntegrationIdBotsAsyncWithHttpInfo (string integrationId, BotList botList)
         { 
@@ -17517,12 +17381,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <param name="body">Credential (optional)</param>
         /// <returns>CredentialInfo</returns>
-        
         
         public CredentialInfo PutIntegrationsCredential (string credentialId, Credential body = null)
         {
@@ -17532,12 +17396,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <param name="body">Credential (optional)</param>
         /// <returns>ApiResponse of CredentialInfo</returns>
-        
         
         public ApiResponse< CredentialInfo > PutIntegrationsCredentialWithHttpInfo (string credentialId, Credential body = null)
         { 
@@ -17623,12 +17487,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <param name="body">Credential (optional)</param>
         /// <returns>Task of CredentialInfo</returns>
-        
         
         public async System.Threading.Tasks.Task<CredentialInfo> PutIntegrationsCredentialAsync (string credentialId, Credential body = null)
         {
@@ -17639,12 +17503,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a set of credentials 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credentialId">Credential ID</param>
         /// <param name="body">Credential (optional)</param>
         /// <returns>Task of ApiResponse (CredentialInfo)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CredentialInfo>> PutIntegrationsCredentialAsyncWithHttpInfo (string credentialId, Credential body = null)
         { 
@@ -17732,13 +17596,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration 
+        /// 
+        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns></returns>
         
-        /// Preview Endpoint
         public void PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings (string nuanceIntegrationId, NuanceBotLaunchSettings settings)
         {
              PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsWithHttpInfo(nuanceIntegrationId, settings);
@@ -17746,13 +17611,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration 
+        /// 
+        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        /// Preview Endpoint
         public ApiResponse<Object> PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsWithHttpInfo (string nuanceIntegrationId, NuanceBotLaunchSettings settings)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -17840,13 +17706,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration 
+        /// 
+        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>Task of void</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsAsync (string nuanceIntegrationId, NuanceBotLaunchSettings settings)
         {
              await PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsAsyncWithHttpInfo(nuanceIntegrationId, settings);
@@ -17855,13 +17722,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration 
+        /// 
+        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
         /// <param name="settings"></param>
         /// <returns>Task of ApiResponse</returns>
         
-        /// Preview Endpoint
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsAsyncWithHttpInfo (string nuanceIntegrationId, NuanceBotLaunchSettings settings)
         { 
             // verify the required parameter 'nuanceIntegrationId' is set
@@ -17952,11 +17820,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update TTS settings for an org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Updated TtsSettings</param>
         /// <returns>TtsSettings</returns>
-        
         
         public TtsSettings PutIntegrationsSpeechTtsSettings (TtsSettings body)
         {
@@ -17966,11 +17834,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update TTS settings for an org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Updated TtsSettings</param>
         /// <returns>ApiResponse of TtsSettings</returns>
-        
         
         public ApiResponse< TtsSettings > PutIntegrationsSpeechTtsSettingsWithHttpInfo (TtsSettings body)
         { 
@@ -18055,11 +17923,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update TTS settings for an org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Updated TtsSettings</param>
         /// <returns>Task of TtsSettings</returns>
-        
         
         public async System.Threading.Tasks.Task<TtsSettings> PutIntegrationsSpeechTtsSettingsAsync (TtsSettings body)
         {
@@ -18070,11 +17938,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update TTS settings for an org 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Updated TtsSettings</param>
         /// <returns>Task of ApiResponse (TtsSettings)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TtsSettings>> PutIntegrationsSpeechTtsSettingsAsyncWithHttpInfo (TtsSettings body)
         { 
@@ -18153,6 +18021,228 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TtsSettings>(localVarStatusCode,
                 localVarHeaders,
                 (TtsSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TtsSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk integration presence ingestion 
+        /// This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">UC Integration ID</param>
+        /// <param name="body">List of User presences</param>
+        /// <returns>string</returns>
+        
+        public string PutIntegrationsUnifiedcommunicationThirdpartypresences (string ucIntegrationId, List<UCThirdPartyPresence> body)
+        {
+             ApiResponse<string> localVarResponse = PutIntegrationsUnifiedcommunicationThirdpartypresencesWithHttpInfo(ucIntegrationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk integration presence ingestion 
+        /// This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">UC Integration ID</param>
+        /// <param name="body">List of User presences</param>
+        /// <returns>ApiResponse of string</returns>
+        
+        public ApiResponse< string > PutIntegrationsUnifiedcommunicationThirdpartypresencesWithHttpInfo (string ucIntegrationId, List<UCThirdPartyPresence> body)
+        { 
+            // verify the required parameter 'ucIntegrationId' is set
+            if (ucIntegrationId == null)
+                throw new ApiException(400, "Missing required parameter 'ucIntegrationId' when calling IntegrationsApi->PutIntegrationsUnifiedcommunicationThirdpartypresences");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsUnifiedcommunicationThirdpartypresences");
+
+            var localVarPath = "/api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (ucIntegrationId != null) localVarPathParams.Add("ucIntegrationId", this.Configuration.ApiClient.ParameterToString(ucIntegrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsUnifiedcommunicationThirdpartypresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsUnifiedcommunicationThirdpartypresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk integration presence ingestion 
+        /// This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">UC Integration ID</param>
+        /// <param name="body">List of User presences</param>
+        /// <returns>Task of string</returns>
+        
+        public async System.Threading.Tasks.Task<string> PutIntegrationsUnifiedcommunicationThirdpartypresencesAsync (string ucIntegrationId, List<UCThirdPartyPresence> body)
+        {
+             ApiResponse<string> localVarResponse = await PutIntegrationsUnifiedcommunicationThirdpartypresencesAsyncWithHttpInfo(ucIntegrationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk integration presence ingestion 
+        /// This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">UC Integration ID</param>
+        /// <param name="body">List of User presences</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PutIntegrationsUnifiedcommunicationThirdpartypresencesAsyncWithHttpInfo (string ucIntegrationId, List<UCThirdPartyPresence> body)
+        { 
+            // verify the required parameter 'ucIntegrationId' is set
+            if (ucIntegrationId == null)
+                throw new ApiException(400, "Missing required parameter 'ucIntegrationId' when calling IntegrationsApi->PutIntegrationsUnifiedcommunicationThirdpartypresences");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsUnifiedcommunicationThirdpartypresences");
+            
+
+            var localVarPath = "/api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (ucIntegrationId != null) localVarPathParams.Add("ucIntegrationId", this.Configuration.ApiClient.ParameterToString(ucIntegrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsUnifiedcommunicationThirdpartypresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsUnifiedcommunicationThirdpartypresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

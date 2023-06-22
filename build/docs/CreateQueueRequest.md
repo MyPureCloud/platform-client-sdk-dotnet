@@ -20,6 +20,7 @@ title: CreateQueueRequest
 | **JoinedMemberCount** | **int?** | The number of joined members in the queue. | [optional] |
 | **MediaSettings** | [**QueueMediaSettings**](QueueMediaSettings.html) | The media settings for the queue. | [optional] |
 | **RoutingRules** | [**List&lt;RoutingRule&gt;**](RoutingRule.html) | The routing rules for the queue, used for Preferred Agent Routing. | [optional] |
+| **ConditionalGroupRouting** | [**ConditionalGroupRouting**](ConditionalGroupRouting.html) | The Conditional Group Routing settings for the queue. | [optional] |
 | **Bullseye** | [**Bullseye**](Bullseye.html) | The bullseye settings for the queue. | [optional] |
 | **AcwSettings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | [optional] |
 | **SkillEvaluationMethod** | **string** | The skill evaluation method to use when routing conversations. | [optional] |

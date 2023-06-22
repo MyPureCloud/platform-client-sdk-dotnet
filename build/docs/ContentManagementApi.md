@@ -55,8 +55,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a document.
 
-
-
 Requires NO permissions: 
 
 
@@ -122,8 +120,6 @@ Deletes an existing share.
 
 This revokes sharing rights specified in the share record
 
-
-
 Requires NO permissions: 
 
 
@@ -185,8 +181,6 @@ void (empty response body)
 
 Cancel the command for this status
 
-
-
 Requires NO permissions: 
 
 
@@ -247,8 +241,6 @@ void (empty response body)
 
 
 Delete a workspace
-
-
 
 Requires NO permissions: 
 
@@ -312,8 +304,6 @@ void (empty response body)
 
 
 Delete a member from a workspace
-
-
 
 Requires NO permissions: 
 
@@ -380,8 +370,6 @@ Delete workspace tag
 
 Delete a tag from a workspace. Will remove this tag from all documents.
 
-
-
 Requires NO permissions: 
 
 
@@ -445,8 +433,6 @@ void (empty response body)
 
 Get a document.
 
-
-
 Requires NO permissions: 
 
 
@@ -507,11 +493,11 @@ namespace Example
 
 ## [**DocumentAuditEntityListing**](DocumentAuditEntityListing.html) GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a list of audits for a document.
 
-
+This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
 
 Requires NO permissions: 
 
@@ -587,8 +573,6 @@ namespace Example
 
 Download a document.
 
-
-
 Requires NO permissions: 
 
 
@@ -654,8 +638,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a list of documents.
-
-
 
 Requires NO permissions: 
 
@@ -731,8 +713,6 @@ namespace Example
 
 Query content
 
-
-
 Requires NO permissions: 
 
 
@@ -805,8 +785,6 @@ namespace Example
 
 Get a Security Profile
 
-
-
 Requires NO permissions: 
 
 
@@ -869,8 +847,6 @@ namespace Example
 
 Get a List of Security Profiles
 
-
-
 Requires NO permissions: 
 
 
@@ -927,8 +903,6 @@ This endpoint does require any parameters.
 
 
 Retrieve details about an existing share.
-
-
 
 Requires NO permissions: 
 
@@ -995,8 +969,6 @@ namespace Example
 Get shared documents. Securely download a shared document.
 
 This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
-
-
 
 Requires NO permissions: 
 
@@ -1070,8 +1042,6 @@ Gets a list of shares.  You must specify at least one filter (e.g. entityId).
 
 Failing to specify a filter will return 400.
 
-
-
 Requires NO permissions: 
 
 
@@ -1140,8 +1110,6 @@ namespace Example
 
 Get a list of statuses for pending operations
 
-
-
 Requires NO permissions: 
 
 
@@ -1206,8 +1174,6 @@ namespace Example
 
 Get a status.
 
-
-
 Requires NO permissions: 
 
 
@@ -1270,8 +1236,6 @@ namespace Example
 
 Get usage details.
 
-
-
 Requires NO permissions: 
 
 
@@ -1328,8 +1292,6 @@ This endpoint does require any parameters.
 
 
 Get a workspace.
-
-
 
 Requires NO permissions: 
 
@@ -1394,8 +1356,6 @@ namespace Example
 
 
 Get a list of documents.
-
-
 
 Requires NO permissions: 
 
@@ -1469,8 +1429,6 @@ namespace Example
 
 Get a workspace member
 
-
-
 Requires NO permissions: 
 
 
@@ -1536,8 +1494,6 @@ namespace Example
 
 
 Get a list workspace members
-
-
 
 Requires NO permissions: 
 
@@ -1607,8 +1563,6 @@ namespace Example
 
 Get a workspace tag
 
-
-
 Requires NO permissions: 
 
 
@@ -1674,8 +1628,6 @@ namespace Example
 
 
 Get a list of workspace tags
-
-
 
 Requires NO permissions: 
 
@@ -1749,8 +1701,6 @@ Get a list of workspaces.
 
 Specifying 'content' access will return all workspaces the user has document access to, while 'admin' access will return all group workspaces the user has administrative rights to.
 
-
-
 Requires NO permissions: 
 
 
@@ -1815,11 +1765,11 @@ namespace Example
 
 ## [**QueryResults**](QueryResults.html) PostContentmanagementAuditquery (ContentQueryRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Query audits
 
-
+This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
 
 Requires NO permissions: 
 
@@ -1882,8 +1832,6 @@ namespace Example
 
 
 Update a document.
-
-
 
 Requires NO permissions: 
 
@@ -1953,8 +1901,6 @@ namespace Example
 
 Replace the contents of a document.
 
-
-
 Requires NO permissions: 
 
 
@@ -2020,8 +1966,6 @@ namespace Example
 
 
 Add a document.
-
-
 
 Requires NO permissions: 
 
@@ -2091,8 +2035,6 @@ namespace Example
 
 Query content
 
-
-
 Requires NO permissions: 
 
 
@@ -2157,8 +2099,6 @@ namespace Example
 
 Creates a new share or updates an existing share if the entity has already been shared
 
-
-
 Requires NO permissions: 
 
 
@@ -2220,8 +2160,6 @@ namespace Example
 
 
 Create a workspace tag
-
-
 
 Requires NO permissions: 
 
@@ -2286,8 +2224,6 @@ namespace Example
 
 
 Perform a prefix query on tags in the workspace
-
-
 
 Requires NO permissions: 
 
@@ -2355,8 +2291,6 @@ namespace Example
 
 Create a group workspace
 
-
-
 Requires NO permissions: 
 
 
@@ -2418,8 +2352,6 @@ namespace Example
 
 
 Update a workspace
-
-
 
 Requires NO permissions: 
 
@@ -2484,8 +2416,6 @@ namespace Example
 
 
 Add a member to a workspace
-
-
 
 Requires NO permissions: 
 
@@ -2552,8 +2482,6 @@ namespace Example
 
 
 Update a workspace tag. Will update all documents with the new tag value.
-
-
 
 Requires NO permissions: 
 

@@ -51,8 +51,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete ADFS Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:delete
@@ -110,8 +108,6 @@ This endpoint does require any parameters.
 
 
 Delete Customer Interaction Center (CIC) Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -171,8 +167,6 @@ This endpoint does require any parameters.
 
 Delete Generic SAML Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:delete
@@ -230,8 +224,6 @@ This endpoint does require any parameters.
 
 
 Delete G Suite Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -291,8 +283,6 @@ This endpoint does require any parameters.
 
 Delete IdentityNow Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:delete
@@ -350,8 +340,6 @@ This endpoint does require any parameters.
 
 
 Delete Okta Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -411,8 +399,6 @@ This endpoint does require any parameters.
 
 Delete OneLogin Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:delete
@@ -470,8 +456,6 @@ This endpoint does require any parameters.
 
 
 Delete Ping Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -531,8 +515,6 @@ This endpoint does require any parameters.
 
 Delete PureCloud Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:delete
@@ -590,8 +572,6 @@ This endpoint does require any parameters.
 
 
 Delete PureEngage Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -651,8 +631,6 @@ This endpoint does require any parameters.
 
 Delete Salesforce Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:delete
@@ -710,8 +688,6 @@ This endpoint does require any parameters.
 
 
 The list of identity providers
-
-
 
 Requires ANY permissions: 
 
@@ -771,8 +747,6 @@ This endpoint does require any parameters.
 
 Get ADFS Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:view
@@ -830,8 +804,6 @@ This endpoint does require any parameters.
 
 
 Get Customer Interaction Center (CIC) Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -891,8 +863,6 @@ This endpoint does require any parameters.
 
 Get Generic SAML Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:view
@@ -950,8 +920,6 @@ This endpoint does require any parameters.
 
 
 Get G Suite Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -1011,8 +979,6 @@ This endpoint does require any parameters.
 
 Get IdentityNow Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:view
@@ -1070,8 +1036,6 @@ This endpoint does require any parameters.
 
 
 Get Okta Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -1131,8 +1095,6 @@ This endpoint does require any parameters.
 
 Get OneLogin Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:view
@@ -1190,8 +1152,6 @@ This endpoint does require any parameters.
 
 
 Get Ping Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -1251,8 +1211,6 @@ This endpoint does require any parameters.
 
 Get PureCloud Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:view
@@ -1310,8 +1268,6 @@ This endpoint does require any parameters.
 
 
 Get PureEngage Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -1371,8 +1327,6 @@ This endpoint does require any parameters.
 
 Get Salesforce Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:view
@@ -1430,8 +1384,6 @@ This endpoint does require any parameters.
 
 
 Update/Create ADFS Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -1497,8 +1449,6 @@ namespace Example
 
 Update/Create Customer Interaction Center (CIC) Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:add
@@ -1562,8 +1512,6 @@ namespace Example
 
 
 Update/Create Generic SAML Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -1629,8 +1577,6 @@ namespace Example
 
 Update/Create G Suite Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:add
@@ -1694,8 +1640,6 @@ namespace Example
 
 
 Update/Create IdentityNow Provider
-
-
 
 Requires ANY permissions: 
 
@@ -1761,8 +1705,6 @@ namespace Example
 
 Update/Create Okta Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:add
@@ -1826,8 +1768,6 @@ namespace Example
 
 
 Update/Create OneLogin Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -1893,8 +1833,6 @@ namespace Example
 
 Update/Create Ping Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:add
@@ -1958,8 +1896,6 @@ namespace Example
 
 
 Update/Create PureCloud Identity Provider
-
-
 
 Requires ANY permissions: 
 
@@ -2025,8 +1961,6 @@ namespace Example
 
 Update/Create PureEngage Identity Provider
 
-
-
 Requires ANY permissions: 
 
 * sso:provider:add
@@ -2090,8 +2024,6 @@ namespace Example
 
 
 Update/Create Salesforce Identity Provider
-
-
 
 Requires ANY permissions: 
 

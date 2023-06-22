@@ -88,8 +88,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete an external contact
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:delete
@@ -152,8 +150,6 @@ namespace Example
 
 
 Delete a note for an external contact
-
-
 
 Requires ANY permissions: 
 
@@ -220,8 +216,6 @@ namespace Example
 
 Delete a schema
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:edit
@@ -283,8 +277,6 @@ void (empty response body)
 
 
 Delete an external organization
-
-
 
 Requires ANY permissions: 
 
@@ -349,8 +341,6 @@ namespace Example
 
 
 Delete a note for an external organization
-
-
 
 Requires ANY permissions: 
 
@@ -417,8 +407,6 @@ namespace Example
 
 Unlink the Trustor for this External Organization
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:externalOrganization:edit
@@ -480,8 +468,6 @@ void (empty response body)
 
 
 Delete a relationship
-
-
 
 Requires ANY permissions: 
 
@@ -545,8 +531,6 @@ namespace Example
 
 
 Fetch an external contact
-
-
 
 Requires ANY permissions: 
 
@@ -613,8 +597,6 @@ namespace Example
 
 List the identifiers for a contact
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:view
@@ -677,8 +659,6 @@ namespace Example
 
 
 Retrieve all sessions for a given external contact.
-
-
 
 Requires ANY permissions: 
 
@@ -749,8 +729,6 @@ namespace Example
 
 Fetch a note for an external contact
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:view
@@ -817,8 +795,6 @@ namespace Example
 
 
 List notes for an external contact
-
-
 
 Requires ANY permissions: 
 
@@ -891,8 +867,6 @@ namespace Example
 
 Fetch an unresolved external contact
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:view
@@ -957,8 +931,6 @@ namespace Example
 
 
 Search for external contacts
-
-
 
 Requires ANY permissions: 
 
@@ -1031,8 +1003,6 @@ namespace Example
 
 Get a schema
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:view
@@ -1095,8 +1065,6 @@ namespace Example
 
 
 Get a specific version of a schema
-
-
 
 Requires ANY permissions: 
 
@@ -1163,8 +1131,6 @@ namespace Example
 
 Get all versions of an external contact's schema
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:view
@@ -1228,8 +1194,6 @@ namespace Example
 
 Get a list of schemas.
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:view
@@ -1287,8 +1251,6 @@ This endpoint does require any parameters.
 
 
 Fetch an external organization
-
-
 
 Requires ANY permissions: 
 
@@ -1357,8 +1319,6 @@ namespace Example
 
 
 Search for external contacts in an external organization
-
-
 
 Requires ANY permissions: 
 
@@ -1433,8 +1393,6 @@ namespace Example
 
 Fetch a note for an external organization
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:externalOrganization:view
@@ -1501,8 +1459,6 @@ namespace Example
 
 
 List notes for an external organization
-
-
 
 Requires ANY permissions: 
 
@@ -1576,8 +1532,6 @@ namespace Example
 
 Fetch a relationship for an external organization
 
-
-
 Requires ANY permissions: 
 
 * relate:externalOrganization:view
@@ -1649,8 +1603,6 @@ namespace Example
 
 
 Search for external organizations
-
-
 
 Requires ANY permissions: 
 
@@ -1728,8 +1680,6 @@ namespace Example
 
 Get a schema
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:view
@@ -1792,8 +1742,6 @@ namespace Example
 
 
 Get a specific version of a schema
-
-
 
 Requires ANY permissions: 
 
@@ -1860,8 +1808,6 @@ namespace Example
 
 Get all versions of an external organization's schema
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:view
@@ -1925,8 +1871,6 @@ namespace Example
 
 Get a list of schemas.
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:view
@@ -1984,8 +1928,6 @@ This endpoint does require any parameters.
 
 
 Fetch a relationship
-
-
 
 Requires ANY permissions: 
 
@@ -2052,8 +1994,6 @@ namespace Example
 
 Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:view
@@ -2118,8 +2058,6 @@ namespace Example
 
 
 Scan for external contacts using paging
-
-
 
 Requires ANY permissions: 
 
@@ -2186,8 +2124,6 @@ namespace Example
 
 Scan for notes using paging
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:view
@@ -2252,8 +2188,6 @@ namespace Example
 
 
 Scan for external organizations using paging
-
-
 
 Requires ANY permissions: 
 
@@ -2320,8 +2254,6 @@ namespace Example
 
 Scan for relationships
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:view
@@ -2386,8 +2318,6 @@ namespace Example
 
 
 Claim or release identifiers for a contact
-
-
 
 Requires ANY permissions: 
 
@@ -2454,8 +2384,6 @@ namespace Example
 
 Bulk fetch contacts
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:view
@@ -2518,8 +2446,6 @@ namespace Example
 
 
 Bulk add contacts
-
-
 
 Requires ANY permissions: 
 
@@ -2584,8 +2510,6 @@ namespace Example
 
 Bulk remove contacts
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:delete
@@ -2648,8 +2572,6 @@ namespace Example
 
 
 Bulk fetch unresolved ancestor contacts
-
-
 
 Requires ANY permissions: 
 
@@ -2714,8 +2636,6 @@ namespace Example
 
 Bulk update contacts
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:edit
@@ -2778,8 +2698,6 @@ namespace Example
 
 
 Bulk fetch notes
-
-
 
 Requires ALL permissions: 
 
@@ -2845,8 +2763,6 @@ namespace Example
 
 Bulk add notes
 
-
-
 Requires ALL permissions: 
 
 * externalContacts:contact:add
@@ -2910,8 +2826,6 @@ namespace Example
 
 
 Bulk remove notes
-
-
 
 Requires ALL permissions: 
 
@@ -2977,8 +2891,6 @@ namespace Example
 
 Bulk update notes
 
-
-
 Requires ALL permissions: 
 
 * externalContacts:contact:edit
@@ -3043,8 +2955,6 @@ namespace Example
 
 Bulk fetch organizations
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:externalOrganization:view
@@ -3107,8 +3017,6 @@ namespace Example
 
 
 Bulk add organizations
-
-
 
 Requires ANY permissions: 
 
@@ -3173,8 +3081,6 @@ namespace Example
 
 Bulk remove organizations
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:externalOrganization:delete
@@ -3238,8 +3144,6 @@ namespace Example
 
 Bulk update organizations
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:externalOrganization:edit
@@ -3302,8 +3206,6 @@ namespace Example
 
 
 Bulk fetch relationships
-
-
 
 Requires ALL permissions: 
 
@@ -3369,8 +3271,6 @@ namespace Example
 
 Bulk add relationships
 
-
-
 Requires ALL permissions: 
 
 * externalContacts:contact:add
@@ -3434,8 +3334,6 @@ namespace Example
 
 
 Bulk remove relationships
-
-
 
 Requires ALL permissions: 
 
@@ -3501,8 +3399,6 @@ namespace Example
 
 Bulk update relationships
 
-
-
 Requires ALL permissions: 
 
 * externalContacts:contact:edit
@@ -3566,8 +3462,6 @@ namespace Example
 
 
 Create a note for an external contact
-
-
 
 Requires ANY permissions: 
 
@@ -3634,8 +3528,6 @@ namespace Example
 
 Promote an observed contact (ephemeral or identified) to a curated contact
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:identity:promote
@@ -3699,8 +3591,6 @@ namespace Example
 
 Create an external contact
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:contact:add
@@ -3763,8 +3653,6 @@ namespace Example
 
 
 Create a schema
-
-
 
 Requires ANY permissions: 
 
@@ -3830,8 +3718,6 @@ namespace Example
 Fetch a contact using an identifier type and value.
 
 Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
-
-
 
 Requires ANY permissions: 
 
@@ -3899,8 +3785,6 @@ Merge two contacts into a new contact record
 
 Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:identity:merge
@@ -3963,8 +3847,6 @@ namespace Example
 
 
 Create a note for an external organization
-
-
 
 Requires ANY permissions: 
 
@@ -4032,8 +3914,6 @@ namespace Example
 
 Create an external organization
 
-
-
 Requires ANY permissions: 
 
 * relate:externalOrganization:add
@@ -4098,8 +3978,6 @@ namespace Example
 
 Create a schema
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:add
@@ -4163,8 +4041,6 @@ namespace Example
 
 Create a relationship
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:externalOrganization:edit
@@ -4227,8 +4103,6 @@ namespace Example
 
 
 Update an external contact
-
-
 
 Requires ANY permissions: 
 
@@ -4294,8 +4168,6 @@ namespace Example
 
 
 Update a note for an external contact
-
-
 
 Requires ANY permissions: 
 
@@ -4364,8 +4236,6 @@ namespace Example
 
 Update a schema
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:edit
@@ -4433,8 +4303,6 @@ Associate/disassociate an external contact with a conversation
 
 To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:conversation:associate
@@ -4498,8 +4366,6 @@ void (empty response body)
 
 
 Update an external organization
-
-
 
 Requires ANY permissions: 
 
@@ -4566,8 +4432,6 @@ namespace Example
 
 
 Update a note for an external organization
-
-
 
 Requires ANY permissions: 
 
@@ -4636,8 +4500,6 @@ namespace Example
 
 Links a Trustor with an External Organization
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:externalOrganization:edit
@@ -4703,8 +4565,6 @@ namespace Example
 
 Update a schema
 
-
-
 Requires ANY permissions: 
 
 * externalContacts:customFields:edit
@@ -4769,8 +4629,6 @@ namespace Example
 
 
 Update a relationship
-
-
 
 Requires ANY permissions: 
 

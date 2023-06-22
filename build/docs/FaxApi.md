@@ -23,8 +23,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a fax document.
 
-
-
 Requires NO permissions: 
 
 
@@ -85,8 +83,6 @@ void (empty response body)
 
 
 Get a document.
-
-
 
 Requires NO permissions: 
 
@@ -150,8 +146,6 @@ namespace Example
 
 Download a fax document.
 
-
-
 Requires NO permissions: 
 
 
@@ -213,8 +207,6 @@ namespace Example
 
 
 Get a list of fax documents.
-
-
 
 Requires NO permissions: 
 
@@ -280,8 +272,6 @@ namespace Example
 
 Get fax summary
 
-
-
 Requires NO permissions: 
 
 
@@ -338,8 +328,6 @@ This endpoint does require any parameters.
 
 
 Update a fax document.
-
-
 
 Requires NO permissions: 
 

@@ -25,7 +25,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ServerDate</returns>
         
-        
         ServerDate GetDate ();
 
         /// <summary>
@@ -36,7 +35,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ServerDate</returns>
-        
         
         ApiResponse<ServerDate> GetDateWithHttpInfo ();
 
@@ -49,7 +47,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IpAddressRangeListing</returns>
         
-        
         IpAddressRangeListing GetIpranges ();
 
         /// <summary>
@@ -60,7 +57,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IpAddressRangeListing</returns>
-        
         
         ApiResponse<IpAddressRangeListing> GetIprangesWithHttpInfo ();
 
@@ -75,7 +71,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TimeZoneEntityListing</returns>
         
-        
         TimeZoneEntityListing GetTimezones (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -89,7 +84,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
         
-        
         ApiResponse<TimeZoneEntityListing> GetTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -102,7 +96,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Certificate</param>
         /// <returns>ParsedCertificate</returns>
         
-        
         ParsedCertificate PostCertificateDetails (Certificate body);
 
         /// <summary>
@@ -114,7 +107,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Certificate</param>
         /// <returns>ApiResponse of ParsedCertificate</returns>
-        
         
         ApiResponse<ParsedCertificate> PostCertificateDetailsWithHttpInfo (Certificate body);
 
@@ -131,7 +123,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ServerDate</returns>
         
-        
         System.Threading.Tasks.Task<ServerDate> GetDateAsync ();
 
         /// <summary>
@@ -142,7 +133,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ServerDate)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetDateAsyncWithHttpInfo ();
 
@@ -155,7 +145,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IpAddressRangeListing</returns>
         
-        
         System.Threading.Tasks.Task<IpAddressRangeListing> GetIprangesAsync ();
 
         /// <summary>
@@ -166,7 +155,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IpAddressRangeListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<IpAddressRangeListing>> GetIprangesAsyncWithHttpInfo ();
 
@@ -181,7 +169,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<TimeZoneEntityListing> GetTimezonesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -195,7 +182,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -208,7 +194,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Certificate</param>
         /// <returns>Task of ParsedCertificate</returns>
         
-        
         System.Threading.Tasks.Task<ParsedCertificate> PostCertificateDetailsAsync (Certificate body);
 
         /// <summary>
@@ -220,7 +205,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Certificate</param>
         /// <returns>Task of ApiResponse (ParsedCertificate)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostCertificateDetailsAsyncWithHttpInfo (Certificate body);
 
@@ -318,10 +302,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current system date/time 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ServerDate</returns>
-        
         
         public ServerDate GetDate ()
         {
@@ -331,10 +315,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current system date/time 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ServerDate</returns>
-        
         
         public ApiResponse< ServerDate > GetDateWithHttpInfo ()
         { 
@@ -410,10 +394,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current system date/time 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ServerDate</returns>
-        
         
         public async System.Threading.Tasks.Task<ServerDate> GetDateAsync ()
         {
@@ -424,10 +408,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the current system date/time 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ServerDate)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetDateAsyncWithHttpInfo ()
         { 
@@ -504,10 +488,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get public ip address ranges for Genesys Cloud 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IpAddressRangeListing</returns>
-        
         
         public IpAddressRangeListing GetIpranges ()
         {
@@ -517,10 +501,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get public ip address ranges for Genesys Cloud 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IpAddressRangeListing</returns>
-        
         
         public ApiResponse< IpAddressRangeListing > GetIprangesWithHttpInfo ()
         { 
@@ -596,10 +580,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get public ip address ranges for Genesys Cloud 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IpAddressRangeListing</returns>
-        
         
         public async System.Threading.Tasks.Task<IpAddressRangeListing> GetIprangesAsync ()
         {
@@ -610,10 +594,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get public ip address ranges for Genesys Cloud 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IpAddressRangeListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<IpAddressRangeListing>> GetIprangesAsyncWithHttpInfo ()
         { 
@@ -690,12 +674,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get time zones list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TimeZoneEntityListing</returns>
-        
         
         public TimeZoneEntityListing GetTimezones (int? pageSize = null, int? pageNumber = null)
         {
@@ -705,12 +689,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get time zones list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
-        
         
         public ApiResponse< TimeZoneEntityListing > GetTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -788,12 +772,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get time zones list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<TimeZoneEntityListing> GetTimezonesAsync (int? pageSize = null, int? pageNumber = null)
         {
@@ -804,12 +788,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get time zones list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
@@ -888,11 +872,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Certificate</param>
         /// <returns>ParsedCertificate</returns>
-        
         
         public ParsedCertificate PostCertificateDetails (Certificate body)
         {
@@ -902,11 +886,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Certificate</param>
         /// <returns>ApiResponse of ParsedCertificate</returns>
-        
         
         public ApiResponse< ParsedCertificate > PostCertificateDetailsWithHttpInfo (Certificate body)
         { 
@@ -991,11 +975,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Certificate</param>
         /// <returns>Task of ParsedCertificate</returns>
-        
         
         public async System.Threading.Tasks.Task<ParsedCertificate> PostCertificateDetailsAsync (Certificate body)
         {
@@ -1006,11 +990,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Certificate</param>
         /// <returns>Task of ApiResponse (ParsedCertificate)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostCertificateDetailsAsyncWithHttpInfo (Certificate body)
         { 

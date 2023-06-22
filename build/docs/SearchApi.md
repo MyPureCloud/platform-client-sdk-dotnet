@@ -42,8 +42,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Search gkn documentation using the q64 value returned from a previous search
 
-
-
 Requires NO permissions: 
 
 
@@ -100,8 +98,6 @@ namespace Example
 
 Search documentation using the q64 value returned from a previous search
 
-
-
 Requires NO permissions: 
 
 
@@ -157,8 +153,6 @@ namespace Example
 
 
 Search groups using the q64 value returned from a previous search
-
-
 
 Requires NO permissions: 
 
@@ -224,8 +218,6 @@ namespace Example
 
 Search locations using the q64 value returned from a previous search
 
-
-
 Requires NO permissions: 
 
 
@@ -289,8 +281,6 @@ namespace Example
 
 
 Search using the q64 value returned from a previous search.
-
-
 
 Requires ANY permissions: 
 
@@ -359,8 +349,6 @@ namespace Example
 
 Suggest resources using the q64 value returned from a previous suggest query.
 
-
-
 Requires ANY permissions: 
 
 * directory:user:view
@@ -427,8 +415,6 @@ namespace Example
 
 
 Search users using the q64 value returned from a previous search
-
-
 
 Requires ANY permissions: 
 
@@ -497,8 +483,6 @@ namespace Example
 
 Search voicemails using the q64 value returned from a previous search
 
-
-
 Requires NO permissions: 
 
 
@@ -563,8 +547,6 @@ namespace Example
 
 Search resources.
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -627,8 +609,6 @@ namespace Example
 
 
 Search conversations
-
-
 
 Requires ANY permissions: 
 
@@ -693,7 +673,7 @@ namespace Example
 
 Search all documents
 
-
+PostDocumentationAllSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires NO permissions: 
 
@@ -751,8 +731,6 @@ namespace Example
 
 Search gkn documentation
 
-
-
 Requires NO permissions: 
 
 
@@ -809,8 +787,6 @@ namespace Example
 
 Search documentation
 
-
-
 Requires NO permissions: 
 
 
@@ -866,8 +842,6 @@ namespace Example
 
 
 Search groups
-
-
 
 Requires NO permissions: 
 
@@ -930,8 +904,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Search Documents
-
-
 
 Requires ALL permissions: 
 
@@ -998,8 +970,6 @@ namespace Example
 
 Search locations
 
-
-
 Requires NO permissions: 
 
 
@@ -1061,8 +1031,6 @@ namespace Example
 
 
 Search resources.
-
-
 
 Requires ANY permissions: 
 
@@ -1129,8 +1097,6 @@ namespace Example
 
 Suggest resources.
 
-
-
 Requires ANY permissions: 
 
 * directory:user:view
@@ -1196,8 +1162,6 @@ namespace Example
 
 Search resources.
 
-
-
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
@@ -1262,8 +1226,6 @@ namespace Example
 
 Search resources.
 
-
-
 Requires ANY permissions: 
 
 * groups:team:view
@@ -1326,8 +1288,6 @@ namespace Example
 
 
 Search users
-
-
 
 Requires ANY permissions: 
 
@@ -1392,7 +1352,7 @@ namespace Example
 
 Search users as conversation targets
 
-
+PostUsersSearchConversationTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1457,7 +1417,7 @@ namespace Example
 
 Search manage queue member
 
-
+PostUsersSearchQueuemembersManage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1523,8 +1483,6 @@ namespace Example
 
 Search users assigned to teams
 
-
-
 Requires ANY permissions: 
 
 * groups:team:assign
@@ -1587,8 +1545,6 @@ namespace Example
 
 
 Search voicemails
-
-
 
 Requires NO permissions: 
 

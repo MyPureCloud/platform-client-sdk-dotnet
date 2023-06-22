@@ -127,8 +127,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Deletes a emergency group by ID
 
-
-
 Requires ALL permissions: 
 
 * routing:emergencyGroup:delete
@@ -191,8 +189,6 @@ void (empty response body)
 
 Delete an IVR Config.
 
-
-
 Requires ALL permissions: 
 
 * routing:callRoute:delete
@@ -254,8 +250,6 @@ void (empty response body)
 
 
 Delete specified user prompt
-
-
 
 Requires ALL permissions: 
 
@@ -321,8 +315,6 @@ void (empty response body)
 
 Delete specified user prompt resource
 
-
-
 Requires ALL permissions: 
 
 * architect:userPrompt:edit
@@ -386,8 +378,6 @@ void (empty response body)
 
 
 Delete specified user prompt resource audio
-
-
 
 Requires ALL permissions: 
 
@@ -455,8 +445,6 @@ Batch-delete a list of prompts
 
 Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
-
-
 Requires ALL permissions: 
 
 * architect:userPrompt:delete
@@ -520,8 +508,6 @@ namespace Example
 
 Delete a schedule by id
 
-
-
 Requires ALL permissions: 
 
 * routing:schedule:delete
@@ -584,8 +570,6 @@ void (empty response body)
 
 Deletes a schedule group by ID
 
-
-
 Requires ALL permissions: 
 
 * routing:scheduleGroup:delete
@@ -647,8 +631,6 @@ void (empty response body)
 
 
 Delete a system prompt resource override.
-
-
 
 Requires ALL permissions: 
 
@@ -714,8 +696,6 @@ void (empty response body)
 
 Delete flow
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:delete
@@ -779,8 +759,6 @@ void (empty response body)
 Batch-delete a list of flows
 
 Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
-
-
 
 Requires ANY permissions: 
 
@@ -846,8 +824,6 @@ namespace Example
 deletes a specific datatable by id
 
 Deletes an entire datatable (including the schema and data) with a given datatableId
-
-
 
 Requires ANY permissions: 
 
@@ -915,8 +891,6 @@ Delete a row entry
 
 Deletes a row with a given rowId (the value of the key field).
 
-
-
 Requires ANY permissions: 
 
 * architect:datatable:delete
@@ -982,8 +956,6 @@ void (empty response body)
 
 Delete a flow milestone.
 
-
-
 Requires ALL permissions: 
 
 * architect:flowMilestone:delete
@@ -1046,8 +1018,6 @@ namespace Example
 
 
 Get Dependency Tracking objects that have a given display name
-
-
 
 Requires ALL permissions: 
 
@@ -1126,8 +1096,6 @@ namespace Example
 
 Get Dependency Tracking build status for an organization
 
-
-
 Requires ALL permissions: 
 
 * architect:dependencyTracking:view
@@ -1185,8 +1153,6 @@ This endpoint does require any parameters.
 
 
 Get resources that are consumed by a given Dependency Tracking object
-
-
 
 Requires ALL permissions: 
 
@@ -1260,8 +1226,6 @@ namespace Example
 
 
 Get resources that consume a given Dependency Tracking object
-
-
 
 Requires ALL permissions: 
 
@@ -1338,8 +1302,6 @@ namespace Example
 
 Get Dependency Tracking objects that consume deleted resources
 
-
-
 Requires ALL permissions: 
 
 * architect:dependencyTracking:view
@@ -1414,8 +1376,6 @@ namespace Example
 
 
 Get a Dependency Tracking object
-
-
 
 Requires ALL permissions: 
 
@@ -1494,8 +1454,6 @@ namespace Example
 
 Get a Dependency Tracking type.
 
-
-
 Requires ALL permissions: 
 
 * architect:dependencyTracking:view
@@ -1558,8 +1516,6 @@ namespace Example
 
 
 Get Dependency Tracking types.
-
-
 
 Requires ALL permissions: 
 
@@ -1625,8 +1581,6 @@ namespace Example
 
 
 Get Dependency Tracking objects that depend on updated resources
-
-
 
 Requires ALL permissions: 
 
@@ -1701,8 +1655,6 @@ namespace Example
 
 Gets a emergency group by ID
 
-
-
 Requires ALL permissions: 
 
 * routing:emergencyGroup:view
@@ -1765,8 +1717,6 @@ namespace Example
 
 
 Get a list of emergency groups.
-
-
 
 Requires ALL permissions: 
 
@@ -1839,8 +1789,6 @@ namespace Example
 
 Get an IVR config.
 
-
-
 Requires ALL permissions: 
 
 * routing:callRoute:view
@@ -1903,8 +1851,6 @@ namespace Example
 
 
 Get IVR configs.
-
-
 
 Requires ALL permissions: 
 
@@ -1981,8 +1927,6 @@ namespace Example
 
 Get specified user prompt
 
-
-
 Requires ALL permissions: 
 
 * architect:userPrompt:view
@@ -2045,8 +1989,6 @@ namespace Example
 
 
 Get generated prompt history
-
-
 
 Requires ALL permissions: 
 
@@ -2123,8 +2065,6 @@ namespace Example
 
 Get specified user prompt resource
 
-
-
 Requires ALL permissions: 
 
 * architect:userPrompt:view
@@ -2191,8 +2131,6 @@ namespace Example
 Get a pageable list of user prompt resources
 
 The returned list is pageable, and query parameters can be used for filtering.
-
-
 
 Requires ALL permissions: 
 
@@ -2262,8 +2200,6 @@ namespace Example
 Get a pageable list of user prompts
 
 The returned list is pageable, and query parameters can be used for filtering.  Multiple names can be specified, in which case all matching prompts will be returned, and no other filters will be evaluated.
-
-
 
 Requires ALL permissions: 
 
@@ -2340,8 +2276,6 @@ namespace Example
 
 Get a schedule by ID
 
-
-
 Requires ALL permissions: 
 
 * routing:schedule:view
@@ -2405,8 +2339,6 @@ namespace Example
 
 Gets a schedule group by ID
 
-
-
 Requires ALL permissions: 
 
 * routing:scheduleGroup:view
@@ -2469,8 +2401,6 @@ namespace Example
 
 
 Get a list of schedule groups.
-
-
 
 Requires ALL permissions: 
 
@@ -2547,8 +2477,6 @@ namespace Example
 
 Get a list of schedules.
 
-
-
 Requires ALL permissions: 
 
 * routing:schedule:view
@@ -2622,8 +2550,6 @@ namespace Example
 
 Get a system prompt
 
-
-
 Requires ALL permissions: 
 
 * architect:systemPrompt:view
@@ -2686,8 +2612,6 @@ namespace Example
 
 
 Get generated prompt history
-
-
 
 Requires ALL permissions: 
 
@@ -2764,8 +2688,6 @@ namespace Example
 
 Get a system prompt resource.
 
-
-
 Requires ALL permissions: 
 
 * architect:systemPrompt:view
@@ -2830,8 +2752,6 @@ namespace Example
 
 
 Get system prompt resources.
-
-
 
 Requires ALL permissions: 
 
@@ -2903,8 +2823,6 @@ namespace Example
 
 
 Get System Prompts
-
-
 
 Requires ALL permissions: 
 
@@ -2981,8 +2899,6 @@ namespace Example
 
 Get flow
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:view
@@ -3047,8 +2963,6 @@ namespace Example
 
 
 Get generated flow history
-
-
 
 Requires ANY permissions: 
 
@@ -3125,8 +3039,6 @@ namespace Example
 
 Get the latest configuration for flow
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:view
@@ -3191,8 +3103,6 @@ namespace Example
 
 
 Get flow version
-
-
 
 Requires ANY permissions: 
 
@@ -3261,8 +3171,6 @@ namespace Example
 
 Create flow version configuration
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:view
@@ -3329,8 +3237,6 @@ namespace Example
 
 
 Get flow version list
-
-
 
 Requires ANY permissions: 
 
@@ -3402,8 +3308,6 @@ namespace Example
 Get a pageable list of flows, filtered by query parameters
 
 If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
-
-
 
 Requires ANY permissions: 
 
@@ -3506,8 +3410,6 @@ Returns a specific datatable by id
 
 Given a datatableId returns the datatable object and schema associated with it.
 
-
-
 Requires ANY permissions: 
 
 * architect:datatable:view
@@ -3574,8 +3476,6 @@ namespace Example
 Returns the state information about an export job
 
 Returns the state information about an export job.
-
-
 
 Requires ANY permissions: 
 
@@ -3645,8 +3545,6 @@ Returns the state information about an import job
 
 Returns the state information about an import job.
 
-
-
 Requires ANY permissions: 
 
 * architect:datatable:view
@@ -3714,8 +3612,6 @@ namespace Example
 Get all recent import jobs
 
 Get all recent import jobs
-
-
 
 Requires ANY permissions: 
 
@@ -3787,8 +3683,6 @@ Returns a specific row for the datatable
 
 Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
 
-
-
 Requires ANY permissions: 
 
 * architect:datatable:view
@@ -3858,8 +3752,6 @@ namespace Example
 Returns the rows for the datatable with the given id
 
 Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
-
-
 
 Requires ANY permissions: 
 
@@ -3934,8 +3826,6 @@ namespace Example
 Retrieve a list of datatables for the org
 
 Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
-
-
 
 Requires ANY permissions: 
 
@@ -4014,8 +3904,6 @@ Returns a specific datatable by id
 
 Given a datatableId returns the datatable object and schema associated with it.
 
-
-
 Requires ALL permissions: 
 
 * architect:datatable:search
@@ -4082,8 +3970,6 @@ namespace Example
 Retrieve a list of datatables for the org
 
 Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
-
-
 
 Requires ALL permissions: 
 
@@ -4161,8 +4047,6 @@ namespace Example
 Get a pageable list of basic flow information objects filterable by query parameters.
 
 This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
-
-
 
 Requires ALL permissions: 
 
@@ -4249,8 +4133,6 @@ namespace Example
 
 Get a flow execution's details. Flow execution details are available for several days after the flow is started.
 
-
-
 Requires ANY permissions: 
 
 * architect:flowExecution:view
@@ -4316,7 +4198,7 @@ Start a process (job) to prepare a download of a singular flow execution data in
 
 Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
 
-
+GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4383,7 +4265,7 @@ namespace Example
 
 Get the status and/or results of an asynchronous flow execution data retrieval job
 
-
+GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4450,7 +4332,7 @@ Retrieve a list of capabilities that the org can use to query for execution data
 
 Returns the queryable parameters that can be used to build a query for execution data.
 
-
+GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4514,8 +4396,6 @@ namespace Example
 
 
 Fetch Architect Job Status
-
-
 
 Requires ALL permissions: 
 
@@ -4584,8 +4464,6 @@ Get a flow milestone
 
 Returns a specified flow milestone
 
-
-
 Requires ALL permissions: 
 
 * architect:flowMilestone:view
@@ -4650,8 +4528,6 @@ namespace Example
 Get a pageable list of flow milestones, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
-
-
 
 Requires ALL permissions: 
 
@@ -4734,8 +4610,6 @@ Get a pageable list of basic flow milestone information objects filterable by qu
 
 This returns flow milestones consisting of name and division. If one or more IDs are specified, the search will fetch flow milestones that match the given ID(s) and not use any additional supplied query parameters in the search.
 
-
-
 Requires ALL permissions: 
 
 * architect:flowMilestone:search
@@ -4813,8 +4687,6 @@ Get a flow outcome
 
 Returns a specified flow outcome
 
-
-
 Requires ALL permissions: 
 
 * architect:flowOutcome:view
@@ -4879,8 +4751,6 @@ namespace Example
 Get a pageable list of flow outcomes, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flow outcomes will be returned, and no other parameters will be evaluated.
-
-
 
 Requires ALL permissions: 
 
@@ -4963,8 +4833,6 @@ Get a pageable list of basic flow outcome information objects filterable by quer
 
 This returns flow outcomes consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
 
-
-
 Requires ALL permissions: 
 
 * architect:flowOutcome:search
@@ -5042,8 +4910,6 @@ Rebuild Dependency Tracking data for an organization
 
 Asynchronous.  Notification topic: v2.architect.dependencytracking.build
 
-
-
 Requires ALL permissions: 
 
 * architect:dependencyTracking:rebuild
@@ -5100,8 +4966,6 @@ void (empty response body)
 
 
 Creates a new emergency group
-
-
 
 Requires ALL permissions: 
 
@@ -5165,8 +5029,6 @@ namespace Example
 
 
 Create IVR config.
-
-
 
 Requires ALL permissions: 
 
@@ -5233,8 +5095,6 @@ Generate prompt history
 
 Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
-
-
 Requires ALL permissions: 
 
 * architect:userPrompt:view
@@ -5297,8 +5157,6 @@ namespace Example
 
 
 Create a new user prompt resource
-
-
 
 Requires ALL permissions: 
 
@@ -5365,8 +5223,6 @@ namespace Example
 
 Create a new user prompt
 
-
-
 Requires ALL permissions: 
 
 * architect:userPrompt:add
@@ -5430,8 +5286,6 @@ namespace Example
 
 Creates a new schedule group
 
-
-
 Requires ALL permissions: 
 
 * routing:scheduleGroup:add
@@ -5494,8 +5348,6 @@ namespace Example
 
 
 Create a new schedule.
-
-
 
 Requires ALL permissions: 
 
@@ -5562,8 +5414,6 @@ Generate system prompt history
 
 Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
 
-
-
 Requires ALL permissions: 
 
 * architect:systemPrompt:view
@@ -5626,8 +5476,6 @@ namespace Example
 
 
 Create system prompt resource override.
-
-
 
 Requires ALL permissions: 
 
@@ -5696,8 +5544,6 @@ Generate flow history
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:view
@@ -5760,8 +5606,6 @@ namespace Example
 
 
 Create flow version
-
-
 
 Requires ANY permissions: 
 
@@ -5827,8 +5671,6 @@ namespace Example
 
 
 Create flow
-
-
 
 Requires ANY permissions: 
 
@@ -5897,8 +5739,6 @@ Check-in flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:edit
@@ -5963,8 +5803,6 @@ namespace Example
 
 Check-out flow
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:edit
@@ -6027,8 +5865,6 @@ namespace Example
 
 
 Deactivate flow
-
-
 
 Requires ANY permissions: 
 
@@ -6094,8 +5930,6 @@ namespace Example
 Publish flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
-
-
 
 Requires ANY permissions: 
 
@@ -6163,8 +5997,6 @@ namespace Example
 
 Revert flow
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:edit
@@ -6229,8 +6061,6 @@ namespace Example
 Unlock flow
 
 Allows for unlocking a flow in the case where there is no flow configuration available, and thus a check-in will not unlock the flow. The user must have Architect Admin permissions to perform this action.
-
-
 
 Requires ANY permissions: 
 
@@ -6297,8 +6127,6 @@ Begin an export process for exporting all rows from a datatable
 
 Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
 
-
-
 Requires ANY permissions: 
 
 * architect:datatable:view
@@ -6364,8 +6192,6 @@ namespace Example
 Begin an import process for importing rows into a datatable
 
 Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
-
-
 
 Requires ANY permissions: 
 
@@ -6435,8 +6261,6 @@ Create a new row entry for the datatable.
 
 Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized' stream of key -> value pairs {      \"Field1\": \"XYZZY\",      \"Field2\": false,      \"KEY\": \"27272\"  }
 
-
-
 Requires ANY permissions: 
 
 * architect:datatable:add
@@ -6505,8 +6329,6 @@ Create a new datatable with the specified json-schema definition
 
 This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema's title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
 
-
-
 Requires ANY permissions: 
 
 * architect:datatable:add
@@ -6571,8 +6393,6 @@ namespace Example
 Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
 
 The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
-
-
 
 Requires ANY permissions: 
 
@@ -6639,7 +6459,7 @@ Start a process (job) that will prepare a list of execution data IDs for downloa
 
 Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
 
-
+PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6708,7 +6528,7 @@ Query the database of existing flow histories to look for particular flow criter
 
 Returns a list of matching flow histories up to 200 max.
 
-
+PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6775,8 +6595,6 @@ namespace Example
 
 Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
 
-
-
 Requires ALL permissions: 
 
 * architect:job:create
@@ -6834,8 +6652,6 @@ This endpoint does require any parameters.
 
 
 Create a flow milestone
-
-
 
 Requires ALL permissions: 
 
@@ -6902,8 +6718,6 @@ Create a flow outcome
 
 Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
 
-
-
 Requires ALL permissions: 
 
 * architect:flowOutcome:add
@@ -6966,8 +6780,6 @@ namespace Example
 
 
 Updates a emergency group by ID
-
-
 
 Requires ALL permissions: 
 
@@ -7034,8 +6846,6 @@ namespace Example
 
 Update an IVR Config.
 
-
-
 Requires ALL permissions: 
 
 * routing:callRoute:edit
@@ -7101,8 +6911,6 @@ namespace Example
 
 Update specified user prompt
 
-
-
 Requires ALL permissions: 
 
 * architect:userPrompt:edit
@@ -7167,8 +6975,6 @@ namespace Example
 
 
 Update specified user prompt resource
-
-
 
 Requires ALL permissions: 
 
@@ -7237,8 +7043,6 @@ namespace Example
 
 Update schedule by ID
 
-
-
 Requires ALL permissions: 
 
 * routing:schedule:edit
@@ -7304,8 +7108,6 @@ namespace Example
 
 Updates a schedule group by ID
 
-
-
 Requires ALL permissions: 
 
 * routing:scheduleGroup:edit
@@ -7370,8 +7172,6 @@ namespace Example
 
 
 Updates a system prompt resource override.
-
-
 
 Requires ALL permissions: 
 
@@ -7440,8 +7240,6 @@ namespace Example
 
 Update flow
 
-
-
 Requires ANY permissions: 
 
 * architect:flow:edit
@@ -7508,8 +7306,6 @@ namespace Example
 Updates a specific datatable by id
 
 Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
-
-
 
 Requires ANY permissions: 
 
@@ -7580,8 +7376,6 @@ Update a row entry
 
 Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized' stream of key -> value pairs {     \"Field1\": \"XYZZY\",     \"Field2\": false,     \"KEY\": \"27272\" }
 
-
-
 Requires ANY permissions: 
 
 * architect:datatable:edit
@@ -7650,8 +7444,6 @@ namespace Example
 
 Updates a flow milestone
 
-
-
 Requires ALL permissions: 
 
 * architect:flowMilestone:edit
@@ -7718,8 +7510,6 @@ namespace Example
 Updates a flow outcome
 
 Updates a flow outcome.  Asynchronous.  Notification topic: v2.flowoutcomes.{flowoutcomeId}
-
-
 
 Requires ALL permissions: 
 

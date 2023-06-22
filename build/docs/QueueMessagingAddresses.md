@@ -9,6 +9,7 @@ title: QueueMessagingAddresses
 |------------ | ------------- | ------------- | -------------|
 | **SmsAddress** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **OpenMessagingRecipient** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **WhatsAppRecipient** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -44,8 +44,6 @@ Delete a voicemail message.
 
 A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
 
-
-
 Requires NO permissions: 
 
 
@@ -107,8 +105,6 @@ void (empty response body)
 
 Delete all voicemail messages
 
-
-
 Requires NO permissions: 
 
 
@@ -164,8 +160,6 @@ void (empty response body)
 
 
 Get the group's mailbox information
-
-
 
 Requires NO permissions: 
 
@@ -228,8 +222,6 @@ namespace Example
 
 
 List voicemail messages
-
-
 
 Requires NO permissions: 
 
@@ -297,8 +289,6 @@ namespace Example
 
 Get a group's voicemail policy
 
-
-
 Requires ANY permissions: 
 
 * directory:group:add
@@ -363,8 +353,6 @@ namespace Example
 
 Get the current user's mailbox information
 
-
-
 Requires NO permissions: 
 
 
@@ -422,8 +410,6 @@ This endpoint does require any parameters.
 
 Get the current user's mailbox information
 
-
-
 Requires NO permissions: 
 
 
@@ -480,8 +466,6 @@ This endpoint does require any parameters.
 
 
 List voicemail messages
-
-
 
 Requires NO permissions: 
 
@@ -547,8 +531,6 @@ namespace Example
 
 Get the current user's voicemail policy
 
-
-
 Requires NO permissions: 
 
 
@@ -605,8 +587,6 @@ This endpoint does require any parameters.
 
 
 Get a voicemail message
-
-
 
 Requires NO permissions: 
 
@@ -672,8 +652,6 @@ namespace Example
 
 Get media playback URI for this voicemail message
 
-
-
 Requires NO permissions: 
 
 
@@ -737,8 +715,6 @@ namespace Example
 
 
 List voicemail messages
-
-
 
 Requires NO permissions: 
 
@@ -804,8 +780,6 @@ namespace Example
 
 Get a policy
 
-
-
 Requires ALL permissions: 
 
 * telephony:plugin:all
@@ -863,8 +837,6 @@ This endpoint does require any parameters.
 
 
 List voicemail messages
-
-
 
 Requires ANY permissions: 
 
@@ -933,8 +905,6 @@ namespace Example
 
 Search voicemails using the q64 value returned from a previous search
 
-
-
 Requires NO permissions: 
 
 
@@ -999,8 +969,6 @@ namespace Example
 
 Get a user's voicemail policy
 
-
-
 Requires NO permissions: 
 
 
@@ -1062,8 +1030,6 @@ namespace Example
 
 
 Update a group's voicemail policy
-
-
 
 Requires ANY permissions: 
 
@@ -1131,8 +1097,6 @@ namespace Example
 
 Update the current user's voicemail policy
 
-
-
 Requires NO permissions: 
 
 
@@ -1196,8 +1160,6 @@ namespace Example
 Update a voicemail message
 
 A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
-
-
 
 Requires NO permissions: 
 
@@ -1263,8 +1225,6 @@ namespace Example
 
 Update a user's voicemail policy
 
-
-
 Requires NO permissions: 
 
 
@@ -1329,8 +1289,6 @@ namespace Example
 
 Copy a voicemail message to a user or group
 
-
-
 Requires NO permissions: 
 
 
@@ -1392,8 +1350,6 @@ namespace Example
 
 
 Search voicemails
-
-
 
 Requires NO permissions: 
 
@@ -1459,8 +1415,6 @@ Update a voicemail message
 
 A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
 
-
-
 Requires NO permissions: 
 
 
@@ -1525,8 +1479,6 @@ namespace Example
 
 Update a policy
 
-
-
 Requires ALL permissions: 
 
 * telephony:plugin:all
@@ -1589,8 +1541,6 @@ namespace Example
 
 
 Update a user's voicemail policy
-
-
 
 Requires ALL permissions: 
 

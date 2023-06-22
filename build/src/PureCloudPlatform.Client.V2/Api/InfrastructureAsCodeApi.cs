@@ -27,7 +27,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="preferredLanguage">Preferred Language (optional, default to en-US)</param>
         /// <returns>AcceleratorSpecification</returns>
         
-        
         AcceleratorSpecification GetInfrastructureascodeAccelerator (string acceleratorId, string preferredLanguage = null);
 
         /// <summary>
@@ -40,7 +39,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceleratorId">Accelerator ID</param>
         /// <param name="preferredLanguage">Preferred Language (optional, default to en-US)</param>
         /// <returns>ApiResponse of AcceleratorSpecification</returns>
-        
         
         ApiResponse<AcceleratorSpecification> GetInfrastructureascodeAcceleratorWithHttpInfo (string acceleratorId, string preferredLanguage = null);
 
@@ -63,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tags">Filter by tags (optional)</param>
         /// <returns>AcceleratorList</returns>
         
-        
         AcceleratorList GetInfrastructureascodeAccelerators (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null);
 
         /// <summary>
@@ -85,7 +82,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tags">Filter by tags (optional)</param>
         /// <returns>ApiResponse of AcceleratorList</returns>
         
-        
         ApiResponse<AcceleratorList> GetInfrastructureascodeAcceleratorsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null);
 
         /// <summary>
@@ -99,7 +95,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="details">Include details of execution, including job results or error information (optional, default to false)</param>
         /// <returns>InfrastructureascodeJob</returns>
         
-        
         InfrastructureascodeJob GetInfrastructureascodeJob (string jobId, bool? details = null);
 
         /// <summary>
@@ -112,7 +107,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="details">Include details of execution, including job results or error information (optional, default to false)</param>
         /// <returns>ApiResponse of InfrastructureascodeJob</returns>
-        
         
         ApiResponse<InfrastructureascodeJob> GetInfrastructureascodeJobWithHttpInfo (string jobId, bool? details = null);
 
@@ -132,7 +126,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Find only jobs in this state (optional)</param>
         /// <returns>InfrastructureascodeJob</returns>
         
-        
         InfrastructureascodeJob GetInfrastructureascodeJobs (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null);
 
         /// <summary>
@@ -151,7 +144,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Find only jobs in this state (optional)</param>
         /// <returns>ApiResponse of InfrastructureascodeJob</returns>
         
-        
         ApiResponse<InfrastructureascodeJob> GetInfrastructureascodeJobsWithHttpInfo (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null);
 
         /// <summary>
@@ -164,7 +156,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>InfrastructureascodeJob</returns>
         
-        
         InfrastructureascodeJob PostInfrastructureascodeJobs (AcceleratorInput body);
 
         /// <summary>
@@ -176,7 +167,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of InfrastructureascodeJob</returns>
-        
         
         ApiResponse<InfrastructureascodeJob> PostInfrastructureascodeJobsWithHttpInfo (AcceleratorInput body);
 
@@ -195,7 +185,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="preferredLanguage">Preferred Language (optional, default to en-US)</param>
         /// <returns>Task of AcceleratorSpecification</returns>
         
-        
         System.Threading.Tasks.Task<AcceleratorSpecification> GetInfrastructureascodeAcceleratorAsync (string acceleratorId, string preferredLanguage = null);
 
         /// <summary>
@@ -208,7 +197,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="acceleratorId">Accelerator ID</param>
         /// <param name="preferredLanguage">Preferred Language (optional, default to en-US)</param>
         /// <returns>Task of ApiResponse (AcceleratorSpecification)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<AcceleratorSpecification>> GetInfrastructureascodeAcceleratorAsyncWithHttpInfo (string acceleratorId, string preferredLanguage = null);
 
@@ -231,7 +219,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tags">Filter by tags (optional)</param>
         /// <returns>Task of AcceleratorList</returns>
         
-        
         System.Threading.Tasks.Task<AcceleratorList> GetInfrastructureascodeAcceleratorsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null);
 
         /// <summary>
@@ -253,7 +240,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tags">Filter by tags (optional)</param>
         /// <returns>Task of ApiResponse (AcceleratorList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<AcceleratorList>> GetInfrastructureascodeAcceleratorsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null);
 
         /// <summary>
@@ -267,7 +253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="details">Include details of execution, including job results or error information (optional, default to false)</param>
         /// <returns>Task of InfrastructureascodeJob</returns>
         
-        
         System.Threading.Tasks.Task<InfrastructureascodeJob> GetInfrastructureascodeJobAsync (string jobId, bool? details = null);
 
         /// <summary>
@@ -280,7 +265,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="details">Include details of execution, including job results or error information (optional, default to false)</param>
         /// <returns>Task of ApiResponse (InfrastructureascodeJob)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<InfrastructureascodeJob>> GetInfrastructureascodeJobAsyncWithHttpInfo (string jobId, bool? details = null);
 
@@ -300,7 +284,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Find only jobs in this state (optional)</param>
         /// <returns>Task of InfrastructureascodeJob</returns>
         
-        
         System.Threading.Tasks.Task<InfrastructureascodeJob> GetInfrastructureascodeJobsAsync (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null);
 
         /// <summary>
@@ -319,7 +302,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Find only jobs in this state (optional)</param>
         /// <returns>Task of ApiResponse (InfrastructureascodeJob)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<InfrastructureascodeJob>> GetInfrastructureascodeJobsAsyncWithHttpInfo (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null);
 
         /// <summary>
@@ -332,7 +314,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of InfrastructureascodeJob</returns>
         
-        
         System.Threading.Tasks.Task<InfrastructureascodeJob> PostInfrastructureascodeJobsAsync (AcceleratorInput body);
 
         /// <summary>
@@ -344,7 +325,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (InfrastructureascodeJob)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<InfrastructureascodeJob>> PostInfrastructureascodeJobsAsyncWithHttpInfo (AcceleratorInput body);
 
@@ -441,13 +421,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get information about an accelerator Get the complete metadata specification for an accelerator, including requirements and parameters.
+        /// Get information about an accelerator 
+        /// Get the complete metadata specification for an accelerator, including requirements and parameters.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceleratorId">Accelerator ID</param>
         /// <param name="preferredLanguage">Preferred Language (optional, default to en-US)</param>
         /// <returns>AcceleratorSpecification</returns>
-        
         
         public AcceleratorSpecification GetInfrastructureascodeAccelerator (string acceleratorId, string preferredLanguage = null)
         {
@@ -456,13 +436,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get information about an accelerator Get the complete metadata specification for an accelerator, including requirements and parameters.
+        /// Get information about an accelerator 
+        /// Get the complete metadata specification for an accelerator, including requirements and parameters.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceleratorId">Accelerator ID</param>
         /// <param name="preferredLanguage">Preferred Language (optional, default to en-US)</param>
         /// <returns>ApiResponse of AcceleratorSpecification</returns>
-        
         
         public ApiResponse< AcceleratorSpecification > GetInfrastructureascodeAcceleratorWithHttpInfo (string acceleratorId, string preferredLanguage = null)
         { 
@@ -542,13 +522,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get information about an accelerator Get the complete metadata specification for an accelerator, including requirements and parameters.
+        /// Get information about an accelerator 
+        /// Get the complete metadata specification for an accelerator, including requirements and parameters.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceleratorId">Accelerator ID</param>
         /// <param name="preferredLanguage">Preferred Language (optional, default to en-US)</param>
         /// <returns>Task of AcceleratorSpecification</returns>
-        
         
         public async System.Threading.Tasks.Task<AcceleratorSpecification> GetInfrastructureascodeAcceleratorAsync (string acceleratorId, string preferredLanguage = null)
         {
@@ -558,13 +538,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get information about an accelerator Get the complete metadata specification for an accelerator, including requirements and parameters.
+        /// Get information about an accelerator 
+        /// Get the complete metadata specification for an accelerator, including requirements and parameters.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="acceleratorId">Accelerator ID</param>
         /// <param name="preferredLanguage">Preferred Language (optional, default to en-US)</param>
         /// <returns>Task of ApiResponse (AcceleratorSpecification)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AcceleratorSpecification>> GetInfrastructureascodeAcceleratorAsyncWithHttpInfo (string acceleratorId, string preferredLanguage = null)
         { 
@@ -646,7 +626,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of available accelerators Search for accelerators that can be run.
+        /// Get a list of available accelerators 
+        /// Search for accelerators that can be run.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -661,7 +642,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tags">Filter by tags (optional)</param>
         /// <returns>AcceleratorList</returns>
         
-        
         public AcceleratorList GetInfrastructureascodeAccelerators (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null)
         {
              ApiResponse<AcceleratorList> localVarResponse = GetInfrastructureascodeAcceleratorsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, description, origin, type, classification, tags);
@@ -669,7 +649,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of available accelerators Search for accelerators that can be run.
+        /// Get a list of available accelerators 
+        /// Search for accelerators that can be run.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -683,7 +664,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="classification">Filter by classification (optional)</param>
         /// <param name="tags">Filter by tags (optional)</param>
         /// <returns>ApiResponse of AcceleratorList</returns>
-        
         
         public ApiResponse< AcceleratorList > GetInfrastructureascodeAcceleratorsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null)
         { 
@@ -768,7 +748,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of available accelerators Search for accelerators that can be run.
+        /// Get a list of available accelerators 
+        /// Search for accelerators that can be run.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -783,7 +764,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tags">Filter by tags (optional)</param>
         /// <returns>Task of AcceleratorList</returns>
         
-        
         public async System.Threading.Tasks.Task<AcceleratorList> GetInfrastructureascodeAcceleratorsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null)
         {
              ApiResponse<AcceleratorList> localVarResponse = await GetInfrastructureascodeAcceleratorsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, description, origin, type, classification, tags);
@@ -792,7 +772,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of available accelerators Search for accelerators that can be run.
+        /// Get a list of available accelerators 
+        /// Search for accelerators that can be run.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -806,7 +787,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="classification">Filter by classification (optional)</param>
         /// <param name="tags">Filter by tags (optional)</param>
         /// <returns>Task of ApiResponse (AcceleratorList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AcceleratorList>> GetInfrastructureascodeAcceleratorsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null)
         { 
@@ -892,13 +872,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get job status and results Get the execution status of a submitted job, optionally including results and error details.
+        /// Get job status and results 
+        /// Get the execution status of a submitted job, optionally including results and error details.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
         /// <param name="details">Include details of execution, including job results or error information (optional, default to false)</param>
         /// <returns>InfrastructureascodeJob</returns>
-        
         
         public InfrastructureascodeJob GetInfrastructureascodeJob (string jobId, bool? details = null)
         {
@@ -907,13 +887,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get job status and results Get the execution status of a submitted job, optionally including results and error details.
+        /// Get job status and results 
+        /// Get the execution status of a submitted job, optionally including results and error details.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
         /// <param name="details">Include details of execution, including job results or error information (optional, default to false)</param>
         /// <returns>ApiResponse of InfrastructureascodeJob</returns>
-        
         
         public ApiResponse< InfrastructureascodeJob > GetInfrastructureascodeJobWithHttpInfo (string jobId, bool? details = null)
         { 
@@ -993,13 +973,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get job status and results Get the execution status of a submitted job, optionally including results and error details.
+        /// Get job status and results 
+        /// Get the execution status of a submitted job, optionally including results and error details.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
         /// <param name="details">Include details of execution, including job results or error information (optional, default to false)</param>
         /// <returns>Task of InfrastructureascodeJob</returns>
-        
         
         public async System.Threading.Tasks.Task<InfrastructureascodeJob> GetInfrastructureascodeJobAsync (string jobId, bool? details = null)
         {
@@ -1009,13 +989,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get job status and results Get the execution status of a submitted job, optionally including results and error details.
+        /// Get job status and results 
+        /// Get the execution status of a submitted job, optionally including results and error details.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
         /// <param name="details">Include details of execution, including job results or error information (optional, default to false)</param>
         /// <returns>Task of ApiResponse (InfrastructureascodeJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<InfrastructureascodeJob>> GetInfrastructureascodeJobAsyncWithHttpInfo (string jobId, bool? details = null)
         { 
@@ -1097,7 +1077,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get job history Get a history of submitted jobs, optionally including error messages.
+        /// Get job history 
+        /// Get a history of submitted jobs, optionally including error messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxResults">Number of jobs to show (optional, default to 1)</param>
@@ -1109,7 +1090,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Find only jobs in this state (optional)</param>
         /// <returns>InfrastructureascodeJob</returns>
         
-        
         public InfrastructureascodeJob GetInfrastructureascodeJobs (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null)
         {
              ApiResponse<InfrastructureascodeJob> localVarResponse = GetInfrastructureascodeJobsWithHttpInfo(maxResults, includeErrors, sortBy, sortOrder, acceleratorId, submittedBy, status);
@@ -1117,7 +1097,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get job history Get a history of submitted jobs, optionally including error messages.
+        /// Get job history 
+        /// Get a history of submitted jobs, optionally including error messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxResults">Number of jobs to show (optional, default to 1)</param>
@@ -1128,7 +1109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="submittedBy">Find only jobs submitted by this user (optional)</param>
         /// <param name="status">Find only jobs in this state (optional)</param>
         /// <returns>ApiResponse of InfrastructureascodeJob</returns>
-        
         
         public ApiResponse< InfrastructureascodeJob > GetInfrastructureascodeJobsWithHttpInfo (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null)
         { 
@@ -1210,7 +1190,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get job history Get a history of submitted jobs, optionally including error messages.
+        /// Get job history 
+        /// Get a history of submitted jobs, optionally including error messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxResults">Number of jobs to show (optional, default to 1)</param>
@@ -1222,7 +1203,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="status">Find only jobs in this state (optional)</param>
         /// <returns>Task of InfrastructureascodeJob</returns>
         
-        
         public async System.Threading.Tasks.Task<InfrastructureascodeJob> GetInfrastructureascodeJobsAsync (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null)
         {
              ApiResponse<InfrastructureascodeJob> localVarResponse = await GetInfrastructureascodeJobsAsyncWithHttpInfo(maxResults, includeErrors, sortBy, sortOrder, acceleratorId, submittedBy, status);
@@ -1231,7 +1211,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get job history Get a history of submitted jobs, optionally including error messages.
+        /// Get job history 
+        /// Get a history of submitted jobs, optionally including error messages.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxResults">Number of jobs to show (optional, default to 1)</param>
@@ -1242,7 +1223,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="submittedBy">Find only jobs submitted by this user (optional)</param>
         /// <param name="status">Find only jobs in this state (optional)</param>
         /// <returns>Task of ApiResponse (InfrastructureascodeJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<InfrastructureascodeJob>> GetInfrastructureascodeJobsAsyncWithHttpInfo (int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null)
         { 
@@ -1325,12 +1305,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Job Create and submit a job for remote execution or see job planning results.
+        /// Create a Job 
+        /// Create and submit a job for remote execution or see job planning results.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>InfrastructureascodeJob</returns>
-        
         
         public InfrastructureascodeJob PostInfrastructureascodeJobs (AcceleratorInput body)
         {
@@ -1339,12 +1319,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Job Create and submit a job for remote execution or see job planning results.
+        /// Create a Job 
+        /// Create and submit a job for remote execution or see job planning results.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of InfrastructureascodeJob</returns>
-        
         
         public ApiResponse< InfrastructureascodeJob > PostInfrastructureascodeJobsWithHttpInfo (AcceleratorInput body)
         { 
@@ -1428,12 +1408,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Job Create and submit a job for remote execution or see job planning results.
+        /// Create a Job 
+        /// Create and submit a job for remote execution or see job planning results.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of InfrastructureascodeJob</returns>
-        
         
         public async System.Threading.Tasks.Task<InfrastructureascodeJob> PostInfrastructureascodeJobsAsync (AcceleratorInput body)
         {
@@ -1443,12 +1423,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Job Create and submit a job for remote execution or see job planning results.
+        /// Create a Job 
+        /// Create and submit a job for remote execution or see job planning results.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (InfrastructureascodeJob)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<InfrastructureascodeJob>> PostInfrastructureascodeJobsAsyncWithHttpInfo (AcceleratorInput body)
         { 

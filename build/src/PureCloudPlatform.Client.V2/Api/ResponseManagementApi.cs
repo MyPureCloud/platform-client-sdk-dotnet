@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <returns></returns>
         
-        
         void DeleteResponsemanagementLibrary (string libraryId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteResponsemanagementLibraryWithHttpInfo (string libraryId);
 
@@ -52,7 +50,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseId">Response ID</param>
         /// <returns></returns>
         
-        
         void DeleteResponsemanagementResponse (string responseId);
 
         /// <summary>
@@ -64,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteResponsemanagementResponseWithHttpInfo (string responseId);
 
@@ -78,7 +74,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns></returns>
         
-        
         void DeleteResponsemanagementResponseasset (string responseAssetId);
 
         /// <summary>
@@ -90,7 +85,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteResponsemanagementResponseassetWithHttpInfo (string responseAssetId);
 
@@ -107,7 +101,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
         /// <returns>LibraryEntityListing</returns>
         
-        
         LibraryEntityListing GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null);
 
         /// <summary>
@@ -123,7 +116,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
         /// <returns>ApiResponse of LibraryEntityListing</returns>
         
-        
         ApiResponse<LibraryEntityListing> GetResponsemanagementLibrariesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null);
 
         /// <summary>
@@ -136,7 +128,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <returns>Library</returns>
         
-        
         Library GetResponsemanagementLibrary (string libraryId);
 
         /// <summary>
@@ -148,7 +139,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>ApiResponse of Library</returns>
-        
         
         ApiResponse<Library> GetResponsemanagementLibraryWithHttpInfo (string libraryId);
 
@@ -163,7 +153,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
         
-        
         Response GetResponsemanagementResponse (string responseId, string expand = null);
 
         /// <summary>
@@ -177,7 +166,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
         
-        
         ApiResponse<Response> GetResponsemanagementResponseWithHttpInfo (string responseId, string expand = null);
 
         /// <summary>
@@ -189,7 +177,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>ResponseAsset</returns>
-        
         
         ResponseAsset GetResponsemanagementResponseasset (string responseAssetId);
 
@@ -203,7 +190,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>ApiResponse of ResponseAsset</returns>
         
-        
         ApiResponse<ResponseAsset> GetResponsemanagementResponseassetWithHttpInfo (string responseAssetId);
 
         /// <summary>
@@ -216,7 +202,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status Id</param>
         /// <returns>ResponseAssetStatus</returns>
         
-        
         ResponseAssetStatus GetResponsemanagementResponseassetsStatusStatusId (string statusId);
 
         /// <summary>
@@ -228,7 +213,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status Id</param>
         /// <returns>ApiResponse of ResponseAssetStatus</returns>
-        
         
         ApiResponse<ResponseAssetStatus> GetResponsemanagementResponseassetsStatusStatusIdWithHttpInfo (string statusId);
 
@@ -245,7 +229,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ResponseEntityListing</returns>
         
-        
         ResponseEntityListing GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
 
         /// <summary>
@@ -261,7 +244,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of ResponseEntityListing</returns>
         
-        
         ApiResponse<ResponseEntityListing> GetResponsemanagementResponsesWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
 
         /// <summary>
@@ -274,7 +256,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Library</param>
         /// <returns>Library</returns>
         
-        
         Library PostResponsemanagementLibraries (Library body);
 
         /// <summary>
@@ -286,7 +267,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
-        
         
         ApiResponse<Library> PostResponsemanagementLibrariesWithHttpInfo (Library body);
 
@@ -301,7 +281,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ResponseAssetSearchResults</returns>
         
-        
         ResponseAssetSearchResults PostResponsemanagementResponseassetsSearch (ResponseAssetSearchRequest body, List<string> expand = null);
 
         /// <summary>
@@ -315,7 +294,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ResponseAssetSearchResults</returns>
         
-        
         ApiResponse<ResponseAssetSearchResults> PostResponsemanagementResponseassetsSearchWithHttpInfo (ResponseAssetSearchRequest body, List<string> expand = null);
 
         /// <summary>
@@ -328,7 +306,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request</param>
         /// <returns>CreateResponseAssetResponse</returns>
         
-        
         CreateResponseAssetResponse PostResponsemanagementResponseassetsUploads (CreateResponseAssetRequest body);
 
         /// <summary>
@@ -340,7 +317,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <returns>ApiResponse of CreateResponseAssetResponse</returns>
-        
         
         ApiResponse<CreateResponseAssetResponse> PostResponsemanagementResponseassetsUploadsWithHttpInfo (CreateResponseAssetRequest body);
 
@@ -355,7 +331,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
         
-        
         Response PostResponsemanagementResponses (Response body, string expand = null);
 
         /// <summary>
@@ -369,7 +344,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
         
-        
         ApiResponse<Response> PostResponsemanagementResponsesWithHttpInfo (Response body, string expand = null);
 
         /// <summary>
@@ -382,7 +356,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Response</param>
         /// <returns>ResponseQueryResults</returns>
         
-        
         ResponseQueryResults PostResponsemanagementResponsesQuery (ResponseQueryRequest body);
 
         /// <summary>
@@ -394,7 +367,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <returns>ApiResponse of ResponseQueryResults</returns>
-        
         
         ApiResponse<ResponseQueryResults> PostResponsemanagementResponsesQueryWithHttpInfo (ResponseQueryRequest body);
 
@@ -409,7 +381,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Library</param>
         /// <returns>Library</returns>
         
-        
         Library PutResponsemanagementLibrary (string libraryId, Library body);
 
         /// <summary>
@@ -422,7 +393,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
-        
         
         ApiResponse<Library> PutResponsemanagementLibraryWithHttpInfo (string libraryId, Library body);
 
@@ -438,7 +408,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
         
-        
         Response PutResponsemanagementResponse (string responseId, Response body, string expand = null);
 
         /// <summary>
@@ -453,7 +422,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
         
-        
         ApiResponse<Response> PutResponsemanagementResponseWithHttpInfo (string responseId, Response body, string expand = null);
 
         /// <summary>
@@ -467,7 +435,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request</param>
         /// <returns>ResponseAsset</returns>
         
-        
         ResponseAsset PutResponsemanagementResponseasset (string responseAssetId, ResponseAssetRequest body);
 
         /// <summary>
@@ -480,7 +447,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseAssetId">Asset Id</param>
         /// <param name="body">request</param>
         /// <returns>ApiResponse of ResponseAsset</returns>
-        
         
         ApiResponse<ResponseAsset> PutResponsemanagementResponseassetWithHttpInfo (string responseAssetId, ResponseAssetRequest body);
 
@@ -498,7 +464,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteResponsemanagementLibraryAsync (string libraryId);
 
         /// <summary>
@@ -510,7 +475,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementLibraryAsyncWithHttpInfo (string libraryId);
 
@@ -524,7 +488,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseId">Response ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteResponsemanagementResponseAsync (string responseId);
 
         /// <summary>
@@ -536,7 +499,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementResponseAsyncWithHttpInfo (string responseId);
 
@@ -550,7 +512,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteResponsemanagementResponseassetAsync (string responseAssetId);
 
         /// <summary>
@@ -562,7 +523,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId);
 
@@ -579,7 +539,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
         /// <returns>Task of LibraryEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<LibraryEntityListing> GetResponsemanagementLibrariesAsync (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null);
 
         /// <summary>
@@ -595,7 +554,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
         /// <returns>Task of ApiResponse (LibraryEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<LibraryEntityListing>> GetResponsemanagementLibrariesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null);
 
         /// <summary>
@@ -608,7 +566,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <returns>Task of Library</returns>
         
-        
         System.Threading.Tasks.Task<Library> GetResponsemanagementLibraryAsync (string libraryId);
 
         /// <summary>
@@ -620,7 +577,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Library>> GetResponsemanagementLibraryAsyncWithHttpInfo (string libraryId);
 
@@ -635,7 +591,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
         
-        
         System.Threading.Tasks.Task<Response> GetResponsemanagementResponseAsync (string responseId, string expand = null);
 
         /// <summary>
@@ -649,7 +604,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Response>> GetResponsemanagementResponseAsyncWithHttpInfo (string responseId, string expand = null);
 
         /// <summary>
@@ -661,7 +615,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>Task of ResponseAsset</returns>
-        
         
         System.Threading.Tasks.Task<ResponseAsset> GetResponsemanagementResponseassetAsync (string responseAssetId);
 
@@ -675,7 +628,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>Task of ApiResponse (ResponseAsset)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ResponseAsset>> GetResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId);
 
         /// <summary>
@@ -688,7 +640,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statusId">Status Id</param>
         /// <returns>Task of ResponseAssetStatus</returns>
         
-        
         System.Threading.Tasks.Task<ResponseAssetStatus> GetResponsemanagementResponseassetsStatusStatusIdAsync (string statusId);
 
         /// <summary>
@@ -700,7 +651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status Id</param>
         /// <returns>Task of ApiResponse (ResponseAssetStatus)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ResponseAssetStatus>> GetResponsemanagementResponseassetsStatusStatusIdAsyncWithHttpInfo (string statusId);
 
@@ -717,7 +667,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ResponseEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ResponseEntityListing> GetResponsemanagementResponsesAsync (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
 
         /// <summary>
@@ -733,7 +682,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (ResponseEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ResponseEntityListing>> GetResponsemanagementResponsesAsyncWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
 
         /// <summary>
@@ -746,7 +694,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Library</param>
         /// <returns>Task of Library</returns>
         
-        
         System.Threading.Tasks.Task<Library> PostResponsemanagementLibrariesAsync (Library body);
 
         /// <summary>
@@ -758,7 +705,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Library>> PostResponsemanagementLibrariesAsyncWithHttpInfo (Library body);
 
@@ -773,7 +719,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ResponseAssetSearchResults</returns>
         
-        
         System.Threading.Tasks.Task<ResponseAssetSearchResults> PostResponsemanagementResponseassetsSearchAsync (ResponseAssetSearchRequest body, List<string> expand = null);
 
         /// <summary>
@@ -787,7 +732,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ResponseAssetSearchResults)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ResponseAssetSearchResults>> PostResponsemanagementResponseassetsSearchAsyncWithHttpInfo (ResponseAssetSearchRequest body, List<string> expand = null);
 
         /// <summary>
@@ -800,7 +744,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request</param>
         /// <returns>Task of CreateResponseAssetResponse</returns>
         
-        
         System.Threading.Tasks.Task<CreateResponseAssetResponse> PostResponsemanagementResponseassetsUploadsAsync (CreateResponseAssetRequest body);
 
         /// <summary>
@@ -812,7 +755,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <returns>Task of ApiResponse (CreateResponseAssetResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CreateResponseAssetResponse>> PostResponsemanagementResponseassetsUploadsAsyncWithHttpInfo (CreateResponseAssetRequest body);
 
@@ -827,7 +769,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
         
-        
         System.Threading.Tasks.Task<Response> PostResponsemanagementResponsesAsync (Response body, string expand = null);
 
         /// <summary>
@@ -841,7 +782,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsemanagementResponsesAsyncWithHttpInfo (Response body, string expand = null);
 
         /// <summary>
@@ -854,7 +794,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Response</param>
         /// <returns>Task of ResponseQueryResults</returns>
         
-        
         System.Threading.Tasks.Task<ResponseQueryResults> PostResponsemanagementResponsesQueryAsync (ResponseQueryRequest body);
 
         /// <summary>
@@ -866,7 +805,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <returns>Task of ApiResponse (ResponseQueryResults)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ResponseQueryResults>> PostResponsemanagementResponsesQueryAsyncWithHttpInfo (ResponseQueryRequest body);
 
@@ -881,7 +819,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Library</param>
         /// <returns>Task of Library</returns>
         
-        
         System.Threading.Tasks.Task<Library> PutResponsemanagementLibraryAsync (string libraryId, Library body);
 
         /// <summary>
@@ -894,7 +831,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Library>> PutResponsemanagementLibraryAsyncWithHttpInfo (string libraryId, Library body);
 
@@ -910,7 +846,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
         
-        
         System.Threading.Tasks.Task<Response> PutResponsemanagementResponseAsync (string responseId, Response body, string expand = null);
 
         /// <summary>
@@ -925,7 +860,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsemanagementResponseAsyncWithHttpInfo (string responseId, Response body, string expand = null);
 
         /// <summary>
@@ -939,7 +873,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">request</param>
         /// <returns>Task of ResponseAsset</returns>
         
-        
         System.Threading.Tasks.Task<ResponseAsset> PutResponsemanagementResponseassetAsync (string responseAssetId, ResponseAssetRequest body);
 
         /// <summary>
@@ -952,7 +885,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="responseAssetId">Asset Id</param>
         /// <param name="body">request</param>
         /// <returns>Task of ApiResponse (ResponseAsset)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ResponseAsset>> PutResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId, ResponseAssetRequest body);
 
@@ -1049,12 +981,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an existing response library. This will remove any responses associated with the library.
+        /// Delete an existing response library. 
+        /// This will remove any responses associated with the library.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns></returns>
-        
         
         public void DeleteResponsemanagementLibrary (string libraryId)
         {
@@ -1062,12 +994,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an existing response library. This will remove any responses associated with the library.
+        /// Delete an existing response library. 
+        /// This will remove any responses associated with the library.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteResponsemanagementLibraryWithHttpInfo (string libraryId)
         { 
@@ -1146,12 +1078,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an existing response library. This will remove any responses associated with the library.
+        /// Delete an existing response library. 
+        /// This will remove any responses associated with the library.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteResponsemanagementLibraryAsync (string libraryId)
         {
@@ -1160,12 +1092,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an existing response library. This will remove any responses associated with the library.
+        /// Delete an existing response library. 
+        /// This will remove any responses associated with the library.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementLibraryAsyncWithHttpInfo (string libraryId)
         { 
@@ -1246,12 +1178,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an existing response. This will remove the response from any libraries associated with it.
+        /// Delete an existing response. 
+        /// This will remove the response from any libraries associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <returns></returns>
-        
         
         public void DeleteResponsemanagementResponse (string responseId)
         {
@@ -1259,12 +1191,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an existing response. This will remove the response from any libraries associated with it.
+        /// Delete an existing response. 
+        /// This will remove the response from any libraries associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteResponsemanagementResponseWithHttpInfo (string responseId)
         { 
@@ -1343,12 +1275,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an existing response. This will remove the response from any libraries associated with it.
+        /// Delete an existing response. 
+        /// This will remove the response from any libraries associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteResponsemanagementResponseAsync (string responseId)
         {
@@ -1357,12 +1289,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an existing response. This will remove the response from any libraries associated with it.
+        /// Delete an existing response. 
+        /// This will remove the response from any libraries associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementResponseAsyncWithHttpInfo (string responseId)
         { 
@@ -1444,11 +1376,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns></returns>
-        
         
         public void DeleteResponsemanagementResponseasset (string responseAssetId)
         {
@@ -1457,11 +1389,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteResponsemanagementResponseassetWithHttpInfo (string responseAssetId)
         { 
@@ -1541,11 +1473,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteResponsemanagementResponseassetAsync (string responseAssetId)
         {
@@ -1555,11 +1487,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId)
         { 
@@ -1641,6 +1573,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a list of existing response libraries. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1648,7 +1581,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
         /// <returns>LibraryEntityListing</returns>
-        
         
         public LibraryEntityListing GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
         {
@@ -1658,6 +1590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a list of existing response libraries. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1665,7 +1598,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
         /// <returns>ApiResponse of LibraryEntityListing</returns>
-        
         
         public ApiResponse< LibraryEntityListing > GetResponsemanagementLibrariesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
         { 
@@ -1745,6 +1677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a list of existing response libraries. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1752,7 +1685,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
         /// <returns>Task of LibraryEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<LibraryEntityListing> GetResponsemanagementLibrariesAsync (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
         {
@@ -1763,6 +1695,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a list of existing response libraries. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1770,7 +1703,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
         /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
         /// <returns>Task of ApiResponse (LibraryEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LibraryEntityListing>> GetResponsemanagementLibrariesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
         { 
@@ -1851,11 +1783,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about an existing response library. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>Library</returns>
-        
         
         public Library GetResponsemanagementLibrary (string libraryId)
         {
@@ -1865,11 +1797,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about an existing response library. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>ApiResponse of Library</returns>
-        
         
         public ApiResponse< Library > GetResponsemanagementLibraryWithHttpInfo (string libraryId)
         { 
@@ -1949,11 +1881,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about an existing response library. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>Task of Library</returns>
-        
         
         public async System.Threading.Tasks.Task<Library> GetResponsemanagementLibraryAsync (string libraryId)
         {
@@ -1964,11 +1896,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about an existing response library. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Library>> GetResponsemanagementLibraryAsyncWithHttpInfo (string libraryId)
         { 
@@ -2050,12 +1982,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about an existing response. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        
         
         public Response GetResponsemanagementResponse (string responseId, string expand = null)
         {
@@ -2065,12 +1997,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about an existing response. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        
         
         public ApiResponse< Response > GetResponsemanagementResponseWithHttpInfo (string responseId, string expand = null)
         { 
@@ -2151,12 +2083,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about an existing response. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        
         
         public async System.Threading.Tasks.Task<Response> GetResponsemanagementResponseAsync (string responseId, string expand = null)
         {
@@ -2167,12 +2099,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get details about an existing response. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Response>> GetResponsemanagementResponseAsyncWithHttpInfo (string responseId, string expand = null)
         { 
@@ -2255,11 +2187,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get response asset information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>ResponseAsset</returns>
-        
         
         public ResponseAsset GetResponsemanagementResponseasset (string responseAssetId)
         {
@@ -2269,11 +2201,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get response asset information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>ApiResponse of ResponseAsset</returns>
-        
         
         public ApiResponse< ResponseAsset > GetResponsemanagementResponseassetWithHttpInfo (string responseAssetId)
         { 
@@ -2353,11 +2285,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get response asset information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>Task of ResponseAsset</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseAsset> GetResponsemanagementResponseassetAsync (string responseAssetId)
         {
@@ -2368,11 +2300,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get response asset information 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <returns>Task of ApiResponse (ResponseAsset)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseAsset>> GetResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId)
         { 
@@ -2454,11 +2386,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get response asset upload status 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status Id</param>
         /// <returns>ResponseAssetStatus</returns>
-        
         
         public ResponseAssetStatus GetResponsemanagementResponseassetsStatusStatusId (string statusId)
         {
@@ -2468,11 +2400,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get response asset upload status 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status Id</param>
         /// <returns>ApiResponse of ResponseAssetStatus</returns>
-        
         
         public ApiResponse< ResponseAssetStatus > GetResponsemanagementResponseassetsStatusStatusIdWithHttpInfo (string statusId)
         { 
@@ -2552,11 +2484,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get response asset upload status 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status Id</param>
         /// <returns>Task of ResponseAssetStatus</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseAssetStatus> GetResponsemanagementResponseassetsStatusStatusIdAsync (string statusId)
         {
@@ -2567,11 +2499,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get response asset upload status 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="statusId">Status Id</param>
         /// <returns>Task of ApiResponse (ResponseAssetStatus)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseAssetStatus>> GetResponsemanagementResponseassetsStatusStatusIdAsyncWithHttpInfo (string statusId)
         { 
@@ -2653,6 +2585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a list of existing responses. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
@@ -2660,7 +2593,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ResponseEntityListing</returns>
-        
         
         public ResponseEntityListing GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
         {
@@ -2670,6 +2602,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a list of existing responses. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
@@ -2677,7 +2610,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of ResponseEntityListing</returns>
-        
         
         public ApiResponse< ResponseEntityListing > GetResponsemanagementResponsesWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
         { 
@@ -2760,6 +2692,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a list of existing responses. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
@@ -2767,7 +2700,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ResponseEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseEntityListing> GetResponsemanagementResponsesAsync (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
         {
@@ -2778,6 +2710,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a list of existing responses. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
@@ -2785,7 +2718,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (ResponseEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseEntityListing>> GetResponsemanagementResponsesAsyncWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
         { 
@@ -2870,11 +2802,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a response library. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Library</param>
         /// <returns>Library</returns>
-        
         
         public Library PostResponsemanagementLibraries (Library body)
         {
@@ -2884,11 +2816,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a response library. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
-        
         
         public ApiResponse< Library > PostResponsemanagementLibrariesWithHttpInfo (Library body)
         { 
@@ -2973,11 +2905,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a response library. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Library</param>
         /// <returns>Task of Library</returns>
-        
         
         public async System.Threading.Tasks.Task<Library> PostResponsemanagementLibrariesAsync (Library body)
         {
@@ -2988,11 +2920,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a response library. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Library>> PostResponsemanagementLibrariesAsyncWithHttpInfo (Library body)
         { 
@@ -3079,12 +3011,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search response assets 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ResponseAssetSearchResults</returns>
-        
         
         public ResponseAssetSearchResults PostResponsemanagementResponseassetsSearch (ResponseAssetSearchRequest body, List<string> expand = null)
         {
@@ -3094,12 +3026,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search response assets 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ResponseAssetSearchResults</returns>
-        
         
         public ApiResponse< ResponseAssetSearchResults > PostResponsemanagementResponseassetsSearchWithHttpInfo (ResponseAssetSearchRequest body, List<string> expand = null)
         { 
@@ -3185,12 +3117,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search response assets 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ResponseAssetSearchResults</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseAssetSearchResults> PostResponsemanagementResponseassetsSearchAsync (ResponseAssetSearchRequest body, List<string> expand = null)
         {
@@ -3201,12 +3133,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search response assets 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ResponseAssetSearchResults)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseAssetSearchResults>> PostResponsemanagementResponseassetsSearchAsyncWithHttpInfo (ResponseAssetSearchRequest body, List<string> expand = null)
         { 
@@ -3294,11 +3226,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates pre-signed url for uploading response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <returns>CreateResponseAssetResponse</returns>
-        
         
         public CreateResponseAssetResponse PostResponsemanagementResponseassetsUploads (CreateResponseAssetRequest body)
         {
@@ -3308,11 +3240,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates pre-signed url for uploading response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <returns>ApiResponse of CreateResponseAssetResponse</returns>
-        
         
         public ApiResponse< CreateResponseAssetResponse > PostResponsemanagementResponseassetsUploadsWithHttpInfo (CreateResponseAssetRequest body)
         { 
@@ -3397,11 +3329,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates pre-signed url for uploading response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <returns>Task of CreateResponseAssetResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<CreateResponseAssetResponse> PostResponsemanagementResponseassetsUploadsAsync (CreateResponseAssetRequest body)
         {
@@ -3412,11 +3344,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Creates pre-signed url for uploading response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
         /// <returns>Task of ApiResponse (CreateResponseAssetResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CreateResponseAssetResponse>> PostResponsemanagementResponseassetsUploadsAsyncWithHttpInfo (CreateResponseAssetRequest body)
         { 
@@ -3503,12 +3435,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a response. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        
         
         public Response PostResponsemanagementResponses (Response body, string expand = null)
         {
@@ -3518,12 +3450,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a response. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        
         
         public ApiResponse< Response > PostResponsemanagementResponsesWithHttpInfo (Response body, string expand = null)
         { 
@@ -3609,12 +3541,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a response. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        
         
         public async System.Threading.Tasks.Task<Response> PostResponsemanagementResponsesAsync (Response body, string expand = null)
         {
@@ -3625,12 +3557,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a response. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsemanagementResponsesAsyncWithHttpInfo (Response body, string expand = null)
         { 
@@ -3718,11 +3650,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query responses 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <returns>ResponseQueryResults</returns>
-        
         
         public ResponseQueryResults PostResponsemanagementResponsesQuery (ResponseQueryRequest body)
         {
@@ -3732,11 +3664,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query responses 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <returns>ApiResponse of ResponseQueryResults</returns>
-        
         
         public ApiResponse< ResponseQueryResults > PostResponsemanagementResponsesQueryWithHttpInfo (ResponseQueryRequest body)
         { 
@@ -3821,11 +3753,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query responses 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <returns>Task of ResponseQueryResults</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseQueryResults> PostResponsemanagementResponsesQueryAsync (ResponseQueryRequest body)
         {
@@ -3836,11 +3768,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query responses 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
         /// <returns>Task of ApiResponse (ResponseQueryResults)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseQueryResults>> PostResponsemanagementResponsesQueryAsyncWithHttpInfo (ResponseQueryRequest body)
         { 
@@ -3926,13 +3858,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing response library. Fields that can be updated: name. The most recent version is required for updates.
+        /// Update an existing response library. 
+        /// Fields that can be updated: name. The most recent version is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <param name="body">Library</param>
         /// <returns>Library</returns>
-        
         
         public Library PutResponsemanagementLibrary (string libraryId, Library body)
         {
@@ -3941,13 +3873,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing response library. Fields that can be updated: name. The most recent version is required for updates.
+        /// Update an existing response library. 
+        /// Fields that can be updated: name. The most recent version is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
-        
         
         public ApiResponse< Library > PutResponsemanagementLibraryWithHttpInfo (string libraryId, Library body)
         { 
@@ -4035,13 +3967,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing response library. Fields that can be updated: name. The most recent version is required for updates.
+        /// Update an existing response library. 
+        /// Fields that can be updated: name. The most recent version is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <param name="body">Library</param>
         /// <returns>Task of Library</returns>
-        
         
         public async System.Threading.Tasks.Task<Library> PutResponsemanagementLibraryAsync (string libraryId, Library body)
         {
@@ -4051,13 +3983,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing response library. Fields that can be updated: name. The most recent version is required for updates.
+        /// Update an existing response library. 
+        /// Fields that can be updated: name. The most recent version is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
         /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Library>> PutResponsemanagementLibraryAsyncWithHttpInfo (string libraryId, Library body)
         { 
@@ -4148,14 +4080,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing response. Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
+        /// Update an existing response. 
+        /// Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        
         
         public Response PutResponsemanagementResponse (string responseId, Response body, string expand = null)
         {
@@ -4164,14 +4096,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing response. Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
+        /// Update an existing response. 
+        /// Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        
         
         public ApiResponse< Response > PutResponsemanagementResponseWithHttpInfo (string responseId, Response body, string expand = null)
         { 
@@ -4260,14 +4192,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing response. Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
+        /// Update an existing response. 
+        /// Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        
         
         public async System.Threading.Tasks.Task<Response> PutResponsemanagementResponseAsync (string responseId, Response body, string expand = null)
         {
@@ -4277,14 +4209,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing response. Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
+        /// Update an existing response. 
+        /// Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsemanagementResponseAsyncWithHttpInfo (string responseId, Response body, string expand = null)
         { 
@@ -4377,12 +4309,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <param name="body">request</param>
         /// <returns>ResponseAsset</returns>
-        
         
         public ResponseAsset PutResponsemanagementResponseasset (string responseAssetId, ResponseAssetRequest body)
         {
@@ -4392,12 +4324,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <param name="body">request</param>
         /// <returns>ApiResponse of ResponseAsset</returns>
-        
         
         public ApiResponse< ResponseAsset > PutResponsemanagementResponseassetWithHttpInfo (string responseAssetId, ResponseAssetRequest body)
         { 
@@ -4486,12 +4418,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <param name="body">request</param>
         /// <returns>Task of ResponseAsset</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseAsset> PutResponsemanagementResponseassetAsync (string responseAssetId, ResponseAssetRequest body)
         {
@@ -4502,12 +4434,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update response asset 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseAssetId">Asset Id</param>
         /// <param name="body">request</param>
         /// <returns>Task of ApiResponse (ResponseAsset)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseAsset>> PutResponsemanagementResponseassetAsyncWithHttpInfo (string responseAssetId, ResponseAssetRequest body)
         { 

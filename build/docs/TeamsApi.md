@@ -27,8 +27,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete team
 
-
-
 Requires ANY permissions: 
 
 * groups:team:delete
@@ -90,8 +88,6 @@ void (empty response body)
 
 
 Delete team members
-
-
 
 Requires ANY permissions: 
 
@@ -157,8 +153,6 @@ void (empty response body)
 
 Get team
 
-
-
 Requires ANY permissions: 
 
 * groups:team:view
@@ -221,8 +215,6 @@ namespace Example
 
 
 Get team membership
-
-
 
 Requires ANY permissions: 
 
@@ -295,8 +287,6 @@ namespace Example
 
 Get Team listing
 
-
-
 Requires ANY permissions: 
 
 * groups:team:view
@@ -368,8 +358,6 @@ namespace Example
 
 Update team
 
-
-
 Requires ANY permissions: 
 
 * groups:team:edit
@@ -435,7 +423,7 @@ namespace Example
 
 Query for team activity observations
 
-
+PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -504,8 +492,6 @@ namespace Example
 
 Add team members
 
-
-
 Requires ANY permissions: 
 
 * groups:team:assign
@@ -571,8 +557,6 @@ namespace Example
 
 Create a team
 
-
-
 Requires ANY permissions: 
 
 * groups:team:add
@@ -635,8 +619,6 @@ namespace Example
 
 
 Search resources.
-
-
 
 Requires ANY permissions: 
 

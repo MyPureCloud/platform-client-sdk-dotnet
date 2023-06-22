@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locationId">Location ID</param>
         /// <returns></returns>
         
-        
         void DeleteLocation (string locationId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteLocationWithHttpInfo (string locationId);
 
@@ -53,7 +51,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>LocationDefinition</returns>
         
-        
         LocationDefinition GetLocation (string locationId, List<string> expand = null);
 
         /// <summary>
@@ -67,7 +64,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of LocationDefinition</returns>
         
-        
         ApiResponse<LocationDefinition> GetLocationWithHttpInfo (string locationId, List<string> expand = null);
 
         /// <summary>
@@ -80,7 +76,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locationId">Location ID</param>
         /// <returns>LocationEntityListing</returns>
         
-        
         LocationEntityListing GetLocationSublocations (string locationId);
 
         /// <summary>
@@ -92,7 +87,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of LocationEntityListing</returns>
-        
         
         ApiResponse<LocationEntityListing> GetLocationSublocationsWithHttpInfo (string locationId);
 
@@ -109,7 +103,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>LocationEntityListing</returns>
         
-        
         LocationEntityListing GetLocations (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null);
 
         /// <summary>
@@ -125,7 +118,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of LocationEntityListing</returns>
         
-        
         ApiResponse<LocationEntityListing> GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null);
 
         /// <summary>
@@ -138,7 +130,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
-        
         
         LocationsSearchResponse GetLocationsSearch (string q64, List<string> expand = null);
 
@@ -153,7 +144,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
         
-        
         ApiResponse<LocationsSearchResponse> GetLocationsSearchWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -166,7 +156,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locationId">Location ID</param>
         /// <param name="body">Location</param>
         /// <returns>LocationDefinition</returns>
-        
         
         LocationDefinition PatchLocation (string locationId, LocationUpdateDefinition body);
 
@@ -181,7 +170,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Location</param>
         /// <returns>ApiResponse of LocationDefinition</returns>
         
-        
         ApiResponse<LocationDefinition> PatchLocationWithHttpInfo (string locationId, LocationUpdateDefinition body);
 
         /// <summary>
@@ -193,7 +181,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Location</param>
         /// <returns>LocationDefinition</returns>
-        
         
         LocationDefinition PostLocations (LocationCreateDefinition body);
 
@@ -207,7 +194,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Location</param>
         /// <returns>ApiResponse of LocationDefinition</returns>
         
-        
         ApiResponse<LocationDefinition> PostLocationsWithHttpInfo (LocationCreateDefinition body);
 
         /// <summary>
@@ -220,7 +206,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>LocationsSearchResponse</returns>
         
-        
         LocationsSearchResponse PostLocationsSearch (LocationSearchRequest body);
 
         /// <summary>
@@ -232,7 +217,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        
         
         ApiResponse<LocationsSearchResponse> PostLocationsSearchWithHttpInfo (LocationSearchRequest body);
 
@@ -250,7 +234,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteLocationAsync (string locationId);
 
         /// <summary>
@@ -262,7 +245,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo (string locationId);
 
@@ -277,7 +259,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of LocationDefinition</returns>
         
-        
         System.Threading.Tasks.Task<LocationDefinition> GetLocationAsync (string locationId, List<string> expand = null);
 
         /// <summary>
@@ -291,7 +272,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationAsyncWithHttpInfo (string locationId, List<string> expand = null);
 
         /// <summary>
@@ -304,7 +284,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of LocationEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<LocationEntityListing> GetLocationSublocationsAsync (string locationId);
 
         /// <summary>
@@ -316,7 +295,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationSublocationsAsyncWithHttpInfo (string locationId);
 
@@ -333,7 +311,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of LocationEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<LocationEntityListing> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null);
 
         /// <summary>
@@ -349,7 +326,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null);
 
         /// <summary>
@@ -362,7 +338,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        
         
         System.Threading.Tasks.Task<LocationsSearchResponse> GetLocationsSearchAsync (string q64, List<string> expand = null);
 
@@ -377,7 +352,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetLocationsSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -390,7 +364,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locationId">Location ID</param>
         /// <param name="body">Location</param>
         /// <returns>Task of LocationDefinition</returns>
-        
         
         System.Threading.Tasks.Task<LocationDefinition> PatchLocationAsync (string locationId, LocationUpdateDefinition body);
 
@@ -405,7 +378,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Location</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> PatchLocationAsyncWithHttpInfo (string locationId, LocationUpdateDefinition body);
 
         /// <summary>
@@ -417,7 +389,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Location</param>
         /// <returns>Task of LocationDefinition</returns>
-        
         
         System.Threading.Tasks.Task<LocationDefinition> PostLocationsAsync (LocationCreateDefinition body);
 
@@ -431,7 +402,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Location</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> PostLocationsAsyncWithHttpInfo (LocationCreateDefinition body);
 
         /// <summary>
@@ -444,7 +414,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of LocationsSearchResponse</returns>
         
-        
         System.Threading.Tasks.Task<LocationsSearchResponse> PostLocationsSearchAsync (LocationSearchRequest body);
 
         /// <summary>
@@ -456,7 +425,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostLocationsSearchAsyncWithHttpInfo (LocationSearchRequest body);
 
@@ -554,11 +522,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns></returns>
-        
         
         public void DeleteLocation (string locationId)
         {
@@ -567,11 +535,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteLocationWithHttpInfo (string locationId)
         { 
@@ -651,11 +619,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteLocationAsync (string locationId)
         {
@@ -665,11 +633,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo (string locationId)
         { 
@@ -751,12 +719,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Location by ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>LocationDefinition</returns>
-        
         
         public LocationDefinition GetLocation (string locationId, List<string> expand = null)
         {
@@ -766,12 +734,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Location by ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of LocationDefinition</returns>
-        
         
         public ApiResponse< LocationDefinition > GetLocationWithHttpInfo (string locationId, List<string> expand = null)
         { 
@@ -852,12 +820,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Location by ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of LocationDefinition</returns>
-        
         
         public async System.Threading.Tasks.Task<LocationDefinition> GetLocationAsync (string locationId, List<string> expand = null)
         {
@@ -868,12 +836,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Location by ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationAsyncWithHttpInfo (string locationId, List<string> expand = null)
         { 
@@ -956,11 +924,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get sublocations for location ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>LocationEntityListing</returns>
-        
         
         public LocationEntityListing GetLocationSublocations (string locationId)
         {
@@ -970,11 +938,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get sublocations for location ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of LocationEntityListing</returns>
-        
         
         public ApiResponse< LocationEntityListing > GetLocationSublocationsWithHttpInfo (string locationId)
         { 
@@ -1054,11 +1022,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get sublocations for location ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of LocationEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<LocationEntityListing> GetLocationSublocationsAsync (string locationId)
         {
@@ -1069,11 +1037,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get sublocations for location ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationSublocationsAsyncWithHttpInfo (string locationId)
         { 
@@ -1155,6 +1123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of all locations. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1162,7 +1131,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>LocationEntityListing</returns>
-        
         
         public LocationEntityListing GetLocations (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
         {
@@ -1172,6 +1140,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of all locations. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1179,7 +1148,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of LocationEntityListing</returns>
-        
         
         public ApiResponse< LocationEntityListing > GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
         { 
@@ -1259,6 +1227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of all locations. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1266,7 +1235,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of LocationEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<LocationEntityListing> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
         {
@@ -1277,6 +1245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of all locations. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1284,7 +1253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
         { 
@@ -1365,12 +1333,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search locations using the q64 value returned from a previous search 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
-        
         
         public LocationsSearchResponse GetLocationsSearch (string q64, List<string> expand = null)
         {
@@ -1380,12 +1348,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search locations using the q64 value returned from a previous search 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        
         
         public ApiResponse< LocationsSearchResponse > GetLocationsSearchWithHttpInfo (string q64, List<string> expand = null)
         { 
@@ -1466,12 +1434,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search locations using the q64 value returned from a previous search 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<LocationsSearchResponse> GetLocationsSearchAsync (string q64, List<string> expand = null)
         {
@@ -1482,12 +1450,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search locations using the q64 value returned from a previous search 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetLocationsSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         { 
@@ -1570,12 +1538,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <param name="body">Location</param>
         /// <returns>LocationDefinition</returns>
-        
         
         public LocationDefinition PatchLocation (string locationId, LocationUpdateDefinition body)
         {
@@ -1585,12 +1553,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <param name="body">Location</param>
         /// <returns>ApiResponse of LocationDefinition</returns>
-        
         
         public ApiResponse< LocationDefinition > PatchLocationWithHttpInfo (string locationId, LocationUpdateDefinition body)
         { 
@@ -1679,12 +1647,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <param name="body">Location</param>
         /// <returns>Task of LocationDefinition</returns>
-        
         
         public async System.Threading.Tasks.Task<LocationDefinition> PatchLocationAsync (string locationId, LocationUpdateDefinition body)
         {
@@ -1695,12 +1663,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <param name="body">Location</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> PatchLocationAsyncWithHttpInfo (string locationId, LocationUpdateDefinition body)
         { 
@@ -1792,11 +1760,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Location</param>
         /// <returns>LocationDefinition</returns>
-        
         
         public LocationDefinition PostLocations (LocationCreateDefinition body)
         {
@@ -1806,11 +1774,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Location</param>
         /// <returns>ApiResponse of LocationDefinition</returns>
-        
         
         public ApiResponse< LocationDefinition > PostLocationsWithHttpInfo (LocationCreateDefinition body)
         { 
@@ -1895,11 +1863,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Location</param>
         /// <returns>Task of LocationDefinition</returns>
-        
         
         public async System.Threading.Tasks.Task<LocationDefinition> PostLocationsAsync (LocationCreateDefinition body)
         {
@@ -1910,11 +1878,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a location 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Location</param>
         /// <returns>Task of ApiResponse (LocationDefinition)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> PostLocationsAsyncWithHttpInfo (LocationCreateDefinition body)
         { 
@@ -2001,11 +1969,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search locations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>LocationsSearchResponse</returns>
-        
         
         public LocationsSearchResponse PostLocationsSearch (LocationSearchRequest body)
         {
@@ -2015,11 +1983,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search locations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        
         
         public ApiResponse< LocationsSearchResponse > PostLocationsSearchWithHttpInfo (LocationSearchRequest body)
         { 
@@ -2104,11 +2072,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search locations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<LocationsSearchResponse> PostLocationsSearchAsync (LocationSearchRequest body)
         {
@@ -2119,11 +2087,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search locations 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostLocationsSearchAsyncWithHttpInfo (LocationSearchRequest body)
         { 

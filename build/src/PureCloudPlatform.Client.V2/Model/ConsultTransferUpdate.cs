@@ -73,13 +73,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConsultTransferUpdate" /> class.
         /// </summary>
         /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. (required).</param>
-        public ConsultTransferUpdate(SpeakToEnum? SpeakTo = null)
+        /// <param name="ConsultingUserId">The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID.</param>
+        public ConsultTransferUpdate(SpeakToEnum? SpeakTo = null, string ConsultingUserId = null)
         {
             this.SpeakTo = SpeakTo;
+            this.ConsultingUserId = ConsultingUserId;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID
+        /// </summary>
+        /// <value>The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID</value>
+        [DataMember(Name="consultingUserId", EmitDefaultValue=false)]
+        public string ConsultingUserId { get; set; }
 
 
         /// <summary>
@@ -92,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConsultTransferUpdate {\n");
 
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
+            sb.Append("  ConsultingUserId: ").Append(ConsultingUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,6 +148,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SpeakTo == other.SpeakTo ||
                     this.SpeakTo != null &&
                     this.SpeakTo.Equals(other.SpeakTo)
+                ) &&
+                (
+                    this.ConsultingUserId == other.ConsultingUserId ||
+                    this.ConsultingUserId != null &&
+                    this.ConsultingUserId.Equals(other.ConsultingUserId)
                 );
         }
 
@@ -152,6 +169,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.SpeakTo != null)
                     hash = hash * 59 + this.SpeakTo.GetHashCode();
+
+                if (this.ConsultingUserId != null)
+                    hash = hash * 59 + this.ConsultingUserId.GetHashCode();
 
                 return hash;
             }

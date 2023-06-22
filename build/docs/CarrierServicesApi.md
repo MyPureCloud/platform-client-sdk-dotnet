@@ -19,8 +19,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get location for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -82,8 +80,6 @@ namespace Example
 
 
 Set current location for the logged in user
-
-
 
 Requires NO permissions: 
 

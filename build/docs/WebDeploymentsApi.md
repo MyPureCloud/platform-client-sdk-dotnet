@@ -36,8 +36,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete all versions of a configuration
 
-
-
 Requires ALL permissions: 
 
 * webDeployments:configuration:delete
@@ -99,8 +97,6 @@ void (empty response body)
 
 
 Delete a deployment
-
-
 
 Requires ALL permissions: 
 
@@ -164,8 +160,6 @@ void (empty response body)
 
 Deletes a cobrowse session
 
-
-
 Requires NO permissions: 
 
 
@@ -224,8 +218,6 @@ namespace Example
 
 Invalidate JWT
 
-
-
 Requires NO permissions: 
 
 
@@ -282,8 +274,6 @@ void (empty response body)
 
 
 Get a configuration version
-
-
 
 Requires ALL permissions: 
 
@@ -352,8 +342,6 @@ Get the versions of a configuration
 
 This returns the 50 most recent versions for this configuration
 
-
-
 Requires ALL permissions: 
 
 * webDeployments:configuration:view
@@ -416,8 +404,6 @@ namespace Example
 
 
 Get the configuration draft
-
-
 
 Requires ALL permissions: 
 
@@ -482,8 +468,6 @@ namespace Example
 
 View configuration drafts
 
-
-
 Requires ALL permissions: 
 
 * webDeployments:configuration:view
@@ -546,8 +530,6 @@ namespace Example
 
 
 Get a deployment
-
-
 
 Requires ALL permissions: 
 
@@ -612,8 +594,6 @@ namespace Example
 
 Retrieves a cobrowse session
 
-
-
 Requires NO permissions: 
 
 
@@ -671,8 +651,6 @@ namespace Example
 
 
 Get active configuration for a given deployment
-
-
 
 Requires NO permissions: 
 
@@ -738,8 +716,6 @@ namespace Example
 
 Get deployments
 
-
-
 Requires ALL permissions: 
 
 * webDeployments:deployment:view
@@ -802,8 +778,6 @@ namespace Example
 
 
 Publish the configuration draft and create a new version
-
-
 
 Requires ALL permissions: 
 
@@ -869,8 +843,6 @@ namespace Example
 
 Create a configuration draft
 
-
-
 Requires ALL permissions: 
 
 * webDeployments:configuration:add
@@ -933,8 +905,6 @@ namespace Example
 
 
 Create a deployment
-
-
 
 Requires ALL permissions: 
 
@@ -999,8 +969,6 @@ namespace Example
 
 Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
 
-
-
 Requires NO permissions: 
 
 
@@ -1057,8 +1025,6 @@ namespace Example
 
 Refresh a JWT.
 
-
-
 Requires NO permissions: 
 
 
@@ -1114,8 +1080,6 @@ namespace Example
 
 
 Update the configuration draft
-
-
 
 Requires ALL permissions: 
 
@@ -1181,8 +1145,6 @@ namespace Example
 
 
 Update a deployment
-
-
 
 Requires ALL permissions: 
 

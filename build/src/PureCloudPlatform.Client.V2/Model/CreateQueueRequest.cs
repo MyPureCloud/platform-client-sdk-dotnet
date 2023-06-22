@@ -75,6 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">The ID of the user that created the queue..</param>
         /// <param name="MediaSettings">The media settings for the queue..</param>
         /// <param name="RoutingRules">The routing rules for the queue, used for Preferred Agent Routing..</param>
+        /// <param name="ConditionalGroupRouting">The Conditional Group Routing settings for the queue..</param>
         /// <param name="Bullseye">The bullseye settings for the queue..</param>
         /// <param name="AcwSettings">The ACW settings for the queue..</param>
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
@@ -96,7 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SourceQueueId">The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue..</param>
-        public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, string SourceQueueId = null)
+        public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, string SourceQueueId = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -107,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedBy = CreatedBy;
             this.MediaSettings = MediaSettings;
             this.RoutingRules = RoutingRules;
+            this.ConditionalGroupRouting = ConditionalGroupRouting;
             this.Bullseye = Bullseye;
             this.AcwSettings = AcwSettings;
             this.SkillEvaluationMethod = SkillEvaluationMethod;
@@ -247,6 +249,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The routing rules for the queue, used for Preferred Agent Routing.</value>
         [DataMember(Name="routingRules", EmitDefaultValue=false)]
         public List<RoutingRule> RoutingRules { get; set; }
+
+
+
+        /// <summary>
+        /// The Conditional Group Routing settings for the queue.
+        /// </summary>
+        /// <value>The Conditional Group Routing settings for the queue.</value>
+        [DataMember(Name="conditionalGroupRouting", EmitDefaultValue=false)]
+        public ConditionalGroupRouting ConditionalGroupRouting { get; set; }
 
 
 
@@ -461,6 +472,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JoinedMemberCount: ").Append(JoinedMemberCount).Append("\n");
             sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
             sb.Append("  RoutingRules: ").Append(RoutingRules).Append("\n");
+            sb.Append("  ConditionalGroupRouting: ").Append(ConditionalGroupRouting).Append("\n");
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
@@ -587,6 +599,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoutingRules == other.RoutingRules ||
                     this.RoutingRules != null &&
                     this.RoutingRules.SequenceEqual(other.RoutingRules)
+                ) &&
+                (
+                    this.ConditionalGroupRouting == other.ConditionalGroupRouting ||
+                    this.ConditionalGroupRouting != null &&
+                    this.ConditionalGroupRouting.Equals(other.ConditionalGroupRouting)
                 ) &&
                 (
                     this.Bullseye == other.Bullseye ||
@@ -749,6 +766,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RoutingRules != null)
                     hash = hash * 59 + this.RoutingRules.GetHashCode();
+
+                if (this.ConditionalGroupRouting != null)
+                    hash = hash * 59 + this.ConditionalGroupRouting.GetHashCode();
 
                 if (this.Bullseye != null)
                     hash = hash * 59 + this.Bullseye.GetHashCode();

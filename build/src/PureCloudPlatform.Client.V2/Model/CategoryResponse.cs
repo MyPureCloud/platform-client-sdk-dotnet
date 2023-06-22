@@ -28,11 +28,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CategoryResponse" /> class.
         /// </summary>
         /// <param name="Name">The name of the category. (required).</param>
-        /// <param name="Description">The description for the category..</param>
-        public CategoryResponse(string Name = null, string Description = null)
+        /// <param name="Description">Description.</param>
+        /// <param name="ExternalId">ExternalId.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ParentCategory">The reference to category to which this category belongs to..</param>
+        /// <param name="DocumentCount">Number of documents assigned to this category..</param>
+        /// <param name="KnowledgeBase">The reference to knowledge base to which the category belongs to..</param>
+        public CategoryResponse(string Name = null, string Description = null, string ExternalId = null, DateTime? DateCreated = null, DateTime? DateModified = null, CategoryReference ParentCategory = null, int? DocumentCount = null, KnowledgeBaseReference KnowledgeBase = null)
         {
             this.Name = Name;
             this.Description = Description;
+            this.ExternalId = ExternalId;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ParentCategory = ParentCategory;
+            this.DocumentCount = DocumentCount;
+            this.KnowledgeBase = KnowledgeBase;
             
         }
         
@@ -57,29 +69,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The description for the category.
+        /// Gets or Sets Description
         /// </summary>
-        /// <value>The description for the category.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
 
 
         /// <summary>
-        /// The creation date-time for the category. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Gets or Sets ExternalId
         /// </summary>
-        /// <value>The creation date-time for the category. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; private set; }
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
 
 
 
         /// <summary>
-        /// The last modification date-time for the category. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The last modification date-time for the category. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+
+
+
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; private set; }
+        public DateTime? DateModified { get; set; }
 
 
 
@@ -88,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The reference to category to which this category belongs to.</value>
         [DataMember(Name="parentCategory", EmitDefaultValue=false)]
-        public CategoryReference ParentCategory { get; private set; }
+        public CategoryReference ParentCategory { get; set; }
 
 
 
@@ -97,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Number of documents assigned to this category.</value>
         [DataMember(Name="documentCount", EmitDefaultValue=false)]
-        public int? DocumentCount { get; private set; }
+        public int? DocumentCount { get; set; }
 
 
 
@@ -106,7 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The reference to knowledge base to which the category belongs to.</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
-        public KnowledgeBaseReference KnowledgeBase { get; private set; }
+        public KnowledgeBaseReference KnowledgeBase { get; set; }
 
 
 
@@ -130,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ParentCategory: ").Append(ParentCategory).Append("\n");
@@ -192,6 +212,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -242,6 +267,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

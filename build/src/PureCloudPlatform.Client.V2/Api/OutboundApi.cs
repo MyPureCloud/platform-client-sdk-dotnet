@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundAttemptlimit (string attemptLimitsId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundAttemptlimitWithHttpInfo (string attemptLimitsId);
 
@@ -52,7 +50,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundCallabletimeset (string callableTimeSetId);
 
         /// <summary>
@@ -64,7 +61,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundCallabletimesetWithHttpInfo (string callableTimeSetId);
 
@@ -78,7 +74,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundCallanalysisresponseset (string callAnalysisSetId);
 
         /// <summary>
@@ -90,7 +85,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId);
 
@@ -104,7 +98,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Campaign</returns>
         
-        
         Campaign DeleteOutboundCampaign (string campaignId);
 
         /// <summary>
@@ -116,7 +109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Campaign</returns>
-        
         
         ApiResponse<Campaign> DeleteOutboundCampaignWithHttpInfo (string campaignId);
 
@@ -130,7 +122,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundCampaignProgress (string campaignId);
 
         /// <summary>
@@ -142,7 +133,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundCampaignProgressWithHttpInfo (string campaignId);
 
@@ -156,7 +146,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundCampaignrule (string campaignRuleId);
 
         /// <summary>
@@ -168,7 +157,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundCampaignruleWithHttpInfo (string campaignRuleId);
 
@@ -182,7 +170,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundContactlist (string contactListId);
 
         /// <summary>
@@ -194,7 +181,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundContactlistWithHttpInfo (string contactListId);
 
@@ -209,7 +195,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">Contact ID</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundContactlistContact (string contactListId, string contactId);
 
         /// <summary>
@@ -222,7 +207,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundContactlistContactWithHttpInfo (string contactListId, string contactId);
 
@@ -237,7 +221,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundContactlistContacts (string contactListId, List<string> contactIds);
 
         /// <summary>
@@ -251,7 +234,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundContactlistContactsWithHttpInfo (string contactListId, List<string> contactIds);
 
         /// <summary>
@@ -263,7 +245,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundContactlistfilter (string contactListFilterId);
 
@@ -277,7 +258,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundContactlistfilterWithHttpInfo (string contactListFilterId);
 
         /// <summary>
@@ -289,7 +269,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundContactlists (List<string> id);
 
@@ -303,7 +282,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundContactlistsWithHttpInfo (List<string> id);
 
         /// <summary>
@@ -315,7 +293,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundDigitalruleset (string digitalRuleSetId);
 
@@ -329,7 +306,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId);
 
         /// <summary>
@@ -342,7 +318,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundDnclist (string dncListId);
 
         /// <summary>
@@ -354,7 +329,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundDnclistWithHttpInfo (string dncListId);
 
@@ -369,7 +343,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundDnclistCustomexclusioncolumns (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
@@ -382,7 +355,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundDnclistCustomexclusioncolumnsWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
@@ -397,7 +369,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundDnclistEmailaddresses (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
@@ -410,7 +381,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteOutboundDnclistEmailaddressesWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
@@ -425,7 +395,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns></returns>
         
-        
         void DeleteOutboundDnclistPhonenumbers (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
@@ -439,7 +408,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
@@ -451,7 +419,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>MessagingCampaign</returns>
-        
         
         MessagingCampaign DeleteOutboundMessagingcampaign (string messagingCampaignId);
 
@@ -465,7 +432,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaign</returns>
         
-        
         ApiResponse<MessagingCampaign> DeleteOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -477,7 +443,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundMessagingcampaignProgress (string messagingCampaignId);
 
@@ -491,7 +456,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundMessagingcampaignProgressWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -503,7 +467,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundRuleset (string ruleSetId);
 
@@ -517,7 +480,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundRulesetWithHttpInfo (string ruleSetId);
 
         /// <summary>
@@ -529,7 +491,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundSchedulesCampaign (string campaignId);
 
@@ -543,7 +504,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundSchedulesCampaignWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -555,7 +515,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundSchedulesEmailcampaign (string emailCampaignId);
 
@@ -569,7 +528,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId);
 
         /// <summary>
@@ -581,7 +539,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundSchedulesMessagingcampaign (string messagingCampaignId);
 
@@ -595,7 +552,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -607,7 +563,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundSchedulesSequence (string sequenceId);
 
@@ -621,7 +576,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundSchedulesSequenceWithHttpInfo (string sequenceId);
 
         /// <summary>
@@ -633,7 +587,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns></returns>
-        
         
         void DeleteOutboundSequence (string sequenceId);
 
@@ -647,7 +600,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteOutboundSequenceWithHttpInfo (string sequenceId);
 
         /// <summary>
@@ -660,7 +612,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>AttemptLimits</returns>
         
-        
         AttemptLimits GetOutboundAttemptlimit (string attemptLimitsId);
 
         /// <summary>
@@ -672,7 +623,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>ApiResponse of AttemptLimits</returns>
-        
         
         ApiResponse<AttemptLimits> GetOutboundAttemptlimitWithHttpInfo (string attemptLimitsId);
 
@@ -692,7 +642,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>AttemptLimitsEntityListing</returns>
         
-        
         AttemptLimitsEntityListing GetOutboundAttemptlimits (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -711,7 +660,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of AttemptLimitsEntityListing</returns>
         
-        
         ApiResponse<AttemptLimitsEntityListing> GetOutboundAttemptlimitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -724,7 +672,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>CallableTimeSet</returns>
         
-        
         CallableTimeSet GetOutboundCallabletimeset (string callableTimeSetId);
 
         /// <summary>
@@ -736,7 +683,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        
         
         ApiResponse<CallableTimeSet> GetOutboundCallabletimesetWithHttpInfo (string callableTimeSetId);
 
@@ -756,7 +702,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CallableTimeSetEntityListing</returns>
         
-        
         CallableTimeSetEntityListing GetOutboundCallabletimesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -775,7 +720,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CallableTimeSetEntityListing</returns>
         
-        
         ApiResponse<CallableTimeSetEntityListing> GetOutboundCallabletimesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -788,7 +732,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ResponseSet</returns>
         
-        
         ResponseSet GetOutboundCallanalysisresponseset (string callAnalysisSetId);
 
         /// <summary>
@@ -800,7 +743,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        
         
         ApiResponse<ResponseSet> GetOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId);
 
@@ -820,7 +762,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ResponseSetEntityListing</returns>
         
-        
         ResponseSetEntityListing GetOutboundCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -839,7 +780,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ResponseSetEntityListing</returns>
         
-        
         ApiResponse<ResponseSetEntityListing> GetOutboundCallanalysisresponsesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -851,7 +791,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Campaign</returns>
-        
         
         Campaign GetOutboundCampaign (string campaignId);
 
@@ -865,7 +804,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Campaign</returns>
         
-        
         ApiResponse<Campaign> GetOutboundCampaignWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -877,7 +815,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>AgentOwnedMappingPreviewListing</returns>
-        
         
         AgentOwnedMappingPreviewListing GetOutboundCampaignAgentownedmappingpreviewResults (string campaignId);
 
@@ -891,7 +828,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of AgentOwnedMappingPreviewListing</returns>
         
-        
         ApiResponse<AgentOwnedMappingPreviewListing> GetOutboundCampaignAgentownedmappingpreviewResultsWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -903,7 +839,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignDiagnostics</returns>
-        
         
         CampaignDiagnostics GetOutboundCampaignDiagnostics (string campaignId);
 
@@ -917,7 +852,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignDiagnostics</returns>
         
-        
         ApiResponse<CampaignDiagnostics> GetOutboundCampaignDiagnosticsWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -929,7 +863,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignInteractions</returns>
-        
         
         CampaignInteractions GetOutboundCampaignInteractions (string campaignId);
 
@@ -943,7 +876,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignInteractions</returns>
         
-        
         ApiResponse<CampaignInteractions> GetOutboundCampaignInteractionsWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -955,7 +887,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignProgress</returns>
-        
         
         CampaignProgress GetOutboundCampaignProgress (string campaignId);
 
@@ -969,7 +900,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignProgress</returns>
         
-        
         ApiResponse<CampaignProgress> GetOutboundCampaignProgressWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -981,7 +911,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignStats</returns>
-        
         
         CampaignStats GetOutboundCampaignStats (string campaignId);
 
@@ -995,7 +924,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignStats</returns>
         
-        
         ApiResponse<CampaignStats> GetOutboundCampaignStatsWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -1008,7 +936,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>CampaignRule</returns>
         
-        
         CampaignRule GetOutboundCampaignrule (string campaignRuleId);
 
         /// <summary>
@@ -1020,7 +947,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>ApiResponse of CampaignRule</returns>
-        
         
         ApiResponse<CampaignRule> GetOutboundCampaignruleWithHttpInfo (string campaignRuleId);
 
@@ -1040,7 +966,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignRuleEntityListing</returns>
         
-        
         CampaignRuleEntityListing GetOutboundCampaignrules (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1058,7 +983,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignRuleEntityListing</returns>
-        
         
         ApiResponse<CampaignRuleEntityListing> GetOutboundCampaignrulesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
@@ -1084,7 +1008,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignEntityListing</returns>
         
-        
         CampaignEntityListing GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1109,7 +1032,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignEntityListing</returns>
         
-        
         ApiResponse<CampaignEntityListing> GetOutboundCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1127,7 +1049,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type(s) (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CommonCampaignEntityListing</returns>
-        
         
         CommonCampaignEntityListing GetOutboundCampaignsAll (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null);
 
@@ -1147,7 +1068,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CommonCampaignEntityListing</returns>
         
-        
         ApiResponse<CommonCampaignEntityListing> GetOutboundCampaignsAllWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null);
 
         /// <summary>
@@ -1165,7 +1085,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type(s) (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CommonCampaignDivisionViewEntityListing</returns>
-        
         
         CommonCampaignDivisionViewEntityListing GetOutboundCampaignsAllDivisionviews (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null);
 
@@ -1185,7 +1104,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CommonCampaignDivisionViewEntityListing</returns>
         
-        
         ApiResponse<CommonCampaignDivisionViewEntityListing> GetOutboundCampaignsAllDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null);
 
         /// <summary>
@@ -1198,7 +1116,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignDivisionView</returns>
         
-        
         CampaignDivisionView GetOutboundCampaignsDivisionview (string campaignId);
 
         /// <summary>
@@ -1210,7 +1127,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignDivisionView</returns>
-        
         
         ApiResponse<CampaignDivisionView> GetOutboundCampaignsDivisionviewWithHttpInfo (string campaignId);
 
@@ -1230,7 +1146,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignDivisionViewListing</returns>
         
-        
         CampaignDivisionViewListing GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1249,7 +1164,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignDivisionViewListing</returns>
         
-        
         ApiResponse<CampaignDivisionViewListing> GetOutboundCampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1263,7 +1177,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ContactList</returns>
-        
         
         ContactList GetOutboundContactlist (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
@@ -1279,7 +1192,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of ContactList</returns>
         
-        
         ApiResponse<ContactList> GetOutboundContactlistWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
@@ -1292,7 +1204,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>DialerContact</returns>
-        
         
         DialerContact GetOutboundContactlistContact (string contactListId, string contactId);
 
@@ -1307,7 +1218,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of DialerContact</returns>
         
-        
         ApiResponse<DialerContact> GetOutboundContactlistContactWithHttpInfo (string contactListId, string contactId);
 
         /// <summary>
@@ -1320,7 +1230,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>ExportUri</returns>
-        
         
         ExportUri GetOutboundContactlistExport (string contactListId, string download = null);
 
@@ -1335,7 +1244,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>ApiResponse of ExportUri</returns>
         
-        
         ApiResponse<ExportUri> GetOutboundContactlistExportWithHttpInfo (string contactListId, string download = null);
 
         /// <summary>
@@ -1347,7 +1255,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ImportStatus</returns>
-        
         
         ImportStatus GetOutboundContactlistImportstatus (string contactListId);
 
@@ -1361,7 +1268,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
         
-        
         ApiResponse<ImportStatus> GetOutboundContactlistImportstatusWithHttpInfo (string contactListId);
 
         /// <summary>
@@ -1373,7 +1279,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>TimeZoneMappingPreview</returns>
-        
         
         TimeZoneMappingPreview GetOutboundContactlistTimezonemappingpreview (string contactListId);
 
@@ -1387,7 +1292,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of TimeZoneMappingPreview</returns>
         
-        
         ApiResponse<TimeZoneMappingPreview> GetOutboundContactlistTimezonemappingpreviewWithHttpInfo (string contactListId);
 
         /// <summary>
@@ -1400,7 +1304,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>ContactListFilter</returns>
         
-        
         ContactListFilter GetOutboundContactlistfilter (string contactListFilterId);
 
         /// <summary>
@@ -1412,7 +1315,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>ApiResponse of ContactListFilter</returns>
-        
         
         ApiResponse<ContactListFilter> GetOutboundContactlistfilterWithHttpInfo (string contactListFilterId);
 
@@ -1433,7 +1335,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <returns>ContactListFilterEntityListing</returns>
         
-        
         ContactListFilterEntityListing GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null);
 
         /// <summary>
@@ -1452,7 +1353,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <returns>ApiResponse of ContactListFilterEntityListing</returns>
-        
         
         ApiResponse<ContactListFilterEntityListing> GetOutboundContactlistfiltersWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null);
 
@@ -1476,7 +1376,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListEntityListing</returns>
         
-        
         ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1499,7 +1398,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListEntityListing</returns>
         
-        
         ApiResponse<ContactListEntityListing> GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1514,7 +1412,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ContactListDivisionView</returns>
         
-        
         ContactListDivisionView GetOutboundContactlistsDivisionview (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
@@ -1528,7 +1425,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of ContactListDivisionView</returns>
-        
         
         ApiResponse<ContactListDivisionView> GetOutboundContactlistsDivisionviewWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
@@ -1550,7 +1446,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListDivisionViewListing</returns>
         
-        
         ContactListDivisionViewListing GetOutboundContactlistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1571,7 +1466,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListDivisionViewListing</returns>
         
-        
         ApiResponse<ContactListDivisionViewListing> GetOutboundContactlistsDivisionviewsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1584,7 +1478,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>DigitalRuleSet</returns>
         
-        
         DigitalRuleSet GetOutboundDigitalruleset (string digitalRuleSetId);
 
         /// <summary>
@@ -1596,7 +1489,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>ApiResponse of DigitalRuleSet</returns>
-        
         
         ApiResponse<DigitalRuleSet> GetOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId);
 
@@ -1615,7 +1507,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
         /// <returns>DigitalRuleSetEntityListing</returns>
         
-        
         DigitalRuleSetEntityListing GetOutboundDigitalrulesets (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -1633,7 +1524,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
         /// <returns>ApiResponse of DigitalRuleSetEntityListing</returns>
         
-        
         ApiResponse<DigitalRuleSetEntityListing> GetOutboundDigitalrulesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -1647,7 +1537,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>DncList</returns>
-        
         
         DncList GetOutboundDnclist (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
 
@@ -1663,7 +1552,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of DncList</returns>
         
-        
         ApiResponse<DncList> GetOutboundDnclistWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
@@ -1676,7 +1564,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>ExportUri</returns>
-        
         
         ExportUri GetOutboundDnclistExport (string dncListId, string download = null);
 
@@ -1691,7 +1578,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>ApiResponse of ExportUri</returns>
         
-        
         ApiResponse<ExportUri> GetOutboundDnclistExportWithHttpInfo (string dncListId, string download = null);
 
         /// <summary>
@@ -1704,7 +1590,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ImportStatus</returns>
         
-        
         ImportStatus GetOutboundDnclistImportstatus (string dncListId);
 
         /// <summary>
@@ -1716,7 +1601,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
-        
         
         ApiResponse<ImportStatus> GetOutboundDnclistImportstatusWithHttpInfo (string dncListId);
 
@@ -1740,7 +1624,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>DncListEntityListing</returns>
         
-        
         DncListEntityListing GetOutboundDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1763,7 +1646,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of DncListEntityListing</returns>
         
-        
         ApiResponse<DncListEntityListing> GetOutboundDnclistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1778,7 +1660,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>DncListDivisionView</returns>
         
-        
         DncListDivisionView GetOutboundDnclistsDivisionview (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
@@ -1792,7 +1673,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of DncListDivisionView</returns>
-        
         
         ApiResponse<DncListDivisionView> GetOutboundDnclistsDivisionviewWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
 
@@ -1815,7 +1695,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>DncListDivisionViewListing</returns>
         
-        
         DncListDivisionViewListing GetOutboundDnclistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1837,7 +1716,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of DncListDivisionViewListing</returns>
         
-        
         ApiResponse<DncListDivisionViewListing> GetOutboundDnclistsDivisionviewsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1850,7 +1728,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="eventId">Event Log ID</param>
         /// <returns>EventLog</returns>
         
-        
         EventLog GetOutboundEvent (string eventId);
 
         /// <summary>
@@ -1862,7 +1739,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event Log ID</param>
         /// <returns>ApiResponse of EventLog</returns>
-        
         
         ApiResponse<EventLog> GetOutboundEventWithHttpInfo (string eventId);
 
@@ -1882,7 +1758,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>DialerEventEntityListing</returns>
         
-        
         DialerEventEntityListing GetOutboundEvents (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1901,7 +1776,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of DialerEventEntityListing</returns>
         
-        
         ApiResponse<DialerEventEntityListing> GetOutboundEventsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1913,7 +1787,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>MessagingCampaign</returns>
-        
         
         MessagingCampaign GetOutboundMessagingcampaign (string messagingCampaignId);
 
@@ -1927,7 +1800,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaign</returns>
         
-        
         ApiResponse<MessagingCampaign> GetOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -1939,7 +1811,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>MessagingCampaignDiagnostics</returns>
-        
         
         MessagingCampaignDiagnostics GetOutboundMessagingcampaignDiagnostics (string messagingCampaignId);
 
@@ -1953,7 +1824,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaignDiagnostics</returns>
         
-        
         ApiResponse<MessagingCampaignDiagnostics> GetOutboundMessagingcampaignDiagnosticsWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -1966,7 +1836,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>CampaignProgress</returns>
         
-        
         CampaignProgress GetOutboundMessagingcampaignProgress (string messagingCampaignId);
 
         /// <summary>
@@ -1978,7 +1847,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of CampaignProgress</returns>
-        
         
         ApiResponse<CampaignProgress> GetOutboundMessagingcampaignProgressWithHttpInfo (string messagingCampaignId);
 
@@ -2001,7 +1869,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <returns>MessagingCampaignEntityListing</returns>
         
-        
         MessagingCampaignEntityListing GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null);
 
         /// <summary>
@@ -2023,7 +1890,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <returns>ApiResponse of MessagingCampaignEntityListing</returns>
         
-        
         ApiResponse<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null);
 
         /// <summary>
@@ -2036,7 +1902,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>MessagingCampaignDivisionView</returns>
         
-        
         MessagingCampaignDivisionView GetOutboundMessagingcampaignsDivisionview (string messagingCampaignId);
 
         /// <summary>
@@ -2048,7 +1913,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaignDivisionView</returns>
-        
         
         ApiResponse<MessagingCampaignDivisionView> GetOutboundMessagingcampaignsDivisionviewWithHttpInfo (string messagingCampaignId);
 
@@ -2068,7 +1932,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>MessagingCampaignDivisionViewEntityListing</returns>
         
-        
         MessagingCampaignDivisionViewEntityListing GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null);
 
         /// <summary>
@@ -2087,7 +1950,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>ApiResponse of MessagingCampaignDivisionViewEntityListing</returns>
         
-        
         ApiResponse<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null);
 
         /// <summary>
@@ -2100,7 +1962,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>RuleSet</returns>
         
-        
         RuleSet GetOutboundRuleset (string ruleSetId);
 
         /// <summary>
@@ -2112,7 +1973,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        
         
         ApiResponse<RuleSet> GetOutboundRulesetWithHttpInfo (string ruleSetId);
 
@@ -2132,7 +1992,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>RuleSetEntityListing</returns>
         
-        
         RuleSetEntityListing GetOutboundRulesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -2151,7 +2010,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of RuleSetEntityListing</returns>
         
-        
         ApiResponse<RuleSetEntityListing> GetOutboundRulesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -2163,7 +2021,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignSchedule</returns>
-        
         
         CampaignSchedule GetOutboundSchedulesCampaign (string campaignId);
 
@@ -2177,7 +2034,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
         
-        
         ApiResponse<CampaignSchedule> GetOutboundSchedulesCampaignWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -2189,7 +2045,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;CampaignSchedule&gt;</returns>
         
-        
         List<CampaignSchedule> GetOutboundSchedulesCampaigns ();
 
         /// <summary>
@@ -2200,7 +2055,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;CampaignSchedule&gt;</returns>
-        
         
         ApiResponse<List<CampaignSchedule>> GetOutboundSchedulesCampaignsWithHttpInfo ();
 
@@ -2214,7 +2068,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>EmailCampaignSchedule</returns>
         
-        
         EmailCampaignSchedule GetOutboundSchedulesEmailcampaign (string emailCampaignId);
 
         /// <summary>
@@ -2227,7 +2080,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>ApiResponse of EmailCampaignSchedule</returns>
         
-        
         ApiResponse<EmailCampaignSchedule> GetOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId);
 
         /// <summary>
@@ -2239,7 +2091,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>MessagingCampaignScheduleEntityListing</returns>
         
-        
         MessagingCampaignScheduleEntityListing GetOutboundSchedulesEmailcampaigns ();
 
         /// <summary>
@@ -2250,7 +2101,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
-        
         
         ApiResponse<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsWithHttpInfo ();
 
@@ -2264,7 +2114,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>MessagingCampaignSchedule</returns>
         
-        
         MessagingCampaignSchedule GetOutboundSchedulesMessagingcampaign (string messagingCampaignId);
 
         /// <summary>
@@ -2277,7 +2126,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaignSchedule</returns>
         
-        
         ApiResponse<MessagingCampaignSchedule> GetOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -2289,7 +2137,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>MessagingCampaignScheduleEntityListing</returns>
         
-        
         MessagingCampaignScheduleEntityListing GetOutboundSchedulesMessagingcampaigns ();
 
         /// <summary>
@@ -2300,7 +2147,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
-        
         
         ApiResponse<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesMessagingcampaignsWithHttpInfo ();
 
@@ -2314,7 +2160,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>SequenceSchedule</returns>
         
-        
         SequenceSchedule GetOutboundSchedulesSequence (string sequenceId);
 
         /// <summary>
@@ -2327,7 +2172,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
         
-        
         ApiResponse<SequenceSchedule> GetOutboundSchedulesSequenceWithHttpInfo (string sequenceId);
 
         /// <summary>
@@ -2339,7 +2183,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;SequenceSchedule&gt;</returns>
         
-        
         List<SequenceSchedule> GetOutboundSchedulesSequences ();
 
         /// <summary>
@@ -2350,7 +2193,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;SequenceSchedule&gt;</returns>
-        
         
         ApiResponse<List<SequenceSchedule>> GetOutboundSchedulesSequencesWithHttpInfo ();
 
@@ -2364,7 +2206,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>CampaignSequence</returns>
         
-        
         CampaignSequence GetOutboundSequence (string sequenceId);
 
         /// <summary>
@@ -2376,7 +2217,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        
         
         ApiResponse<CampaignSequence> GetOutboundSequenceWithHttpInfo (string sequenceId);
 
@@ -2396,7 +2236,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignSequenceEntityListing</returns>
         
-        
         CampaignSequenceEntityListing GetOutboundSequences (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -2415,7 +2254,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignSequenceEntityListing</returns>
         
-        
         ApiResponse<CampaignSequenceEntityListing> GetOutboundSequencesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -2426,7 +2264,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OutboundSettings</returns>
-        
         
         OutboundSettings GetOutboundSettings ();
 
@@ -2439,7 +2276,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OutboundSettings</returns>
         
-        
         ApiResponse<OutboundSettings> GetOutboundSettingsWithHttpInfo ();
 
         /// <summary>
@@ -2451,7 +2287,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WrapUpCodeMapping</returns>
         
-        
         WrapUpCodeMapping GetOutboundWrapupcodemappings ();
 
         /// <summary>
@@ -2462,7 +2297,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
-        
         
         ApiResponse<WrapUpCodeMapping> GetOutboundWrapupcodemappingsWithHttpInfo ();
 
@@ -2477,7 +2311,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC Custom exclusion column entries</param>
         /// <returns></returns>
         
-        
         void PatchOutboundDnclistCustomexclusioncolumns (string dncListId, DncPatchCustomExclusionColumnsRequest body);
 
         /// <summary>
@@ -2490,7 +2323,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Custom exclusion column entries</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> PatchOutboundDnclistCustomexclusioncolumnsWithHttpInfo (string dncListId, DncPatchCustomExclusionColumnsRequest body);
 
@@ -2505,7 +2337,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC Emails</param>
         /// <returns></returns>
         
-        
         void PatchOutboundDnclistEmailaddresses (string dncListId, DncPatchEmailsRequest body);
 
         /// <summary>
@@ -2518,7 +2349,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Emails</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> PatchOutboundDnclistEmailaddressesWithHttpInfo (string dncListId, DncPatchEmailsRequest body);
 
@@ -2533,7 +2363,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns></returns>
         
-        
         void PatchOutboundDnclistPhonenumbers (string dncListId, DncPatchPhoneNumbersRequest body);
 
         /// <summary>
@@ -2547,7 +2376,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> PatchOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, DncPatchPhoneNumbersRequest body);
 
         /// <summary>
@@ -2559,7 +2387,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
         /// <returns></returns>
-        
         
         void PatchOutboundSettings (OutboundSettings body);
 
@@ -2573,7 +2400,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">outboundSettings</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> PatchOutboundSettingsWithHttpInfo (OutboundSettings body);
 
         /// <summary>
@@ -2586,7 +2412,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AttemptLimits</param>
         /// <returns>AttemptLimits</returns>
         
-        
         AttemptLimits PostOutboundAttemptlimits (AttemptLimits body);
 
         /// <summary>
@@ -2598,7 +2423,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AttemptLimits</param>
         /// <returns>ApiResponse of AttemptLimits</returns>
-        
         
         ApiResponse<AttemptLimits> PostOutboundAttemptlimitsWithHttpInfo (AttemptLimits body);
 
@@ -2617,7 +2441,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>AuditSearchResult</returns>
         
-        
         AuditSearchResult PostOutboundAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
@@ -2635,7 +2458,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>ApiResponse of AuditSearchResult</returns>
         
-        
         ApiResponse<AuditSearchResult> PostOutboundAuditsWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
@@ -2647,7 +2469,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
-        
         
         CallableTimeSet PostOutboundCallabletimesets (CallableTimeSet body);
 
@@ -2661,7 +2482,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
         
-        
         ApiResponse<CallableTimeSet> PostOutboundCallabletimesetsWithHttpInfo (CallableTimeSet body);
 
         /// <summary>
@@ -2673,7 +2493,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
-        
         
         ResponseSet PostOutboundCallanalysisresponsesets (ResponseSet body);
 
@@ -2687,7 +2506,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
         
-        
         ApiResponse<ResponseSet> PostOutboundCallanalysisresponsesetsWithHttpInfo (ResponseSet body);
 
         /// <summary>
@@ -2700,7 +2518,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Object</returns>
         
-        
         Object PostOutboundCampaignAgentownedmappingpreview (string campaignId);
 
         /// <summary>
@@ -2712,7 +2529,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Object</returns>
-        
         
         ApiResponse<Object> PostOutboundCampaignAgentownedmappingpreviewWithHttpInfo (string campaignId);
 
@@ -2727,7 +2543,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ContactCallbackRequest</returns>
         [Obsolete]
-        
         ContactCallbackRequest PostOutboundCampaignCallbackSchedule (string campaignId, ContactCallbackRequest body);
 
         /// <summary>
@@ -2741,7 +2556,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ApiResponse of ContactCallbackRequest</returns>
         [Obsolete]
-        
         ApiResponse<ContactCallbackRequest> PostOutboundCampaignCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body);
 
         /// <summary>
@@ -2753,7 +2567,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CampaignRule</param>
         /// <returns>CampaignRule</returns>
-        
         
         CampaignRule PostOutboundCampaignrules (CampaignRule body);
 
@@ -2767,7 +2580,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CampaignRule</param>
         /// <returns>ApiResponse of CampaignRule</returns>
         
-        
         ApiResponse<CampaignRule> PostOutboundCampaignrulesWithHttpInfo (CampaignRule body);
 
         /// <summary>
@@ -2779,7 +2591,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
-        
         
         Campaign PostOutboundCampaigns (Campaign body);
 
@@ -2793,7 +2604,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
         
-        
         ApiResponse<Campaign> PostOutboundCampaignsWithHttpInfo (Campaign body);
 
         /// <summary>
@@ -2805,7 +2615,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign IDs</param>
         /// <returns>List&lt;CampaignProgress&gt;</returns>
-        
         
         List<CampaignProgress> PostOutboundCampaignsProgress (List<string> body);
 
@@ -2819,7 +2628,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Campaign IDs</param>
         /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
         
-        
         ApiResponse<List<CampaignProgress>> PostOutboundCampaignsProgressWithHttpInfo (List<string> body);
 
         /// <summary>
@@ -2832,7 +2640,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <returns></returns>
         
-        
         void PostOutboundContactlistClear (string contactListId);
 
         /// <summary>
@@ -2844,7 +2651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> PostOutboundContactlistClearWithHttpInfo (string contactListId);
 
@@ -2862,7 +2668,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
         
-        
         List<DialerContact> PostOutboundContactlistContacts (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
 
         /// <summary>
@@ -2879,7 +2684,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
         
-        
         ApiResponse<List<DialerContact>> PostOutboundContactlistContactsWithHttpInfo (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
 
         /// <summary>
@@ -2892,7 +2696,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">ContactIds to get.</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
-        
         
         List<DialerContact> PostOutboundContactlistContactsBulk (string contactListId, List<string> body);
 
@@ -2907,7 +2710,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactIds to get.</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
         
-        
         ApiResponse<List<DialerContact>> PostOutboundContactlistContactsBulkWithHttpInfo (string contactListId, List<string> body);
 
         /// <summary>
@@ -2919,7 +2721,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>DomainEntityRef</returns>
-        
         
         DomainEntityRef PostOutboundContactlistExport (string contactListId);
 
@@ -2933,7 +2734,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of DomainEntityRef</returns>
         
-        
         ApiResponse<DomainEntityRef> PostOutboundContactlistExportWithHttpInfo (string contactListId);
 
         /// <summary>
@@ -2945,7 +2745,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>ContactListFilter</returns>
-        
         
         ContactListFilter PostOutboundContactlistfilters (ContactListFilter body);
 
@@ -2959,7 +2758,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactListFilter</param>
         /// <returns>ApiResponse of ContactListFilter</returns>
         
-        
         ApiResponse<ContactListFilter> PostOutboundContactlistfiltersWithHttpInfo (ContactListFilter body);
 
         /// <summary>
@@ -2971,7 +2769,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>FilterPreviewResponse</returns>
-        
         
         FilterPreviewResponse PostOutboundContactlistfiltersPreview (ContactListFilter body);
 
@@ -2985,7 +2782,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactListFilter</param>
         /// <returns>ApiResponse of FilterPreviewResponse</returns>
         
-        
         ApiResponse<FilterPreviewResponse> PostOutboundContactlistfiltersPreviewWithHttpInfo (ContactListFilter body);
 
         /// <summary>
@@ -2997,7 +2793,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
-        
         
         ContactList PostOutboundContactlists (ContactList body);
 
@@ -3011,7 +2806,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
         
-        
         ApiResponse<ContactList> PostOutboundContactlistsWithHttpInfo (ContactList body);
 
         /// <summary>
@@ -3023,7 +2817,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns></returns>
-        
         
         void PostOutboundConversationDnc (string conversationId);
 
@@ -3037,7 +2830,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> PostOutboundConversationDncWithHttpInfo (string conversationId);
 
         /// <summary>
@@ -3050,7 +2842,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Digital Rule Set</param>
         /// <returns>DigitalRuleSet</returns>
         
-        
         DigitalRuleSet PostOutboundDigitalrulesets (DigitalRuleSet body);
 
         /// <summary>
@@ -3062,7 +2853,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>ApiResponse of DigitalRuleSet</returns>
-        
         
         ApiResponse<DigitalRuleSet> PostOutboundDigitalrulesetsWithHttpInfo (DigitalRuleSet body);
 
@@ -3077,7 +2867,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC email addresses</param>
         /// <returns></returns>
         
-        
         void PostOutboundDnclistEmailaddresses (string dncListId, List<string> body);
 
         /// <summary>
@@ -3091,7 +2880,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC email addresses</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> PostOutboundDnclistEmailaddressesWithHttpInfo (string dncListId, List<string> body);
 
         /// <summary>
@@ -3104,7 +2892,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <returns>DomainEntityRef</returns>
         
-        
         DomainEntityRef PostOutboundDnclistExport (string dncListId);
 
         /// <summary>
@@ -3116,7 +2903,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of DomainEntityRef</returns>
-        
         
         ApiResponse<DomainEntityRef> PostOutboundDnclistExportWithHttpInfo (string dncListId);
 
@@ -3132,7 +2918,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns></returns>
         
-        
         void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body, string expirationDateTime = null);
 
         /// <summary>
@@ -3147,7 +2932,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> PostOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, List<string> body, string expirationDateTime = null);
 
         /// <summary>
@@ -3159,7 +2943,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        
         
         DncList PostOutboundDnclists (DncListCreate body);
 
@@ -3173,7 +2956,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
         
-        
         ApiResponse<DncList> PostOutboundDnclistsWithHttpInfo (DncListCreate body);
 
         /// <summary>
@@ -3185,7 +2967,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign</param>
         /// <returns>MessagingCampaign</returns>
-        
         
         MessagingCampaign PostOutboundMessagingcampaigns (MessagingCampaign body);
 
@@ -3199,7 +2980,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Messaging Campaign</param>
         /// <returns>ApiResponse of MessagingCampaign</returns>
         
-        
         ApiResponse<MessagingCampaign> PostOutboundMessagingcampaignsWithHttpInfo (MessagingCampaign body);
 
         /// <summary>
@@ -3211,7 +2991,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign IDs</param>
         /// <returns>List&lt;CampaignProgress&gt;</returns>
-        
         
         List<CampaignProgress> PostOutboundMessagingcampaignsProgress (List<string> body);
 
@@ -3225,7 +3004,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Messaging Campaign IDs</param>
         /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
         
-        
         ApiResponse<List<CampaignProgress>> PostOutboundMessagingcampaignsProgressWithHttpInfo (List<string> body);
 
         /// <summary>
@@ -3237,7 +3015,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        
         
         RuleSet PostOutboundRulesets (RuleSet body);
 
@@ -3251,7 +3028,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
         
-        
         ApiResponse<RuleSet> PostOutboundRulesetsWithHttpInfo (RuleSet body);
 
         /// <summary>
@@ -3264,7 +3040,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
         
-        
         CampaignSequence PostOutboundSequences (CampaignSequence body);
 
         /// <summary>
@@ -3276,7 +3051,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        
         
         ApiResponse<CampaignSequence> PostOutboundSequencesWithHttpInfo (CampaignSequence body);
 
@@ -3291,7 +3065,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AttemptLimits</param>
         /// <returns>AttemptLimits</returns>
         
-        
         AttemptLimits PutOutboundAttemptlimit (string attemptLimitsId, AttemptLimits body);
 
         /// <summary>
@@ -3304,7 +3077,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <param name="body">AttemptLimits</param>
         /// <returns>ApiResponse of AttemptLimits</returns>
-        
         
         ApiResponse<AttemptLimits> PutOutboundAttemptlimitWithHttpInfo (string attemptLimitsId, AttemptLimits body);
 
@@ -3319,7 +3091,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
         
-        
         CallableTimeSet PutOutboundCallabletimeset (string callableTimeSetId, CallableTimeSet body);
 
         /// <summary>
@@ -3332,7 +3103,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        
         
         ApiResponse<CallableTimeSet> PutOutboundCallabletimesetWithHttpInfo (string callableTimeSetId, CallableTimeSet body);
 
@@ -3347,7 +3117,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
         
-        
         ResponseSet PutOutboundCallanalysisresponseset (string callAnalysisSetId, ResponseSet body);
 
         /// <summary>
@@ -3360,7 +3129,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        
         
         ApiResponse<ResponseSet> PutOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId, ResponseSet body);
 
@@ -3375,7 +3143,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
         
-        
         Campaign PutOutboundCampaign (string campaignId, Campaign body);
 
         /// <summary>
@@ -3388,7 +3155,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
-        
         
         ApiResponse<Campaign> PutOutboundCampaignWithHttpInfo (string campaignId, Campaign body);
 
@@ -3404,7 +3170,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">agent</param>
         /// <returns>string</returns>
         
-        
         string PutOutboundCampaignAgent (string campaignId, string userId, Agent body);
 
         /// <summary>
@@ -3419,7 +3184,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">agent</param>
         /// <returns>ApiResponse of string</returns>
         
-        
         ApiResponse<string> PutOutboundCampaignAgentWithHttpInfo (string campaignId, string userId, Agent body);
 
         /// <summary>
@@ -3432,7 +3196,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <param name="body">CampaignRule</param>
         /// <returns>CampaignRule</returns>
-        
         
         CampaignRule PutOutboundCampaignrule (string campaignRuleId, CampaignRule body);
 
@@ -3447,7 +3210,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CampaignRule</param>
         /// <returns>ApiResponse of CampaignRule</returns>
         
-        
         ApiResponse<CampaignRule> PutOutboundCampaignruleWithHttpInfo (string campaignRuleId, CampaignRule body);
 
         /// <summary>
@@ -3461,7 +3223,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
         
-        
         ContactList PutOutboundContactlist (string contactListId, ContactList body);
 
         /// <summary>
@@ -3474,7 +3235,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
-        
         
         ApiResponse<ContactList> PutOutboundContactlistWithHttpInfo (string contactListId, ContactList body);
 
@@ -3490,7 +3250,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <returns>DialerContact</returns>
         
-        
         DialerContact PutOutboundContactlistContact (string contactListId, string contactId, DialerContact body);
 
         /// <summary>
@@ -3505,7 +3264,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <returns>ApiResponse of DialerContact</returns>
         
-        
         ApiResponse<DialerContact> PutOutboundContactlistContactWithHttpInfo (string contactListId, string contactId, DialerContact body);
 
         /// <summary>
@@ -3518,7 +3276,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <param name="body">ContactListFilter</param>
         /// <returns>ContactListFilter</returns>
-        
         
         ContactListFilter PutOutboundContactlistfilter (string contactListFilterId, ContactListFilter body);
 
@@ -3533,7 +3290,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactListFilter</param>
         /// <returns>ApiResponse of ContactListFilter</returns>
         
-        
         ApiResponse<ContactListFilter> PutOutboundContactlistfilterWithHttpInfo (string contactListFilterId, ContactListFilter body);
 
         /// <summary>
@@ -3546,7 +3302,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>DigitalRuleSet</returns>
-        
         
         DigitalRuleSet PutOutboundDigitalruleset (string digitalRuleSetId, DigitalRuleSet body);
 
@@ -3561,7 +3316,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Digital Rule Set</param>
         /// <returns>ApiResponse of DigitalRuleSet</returns>
         
-        
         ApiResponse<DigitalRuleSet> PutOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId, DigitalRuleSet body);
 
         /// <summary>
@@ -3574,7 +3328,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        
         
         DncList PutOutboundDnclist (string dncListId, DncList body);
 
@@ -3589,7 +3342,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
         
-        
         ApiResponse<DncList> PutOutboundDnclistWithHttpInfo (string dncListId, DncList body);
 
         /// <summary>
@@ -3602,7 +3354,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaign</param>
         /// <returns>MessagingCampaign</returns>
-        
         
         MessagingCampaign PutOutboundMessagingcampaign (string messagingCampaignId, MessagingCampaign body);
 
@@ -3617,7 +3368,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">MessagingCampaign</param>
         /// <returns>ApiResponse of MessagingCampaign</returns>
         
-        
         ApiResponse<MessagingCampaign> PutOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId, MessagingCampaign body);
 
         /// <summary>
@@ -3630,7 +3380,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        
         
         RuleSet PutOutboundRuleset (string ruleSetId, RuleSet body);
 
@@ -3645,7 +3394,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
         
-        
         ApiResponse<RuleSet> PutOutboundRulesetWithHttpInfo (string ruleSetId, RuleSet body);
 
         /// <summary>
@@ -3658,7 +3406,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>CampaignSchedule</returns>
-        
         
         CampaignSchedule PutOutboundSchedulesCampaign (string campaignId, CampaignSchedule body);
 
@@ -3673,7 +3420,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CampaignSchedule</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
         
-        
         ApiResponse<CampaignSchedule> PutOutboundSchedulesCampaignWithHttpInfo (string campaignId, CampaignSchedule body);
 
         /// <summary>
@@ -3686,7 +3432,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <param name="body">EmailCampaignSchedule</param>
         /// <returns>EmailCampaignSchedule</returns>
-        
         
         EmailCampaignSchedule PutOutboundSchedulesEmailcampaign (string emailCampaignId, EmailCampaignSchedule body);
 
@@ -3701,7 +3446,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EmailCampaignSchedule</param>
         /// <returns>ApiResponse of EmailCampaignSchedule</returns>
         
-        
         ApiResponse<EmailCampaignSchedule> PutOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId, EmailCampaignSchedule body);
 
         /// <summary>
@@ -3714,7 +3458,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaignSchedule</param>
         /// <returns>MessagingCampaignSchedule</returns>
-        
         
         MessagingCampaignSchedule PutOutboundSchedulesMessagingcampaign (string messagingCampaignId, MessagingCampaignSchedule body);
 
@@ -3729,7 +3472,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">MessagingCampaignSchedule</param>
         /// <returns>ApiResponse of MessagingCampaignSchedule</returns>
         
-        
         ApiResponse<MessagingCampaignSchedule> PutOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId, MessagingCampaignSchedule body);
 
         /// <summary>
@@ -3742,7 +3484,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>SequenceSchedule</returns>
-        
         
         SequenceSchedule PutOutboundSchedulesSequence (string sequenceId, SequenceSchedule body);
 
@@ -3757,7 +3498,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SequenceSchedule</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
         
-        
         ApiResponse<SequenceSchedule> PutOutboundSchedulesSequenceWithHttpInfo (string sequenceId, SequenceSchedule body);
 
         /// <summary>
@@ -3770,7 +3510,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
-        
         
         CampaignSequence PutOutboundSequence (string sequenceId, CampaignSequence body);
 
@@ -3785,7 +3524,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
         
-        
         ApiResponse<CampaignSequence> PutOutboundSequenceWithHttpInfo (string sequenceId, CampaignSequence body);
 
         /// <summary>
@@ -3798,7 +3536,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>WrapUpCodeMapping</returns>
         
-        
         WrapUpCodeMapping PutOutboundWrapupcodemappings (WrapUpCodeMapping body);
 
         /// <summary>
@@ -3810,7 +3547,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
-        
         
         ApiResponse<WrapUpCodeMapping> PutOutboundWrapupcodemappingsWithHttpInfo (WrapUpCodeMapping body);
 
@@ -3828,7 +3564,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundAttemptlimitAsync (string attemptLimitsId);
 
         /// <summary>
@@ -3840,7 +3575,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId);
 
@@ -3854,7 +3588,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundCallabletimesetAsync (string callableTimeSetId);
 
         /// <summary>
@@ -3866,7 +3599,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId);
 
@@ -3880,7 +3612,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundCallanalysisresponsesetAsync (string callAnalysisSetId);
 
         /// <summary>
@@ -3892,7 +3623,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId);
 
@@ -3906,7 +3636,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of Campaign</returns>
         
-        
         System.Threading.Tasks.Task<Campaign> DeleteOutboundCampaignAsync (string campaignId);
 
         /// <summary>
@@ -3918,7 +3647,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Campaign>> DeleteOutboundCampaignAsyncWithHttpInfo (string campaignId);
 
@@ -3932,7 +3660,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundCampaignProgressAsync (string campaignId);
 
         /// <summary>
@@ -3944,7 +3671,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCampaignProgressAsyncWithHttpInfo (string campaignId);
 
@@ -3958,7 +3684,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundCampaignruleAsync (string campaignRuleId);
 
         /// <summary>
@@ -3970,7 +3695,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId);
 
@@ -3984,7 +3708,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundContactlistAsync (string contactListId);
 
         /// <summary>
@@ -3996,7 +3719,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistAsyncWithHttpInfo (string contactListId);
 
@@ -4011,7 +3733,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundContactlistContactAsync (string contactListId, string contactId);
 
         /// <summary>
@@ -4024,7 +3745,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
 
@@ -4039,7 +3759,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundContactlistContactsAsync (string contactListId, List<string> contactIds);
 
         /// <summary>
@@ -4053,7 +3772,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<string> contactIds);
 
         /// <summary>
@@ -4065,7 +3783,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundContactlistfilterAsync (string contactListFilterId);
 
@@ -4079,7 +3796,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId);
 
         /// <summary>
@@ -4091,7 +3807,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundContactlistsAsync (List<string> id);
 
@@ -4105,7 +3820,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistsAsyncWithHttpInfo (List<string> id);
 
         /// <summary>
@@ -4117,7 +3831,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundDigitalrulesetAsync (string digitalRuleSetId);
 
@@ -4131,7 +3844,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId);
 
         /// <summary>
@@ -4144,7 +3856,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundDnclistAsync (string dncListId);
 
         /// <summary>
@@ -4156,7 +3867,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistAsyncWithHttpInfo (string dncListId);
 
@@ -4171,7 +3881,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundDnclistCustomexclusioncolumnsAsync (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
@@ -4184,7 +3893,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
@@ -4199,7 +3907,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundDnclistEmailaddressesAsync (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
@@ -4212,7 +3919,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistEmailaddressesAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
@@ -4227,7 +3933,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteOutboundDnclistPhonenumbersAsync (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
@@ -4241,7 +3946,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
@@ -4253,7 +3957,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaign</returns>
-        
         
         System.Threading.Tasks.Task<MessagingCampaign> DeleteOutboundMessagingcampaignAsync (string messagingCampaignId);
 
@@ -4267,7 +3970,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> DeleteOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -4279,7 +3981,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundMessagingcampaignProgressAsync (string messagingCampaignId);
 
@@ -4293,7 +3994,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessagingcampaignProgressAsyncWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -4305,7 +4005,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundRulesetAsync (string ruleSetId);
 
@@ -4319,7 +4018,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundRulesetAsyncWithHttpInfo (string ruleSetId);
 
         /// <summary>
@@ -4331,7 +4029,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundSchedulesCampaignAsync (string campaignId);
 
@@ -4345,7 +4042,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -4357,7 +4053,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundSchedulesEmailcampaignAsync (string emailCampaignId);
 
@@ -4371,7 +4066,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId);
 
         /// <summary>
@@ -4383,7 +4077,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId);
 
@@ -4397,7 +4090,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -4409,7 +4101,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundSchedulesSequenceAsync (string sequenceId);
 
@@ -4423,7 +4114,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId);
 
         /// <summary>
@@ -4435,7 +4125,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task DeleteOutboundSequenceAsync (string sequenceId);
 
@@ -4449,7 +4138,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSequenceAsyncWithHttpInfo (string sequenceId);
 
         /// <summary>
@@ -4462,7 +4150,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>Task of AttemptLimits</returns>
         
-        
         System.Threading.Tasks.Task<AttemptLimits> GetOutboundAttemptlimitAsync (string attemptLimitsId);
 
         /// <summary>
@@ -4474,7 +4161,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>Task of ApiResponse (AttemptLimits)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> GetOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId);
 
@@ -4494,7 +4180,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of AttemptLimitsEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<AttemptLimitsEntityListing> GetOutboundAttemptlimitsAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4513,7 +4198,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (AttemptLimitsEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<AttemptLimitsEntityListing>> GetOutboundAttemptlimitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4526,7 +4210,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of CallableTimeSet</returns>
         
-        
         System.Threading.Tasks.Task<CallableTimeSet> GetOutboundCallabletimesetAsync (string callableTimeSetId);
 
         /// <summary>
@@ -4538,7 +4221,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> GetOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId);
 
@@ -4558,7 +4240,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CallableTimeSetEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<CallableTimeSetEntityListing> GetOutboundCallabletimesetsAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4577,7 +4258,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CallableTimeSetEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CallableTimeSetEntityListing>> GetOutboundCallabletimesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4590,7 +4270,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ResponseSet</returns>
         
-        
         System.Threading.Tasks.Task<ResponseSet> GetOutboundCallanalysisresponsesetAsync (string callAnalysisSetId);
 
         /// <summary>
@@ -4602,7 +4281,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId);
 
@@ -4622,7 +4300,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ResponseSetEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ResponseSetEntityListing> GetOutboundCallanalysisresponsesetsAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4641,7 +4318,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ResponseSetEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ResponseSetEntityListing>> GetOutboundCallanalysisresponsesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4653,7 +4329,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of Campaign</returns>
-        
         
         System.Threading.Tasks.Task<Campaign> GetOutboundCampaignAsync (string campaignId);
 
@@ -4667,7 +4342,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Campaign>> GetOutboundCampaignAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -4679,7 +4353,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of AgentOwnedMappingPreviewListing</returns>
-        
         
         System.Threading.Tasks.Task<AgentOwnedMappingPreviewListing> GetOutboundCampaignAgentownedmappingpreviewResultsAsync (string campaignId);
 
@@ -4693,7 +4366,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (AgentOwnedMappingPreviewListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<AgentOwnedMappingPreviewListing>> GetOutboundCampaignAgentownedmappingpreviewResultsAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -4705,7 +4377,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignDiagnostics</returns>
-        
         
         System.Threading.Tasks.Task<CampaignDiagnostics> GetOutboundCampaignDiagnosticsAsync (string campaignId);
 
@@ -4719,7 +4390,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignDiagnostics)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetOutboundCampaignDiagnosticsAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -4731,7 +4401,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignInteractions</returns>
-        
         
         System.Threading.Tasks.Task<CampaignInteractions> GetOutboundCampaignInteractionsAsync (string campaignId);
 
@@ -4745,7 +4414,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignInteractions)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignInteractions>> GetOutboundCampaignInteractionsAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -4757,7 +4425,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignProgress</returns>
-        
         
         System.Threading.Tasks.Task<CampaignProgress> GetOutboundCampaignProgressAsync (string campaignId);
 
@@ -4771,7 +4438,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignProgress)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetOutboundCampaignProgressAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -4783,7 +4449,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignStats</returns>
-        
         
         System.Threading.Tasks.Task<CampaignStats> GetOutboundCampaignStatsAsync (string campaignId);
 
@@ -4797,7 +4462,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignStats)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignStats>> GetOutboundCampaignStatsAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -4810,7 +4474,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>Task of CampaignRule</returns>
         
-        
         System.Threading.Tasks.Task<CampaignRule> GetOutboundCampaignruleAsync (string campaignRuleId);
 
         /// <summary>
@@ -4822,7 +4485,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>Task of ApiResponse (CampaignRule)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CampaignRule>> GetOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId);
 
@@ -4842,7 +4504,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignRuleEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<CampaignRuleEntityListing> GetOutboundCampaignrulesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4860,7 +4521,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignRuleEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CampaignRuleEntityListing>> GetOutboundCampaignrulesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
@@ -4886,7 +4546,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<CampaignEntityListing> GetOutboundCampaignsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4911,7 +4570,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -4929,7 +4587,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type(s) (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CommonCampaignEntityListing</returns>
-        
         
         System.Threading.Tasks.Task<CommonCampaignEntityListing> GetOutboundCampaignsAllAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null);
 
@@ -4949,7 +4606,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CommonCampaignEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CommonCampaignEntityListing>> GetOutboundCampaignsAllAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null);
 
         /// <summary>
@@ -4967,7 +4623,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type(s) (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CommonCampaignDivisionViewEntityListing</returns>
-        
         
         System.Threading.Tasks.Task<CommonCampaignDivisionViewEntityListing> GetOutboundCampaignsAllDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null);
 
@@ -4987,7 +4642,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CommonCampaignDivisionViewEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CommonCampaignDivisionViewEntityListing>> GetOutboundCampaignsAllDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null);
 
         /// <summary>
@@ -5000,7 +4654,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignDivisionView</returns>
         
-        
         System.Threading.Tasks.Task<CampaignDivisionView> GetOutboundCampaignsDivisionviewAsync (string campaignId);
 
         /// <summary>
@@ -5012,7 +4665,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignDivisionView)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CampaignDivisionView>> GetOutboundCampaignsDivisionviewAsyncWithHttpInfo (string campaignId);
 
@@ -5032,7 +4684,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignDivisionViewListing</returns>
         
-        
         System.Threading.Tasks.Task<CampaignDivisionViewListing> GetOutboundCampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5051,7 +4702,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignDivisionViewListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignDivisionViewListing>> GetOutboundCampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5065,7 +4715,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ContactList</returns>
-        
         
         System.Threading.Tasks.Task<ContactList> GetOutboundContactlistAsync (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
@@ -5081,7 +4730,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ContactList>> GetOutboundContactlistAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
@@ -5094,7 +4742,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of DialerContact</returns>
-        
         
         System.Threading.Tasks.Task<DialerContact> GetOutboundContactlistContactAsync (string contactListId, string contactId);
 
@@ -5109,7 +4756,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DialerContact>> GetOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
 
         /// <summary>
@@ -5122,7 +4768,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>Task of ExportUri</returns>
-        
         
         System.Threading.Tasks.Task<ExportUri> GetOutboundContactlistExportAsync (string contactListId, string download = null);
 
@@ -5137,7 +4782,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>Task of ApiResponse (ExportUri)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ExportUri>> GetOutboundContactlistExportAsyncWithHttpInfo (string contactListId, string download = null);
 
         /// <summary>
@@ -5149,7 +4793,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ImportStatus</returns>
-        
         
         System.Threading.Tasks.Task<ImportStatus> GetOutboundContactlistImportstatusAsync (string contactListId);
 
@@ -5163,7 +4806,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetOutboundContactlistImportstatusAsyncWithHttpInfo (string contactListId);
 
         /// <summary>
@@ -5175,7 +4817,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of TimeZoneMappingPreview</returns>
-        
         
         System.Threading.Tasks.Task<TimeZoneMappingPreview> GetOutboundContactlistTimezonemappingpreviewAsync (string contactListId);
 
@@ -5189,7 +4830,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (TimeZoneMappingPreview)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<TimeZoneMappingPreview>> GetOutboundContactlistTimezonemappingpreviewAsyncWithHttpInfo (string contactListId);
 
         /// <summary>
@@ -5202,7 +4842,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>Task of ContactListFilter</returns>
         
-        
         System.Threading.Tasks.Task<ContactListFilter> GetOutboundContactlistfilterAsync (string contactListFilterId);
 
         /// <summary>
@@ -5214,7 +4853,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>Task of ApiResponse (ContactListFilter)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> GetOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId);
 
@@ -5235,7 +4873,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <returns>Task of ContactListFilterEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ContactListFilterEntityListing> GetOutboundContactlistfiltersAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null);
 
         /// <summary>
@@ -5254,7 +4891,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <returns>Task of ApiResponse (ContactListFilterEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ContactListFilterEntityListing>> GetOutboundContactlistfiltersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null);
 
@@ -5278,7 +4914,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5301,7 +4936,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5316,7 +4950,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ContactListDivisionView</returns>
         
-        
         System.Threading.Tasks.Task<ContactListDivisionView> GetOutboundContactlistsDivisionviewAsync (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
@@ -5330,7 +4963,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ContactListDivisionView)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ContactListDivisionView>> GetOutboundContactlistsDivisionviewAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
@@ -5352,7 +4984,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListDivisionViewListing</returns>
         
-        
         System.Threading.Tasks.Task<ContactListDivisionViewListing> GetOutboundContactlistsDivisionviewsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5373,7 +5004,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListDivisionViewListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ContactListDivisionViewListing>> GetOutboundContactlistsDivisionviewsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5386,7 +5016,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>Task of DigitalRuleSet</returns>
         
-        
         System.Threading.Tasks.Task<DigitalRuleSet> GetOutboundDigitalrulesetAsync (string digitalRuleSetId);
 
         /// <summary>
@@ -5398,7 +5027,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> GetOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId);
 
@@ -5417,7 +5045,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
         /// <returns>Task of DigitalRuleSetEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<DigitalRuleSetEntityListing> GetOutboundDigitalrulesetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -5435,7 +5062,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
         /// <returns>Task of ApiResponse (DigitalRuleSetEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DigitalRuleSetEntityListing>> GetOutboundDigitalrulesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
@@ -5449,7 +5075,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of DncList</returns>
-        
         
         System.Threading.Tasks.Task<DncList> GetOutboundDnclistAsync (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
 
@@ -5465,7 +5090,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DncList>> GetOutboundDnclistAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
@@ -5478,7 +5102,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>Task of ExportUri</returns>
-        
         
         System.Threading.Tasks.Task<ExportUri> GetOutboundDnclistExportAsync (string dncListId, string download = null);
 
@@ -5493,7 +5116,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>Task of ApiResponse (ExportUri)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ExportUri>> GetOutboundDnclistExportAsyncWithHttpInfo (string dncListId, string download = null);
 
         /// <summary>
@@ -5506,7 +5128,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ImportStatus</returns>
         
-        
         System.Threading.Tasks.Task<ImportStatus> GetOutboundDnclistImportstatusAsync (string dncListId);
 
         /// <summary>
@@ -5518,7 +5139,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetOutboundDnclistImportstatusAsyncWithHttpInfo (string dncListId);
 
@@ -5542,7 +5162,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of DncListEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<DncListEntityListing> GetOutboundDnclistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5565,7 +5184,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (DncListEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DncListEntityListing>> GetOutboundDnclistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5580,7 +5198,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of DncListDivisionView</returns>
         
-        
         System.Threading.Tasks.Task<DncListDivisionView> GetOutboundDnclistsDivisionviewAsync (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
@@ -5594,7 +5211,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (DncListDivisionView)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<DncListDivisionView>> GetOutboundDnclistsDivisionviewAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
 
@@ -5617,7 +5233,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of DncListDivisionViewListing</returns>
         
-        
         System.Threading.Tasks.Task<DncListDivisionViewListing> GetOutboundDnclistsDivisionviewsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5639,7 +5254,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (DncListDivisionViewListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DncListDivisionViewListing>> GetOutboundDnclistsDivisionviewsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5652,7 +5266,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="eventId">Event Log ID</param>
         /// <returns>Task of EventLog</returns>
         
-        
         System.Threading.Tasks.Task<EventLog> GetOutboundEventAsync (string eventId);
 
         /// <summary>
@@ -5664,7 +5277,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event Log ID</param>
         /// <returns>Task of ApiResponse (EventLog)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<EventLog>> GetOutboundEventAsyncWithHttpInfo (string eventId);
 
@@ -5684,7 +5296,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of DialerEventEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<DialerEventEntityListing> GetOutboundEventsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5703,7 +5314,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (DialerEventEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DialerEventEntityListing>> GetOutboundEventsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5715,7 +5325,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaign</returns>
-        
         
         System.Threading.Tasks.Task<MessagingCampaign> GetOutboundMessagingcampaignAsync (string messagingCampaignId);
 
@@ -5729,7 +5338,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> GetOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -5741,7 +5349,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaignDiagnostics</returns>
-        
         
         System.Threading.Tasks.Task<MessagingCampaignDiagnostics> GetOutboundMessagingcampaignDiagnosticsAsync (string messagingCampaignId);
 
@@ -5755,7 +5362,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaignDiagnostics)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDiagnostics>> GetOutboundMessagingcampaignDiagnosticsAsyncWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -5768,7 +5374,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of CampaignProgress</returns>
         
-        
         System.Threading.Tasks.Task<CampaignProgress> GetOutboundMessagingcampaignProgressAsync (string messagingCampaignId);
 
         /// <summary>
@@ -5780,7 +5385,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignProgress)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetOutboundMessagingcampaignProgressAsyncWithHttpInfo (string messagingCampaignId);
 
@@ -5803,7 +5407,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <returns>Task of MessagingCampaignEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null);
 
         /// <summary>
@@ -5825,7 +5428,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <returns>Task of ApiResponse (MessagingCampaignEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignEntityListing>> GetOutboundMessagingcampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null);
 
         /// <summary>
@@ -5838,7 +5440,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaignDivisionView</returns>
         
-        
         System.Threading.Tasks.Task<MessagingCampaignDivisionView> GetOutboundMessagingcampaignsDivisionviewAsync (string messagingCampaignId);
 
         /// <summary>
@@ -5850,7 +5451,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaignDivisionView)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionView>> GetOutboundMessagingcampaignsDivisionviewAsyncWithHttpInfo (string messagingCampaignId);
 
@@ -5870,7 +5470,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>Task of MessagingCampaignDivisionViewEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null);
 
         /// <summary>
@@ -5889,7 +5488,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>Task of ApiResponse (MessagingCampaignDivisionViewEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionViewEntityListing>> GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null);
 
         /// <summary>
@@ -5902,7 +5500,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of RuleSet</returns>
         
-        
         System.Threading.Tasks.Task<RuleSet> GetOutboundRulesetAsync (string ruleSetId);
 
         /// <summary>
@@ -5914,7 +5511,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<RuleSet>> GetOutboundRulesetAsyncWithHttpInfo (string ruleSetId);
 
@@ -5934,7 +5530,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of RuleSetEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<RuleSetEntityListing> GetOutboundRulesetsAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5953,7 +5548,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (RuleSetEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<RuleSetEntityListing>> GetOutboundRulesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -5965,7 +5559,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignSchedule</returns>
-        
         
         System.Threading.Tasks.Task<CampaignSchedule> GetOutboundSchedulesCampaignAsync (string campaignId);
 
@@ -5979,7 +5572,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> GetOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
@@ -5991,7 +5583,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;CampaignSchedule&gt;</returns>
         
-        
         System.Threading.Tasks.Task<List<CampaignSchedule>> GetOutboundSchedulesCampaignsAsync ();
 
         /// <summary>
@@ -6002,7 +5593,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;CampaignSchedule&gt;)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<List<CampaignSchedule>>> GetOutboundSchedulesCampaignsAsyncWithHttpInfo ();
 
@@ -6016,7 +5606,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>Task of EmailCampaignSchedule</returns>
         
-        
         System.Threading.Tasks.Task<EmailCampaignSchedule> GetOutboundSchedulesEmailcampaignAsync (string emailCampaignId);
 
         /// <summary>
@@ -6029,7 +5618,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>Task of ApiResponse (EmailCampaignSchedule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<EmailCampaignSchedule>> GetOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId);
 
         /// <summary>
@@ -6041,7 +5629,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsAsync ();
 
         /// <summary>
@@ -6052,7 +5639,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo ();
 
@@ -6066,7 +5652,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaignSchedule</returns>
         
-        
         System.Threading.Tasks.Task<MessagingCampaignSchedule> GetOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId);
 
         /// <summary>
@@ -6079,7 +5664,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaignSchedule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignSchedule>> GetOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId);
 
         /// <summary>
@@ -6091,7 +5675,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesMessagingcampaignsAsync ();
 
         /// <summary>
@@ -6102,7 +5685,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesMessagingcampaignsAsyncWithHttpInfo ();
 
@@ -6116,7 +5698,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of SequenceSchedule</returns>
         
-        
         System.Threading.Tasks.Task<SequenceSchedule> GetOutboundSchedulesSequenceAsync (string sequenceId);
 
         /// <summary>
@@ -6129,7 +5710,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> GetOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId);
 
         /// <summary>
@@ -6141,7 +5721,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;SequenceSchedule&gt;</returns>
         
-        
         System.Threading.Tasks.Task<List<SequenceSchedule>> GetOutboundSchedulesSequencesAsync ();
 
         /// <summary>
@@ -6152,7 +5731,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;SequenceSchedule&gt;)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> GetOutboundSchedulesSequencesAsyncWithHttpInfo ();
 
@@ -6166,7 +5744,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of CampaignSequence</returns>
         
-        
         System.Threading.Tasks.Task<CampaignSequence> GetOutboundSequenceAsync (string sequenceId);
 
         /// <summary>
@@ -6178,7 +5755,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> GetOutboundSequenceAsyncWithHttpInfo (string sequenceId);
 
@@ -6198,7 +5774,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignSequenceEntityListing</returns>
         
-        
         System.Threading.Tasks.Task<CampaignSequenceEntityListing> GetOutboundSequencesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -6217,7 +5792,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignSequenceEntityListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignSequenceEntityListing>> GetOutboundSequencesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -6228,7 +5802,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OutboundSettings</returns>
-        
         
         System.Threading.Tasks.Task<OutboundSettings> GetOutboundSettingsAsync ();
 
@@ -6241,7 +5814,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OutboundSettings)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<OutboundSettings>> GetOutboundSettingsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -6253,7 +5825,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WrapUpCodeMapping</returns>
         
-        
         System.Threading.Tasks.Task<WrapUpCodeMapping> GetOutboundWrapupcodemappingsAsync ();
 
         /// <summary>
@@ -6264,7 +5835,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> GetOutboundWrapupcodemappingsAsyncWithHttpInfo ();
 
@@ -6279,7 +5849,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC Custom exclusion column entries</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task PatchOutboundDnclistCustomexclusioncolumnsAsync (string dncListId, DncPatchCustomExclusionColumnsRequest body);
 
         /// <summary>
@@ -6292,7 +5861,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Custom exclusion column entries</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo (string dncListId, DncPatchCustomExclusionColumnsRequest body);
 
@@ -6307,7 +5875,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC Emails</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task PatchOutboundDnclistEmailaddressesAsync (string dncListId, DncPatchEmailsRequest body);
 
         /// <summary>
@@ -6320,7 +5887,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Emails</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistEmailaddressesAsyncWithHttpInfo (string dncListId, DncPatchEmailsRequest body);
 
@@ -6335,7 +5901,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task PatchOutboundDnclistPhonenumbersAsync (string dncListId, DncPatchPhoneNumbersRequest body);
 
         /// <summary>
@@ -6349,7 +5914,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, DncPatchPhoneNumbersRequest body);
 
         /// <summary>
@@ -6361,7 +5925,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task PatchOutboundSettingsAsync (OutboundSettings body);
 
@@ -6375,7 +5938,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">outboundSettings</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundSettingsAsyncWithHttpInfo (OutboundSettings body);
 
         /// <summary>
@@ -6388,7 +5950,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AttemptLimits</param>
         /// <returns>Task of AttemptLimits</returns>
         
-        
         System.Threading.Tasks.Task<AttemptLimits> PostOutboundAttemptlimitsAsync (AttemptLimits body);
 
         /// <summary>
@@ -6400,7 +5961,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AttemptLimits</param>
         /// <returns>Task of ApiResponse (AttemptLimits)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PostOutboundAttemptlimitsAsyncWithHttpInfo (AttemptLimits body);
 
@@ -6419,7 +5979,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of AuditSearchResult</returns>
         
-        
         System.Threading.Tasks.Task<AuditSearchResult> PostOutboundAuditsAsync (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
@@ -6437,7 +5996,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuditSearchResult)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostOutboundAuditsAsyncWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
@@ -6449,7 +6007,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        
         
         System.Threading.Tasks.Task<CallableTimeSet> PostOutboundCallabletimesetsAsync (CallableTimeSet body);
 
@@ -6463,7 +6020,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PostOutboundCallabletimesetsAsyncWithHttpInfo (CallableTimeSet body);
 
         /// <summary>
@@ -6475,7 +6031,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        
         
         System.Threading.Tasks.Task<ResponseSet> PostOutboundCallanalysisresponsesetsAsync (ResponseSet body);
 
@@ -6489,7 +6044,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostOutboundCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body);
 
         /// <summary>
@@ -6502,7 +6056,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of Object</returns>
         
-        
         System.Threading.Tasks.Task<Object> PostOutboundCampaignAgentownedmappingpreviewAsync (string campaignId);
 
         /// <summary>
@@ -6514,7 +6067,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundCampaignAgentownedmappingpreviewAsyncWithHttpInfo (string campaignId);
 
@@ -6529,7 +6081,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ContactCallbackRequest</returns>
         [Obsolete]
-        
         System.Threading.Tasks.Task<ContactCallbackRequest> PostOutboundCampaignCallbackScheduleAsync (string campaignId, ContactCallbackRequest body);
 
         /// <summary>
@@ -6543,7 +6094,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
         [Obsolete]
-        
         System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostOutboundCampaignCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body);
 
         /// <summary>
@@ -6555,7 +6105,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CampaignRule</param>
         /// <returns>Task of CampaignRule</returns>
-        
         
         System.Threading.Tasks.Task<CampaignRule> PostOutboundCampaignrulesAsync (CampaignRule body);
 
@@ -6569,7 +6118,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CampaignRule</param>
         /// <returns>Task of ApiResponse (CampaignRule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignRule>> PostOutboundCampaignrulesAsyncWithHttpInfo (CampaignRule body);
 
         /// <summary>
@@ -6581,7 +6129,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        
         
         System.Threading.Tasks.Task<Campaign> PostOutboundCampaignsAsync (Campaign body);
 
@@ -6595,7 +6142,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Campaign>> PostOutboundCampaignsAsyncWithHttpInfo (Campaign body);
 
         /// <summary>
@@ -6607,7 +6153,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign IDs</param>
         /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
-        
         
         System.Threading.Tasks.Task<List<CampaignProgress>> PostOutboundCampaignsProgressAsync (List<string> body);
 
@@ -6621,7 +6166,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Campaign IDs</param>
         /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostOutboundCampaignsProgressAsyncWithHttpInfo (List<string> body);
 
         /// <summary>
@@ -6634,7 +6178,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task PostOutboundContactlistClearAsync (string contactListId);
 
         /// <summary>
@@ -6646,7 +6189,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundContactlistClearAsyncWithHttpInfo (string contactListId);
 
@@ -6664,7 +6206,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
         
-        
         System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsAsync (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
 
         /// <summary>
@@ -6681,7 +6222,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
 
         /// <summary>
@@ -6694,7 +6234,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">ContactIds to get.</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
-        
         
         System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsBulkAsync (string contactListId, List<string> body);
 
@@ -6709,7 +6248,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactIds to get.</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsBulkAsyncWithHttpInfo (string contactListId, List<string> body);
 
         /// <summary>
@@ -6721,7 +6259,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of DomainEntityRef</returns>
-        
         
         System.Threading.Tasks.Task<DomainEntityRef> PostOutboundContactlistExportAsync (string contactListId);
 
@@ -6735,7 +6272,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId);
 
         /// <summary>
@@ -6747,7 +6283,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ContactListFilter</returns>
-        
         
         System.Threading.Tasks.Task<ContactListFilter> PostOutboundContactlistfiltersAsync (ContactListFilter body);
 
@@ -6761,7 +6296,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ApiResponse (ContactListFilter)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PostOutboundContactlistfiltersAsyncWithHttpInfo (ContactListFilter body);
 
         /// <summary>
@@ -6773,7 +6307,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of FilterPreviewResponse</returns>
-        
         
         System.Threading.Tasks.Task<FilterPreviewResponse> PostOutboundContactlistfiltersPreviewAsync (ContactListFilter body);
 
@@ -6787,7 +6320,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ApiResponse (FilterPreviewResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<FilterPreviewResponse>> PostOutboundContactlistfiltersPreviewAsyncWithHttpInfo (ContactListFilter body);
 
         /// <summary>
@@ -6799,7 +6331,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        
         
         System.Threading.Tasks.Task<ContactList> PostOutboundContactlistsAsync (ContactList body);
 
@@ -6813,7 +6344,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ContactList>> PostOutboundContactlistsAsyncWithHttpInfo (ContactList body);
 
         /// <summary>
@@ -6825,7 +6355,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of void</returns>
-        
         
         System.Threading.Tasks.Task PostOutboundConversationDncAsync (string conversationId);
 
@@ -6839,7 +6368,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundConversationDncAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
@@ -6852,7 +6380,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Digital Rule Set</param>
         /// <returns>Task of DigitalRuleSet</returns>
         
-        
         System.Threading.Tasks.Task<DigitalRuleSet> PostOutboundDigitalrulesetsAsync (DigitalRuleSet body);
 
         /// <summary>
@@ -6864,7 +6391,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> PostOutboundDigitalrulesetsAsyncWithHttpInfo (DigitalRuleSet body);
 
@@ -6879,7 +6405,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC email addresses</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task PostOutboundDnclistEmailaddressesAsync (string dncListId, List<string> body);
 
         /// <summary>
@@ -6893,7 +6418,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DNC email addresses</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundDnclistEmailaddressesAsyncWithHttpInfo (string dncListId, List<string> body);
 
         /// <summary>
@@ -6906,7 +6430,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of DomainEntityRef</returns>
         
-        
         System.Threading.Tasks.Task<DomainEntityRef> PostOutboundDnclistExportAsync (string dncListId);
 
         /// <summary>
@@ -6918,7 +6441,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundDnclistExportAsyncWithHttpInfo (string dncListId);
 
@@ -6934,7 +6456,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task PostOutboundDnclistPhonenumbersAsync (string dncListId, List<string> body, string expirationDateTime = null);
 
         /// <summary>
@@ -6949,7 +6470,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body, string expirationDateTime = null);
 
         /// <summary>
@@ -6961,7 +6481,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        
         
         System.Threading.Tasks.Task<DncList> PostOutboundDnclistsAsync (DncListCreate body);
 
@@ -6975,7 +6494,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DncList>> PostOutboundDnclistsAsyncWithHttpInfo (DncListCreate body);
 
         /// <summary>
@@ -6987,7 +6505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign</param>
         /// <returns>Task of MessagingCampaign</returns>
-        
         
         System.Threading.Tasks.Task<MessagingCampaign> PostOutboundMessagingcampaignsAsync (MessagingCampaign body);
 
@@ -7001,7 +6518,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Messaging Campaign</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> PostOutboundMessagingcampaignsAsyncWithHttpInfo (MessagingCampaign body);
 
         /// <summary>
@@ -7013,7 +6529,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign IDs</param>
         /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
-        
         
         System.Threading.Tasks.Task<List<CampaignProgress>> PostOutboundMessagingcampaignsProgressAsync (List<string> body);
 
@@ -7027,7 +6542,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Messaging Campaign IDs</param>
         /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostOutboundMessagingcampaignsProgressAsyncWithHttpInfo (List<string> body);
 
         /// <summary>
@@ -7039,7 +6553,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        
         
         System.Threading.Tasks.Task<RuleSet> PostOutboundRulesetsAsync (RuleSet body);
 
@@ -7053,7 +6566,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<RuleSet>> PostOutboundRulesetsAsyncWithHttpInfo (RuleSet body);
 
         /// <summary>
@@ -7066,7 +6578,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
         
-        
         System.Threading.Tasks.Task<CampaignSequence> PostOutboundSequencesAsync (CampaignSequence body);
 
         /// <summary>
@@ -7078,7 +6589,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostOutboundSequencesAsyncWithHttpInfo (CampaignSequence body);
 
@@ -7093,7 +6603,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">AttemptLimits</param>
         /// <returns>Task of AttemptLimits</returns>
         
-        
         System.Threading.Tasks.Task<AttemptLimits> PutOutboundAttemptlimitAsync (string attemptLimitsId, AttemptLimits body);
 
         /// <summary>
@@ -7106,7 +6615,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <param name="body">AttemptLimits</param>
         /// <returns>Task of ApiResponse (AttemptLimits)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PutOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId, AttemptLimits body);
 
@@ -7121,7 +6629,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
         
-        
         System.Threading.Tasks.Task<CallableTimeSet> PutOutboundCallabletimesetAsync (string callableTimeSetId, CallableTimeSet body);
 
         /// <summary>
@@ -7134,7 +6641,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body);
 
@@ -7149,7 +6655,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
         
-        
         System.Threading.Tasks.Task<ResponseSet> PutOutboundCallanalysisresponsesetAsync (string callAnalysisSetId, ResponseSet body);
 
         /// <summary>
@@ -7162,7 +6667,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body);
 
@@ -7177,7 +6681,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
         
-        
         System.Threading.Tasks.Task<Campaign> PutOutboundCampaignAsync (string campaignId, Campaign body);
 
         /// <summary>
@@ -7190,7 +6693,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Campaign>> PutOutboundCampaignAsyncWithHttpInfo (string campaignId, Campaign body);
 
@@ -7206,7 +6708,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">agent</param>
         /// <returns>Task of string</returns>
         
-        
         System.Threading.Tasks.Task<string> PutOutboundCampaignAgentAsync (string campaignId, string userId, Agent body);
 
         /// <summary>
@@ -7221,7 +6722,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">agent</param>
         /// <returns>Task of ApiResponse (string)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<string>> PutOutboundCampaignAgentAsyncWithHttpInfo (string campaignId, string userId, Agent body);
 
         /// <summary>
@@ -7234,7 +6734,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <param name="body">CampaignRule</param>
         /// <returns>Task of CampaignRule</returns>
-        
         
         System.Threading.Tasks.Task<CampaignRule> PutOutboundCampaignruleAsync (string campaignRuleId, CampaignRule body);
 
@@ -7249,7 +6748,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CampaignRule</param>
         /// <returns>Task of ApiResponse (CampaignRule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignRule>> PutOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId, CampaignRule body);
 
         /// <summary>
@@ -7263,7 +6761,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
         
-        
         System.Threading.Tasks.Task<ContactList> PutOutboundContactlistAsync (string contactListId, ContactList body);
 
         /// <summary>
@@ -7276,7 +6773,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<ContactList>> PutOutboundContactlistAsyncWithHttpInfo (string contactListId, ContactList body);
 
@@ -7292,7 +6788,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <returns>Task of DialerContact</returns>
         
-        
         System.Threading.Tasks.Task<DialerContact> PutOutboundContactlistContactAsync (string contactListId, string contactId, DialerContact body);
 
         /// <summary>
@@ -7307,7 +6802,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body);
 
         /// <summary>
@@ -7320,7 +6814,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ContactListFilter</returns>
-        
         
         System.Threading.Tasks.Task<ContactListFilter> PutOutboundContactlistfilterAsync (string contactListFilterId, ContactListFilter body);
 
@@ -7335,7 +6828,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ApiResponse (ContactListFilter)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PutOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId, ContactListFilter body);
 
         /// <summary>
@@ -7348,7 +6840,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>Task of DigitalRuleSet</returns>
-        
         
         System.Threading.Tasks.Task<DigitalRuleSet> PutOutboundDigitalrulesetAsync (string digitalRuleSetId, DigitalRuleSet body);
 
@@ -7363,7 +6854,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Digital Rule Set</param>
         /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> PutOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId, DigitalRuleSet body);
 
         /// <summary>
@@ -7376,7 +6866,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        
         
         System.Threading.Tasks.Task<DncList> PutOutboundDnclistAsync (string dncListId, DncList body);
 
@@ -7391,7 +6880,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<DncList>> PutOutboundDnclistAsyncWithHttpInfo (string dncListId, DncList body);
 
         /// <summary>
@@ -7404,7 +6892,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaign</param>
         /// <returns>Task of MessagingCampaign</returns>
-        
         
         System.Threading.Tasks.Task<MessagingCampaign> PutOutboundMessagingcampaignAsync (string messagingCampaignId, MessagingCampaign body);
 
@@ -7419,7 +6906,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">MessagingCampaign</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> PutOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId, MessagingCampaign body);
 
         /// <summary>
@@ -7432,7 +6918,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        
         
         System.Threading.Tasks.Task<RuleSet> PutOutboundRulesetAsync (string ruleSetId, RuleSet body);
 
@@ -7447,7 +6932,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutOutboundRulesetAsyncWithHttpInfo (string ruleSetId, RuleSet body);
 
         /// <summary>
@@ -7460,7 +6944,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of CampaignSchedule</returns>
-        
         
         System.Threading.Tasks.Task<CampaignSchedule> PutOutboundSchedulesCampaignAsync (string campaignId, CampaignSchedule body);
 
@@ -7475,7 +6958,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId, CampaignSchedule body);
 
         /// <summary>
@@ -7488,7 +6970,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <param name="body">EmailCampaignSchedule</param>
         /// <returns>Task of EmailCampaignSchedule</returns>
-        
         
         System.Threading.Tasks.Task<EmailCampaignSchedule> PutOutboundSchedulesEmailcampaignAsync (string emailCampaignId, EmailCampaignSchedule body);
 
@@ -7503,7 +6984,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">EmailCampaignSchedule</param>
         /// <returns>Task of ApiResponse (EmailCampaignSchedule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<EmailCampaignSchedule>> PutOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId, EmailCampaignSchedule body);
 
         /// <summary>
@@ -7516,7 +6996,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaignSchedule</param>
         /// <returns>Task of MessagingCampaignSchedule</returns>
-        
         
         System.Threading.Tasks.Task<MessagingCampaignSchedule> PutOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId, MessagingCampaignSchedule body);
 
@@ -7531,7 +7010,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">MessagingCampaignSchedule</param>
         /// <returns>Task of ApiResponse (MessagingCampaignSchedule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MessagingCampaignSchedule>> PutOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId, MessagingCampaignSchedule body);
 
         /// <summary>
@@ -7544,7 +7022,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of SequenceSchedule</returns>
-        
         
         System.Threading.Tasks.Task<SequenceSchedule> PutOutboundSchedulesSequenceAsync (string sequenceId, SequenceSchedule body);
 
@@ -7559,7 +7036,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId, SequenceSchedule body);
 
         /// <summary>
@@ -7572,7 +7048,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        
         
         System.Threading.Tasks.Task<CampaignSequence> PutOutboundSequenceAsync (string sequenceId, CampaignSequence body);
 
@@ -7587,7 +7062,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutOutboundSequenceAsyncWithHttpInfo (string sequenceId, CampaignSequence body);
 
         /// <summary>
@@ -7600,7 +7074,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>Task of WrapUpCodeMapping</returns>
         
-        
         System.Threading.Tasks.Task<WrapUpCodeMapping> PutOutboundWrapupcodemappingsAsync (WrapUpCodeMapping body);
 
         /// <summary>
@@ -7612,7 +7085,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> PutOutboundWrapupcodemappingsAsyncWithHttpInfo (WrapUpCodeMapping body);
 
@@ -7710,11 +7182,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundAttemptlimit (string attemptLimitsId)
         {
@@ -7723,11 +7195,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundAttemptlimitWithHttpInfo (string attemptLimitsId)
         { 
@@ -7807,11 +7279,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundAttemptlimitAsync (string attemptLimitsId)
         {
@@ -7821,11 +7293,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId)
         { 
@@ -7907,11 +7379,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundCallabletimeset (string callableTimeSetId)
         {
@@ -7920,11 +7392,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundCallabletimesetWithHttpInfo (string callableTimeSetId)
         { 
@@ -8004,11 +7476,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundCallabletimesetAsync (string callableTimeSetId)
         {
@@ -8018,11 +7490,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId)
         { 
@@ -8104,11 +7576,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundCallanalysisresponseset (string callAnalysisSetId)
         {
@@ -8117,11 +7589,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId)
         { 
@@ -8201,11 +7673,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundCallanalysisresponsesetAsync (string callAnalysisSetId)
         {
@@ -8215,11 +7687,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId)
         { 
@@ -8301,11 +7773,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Campaign</returns>
-        
         
         public Campaign DeleteOutboundCampaign (string campaignId)
         {
@@ -8315,11 +7787,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Campaign</returns>
-        
         
         public ApiResponse< Campaign > DeleteOutboundCampaignWithHttpInfo (string campaignId)
         { 
@@ -8399,11 +7871,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of Campaign</returns>
-        
         
         public async System.Threading.Tasks.Task<Campaign> DeleteOutboundCampaignAsync (string campaignId)
         {
@@ -8414,11 +7886,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Campaign>> DeleteOutboundCampaignAsyncWithHttpInfo (string campaignId)
         { 
@@ -8500,11 +7972,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset campaign progress and recycle the campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundCampaignProgress (string campaignId)
         {
@@ -8513,11 +7985,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset campaign progress and recycle the campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundCampaignProgressWithHttpInfo (string campaignId)
         { 
@@ -8597,11 +8069,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset campaign progress and recycle the campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundCampaignProgressAsync (string campaignId)
         {
@@ -8611,11 +8083,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset campaign progress and recycle the campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCampaignProgressAsyncWithHttpInfo (string campaignId)
         { 
@@ -8697,11 +8169,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundCampaignrule (string campaignRuleId)
         {
@@ -8710,11 +8182,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundCampaignruleWithHttpInfo (string campaignRuleId)
         { 
@@ -8794,11 +8266,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundCampaignruleAsync (string campaignRuleId)
         {
@@ -8808,11 +8280,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId)
         { 
@@ -8894,11 +8366,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundContactlist (string contactListId)
         {
@@ -8907,11 +8379,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundContactlistWithHttpInfo (string contactListId)
         { 
@@ -8991,11 +8463,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundContactlistAsync (string contactListId)
         {
@@ -9005,11 +8477,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistAsyncWithHttpInfo (string contactListId)
         { 
@@ -9091,12 +8563,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundContactlistContact (string contactListId, string contactId)
         {
@@ -9105,12 +8577,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundContactlistContactWithHttpInfo (string contactListId, string contactId)
         { 
@@ -9194,12 +8666,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundContactlistContactAsync (string contactListId, string contactId)
         {
@@ -9209,12 +8681,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId)
         { 
@@ -9301,12 +8773,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete contacts from a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundContactlistContacts (string contactListId, List<string> contactIds)
         {
@@ -9315,12 +8787,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete contacts from a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundContactlistContactsWithHttpInfo (string contactListId, List<string> contactIds)
         { 
@@ -9404,12 +8876,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete contacts from a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundContactlistContactsAsync (string contactListId, List<string> contactIds)
         {
@@ -9419,12 +8891,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete contacts from a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<string> contactIds)
         { 
@@ -9511,11 +8983,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundContactlistfilter (string contactListFilterId)
         {
@@ -9524,11 +8996,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundContactlistfilterWithHttpInfo (string contactListFilterId)
         { 
@@ -9608,11 +9080,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundContactlistfilterAsync (string contactListFilterId)
         {
@@ -9622,11 +9094,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId)
         { 
@@ -9708,11 +9180,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete multiple contact lists. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundContactlists (List<string> id)
         {
@@ -9721,11 +9193,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete multiple contact lists. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundContactlistsWithHttpInfo (List<string> id)
         { 
@@ -9805,11 +9277,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete multiple contact lists. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundContactlistsAsync (List<string> id)
         {
@@ -9819,11 +9291,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete multiple contact lists. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistsAsyncWithHttpInfo (List<string> id)
         { 
@@ -9905,11 +9377,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundDigitalruleset (string digitalRuleSetId)
         {
@@ -9918,11 +9390,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId)
         { 
@@ -10002,11 +9474,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundDigitalrulesetAsync (string digitalRuleSetId)
         {
@@ -10016,11 +9488,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId)
         { 
@@ -10102,11 +9574,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundDnclist (string dncListId)
         {
@@ -10115,11 +9587,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundDnclistWithHttpInfo (string dncListId)
         { 
@@ -10199,11 +9671,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundDnclistAsync (string dncListId)
         {
@@ -10213,11 +9685,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistAsyncWithHttpInfo (string dncListId)
         { 
@@ -10298,13 +9770,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Deletes all or expired custom exclusion column entries from a DNC list. This operation is only for Internal DNC lists of custom exclusion column entries
+        /// Deletes all or expired custom exclusion column entries from a DNC list. 
+        /// This operation is only for Internal DNC lists of custom exclusion column entries
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundDnclistCustomexclusioncolumns (string dncListId, bool? expiredOnly = null)
         {
@@ -10312,13 +9784,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deletes all or expired custom exclusion column entries from a DNC list. This operation is only for Internal DNC lists of custom exclusion column entries
+        /// Deletes all or expired custom exclusion column entries from a DNC list. 
+        /// This operation is only for Internal DNC lists of custom exclusion column entries
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundDnclistCustomexclusioncolumnsWithHttpInfo (string dncListId, bool? expiredOnly = null)
         { 
@@ -10398,13 +9870,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Deletes all or expired custom exclusion column entries from a DNC list. This operation is only for Internal DNC lists of custom exclusion column entries
+        /// Deletes all or expired custom exclusion column entries from a DNC list. 
+        /// This operation is only for Internal DNC lists of custom exclusion column entries
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundDnclistCustomexclusioncolumnsAsync (string dncListId, bool? expiredOnly = null)
         {
@@ -10413,13 +9885,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deletes all or expired custom exclusion column entries from a DNC list. This operation is only for Internal DNC lists of custom exclusion column entries
+        /// Deletes all or expired custom exclusion column entries from a DNC list. 
+        /// This operation is only for Internal DNC lists of custom exclusion column entries
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null)
         { 
@@ -10501,13 +9973,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Deletes all or expired email addresses from a DNC list. This operation is Only for Internal DNC lists of email addresses
+        /// Deletes all or expired email addresses from a DNC list. 
+        /// This operation is Only for Internal DNC lists of email addresses
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundDnclistEmailaddresses (string dncListId, bool? expiredOnly = null)
         {
@@ -10515,13 +9987,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deletes all or expired email addresses from a DNC list. This operation is Only for Internal DNC lists of email addresses
+        /// Deletes all or expired email addresses from a DNC list. 
+        /// This operation is Only for Internal DNC lists of email addresses
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundDnclistEmailaddressesWithHttpInfo (string dncListId, bool? expiredOnly = null)
         { 
@@ -10601,13 +10073,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Deletes all or expired email addresses from a DNC list. This operation is Only for Internal DNC lists of email addresses
+        /// Deletes all or expired email addresses from a DNC list. 
+        /// This operation is Only for Internal DNC lists of email addresses
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundDnclistEmailaddressesAsync (string dncListId, bool? expiredOnly = null)
         {
@@ -10616,13 +10088,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deletes all or expired email addresses from a DNC list. This operation is Only for Internal DNC lists of email addresses
+        /// Deletes all or expired email addresses from a DNC list. 
+        /// This operation is Only for Internal DNC lists of email addresses
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistEmailaddressesAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null)
         { 
@@ -10704,13 +10176,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Deletes all or expired phone numbers from a DNC list. This operation is Only for Internal DNC lists of phone numbers
+        /// Deletes all or expired phone numbers from a DNC list. 
+        /// This operation is Only for Internal DNC lists of phone numbers
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundDnclistPhonenumbers (string dncListId, bool? expiredOnly = null)
         {
@@ -10718,13 +10190,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deletes all or expired phone numbers from a DNC list. This operation is Only for Internal DNC lists of phone numbers
+        /// Deletes all or expired phone numbers from a DNC list. 
+        /// This operation is Only for Internal DNC lists of phone numbers
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, bool? expiredOnly = null)
         { 
@@ -10804,13 +10276,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Deletes all or expired phone numbers from a DNC list. This operation is Only for Internal DNC lists of phone numbers
+        /// Deletes all or expired phone numbers from a DNC list. 
+        /// This operation is Only for Internal DNC lists of phone numbers
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundDnclistPhonenumbersAsync (string dncListId, bool? expiredOnly = null)
         {
@@ -10819,13 +10291,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Deletes all or expired phone numbers from a DNC list. This operation is Only for Internal DNC lists of phone numbers
+        /// Deletes all or expired phone numbers from a DNC list. 
+        /// This operation is Only for Internal DNC lists of phone numbers
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null)
         { 
@@ -10908,11 +10380,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>MessagingCampaign</returns>
-        
         
         public MessagingCampaign DeleteOutboundMessagingcampaign (string messagingCampaignId)
         {
@@ -10922,11 +10394,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaign</returns>
-        
         
         public ApiResponse< MessagingCampaign > DeleteOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId)
         { 
@@ -11006,11 +10478,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaign</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaign> DeleteOutboundMessagingcampaignAsync (string messagingCampaignId)
         {
@@ -11021,11 +10493,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> DeleteOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId)
         { 
@@ -11107,11 +10579,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset messaging campaign progress and recycle the messaging campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundMessagingcampaignProgress (string messagingCampaignId)
         {
@@ -11120,11 +10592,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset messaging campaign progress and recycle the messaging campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundMessagingcampaignProgressWithHttpInfo (string messagingCampaignId)
         { 
@@ -11204,11 +10676,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset messaging campaign progress and recycle the messaging campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundMessagingcampaignProgressAsync (string messagingCampaignId)
         {
@@ -11218,11 +10690,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset messaging campaign progress and recycle the messaging campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessagingcampaignProgressAsyncWithHttpInfo (string messagingCampaignId)
         { 
@@ -11304,11 +10776,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundRuleset (string ruleSetId)
         {
@@ -11317,11 +10789,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundRulesetWithHttpInfo (string ruleSetId)
         { 
@@ -11401,11 +10873,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundRulesetAsync (string ruleSetId)
         {
@@ -11415,11 +10887,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundRulesetAsyncWithHttpInfo (string ruleSetId)
         { 
@@ -11501,11 +10973,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundSchedulesCampaign (string campaignId)
         {
@@ -11514,11 +10986,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundSchedulesCampaignWithHttpInfo (string campaignId)
         { 
@@ -11598,11 +11070,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundSchedulesCampaignAsync (string campaignId)
         {
@@ -11612,11 +11084,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId)
         { 
@@ -11698,11 +11170,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundSchedulesEmailcampaign (string emailCampaignId)
         {
@@ -11711,11 +11183,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId)
         { 
@@ -11795,11 +11267,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundSchedulesEmailcampaignAsync (string emailCampaignId)
         {
@@ -11809,11 +11281,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId)
         { 
@@ -11895,11 +11367,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundSchedulesMessagingcampaign (string messagingCampaignId)
         {
@@ -11908,11 +11380,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId)
         { 
@@ -11992,11 +11464,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId)
         {
@@ -12006,11 +11478,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId)
         { 
@@ -12092,11 +11564,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundSchedulesSequence (string sequenceId)
         {
@@ -12105,11 +11577,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundSchedulesSequenceWithHttpInfo (string sequenceId)
         { 
@@ -12189,11 +11661,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundSchedulesSequenceAsync (string sequenceId)
         {
@@ -12203,11 +11675,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId)
         { 
@@ -12289,11 +11761,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns></returns>
-        
         
         public void DeleteOutboundSequence (string sequenceId)
         {
@@ -12302,11 +11774,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteOutboundSequenceWithHttpInfo (string sequenceId)
         { 
@@ -12386,11 +11858,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteOutboundSequenceAsync (string sequenceId)
         {
@@ -12400,11 +11872,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a dialer campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSequenceAsyncWithHttpInfo (string sequenceId)
         { 
@@ -12486,11 +11958,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>AttemptLimits</returns>
-        
         
         public AttemptLimits GetOutboundAttemptlimit (string attemptLimitsId)
         {
@@ -12500,11 +11972,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>ApiResponse of AttemptLimits</returns>
-        
         
         public ApiResponse< AttemptLimits > GetOutboundAttemptlimitWithHttpInfo (string attemptLimitsId)
         { 
@@ -12584,11 +12056,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>Task of AttemptLimits</returns>
-        
         
         public async System.Threading.Tasks.Task<AttemptLimits> GetOutboundAttemptlimitAsync (string attemptLimitsId)
         {
@@ -12599,11 +12071,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <returns>Task of ApiResponse (AttemptLimits)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> GetOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId)
         { 
@@ -12685,6 +12157,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query attempt limits list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -12696,7 +12169,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>AttemptLimitsEntityListing</returns>
         
-        
         public AttemptLimitsEntityListing GetOutboundAttemptlimits (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<AttemptLimitsEntityListing> localVarResponse = GetOutboundAttemptlimitsWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -12705,6 +12177,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query attempt limits list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -12715,7 +12188,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of AttemptLimitsEntityListing</returns>
-        
         
         public ApiResponse< AttemptLimitsEntityListing > GetOutboundAttemptlimitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -12798,6 +12270,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query attempt limits list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -12809,7 +12282,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of AttemptLimitsEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<AttemptLimitsEntityListing> GetOutboundAttemptlimitsAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<AttemptLimitsEntityListing> localVarResponse = await GetOutboundAttemptlimitsAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -12819,6 +12291,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query attempt limits list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -12829,7 +12302,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (AttemptLimitsEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AttemptLimitsEntityListing>> GetOutboundAttemptlimitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -12913,11 +12385,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>CallableTimeSet</returns>
-        
         
         public CallableTimeSet GetOutboundCallabletimeset (string callableTimeSetId)
         {
@@ -12927,11 +12399,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        
         
         public ApiResponse< CallableTimeSet > GetOutboundCallabletimesetWithHttpInfo (string callableTimeSetId)
         { 
@@ -13011,11 +12483,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of CallableTimeSet</returns>
-        
         
         public async System.Threading.Tasks.Task<CallableTimeSet> GetOutboundCallabletimesetAsync (string callableTimeSetId)
         {
@@ -13026,11 +12498,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> GetOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId)
         { 
@@ -13112,6 +12584,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query callable time set list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -13123,7 +12596,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CallableTimeSetEntityListing</returns>
         
-        
         public CallableTimeSetEntityListing GetOutboundCallabletimesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CallableTimeSetEntityListing> localVarResponse = GetOutboundCallabletimesetsWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -13132,6 +12604,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query callable time set list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -13142,7 +12615,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CallableTimeSetEntityListing</returns>
-        
         
         public ApiResponse< CallableTimeSetEntityListing > GetOutboundCallabletimesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -13225,6 +12697,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query callable time set list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -13236,7 +12709,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CallableTimeSetEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<CallableTimeSetEntityListing> GetOutboundCallabletimesetsAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CallableTimeSetEntityListing> localVarResponse = await GetOutboundCallabletimesetsAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -13246,6 +12718,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query callable time set list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -13256,7 +12729,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CallableTimeSetEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSetEntityListing>> GetOutboundCallabletimesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -13340,11 +12812,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ResponseSet</returns>
-        
         
         public ResponseSet GetOutboundCallanalysisresponseset (string callAnalysisSetId)
         {
@@ -13354,11 +12826,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        
         
         public ApiResponse< ResponseSet > GetOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId)
         { 
@@ -13438,11 +12910,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ResponseSet</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseSet> GetOutboundCallanalysisresponsesetAsync (string callAnalysisSetId)
         {
@@ -13453,11 +12925,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId)
         { 
@@ -13539,6 +13011,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer call analysis response sets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -13550,7 +13023,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ResponseSetEntityListing</returns>
         
-        
         public ResponseSetEntityListing GetOutboundCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ResponseSetEntityListing> localVarResponse = GetOutboundCallanalysisresponsesetsWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -13559,6 +13031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer call analysis response sets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -13569,7 +13042,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ResponseSetEntityListing</returns>
-        
         
         public ApiResponse< ResponseSetEntityListing > GetOutboundCallanalysisresponsesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -13652,6 +13124,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer call analysis response sets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -13663,7 +13136,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ResponseSetEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ResponseSetEntityListing> GetOutboundCallanalysisresponsesetsAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ResponseSetEntityListing> localVarResponse = await GetOutboundCallanalysisresponsesetsAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -13673,6 +13145,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer call analysis response sets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -13683,7 +13156,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ResponseSetEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseSetEntityListing>> GetOutboundCallanalysisresponsesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -13767,11 +13239,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Campaign</returns>
-        
         
         public Campaign GetOutboundCampaign (string campaignId)
         {
@@ -13781,11 +13253,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Campaign</returns>
-        
         
         public ApiResponse< Campaign > GetOutboundCampaignWithHttpInfo (string campaignId)
         { 
@@ -13865,11 +13337,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of Campaign</returns>
-        
         
         public async System.Threading.Tasks.Task<Campaign> GetOutboundCampaignAsync (string campaignId)
         {
@@ -13880,11 +13352,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Campaign>> GetOutboundCampaignAsyncWithHttpInfo (string campaignId)
         { 
@@ -13966,11 +13438,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a preview of how agents will be mapped to this campaign's contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>AgentOwnedMappingPreviewListing</returns>
-        
         
         public AgentOwnedMappingPreviewListing GetOutboundCampaignAgentownedmappingpreviewResults (string campaignId)
         {
@@ -13980,11 +13452,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a preview of how agents will be mapped to this campaign's contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of AgentOwnedMappingPreviewListing</returns>
-        
         
         public ApiResponse< AgentOwnedMappingPreviewListing > GetOutboundCampaignAgentownedmappingpreviewResultsWithHttpInfo (string campaignId)
         { 
@@ -14064,11 +13536,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a preview of how agents will be mapped to this campaign's contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of AgentOwnedMappingPreviewListing</returns>
-        
         
         public async System.Threading.Tasks.Task<AgentOwnedMappingPreviewListing> GetOutboundCampaignAgentownedmappingpreviewResultsAsync (string campaignId)
         {
@@ -14079,11 +13551,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a preview of how agents will be mapped to this campaign's contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (AgentOwnedMappingPreviewListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AgentOwnedMappingPreviewListing>> GetOutboundCampaignAgentownedmappingpreviewResultsAsyncWithHttpInfo (string campaignId)
         { 
@@ -14165,11 +13637,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get campaign diagnostics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignDiagnostics</returns>
-        
         
         public CampaignDiagnostics GetOutboundCampaignDiagnostics (string campaignId)
         {
@@ -14179,11 +13651,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get campaign diagnostics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignDiagnostics</returns>
-        
         
         public ApiResponse< CampaignDiagnostics > GetOutboundCampaignDiagnosticsWithHttpInfo (string campaignId)
         { 
@@ -14263,11 +13735,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get campaign diagnostics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignDiagnostics</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignDiagnostics> GetOutboundCampaignDiagnosticsAsync (string campaignId)
         {
@@ -14278,11 +13750,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get campaign diagnostics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignDiagnostics)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetOutboundCampaignDiagnosticsAsyncWithHttpInfo (string campaignId)
         { 
@@ -14364,11 +13836,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer campaign interactions. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignInteractions</returns>
-        
         
         public CampaignInteractions GetOutboundCampaignInteractions (string campaignId)
         {
@@ -14378,11 +13850,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer campaign interactions. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignInteractions</returns>
-        
         
         public ApiResponse< CampaignInteractions > GetOutboundCampaignInteractionsWithHttpInfo (string campaignId)
         { 
@@ -14462,11 +13934,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer campaign interactions. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignInteractions</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignInteractions> GetOutboundCampaignInteractionsAsync (string campaignId)
         {
@@ -14477,11 +13949,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer campaign interactions. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignInteractions)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignInteractions>> GetOutboundCampaignInteractionsAsyncWithHttpInfo (string campaignId)
         { 
@@ -14563,11 +14035,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get campaign progress 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignProgress</returns>
-        
         
         public CampaignProgress GetOutboundCampaignProgress (string campaignId)
         {
@@ -14577,11 +14049,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get campaign progress 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignProgress</returns>
-        
         
         public ApiResponse< CampaignProgress > GetOutboundCampaignProgressWithHttpInfo (string campaignId)
         { 
@@ -14661,11 +14133,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get campaign progress 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignProgress</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignProgress> GetOutboundCampaignProgressAsync (string campaignId)
         {
@@ -14676,11 +14148,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get campaign progress 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignProgress)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetOutboundCampaignProgressAsyncWithHttpInfo (string campaignId)
         { 
@@ -14762,11 +14234,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get statistics about a Dialer Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignStats</returns>
-        
         
         public CampaignStats GetOutboundCampaignStats (string campaignId)
         {
@@ -14776,11 +14248,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get statistics about a Dialer Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignStats</returns>
-        
         
         public ApiResponse< CampaignStats > GetOutboundCampaignStatsWithHttpInfo (string campaignId)
         { 
@@ -14860,11 +14332,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get statistics about a Dialer Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignStats</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignStats> GetOutboundCampaignStatsAsync (string campaignId)
         {
@@ -14875,11 +14347,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get statistics about a Dialer Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignStats)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignStats>> GetOutboundCampaignStatsAsyncWithHttpInfo (string campaignId)
         { 
@@ -14961,11 +14433,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>CampaignRule</returns>
-        
         
         public CampaignRule GetOutboundCampaignrule (string campaignRuleId)
         {
@@ -14975,11 +14447,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>ApiResponse of CampaignRule</returns>
-        
         
         public ApiResponse< CampaignRule > GetOutboundCampaignruleWithHttpInfo (string campaignRuleId)
         { 
@@ -15059,11 +14531,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>Task of CampaignRule</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignRule> GetOutboundCampaignruleAsync (string campaignRuleId)
         {
@@ -15074,11 +14546,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <returns>Task of ApiResponse (CampaignRule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignRule>> GetOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId)
         { 
@@ -15160,6 +14632,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Campaign Rule list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -15171,7 +14644,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignRuleEntityListing</returns>
         
-        
         public CampaignRuleEntityListing GetOutboundCampaignrules (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignRuleEntityListing> localVarResponse = GetOutboundCampaignrulesWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -15180,6 +14652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Campaign Rule list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -15190,7 +14663,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignRuleEntityListing</returns>
-        
         
         public ApiResponse< CampaignRuleEntityListing > GetOutboundCampaignrulesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -15273,6 +14745,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Campaign Rule list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -15284,7 +14757,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignRuleEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<CampaignRuleEntityListing> GetOutboundCampaignrulesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignRuleEntityListing> localVarResponse = await GetOutboundCampaignrulesAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -15294,6 +14766,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Campaign Rule list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -15304,7 +14777,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignRuleEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignRuleEntityListing>> GetOutboundCampaignrulesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -15388,6 +14860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer campaigns. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -15405,7 +14878,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignEntityListing</returns>
         
-        
         public CampaignEntityListing GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignEntityListing> localVarResponse = GetOutboundCampaignsWithHttpInfo(pageSize, pageNumber, filterType, name, id, contactListId, dncListIds, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
@@ -15414,6 +14886,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer campaigns. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -15430,7 +14903,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignEntityListing</returns>
-        
         
         public ApiResponse< CampaignEntityListing > GetOutboundCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
@@ -15519,6 +14991,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer campaigns. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -15536,7 +15009,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<CampaignEntityListing> GetOutboundCampaignsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignEntityListing> localVarResponse = await GetOutboundCampaignsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, id, contactListId, dncListIds, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, divisionId, sortBy, sortOrder);
@@ -15546,6 +15018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer campaigns. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -15562,7 +15035,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
@@ -15652,6 +15124,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query across all types of campaigns by division 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -15663,7 +15136,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CommonCampaignEntityListing</returns>
         
-        
         public CommonCampaignEntityListing GetOutboundCampaignsAll (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
         {
              ApiResponse<CommonCampaignEntityListing> localVarResponse = GetOutboundCampaignsAllWithHttpInfo(pageSize, pageNumber, id, name, divisionId, mediaType, sortOrder);
@@ -15672,6 +15144,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query across all types of campaigns by division 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -15682,7 +15155,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type(s) (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CommonCampaignEntityListing</returns>
-        
         
         public ApiResponse< CommonCampaignEntityListing > GetOutboundCampaignsAllWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
         { 
@@ -15765,6 +15237,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query across all types of campaigns by division 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -15776,7 +15249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CommonCampaignEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<CommonCampaignEntityListing> GetOutboundCampaignsAllAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
         {
              ApiResponse<CommonCampaignEntityListing> localVarResponse = await GetOutboundCampaignsAllAsyncWithHttpInfo(pageSize, pageNumber, id, name, divisionId, mediaType, sortOrder);
@@ -15786,6 +15258,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query across all types of campaigns by division 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -15796,7 +15269,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type(s) (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CommonCampaignEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CommonCampaignEntityListing>> GetOutboundCampaignsAllAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
         { 
@@ -15880,6 +15352,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query across all types of campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -15891,7 +15364,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CommonCampaignDivisionViewEntityListing</returns>
         
-        
         public CommonCampaignDivisionViewEntityListing GetOutboundCampaignsAllDivisionviews (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
         {
              ApiResponse<CommonCampaignDivisionViewEntityListing> localVarResponse = GetOutboundCampaignsAllDivisionviewsWithHttpInfo(pageSize, pageNumber, id, name, divisionId, mediaType, sortOrder);
@@ -15900,6 +15372,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query across all types of campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -15910,7 +15383,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type(s) (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CommonCampaignDivisionViewEntityListing</returns>
-        
         
         public ApiResponse< CommonCampaignDivisionViewEntityListing > GetOutboundCampaignsAllDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
         { 
@@ -15993,6 +15465,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query across all types of campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -16004,7 +15477,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CommonCampaignDivisionViewEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<CommonCampaignDivisionViewEntityListing> GetOutboundCampaignsAllDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
         {
              ApiResponse<CommonCampaignDivisionViewEntityListing> localVarResponse = await GetOutboundCampaignsAllDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, id, name, divisionId, mediaType, sortOrder);
@@ -16014,6 +15486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query across all types of campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -16024,7 +15497,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type(s) (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CommonCampaignDivisionViewEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CommonCampaignDivisionViewEntityListing>> GetOutboundCampaignsAllDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
         { 
@@ -16107,12 +15579,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a basic Campaign information object This returns a simplified version of a Campaign, consisting of name and division.
+        /// Get a basic Campaign information object 
+        /// This returns a simplified version of a Campaign, consisting of name and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignDivisionView</returns>
-        
         
         public CampaignDivisionView GetOutboundCampaignsDivisionview (string campaignId)
         {
@@ -16121,12 +15593,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a basic Campaign information object This returns a simplified version of a Campaign, consisting of name and division.
+        /// Get a basic Campaign information object 
+        /// This returns a simplified version of a Campaign, consisting of name and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignDivisionView</returns>
-        
         
         public ApiResponse< CampaignDivisionView > GetOutboundCampaignsDivisionviewWithHttpInfo (string campaignId)
         { 
@@ -16205,12 +15677,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a basic Campaign information object This returns a simplified version of a Campaign, consisting of name and division.
+        /// Get a basic Campaign information object 
+        /// This returns a simplified version of a Campaign, consisting of name and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignDivisionView</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignDivisionView> GetOutboundCampaignsDivisionviewAsync (string campaignId)
         {
@@ -16220,12 +15692,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a basic Campaign information object This returns a simplified version of a Campaign, consisting of name and division.
+        /// Get a basic Campaign information object 
+        /// This returns a simplified version of a Campaign, consisting of name and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignDivisionView)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignDivisionView>> GetOutboundCampaignsDivisionviewAsyncWithHttpInfo (string campaignId)
         { 
@@ -16306,7 +15778,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query a list of basic Campaign information objects This returns a simplified version of a Campaign, consisting of name and division.
+        /// Query a list of basic Campaign information objects 
+        /// This returns a simplified version of a Campaign, consisting of name and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -16318,7 +15791,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignDivisionViewListing</returns>
         
-        
         public CampaignDivisionViewListing GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignDivisionViewListing> localVarResponse = GetOutboundCampaignsDivisionviewsWithHttpInfo(pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
@@ -16326,7 +15798,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query a list of basic Campaign information objects This returns a simplified version of a Campaign, consisting of name and division.
+        /// Query a list of basic Campaign information objects 
+        /// This returns a simplified version of a Campaign, consisting of name and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -16337,7 +15810,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignDivisionViewListing</returns>
-        
         
         public ApiResponse< CampaignDivisionViewListing > GetOutboundCampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         { 
@@ -16419,7 +15891,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query a list of basic Campaign information objects This returns a simplified version of a Campaign, consisting of name and division.
+        /// Query a list of basic Campaign information objects 
+        /// This returns a simplified version of a Campaign, consisting of name and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -16431,7 +15904,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignDivisionViewListing</returns>
         
-        
         public async System.Threading.Tasks.Task<CampaignDivisionViewListing> GetOutboundCampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignDivisionViewListing> localVarResponse = await GetOutboundCampaignsDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
@@ -16440,7 +15912,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query a list of basic Campaign information objects This returns a simplified version of a Campaign, consisting of name and division.
+        /// Query a list of basic Campaign information objects 
+        /// This returns a simplified version of a Campaign, consisting of name and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -16451,7 +15924,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignDivisionViewListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignDivisionViewListing>> GetOutboundCampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         { 
@@ -16535,13 +16007,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ContactList</returns>
-        
         
         public ContactList GetOutboundContactlist (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
         {
@@ -16551,13 +16023,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of ContactList</returns>
-        
         
         public ApiResponse< ContactList > GetOutboundContactlistWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
         { 
@@ -16639,13 +16111,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ContactList</returns>
-        
         
         public async System.Threading.Tasks.Task<ContactList> GetOutboundContactlistAsync (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
         {
@@ -16656,13 +16128,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactList>> GetOutboundContactlistAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
         { 
@@ -16746,12 +16218,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>DialerContact</returns>
-        
         
         public DialerContact GetOutboundContactlistContact (string contactListId, string contactId)
         {
@@ -16761,12 +16233,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of DialerContact</returns>
-        
         
         public ApiResponse< DialerContact > GetOutboundContactlistContactWithHttpInfo (string contactListId, string contactId)
         { 
@@ -16850,12 +16322,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of DialerContact</returns>
-        
         
         public async System.Threading.Tasks.Task<DialerContact> GetOutboundContactlistContactAsync (string contactListId, string contactId)
         {
@@ -16866,12 +16338,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> GetOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId)
         { 
@@ -16958,12 +16430,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the URI of a contact list export. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>ExportUri</returns>
-        
         
         public ExportUri GetOutboundContactlistExport (string contactListId, string download = null)
         {
@@ -16973,12 +16445,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the URI of a contact list export. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>ApiResponse of ExportUri</returns>
-        
         
         public ApiResponse< ExportUri > GetOutboundContactlistExportWithHttpInfo (string contactListId, string download = null)
         { 
@@ -17059,12 +16531,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the URI of a contact list export. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>Task of ExportUri</returns>
-        
         
         public async System.Threading.Tasks.Task<ExportUri> GetOutboundContactlistExportAsync (string contactListId, string download = null)
         {
@@ -17075,12 +16547,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the URI of a contact list export. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>Task of ApiResponse (ExportUri)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExportUri>> GetOutboundContactlistExportAsyncWithHttpInfo (string contactListId, string download = null)
         { 
@@ -17163,11 +16635,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer contactList import status. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ImportStatus</returns>
-        
         
         public ImportStatus GetOutboundContactlistImportstatus (string contactListId)
         {
@@ -17177,11 +16649,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer contactList import status. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
-        
         
         public ApiResponse< ImportStatus > GetOutboundContactlistImportstatusWithHttpInfo (string contactListId)
         { 
@@ -17261,11 +16733,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer contactList import status. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ImportStatus</returns>
-        
         
         public async System.Threading.Tasks.Task<ImportStatus> GetOutboundContactlistImportstatusAsync (string contactListId)
         {
@@ -17276,11 +16748,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer contactList import status. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetOutboundContactlistImportstatusAsyncWithHttpInfo (string contactListId)
         { 
@@ -17362,11 +16834,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Preview the result of applying Automatic Time Zone Mapping to a contact list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>TimeZoneMappingPreview</returns>
-        
         
         public TimeZoneMappingPreview GetOutboundContactlistTimezonemappingpreview (string contactListId)
         {
@@ -17376,11 +16848,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Preview the result of applying Automatic Time Zone Mapping to a contact list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of TimeZoneMappingPreview</returns>
-        
         
         public ApiResponse< TimeZoneMappingPreview > GetOutboundContactlistTimezonemappingpreviewWithHttpInfo (string contactListId)
         { 
@@ -17460,11 +16932,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Preview the result of applying Automatic Time Zone Mapping to a contact list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of TimeZoneMappingPreview</returns>
-        
         
         public async System.Threading.Tasks.Task<TimeZoneMappingPreview> GetOutboundContactlistTimezonemappingpreviewAsync (string contactListId)
         {
@@ -17475,11 +16947,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Preview the result of applying Automatic Time Zone Mapping to a contact list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (TimeZoneMappingPreview)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<TimeZoneMappingPreview>> GetOutboundContactlistTimezonemappingpreviewAsyncWithHttpInfo (string contactListId)
         { 
@@ -17561,11 +17033,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Contact list filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>ContactListFilter</returns>
-        
         
         public ContactListFilter GetOutboundContactlistfilter (string contactListFilterId)
         {
@@ -17575,11 +17047,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Contact list filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>ApiResponse of ContactListFilter</returns>
-        
         
         public ApiResponse< ContactListFilter > GetOutboundContactlistfilterWithHttpInfo (string contactListFilterId)
         { 
@@ -17659,11 +17131,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Contact list filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>Task of ContactListFilter</returns>
-        
         
         public async System.Threading.Tasks.Task<ContactListFilter> GetOutboundContactlistfilterAsync (string contactListFilterId)
         {
@@ -17674,11 +17146,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Contact list filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <returns>Task of ApiResponse (ContactListFilter)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> GetOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId)
         { 
@@ -17760,6 +17232,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Contact list filters 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -17772,7 +17245,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <returns>ContactListFilterEntityListing</returns>
         
-        
         public ContactListFilterEntityListing GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
         {
              ApiResponse<ContactListFilterEntityListing> localVarResponse = GetOutboundContactlistfiltersWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListId);
@@ -17781,6 +17253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Contact list filters 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -17792,7 +17265,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <returns>ApiResponse of ContactListFilterEntityListing</returns>
-        
         
         public ApiResponse< ContactListFilterEntityListing > GetOutboundContactlistfiltersWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
         { 
@@ -17876,6 +17348,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Contact list filters 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -17888,7 +17361,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <returns>Task of ContactListFilterEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ContactListFilterEntityListing> GetOutboundContactlistfiltersAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
         {
              ApiResponse<ContactListFilterEntityListing> localVarResponse = await GetOutboundContactlistfiltersAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListId);
@@ -17898,6 +17370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Contact list filters 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -17909,7 +17382,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <returns>Task of ApiResponse (ContactListFilterEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactListFilterEntityListing>> GetOutboundContactlistfiltersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
         { 
@@ -17994,6 +17466,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of contact lists. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -18009,7 +17482,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListEntityListing</returns>
         
-        
         public ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ContactListEntityListing> localVarResponse = GetOutboundContactlistsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, sortBy, sortOrder);
@@ -18018,6 +17490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of contact lists. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -18032,7 +17505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListEntityListing</returns>
-        
         
         public ApiResponse< ContactListEntityListing > GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
@@ -18119,6 +17591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of contact lists. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -18134,7 +17607,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ContactListEntityListing> localVarResponse = await GetOutboundContactlistsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, sortBy, sortOrder);
@@ -18144,6 +17616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of contact lists. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -18158,7 +17631,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
@@ -18245,14 +17717,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a basic ContactList information object This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
+        /// Get a basic ContactList information object 
+        /// This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contactlist ID</param>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ContactListDivisionView</returns>
-        
         
         public ContactListDivisionView GetOutboundContactlistsDivisionview (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
         {
@@ -18261,14 +17733,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a basic ContactList information object This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
+        /// Get a basic ContactList information object 
+        /// This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contactlist ID</param>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of ContactListDivisionView</returns>
-        
         
         public ApiResponse< ContactListDivisionView > GetOutboundContactlistsDivisionviewWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
         { 
@@ -18349,14 +17821,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a basic ContactList information object This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
+        /// Get a basic ContactList information object 
+        /// This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contactlist ID</param>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ContactListDivisionView</returns>
-        
         
         public async System.Threading.Tasks.Task<ContactListDivisionView> GetOutboundContactlistsDivisionviewAsync (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
         {
@@ -18366,14 +17838,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a basic ContactList information object This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
+        /// Get a basic ContactList information object 
+        /// This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contactlist ID</param>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ContactListDivisionView)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactListDivisionView>> GetOutboundContactlistsDivisionviewAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
         { 
@@ -18456,7 +17928,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query a list of simplified contact list objects. This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
+        /// Query a list of simplified contact list objects. 
+        /// This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -18470,7 +17943,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListDivisionViewListing</returns>
         
-        
         public ContactListDivisionViewListing GetOutboundContactlistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ContactListDivisionViewListing> localVarResponse = GetOutboundContactlistsDivisionviewsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
@@ -18478,7 +17950,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query a list of simplified contact list objects. This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
+        /// Query a list of simplified contact list objects. 
+        /// This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -18491,7 +17964,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListDivisionViewListing</returns>
-        
         
         public ApiResponse< ContactListDivisionViewListing > GetOutboundContactlistsDivisionviewsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         { 
@@ -18575,7 +18047,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query a list of simplified contact list objects. This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
+        /// Query a list of simplified contact list objects. 
+        /// This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -18589,7 +18062,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListDivisionViewListing</returns>
         
-        
         public async System.Threading.Tasks.Task<ContactListDivisionViewListing> GetOutboundContactlistsDivisionviewsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ContactListDivisionViewListing> localVarResponse = await GetOutboundContactlistsDivisionviewsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);
@@ -18598,7 +18070,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query a list of simplified contact list objects. This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
+        /// Query a list of simplified contact list objects. 
+        /// This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -18611,7 +18084,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListDivisionViewListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactListDivisionViewListing>> GetOutboundContactlistsDivisionviewsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         { 
@@ -18697,11 +18169,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>DigitalRuleSet</returns>
-        
         
         public DigitalRuleSet GetOutboundDigitalruleset (string digitalRuleSetId)
         {
@@ -18711,11 +18183,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>ApiResponse of DigitalRuleSet</returns>
-        
         
         public ApiResponse< DigitalRuleSet > GetOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId)
         { 
@@ -18795,11 +18267,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>Task of DigitalRuleSet</returns>
-        
         
         public async System.Threading.Tasks.Task<DigitalRuleSet> GetOutboundDigitalrulesetAsync (string digitalRuleSetId)
         {
@@ -18810,11 +18282,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> GetOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId)
         { 
@@ -18896,6 +18368,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Outbound Digital Rule Sets 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -18906,7 +18379,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
         /// <returns>DigitalRuleSetEntityListing</returns>
         
-        
         public DigitalRuleSetEntityListing GetOutboundDigitalrulesets (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
         {
              ApiResponse<DigitalRuleSetEntityListing> localVarResponse = GetOutboundDigitalrulesetsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id);
@@ -18915,6 +18387,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Outbound Digital Rule Sets 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -18924,7 +18397,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
         /// <returns>ApiResponse of DigitalRuleSetEntityListing</returns>
-        
         
         public ApiResponse< DigitalRuleSetEntityListing > GetOutboundDigitalrulesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
         { 
@@ -19006,6 +18478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Outbound Digital Rule Sets 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -19016,7 +18489,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
         /// <returns>Task of DigitalRuleSetEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<DigitalRuleSetEntityListing> GetOutboundDigitalrulesetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
         {
              ApiResponse<DigitalRuleSetEntityListing> localVarResponse = await GetOutboundDigitalrulesetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id);
@@ -19026,6 +18498,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Outbound Digital Rule Sets 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -19035,7 +18508,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
         /// <returns>Task of ApiResponse (DigitalRuleSetEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSetEntityListing>> GetOutboundDigitalrulesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
         { 
@@ -19118,13 +18590,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>DncList</returns>
-        
         
         public DncList GetOutboundDnclist (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
         {
@@ -19134,13 +18606,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of DncList</returns>
-        
         
         public ApiResponse< DncList > GetOutboundDnclistWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
         { 
@@ -19222,13 +18694,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of DncList</returns>
-        
         
         public async System.Threading.Tasks.Task<DncList> GetOutboundDnclistAsync (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
         {
@@ -19239,13 +18711,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DncList>> GetOutboundDnclistAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
         { 
@@ -19329,12 +18801,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the URI of a DNC list export. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>ExportUri</returns>
-        
         
         public ExportUri GetOutboundDnclistExport (string dncListId, string download = null)
         {
@@ -19344,12 +18816,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the URI of a DNC list export. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>ApiResponse of ExportUri</returns>
-        
         
         public ApiResponse< ExportUri > GetOutboundDnclistExportWithHttpInfo (string dncListId, string download = null)
         { 
@@ -19430,12 +18902,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the URI of a DNC list export. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>Task of ExportUri</returns>
-        
         
         public async System.Threading.Tasks.Task<ExportUri> GetOutboundDnclistExportAsync (string dncListId, string download = null)
         {
@@ -19446,12 +18918,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the URI of a DNC list export. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="download">Redirect to download uri (optional, default to "false")</param>
         /// <returns>Task of ApiResponse (ExportUri)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ExportUri>> GetOutboundDnclistExportAsyncWithHttpInfo (string dncListId, string download = null)
         { 
@@ -19534,11 +19006,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer dncList import status. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ImportStatus</returns>
-        
         
         public ImportStatus GetOutboundDnclistImportstatus (string dncListId)
         {
@@ -19548,11 +19020,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer dncList import status. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
-        
         
         public ApiResponse< ImportStatus > GetOutboundDnclistImportstatusWithHttpInfo (string dncListId)
         { 
@@ -19632,11 +19104,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer dncList import status. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ImportStatus</returns>
-        
         
         public async System.Threading.Tasks.Task<ImportStatus> GetOutboundDnclistImportstatusAsync (string dncListId)
         {
@@ -19647,11 +19119,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get dialer dncList import status. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetOutboundDnclistImportstatusAsyncWithHttpInfo (string dncListId)
         { 
@@ -19733,6 +19205,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query dialer DNC lists 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
@@ -19748,7 +19221,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>DncListEntityListing</returns>
         
-        
         public DncListEntityListing GetOutboundDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DncListEntityListing> localVarResponse = GetOutboundDnclistsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, dncSourceType, divisionId, sortBy, sortOrder);
@@ -19757,6 +19229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query dialer DNC lists 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
@@ -19771,7 +19244,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of DncListEntityListing</returns>
-        
         
         public ApiResponse< DncListEntityListing > GetOutboundDnclistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
@@ -19858,6 +19330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query dialer DNC lists 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
@@ -19873,7 +19346,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of DncListEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<DncListEntityListing> GetOutboundDnclistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DncListEntityListing> localVarResponse = await GetOutboundDnclistsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, dncSourceType, divisionId, sortBy, sortOrder);
@@ -19883,6 +19355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query dialer DNC lists 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Import status (optional, default to false)</param>
@@ -19897,7 +19370,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (DncListEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DncListEntityListing>> GetOutboundDnclistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
         { 
@@ -19984,14 +19456,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a basic DncList information object This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
+        /// Get a basic DncList information object 
+        /// This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">Dnclist ID</param>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>DncListDivisionView</returns>
-        
         
         public DncListDivisionView GetOutboundDnclistsDivisionview (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
         {
@@ -20000,14 +19472,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a basic DncList information object This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
+        /// Get a basic DncList information object 
+        /// This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">Dnclist ID</param>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of DncListDivisionView</returns>
-        
         
         public ApiResponse< DncListDivisionView > GetOutboundDnclistsDivisionviewWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
         { 
@@ -20088,14 +19560,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a basic DncList information object This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
+        /// Get a basic DncList information object 
+        /// This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">Dnclist ID</param>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of DncListDivisionView</returns>
-        
         
         public async System.Threading.Tasks.Task<DncListDivisionView> GetOutboundDnclistsDivisionviewAsync (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
         {
@@ -20105,14 +19577,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a basic DncList information object This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
+        /// Get a basic DncList information object 
+        /// This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">Dnclist ID</param>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (DncListDivisionView)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DncListDivisionView>> GetOutboundDnclistsDivisionviewAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
         { 
@@ -20195,7 +19667,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query a list of simplified dnc list objects. This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
+        /// Query a list of simplified dnc list objects. 
+        /// This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -20210,7 +19683,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>DncListDivisionViewListing</returns>
         
-        
         public DncListDivisionViewListing GetOutboundDnclistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DncListDivisionViewListing> localVarResponse = GetOutboundDnclistsDivisionviewsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, dncSourceType, id, sortBy, sortOrder);
@@ -20218,7 +19690,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query a list of simplified dnc list objects. This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
+        /// Query a list of simplified dnc list objects. 
+        /// This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -20232,7 +19705,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of DncListDivisionViewListing</returns>
-        
         
         public ApiResponse< DncListDivisionViewListing > GetOutboundDnclistsDivisionviewsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         { 
@@ -20317,7 +19789,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query a list of simplified dnc list objects. This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
+        /// Query a list of simplified dnc list objects. 
+        /// This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -20332,7 +19805,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of DncListDivisionViewListing</returns>
         
-        
         public async System.Threading.Tasks.Task<DncListDivisionViewListing> GetOutboundDnclistsDivisionviewsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DncListDivisionViewListing> localVarResponse = await GetOutboundDnclistsDivisionviewsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, dncSourceType, id, sortBy, sortOrder);
@@ -20341,7 +19813,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query a list of simplified dnc list objects. This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
+        /// Query a list of simplified dnc list objects. 
+        /// This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -20355,7 +19828,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (DncListDivisionViewListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DncListDivisionViewListing>> GetOutboundDnclistsDivisionviewsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null)
         { 
@@ -20442,11 +19914,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Dialer Event 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event Log ID</param>
         /// <returns>EventLog</returns>
-        
         
         public EventLog GetOutboundEvent (string eventId)
         {
@@ -20456,11 +19928,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Dialer Event 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event Log ID</param>
         /// <returns>ApiResponse of EventLog</returns>
-        
         
         public ApiResponse< EventLog > GetOutboundEventWithHttpInfo (string eventId)
         { 
@@ -20540,11 +20012,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Dialer Event 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event Log ID</param>
         /// <returns>Task of EventLog</returns>
-        
         
         public async System.Threading.Tasks.Task<EventLog> GetOutboundEventAsync (string eventId)
         {
@@ -20555,11 +20027,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Dialer Event 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventId">Event Log ID</param>
         /// <returns>Task of ApiResponse (EventLog)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<EventLog>> GetOutboundEventAsyncWithHttpInfo (string eventId)
         { 
@@ -20641,6 +20113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Event Logs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -20652,7 +20125,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>DialerEventEntityListing</returns>
         
-        
         public DialerEventEntityListing GetOutboundEvents (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DialerEventEntityListing> localVarResponse = GetOutboundEventsWithHttpInfo(pageSize, pageNumber, filterType, category, level, sortBy, sortOrder);
@@ -20661,6 +20133,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Event Logs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -20671,7 +20144,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of DialerEventEntityListing</returns>
-        
         
         public ApiResponse< DialerEventEntityListing > GetOutboundEventsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
         { 
@@ -20754,6 +20226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Event Logs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -20765,7 +20238,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of DialerEventEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<DialerEventEntityListing> GetOutboundEventsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DialerEventEntityListing> localVarResponse = await GetOutboundEventsAsyncWithHttpInfo(pageSize, pageNumber, filterType, category, level, sortBy, sortOrder);
@@ -20775,6 +20247,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query Event Logs 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -20785,7 +20258,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (DialerEventEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DialerEventEntityListing>> GetOutboundEventsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
         { 
@@ -20869,11 +20341,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>MessagingCampaign</returns>
-        
         
         public MessagingCampaign GetOutboundMessagingcampaign (string messagingCampaignId)
         {
@@ -20883,11 +20355,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaign</returns>
-        
         
         public ApiResponse< MessagingCampaign > GetOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId)
         { 
@@ -20967,11 +20439,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaign</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaign> GetOutboundMessagingcampaignAsync (string messagingCampaignId)
         {
@@ -20982,11 +20454,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> GetOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId)
         { 
@@ -21068,11 +20540,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get messaging campaign diagnostics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>MessagingCampaignDiagnostics</returns>
-        
         
         public MessagingCampaignDiagnostics GetOutboundMessagingcampaignDiagnostics (string messagingCampaignId)
         {
@@ -21082,11 +20554,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get messaging campaign diagnostics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaignDiagnostics</returns>
-        
         
         public ApiResponse< MessagingCampaignDiagnostics > GetOutboundMessagingcampaignDiagnosticsWithHttpInfo (string messagingCampaignId)
         { 
@@ -21166,11 +20638,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get messaging campaign diagnostics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaignDiagnostics</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaignDiagnostics> GetOutboundMessagingcampaignDiagnosticsAsync (string messagingCampaignId)
         {
@@ -21181,11 +20653,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get messaging campaign diagnostics 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaignDiagnostics)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDiagnostics>> GetOutboundMessagingcampaignDiagnosticsAsyncWithHttpInfo (string messagingCampaignId)
         { 
@@ -21267,11 +20739,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get messaging campaign's progress 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>CampaignProgress</returns>
-        
         
         public CampaignProgress GetOutboundMessagingcampaignProgress (string messagingCampaignId)
         {
@@ -21281,11 +20753,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get messaging campaign's progress 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of CampaignProgress</returns>
-        
         
         public ApiResponse< CampaignProgress > GetOutboundMessagingcampaignProgressWithHttpInfo (string messagingCampaignId)
         { 
@@ -21365,11 +20837,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get messaging campaign's progress 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of CampaignProgress</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignProgress> GetOutboundMessagingcampaignProgressAsync (string messagingCampaignId)
         {
@@ -21380,11 +20852,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get messaging campaign's progress 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignProgress)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetOutboundMessagingcampaignProgressAsyncWithHttpInfo (string messagingCampaignId)
         { 
@@ -21466,6 +20938,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Messaging Campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -21480,7 +20953,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <returns>MessagingCampaignEntityListing</returns>
         
-        
         public MessagingCampaignEntityListing GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null)
         {
              ApiResponse<MessagingCampaignEntityListing> localVarResponse = GetOutboundMessagingcampaignsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id);
@@ -21489,6 +20961,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Messaging Campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -21502,7 +20975,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <returns>ApiResponse of MessagingCampaignEntityListing</returns>
-        
         
         public ApiResponse< MessagingCampaignEntityListing > GetOutboundMessagingcampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null)
         { 
@@ -21588,6 +21060,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Messaging Campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -21602,7 +21075,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <returns>Task of MessagingCampaignEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null)
         {
              ApiResponse<MessagingCampaignEntityListing> localVarResponse = await GetOutboundMessagingcampaignsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id);
@@ -21612,6 +21084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Messaging Campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -21625,7 +21098,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <returns>Task of ApiResponse (MessagingCampaignEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignEntityListing>> GetOutboundMessagingcampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null)
         { 
@@ -21711,12 +21183,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a basic Messaging Campaign information object This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+        /// Get a basic Messaging Campaign information object 
+        /// This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>MessagingCampaignDivisionView</returns>
-        
         
         public MessagingCampaignDivisionView GetOutboundMessagingcampaignsDivisionview (string messagingCampaignId)
         {
@@ -21725,12 +21197,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a basic Messaging Campaign information object This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+        /// Get a basic Messaging Campaign information object 
+        /// This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaignDivisionView</returns>
-        
         
         public ApiResponse< MessagingCampaignDivisionView > GetOutboundMessagingcampaignsDivisionviewWithHttpInfo (string messagingCampaignId)
         { 
@@ -21809,12 +21281,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a basic Messaging Campaign information object This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+        /// Get a basic Messaging Campaign information object 
+        /// This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaignDivisionView</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaignDivisionView> GetOutboundMessagingcampaignsDivisionviewAsync (string messagingCampaignId)
         {
@@ -21824,12 +21296,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a basic Messaging Campaign information object This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+        /// Get a basic Messaging Campaign information object 
+        /// This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaignDivisionView)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionView>> GetOutboundMessagingcampaignsDivisionviewAsyncWithHttpInfo (string messagingCampaignId)
         { 
@@ -21910,7 +21382,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query a list of basic Messaging Campaign information objects This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+        /// Query a list of basic Messaging Campaign information objects 
+        /// This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -21922,7 +21395,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>MessagingCampaignDivisionViewEntityListing</returns>
         
-        
         public MessagingCampaignDivisionViewEntityListing GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
         {
              ApiResponse<MessagingCampaignDivisionViewEntityListing> localVarResponse = GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo(pageSize, pageNumber, sortOrder, name, type, id, senderSmsPhoneNumber);
@@ -21930,7 +21402,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query a list of basic Messaging Campaign information objects This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+        /// Query a list of basic Messaging Campaign information objects 
+        /// This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -21941,7 +21414,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>ApiResponse of MessagingCampaignDivisionViewEntityListing</returns>
-        
         
         public ApiResponse< MessagingCampaignDivisionViewEntityListing > GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
         { 
@@ -22023,7 +21495,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query a list of basic Messaging Campaign information objects This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+        /// Query a list of basic Messaging Campaign information objects 
+        /// This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -22035,7 +21508,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>Task of MessagingCampaignDivisionViewEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
         {
              ApiResponse<MessagingCampaignDivisionViewEntityListing> localVarResponse = await GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name, type, id, senderSmsPhoneNumber);
@@ -22044,7 +21516,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query a list of basic Messaging Campaign information objects This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+        /// Query a list of basic Messaging Campaign information objects 
+        /// This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -22055,7 +21528,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="senderSmsPhoneNumber">Sender SMS Phone Number (optional)</param>
         /// <returns>Task of ApiResponse (MessagingCampaignDivisionViewEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionViewEntityListing>> GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
         { 
@@ -22139,11 +21611,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Rule Set by ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>RuleSet</returns>
-        
         
         public RuleSet GetOutboundRuleset (string ruleSetId)
         {
@@ -22153,11 +21625,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Rule Set by ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        
         
         public ApiResponse< RuleSet > GetOutboundRulesetWithHttpInfo (string ruleSetId)
         { 
@@ -22237,11 +21709,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Rule Set by ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of RuleSet</returns>
-        
         
         public async System.Threading.Tasks.Task<RuleSet> GetOutboundRulesetAsync (string ruleSetId)
         {
@@ -22252,11 +21724,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Rule Set by ID. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> GetOutboundRulesetAsyncWithHttpInfo (string ruleSetId)
         { 
@@ -22338,6 +21810,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Rule Sets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -22349,7 +21822,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>RuleSetEntityListing</returns>
         
-        
         public RuleSetEntityListing GetOutboundRulesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<RuleSetEntityListing> localVarResponse = GetOutboundRulesetsWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -22358,6 +21830,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Rule Sets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -22368,7 +21841,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of RuleSetEntityListing</returns>
-        
         
         public ApiResponse< RuleSetEntityListing > GetOutboundRulesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -22451,6 +21923,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Rule Sets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -22462,7 +21935,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of RuleSetEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<RuleSetEntityListing> GetOutboundRulesetsAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<RuleSetEntityListing> localVarResponse = await GetOutboundRulesetsAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -22472,6 +21944,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of Rule Sets. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -22482,7 +21955,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (RuleSetEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<RuleSetEntityListing>> GetOutboundRulesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -22566,11 +22038,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignSchedule</returns>
-        
         
         public CampaignSchedule GetOutboundSchedulesCampaign (string campaignId)
         {
@@ -22580,11 +22052,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
-        
         
         public ApiResponse< CampaignSchedule > GetOutboundSchedulesCampaignWithHttpInfo (string campaignId)
         { 
@@ -22664,11 +22136,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignSchedule</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignSchedule> GetOutboundSchedulesCampaignAsync (string campaignId)
         {
@@ -22679,11 +22151,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> GetOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId)
         { 
@@ -22765,10 +22237,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of dialer campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;CampaignSchedule&gt;</returns>
-        
         
         public List<CampaignSchedule> GetOutboundSchedulesCampaigns ()
         {
@@ -22778,10 +22250,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of dialer campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;CampaignSchedule&gt;</returns>
-        
         
         public ApiResponse< List<CampaignSchedule> > GetOutboundSchedulesCampaignsWithHttpInfo ()
         { 
@@ -22857,10 +22329,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of dialer campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;CampaignSchedule&gt;</returns>
-        
         
         public async System.Threading.Tasks.Task<List<CampaignSchedule>> GetOutboundSchedulesCampaignsAsync ()
         {
@@ -22871,10 +22343,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of dialer campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;CampaignSchedule&gt;)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<CampaignSchedule>>> GetOutboundSchedulesCampaignsAsyncWithHttpInfo ()
         { 
@@ -22951,11 +22423,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>EmailCampaignSchedule</returns>
-        
         
         public EmailCampaignSchedule GetOutboundSchedulesEmailcampaign (string emailCampaignId)
         {
@@ -22965,11 +22437,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>ApiResponse of EmailCampaignSchedule</returns>
-        
         
         public ApiResponse< EmailCampaignSchedule > GetOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId)
         { 
@@ -23049,11 +22521,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>Task of EmailCampaignSchedule</returns>
-        
         
         public async System.Threading.Tasks.Task<EmailCampaignSchedule> GetOutboundSchedulesEmailcampaignAsync (string emailCampaignId)
         {
@@ -23064,11 +22536,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <returns>Task of ApiResponse (EmailCampaignSchedule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmailCampaignSchedule>> GetOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId)
         { 
@@ -23150,10 +22622,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of email campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>MessagingCampaignScheduleEntityListing</returns>
-        
         
         public MessagingCampaignScheduleEntityListing GetOutboundSchedulesEmailcampaigns ()
         {
@@ -23163,10 +22635,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of email campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
-        
         
         public ApiResponse< MessagingCampaignScheduleEntityListing > GetOutboundSchedulesEmailcampaignsWithHttpInfo ()
         { 
@@ -23242,10 +22714,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of email campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsAsync ()
         {
@@ -23256,10 +22728,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of email campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo ()
         { 
@@ -23336,11 +22808,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>MessagingCampaignSchedule</returns>
-        
         
         public MessagingCampaignSchedule GetOutboundSchedulesMessagingcampaign (string messagingCampaignId)
         {
@@ -23350,11 +22822,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>ApiResponse of MessagingCampaignSchedule</returns>
-        
         
         public ApiResponse< MessagingCampaignSchedule > GetOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId)
         { 
@@ -23434,11 +22906,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>Task of MessagingCampaignSchedule</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaignSchedule> GetOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId)
         {
@@ -23449,11 +22921,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <returns>Task of ApiResponse (MessagingCampaignSchedule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignSchedule>> GetOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId)
         { 
@@ -23535,10 +23007,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of messaging campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>MessagingCampaignScheduleEntityListing</returns>
-        
         
         public MessagingCampaignScheduleEntityListing GetOutboundSchedulesMessagingcampaigns ()
         {
@@ -23548,10 +23020,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of messaging campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
-        
         
         public ApiResponse< MessagingCampaignScheduleEntityListing > GetOutboundSchedulesMessagingcampaignsWithHttpInfo ()
         { 
@@ -23627,10 +23099,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of messaging campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesMessagingcampaignsAsync ()
         {
@@ -23641,10 +23113,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of messaging campaign schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesMessagingcampaignsAsyncWithHttpInfo ()
         { 
@@ -23721,11 +23193,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>SequenceSchedule</returns>
-        
         
         public SequenceSchedule GetOutboundSchedulesSequence (string sequenceId)
         {
@@ -23735,11 +23207,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
-        
         
         public ApiResponse< SequenceSchedule > GetOutboundSchedulesSequenceWithHttpInfo (string sequenceId)
         { 
@@ -23819,11 +23291,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of SequenceSchedule</returns>
-        
         
         public async System.Threading.Tasks.Task<SequenceSchedule> GetOutboundSchedulesSequenceAsync (string sequenceId)
         {
@@ -23834,11 +23306,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> GetOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId)
         { 
@@ -23920,10 +23392,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of dialer sequence schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;SequenceSchedule&gt;</returns>
-        
         
         public List<SequenceSchedule> GetOutboundSchedulesSequences ()
         {
@@ -23933,10 +23405,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of dialer sequence schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;SequenceSchedule&gt;</returns>
-        
         
         public ApiResponse< List<SequenceSchedule> > GetOutboundSchedulesSequencesWithHttpInfo ()
         { 
@@ -24012,10 +23484,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of dialer sequence schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;SequenceSchedule&gt;</returns>
-        
         
         public async System.Threading.Tasks.Task<List<SequenceSchedule>> GetOutboundSchedulesSequencesAsync ()
         {
@@ -24026,10 +23498,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for a list of dialer sequence schedules. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;SequenceSchedule&gt;)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> GetOutboundSchedulesSequencesAsyncWithHttpInfo ()
         { 
@@ -24106,11 +23578,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>CampaignSequence</returns>
-        
         
         public CampaignSequence GetOutboundSequence (string sequenceId)
         {
@@ -24120,11 +23592,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        
         
         public ApiResponse< CampaignSequence > GetOutboundSequenceWithHttpInfo (string sequenceId)
         { 
@@ -24204,11 +23676,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of CampaignSequence</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignSequence> GetOutboundSequenceAsync (string sequenceId)
         {
@@ -24219,11 +23691,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a dialer campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> GetOutboundSequenceAsyncWithHttpInfo (string sequenceId)
         { 
@@ -24305,6 +23777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer campaign sequences. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -24316,7 +23789,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CampaignSequenceEntityListing</returns>
         
-        
         public CampaignSequenceEntityListing GetOutboundSequences (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignSequenceEntityListing> localVarResponse = GetOutboundSequencesWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -24325,6 +23797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer campaign sequences. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -24335,7 +23808,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CampaignSequenceEntityListing</returns>
-        
         
         public ApiResponse< CampaignSequenceEntityListing > GetOutboundSequencesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -24418,6 +23890,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer campaign sequences. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -24429,7 +23902,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignSequenceEntityListing</returns>
         
-        
         public async System.Threading.Tasks.Task<CampaignSequenceEntityListing> GetOutboundSequencesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignSequenceEntityListing> localVarResponse = await GetOutboundSequencesAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
@@ -24439,6 +23911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of dialer campaign sequences. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
@@ -24449,7 +23922,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignSequenceEntityListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSequenceEntityListing>> GetOutboundSequencesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
@@ -24533,10 +24005,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the outbound settings for this organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OutboundSettings</returns>
-        
         
         public OutboundSettings GetOutboundSettings ()
         {
@@ -24546,10 +24018,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the outbound settings for this organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OutboundSettings</returns>
-        
         
         public ApiResponse< OutboundSettings > GetOutboundSettingsWithHttpInfo ()
         { 
@@ -24625,10 +24097,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the outbound settings for this organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OutboundSettings</returns>
-        
         
         public async System.Threading.Tasks.Task<OutboundSettings> GetOutboundSettingsAsync ()
         {
@@ -24639,10 +24111,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the outbound settings for this organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OutboundSettings)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<OutboundSettings>> GetOutboundSettingsAsyncWithHttpInfo ()
         { 
@@ -24719,10 +24191,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Dialer wrap up code mapping. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WrapUpCodeMapping</returns>
-        
         
         public WrapUpCodeMapping GetOutboundWrapupcodemappings ()
         {
@@ -24732,10 +24204,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Dialer wrap up code mapping. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
-        
         
         public ApiResponse< WrapUpCodeMapping > GetOutboundWrapupcodemappingsWithHttpInfo ()
         { 
@@ -24811,10 +24283,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Dialer wrap up code mapping. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WrapUpCodeMapping</returns>
-        
         
         public async System.Threading.Tasks.Task<WrapUpCodeMapping> GetOutboundWrapupcodemappingsAsync ()
         {
@@ -24825,10 +24297,10 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the Dialer wrap up code mapping. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> GetOutboundWrapupcodemappingsAsyncWithHttpInfo ()
         { 
@@ -24904,13 +24376,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add entries to or delete entries from a DNC list. Only Internal DNC lists may be deleted from
+        /// Add entries to or delete entries from a DNC list. 
+        /// Only Internal DNC lists may be deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Custom exclusion column entries</param>
         /// <returns></returns>
-        
         
         public void PatchOutboundDnclistCustomexclusioncolumns (string dncListId, DncPatchCustomExclusionColumnsRequest body)
         {
@@ -24918,13 +24390,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add entries to or delete entries from a DNC list. Only Internal DNC lists may be deleted from
+        /// Add entries to or delete entries from a DNC list. 
+        /// Only Internal DNC lists may be deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Custom exclusion column entries</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PatchOutboundDnclistCustomexclusioncolumnsWithHttpInfo (string dncListId, DncPatchCustomExclusionColumnsRequest body)
         { 
@@ -25012,13 +24484,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add entries to or delete entries from a DNC list. Only Internal DNC lists may be deleted from
+        /// Add entries to or delete entries from a DNC list. 
+        /// Only Internal DNC lists may be deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Custom exclusion column entries</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PatchOutboundDnclistCustomexclusioncolumnsAsync (string dncListId, DncPatchCustomExclusionColumnsRequest body)
         {
@@ -25027,13 +24499,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add entries to or delete entries from a DNC list. Only Internal DNC lists may be deleted from
+        /// Add entries to or delete entries from a DNC list. 
+        /// Only Internal DNC lists may be deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Custom exclusion column entries</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo (string dncListId, DncPatchCustomExclusionColumnsRequest body)
         { 
@@ -25124,13 +24596,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add emails to or Delete emails from a DNC list. Only Internal DNC lists may be added to or deleted from
+        /// Add emails to or Delete emails from a DNC list. 
+        /// Only Internal DNC lists may be added to or deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Emails</param>
         /// <returns></returns>
-        
         
         public void PatchOutboundDnclistEmailaddresses (string dncListId, DncPatchEmailsRequest body)
         {
@@ -25138,13 +24610,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add emails to or Delete emails from a DNC list. Only Internal DNC lists may be added to or deleted from
+        /// Add emails to or Delete emails from a DNC list. 
+        /// Only Internal DNC lists may be added to or deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Emails</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PatchOutboundDnclistEmailaddressesWithHttpInfo (string dncListId, DncPatchEmailsRequest body)
         { 
@@ -25232,13 +24704,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add emails to or Delete emails from a DNC list. Only Internal DNC lists may be added to or deleted from
+        /// Add emails to or Delete emails from a DNC list. 
+        /// Only Internal DNC lists may be added to or deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Emails</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PatchOutboundDnclistEmailaddressesAsync (string dncListId, DncPatchEmailsRequest body)
         {
@@ -25247,13 +24719,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add emails to or Delete emails from a DNC list. Only Internal DNC lists may be added to or deleted from
+        /// Add emails to or Delete emails from a DNC list. 
+        /// Only Internal DNC lists may be added to or deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Emails</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistEmailaddressesAsyncWithHttpInfo (string dncListId, DncPatchEmailsRequest body)
         { 
@@ -25344,13 +24816,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add numbers to or delete numbers from a DNC list. Only Internal DNC lists may be added to deleted from
+        /// Add numbers to or delete numbers from a DNC list. 
+        /// Only Internal DNC lists may be added to deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns></returns>
-        
         
         public void PatchOutboundDnclistPhonenumbers (string dncListId, DncPatchPhoneNumbersRequest body)
         {
@@ -25358,13 +24830,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add numbers to or delete numbers from a DNC list. Only Internal DNC lists may be added to deleted from
+        /// Add numbers to or delete numbers from a DNC list. 
+        /// Only Internal DNC lists may be added to deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PatchOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, DncPatchPhoneNumbersRequest body)
         { 
@@ -25452,13 +24924,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add numbers to or delete numbers from a DNC list. Only Internal DNC lists may be added to deleted from
+        /// Add numbers to or delete numbers from a DNC list. 
+        /// Only Internal DNC lists may be added to deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PatchOutboundDnclistPhonenumbersAsync (string dncListId, DncPatchPhoneNumbersRequest body)
         {
@@ -25467,13 +24939,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add numbers to or delete numbers from a DNC list. Only Internal DNC lists may be added to deleted from
+        /// Add numbers to or delete numbers from a DNC list. 
+        /// Only Internal DNC lists may be added to deleted from
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, DncPatchPhoneNumbersRequest body)
         { 
@@ -25565,11 +25037,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the outbound settings for this organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
         /// <returns></returns>
-        
         
         public void PatchOutboundSettings (OutboundSettings body)
         {
@@ -25578,11 +25050,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the outbound settings for this organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PatchOutboundSettingsWithHttpInfo (OutboundSettings body)
         { 
@@ -25667,11 +25139,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the outbound settings for this organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PatchOutboundSettingsAsync (OutboundSettings body)
         {
@@ -25681,11 +25153,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the outbound settings for this organization 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outboundSettings</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundSettingsAsyncWithHttpInfo (OutboundSettings body)
         { 
@@ -25772,11 +25244,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AttemptLimits</param>
         /// <returns>AttemptLimits</returns>
-        
         
         public AttemptLimits PostOutboundAttemptlimits (AttemptLimits body)
         {
@@ -25786,11 +25258,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AttemptLimits</param>
         /// <returns>ApiResponse of AttemptLimits</returns>
-        
         
         public ApiResponse< AttemptLimits > PostOutboundAttemptlimitsWithHttpInfo (AttemptLimits body)
         { 
@@ -25875,11 +25347,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AttemptLimits</param>
         /// <returns>Task of AttemptLimits</returns>
-        
         
         public async System.Threading.Tasks.Task<AttemptLimits> PostOutboundAttemptlimitsAsync (AttemptLimits body)
         {
@@ -25890,11 +25362,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AttemptLimits</param>
         /// <returns>Task of ApiResponse (AttemptLimits)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PostOutboundAttemptlimitsAsyncWithHttpInfo (AttemptLimits body)
         { 
@@ -25981,6 +25453,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves audits for dialer. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -25991,7 +25464,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>AuditSearchResult</returns>
         
-        
         public AuditSearchResult PostOutboundAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
              ApiResponse<AuditSearchResult> localVarResponse = PostOutboundAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
@@ -26000,6 +25472,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves audits for dialer. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -26009,7 +25482,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>ApiResponse of AuditSearchResult</returns>
-        
         
         public ApiResponse< AuditSearchResult > PostOutboundAuditsWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         { 
@@ -26099,6 +25571,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves audits for dialer. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -26109,7 +25582,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of AuditSearchResult</returns>
         
-        
         public async System.Threading.Tasks.Task<AuditSearchResult> PostOutboundAuditsAsync (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
              ApiResponse<AuditSearchResult> localVarResponse = await PostOutboundAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
@@ -26119,6 +25591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves audits for dialer. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -26128,7 +25601,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuditSearchResult)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostOutboundAuditsAsyncWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         { 
@@ -26220,11 +25692,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
-        
         
         public CallableTimeSet PostOutboundCallabletimesets (CallableTimeSet body)
         {
@@ -26234,11 +25706,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        
         
         public ApiResponse< CallableTimeSet > PostOutboundCallabletimesetsWithHttpInfo (CallableTimeSet body)
         { 
@@ -26323,11 +25795,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        
         
         public async System.Threading.Tasks.Task<CallableTimeSet> PostOutboundCallabletimesetsAsync (CallableTimeSet body)
         {
@@ -26338,11 +25810,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PostOutboundCallabletimesetsAsyncWithHttpInfo (CallableTimeSet body)
         { 
@@ -26429,11 +25901,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
-        
         
         public ResponseSet PostOutboundCallanalysisresponsesets (ResponseSet body)
         {
@@ -26443,11 +25915,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        
         
         public ApiResponse< ResponseSet > PostOutboundCallanalysisresponsesetsWithHttpInfo (ResponseSet body)
         { 
@@ -26532,11 +26004,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseSet> PostOutboundCallanalysisresponsesetsAsync (ResponseSet body)
         {
@@ -26547,11 +26019,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostOutboundCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body)
         { 
@@ -26638,11 +26110,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Initiate request for a preview of how agents will be mapped to this campaign's contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Object</returns>
-        
         
         public Object PostOutboundCampaignAgentownedmappingpreview (string campaignId)
         {
@@ -26652,11 +26124,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Initiate request for a preview of how agents will be mapped to this campaign's contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Object</returns>
-        
         
         public ApiResponse< Object > PostOutboundCampaignAgentownedmappingpreviewWithHttpInfo (string campaignId)
         { 
@@ -26736,11 +26208,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Initiate request for a preview of how agents will be mapped to this campaign's contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of Object</returns>
-        
         
         public async System.Threading.Tasks.Task<Object> PostOutboundCampaignAgentownedmappingpreviewAsync (string campaignId)
         {
@@ -26751,11 +26223,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Initiate request for a preview of how agents will be mapped to this campaign's contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundCampaignAgentownedmappingpreviewAsyncWithHttpInfo (string campaignId)
         { 
@@ -26836,14 +26308,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign (Deprecated) This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
+        /// Schedule a Callback for a Dialer Campaign (Deprecated) 
+        /// This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ContactCallbackRequest</returns>
         [Obsolete]
-        
         public ContactCallbackRequest PostOutboundCampaignCallbackSchedule (string campaignId, ContactCallbackRequest body)
         {
              ApiResponse<ContactCallbackRequest> localVarResponse = PostOutboundCampaignCallbackScheduleWithHttpInfo(campaignId, body);
@@ -26851,14 +26323,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign (Deprecated) This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
+        /// Schedule a Callback for a Dialer Campaign (Deprecated) 
+        /// This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ApiResponse of ContactCallbackRequest</returns>
         [Obsolete]
-        
         public ApiResponse< ContactCallbackRequest > PostOutboundCampaignCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body)
         { 
             // verify the required parameter 'campaignId' is set
@@ -26945,14 +26417,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign (Deprecated) This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
+        /// Schedule a Callback for a Dialer Campaign (Deprecated) 
+        /// This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ContactCallbackRequest</returns>
         [Obsolete]
-        
         public async System.Threading.Tasks.Task<ContactCallbackRequest> PostOutboundCampaignCallbackScheduleAsync (string campaignId, ContactCallbackRequest body)
         {
              ApiResponse<ContactCallbackRequest> localVarResponse = await PostOutboundCampaignCallbackScheduleAsyncWithHttpInfo(campaignId, body);
@@ -26961,14 +26433,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign (Deprecated) This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
+        /// Schedule a Callback for a Dialer Campaign (Deprecated) 
+        /// This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
         [Obsolete]
-        
         public async System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostOutboundCampaignCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body)
         { 
             // verify the required parameter 'campaignId' is set
@@ -27059,11 +26531,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CampaignRule</param>
         /// <returns>CampaignRule</returns>
-        
         
         public CampaignRule PostOutboundCampaignrules (CampaignRule body)
         {
@@ -27073,11 +26545,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CampaignRule</param>
         /// <returns>ApiResponse of CampaignRule</returns>
-        
         
         public ApiResponse< CampaignRule > PostOutboundCampaignrulesWithHttpInfo (CampaignRule body)
         { 
@@ -27162,11 +26634,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CampaignRule</param>
         /// <returns>Task of CampaignRule</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignRule> PostOutboundCampaignrulesAsync (CampaignRule body)
         {
@@ -27177,11 +26649,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">CampaignRule</param>
         /// <returns>Task of ApiResponse (CampaignRule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignRule>> PostOutboundCampaignrulesAsyncWithHttpInfo (CampaignRule body)
         { 
@@ -27268,11 +26740,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
-        
         
         public Campaign PostOutboundCampaigns (Campaign body)
         {
@@ -27282,11 +26754,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
-        
         
         public ApiResponse< Campaign > PostOutboundCampaignsWithHttpInfo (Campaign body)
         { 
@@ -27371,11 +26843,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        
         
         public async System.Threading.Tasks.Task<Campaign> PostOutboundCampaignsAsync (Campaign body)
         {
@@ -27386,11 +26858,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PostOutboundCampaignsAsyncWithHttpInfo (Campaign body)
         { 
@@ -27477,11 +26949,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get progress for a list of campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign IDs</param>
         /// <returns>List&lt;CampaignProgress&gt;</returns>
-        
         
         public List<CampaignProgress> PostOutboundCampaignsProgress (List<string> body)
         {
@@ -27491,11 +26963,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get progress for a list of campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign IDs</param>
         /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
-        
         
         public ApiResponse< List<CampaignProgress> > PostOutboundCampaignsProgressWithHttpInfo (List<string> body)
         { 
@@ -27580,11 +27052,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get progress for a list of campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign IDs</param>
         /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
-        
         
         public async System.Threading.Tasks.Task<List<CampaignProgress>> PostOutboundCampaignsProgressAsync (List<string> body)
         {
@@ -27595,11 +27067,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get progress for a list of campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Campaign IDs</param>
         /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostOutboundCampaignsProgressAsyncWithHttpInfo (List<string> body)
         { 
@@ -27686,11 +27158,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <returns></returns>
-        
         
         public void PostOutboundContactlistClear (string contactListId)
         {
@@ -27699,11 +27171,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PostOutboundContactlistClearWithHttpInfo (string contactListId)
         { 
@@ -27783,11 +27255,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PostOutboundContactlistClearAsync (string contactListId)
         {
@@ -27797,11 +27269,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundContactlistClearAsyncWithHttpInfo (string contactListId)
         { 
@@ -27883,6 +27355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add contacts to a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
@@ -27892,7 +27365,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
         
-        
         public List<DialerContact> PostOutboundContactlistContacts (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         {
              ApiResponse<List<DialerContact>> localVarResponse = PostOutboundContactlistContactsWithHttpInfo(contactListId, body, priority, clearSystemData, doNotQueue);
@@ -27901,6 +27373,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add contacts to a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
@@ -27909,7 +27382,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
         /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
-        
         
         public ApiResponse< List<DialerContact> > PostOutboundContactlistContactsWithHttpInfo (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         { 
@@ -28001,6 +27473,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add contacts to a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
@@ -28009,7 +27482,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
         /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
-        
         
         public async System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsAsync (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         {
@@ -28020,6 +27492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add contacts to a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
@@ -28028,7 +27501,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
         /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         { 
@@ -28123,12 +27595,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get contacts from a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">ContactIds to get.</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
-        
         
         public List<DialerContact> PostOutboundContactlistContactsBulk (string contactListId, List<string> body)
         {
@@ -28138,12 +27610,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get contacts from a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">ContactIds to get.</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
-        
         
         public ApiResponse< List<DialerContact> > PostOutboundContactlistContactsBulkWithHttpInfo (string contactListId, List<string> body)
         { 
@@ -28232,12 +27704,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get contacts from a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">ContactIds to get.</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
-        
         
         public async System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsBulkAsync (string contactListId, List<string> body)
         {
@@ -28248,12 +27720,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get contacts from a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">ContactIds to get.</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsBulkAsyncWithHttpInfo (string contactListId, List<string> body)
         { 
@@ -28344,12 +27816,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Initiate the export of a contact list. Returns 200 if received OK.
+        /// Initiate the export of a contact list. 
+        /// Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>DomainEntityRef</returns>
-        
         
         public DomainEntityRef PostOutboundContactlistExport (string contactListId)
         {
@@ -28358,12 +27830,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Initiate the export of a contact list. Returns 200 if received OK.
+        /// Initiate the export of a contact list. 
+        /// Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of DomainEntityRef</returns>
-        
         
         public ApiResponse< DomainEntityRef > PostOutboundContactlistExportWithHttpInfo (string contactListId)
         { 
@@ -28442,12 +27914,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Initiate the export of a contact list. Returns 200 if received OK.
+        /// Initiate the export of a contact list. 
+        /// Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of DomainEntityRef</returns>
-        
         
         public async System.Threading.Tasks.Task<DomainEntityRef> PostOutboundContactlistExportAsync (string contactListId)
         {
@@ -28457,12 +27929,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Initiate the export of a contact list. Returns 200 if received OK.
+        /// Initiate the export of a contact list. 
+        /// Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId)
         { 
@@ -28544,11 +28016,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>ContactListFilter</returns>
-        
         
         public ContactListFilter PostOutboundContactlistfilters (ContactListFilter body)
         {
@@ -28558,11 +28030,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>ApiResponse of ContactListFilter</returns>
-        
         
         public ApiResponse< ContactListFilter > PostOutboundContactlistfiltersWithHttpInfo (ContactListFilter body)
         { 
@@ -28647,11 +28119,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ContactListFilter</returns>
-        
         
         public async System.Threading.Tasks.Task<ContactListFilter> PostOutboundContactlistfiltersAsync (ContactListFilter body)
         {
@@ -28662,11 +28134,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ApiResponse (ContactListFilter)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PostOutboundContactlistfiltersAsyncWithHttpInfo (ContactListFilter body)
         { 
@@ -28753,11 +28225,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a preview of the output of a contact list filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>FilterPreviewResponse</returns>
-        
         
         public FilterPreviewResponse PostOutboundContactlistfiltersPreview (ContactListFilter body)
         {
@@ -28767,11 +28239,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a preview of the output of a contact list filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>ApiResponse of FilterPreviewResponse</returns>
-        
         
         public ApiResponse< FilterPreviewResponse > PostOutboundContactlistfiltersPreviewWithHttpInfo (ContactListFilter body)
         { 
@@ -28856,11 +28328,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a preview of the output of a contact list filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of FilterPreviewResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<FilterPreviewResponse> PostOutboundContactlistfiltersPreviewAsync (ContactListFilter body)
         {
@@ -28871,11 +28343,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a preview of the output of a contact list filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ApiResponse (FilterPreviewResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<FilterPreviewResponse>> PostOutboundContactlistfiltersPreviewAsyncWithHttpInfo (ContactListFilter body)
         { 
@@ -28962,11 +28434,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a contact List. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
-        
         
         public ContactList PostOutboundContactlists (ContactList body)
         {
@@ -28976,11 +28448,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a contact List. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
-        
         
         public ApiResponse< ContactList > PostOutboundContactlistsWithHttpInfo (ContactList body)
         { 
@@ -29065,11 +28537,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a contact List. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        
         
         public async System.Threading.Tasks.Task<ContactList> PostOutboundContactlistsAsync (ContactList body)
         {
@@ -29080,11 +28552,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a contact List. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PostOutboundContactlistsAsyncWithHttpInfo (ContactList body)
         { 
@@ -29171,11 +28643,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns></returns>
-        
         
         public void PostOutboundConversationDnc (string conversationId)
         {
@@ -29184,11 +28656,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PostOutboundConversationDncWithHttpInfo (string conversationId)
         { 
@@ -29268,11 +28740,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PostOutboundConversationDncAsync (string conversationId)
         {
@@ -29282,11 +28754,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundConversationDncAsyncWithHttpInfo (string conversationId)
         { 
@@ -29368,11 +28840,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>DigitalRuleSet</returns>
-        
         
         public DigitalRuleSet PostOutboundDigitalrulesets (DigitalRuleSet body)
         {
@@ -29382,11 +28854,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>ApiResponse of DigitalRuleSet</returns>
-        
         
         public ApiResponse< DigitalRuleSet > PostOutboundDigitalrulesetsWithHttpInfo (DigitalRuleSet body)
         { 
@@ -29471,11 +28943,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>Task of DigitalRuleSet</returns>
-        
         
         public async System.Threading.Tasks.Task<DigitalRuleSet> PostOutboundDigitalrulesetsAsync (DigitalRuleSet body)
         {
@@ -29486,11 +28958,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> PostOutboundDigitalrulesetsAsyncWithHttpInfo (DigitalRuleSet body)
         { 
@@ -29576,13 +29048,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add email addresses to a DNC list. Only Internal DNC lists may be appended to
+        /// Add email addresses to a DNC list. 
+        /// Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC email addresses</param>
         /// <returns></returns>
-        
         
         public void PostOutboundDnclistEmailaddresses (string dncListId, List<string> body)
         {
@@ -29590,13 +29062,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add email addresses to a DNC list. Only Internal DNC lists may be appended to
+        /// Add email addresses to a DNC list. 
+        /// Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC email addresses</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PostOutboundDnclistEmailaddressesWithHttpInfo (string dncListId, List<string> body)
         { 
@@ -29684,13 +29156,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add email addresses to a DNC list. Only Internal DNC lists may be appended to
+        /// Add email addresses to a DNC list. 
+        /// Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC email addresses</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PostOutboundDnclistEmailaddressesAsync (string dncListId, List<string> body)
         {
@@ -29699,13 +29171,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add email addresses to a DNC list. Only Internal DNC lists may be appended to
+        /// Add email addresses to a DNC list. 
+        /// Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC email addresses</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundDnclistEmailaddressesAsyncWithHttpInfo (string dncListId, List<string> body)
         { 
@@ -29796,12 +29268,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Initiate the export of a dnc list. Returns 200 if received OK.
+        /// Initiate the export of a dnc list. 
+        /// Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>DomainEntityRef</returns>
-        
         
         public DomainEntityRef PostOutboundDnclistExport (string dncListId)
         {
@@ -29810,12 +29282,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Initiate the export of a dnc list. Returns 200 if received OK.
+        /// Initiate the export of a dnc list. 
+        /// Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of DomainEntityRef</returns>
-        
         
         public ApiResponse< DomainEntityRef > PostOutboundDnclistExportWithHttpInfo (string dncListId)
         { 
@@ -29894,12 +29366,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Initiate the export of a dnc list. Returns 200 if received OK.
+        /// Initiate the export of a dnc list. 
+        /// Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of DomainEntityRef</returns>
-        
         
         public async System.Threading.Tasks.Task<DomainEntityRef> PostOutboundDnclistExportAsync (string dncListId)
         {
@@ -29909,12 +29381,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Initiate the export of a dnc list. Returns 200 if received OK.
+        /// Initiate the export of a dnc list. 
+        /// Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundDnclistExportAsyncWithHttpInfo (string dncListId)
         { 
@@ -29995,7 +29467,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add phone numbers to a DNC list. Only Internal DNC lists may be appended to
+        /// Add phone numbers to a DNC list. 
+        /// Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
@@ -30003,21 +29476,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns></returns>
         
-        
         public void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body, string expirationDateTime = null)
         {
              PostOutboundDnclistPhonenumbersWithHttpInfo(dncListId, body, expirationDateTime);
         }
 
         /// <summary>
-        /// Add phone numbers to a DNC list. Only Internal DNC lists may be appended to
+        /// Add phone numbers to a DNC list. 
+        /// Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> PostOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, List<string> body, string expirationDateTime = null)
         { 
@@ -30106,14 +29578,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add phone numbers to a DNC list. Only Internal DNC lists may be appended to
+        /// Add phone numbers to a DNC list. 
+        /// Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task PostOutboundDnclistPhonenumbersAsync (string dncListId, List<string> body, string expirationDateTime = null)
         {
@@ -30122,14 +29594,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add phone numbers to a DNC list. Only Internal DNC lists may be appended to
+        /// Add phone numbers to a DNC list. 
+        /// Only Internal DNC lists may be appended to
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <param name="expirationDateTime">Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body, string expirationDateTime = null)
         { 
@@ -30222,11 +29694,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        
         
         public DncList PostOutboundDnclists (DncListCreate body)
         {
@@ -30236,11 +29708,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
-        
         
         public ApiResponse< DncList > PostOutboundDnclistsWithHttpInfo (DncListCreate body)
         { 
@@ -30325,11 +29797,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        
         
         public async System.Threading.Tasks.Task<DncList> PostOutboundDnclistsAsync (DncListCreate body)
         {
@@ -30340,11 +29812,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DncList>> PostOutboundDnclistsAsyncWithHttpInfo (DncListCreate body)
         { 
@@ -30431,11 +29903,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign</param>
         /// <returns>MessagingCampaign</returns>
-        
         
         public MessagingCampaign PostOutboundMessagingcampaigns (MessagingCampaign body)
         {
@@ -30445,11 +29917,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign</param>
         /// <returns>ApiResponse of MessagingCampaign</returns>
-        
         
         public ApiResponse< MessagingCampaign > PostOutboundMessagingcampaignsWithHttpInfo (MessagingCampaign body)
         { 
@@ -30534,11 +30006,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign</param>
         /// <returns>Task of MessagingCampaign</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaign> PostOutboundMessagingcampaignsAsync (MessagingCampaign body)
         {
@@ -30549,11 +30021,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> PostOutboundMessagingcampaignsAsyncWithHttpInfo (MessagingCampaign body)
         { 
@@ -30640,11 +30112,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get progress for a list of messaging campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign IDs</param>
         /// <returns>List&lt;CampaignProgress&gt;</returns>
-        
         
         public List<CampaignProgress> PostOutboundMessagingcampaignsProgress (List<string> body)
         {
@@ -30654,11 +30126,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get progress for a list of messaging campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign IDs</param>
         /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
-        
         
         public ApiResponse< List<CampaignProgress> > PostOutboundMessagingcampaignsProgressWithHttpInfo (List<string> body)
         { 
@@ -30743,11 +30215,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get progress for a list of messaging campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign IDs</param>
         /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
-        
         
         public async System.Threading.Tasks.Task<List<CampaignProgress>> PostOutboundMessagingcampaignsProgressAsync (List<string> body)
         {
@@ -30758,11 +30230,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get progress for a list of messaging campaigns 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Messaging Campaign IDs</param>
         /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostOutboundMessagingcampaignsProgressAsyncWithHttpInfo (List<string> body)
         { 
@@ -30849,11 +30321,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        
         
         public RuleSet PostOutboundRulesets (RuleSet body)
         {
@@ -30863,11 +30335,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        
         
         public ApiResponse< RuleSet > PostOutboundRulesetsWithHttpInfo (RuleSet body)
         { 
@@ -30952,11 +30424,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        
         
         public async System.Threading.Tasks.Task<RuleSet> PostOutboundRulesetsAsync (RuleSet body)
         {
@@ -30967,11 +30439,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PostOutboundRulesetsAsyncWithHttpInfo (RuleSet body)
         { 
@@ -31058,11 +30530,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
-        
         
         public CampaignSequence PostOutboundSequences (CampaignSequence body)
         {
@@ -31072,11 +30544,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        
         
         public ApiResponse< CampaignSequence > PostOutboundSequencesWithHttpInfo (CampaignSequence body)
         { 
@@ -31161,11 +30633,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignSequence> PostOutboundSequencesAsync (CampaignSequence body)
         {
@@ -31176,11 +30648,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostOutboundSequencesAsyncWithHttpInfo (CampaignSequence body)
         { 
@@ -31267,12 +30739,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <param name="body">AttemptLimits</param>
         /// <returns>AttemptLimits</returns>
-        
         
         public AttemptLimits PutOutboundAttemptlimit (string attemptLimitsId, AttemptLimits body)
         {
@@ -31282,12 +30754,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <param name="body">AttemptLimits</param>
         /// <returns>ApiResponse of AttemptLimits</returns>
-        
         
         public ApiResponse< AttemptLimits > PutOutboundAttemptlimitWithHttpInfo (string attemptLimitsId, AttemptLimits body)
         { 
@@ -31376,12 +30848,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <param name="body">AttemptLimits</param>
         /// <returns>Task of AttemptLimits</returns>
-        
         
         public async System.Threading.Tasks.Task<AttemptLimits> PutOutboundAttemptlimitAsync (string attemptLimitsId, AttemptLimits body)
         {
@@ -31392,12 +30864,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update attempt limits 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
         /// <param name="body">AttemptLimits</param>
         /// <returns>Task of ApiResponse (AttemptLimits)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PutOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId, AttemptLimits body)
         { 
@@ -31489,12 +30961,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
-        
         
         public CallableTimeSet PutOutboundCallabletimeset (string callableTimeSetId, CallableTimeSet body)
         {
@@ -31504,12 +30976,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        
         
         public ApiResponse< CallableTimeSet > PutOutboundCallabletimesetWithHttpInfo (string callableTimeSetId, CallableTimeSet body)
         { 
@@ -31598,12 +31070,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        
         
         public async System.Threading.Tasks.Task<CallableTimeSet> PutOutboundCallabletimesetAsync (string callableTimeSetId, CallableTimeSet body)
         {
@@ -31614,12 +31086,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update callable time set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body)
         { 
@@ -31711,12 +31183,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
-        
         
         public ResponseSet PutOutboundCallanalysisresponseset (string callAnalysisSetId, ResponseSet body)
         {
@@ -31726,12 +31198,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        
         
         public ApiResponse< ResponseSet > PutOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId, ResponseSet body)
         { 
@@ -31820,12 +31292,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        
         
         public async System.Threading.Tasks.Task<ResponseSet> PutOutboundCallanalysisresponsesetAsync (string callAnalysisSetId, ResponseSet body)
         {
@@ -31836,12 +31308,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a dialer call analysis response set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body)
         { 
@@ -31933,12 +31405,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
-        
         
         public Campaign PutOutboundCampaign (string campaignId, Campaign body)
         {
@@ -31948,12 +31420,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
-        
         
         public ApiResponse< Campaign > PutOutboundCampaignWithHttpInfo (string campaignId, Campaign body)
         { 
@@ -32042,12 +31514,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        
         
         public async System.Threading.Tasks.Task<Campaign> PutOutboundCampaignAsync (string campaignId, Campaign body)
         {
@@ -32058,12 +31530,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a campaign. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PutOutboundCampaignAsyncWithHttpInfo (string campaignId, Campaign body)
         { 
@@ -32154,14 +31626,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Send notification that an agent's state changed  New agent state.
+        /// Send notification that an agent's state changed  
+        /// New agent state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>string</returns>
-        
         
         public string PutOutboundCampaignAgent (string campaignId, string userId, Agent body)
         {
@@ -32170,14 +31642,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Send notification that an agent's state changed  New agent state.
+        /// Send notification that an agent's state changed  
+        /// New agent state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>ApiResponse of string</returns>
-        
         
         public ApiResponse< string > PutOutboundCampaignAgentWithHttpInfo (string campaignId, string userId, Agent body)
         { 
@@ -32269,14 +31741,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Send notification that an agent's state changed  New agent state.
+        /// Send notification that an agent's state changed  
+        /// New agent state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>Task of string</returns>
-        
         
         public async System.Threading.Tasks.Task<string> PutOutboundCampaignAgentAsync (string campaignId, string userId, Agent body)
         {
@@ -32286,14 +31758,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Send notification that an agent's state changed  New agent state.
+        /// Send notification that an agent's state changed  
+        /// New agent state.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<string>> PutOutboundCampaignAgentAsyncWithHttpInfo (string campaignId, string userId, Agent body)
         { 
@@ -32390,12 +31862,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <param name="body">CampaignRule</param>
         /// <returns>CampaignRule</returns>
-        
         
         public CampaignRule PutOutboundCampaignrule (string campaignRuleId, CampaignRule body)
         {
@@ -32405,12 +31877,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <param name="body">CampaignRule</param>
         /// <returns>ApiResponse of CampaignRule</returns>
-        
         
         public ApiResponse< CampaignRule > PutOutboundCampaignruleWithHttpInfo (string campaignRuleId, CampaignRule body)
         { 
@@ -32499,12 +31971,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <param name="body">CampaignRule</param>
         /// <returns>Task of CampaignRule</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignRule> PutOutboundCampaignruleAsync (string campaignRuleId, CampaignRule body)
         {
@@ -32515,12 +31987,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Campaign Rule 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
         /// <param name="body">CampaignRule</param>
         /// <returns>Task of ApiResponse (CampaignRule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignRule>> PutOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId, CampaignRule body)
         { 
@@ -32612,12 +32084,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
-        
         
         public ContactList PutOutboundContactlist (string contactListId, ContactList body)
         {
@@ -32627,12 +32099,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
-        
         
         public ApiResponse< ContactList > PutOutboundContactlistWithHttpInfo (string contactListId, ContactList body)
         { 
@@ -32721,12 +32193,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        
         
         public async System.Threading.Tasks.Task<ContactList> PutOutboundContactlistAsync (string contactListId, ContactList body)
         {
@@ -32737,12 +32209,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a contact list. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PutOutboundContactlistAsyncWithHttpInfo (string contactListId, ContactList body)
         { 
@@ -32834,13 +32306,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>DialerContact</returns>
-        
         
         public DialerContact PutOutboundContactlistContact (string contactListId, string contactId, DialerContact body)
         {
@@ -32850,13 +32322,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>ApiResponse of DialerContact</returns>
-        
         
         public ApiResponse< DialerContact > PutOutboundContactlistContactWithHttpInfo (string contactListId, string contactId, DialerContact body)
         { 
@@ -32949,13 +32421,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>Task of DialerContact</returns>
-        
         
         public async System.Threading.Tasks.Task<DialerContact> PutOutboundContactlistContactAsync (string contactListId, string contactId, DialerContact body)
         {
@@ -32966,13 +32438,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a contact. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body)
         { 
@@ -33069,12 +32541,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <param name="body">ContactListFilter</param>
         /// <returns>ContactListFilter</returns>
-        
         
         public ContactListFilter PutOutboundContactlistfilter (string contactListFilterId, ContactListFilter body)
         {
@@ -33084,12 +32556,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <param name="body">ContactListFilter</param>
         /// <returns>ApiResponse of ContactListFilter</returns>
-        
         
         public ApiResponse< ContactListFilter > PutOutboundContactlistfilterWithHttpInfo (string contactListFilterId, ContactListFilter body)
         { 
@@ -33178,12 +32650,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ContactListFilter</returns>
-        
         
         public async System.Threading.Tasks.Task<ContactListFilter> PutOutboundContactlistfilterAsync (string contactListFilterId, ContactListFilter body)
         {
@@ -33194,12 +32666,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Contact List Filter 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListFilterId">Contact List Filter ID</param>
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ApiResponse (ContactListFilter)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PutOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId, ContactListFilter body)
         { 
@@ -33291,12 +32763,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>DigitalRuleSet</returns>
-        
         
         public DigitalRuleSet PutOutboundDigitalruleset (string digitalRuleSetId, DigitalRuleSet body)
         {
@@ -33306,12 +32778,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>ApiResponse of DigitalRuleSet</returns>
-        
         
         public ApiResponse< DigitalRuleSet > PutOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId, DigitalRuleSet body)
         { 
@@ -33400,12 +32872,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>Task of DigitalRuleSet</returns>
-        
         
         public async System.Threading.Tasks.Task<DigitalRuleSet> PutOutboundDigitalrulesetAsync (string digitalRuleSetId, DigitalRuleSet body)
         {
@@ -33416,12 +32888,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an Outbound Digital Rule Set 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
         /// <param name="body">Digital Rule Set</param>
         /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> PutOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId, DigitalRuleSet body)
         { 
@@ -33513,12 +32985,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        
         
         public DncList PutOutboundDnclist (string dncListId, DncList body)
         {
@@ -33528,12 +33000,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
-        
         
         public ApiResponse< DncList > PutOutboundDnclistWithHttpInfo (string dncListId, DncList body)
         { 
@@ -33622,12 +33094,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        
         
         public async System.Threading.Tasks.Task<DncList> PutOutboundDnclistAsync (string dncListId, DncList body)
         {
@@ -33638,12 +33110,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update dialer DNC list 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DncList>> PutOutboundDnclistAsyncWithHttpInfo (string dncListId, DncList body)
         { 
@@ -33735,12 +33207,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaign</param>
         /// <returns>MessagingCampaign</returns>
-        
         
         public MessagingCampaign PutOutboundMessagingcampaign (string messagingCampaignId, MessagingCampaign body)
         {
@@ -33750,12 +33222,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaign</param>
         /// <returns>ApiResponse of MessagingCampaign</returns>
-        
         
         public ApiResponse< MessagingCampaign > PutOutboundMessagingcampaignWithHttpInfo (string messagingCampaignId, MessagingCampaign body)
         { 
@@ -33844,12 +33316,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaign</param>
         /// <returns>Task of MessagingCampaign</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaign> PutOutboundMessagingcampaignAsync (string messagingCampaignId, MessagingCampaign body)
         {
@@ -33860,12 +33332,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an Outbound Messaging Campaign 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaign</param>
         /// <returns>Task of ApiResponse (MessagingCampaign)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaign>> PutOutboundMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId, MessagingCampaign body)
         { 
@@ -33957,12 +33429,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        
         
         public RuleSet PutOutboundRuleset (string ruleSetId, RuleSet body)
         {
@@ -33972,12 +33444,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        
         
         public ApiResponse< RuleSet > PutOutboundRulesetWithHttpInfo (string ruleSetId, RuleSet body)
         { 
@@ -34066,12 +33538,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        
         
         public async System.Threading.Tasks.Task<RuleSet> PutOutboundRulesetAsync (string ruleSetId, RuleSet body)
         {
@@ -34082,12 +33554,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Rule Set. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutOutboundRulesetAsyncWithHttpInfo (string ruleSetId, RuleSet body)
         { 
@@ -34179,12 +33651,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>CampaignSchedule</returns>
-        
         
         public CampaignSchedule PutOutboundSchedulesCampaign (string campaignId, CampaignSchedule body)
         {
@@ -34194,12 +33666,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
-        
         
         public ApiResponse< CampaignSchedule > PutOutboundSchedulesCampaignWithHttpInfo (string campaignId, CampaignSchedule body)
         { 
@@ -34288,12 +33760,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of CampaignSchedule</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignSchedule> PutOutboundSchedulesCampaignAsync (string campaignId, CampaignSchedule body)
         {
@@ -34304,12 +33776,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId, CampaignSchedule body)
         { 
@@ -34401,12 +33873,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <param name="body">EmailCampaignSchedule</param>
         /// <returns>EmailCampaignSchedule</returns>
-        
         
         public EmailCampaignSchedule PutOutboundSchedulesEmailcampaign (string emailCampaignId, EmailCampaignSchedule body)
         {
@@ -34416,12 +33888,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <param name="body">EmailCampaignSchedule</param>
         /// <returns>ApiResponse of EmailCampaignSchedule</returns>
-        
         
         public ApiResponse< EmailCampaignSchedule > PutOutboundSchedulesEmailcampaignWithHttpInfo (string emailCampaignId, EmailCampaignSchedule body)
         { 
@@ -34510,12 +33982,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <param name="body">EmailCampaignSchedule</param>
         /// <returns>Task of EmailCampaignSchedule</returns>
-        
         
         public async System.Threading.Tasks.Task<EmailCampaignSchedule> PutOutboundSchedulesEmailcampaignAsync (string emailCampaignId, EmailCampaignSchedule body)
         {
@@ -34526,12 +33998,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an email campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Email Campaign ID</param>
         /// <param name="body">EmailCampaignSchedule</param>
         /// <returns>Task of ApiResponse (EmailCampaignSchedule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<EmailCampaignSchedule>> PutOutboundSchedulesEmailcampaignAsyncWithHttpInfo (string emailCampaignId, EmailCampaignSchedule body)
         { 
@@ -34623,12 +34095,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaignSchedule</param>
         /// <returns>MessagingCampaignSchedule</returns>
-        
         
         public MessagingCampaignSchedule PutOutboundSchedulesMessagingcampaign (string messagingCampaignId, MessagingCampaignSchedule body)
         {
@@ -34638,12 +34110,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaignSchedule</param>
         /// <returns>ApiResponse of MessagingCampaignSchedule</returns>
-        
         
         public ApiResponse< MessagingCampaignSchedule > PutOutboundSchedulesMessagingcampaignWithHttpInfo (string messagingCampaignId, MessagingCampaignSchedule body)
         { 
@@ -34732,12 +34204,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaignSchedule</param>
         /// <returns>Task of MessagingCampaignSchedule</returns>
-        
         
         public async System.Threading.Tasks.Task<MessagingCampaignSchedule> PutOutboundSchedulesMessagingcampaignAsync (string messagingCampaignId, MessagingCampaignSchedule body)
         {
@@ -34748,12 +34220,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new messaging campaign schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">Messaging Campaign ID</param>
         /// <param name="body">MessagingCampaignSchedule</param>
         /// <returns>Task of ApiResponse (MessagingCampaignSchedule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignSchedule>> PutOutboundSchedulesMessagingcampaignAsyncWithHttpInfo (string messagingCampaignId, MessagingCampaignSchedule body)
         { 
@@ -34845,12 +34317,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>SequenceSchedule</returns>
-        
         
         public SequenceSchedule PutOutboundSchedulesSequence (string sequenceId, SequenceSchedule body)
         {
@@ -34860,12 +34332,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
-        
         
         public ApiResponse< SequenceSchedule > PutOutboundSchedulesSequenceWithHttpInfo (string sequenceId, SequenceSchedule body)
         { 
@@ -34954,12 +34426,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of SequenceSchedule</returns>
-        
         
         public async System.Threading.Tasks.Task<SequenceSchedule> PutOutboundSchedulesSequenceAsync (string sequenceId, SequenceSchedule body)
         {
@@ -34970,12 +34442,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new sequence schedule. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId, SequenceSchedule body)
         { 
@@ -35067,12 +34539,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
-        
         
         public CampaignSequence PutOutboundSequence (string sequenceId, CampaignSequence body)
         {
@@ -35082,12 +34554,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        
         
         public ApiResponse< CampaignSequence > PutOutboundSequenceWithHttpInfo (string sequenceId, CampaignSequence body)
         { 
@@ -35176,12 +34648,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        
         
         public async System.Threading.Tasks.Task<CampaignSequence> PutOutboundSequenceAsync (string sequenceId, CampaignSequence body)
         {
@@ -35192,12 +34664,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a new campaign sequence. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutOutboundSequenceAsyncWithHttpInfo (string sequenceId, CampaignSequence body)
         { 
@@ -35289,11 +34761,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Dialer wrap up code mapping. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>WrapUpCodeMapping</returns>
-        
         
         public WrapUpCodeMapping PutOutboundWrapupcodemappings (WrapUpCodeMapping body)
         {
@@ -35303,11 +34775,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Dialer wrap up code mapping. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
-        
         
         public ApiResponse< WrapUpCodeMapping > PutOutboundWrapupcodemappingsWithHttpInfo (WrapUpCodeMapping body)
         { 
@@ -35392,11 +34864,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Dialer wrap up code mapping. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>Task of WrapUpCodeMapping</returns>
-        
         
         public async System.Threading.Tasks.Task<WrapUpCodeMapping> PutOutboundWrapupcodemappingsAsync (WrapUpCodeMapping body)
         {
@@ -35407,11 +34879,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the Dialer wrap up code mapping. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> PutOutboundWrapupcodemappingsAsyncWithHttpInfo (WrapUpCodeMapping body)
         { 

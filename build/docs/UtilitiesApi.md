@@ -21,8 +21,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get the current system date/time
 
-
-
 Requires NO permissions: 
 
 
@@ -80,8 +78,6 @@ This endpoint does require any parameters.
 
 Get public ip address ranges for Genesys Cloud
 
-
-
 Requires NO permissions: 
 
 
@@ -138,8 +134,6 @@ This endpoint does require any parameters.
 
 
 Get time zones list
-
-
 
 Requires NO permissions: 
 
@@ -204,8 +198,6 @@ namespace Example
 
 
 Returns the information about an X509 PEM encoded certificate or certificate chain.
-
-
 
 Requires NO permissions: 
 

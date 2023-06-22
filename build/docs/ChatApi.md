@@ -25,8 +25,6 @@ Get Chat Settings.
 
 This route is deprecated, please use /chats/settings instead
 
-
-
 Requires ANY permissions: 
 
 * chat:setting:view
@@ -85,8 +83,6 @@ This endpoint does require any parameters.
 
 
 Get Chat Settings.
-
-
 
 Requires ANY permissions: 
 
@@ -148,8 +144,6 @@ This endpoint does require any parameters.
 Patch Chat Settings.
 
 This route is deprecated, please use /chats/settings instead
-
-
 
 Requires ANY permissions: 
 
@@ -213,8 +207,6 @@ namespace Example
 
 
 Patch Chat Settings.
-
-
 
 Requires ANY permissions: 
 
@@ -281,8 +273,6 @@ Update Chat Settings.
 
 This route is deprecated, please use /chats/settings instead
 
-
-
 Requires ANY permissions: 
 
 * chat:setting:edit
@@ -345,8 +335,6 @@ namespace Example
 
 
 Update Chat Settings.
-
-
 
 Requires ANY permissions: 
 

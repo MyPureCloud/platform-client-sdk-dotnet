@@ -23,8 +23,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete all auth tokens for the specified user.
 
-
-
 Requires ANY permissions: 
 
 * oauth:token:delete
@@ -87,8 +85,6 @@ void (empty response body)
 
 Delete auth token used to make the request.
 
-
-
 Requires NO permissions: 
 
 
@@ -144,8 +140,6 @@ void (empty response body)
 
 
 Fetch information about the current token
-
-
 
 Requires NO permissions: 
 
@@ -204,7 +198,7 @@ This endpoint does require any parameters.
 
 Get the current Idle Token Timeout Value
 
-
+GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -264,8 +258,6 @@ This endpoint does require any parameters.
 
 Verify user token
 
-
-
 Requires NO permissions: 
 
 
@@ -322,7 +314,7 @@ void (empty response body)
 
 Update or Enable/Disable the Idle Token Timeout
 
-
+PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

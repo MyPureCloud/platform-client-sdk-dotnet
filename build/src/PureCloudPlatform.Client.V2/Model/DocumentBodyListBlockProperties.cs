@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Circle for "Circle"
             /// </summary>
             [EnumMember(Value = "Circle")]
-            Circle
+            Circle,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None
         }
         /// <summary>
         /// The type of icon for the ordered list.
@@ -100,7 +106,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Upperroman for "UpperRoman"
             /// </summary>
             [EnumMember(Value = "UpperRoman")]
-            Upperroman
+            Upperroman,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None
         }
         /// <summary>
         /// The type of icon for the unordered list.

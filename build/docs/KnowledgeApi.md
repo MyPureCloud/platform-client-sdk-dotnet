@@ -94,8 +94,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete knowledge base
 
-
-
 Requires ALL permissions: 
 
 * knowledge:knowledgebase:delete
@@ -158,8 +156,6 @@ namespace Example
 
 
 Delete category
-
-
 
 Requires ALL permissions: 
 
@@ -226,8 +222,6 @@ namespace Example
 
 Delete document.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:delete
@@ -291,8 +285,6 @@ void (empty response body)
 
 
 Delete a variation for a document.
-
-
 
 Requires ANY permissions: 
 
@@ -361,8 +353,6 @@ void (empty response body)
 
 Delete export job
 
-
-
 Requires ALL permissions: 
 
 * knowledge:exportJob:delete
@@ -426,8 +416,6 @@ void (empty response body)
 
 
 Delete import job
-
-
 
 Requires ALL permissions: 
 
@@ -493,8 +481,6 @@ void (empty response body)
 
 Delete label
 
-
-
 Requires ALL permissions: 
 
 * knowledge:label:delete
@@ -559,8 +545,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete category
-
-
 
 Requires ALL permissions: 
 
@@ -629,8 +613,6 @@ namespace Example
 
 Delete document
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:delete
@@ -698,8 +680,6 @@ namespace Example
 
 Delete import operation
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:add
@@ -765,8 +745,6 @@ void (empty response body)
 
 
 Get categories
-
-
 
 Requires NO permissions: 
 
@@ -842,8 +820,6 @@ namespace Example
 
 Get a knowledge document by ID.
 
-
-
 Requires NO permissions: 
 
 
@@ -901,8 +877,6 @@ namespace Example
 
 
 Get documents.
-
-
 
 Requires NO permissions: 
 
@@ -963,8 +937,6 @@ namespace Example
 
 
 Get knowledge base
-
-
 
 Requires ALL permissions: 
 
@@ -1028,8 +1000,6 @@ namespace Example
 
 
 Get categories
-
-
 
 Requires ALL permissions: 
 
@@ -1112,8 +1082,6 @@ namespace Example
 
 Get category
 
-
-
 Requires ALL permissions: 
 
 * knowledge:category:view
@@ -1178,8 +1146,6 @@ namespace Example
 
 
 Get document.
-
-
 
 Requires ALL permissions: 
 
@@ -1250,8 +1216,6 @@ namespace Example
 
 Get a variation for a document.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:view
@@ -1320,8 +1284,6 @@ namespace Example
 
 
 Get variations for a document.
-
-
 
 Requires ALL permissions: 
 
@@ -1396,8 +1358,6 @@ namespace Example
 
 Get document version.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:documentVersion:view
@@ -1467,8 +1427,6 @@ namespace Example
 
 Get variation for the given document version.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:documentVersion:view
@@ -1537,8 +1495,6 @@ namespace Example
 
 
 Get variations for the given document version.
-
-
 
 Requires ALL permissions: 
 
@@ -1613,8 +1569,6 @@ namespace Example
 
 Get document versions.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:documentVersion:view
@@ -1682,13 +1636,11 @@ namespace Example
 
 <a name="getknowledgeknowledgebasedocuments"></a>
 
-## [**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing.html) GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
+## [**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing.html) GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null, List<string> externalIds = null)
 
 
 
 Get documents.
-
-
 
 Requires ALL permissions: 
 
@@ -1727,11 +1679,12 @@ namespace Example
             var includeDrafts = true;  // bool? | If includeDrafts is true, Documents in the draft state are also returned in the response. (optional) 
             var labelIds = new List<string>(); // List<string> | If specified, retrieves documents associated with label ids, comma separated values expected. (optional) 
             var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+            var externalIds = new List<string>(); // List<string> | If specified, retrieves documents associated with external ids, comma separated values expected. (optional) 
 
             try
             { 
                 // Get documents.
-                KnowledgeDocumentResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand);
+                KnowledgeDocumentResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand, externalIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1759,6 +1712,7 @@ namespace Example
 | **includeDrafts** | **bool?**| If includeDrafts is true, Documents in the draft state are also returned in the response. | [optional]  |
 | **labelIds** | [**List<string>**](string.html)| If specified, retrieves documents associated with label ids, comma separated values expected. | [optional]  |
 | **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels, variations |
+| **externalIds** | [**List<string>**](string.html)| If specified, retrieves documents associated with external ids, comma separated values expected. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1772,8 +1726,6 @@ namespace Example
 
 
 Get export job report
-
-
 
 Requires ALL permissions: 
 
@@ -1840,8 +1792,6 @@ namespace Example
 
 Get import job report
 
-
-
 Requires ALL permissions: 
 
 * knowledge:importJob:view
@@ -1907,8 +1857,6 @@ namespace Example
 
 Get label
 
-
-
 Requires ALL permissions: 
 
 * knowledge:label:view
@@ -1973,8 +1921,6 @@ namespace Example
 
 
 Get labels
-
-
 
 Requires ALL permissions: 
 
@@ -2048,8 +1994,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get categories
-
-
 
 Requires ALL permissions: 
 
@@ -2126,8 +2070,6 @@ namespace Example
 
 Get category
 
-
-
 Requires ALL permissions: 
 
 * knowledge:category:view
@@ -2194,8 +2136,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get document
-
-
 
 Requires ALL permissions: 
 
@@ -2264,7 +2204,7 @@ namespace Example
 
 Get document content upload status
 
-
+GetKnowledgeKnowledgebaseLanguageDocumentUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2334,8 +2274,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get documents
-
-
 
 Requires ALL permissions: 
 
@@ -2420,8 +2358,6 @@ namespace Example
 
 Get import operation report
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:add
@@ -2489,8 +2425,6 @@ namespace Example
 
 Get training detail
 
-
-
 Requires ALL permissions: 
 
 * knowledge:training:view
@@ -2557,8 +2491,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get all trainings information for a knowledgebase
-
-
 
 Requires ALL permissions: 
 
@@ -2635,8 +2567,6 @@ namespace Example
 
 Get knowledge base unanswered group for a particular groupId
 
-
-
 Requires ALL permissions: 
 
 * knowledge:groups:view
@@ -2703,8 +2633,6 @@ namespace Example
 
 
 Get knowledge base unanswered phrase group for a particular phraseGroupId
-
-
 
 Requires ALL permissions: 
 
@@ -2775,8 +2703,6 @@ namespace Example
 
 Get knowledge base unanswered groups
 
-
-
 Requires ALL permissions: 
 
 * knowledge:groups:view
@@ -2841,8 +2767,6 @@ namespace Example
 
 
 Get knowledge bases
-
-
 
 Requires ALL permissions: 
 
@@ -2923,8 +2847,6 @@ namespace Example
 
 Update search result.
 
-
-
 Requires NO permissions: 
 
 
@@ -2983,8 +2905,6 @@ void (empty response body)
 
 
 Update knowledge base
-
-
 
 Requires ALL permissions: 
 
@@ -3045,13 +2965,11 @@ namespace Example
 
 <a name="patchknowledgeknowledgebasecategory"></a>
 
-## [**CategoryResponse**](CategoryResponse.html) PatchKnowledgeKnowledgebaseCategory (string knowledgeBaseId, string categoryId, CategoryRequest body)
+## [**CategoryResponse**](CategoryResponse.html) PatchKnowledgeKnowledgebaseCategory (string knowledgeBaseId, string categoryId, CategoryUpdateRequest body)
 
 
 
 Update category
-
-
 
 Requires ALL permissions: 
 
@@ -3081,7 +2999,7 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
             var categoryId = categoryId_example;  // string | Category ID
-            var body = new CategoryRequest(); // CategoryRequest | 
+            var body = new CategoryUpdateRequest(); // CategoryUpdateRequest | 
 
             try
             { 
@@ -3105,7 +3023,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **categoryId** | **string**| Category ID |  |
-| **body** | [**CategoryRequest**](CategoryRequest.html)|  |  |
+| **body** | [**CategoryUpdateRequest**](CategoryUpdateRequest.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3119,8 +3037,6 @@ namespace Example
 
 
 Update document.
-
-
 
 Requires ALL permissions: 
 
@@ -3188,8 +3104,6 @@ namespace Example
 
 
 Update a variation for a document.
-
-
 
 Requires ALL permissions: 
 
@@ -3260,8 +3174,6 @@ namespace Example
 
 Update search result.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:search:edit
@@ -3327,8 +3239,6 @@ void (empty response body)
 
 
 Start import job
-
-
 
 Requires ALL permissions: 
 
@@ -3397,8 +3307,6 @@ namespace Example
 
 Update label
 
-
-
 Requires ALL permissions: 
 
 * knowledge:label:edit
@@ -3465,8 +3373,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update category
-
-
 
 Requires ALL permissions: 
 
@@ -3537,8 +3443,6 @@ namespace Example
 
 Update document
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:edit
@@ -3608,8 +3512,6 @@ namespace Example
 
 Update documents collection
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:edit
@@ -3676,8 +3578,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Start import operation
-
-
 
 Requires ALL permissions: 
 
@@ -3749,8 +3649,6 @@ namespace Example
 
 Update a Knowledge base unanswered phrase group
 
-
-
 Requires ALL permissions: 
 
 * knowledge:groups:edit
@@ -3821,8 +3719,6 @@ namespace Example
 
 Creates a presigned URL for uploading a knowledge import file with a set of documents
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:upload
@@ -3886,8 +3782,6 @@ namespace Example
 
 Search the documents in a guest session.
 
-
-
 Requires NO permissions: 
 
 
@@ -3948,8 +3842,6 @@ namespace Example
 
 Query the knowledge documents to provide suggestions for auto completion.
 
-
-
 Requires NO permissions: 
 
 
@@ -4008,8 +3900,6 @@ namespace Example
 
 Create guest session
 
-
-
 Requires NO permissions: 
 
 
@@ -4060,13 +3950,11 @@ namespace Example
 
 <a name="postknowledgeknowledgebasecategories"></a>
 
-## [**CategoryResponse**](CategoryResponse.html) PostKnowledgeKnowledgebaseCategories (string knowledgeBaseId, CategoryRequest body)
+## [**CategoryResponse**](CategoryResponse.html) PostKnowledgeKnowledgebaseCategories (string knowledgeBaseId, CategoryCreateRequest body)
 
 
 
 Create new category
-
-
 
 Requires ALL permissions: 
 
@@ -4095,7 +3983,7 @@ namespace Example
 
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
-            var body = new CategoryRequest(); // CategoryRequest | 
+            var body = new CategoryCreateRequest(); // CategoryCreateRequest | 
 
             try
             { 
@@ -4118,7 +4006,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **body** | [**CategoryRequest**](CategoryRequest.html)|  |  |
+| **body** | [**CategoryCreateRequest**](CategoryCreateRequest.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4132,8 +4020,6 @@ namespace Example
 
 
 Create a variation for a document.
-
-
 
 Requires ANY permissions: 
 
@@ -4203,8 +4089,6 @@ namespace Example
 
 Creates or restores a document version.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:documentVersion:add
@@ -4272,8 +4156,6 @@ namespace Example
 
 Create document.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:add
@@ -4339,7 +4221,7 @@ namespace Example
 
 Bulk remove documents.
 
-
+PostKnowledgeKnowledgebaseDocumentsBulkRemove is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -4406,7 +4288,7 @@ namespace Example
 
 Bulk update documents.
 
-
+PostKnowledgeKnowledgebaseDocumentsBulkUpdate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -4472,8 +4354,6 @@ namespace Example
 
 
 Search the documents in a knowledge base.
-
-
 
 Requires ALL permissions: 
 
@@ -4542,8 +4422,6 @@ namespace Example
 
 Query the knowledge documents to provide suggestions for auto completion.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:knowledgebase:search
@@ -4609,7 +4487,7 @@ namespace Example
 
 Bulk add document versions.
 
-
+PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -4676,8 +4554,6 @@ namespace Example
 
 Create export job
 
-
-
 Requires ALL permissions: 
 
 * knowledge:exportJob:add
@@ -4742,8 +4618,6 @@ namespace Example
 
 
 Create import job
-
-
 
 Requires ALL permissions: 
 
@@ -4810,8 +4684,6 @@ namespace Example
 
 Create new label
 
-
-
 Requires ALL permissions: 
 
 * knowledge:label:add
@@ -4876,8 +4748,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create new category
-
-
 
 Requires ALL permissions: 
 
@@ -4946,7 +4816,7 @@ namespace Example
 
 Upload Article Content
 
-
+PostKnowledgeKnowledgebaseLanguageDocumentUploads is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -5017,8 +4887,6 @@ namespace Example
 
 Create document
 
-
-
 Requires ALL permissions: 
 
 * knowledge:document:add
@@ -5085,8 +4953,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create import operation
-
-
 
 Requires ALL permissions: 
 
@@ -5155,8 +5021,6 @@ namespace Example
 
 Promote trained documents from draft state to active.
 
-
-
 Requires ALL permissions: 
 
 * knowledge:training:edit
@@ -5224,8 +5088,6 @@ namespace Example
 
 Trigger training
 
-
-
 Requires ALL permissions: 
 
 * knowledge:training:create
@@ -5291,8 +5153,6 @@ namespace Example
 
 Search Documents
 
-
-
 Requires ALL permissions: 
 
 * knowledge:knowledgebase:search
@@ -5357,8 +5217,6 @@ namespace Example
 
 
 Create new knowledge base
-
-
 
 Requires ALL permissions: 
 

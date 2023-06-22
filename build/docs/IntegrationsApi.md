@@ -73,6 +73,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutIntegrationsCredential**](IntegrationsApi.html#putintegrationscredential) | **PUT** /api/v2/integrations/credentials/{credentialId} | Update a set of credentials |
 | [**PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**](IntegrationsApi.html#putintegrationsspeechnuancenuanceintegrationidbotslaunchsettings) | **PUT** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings | Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration |
 | [**PutIntegrationsSpeechTtsSettings**](IntegrationsApi.html#putintegrationsspeechttssettings) | **PUT** /api/v2/integrations/speech/tts/settings | Update TTS settings for an org |
+| [**PutIntegrationsUnifiedcommunicationThirdpartypresences**](IntegrationsApi.html#putintegrationsunifiedcommunicationthirdpartypresences) | **PUT** /api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences | Bulk integration presence ingestion |
 {: class="table table-striped"}
 
 <a name="deleteintegration"></a>
@@ -82,8 +83,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 Delete integration.
-
-
 
 Requires ANY permissions: 
 
@@ -148,8 +147,6 @@ namespace Example
 
 Delete an Action
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:delete
@@ -211,8 +208,6 @@ void (empty response body)
 
 
 Delete a Draft
-
-
 
 Requires ANY permissions: 
 
@@ -276,8 +271,6 @@ void (empty response body)
 
 Delete a set of credentials
 
-
-
 Requires NO permissions: 
 
 
@@ -338,8 +331,6 @@ void (empty response body)
 
 
 Get integration.
-
-
 
 Requires ANY permissions: 
 
@@ -416,8 +407,6 @@ namespace Example
 
 Get integration configuration.
 
-
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -480,8 +469,6 @@ namespace Example
 
 
 List integrations
-
-
 
 Requires ANY permissions: 
 
@@ -556,8 +543,6 @@ namespace Example
 
 Retrieves a single Action matching id.
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:view
@@ -625,8 +610,6 @@ namespace Example
 
 
 Retrieve a Draft
-
-
 
 Requires ANY permissions: 
 
@@ -696,8 +679,6 @@ namespace Example
 
 Retrieve schema for a Draft based on filename.
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:view
@@ -763,8 +744,6 @@ namespace Example
 
 
 Retrieve templates for a Draft based on filename.
-
-
 
 Requires ANY permissions: 
 
@@ -832,8 +811,6 @@ namespace Example
 
 Validate current Draft configuration.
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:edit
@@ -896,8 +873,6 @@ namespace Example
 
 
 Retrieve schema for an action based on filename.
-
-
 
 Requires ANY permissions: 
 
@@ -965,8 +940,6 @@ namespace Example
 
 Retrieve text of templates for an action based on filename.
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:view
@@ -1032,8 +1005,6 @@ namespace Example
 
 
 Retrieves all actions associated with filters passed in via query param.
-
-
 
 Requires ANY permissions: 
 
@@ -1119,8 +1090,6 @@ namespace Example
 
 Retrieves all categories of available Actions
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:view
@@ -1196,8 +1165,6 @@ namespace Example
 
 
 Retrieves all action drafts associated with the filters passed in via query param.
-
-
 
 Requires ANY permissions: 
 
@@ -1283,8 +1250,6 @@ namespace Example
 
 Get a specific botConnector bot, plus versions, for this integration
 
-
-
 Requires ANY permissions: 
 
 * integration:botconnector:view
@@ -1351,8 +1316,6 @@ namespace Example
 
 
 Get a list of bot versions for a bot
-
-
 
 Requires ANY permissions: 
 
@@ -1423,8 +1386,6 @@ namespace Example
 
 Get a list of botConnector bots for this integration
 
-
-
 Requires ANY permissions: 
 
 * integration:botconnector:view
@@ -1487,8 +1448,6 @@ namespace Example
 
 
 Get a summary list of botConnector bots for this integration
-
-
 
 Requires ANY permissions: 
 
@@ -1556,8 +1515,6 @@ namespace Example
 
 
 List permitted client app integrations for the logged in user
-
-
 
 Requires NO permissions: 
 
@@ -1633,8 +1590,6 @@ UC integration client application configuration.
 
 This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
 
-
-
 Requires ANY permissions: 
 
 * integration:unifiedCommunications:view
@@ -1708,8 +1663,6 @@ namespace Example
 
 Get a single credential with sensitive fields redacted
 
-
-
 Requires NO permissions: 
 
 
@@ -1771,8 +1724,6 @@ namespace Example
 
 
 List multiple sets of credentials
-
-
 
 Requires NO permissions: 
 
@@ -1838,8 +1789,6 @@ namespace Example
 
 List all credential types
 
-
-
 Requires NO permissions: 
 
 
@@ -1896,8 +1845,6 @@ This endpoint does require any parameters.
 
 
 Get details about a Dialogflow agent
-
-
 
 Requires ANY permissions: 
 
@@ -1961,8 +1908,6 @@ namespace Example
 
 
 Get a list of Dialogflow agents in the customers' Google accounts
-
-
 
 Requires ANY permissions: 
 
@@ -2031,8 +1976,6 @@ namespace Example
 
 Get details about a Lex bot alias
 
-
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2095,8 +2038,6 @@ namespace Example
 
 
 Get a list of aliases for a bot in the customer's AWS accounts
-
-
 
 Requires ANY permissions: 
 
@@ -2169,8 +2110,6 @@ namespace Example
 
 Get a list of Lex bots in the customers' AWS accounts
 
-
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2238,7 +2177,7 @@ namespace Example
 
 Get a Nuance bot in the specified Integration
 
-
+GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2309,7 +2248,7 @@ namespace Example
 
 Get the status of an asynchronous Nuance bot GET job
 
-
+GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2378,7 +2317,7 @@ namespace Example
 
 Get the result of an asynchronous Nuance bot GET job
 
-
+GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2449,7 +2388,7 @@ Get a list of Nuance bots available in the specified Integration
 
 If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
 
-
+GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2520,7 +2459,7 @@ namespace Example
 
 Get the status of an asynchronous Nuance bots GET job
 
-
+GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2587,7 +2526,7 @@ namespace Example
 
 Get the result of an asynchronous Nuance bots GET job
 
-
+GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2654,8 +2593,6 @@ namespace Example
 
 Get details about a TTS engine
 
-
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2721,8 +2658,6 @@ namespace Example
 
 Get details about a specific voice for a TTS engine
 
-
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2787,8 +2722,6 @@ namespace Example
 
 
 Get a list of voices for a TTS engine
-
-
 
 Requires ANY permissions: 
 
@@ -2856,8 +2789,6 @@ namespace Example
 
 
 Get a list of TTS engines enabled for org
-
-
 
 Requires ANY permissions: 
 
@@ -2930,8 +2861,6 @@ namespace Example
 
 Get TTS settings for an org
 
-
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2989,8 +2918,6 @@ This endpoint does require any parameters.
 
 
 Get integration type.
-
-
 
 Requires ANY permissions: 
 
@@ -3054,8 +2981,6 @@ namespace Example
 
 
 Get properties config schema for an integration type.
-
-
 
 Requires ANY permissions: 
 
@@ -3121,8 +3046,6 @@ namespace Example
 
 
 List integration types
-
-
 
 Requires ANY permissions: 
 
@@ -3197,8 +3120,6 @@ namespace Example
 
 List permitted user app integrations for the logged in user
 
-
-
 Requires NO permissions: 
 
 
@@ -3272,8 +3193,6 @@ namespace Example
 
 
 Update an integration.
-
-
 
 Requires ANY permissions: 
 
@@ -3352,8 +3271,6 @@ namespace Example
 
 Patch an Action
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:edit
@@ -3418,8 +3335,6 @@ namespace Example
 
 
 Update an existing Draft
-
-
 
 Requires ANY permissions: 
 
@@ -3486,8 +3401,6 @@ namespace Example
 
 Create an integration.
 
-
-
 Requires ANY permissions: 
 
 * integrations:integration:add
@@ -3551,8 +3464,6 @@ namespace Example
 
 Create a new Draft from existing Action
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:edit
@@ -3615,8 +3526,6 @@ namespace Example
 
 
 Publish a Draft and make it the active Action configuration
-
-
 
 Requires ANY permissions: 
 
@@ -3683,8 +3592,6 @@ namespace Example
 
 Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:execute
@@ -3749,8 +3656,6 @@ namespace Example
 
 
 Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
-
-
 
 Requires ANY permissions: 
 
@@ -3818,8 +3723,6 @@ namespace Example
 
 Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:execute
@@ -3886,8 +3789,6 @@ namespace Example
 
 Create a new Action
 
-
-
 Requires ANY permissions: 
 
 * integrations:action:add
@@ -3950,8 +3851,6 @@ namespace Example
 
 
 Create a new Draft
-
-
 
 Requires ANY permissions: 
 
@@ -4016,8 +3915,6 @@ namespace Example
 
 Create a set of credentials
 
-
-
 Requires NO permissions: 
 
 
@@ -4080,7 +3977,7 @@ namespace Example
 
 Get a Nuance bot in the specified Integration asynchronously
 
-
+PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4151,7 +4048,7 @@ namespace Example
 
 Get a list of Nuance bots in the specified Integration asynchronously
 
-
+PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4222,7 +4119,7 @@ namespace Example
 
 Try out a single credential for a Nuance bot to know if the secret is correct
 
-
+PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4287,8 +4184,6 @@ void (empty response body)
 
 
 Update integration configuration.
-
-
 
 Requires ANY permissions: 
 
@@ -4355,8 +4250,6 @@ namespace Example
 
 Set a list of botConnector bots plus versions for this integration
 
-
-
 Requires ANY permissions: 
 
 * integration:botconnector:edit
@@ -4420,8 +4313,6 @@ void (empty response body)
 
 
 Update a set of credentials
-
-
 
 Requires NO permissions: 
 
@@ -4487,7 +4378,7 @@ namespace Example
 
 Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
 
-
+PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4553,8 +4444,6 @@ void (empty response body)
 
 Update TTS settings for an org
 
-
-
 Requires ANY permissions: 
 
 * integrations:integration:edit
@@ -4609,4 +4498,71 @@ namespace Example
 ### Return type
 
 [**TtsSettings**](TtsSettings.html)
+
+<a name="putintegrationsunifiedcommunicationthirdpartypresences"></a>
+
+## **string** PutIntegrationsUnifiedcommunicationThirdpartypresences (string ucIntegrationId, List<UCThirdPartyPresence> body)
+
+
+
+Bulk integration presence ingestion
+
+This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+
+Requires ANY permissions: 
+
+* integration:presence:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIntegrationsUnifiedcommunicationThirdpartypresencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var ucIntegrationId = ucIntegrationId_example;  // string | UC Integration ID
+            var body = new List<UCThirdPartyPresence>(); // List<UCThirdPartyPresence> | List of User presences
+
+            try
+            { 
+                // Bulk integration presence ingestion
+                string result = apiInstance.PutIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PutIntegrationsUnifiedcommunicationThirdpartypresences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ucIntegrationId** | **string**| UC Integration ID |  |
+| **body** | [**List<UCThirdPartyPresence>**](UCThirdPartyPresence.html)| List of User presences |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
 

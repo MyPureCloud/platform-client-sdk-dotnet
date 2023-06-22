@@ -28,7 +28,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         
-        
         JsonNodeSearchResponse GetSearch (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -42,7 +41,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        
         
         ApiResponse<JsonNodeSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
 
@@ -58,7 +56,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         
-        
         JsonNodeSearchResponse GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -73,7 +70,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         
-        
         ApiResponse<JsonNodeSearchResponse> GetSearchSuggestWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -86,7 +82,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        
         
         JsonNodeSearchResponse PostSearch (SearchRequest body, bool? profile = null);
 
@@ -101,7 +96,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         
-        
         ApiResponse<JsonNodeSearchResponse> PostSearchWithHttpInfo (SearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -115,7 +109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         
-        
         JsonNodeSearchResponse PostSearchSuggest (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -128,7 +121,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        
         
         ApiResponse<JsonNodeSearchResponse> PostSearchSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null);
 
@@ -148,7 +140,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         
-        
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -162,7 +153,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
 
@@ -178,7 +168,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         
-        
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchSuggestAsync (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -193,7 +182,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchSuggestAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -206,7 +194,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        
         
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchAsync (SearchRequest body, bool? profile = null);
 
@@ -221,7 +208,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchAsyncWithHttpInfo (SearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -235,7 +221,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         
-        
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchSuggestAsync (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -248,7 +233,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null);
 
@@ -346,13 +330,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search using the q64 value returned from a previous search. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        
         
         public JsonNodeSearchResponse GetSearch (string q64, List<string> expand = null, bool? profile = null)
         {
@@ -362,13 +346,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search using the q64 value returned from a previous search. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        
         
         public ApiResponse< JsonNodeSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         { 
@@ -450,13 +434,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search using the q64 value returned from a previous search. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64, List<string> expand = null, bool? profile = null)
         {
@@ -467,13 +451,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search using the q64 value returned from a previous search. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         { 
@@ -557,13 +541,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        
         
         public JsonNodeSearchResponse GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
         {
@@ -573,13 +557,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        
         
         public ApiResponse< JsonNodeSearchResponse > GetSearchSuggestWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         { 
@@ -661,13 +645,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchSuggestAsync (string q64, List<string> expand = null, bool? profile = null)
         {
@@ -678,13 +662,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchSuggestAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         { 
@@ -768,12 +752,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        
         
         public JsonNodeSearchResponse PostSearch (SearchRequest body, bool? profile = null)
         {
@@ -783,12 +767,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        
         
         public ApiResponse< JsonNodeSearchResponse > PostSearchWithHttpInfo (SearchRequest body, bool? profile = null)
         { 
@@ -874,12 +858,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchAsync (SearchRequest body, bool? profile = null)
         {
@@ -890,12 +874,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchAsyncWithHttpInfo (SearchRequest body, bool? profile = null)
         { 
@@ -983,12 +967,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggest resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        
         
         public JsonNodeSearchResponse PostSearchSuggest (SuggestSearchRequest body, bool? profile = null)
         {
@@ -998,12 +982,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggest resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        
         
         public ApiResponse< JsonNodeSearchResponse > PostSearchSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
         { 
@@ -1089,12 +1073,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggest resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchSuggestAsync (SuggestSearchRequest body, bool? profile = null)
         {
@@ -1105,12 +1089,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Suggest resources. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
         { 

@@ -22,7 +22,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyActiontargets**](JourneyApi.html#getjourneyactiontargets) | **GET** /api/v2/journey/actiontargets | Retrieve all action targets. |
 | [**GetJourneyActiontemplate**](JourneyApi.html#getjourneyactiontemplate) | **GET** /api/v2/journey/actiontemplates/{actionTemplateId} | Retrieve a single action template. |
 | [**GetJourneyActiontemplates**](JourneyApi.html#getjourneyactiontemplates) | **GET** /api/v2/journey/actiontemplates | Retrieve all action templates. |
-| [**GetJourneyCustomerCustomerIdSessions**](JourneyApi.html#getjourneycustomercustomeridsessions) | **GET** /api/v2/journey/customers/{customerIdType}/{customerId}/sessions | Retrieve all sessions for a given customer. |
 | [**GetJourneyOutcome**](JourneyApi.html#getjourneyoutcome) | **GET** /api/v2/journey/outcomes/{outcomeId} | Retrieve a single outcome. |
 | [**GetJourneyOutcomes**](JourneyApi.html#getjourneyoutcomes) | **GET** /api/v2/journey/outcomes | Retrieve all outcomes. |
 | [**GetJourneyOutcomesAttributionsJob**](JourneyApi.html#getjourneyoutcomesattributionsjob) | **GET** /api/v2/journey/outcomes/attributions/jobs/{jobId} | Get job status. |
@@ -58,8 +57,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 Delete single action map.
-
-
 
 Requires ANY permissions: 
 
@@ -122,8 +119,6 @@ void (empty response body)
 
 
 Delete a single action template.
-
-
 
 Requires ANY permissions: 
 
@@ -189,8 +184,6 @@ void (empty response body)
 
 Delete an outcome.
 
-
-
 Requires ANY permissions: 
 
 * journey:outcome:delete
@@ -252,8 +245,6 @@ void (empty response body)
 
 
 Delete an outcome predictor.
-
-
 
 Requires ANY permissions: 
 
@@ -317,8 +308,6 @@ void (empty response body)
 
 Delete a segment.
 
-
-
 Requires ANY permissions: 
 
 * journey:segment:delete
@@ -381,7 +370,7 @@ void (empty response body)
 
 Get status for async query for journey aggregates
 
-
+GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -446,7 +435,7 @@ namespace Example
 
 Fetch a page of results for an async aggregates query
 
-
+GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -513,8 +502,6 @@ namespace Example
 
 Retrieve a single action map.
 
-
-
 Requires ANY permissions: 
 
 * journey:actionmap:view
@@ -577,8 +564,6 @@ namespace Example
 
 
 Retrieve all action maps.
-
-
 
 Requires ANY permissions: 
 
@@ -657,8 +642,6 @@ namespace Example
 
 Get status of job.
 
-
-
 Requires ALL permissions: 
 
 * journey:actionmapEstimateJob:view
@@ -721,8 +704,6 @@ namespace Example
 
 
 Get estimates from completed job.
-
-
 
 Requires ALL permissions: 
 
@@ -787,8 +768,6 @@ namespace Example
 
 Retrieve a single action target.
 
-
-
 Requires ANY permissions: 
 
 * journey:actiontarget:view
@@ -851,8 +830,6 @@ namespace Example
 
 
 Retrieve all action targets.
-
-
 
 Requires ANY permissions: 
 
@@ -919,8 +896,6 @@ namespace Example
 
 Retrieve a single action template.
 
-
-
 Requires ANY permissions: 
 
 * journey:actiontemplate:view
@@ -983,8 +958,6 @@ namespace Example
 
 
 Retrieve all action templates.
-
-
 
 Requires ANY permissions: 
 
@@ -1053,77 +1026,6 @@ namespace Example
 
 [**ActionTemplateListing**](ActionTemplateListing.html)
 
-<a name="getjourneycustomercustomeridsessions"></a>
-
-## [**SessionListing**](SessionListing.html) GetJourneyCustomerCustomerIdSessions (string customerIdType, string customerId, string pageSize = null, string after = null)
-
-
-
-Retrieve all sessions for a given customer.
-
-
-
-Requires ANY permissions: 
-
-* journey:session:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetJourneyCustomerCustomerIdSessionsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new JourneyApi();
-            var customerIdType = customerIdType_example;  // string | Type of ID used to identify customer (e.g. email, cookie, and phone).
-            var customerId = customerId_example;  // string | Primary identifier of the customer in the source of the session.
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
-            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-
-            try
-            { 
-                // Retrieve all sessions for a given customer.
-                SessionListing result = apiInstance.GetJourneyCustomerCustomerIdSessions(customerIdType, customerId, pageSize, after);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling JourneyApi.GetJourneyCustomerCustomerIdSessions: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **customerIdType** | **string**| Type of ID used to identify customer (e.g. email, cookie, and phone). |  |
-| **customerId** | **string**| Primary identifier of the customer in the source of the session. |  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**SessionListing**](SessionListing.html)
-
 <a name="getjourneyoutcome"></a>
 
 ## [**Outcome**](Outcome.html) GetJourneyOutcome (string outcomeId)
@@ -1131,8 +1033,6 @@ namespace Example
 
 
 Retrieve a single outcome.
-
-
 
 Requires ANY permissions: 
 
@@ -1196,8 +1096,6 @@ namespace Example
 
 
 Retrieve all outcomes.
-
-
 
 Requires ANY permissions: 
 
@@ -1272,7 +1170,7 @@ namespace Example
 
 Get job status.
 
-
+GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1337,7 +1235,7 @@ namespace Example
 
 Get outcome attribution entities from completed job.
 
-
+GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1402,8 +1300,6 @@ namespace Example
 
 Retrieve a single outcome predictor.
 
-
-
 Requires ANY permissions: 
 
 * journey:outcomepredictor:view
@@ -1467,8 +1363,6 @@ namespace Example
 
 Retrieve all outcome predictors.
 
-
-
 Requires ANY permissions: 
 
 * journey:outcomepredictor:view
@@ -1526,8 +1420,6 @@ This endpoint does require any parameters.
 
 
 Retrieve a single segment.
-
-
 
 Requires ANY permissions: 
 
@@ -1591,8 +1483,6 @@ namespace Example
 
 
 Retrieve all segments.
-
-
 
 Requires ANY permissions: 
 
@@ -1669,8 +1559,6 @@ namespace Example
 
 Retrieve a single session.
 
-
-
 Requires ANY permissions: 
 
 * journey:session:view
@@ -1735,7 +1623,7 @@ namespace Example
 
 Retrieve all events for a given session.
 
-
+GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1804,8 +1692,6 @@ namespace Example
 
 Retrieve latest outcome score associated with a session for all outcomes.
 
-
-
 Requires ANY permissions: 
 
 * journey:outcomescores:view
@@ -1869,7 +1755,7 @@ namespace Example
 
 Retrieve segment assignments by session ID.
 
-
+GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1942,8 +1828,6 @@ namespace Example
 
 Update single action map.
 
-
-
 Requires ANY permissions: 
 
 * journey:actionmap:edit
@@ -2008,8 +1892,6 @@ namespace Example
 
 
 Update a single action target.
-
-
 
 Requires ANY permissions: 
 
@@ -2076,8 +1958,6 @@ namespace Example
 
 Update a single action template.
 
-
-
 Requires ANY permissions: 
 
 * journey:actiontemplate:edit
@@ -2142,8 +2022,6 @@ namespace Example
 
 
 Update an outcome.
-
-
 
 Requires ANY permissions: 
 
@@ -2210,8 +2088,6 @@ namespace Example
 
 Update a segment.
 
-
-
 Requires ANY permissions: 
 
 * journey:segment:edit
@@ -2277,7 +2153,7 @@ namespace Example
 
 Query for journey aggregates asynchronously
 
-
+PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2342,8 +2218,6 @@ namespace Example
 
 Query for journey aggregates
 
-
-
 Requires ANY permissions: 
 
 * analytics:journeyAggregate:view
@@ -2406,8 +2280,6 @@ namespace Example
 
 
 Create an action map.
-
-
 
 Requires ANY permissions: 
 
@@ -2472,8 +2344,6 @@ namespace Example
 
 Query for estimates
 
-
-
 Requires ANY permissions: 
 
 * journey:actionmapEstimateJob:add
@@ -2536,8 +2406,6 @@ namespace Example
 
 
 Create a single action template.
-
-
 
 Requires ANY permissions: 
 
@@ -2602,8 +2470,6 @@ namespace Example
 
 Create an outcome.
 
-
-
 Requires ANY permissions: 
 
 * journey:outcome:add
@@ -2667,7 +2533,7 @@ namespace Example
 
 Create Outcome Attributions
 
-
+PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2732,8 +2598,6 @@ namespace Example
 
 Create an outcome predictor.
 
-
-
 Requires ANY permissions: 
 
 * journey:outcomepredictor:add
@@ -2796,8 +2660,6 @@ namespace Example
 
 
 Create a segment.
-
-
 
 Requires ANY permissions: 
 

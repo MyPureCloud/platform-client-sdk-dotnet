@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns></returns>
         
-        
         void DeleteLanguageunderstandingDomain (string domainId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteLanguageunderstandingDomainWithHttpInfo (string domainId);
 
@@ -53,7 +51,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns></returns>
         
-        
         void DeleteLanguageunderstandingDomainFeedbackFeedbackId (string domainId, string feedbackId);
 
         /// <summary>
@@ -66,7 +63,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteLanguageunderstandingDomainFeedbackFeedbackIdWithHttpInfo (string domainId, string feedbackId);
 
@@ -81,7 +77,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns></returns>
         
-        
         void DeleteLanguageunderstandingDomainVersion (string domainId, string domainVersionId);
 
         /// <summary>
@@ -95,7 +90,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId);
 
         /// <summary>
@@ -108,7 +102,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <returns></returns>
         
-        
         void DeleteLanguageunderstandingMiner (string minerId);
 
         /// <summary>
@@ -120,7 +113,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         ApiResponse<Object> DeleteLanguageunderstandingMinerWithHttpInfo (string minerId);
 
@@ -135,7 +127,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftId">Draft ID</param>
         /// <returns></returns>
         
-        
         void DeleteLanguageunderstandingMinerDraft (string minerId, string draftId);
 
         /// <summary>
@@ -149,7 +140,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftId">Draft ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId);
 
         /// <summary>
@@ -162,7 +152,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>NluDomain</returns>
         
-        
         NluDomain GetLanguageunderstandingDomain (string domainId);
 
         /// <summary>
@@ -174,7 +163,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        
         
         ApiResponse<NluDomain> GetLanguageunderstandingDomainWithHttpInfo (string domainId);
 
@@ -200,7 +188,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>NluFeedbackListing</returns>
         
-        
         NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null);
 
         /// <summary>
@@ -225,7 +212,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of NluFeedbackListing</returns>
         
-        
         ApiResponse<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null);
 
         /// <summary>
@@ -239,7 +225,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>NluFeedbackResponse</returns>
-        
         
         NluFeedbackResponse GetLanguageunderstandingDomainFeedbackFeedbackId (string domainId, string feedbackId, List<string> fields = null);
 
@@ -255,7 +240,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of NluFeedbackResponse</returns>
         
-        
         ApiResponse<NluFeedbackResponse> GetLanguageunderstandingDomainFeedbackFeedbackIdWithHttpInfo (string domainId, string feedbackId, List<string> fields = null);
 
         /// <summary>
@@ -269,7 +253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>NluDomainVersion</returns>
-        
         
         NluDomainVersion GetLanguageunderstandingDomainVersion (string domainId, string domainVersionId, bool? includeUtterances = null);
 
@@ -285,7 +268,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
         
-        
         ApiResponse<NluDomainVersion> GetLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId, bool? includeUtterances = null);
 
         /// <summary>
@@ -299,7 +281,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>NluDomainVersionQualityReport</returns>
         
-        
         NluDomainVersionQualityReport GetLanguageunderstandingDomainVersionReport (string domainId, string domainVersionId);
 
         /// <summary>
@@ -312,7 +293,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>ApiResponse of NluDomainVersionQualityReport</returns>
-        
         
         ApiResponse<NluDomainVersionQualityReport> GetLanguageunderstandingDomainVersionReportWithHttpInfo (string domainId, string domainVersionId);
 
@@ -329,7 +309,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>NluDomainVersionListing</returns>
         
-        
         NluDomainVersionListing GetLanguageunderstandingDomainVersions (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -345,7 +324,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of NluDomainVersionListing</returns>
         
-        
         ApiResponse<NluDomainVersionListing> GetLanguageunderstandingDomainVersionsWithHttpInfo (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -358,7 +336,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>NluDomainListing</returns>
-        
         
         NluDomainListing GetLanguageunderstandingDomains (int? pageNumber = null, int? pageSize = null);
 
@@ -373,7 +350,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of NluDomainListing</returns>
         
-        
         ApiResponse<NluDomainListing> GetLanguageunderstandingDomainsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -386,7 +362,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <returns>Miner</returns>
         
-        
         Miner GetLanguageunderstandingMiner (string minerId);
 
         /// <summary>
@@ -398,7 +373,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>ApiResponse of Miner</returns>
-        
         
         ApiResponse<Miner> GetLanguageunderstandingMinerWithHttpInfo (string minerId);
 
@@ -415,7 +389,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftTopicId">Parameter to filter a specific topic. (optional)</param>
         /// <returns>Draft</returns>
         
-        
         Draft GetLanguageunderstandingMinerDraft (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null);
 
         /// <summary>
@@ -431,7 +404,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftTopicId">Parameter to filter a specific topic. (optional)</param>
         /// <returns>ApiResponse of Draft</returns>
         
-        
         ApiResponse<Draft> GetLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null);
 
         /// <summary>
@@ -444,7 +416,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <returns>DraftListing</returns>
         
-        
         DraftListing GetLanguageunderstandingMinerDrafts (string minerId);
 
         /// <summary>
@@ -456,7 +427,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>ApiResponse of DraftListing</returns>
-        
         
         ApiResponse<DraftListing> GetLanguageunderstandingMinerDraftsWithHttpInfo (string minerId);
 
@@ -472,7 +442,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Option to fetch utterances (optional)</param>
         /// <returns>MinerIntent</returns>
         
-        
         MinerIntent GetLanguageunderstandingMinerIntent (string minerId, string intentId, string expand = null);
 
         /// <summary>
@@ -487,7 +456,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Option to fetch utterances (optional)</param>
         /// <returns>ApiResponse of MinerIntent</returns>
         
-        
         ApiResponse<MinerIntent> GetLanguageunderstandingMinerIntentWithHttpInfo (string minerId, string intentId, string expand = null);
 
         /// <summary>
@@ -501,7 +469,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Option to fetch utterances. (optional)</param>
         /// <returns>MinedIntentsListing</returns>
         
-        
         MinedIntentsListing GetLanguageunderstandingMinerIntents (string minerId, string expand = null);
 
         /// <summary>
@@ -514,7 +481,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="expand">Option to fetch utterances. (optional)</param>
         /// <returns>ApiResponse of MinedIntentsListing</returns>
-        
         
         ApiResponse<MinedIntentsListing> GetLanguageunderstandingMinerIntentsWithHttpInfo (string minerId, string expand = null);
 
@@ -530,7 +496,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Option to fetch phrases (optional)</param>
         /// <returns>MinerTopic</returns>
         
-        
         MinerTopic GetLanguageunderstandingMinerTopic (string minerId, string topicId, string expand = null);
 
         /// <summary>
@@ -544,7 +509,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="expand">Option to fetch phrases (optional)</param>
         /// <returns>ApiResponse of MinerTopic</returns>
-        
         
         ApiResponse<MinerTopic> GetLanguageunderstandingMinerTopicWithHttpInfo (string minerId, string topicId, string expand = null);
 
@@ -560,7 +524,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phraseId">The ID of the phrase to be retrieved.</param>
         /// <returns>MinerTopicPhrase</returns>
         
-        
         MinerTopicPhrase GetLanguageunderstandingMinerTopicPhrase (string minerId, string topicId, string phraseId);
 
         /// <summary>
@@ -575,7 +538,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phraseId">The ID of the phrase to be retrieved.</param>
         /// <returns>ApiResponse of MinerTopicPhrase</returns>
         
-        
         ApiResponse<MinerTopicPhrase> GetLanguageunderstandingMinerTopicPhraseWithHttpInfo (string minerId, string topicId, string phraseId);
 
         /// <summary>
@@ -587,7 +549,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>MinerTopicsListing</returns>
-        
         
         MinerTopicsListing GetLanguageunderstandingMinerTopics (string minerId);
 
@@ -601,7 +562,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <returns>ApiResponse of MinerTopicsListing</returns>
         
-        
         ApiResponse<MinerTopicsListing> GetLanguageunderstandingMinerTopicsWithHttpInfo (string minerId);
 
         /// <summary>
@@ -614,7 +574,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerType">Type of miner, either intent or topic (optional)</param>
         /// <returns>MinerListing</returns>
         
-        
         MinerListing GetLanguageunderstandingMiners (string minerType = null);
 
         /// <summary>
@@ -626,7 +585,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerType">Type of miner, either intent or topic (optional)</param>
         /// <returns>ApiResponse of MinerListing</returns>
-        
         
         ApiResponse<MinerListing> GetLanguageunderstandingMinersWithHttpInfo (string minerType = null);
 
@@ -641,7 +599,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>NluDomain</returns>
         
-        
         NluDomain PatchLanguageunderstandingDomain (string domainId, NluDomain body);
 
         /// <summary>
@@ -654,7 +611,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        
         
         ApiResponse<NluDomain> PatchLanguageunderstandingDomainWithHttpInfo (string domainId, NluDomain body);
 
@@ -670,7 +626,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Draft</returns>
         
-        
         Draft PatchLanguageunderstandingMinerDraft (string minerId, string draftId, DraftRequest body = null);
 
         /// <summary>
@@ -685,7 +640,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Draft</returns>
         
-        
         ApiResponse<Draft> PatchLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId, DraftRequest body = null);
 
         /// <summary>
@@ -699,7 +653,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Feedback to create.</param>
         /// <returns>NluFeedbackResponse</returns>
         
-        
         NluFeedbackResponse PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body);
 
         /// <summary>
@@ -712,7 +665,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The Feedback to create.</param>
         /// <returns>ApiResponse of NluFeedbackResponse</returns>
-        
         
         ApiResponse<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, NluFeedbackRequest body);
 
@@ -728,7 +680,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The input data to perform detection on.</param>
         /// <returns>NluDetectionResponse</returns>
         
-        
         NluDetectionResponse PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body);
 
         /// <summary>
@@ -743,7 +694,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The input data to perform detection on.</param>
         /// <returns>ApiResponse of NluDetectionResponse</returns>
         
-        
         ApiResponse<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body);
 
         /// <summary>
@@ -756,7 +706,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>NluDomainVersion</returns>
-        
         
         NluDomainVersion PostLanguageunderstandingDomainVersionPublish (string domainId, string domainVersionId);
 
@@ -771,7 +720,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
         
-        
         ApiResponse<NluDomainVersion> PostLanguageunderstandingDomainVersionPublishWithHttpInfo (string domainId, string domainVersionId);
 
         /// <summary>
@@ -785,7 +733,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>NluDomainVersionTrainingResponse</returns>
         
-        
         NluDomainVersionTrainingResponse PostLanguageunderstandingDomainVersionTrain (string domainId, string domainVersionId);
 
         /// <summary>
@@ -798,7 +745,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>ApiResponse of NluDomainVersionTrainingResponse</returns>
-        
         
         ApiResponse<NluDomainVersionTrainingResponse> PostLanguageunderstandingDomainVersionTrainWithHttpInfo (string domainId, string domainVersionId);
 
@@ -814,7 +760,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>NluDomainVersion</returns>
         
-        
         NluDomainVersion PostLanguageunderstandingDomainVersions (string domainId, NluDomainVersion body, bool? includeUtterances = null);
 
         /// <summary>
@@ -829,7 +774,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
         
-        
         ApiResponse<NluDomainVersion> PostLanguageunderstandingDomainVersionsWithHttpInfo (string domainId, NluDomainVersion body, bool? includeUtterances = null);
 
         /// <summary>
@@ -842,7 +786,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>NluDomain</returns>
         
-        
         NluDomain PostLanguageunderstandingDomains (NluDomain body);
 
         /// <summary>
@@ -854,7 +797,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        
         
         ApiResponse<NluDomain> PostLanguageunderstandingDomainsWithHttpInfo (NluDomain body);
 
@@ -869,7 +811,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Details for creating draft resource</param>
         /// <returns>Draft</returns>
         
-        
         Draft PostLanguageunderstandingMinerDrafts (string minerId, Draft body);
 
         /// <summary>
@@ -882,7 +823,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">Details for creating draft resource</param>
         /// <returns>ApiResponse of Draft</returns>
-        
         
         ApiResponse<Draft> PostLanguageunderstandingMinerDraftsWithHttpInfo (string minerId, Draft body);
 
@@ -897,7 +837,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Miner</returns>
         
-        
         Miner PostLanguageunderstandingMinerExecute (string minerId, MinerExecuteRequest body = null);
 
         /// <summary>
@@ -911,7 +850,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Miner</returns>
         
-        
         ApiResponse<Miner> PostLanguageunderstandingMinerExecuteWithHttpInfo (string minerId, MinerExecuteRequest body = null);
 
         /// <summary>
@@ -924,7 +862,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Details for creating a new miner resource.</param>
         /// <returns>Miner</returns>
         
-        
         Miner PostLanguageunderstandingMiners (Miner body);
 
         /// <summary>
@@ -936,7 +873,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Details for creating a new miner resource.</param>
         /// <returns>ApiResponse of Miner</returns>
-        
         
         ApiResponse<Miner> PostLanguageunderstandingMinersWithHttpInfo (Miner body);
 
@@ -952,7 +888,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>NluDomainVersion</returns>
         
-        
         NluDomainVersion PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body);
 
         /// <summary>
@@ -966,7 +901,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
-        
         
         ApiResponse<NluDomainVersion> PutLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body);
 
@@ -984,7 +918,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteLanguageunderstandingDomainAsync (string domainId);
 
         /// <summary>
@@ -996,7 +929,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainAsyncWithHttpInfo (string domainId);
 
@@ -1011,7 +943,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteLanguageunderstandingDomainFeedbackFeedbackIdAsync (string domainId, string feedbackId);
 
         /// <summary>
@@ -1024,7 +955,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainFeedbackFeedbackIdAsyncWithHttpInfo (string domainId, string feedbackId);
 
@@ -1039,7 +969,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId);
 
         /// <summary>
@@ -1053,7 +982,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId);
 
         /// <summary>
@@ -1066,7 +994,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteLanguageunderstandingMinerAsync (string minerId);
 
         /// <summary>
@@ -1078,7 +1005,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingMinerAsyncWithHttpInfo (string minerId);
 
@@ -1093,7 +1019,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftId">Draft ID</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteLanguageunderstandingMinerDraftAsync (string minerId, string draftId);
 
         /// <summary>
@@ -1107,7 +1032,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftId">Draft ID</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId);
 
         /// <summary>
@@ -1120,7 +1044,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>Task of NluDomain</returns>
         
-        
         System.Threading.Tasks.Task<NluDomain> GetLanguageunderstandingDomainAsync (string domainId);
 
         /// <summary>
@@ -1132,7 +1055,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<NluDomain>> GetLanguageunderstandingDomainAsyncWithHttpInfo (string domainId);
 
@@ -1158,7 +1080,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of NluFeedbackListing</returns>
         
-        
         System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null);
 
         /// <summary>
@@ -1183,7 +1104,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (NluFeedbackListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null);
 
         /// <summary>
@@ -1197,7 +1117,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of NluFeedbackResponse</returns>
-        
         
         System.Threading.Tasks.Task<NluFeedbackResponse> GetLanguageunderstandingDomainFeedbackFeedbackIdAsync (string domainId, string feedbackId, List<string> fields = null);
 
@@ -1213,7 +1132,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (NluFeedbackResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<NluFeedbackResponse>> GetLanguageunderstandingDomainFeedbackFeedbackIdAsyncWithHttpInfo (string domainId, string feedbackId, List<string> fields = null);
 
         /// <summary>
@@ -1227,7 +1145,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>Task of NluDomainVersion</returns>
-        
         
         System.Threading.Tasks.Task<NluDomainVersion> GetLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId, bool? includeUtterances = null);
 
@@ -1243,7 +1160,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> GetLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId, bool? includeUtterances = null);
 
         /// <summary>
@@ -1257,7 +1173,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of NluDomainVersionQualityReport</returns>
         
-        
         System.Threading.Tasks.Task<NluDomainVersionQualityReport> GetLanguageunderstandingDomainVersionReportAsync (string domainId, string domainVersionId);
 
         /// <summary>
@@ -1270,7 +1185,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersionQualityReport)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<NluDomainVersionQualityReport>> GetLanguageunderstandingDomainVersionReportAsyncWithHttpInfo (string domainId, string domainVersionId);
 
@@ -1287,7 +1201,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of NluDomainVersionListing</returns>
         
-        
         System.Threading.Tasks.Task<NluDomainVersionListing> GetLanguageunderstandingDomainVersionsAsync (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1303,7 +1216,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (NluDomainVersionListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<NluDomainVersionListing>> GetLanguageunderstandingDomainVersionsAsyncWithHttpInfo (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1316,7 +1228,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of NluDomainListing</returns>
-        
         
         System.Threading.Tasks.Task<NluDomainListing> GetLanguageunderstandingDomainsAsync (int? pageNumber = null, int? pageSize = null);
 
@@ -1331,7 +1242,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (NluDomainListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<NluDomainListing>> GetLanguageunderstandingDomainsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1344,7 +1254,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of Miner</returns>
         
-        
         System.Threading.Tasks.Task<Miner> GetLanguageunderstandingMinerAsync (string minerId);
 
         /// <summary>
@@ -1356,7 +1265,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of ApiResponse (Miner)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Miner>> GetLanguageunderstandingMinerAsyncWithHttpInfo (string minerId);
 
@@ -1373,7 +1281,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftTopicId">Parameter to filter a specific topic. (optional)</param>
         /// <returns>Task of Draft</returns>
         
-        
         System.Threading.Tasks.Task<Draft> GetLanguageunderstandingMinerDraftAsync (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null);
 
         /// <summary>
@@ -1389,7 +1296,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftTopicId">Parameter to filter a specific topic. (optional)</param>
         /// <returns>Task of ApiResponse (Draft)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Draft>> GetLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null);
 
         /// <summary>
@@ -1402,7 +1308,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of DraftListing</returns>
         
-        
         System.Threading.Tasks.Task<DraftListing> GetLanguageunderstandingMinerDraftsAsync (string minerId);
 
         /// <summary>
@@ -1414,7 +1319,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of ApiResponse (DraftListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<DraftListing>> GetLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId);
 
@@ -1430,7 +1334,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Option to fetch utterances (optional)</param>
         /// <returns>Task of MinerIntent</returns>
         
-        
         System.Threading.Tasks.Task<MinerIntent> GetLanguageunderstandingMinerIntentAsync (string minerId, string intentId, string expand = null);
 
         /// <summary>
@@ -1445,7 +1348,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Option to fetch utterances (optional)</param>
         /// <returns>Task of ApiResponse (MinerIntent)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MinerIntent>> GetLanguageunderstandingMinerIntentAsyncWithHttpInfo (string minerId, string intentId, string expand = null);
 
         /// <summary>
@@ -1459,7 +1361,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Option to fetch utterances. (optional)</param>
         /// <returns>Task of MinedIntentsListing</returns>
         
-        
         System.Threading.Tasks.Task<MinedIntentsListing> GetLanguageunderstandingMinerIntentsAsync (string minerId, string expand = null);
 
         /// <summary>
@@ -1472,7 +1373,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="expand">Option to fetch utterances. (optional)</param>
         /// <returns>Task of ApiResponse (MinedIntentsListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<MinedIntentsListing>> GetLanguageunderstandingMinerIntentsAsyncWithHttpInfo (string minerId, string expand = null);
 
@@ -1488,7 +1388,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Option to fetch phrases (optional)</param>
         /// <returns>Task of MinerTopic</returns>
         
-        
         System.Threading.Tasks.Task<MinerTopic> GetLanguageunderstandingMinerTopicAsync (string minerId, string topicId, string expand = null);
 
         /// <summary>
@@ -1502,7 +1401,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="expand">Option to fetch phrases (optional)</param>
         /// <returns>Task of ApiResponse (MinerTopic)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<MinerTopic>> GetLanguageunderstandingMinerTopicAsyncWithHttpInfo (string minerId, string topicId, string expand = null);
 
@@ -1518,7 +1416,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phraseId">The ID of the phrase to be retrieved.</param>
         /// <returns>Task of MinerTopicPhrase</returns>
         
-        
         System.Threading.Tasks.Task<MinerTopicPhrase> GetLanguageunderstandingMinerTopicPhraseAsync (string minerId, string topicId, string phraseId);
 
         /// <summary>
@@ -1533,7 +1430,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phraseId">The ID of the phrase to be retrieved.</param>
         /// <returns>Task of ApiResponse (MinerTopicPhrase)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MinerTopicPhrase>> GetLanguageunderstandingMinerTopicPhraseAsyncWithHttpInfo (string minerId, string topicId, string phraseId);
 
         /// <summary>
@@ -1545,7 +1441,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of MinerTopicsListing</returns>
-        
         
         System.Threading.Tasks.Task<MinerTopicsListing> GetLanguageunderstandingMinerTopicsAsync (string minerId);
 
@@ -1559,7 +1454,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of ApiResponse (MinerTopicsListing)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<MinerTopicsListing>> GetLanguageunderstandingMinerTopicsAsyncWithHttpInfo (string minerId);
 
         /// <summary>
@@ -1572,7 +1466,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerType">Type of miner, either intent or topic (optional)</param>
         /// <returns>Task of MinerListing</returns>
         
-        
         System.Threading.Tasks.Task<MinerListing> GetLanguageunderstandingMinersAsync (string minerType = null);
 
         /// <summary>
@@ -1584,7 +1477,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerType">Type of miner, either intent or topic (optional)</param>
         /// <returns>Task of ApiResponse (MinerListing)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<MinerListing>> GetLanguageunderstandingMinersAsyncWithHttpInfo (string minerType = null);
 
@@ -1599,7 +1491,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of NluDomain</returns>
         
-        
         System.Threading.Tasks.Task<NluDomain> PatchLanguageunderstandingDomainAsync (string domainId, NluDomain body);
 
         /// <summary>
@@ -1612,7 +1503,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<NluDomain>> PatchLanguageunderstandingDomainAsyncWithHttpInfo (string domainId, NluDomain body);
 
@@ -1628,7 +1518,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Draft</returns>
         
-        
         System.Threading.Tasks.Task<Draft> PatchLanguageunderstandingMinerDraftAsync (string minerId, string draftId, DraftRequest body = null);
 
         /// <summary>
@@ -1643,7 +1532,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Draft)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Draft>> PatchLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId, DraftRequest body = null);
 
         /// <summary>
@@ -1657,7 +1545,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Feedback to create.</param>
         /// <returns>Task of NluFeedbackResponse</returns>
         
-        
         System.Threading.Tasks.Task<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackAsync (string domainId, NluFeedbackRequest body);
 
         /// <summary>
@@ -1670,7 +1557,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The Feedback to create.</param>
         /// <returns>Task of ApiResponse (NluFeedbackResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<NluFeedbackResponse>> PostLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, NluFeedbackRequest body);
 
@@ -1686,7 +1572,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The input data to perform detection on.</param>
         /// <returns>Task of NluDetectionResponse</returns>
         
-        
         System.Threading.Tasks.Task<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectAsync (string domainId, string domainVersionId, NluDetectionRequest body);
 
         /// <summary>
@@ -1701,7 +1586,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The input data to perform detection on.</param>
         /// <returns>Task of ApiResponse (NluDetectionResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<NluDetectionResponse>> PostLanguageunderstandingDomainVersionDetectAsyncWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body);
 
         /// <summary>
@@ -1714,7 +1598,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of NluDomainVersion</returns>
-        
         
         System.Threading.Tasks.Task<NluDomainVersion> PostLanguageunderstandingDomainVersionPublishAsync (string domainId, string domainVersionId);
 
@@ -1729,7 +1612,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PostLanguageunderstandingDomainVersionPublishAsyncWithHttpInfo (string domainId, string domainVersionId);
 
         /// <summary>
@@ -1743,7 +1625,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of NluDomainVersionTrainingResponse</returns>
         
-        
         System.Threading.Tasks.Task<NluDomainVersionTrainingResponse> PostLanguageunderstandingDomainVersionTrainAsync (string domainId, string domainVersionId);
 
         /// <summary>
@@ -1756,7 +1637,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersionTrainingResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<NluDomainVersionTrainingResponse>> PostLanguageunderstandingDomainVersionTrainAsyncWithHttpInfo (string domainId, string domainVersionId);
 
@@ -1772,7 +1652,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>Task of NluDomainVersion</returns>
         
-        
         System.Threading.Tasks.Task<NluDomainVersion> PostLanguageunderstandingDomainVersionsAsync (string domainId, NluDomainVersion body, bool? includeUtterances = null);
 
         /// <summary>
@@ -1787,7 +1666,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PostLanguageunderstandingDomainVersionsAsyncWithHttpInfo (string domainId, NluDomainVersion body, bool? includeUtterances = null);
 
         /// <summary>
@@ -1800,7 +1678,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of NluDomain</returns>
         
-        
         System.Threading.Tasks.Task<NluDomain> PostLanguageunderstandingDomainsAsync (NluDomain body);
 
         /// <summary>
@@ -1812,7 +1689,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<NluDomain>> PostLanguageunderstandingDomainsAsyncWithHttpInfo (NluDomain body);
 
@@ -1827,7 +1703,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Details for creating draft resource</param>
         /// <returns>Task of Draft</returns>
         
-        
         System.Threading.Tasks.Task<Draft> PostLanguageunderstandingMinerDraftsAsync (string minerId, Draft body);
 
         /// <summary>
@@ -1840,7 +1715,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">Details for creating draft resource</param>
         /// <returns>Task of ApiResponse (Draft)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Draft>> PostLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId, Draft body);
 
@@ -1855,7 +1729,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Miner</returns>
         
-        
         System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinerExecuteAsync (string minerId, MinerExecuteRequest body = null);
 
         /// <summary>
@@ -1869,7 +1742,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Miner)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Miner>> PostLanguageunderstandingMinerExecuteAsyncWithHttpInfo (string minerId, MinerExecuteRequest body = null);
 
         /// <summary>
@@ -1882,7 +1754,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Details for creating a new miner resource.</param>
         /// <returns>Task of Miner</returns>
         
-        
         System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinersAsync (Miner body);
 
         /// <summary>
@@ -1894,7 +1765,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Details for creating a new miner resource.</param>
         /// <returns>Task of ApiResponse (Miner)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<Miner>> PostLanguageunderstandingMinersAsyncWithHttpInfo (Miner body);
 
@@ -1910,7 +1780,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>Task of NluDomainVersion</returns>
         
-        
         System.Threading.Tasks.Task<NluDomainVersion> PutLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId, NluDomainVersion body);
 
         /// <summary>
@@ -1924,7 +1793,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PutLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body);
 
@@ -2022,11 +1890,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns></returns>
-        
         
         public void DeleteLanguageunderstandingDomain (string domainId)
         {
@@ -2035,11 +1903,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteLanguageunderstandingDomainWithHttpInfo (string domainId)
         { 
@@ -2119,11 +1987,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteLanguageunderstandingDomainAsync (string domainId)
         {
@@ -2133,11 +2001,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainAsyncWithHttpInfo (string domainId)
         { 
@@ -2219,12 +2087,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete the feedback on the NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns></returns>
-        
         
         public void DeleteLanguageunderstandingDomainFeedbackFeedbackId (string domainId, string feedbackId)
         {
@@ -2233,12 +2101,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete the feedback on the NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteLanguageunderstandingDomainFeedbackFeedbackIdWithHttpInfo (string domainId, string feedbackId)
         { 
@@ -2322,12 +2190,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete the feedback on the NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteLanguageunderstandingDomainFeedbackFeedbackIdAsync (string domainId, string feedbackId)
         {
@@ -2337,12 +2205,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete the feedback on the NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainFeedbackFeedbackIdAsyncWithHttpInfo (string domainId, string feedbackId)
         { 
@@ -2429,12 +2297,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an NLU Domain Version 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns></returns>
-        
         
         public void DeleteLanguageunderstandingDomainVersion (string domainId, string domainVersionId)
         {
@@ -2443,12 +2311,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an NLU Domain Version 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId)
         { 
@@ -2532,12 +2400,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an NLU Domain Version 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId)
         {
@@ -2547,12 +2415,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an NLU Domain Version 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId)
         { 
@@ -2639,11 +2507,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns></returns>
-        
         
         public void DeleteLanguageunderstandingMiner (string minerId)
         {
@@ -2652,11 +2520,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteLanguageunderstandingMinerWithHttpInfo (string minerId)
         { 
@@ -2736,11 +2604,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteLanguageunderstandingMinerAsync (string minerId)
         {
@@ -2750,11 +2618,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingMinerAsyncWithHttpInfo (string minerId)
         { 
@@ -2836,12 +2704,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="draftId">Draft ID</param>
         /// <returns></returns>
-        
         
         public void DeleteLanguageunderstandingMinerDraft (string minerId, string draftId)
         {
@@ -2850,12 +2718,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="draftId">Draft ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId)
         { 
@@ -2939,12 +2807,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="draftId">Draft ID</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteLanguageunderstandingMinerDraftAsync (string minerId, string draftId)
         {
@@ -2954,12 +2822,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a draft 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="draftId">Draft ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId)
         { 
@@ -3046,11 +2914,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>NluDomain</returns>
-        
         
         public NluDomain GetLanguageunderstandingDomain (string domainId)
         {
@@ -3060,11 +2928,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        
         
         public ApiResponse< NluDomain > GetLanguageunderstandingDomainWithHttpInfo (string domainId)
         { 
@@ -3144,11 +3012,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>Task of NluDomain</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomain> GetLanguageunderstandingDomainAsync (string domainId)
         {
@@ -3159,11 +3027,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomain>> GetLanguageunderstandingDomainAsyncWithHttpInfo (string domainId)
         { 
@@ -3245,6 +3113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all feedback in the given NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
@@ -3262,7 +3131,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>NluFeedbackListing</returns>
         
-        
         public NluFeedbackListing GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null)
         {
              ApiResponse<NluFeedbackListing> localVarResponse = GetLanguageunderstandingDomainFeedbackWithHttpInfo(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, includeTrainingUtterances, after, fields);
@@ -3271,6 +3139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all feedback in the given NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
@@ -3287,7 +3156,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination&#x3D;true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of NluFeedbackListing</returns>
-        
         
         public ApiResponse< NluFeedbackListing > GetLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null)
         { 
@@ -3379,6 +3247,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all feedback in the given NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
@@ -3396,7 +3265,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of NluFeedbackListing</returns>
         
-        
         public async System.Threading.Tasks.Task<NluFeedbackListing> GetLanguageunderstandingDomainFeedbackAsync (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null)
         {
              ApiResponse<NluFeedbackListing> localVarResponse = await GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, includeTrainingUtterances, after, fields);
@@ -3406,6 +3274,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all feedback in the given NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
@@ -3422,7 +3291,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination&#x3D;true (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (NluFeedbackListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackListing>> GetLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null)
         { 
@@ -3516,13 +3384,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find a Feedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>NluFeedbackResponse</returns>
-        
         
         public NluFeedbackResponse GetLanguageunderstandingDomainFeedbackFeedbackId (string domainId, string feedbackId, List<string> fields = null)
         {
@@ -3532,13 +3400,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find a Feedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of NluFeedbackResponse</returns>
-        
         
         public ApiResponse< NluFeedbackResponse > GetLanguageunderstandingDomainFeedbackFeedbackIdWithHttpInfo (string domainId, string feedbackId, List<string> fields = null)
         { 
@@ -3623,13 +3491,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find a Feedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of NluFeedbackResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<NluFeedbackResponse> GetLanguageunderstandingDomainFeedbackFeedbackIdAsync (string domainId, string feedbackId, List<string> fields = null)
         {
@@ -3640,13 +3508,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find a Feedback 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="feedbackId">ID of the Feedback</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (NluFeedbackResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackResponse>> GetLanguageunderstandingDomainFeedbackFeedbackIdAsyncWithHttpInfo (string domainId, string feedbackId, List<string> fields = null)
         { 
@@ -3734,13 +3602,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>NluDomainVersion</returns>
-        
         
         public NluDomainVersion GetLanguageunderstandingDomainVersion (string domainId, string domainVersionId, bool? includeUtterances = null)
         {
@@ -3750,13 +3618,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
-        
         
         public ApiResponse< NluDomainVersion > GetLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId, bool? includeUtterances = null)
         { 
@@ -3841,13 +3709,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>Task of NluDomainVersion</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomainVersion> GetLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId, bool? includeUtterances = null)
         {
@@ -3858,13 +3726,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Find an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> GetLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId, bool? includeUtterances = null)
         { 
@@ -3952,12 +3820,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieved quality report for the specified NLU Domain Version 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>NluDomainVersionQualityReport</returns>
-        
         
         public NluDomainVersionQualityReport GetLanguageunderstandingDomainVersionReport (string domainId, string domainVersionId)
         {
@@ -3967,12 +3835,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieved quality report for the specified NLU Domain Version 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>ApiResponse of NluDomainVersionQualityReport</returns>
-        
         
         public ApiResponse< NluDomainVersionQualityReport > GetLanguageunderstandingDomainVersionReportWithHttpInfo (string domainId, string domainVersionId)
         { 
@@ -4056,12 +3924,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieved quality report for the specified NLU Domain Version 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of NluDomainVersionQualityReport</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomainVersionQualityReport> GetLanguageunderstandingDomainVersionReportAsync (string domainId, string domainVersionId)
         {
@@ -4072,12 +3940,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieved quality report for the specified NLU Domain Version 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersionQualityReport)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersionQualityReport>> GetLanguageunderstandingDomainVersionReportAsyncWithHttpInfo (string domainId, string domainVersionId)
         { 
@@ -4164,6 +4032,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all NLU Domain Versions for a given Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
@@ -4171,7 +4040,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>NluDomainVersionListing</returns>
-        
         
         public NluDomainVersionListing GetLanguageunderstandingDomainVersions (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null)
         {
@@ -4181,6 +4049,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all NLU Domain Versions for a given Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
@@ -4188,7 +4057,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of NluDomainVersionListing</returns>
-        
         
         public ApiResponse< NluDomainVersionListing > GetLanguageunderstandingDomainVersionsWithHttpInfo (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null)
         { 
@@ -4271,6 +4139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all NLU Domain Versions for a given Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
@@ -4278,7 +4147,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of NluDomainVersionListing</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomainVersionListing> GetLanguageunderstandingDomainVersionsAsync (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null)
         {
@@ -4289,6 +4157,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all NLU Domain Versions for a given Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
@@ -4296,7 +4165,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (NluDomainVersionListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersionListing>> GetLanguageunderstandingDomainVersionsAsyncWithHttpInfo (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null)
         { 
@@ -4381,12 +4249,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all NLU Domains. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>NluDomainListing</returns>
-        
         
         public NluDomainListing GetLanguageunderstandingDomains (int? pageNumber = null, int? pageSize = null)
         {
@@ -4396,12 +4264,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all NLU Domains. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of NluDomainListing</returns>
-        
         
         public ApiResponse< NluDomainListing > GetLanguageunderstandingDomainsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
@@ -4479,12 +4347,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all NLU Domains. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of NluDomainListing</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomainListing> GetLanguageunderstandingDomainsAsync (int? pageNumber = null, int? pageSize = null)
         {
@@ -4495,12 +4363,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all NLU Domains. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (NluDomainListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomainListing>> GetLanguageunderstandingDomainsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
@@ -4579,11 +4447,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Miner</returns>
-        
         
         public Miner GetLanguageunderstandingMiner (string minerId)
         {
@@ -4593,11 +4461,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>ApiResponse of Miner</returns>
-        
         
         public ApiResponse< Miner > GetLanguageunderstandingMinerWithHttpInfo (string minerId)
         { 
@@ -4677,11 +4545,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of Miner</returns>
-        
         
         public async System.Threading.Tasks.Task<Miner> GetLanguageunderstandingMinerAsync (string minerId)
         {
@@ -4692,11 +4560,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of ApiResponse (Miner)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Miner>> GetLanguageunderstandingMinerAsyncWithHttpInfo (string minerId)
         { 
@@ -4778,6 +4646,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a draft. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -4785,7 +4654,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftIntentId">Parameter to filter a specific intent. (optional)</param>
         /// <param name="draftTopicId">Parameter to filter a specific topic. (optional)</param>
         /// <returns>Draft</returns>
-        
         
         public Draft GetLanguageunderstandingMinerDraft (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null)
         {
@@ -4795,6 +4663,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a draft. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -4802,7 +4671,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftIntentId">Parameter to filter a specific intent. (optional)</param>
         /// <param name="draftTopicId">Parameter to filter a specific topic. (optional)</param>
         /// <returns>ApiResponse of Draft</returns>
-        
         
         public ApiResponse< Draft > GetLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null)
         { 
@@ -4888,6 +4756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a draft. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -4895,7 +4764,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftIntentId">Parameter to filter a specific intent. (optional)</param>
         /// <param name="draftTopicId">Parameter to filter a specific topic. (optional)</param>
         /// <returns>Task of Draft</returns>
-        
         
         public async System.Threading.Tasks.Task<Draft> GetLanguageunderstandingMinerDraftAsync (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null)
         {
@@ -4906,6 +4774,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a draft. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
@@ -4913,7 +4782,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="draftIntentId">Parameter to filter a specific intent. (optional)</param>
         /// <param name="draftTopicId">Parameter to filter a specific topic. (optional)</param>
         /// <returns>Task of ApiResponse (Draft)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Draft>> GetLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null)
         { 
@@ -5002,11 +4870,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of drafts created. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>DraftListing</returns>
-        
         
         public DraftListing GetLanguageunderstandingMinerDrafts (string minerId)
         {
@@ -5016,11 +4884,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of drafts created. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>ApiResponse of DraftListing</returns>
-        
         
         public ApiResponse< DraftListing > GetLanguageunderstandingMinerDraftsWithHttpInfo (string minerId)
         { 
@@ -5100,11 +4968,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of drafts created. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of DraftListing</returns>
-        
         
         public async System.Threading.Tasks.Task<DraftListing> GetLanguageunderstandingMinerDraftsAsync (string minerId)
         {
@@ -5115,11 +4983,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of drafts created. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of ApiResponse (DraftListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<DraftListing>> GetLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId)
         { 
@@ -5201,13 +5069,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a mined intent 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="intentId">The ID of the intent to be retrieved.</param>
         /// <param name="expand">Option to fetch utterances (optional)</param>
         /// <returns>MinerIntent</returns>
-        
         
         public MinerIntent GetLanguageunderstandingMinerIntent (string minerId, string intentId, string expand = null)
         {
@@ -5217,13 +5085,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a mined intent 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="intentId">The ID of the intent to be retrieved.</param>
         /// <param name="expand">Option to fetch utterances (optional)</param>
         /// <returns>ApiResponse of MinerIntent</returns>
-        
         
         public ApiResponse< MinerIntent > GetLanguageunderstandingMinerIntentWithHttpInfo (string minerId, string intentId, string expand = null)
         { 
@@ -5308,13 +5176,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a mined intent 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="intentId">The ID of the intent to be retrieved.</param>
         /// <param name="expand">Option to fetch utterances (optional)</param>
         /// <returns>Task of MinerIntent</returns>
-        
         
         public async System.Threading.Tasks.Task<MinerIntent> GetLanguageunderstandingMinerIntentAsync (string minerId, string intentId, string expand = null)
         {
@@ -5325,13 +5193,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get information about a mined intent 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="intentId">The ID of the intent to be retrieved.</param>
         /// <param name="expand">Option to fetch utterances (optional)</param>
         /// <returns>Task of ApiResponse (MinerIntent)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MinerIntent>> GetLanguageunderstandingMinerIntentAsyncWithHttpInfo (string minerId, string intentId, string expand = null)
         { 
@@ -5419,12 +5287,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a list of mined intents. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="expand">Option to fetch utterances. (optional)</param>
         /// <returns>MinedIntentsListing</returns>
-        
         
         public MinedIntentsListing GetLanguageunderstandingMinerIntents (string minerId, string expand = null)
         {
@@ -5434,12 +5302,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a list of mined intents. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="expand">Option to fetch utterances. (optional)</param>
         /// <returns>ApiResponse of MinedIntentsListing</returns>
-        
         
         public ApiResponse< MinedIntentsListing > GetLanguageunderstandingMinerIntentsWithHttpInfo (string minerId, string expand = null)
         { 
@@ -5520,12 +5388,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a list of mined intents. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="expand">Option to fetch utterances. (optional)</param>
         /// <returns>Task of MinedIntentsListing</returns>
-        
         
         public async System.Threading.Tasks.Task<MinedIntentsListing> GetLanguageunderstandingMinerIntentsAsync (string minerId, string expand = null)
         {
@@ -5536,12 +5404,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a list of mined intents. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="expand">Option to fetch utterances. (optional)</param>
         /// <returns>Task of ApiResponse (MinedIntentsListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MinedIntentsListing>> GetLanguageunderstandingMinerIntentsAsyncWithHttpInfo (string minerId, string expand = null)
         { 
@@ -5624,13 +5492,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves details of a particular topic. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="expand">Option to fetch phrases (optional)</param>
         /// <returns>MinerTopic</returns>
-        
         
         public MinerTopic GetLanguageunderstandingMinerTopic (string minerId, string topicId, string expand = null)
         {
@@ -5640,13 +5508,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves details of a particular topic. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="expand">Option to fetch phrases (optional)</param>
         /// <returns>ApiResponse of MinerTopic</returns>
-        
         
         public ApiResponse< MinerTopic > GetLanguageunderstandingMinerTopicWithHttpInfo (string minerId, string topicId, string expand = null)
         { 
@@ -5731,13 +5599,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves details of a particular topic. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="expand">Option to fetch phrases (optional)</param>
         /// <returns>Task of MinerTopic</returns>
-        
         
         public async System.Threading.Tasks.Task<MinerTopic> GetLanguageunderstandingMinerTopicAsync (string minerId, string topicId, string expand = null)
         {
@@ -5748,13 +5616,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves details of a particular topic. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="expand">Option to fetch phrases (optional)</param>
         /// <returns>Task of ApiResponse (MinerTopic)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MinerTopic>> GetLanguageunderstandingMinerTopicAsyncWithHttpInfo (string minerId, string topicId, string expand = null)
         { 
@@ -5842,13 +5710,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves utterances related to a phrase in a topic. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="phraseId">The ID of the phrase to be retrieved.</param>
         /// <returns>MinerTopicPhrase</returns>
-        
         
         public MinerTopicPhrase GetLanguageunderstandingMinerTopicPhrase (string minerId, string topicId, string phraseId)
         {
@@ -5858,13 +5726,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves utterances related to a phrase in a topic. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="phraseId">The ID of the phrase to be retrieved.</param>
         /// <returns>ApiResponse of MinerTopicPhrase</returns>
-        
         
         public ApiResponse< MinerTopicPhrase > GetLanguageunderstandingMinerTopicPhraseWithHttpInfo (string minerId, string topicId, string phraseId)
         { 
@@ -5952,13 +5820,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves utterances related to a phrase in a topic. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="phraseId">The ID of the phrase to be retrieved.</param>
         /// <returns>Task of MinerTopicPhrase</returns>
-        
         
         public async System.Threading.Tasks.Task<MinerTopicPhrase> GetLanguageunderstandingMinerTopicPhraseAsync (string minerId, string topicId, string phraseId)
         {
@@ -5969,13 +5837,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves utterances related to a phrase in a topic. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="topicId">The ID of the topic to be retrieved.</param>
         /// <param name="phraseId">The ID of the phrase to be retrieved.</param>
         /// <returns>Task of ApiResponse (MinerTopicPhrase)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MinerTopicPhrase>> GetLanguageunderstandingMinerTopicPhraseAsyncWithHttpInfo (string minerId, string topicId, string phraseId)
         { 
@@ -6067,11 +5935,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a list of mined topics. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>MinerTopicsListing</returns>
-        
         
         public MinerTopicsListing GetLanguageunderstandingMinerTopics (string minerId)
         {
@@ -6081,11 +5949,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a list of mined topics. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>ApiResponse of MinerTopicsListing</returns>
-        
         
         public ApiResponse< MinerTopicsListing > GetLanguageunderstandingMinerTopicsWithHttpInfo (string minerId)
         { 
@@ -6165,11 +6033,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a list of mined topics. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of MinerTopicsListing</returns>
-        
         
         public async System.Threading.Tasks.Task<MinerTopicsListing> GetLanguageunderstandingMinerTopicsAsync (string minerId)
         {
@@ -6180,11 +6048,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve a list of mined topics. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <returns>Task of ApiResponse (MinerTopicsListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MinerTopicsListing>> GetLanguageunderstandingMinerTopicsAsyncWithHttpInfo (string minerId)
         { 
@@ -6266,11 +6134,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of miners created. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerType">Type of miner, either intent or topic (optional)</param>
         /// <returns>MinerListing</returns>
-        
         
         public MinerListing GetLanguageunderstandingMiners (string minerType = null)
         {
@@ -6280,11 +6148,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of miners created. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerType">Type of miner, either intent or topic (optional)</param>
         /// <returns>ApiResponse of MinerListing</returns>
-        
         
         public ApiResponse< MinerListing > GetLanguageunderstandingMinersWithHttpInfo (string minerType = null)
         { 
@@ -6361,11 +6229,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of miners created. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerType">Type of miner, either intent or topic (optional)</param>
         /// <returns>Task of MinerListing</returns>
-        
         
         public async System.Threading.Tasks.Task<MinerListing> GetLanguageunderstandingMinersAsync (string minerType = null)
         {
@@ -6376,11 +6244,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of miners created. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerType">Type of miner, either intent or topic (optional)</param>
         /// <returns>Task of ApiResponse (MinerListing)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<MinerListing>> GetLanguageunderstandingMinersAsyncWithHttpInfo (string minerType = null)
         { 
@@ -6458,12 +6326,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>NluDomain</returns>
-        
         
         public NluDomain PatchLanguageunderstandingDomain (string domainId, NluDomain body)
         {
@@ -6473,12 +6341,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        
         
         public ApiResponse< NluDomain > PatchLanguageunderstandingDomainWithHttpInfo (string domainId, NluDomain body)
         { 
@@ -6567,12 +6435,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of NluDomain</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomain> PatchLanguageunderstandingDomainAsync (string domainId, NluDomain body)
         {
@@ -6583,12 +6451,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The updated NLU Domain.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomain>> PatchLanguageunderstandingDomainAsyncWithHttpInfo (string domainId, NluDomain body)
         { 
@@ -6680,13 +6548,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Save information for the draft. Either topic draft or intent draft should be sent. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="draftId">Draft ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Draft</returns>
-        
         
         public Draft PatchLanguageunderstandingMinerDraft (string minerId, string draftId, DraftRequest body = null)
         {
@@ -6696,13 +6564,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Save information for the draft. Either topic draft or intent draft should be sent. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="draftId">Draft ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Draft</returns>
-        
         
         public ApiResponse< Draft > PatchLanguageunderstandingMinerDraftWithHttpInfo (string minerId, string draftId, DraftRequest body = null)
         { 
@@ -6792,13 +6660,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Save information for the draft. Either topic draft or intent draft should be sent. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="draftId">Draft ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Draft</returns>
-        
         
         public async System.Threading.Tasks.Task<Draft> PatchLanguageunderstandingMinerDraftAsync (string minerId, string draftId, DraftRequest body = null)
         {
@@ -6809,13 +6677,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Save information for the draft. Either topic draft or intent draft should be sent. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="draftId">Draft ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Draft)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Draft>> PatchLanguageunderstandingMinerDraftAsyncWithHttpInfo (string minerId, string draftId, DraftRequest body = null)
         { 
@@ -6908,12 +6776,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create feedback for the NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The Feedback to create.</param>
         /// <returns>NluFeedbackResponse</returns>
-        
         
         public NluFeedbackResponse PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body)
         {
@@ -6923,12 +6791,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create feedback for the NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The Feedback to create.</param>
         /// <returns>ApiResponse of NluFeedbackResponse</returns>
-        
         
         public ApiResponse< NluFeedbackResponse > PostLanguageunderstandingDomainFeedbackWithHttpInfo (string domainId, NluFeedbackRequest body)
         { 
@@ -7017,12 +6885,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create feedback for the NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The Feedback to create.</param>
         /// <returns>Task of NluFeedbackResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<NluFeedbackResponse> PostLanguageunderstandingDomainFeedbackAsync (string domainId, NluFeedbackRequest body)
         {
@@ -7033,12 +6901,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create feedback for the NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The Feedback to create.</param>
         /// <returns>Task of ApiResponse (NluFeedbackResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluFeedbackResponse>> PostLanguageunderstandingDomainFeedbackAsyncWithHttpInfo (string domainId, NluFeedbackRequest body)
         { 
@@ -7130,13 +6998,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Detect intent, entities, etc. in the submitted text using the specified NLU domain version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The input data to perform detection on.</param>
         /// <returns>NluDetectionResponse</returns>
-        
         
         public NluDetectionResponse PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body)
         {
@@ -7146,13 +7014,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Detect intent, entities, etc. in the submitted text using the specified NLU domain version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The input data to perform detection on.</param>
         /// <returns>ApiResponse of NluDetectionResponse</returns>
-        
         
         public ApiResponse< NluDetectionResponse > PostLanguageunderstandingDomainVersionDetectWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body)
         { 
@@ -7245,13 +7113,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Detect intent, entities, etc. in the submitted text using the specified NLU domain version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The input data to perform detection on.</param>
         /// <returns>Task of NluDetectionResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDetectionResponse> PostLanguageunderstandingDomainVersionDetectAsync (string domainId, string domainVersionId, NluDetectionRequest body)
         {
@@ -7262,13 +7130,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Detect intent, entities, etc. in the submitted text using the specified NLU domain version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The input data to perform detection on.</param>
         /// <returns>Task of ApiResponse (NluDetectionResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDetectionResponse>> PostLanguageunderstandingDomainVersionDetectAsyncWithHttpInfo (string domainId, string domainVersionId, NluDetectionRequest body)
         { 
@@ -7365,12 +7233,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Publish the draft NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>NluDomainVersion</returns>
-        
         
         public NluDomainVersion PostLanguageunderstandingDomainVersionPublish (string domainId, string domainVersionId)
         {
@@ -7380,12 +7248,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Publish the draft NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
-        
         
         public ApiResponse< NluDomainVersion > PostLanguageunderstandingDomainVersionPublishWithHttpInfo (string domainId, string domainVersionId)
         { 
@@ -7469,12 +7337,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Publish the draft NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of NluDomainVersion</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomainVersion> PostLanguageunderstandingDomainVersionPublishAsync (string domainId, string domainVersionId)
         {
@@ -7485,12 +7353,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Publish the draft NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PostLanguageunderstandingDomainVersionPublishAsyncWithHttpInfo (string domainId, string domainVersionId)
         { 
@@ -7577,12 +7445,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Train the draft NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>NluDomainVersionTrainingResponse</returns>
-        
         
         public NluDomainVersionTrainingResponse PostLanguageunderstandingDomainVersionTrain (string domainId, string domainVersionId)
         {
@@ -7592,12 +7460,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Train the draft NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>ApiResponse of NluDomainVersionTrainingResponse</returns>
-        
         
         public ApiResponse< NluDomainVersionTrainingResponse > PostLanguageunderstandingDomainVersionTrainWithHttpInfo (string domainId, string domainVersionId)
         { 
@@ -7681,12 +7549,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Train the draft NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of NluDomainVersionTrainingResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomainVersionTrainingResponse> PostLanguageunderstandingDomainVersionTrainAsync (string domainId, string domainVersionId)
         {
@@ -7697,12 +7565,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Train the draft NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersionTrainingResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersionTrainingResponse>> PostLanguageunderstandingDomainVersionTrainAsyncWithHttpInfo (string domainId, string domainVersionId)
         { 
@@ -7789,13 +7657,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The NLU Domain Version to create.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>NluDomainVersion</returns>
-        
         
         public NluDomainVersion PostLanguageunderstandingDomainVersions (string domainId, NluDomainVersion body, bool? includeUtterances = null)
         {
@@ -7805,13 +7673,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The NLU Domain Version to create.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
-        
         
         public ApiResponse< NluDomainVersion > PostLanguageunderstandingDomainVersionsWithHttpInfo (string domainId, NluDomainVersion body, bool? includeUtterances = null)
         { 
@@ -7901,13 +7769,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The NLU Domain Version to create.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>Task of NluDomainVersion</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomainVersion> PostLanguageunderstandingDomainVersionsAsync (string domainId, NluDomainVersion body, bool? includeUtterances = null)
         {
@@ -7918,13 +7786,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="body">The NLU Domain Version to create.</param>
         /// <param name="includeUtterances">Whether utterances for intent definition should be included when marshalling response. (optional)</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PostLanguageunderstandingDomainVersionsAsyncWithHttpInfo (string domainId, NluDomainVersion body, bool? includeUtterances = null)
         { 
@@ -8017,11 +7885,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>NluDomain</returns>
-        
         
         public NluDomain PostLanguageunderstandingDomains (NluDomain body)
         {
@@ -8031,11 +7899,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>ApiResponse of NluDomain</returns>
-        
         
         public ApiResponse< NluDomain > PostLanguageunderstandingDomainsWithHttpInfo (NluDomain body)
         { 
@@ -8120,11 +7988,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of NluDomain</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomain> PostLanguageunderstandingDomainsAsync (NluDomain body)
         {
@@ -8135,11 +8003,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create an NLU Domain. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The NLU Domain to create.</param>
         /// <returns>Task of ApiResponse (NluDomain)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomain>> PostLanguageunderstandingDomainsAsyncWithHttpInfo (NluDomain body)
         { 
@@ -8226,12 +8094,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new draft resource. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">Details for creating draft resource</param>
         /// <returns>Draft</returns>
-        
         
         public Draft PostLanguageunderstandingMinerDrafts (string minerId, Draft body)
         {
@@ -8241,12 +8109,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new draft resource. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">Details for creating draft resource</param>
         /// <returns>ApiResponse of Draft</returns>
-        
         
         public ApiResponse< Draft > PostLanguageunderstandingMinerDraftsWithHttpInfo (string minerId, Draft body)
         { 
@@ -8335,12 +8203,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new draft resource. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">Details for creating draft resource</param>
         /// <returns>Task of Draft</returns>
-        
         
         public async System.Threading.Tasks.Task<Draft> PostLanguageunderstandingMinerDraftsAsync (string minerId, Draft body)
         {
@@ -8351,12 +8219,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new draft resource. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body">Details for creating draft resource</param>
         /// <returns>Task of ApiResponse (Draft)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Draft>> PostLanguageunderstandingMinerDraftsAsyncWithHttpInfo (string minerId, Draft body)
         { 
@@ -8448,12 +8316,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Miner</returns>
-        
         
         public Miner PostLanguageunderstandingMinerExecute (string minerId, MinerExecuteRequest body = null)
         {
@@ -8463,12 +8331,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Miner</returns>
-        
         
         public ApiResponse< Miner > PostLanguageunderstandingMinerExecuteWithHttpInfo (string minerId, MinerExecuteRequest body = null)
         { 
@@ -8554,12 +8422,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Miner</returns>
-        
         
         public async System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinerExecuteAsync (string minerId, MinerExecuteRequest body = null)
         {
@@ -8570,12 +8438,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="minerId">Miner ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Miner)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Miner>> PostLanguageunderstandingMinerExecuteAsyncWithHttpInfo (string minerId, MinerExecuteRequest body = null)
         { 
@@ -8663,11 +8531,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a unique miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Details for creating a new miner resource.</param>
         /// <returns>Miner</returns>
-        
         
         public Miner PostLanguageunderstandingMiners (Miner body)
         {
@@ -8677,11 +8545,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a unique miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Details for creating a new miner resource.</param>
         /// <returns>ApiResponse of Miner</returns>
-        
         
         public ApiResponse< Miner > PostLanguageunderstandingMinersWithHttpInfo (Miner body)
         { 
@@ -8766,11 +8634,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a unique miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Details for creating a new miner resource.</param>
         /// <returns>Task of Miner</returns>
-        
         
         public async System.Threading.Tasks.Task<Miner> PostLanguageunderstandingMinersAsync (Miner body)
         {
@@ -8781,11 +8649,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a unique miner. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Details for creating a new miner resource.</param>
         /// <returns>Task of ApiResponse (Miner)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Miner>> PostLanguageunderstandingMinersAsyncWithHttpInfo (Miner body)
         { 
@@ -8872,13 +8740,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>NluDomainVersion</returns>
-        
         
         public NluDomainVersion PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body)
         {
@@ -8888,13 +8756,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>ApiResponse of NluDomainVersion</returns>
-        
         
         public ApiResponse< NluDomainVersion > PutLanguageunderstandingDomainVersionWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body)
         { 
@@ -8987,13 +8855,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>Task of NluDomainVersion</returns>
-        
         
         public async System.Threading.Tasks.Task<NluDomainVersion> PutLanguageunderstandingDomainVersionAsync (string domainId, string domainVersionId, NluDomainVersion body)
         {
@@ -9004,13 +8872,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an NLU Domain Version. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">ID of the NLU domain.</param>
         /// <param name="domainVersionId">ID of the NLU domain version.</param>
         /// <param name="body">The updated NLU Domain Version.</param>
         /// <returns>Task of ApiResponse (NluDomainVersion)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<NluDomainVersion>> PutLanguageunderstandingDomainVersionAsyncWithHttpInfo (string domainId, string domainVersionId, NluDomainVersion body)
         { 

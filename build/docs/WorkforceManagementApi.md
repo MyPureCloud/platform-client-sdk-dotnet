@@ -176,8 +176,6 @@ Delete business unit
 
 A business unit cannot be deleted if it contains one or more management units
 
-
-
 Requires ANY permissions: 
 
 * wfm:businessUnit:delete
@@ -239,8 +237,6 @@ void (empty response body)
 
 
 Deletes an activity code
-
-
 
 Requires ANY permissions: 
 
@@ -306,8 +302,6 @@ void (empty response body)
 
 Deletes the planning group
 
-
-
 Requires ANY permissions: 
 
 * wfm:planningGroup:delete
@@ -371,8 +365,6 @@ void (empty response body)
 
 
 Cancel a scheduling run
-
-
 
 Requires ANY permissions: 
 
@@ -438,8 +430,6 @@ void (empty response body)
 
 Delete a service goal template
 
-
-
 Requires ANY permissions: 
 
 * wfm:serviceGoalTemplate:delete
@@ -503,8 +493,6 @@ void (empty response body)
 
 
 Delete a schedule
-
-
 
 Requires ANY permissions: 
 
@@ -575,8 +563,6 @@ Delete a short term forecast
 
 Must not be tied to any schedules
 
-
-
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:delete
@@ -643,8 +629,6 @@ void (empty response body)
 
 Disable generated calendar link for the current user
 
-
-
 Requires ALL permissions: 
 
 * wfm:agentSchedule:sync
@@ -701,8 +685,6 @@ void (empty response body)
 
 
 Delete management unit
-
-
 
 Requires ANY permissions: 
 
@@ -765,8 +747,6 @@ void (empty response body)
 
 
 Deletes a time off limit object
-
-
 
 Requires ANY permissions: 
 
@@ -832,8 +812,6 @@ void (empty response body)
 
 Deletes a time off plan
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffPlan:delete
@@ -897,8 +875,6 @@ void (empty response body)
 
 
 Delete a work plan
-
-
 
 Requires ANY permissions: 
 
@@ -964,8 +940,6 @@ void (empty response body)
 
 Delete a work plan rotation
 
-
-
 Requires ANY permissions: 
 
 * wfm:workPlanRotation:delete
@@ -1030,8 +1004,6 @@ void (empty response body)
 
 Get a list of UserScheduleAdherence records for the requested users
 
-
-
 Requires ANY permissions: 
 
 * wfm:realtimeAdherence:view
@@ -1094,8 +1066,6 @@ namespace Example
 
 
 Get an adherence explanation for the current user
-
-
 
 Requires ANY permissions: 
 
@@ -1162,8 +1132,6 @@ Query the status of an adherence explanation operation. Only the user who starte
 
 Job details are only retained if the initial request returned a 202 ACCEPTED response
 
-
-
 Requires NO permissions: 
 
 
@@ -1227,8 +1195,6 @@ namespace Example
 Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
 
 Job details are only retained if the initial request returned a 202 ACCEPTED response
-
-
 
 Requires NO permissions: 
 
@@ -1294,8 +1260,6 @@ Query the status of a historical adherence request operation. Only the user who 
 
 Job details are only retained if the initial request returned a 202 ACCEPTED response
 
-
-
 Requires ANY permissions: 
 
 * wfm:historicalAdherence:view
@@ -1359,8 +1323,6 @@ namespace Example
 
 Get status of the modeling job
 
-
-
 Requires ANY permissions: 
 
 * wfm:adhocModel:view
@@ -1423,8 +1385,6 @@ namespace Example
 
 
 Get an adherence explanation
-
-
 
 Requires ANY permissions: 
 
@@ -1490,8 +1450,6 @@ namespace Example
 
 
 Get the management unit to which the agent belongs
-
-
 
 Requires ANY permissions: 
 
@@ -1561,8 +1519,6 @@ namespace Example
 
 
 Get the management unit to which the currently logged in agent belongs
-
-
 
 Requires ANY permissions: 
 
@@ -1680,8 +1636,6 @@ This endpoint does require any parameters.
 Get business unit
 
 Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
-
-
 
 Requires ANY permissions: 
 
@@ -1812,8 +1766,6 @@ namespace Example
 
 Get an activity code
 
-
-
 Requires ANY permissions: 
 
 * wfm:activityCode:view
@@ -1878,8 +1830,6 @@ namespace Example
 
 
 Get activity codes
-
-
 
 Requires ANY permissions: 
 
@@ -2002,8 +1952,6 @@ namespace Example
 
 Get intraday planning groups for the given date
 
-
-
 Requires ANY permissions: 
 
 * wfm:intraday:view
@@ -2068,8 +2016,6 @@ namespace Example
 
 
 Get all authorized management units in the business unit
-
-
 
 Requires NO permissions: 
 
@@ -2137,8 +2083,6 @@ namespace Example
 
 Get a planning group
 
-
-
 Requires ANY permissions: 
 
 * wfm:planningGroup:view
@@ -2203,8 +2147,6 @@ namespace Example
 
 
 Gets list of planning groups
-
-
 
 Requires ANY permissions: 
 
@@ -2274,8 +2216,6 @@ namespace Example
 
 Get a scheduling run
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:generate
@@ -2341,8 +2281,6 @@ namespace Example
 
 
 Get the result of a rescheduling operation
-
-
 
 Requires ANY permissions: 
 
@@ -2414,8 +2352,6 @@ namespace Example
 
 Get the list of scheduling runs
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:generate
@@ -2479,8 +2415,6 @@ namespace Example
 
 
 Get a service goal template
-
-
 
 Requires ANY permissions: 
 
@@ -2547,8 +2481,6 @@ namespace Example
 
 Gets list of service goal templates
 
-
-
 Requires ANY permissions: 
 
 * wfm:serviceGoalTemplate:view
@@ -2613,8 +2545,6 @@ namespace Example
 
 
 Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
-
-
 
 Requires ANY permissions: 
 
@@ -2686,8 +2616,6 @@ namespace Example
 
 Get the generation results for a generated schedule
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:view
@@ -2755,8 +2683,6 @@ namespace Example
 
 
 Get the headcount forecast by planning group for the schedule
-
-
 
 Requires ANY permissions: 
 
@@ -2827,8 +2753,6 @@ namespace Example
 
 
 Loads agent's schedule history.
-
-
 
 Requires ANY permissions: 
 
@@ -2902,8 +2826,6 @@ Get the list of week schedules for the specified week
 
 Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:view
@@ -2973,8 +2895,6 @@ namespace Example
 
 
 Get a short term forecast
-
-
 
 Requires ANY permissions: 
 
@@ -3047,8 +2967,6 @@ Get the result of a short term forecast calculation
 
 Includes modifications unless you pass the doNotApplyModifications query parameter
 
-
-
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:view
@@ -3120,8 +3038,6 @@ namespace Example
 
 Gets the forecast generation results
 
-
-
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:view
@@ -3191,8 +3107,6 @@ Get the result of a long term forecast calculation
 
 Includes modifications unless you pass the doNotApplyModifications query parameter
 
-
-
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:view
@@ -3261,8 +3175,6 @@ namespace Example
 
 
 Gets the forecast planning group snapshot
-
-
 
 Requires ANY permissions: 
 
@@ -3335,8 +3247,6 @@ Get short term forecasts
 
 Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:generate
@@ -3403,8 +3313,6 @@ namespace Example
 
 Get business units
 
-
-
 Requires NO permissions: 
 
 
@@ -3469,8 +3377,6 @@ namespace Example
 
 Get business units across divisions
 
-
-
 Requires ANY permissions: 
 
 * wfm:businessUnit:search
@@ -3534,8 +3440,6 @@ namespace Example
 
 Get ics formatted calendar based on shareable link
 
-
-
 Requires NO permissions: 
 
 
@@ -3591,8 +3495,6 @@ namespace Example
 
 
 Get existing calendar link for the current user
-
-
 
 Requires ALL permissions: 
 
@@ -3653,8 +3555,6 @@ This endpoint does require any parameters.
 
 Retrieves delete job status for historical data imports of the organization
 
-
-
 Requires ALL permissions: 
 
 * wfm:historicalData:upload
@@ -3712,8 +3612,6 @@ This endpoint does require any parameters.
 
 
 Retrieves status of the historical data imports of the organization
-
-
 
 Requires ALL permissions: 
 
@@ -3774,8 +3672,6 @@ This endpoint does require any parameters.
 Get management unit
 
 settings.shortTermForecasting is deprecated and now lives on the business unit
-
-
 
 Requires ANY permissions: 
 
@@ -3901,8 +3797,6 @@ namespace Example
 
 Get activity codes
 
-
-
 Requires ANY permissions: 
 
 * wfm:activityCode:add
@@ -4006,8 +3900,6 @@ namespace Example
 
 Get a list of user schedule adherence records for the requested management unit
 
-
-
 Requires ANY permissions: 
 
 * wfm:realtimeAdherence:view
@@ -4072,8 +3964,6 @@ namespace Example
 
 
 Get data for agent in the management unit
-
-
 
 Requires ANY permissions: 
 
@@ -4142,8 +4032,6 @@ namespace Example
 
 Gets all the shift trades for a given agent
 
-
-
 Requires ANY permissions: 
 
 * wfm:shiftTradeRequest:edit
@@ -4210,8 +4098,6 @@ namespace Example
 
 Gets a summary of all shift trades in the matched state
 
-
-
 Requires ANY permissions: 
 
 * wfm:shiftTradeRequest:view
@@ -4275,8 +4161,6 @@ namespace Example
 
 
 Gets list of users available for whom you can send direct shift trade requests
-
-
 
 Requires ANY permissions: 
 
@@ -4342,8 +4226,6 @@ namespace Example
 Gets a time off limit object
 
 Returns properties of time off limit object, but not daily values.
-
-
 
 Requires ANY permissions: 
 
@@ -4412,8 +4294,6 @@ Gets a list of time off limit objects under management unit.
 
 Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffLimit:view
@@ -4477,8 +4357,6 @@ namespace Example
 
 
 Gets a time off plan
-
-
 
 Requires ANY permissions: 
 
@@ -4545,8 +4423,6 @@ namespace Example
 
 Gets a list of time off plans
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffPlan:view
@@ -4609,8 +4485,6 @@ namespace Example
 
 
 Get a time off request
-
-
 
 Requires ANY permissions: 
 
@@ -4678,8 +4552,6 @@ namespace Example
 
 
 Retrieves time off limit, allocated and waitlisted values according to specific time off request
-
-
 
 Requires ALL permissions: 
 
@@ -4749,8 +4621,6 @@ namespace Example
 
 Get a list of time off requests for a given user
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:view
@@ -4817,8 +4687,6 @@ namespace Example
 
 
 Get users in the management unit
-
-
 
 Requires ANY permissions: 
 
@@ -4889,8 +4757,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
-
-
 
 Requires ANY permissions: 
 
@@ -4964,8 +4830,6 @@ namespace Example
 
 Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
 
-
-
 Requires ANY permissions: 
 
 * wfm:publishedSchedule:view
@@ -5038,8 +4902,6 @@ namespace Example
 
 Gets all the shift trades for a given week
 
-
-
 Requires ANY permissions: 
 
 * wfm:shiftTradeRequest:view
@@ -5107,8 +4969,6 @@ namespace Example
 
 
 Get a work plan
-
-
 
 Requires ANY permissions: 
 
@@ -5179,8 +5039,6 @@ namespace Example
 
 Get a work plan rotation
 
-
-
 Requires ANY permissions: 
 
 * wfm:workPlanRotation:view
@@ -5245,8 +5103,6 @@ namespace Example
 
 
 Get work plan rotations
-
-
 
 Requires ANY permissions: 
 
@@ -5316,8 +5172,6 @@ Get work plans
 
 \"expand=details\" is deprecated
 
-
-
 Requires ANY permissions: 
 
 * wfm:agent:view
@@ -5386,8 +5240,6 @@ namespace Example
 
 
 Get management units
-
-
 
 Requires NO permissions: 
 
@@ -5459,8 +5311,6 @@ namespace Example
 
 Get management units across divisions
 
-
-
 Requires ANY permissions: 
 
 * wfm:managementUnit:search
@@ -5526,8 +5376,6 @@ Get a list of notifications for the current user
 
 Notifications are only initially sent if you have the relevant Notify and Edit permissions
 
-
-
 Requires NO permissions: 
 
 
@@ -5584,8 +5432,6 @@ This endpoint does require any parameters.
 
 
 Get status of the scheduling job
-
-
 
 Requires ANY permissions: 
 
@@ -5650,8 +5496,6 @@ namespace Example
 
 Gets all of my shift trades
 
-
-
 Requires ANY permissions: 
 
 * wfm:shiftTradeRequest:edit
@@ -5711,8 +5555,6 @@ This endpoint does require any parameters.
 
 
 Request to fetch the status of the historical shrinkage query
-
-
 
 Requires NO permissions: 
 
@@ -5775,8 +5617,6 @@ namespace Example
 
 
 Get a time off request for the current user
-
-
 
 Requires ANY permissions: 
 
@@ -5842,8 +5682,6 @@ namespace Example
 
 Get the daily waitlist positions of a time off request for the current user
 
-
-
 Requires ANY permissions: 
 
 * wfm:agentTimeOffRequest:submit
@@ -5906,8 +5744,6 @@ namespace Example
 
 
 Get a list of time off requests for the current user
-
-
 
 Requires ANY permissions: 
 
@@ -5972,8 +5808,6 @@ namespace Example
 
 
 Update an adherence explanation
-
-
 
 Requires ANY permissions: 
 
@@ -6042,8 +5876,6 @@ namespace Example
 
 Update business unit
 
-
-
 Requires ALL permissions: 
 
 * wfm:businessUnit:edit
@@ -6108,8 +5940,6 @@ namespace Example
 
 
 Update an activity code
-
-
 
 Requires ANY permissions: 
 
@@ -6178,8 +6008,6 @@ namespace Example
 
 Updates the planning group
 
-
-
 Requires ANY permissions: 
 
 * wfm:planningGroup:edit
@@ -6247,8 +6075,6 @@ namespace Example
 
 Mark a schedule run as applied
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:edit
@@ -6314,8 +6140,6 @@ void (empty response body)
 
 
 Updates a service goal template
-
-
 
 Requires ANY permissions: 
 
@@ -6384,8 +6208,6 @@ namespace Example
 
 Update the requested management unit
 
-
-
 Requires ANY permissions: 
 
 * wfm:managementUnit:edit
@@ -6452,8 +6274,6 @@ namespace Example
 Updates a time off limit object.
 
 Updates time off limit object properties, but not daily values.
-
-
 
 Requires ANY permissions: 
 
@@ -6522,8 +6342,6 @@ namespace Example
 
 Updates a time off plan
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffPlan:edit
@@ -6590,8 +6408,6 @@ namespace Example
 
 
 Update a time off request
-
-
 
 Requires ANY permissions: 
 
@@ -6662,8 +6478,6 @@ namespace Example
 
 Updates a shift trade. This route can only be called by the initiating agent
 
-
-
 Requires ANY permissions: 
 
 * wfm:agentShiftTradeRequest:participate
@@ -6732,8 +6546,6 @@ namespace Example
 
 
 Update a work plan
-
-
 
 Requires ANY permissions: 
 
@@ -6804,8 +6616,6 @@ namespace Example
 
 Update a work plan rotation
 
-
-
 Requires ANY permissions: 
 
 * wfm:workPlanRotation:edit
@@ -6873,8 +6683,6 @@ namespace Example
 
 Update a time off request for the current user
 
-
-
 Requires ANY permissions: 
 
 * wfm:agentTimeOffRequest:submit
@@ -6940,8 +6748,6 @@ namespace Example
 
 Submit an adherence explanation for the current user
 
-
-
 Requires ANY permissions: 
 
 * wfm:agentAdherenceExplanation:submit
@@ -7004,8 +6810,6 @@ namespace Example
 
 
 Query adherence explanations for the current user
-
-
 
 Requires ANY permissions: 
 
@@ -7074,8 +6878,6 @@ namespace Example
 
 Deprecated. Use bulk routes instead (/adherence/historical/bulk)
 
-
-
 Requires ANY permissions: 
 
 * wfm:historicalAdherence:view
@@ -7139,8 +6941,6 @@ namespace Example
 
 Request a historical adherence report in bulk
 
-
-
 Requires ANY permissions: 
 
 * wfm:historicalAdherence:view
@@ -7203,8 +7003,6 @@ namespace Example
 
 
 Add an adherence explanation for the requested user
-
-
 
 Requires ANY permissions: 
 
@@ -7270,8 +7068,6 @@ namespace Example
 
 
 Query adherence explanations for the given agent across a specified range
-
-
 
 Requires ANY permissions: 
 
@@ -7342,8 +7138,6 @@ namespace Example
 
 Get agent possible work shifts for requested time frame
 
-
-
 Requires ANY permissions: 
 
 * wfm:agentPossibleWorkShifts:view
@@ -7407,8 +7201,6 @@ namespace Example
 
 Get published schedule for the current user
 
-
-
 Requires ANY permissions: 
 
 * wfm:agentSchedule:view
@@ -7471,8 +7263,6 @@ namespace Example
 
 
 Create a new activity code
-
-
 
 Requires ANY permissions: 
 
@@ -7538,8 +7328,6 @@ namespace Example
 
 
 Query adherence explanations across an entire business unit for the requested period
-
-
 
 Requires ANY permissions: 
 
@@ -7609,8 +7397,6 @@ namespace Example
 
 
 Search published schedules
-
-
 
 Requires ANY permissions: 
 
@@ -7682,8 +7468,6 @@ namespace Example
 
 Get intraday data for the given date for the requested planningGroupIds
 
-
-
 Requires ANY permissions: 
 
 * wfm:intraday:view
@@ -7751,8 +7535,6 @@ namespace Example
 
 Adds a new planning group
 
-
-
 Requires ANY permissions: 
 
 * wfm:planningGroup:add
@@ -7818,8 +7600,6 @@ namespace Example
 
 Adds a new service goal template
 
-
-
 Requires ANY permissions: 
 
 * wfm:serviceGoalTemplate:add
@@ -7884,8 +7664,6 @@ namespace Example
 
 
 Loads agent schedule data from the schedule. Used in combination with the metadata route
-
-
 
 Requires ANY permissions: 
 
@@ -7961,8 +7739,6 @@ namespace Example
 
 Copy a schedule
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:add
@@ -8031,8 +7807,6 @@ namespace Example
 
 
 Start a rescheduling run
-
-
 
 Requires ANY permissions: 
 
@@ -8105,8 +7879,6 @@ Starts processing a schedule update
 
 Call after uploading the schedule data to the url supplied by the /update/uploadurl route
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:edit
@@ -8178,8 +7950,6 @@ Creates a signed upload URL for updating a schedule
 
 Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:edit
@@ -8249,8 +8019,6 @@ namespace Example
 
 Create a blank schedule
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:add
@@ -8317,8 +8085,6 @@ namespace Example
 
 
 Generate a schedule
-
-
 
 Requires ANY permissions: 
 
@@ -8389,8 +8155,6 @@ Starts processing a schedule import
 
 Call after uploading the schedule data to the url supplied by the /import/uploadurl route
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:add
@@ -8460,8 +8224,6 @@ Creates a signed upload URL for importing a schedule
 
 Once the upload is complete, call the /import route to start the schedule import process
 
-
-
 Requires ANY permissions: 
 
 * wfm:schedule:add
@@ -8528,8 +8290,6 @@ namespace Example
 
 
 Copy a short term forecast
-
-
 
 Requires ANY permissions: 
 
@@ -8602,8 +8362,6 @@ namespace Example
 
 Generate a short term forecast
 
-
-
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:add
@@ -8675,8 +8433,6 @@ Starts importing the uploaded short term forecast
 
 Call after uploading the forecast data to the url supplied by the /import/uploadurl route
 
-
-
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:add
@@ -8745,8 +8501,6 @@ namespace Example
 Creates a signed upload URL for importing a short term forecast
 
 Once the upload is complete, call the /import route to start the short term forecast import process
-
-
 
 Requires ANY permissions: 
 
@@ -8817,8 +8571,6 @@ Add a new business unit
 
 It may take a minute or two for a new business unit to be available for api operations
 
-
-
 Requires ANY permissions: 
 
 * wfm:businessUnit:add
@@ -8881,8 +8633,6 @@ namespace Example
 
 
 Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
-
-
 
 Requires ALL permissions: 
 
@@ -8948,8 +8698,6 @@ namespace Example
 
 Delete the entries of the historical data imports in the organization
 
-
-
 Requires ALL permissions: 
 
 * wfm:historicalData:upload
@@ -9007,8 +8755,6 @@ This endpoint does require any parameters.
 
 
 Trigger validation process for historical import
-
-
 
 Requires ALL permissions: 
 
@@ -9071,8 +8817,6 @@ void (empty response body)
 
 
 Query published schedules for given given time range for set of users
-
-
 
 Requires ANY permissions: 
 
@@ -9146,8 +8890,6 @@ Request a historical adherence report
 
 The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
 
-
-
 Requires ANY permissions: 
 
 * wfm:historicalAdherence:view
@@ -9215,8 +8957,6 @@ Move the requested management unit to a new business unit
 
 Returns status 200 if the management unit is already in the requested business unit
 
-
-
 Requires ALL permissions: 
 
 * wfm:managementUnit:edit
@@ -9281,8 +9021,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Query published schedules for given given time range for set of users
-
-
 
 Requires ANY permissions: 
 
@@ -9352,8 +9090,6 @@ Request a historical shrinkage report
 
 The maximum supported range for historical shrinkage queries is up to 32 days. Historical Shrinkage for a given date range can be queried in two modes - granular and aggregated. To see granular shrinkage information, provide granularity in the request body. 
 
-
-
 Requires ANY permissions: 
 
 * wfm:shrinkage:view
@@ -9421,8 +9157,6 @@ Creates a new time off limit object under management unit.
 
 Only one limit object is allowed under management unit, so an attempt to create second object will fail.
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffLimit:add
@@ -9487,8 +9221,6 @@ namespace Example
 
 
 Retrieves time off limit related values based on a given set of filters.
-
-
 
 Requires ANY permissions: 
 
@@ -9555,8 +9287,6 @@ namespace Example
 
 Creates a new time off plan
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffPlan:add
@@ -9621,8 +9351,6 @@ namespace Example
 
 
 Create a new time off request
-
-
 
 Requires ANY permissions: 
 
@@ -9691,8 +9419,6 @@ Fetches time off requests matching the conditions specified in the request body
 
 Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:view
@@ -9758,8 +9484,6 @@ namespace Example
 
 Retrieves daily waitlist position for a list of time off requests
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:view
@@ -9824,8 +9548,6 @@ namespace Example
 
 
 Query time off balances for a given user for specified activity code and dates
-
-
 
 Requires ANY permissions: 
 
@@ -9894,8 +9616,6 @@ namespace Example
 
 Query time off balances for dates spanned by a given time off request
 
-
-
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:view
@@ -9962,8 +9682,6 @@ namespace Example
 
 
 Matches a shift trade. This route can only be called by the receiving agent
-
-
 
 Requires ANY permissions: 
 
@@ -10034,8 +9752,6 @@ namespace Example
 
 Adds a shift trade
 
-
-
 Requires ANY permissions: 
 
 * wfm:agentShiftTradeRequest:participate
@@ -10102,8 +9818,6 @@ namespace Example
 
 
 Searches for potential shift trade matches for the current agent
-
-
 
 Requires ANY permissions: 
 
@@ -10173,8 +9887,6 @@ namespace Example
 Updates the state of a batch of shift trades
 
 Admin functionality is not supported with \"mine\".
-
-
 
 Requires ANY permissions: 
 
@@ -10246,8 +9958,6 @@ namespace Example
 
 Create a copy of work plan
 
-
-
 Requires ANY permissions: 
 
 * wfm:workPlan:add
@@ -10314,8 +10024,6 @@ namespace Example
 
 
 Validate Work Plan
-
-
 
 Requires ANY permissions: 
 
@@ -10387,8 +10095,6 @@ namespace Example
 
 Create a copy of work plan rotation
 
-
-
 Requires ANY permissions: 
 
 * wfm:workPlanRotation:add
@@ -10456,8 +10162,6 @@ namespace Example
 
 Create a new work plan rotation
 
-
-
 Requires ANY permissions: 
 
 * wfm:workPlanRotation:add
@@ -10522,8 +10226,6 @@ namespace Example
 
 
 Create a new work plan
-
-
 
 Requires ANY permissions: 
 
@@ -10594,8 +10296,6 @@ Add a management unit
 
 It may take a minute or two for a new management unit to be available for api operations
 
-
-
 Requires ALL permissions: 
 
 * wfm:managementUnit:add
@@ -10659,8 +10359,6 @@ namespace Example
 
 Mark a list of notifications as read or unread
 
-
-
 Requires NO permissions: 
 
 
@@ -10722,8 +10420,6 @@ namespace Example
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get published schedule for the current user
-
-
 
 Requires ANY permissions: 
 
@@ -10789,8 +10485,6 @@ namespace Example
 Request a teams historical adherence report
 
 The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
-
-
 
 Requires ANY permissions: 
 
@@ -10859,8 +10553,6 @@ Request a historical shrinkage report
 
 The maximum supported range for historical shrinkage queries is up to 32 days
 
-
-
 Requires ANY permissions: 
 
 * wfm:shrinkage:view
@@ -10926,8 +10618,6 @@ namespace Example
 
 Queries available time off for the current user
 
-
-
 Requires ANY permissions: 
 
 * wfm:agentTimeOffRequest:submit
@@ -10990,8 +10680,6 @@ namespace Example
 
 
 Create a time off request for the current user
-
-
 
 Requires ANY permissions: 
 
@@ -11057,8 +10745,6 @@ namespace Example
 Sets daily values for a date range of time off limit object
 
 Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
-
-
 
 Requires ANY permissions: 
 

@@ -22,8 +22,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a Widget deployment
 
-
-
 Requires ANY permissions: 
 
 * widgets:deployment:delete
@@ -86,8 +84,6 @@ void (empty response body)
 
 
 Get a Widget deployment
-
-
 
 Requires ANY permissions: 
 
@@ -153,8 +149,6 @@ namespace Example
 
 List Widget deployments
 
-
-
 Requires ANY permissions: 
 
 * widgets:deployment:view
@@ -213,8 +207,6 @@ This endpoint does require any parameters.
 
 
 Create Widget deployment
-
-
 
 Requires ANY permissions: 
 
@@ -279,8 +271,6 @@ namespace Example
 
 
 Update a Widget deployment
-
-
 
 Requires ANY permissions: 
 

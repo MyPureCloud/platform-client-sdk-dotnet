@@ -21,8 +21,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get an existing GDPR request
 
-
-
 Requires ANY permissions: 
 
 * gdpr:request:view
@@ -85,8 +83,6 @@ namespace Example
 
 
 Get all GDPR requests
-
-
 
 Requires ANY permissions: 
 
@@ -153,8 +149,6 @@ namespace Example
 
 Get GDPR subjects
 
-
-
 Requires ANY permissions: 
 
 * gdpr:subject:view
@@ -219,8 +213,6 @@ namespace Example
 
 
 Submit a new GDPR request
-
-
 
 Requires ANY permissions: 
 

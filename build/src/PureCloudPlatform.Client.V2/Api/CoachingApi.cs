@@ -26,7 +26,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>CoachingAppointmentReference</returns>
         
-        
         CoachingAppointmentReference DeleteCoachingAppointment (string appointmentId);
 
         /// <summary>
@@ -38,7 +37,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>ApiResponse of CoachingAppointmentReference</returns>
-        
         
         ApiResponse<CoachingAppointmentReference> DeleteCoachingAppointmentWithHttpInfo (string appointmentId);
 
@@ -53,7 +51,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns></returns>
         
-        
         void DeleteCoachingAppointmentAnnotation (string appointmentId, string annotationId);
 
         /// <summary>
@@ -67,7 +64,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         
-        
         ApiResponse<Object> DeleteCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId);
 
         /// <summary>
@@ -80,7 +76,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>CoachingAppointmentResponse</returns>
         
-        
         CoachingAppointmentResponse GetCoachingAppointment (string appointmentId);
 
         /// <summary>
@@ -92,7 +87,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
-        
         
         ApiResponse<CoachingAppointmentResponse> GetCoachingAppointmentWithHttpInfo (string appointmentId);
 
@@ -107,7 +101,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>CoachingAnnotation</returns>
         
-        
         CoachingAnnotation GetCoachingAppointmentAnnotation (string appointmentId, string annotationId);
 
         /// <summary>
@@ -120,7 +113,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
-        
         
         ApiResponse<CoachingAnnotation> GetCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId);
 
@@ -136,7 +128,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>CoachingAnnotationList</returns>
         
-        
         CoachingAnnotationList GetCoachingAppointmentAnnotations (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -150,7 +141,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CoachingAnnotationList</returns>
-        
         
         ApiResponse<CoachingAnnotationList> GetCoachingAppointmentAnnotationsWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
@@ -166,7 +156,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>CoachingAppointmentStatusResponseList</returns>
         
-        
         CoachingAppointmentStatusResponseList GetCoachingAppointmentStatuses (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -180,7 +169,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CoachingAppointmentStatusResponseList</returns>
-        
         
         ApiResponse<CoachingAppointmentStatusResponseList> GetCoachingAppointmentStatusesWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
@@ -204,7 +192,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
         
-        
         CoachingAppointmentResponseList GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
@@ -227,7 +214,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
         
-        
         ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
@@ -248,7 +234,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
-        
         
         CoachingAppointmentResponseList GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
@@ -271,7 +256,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
         
-        
         ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
@@ -285,7 +269,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>CoachingNotification</returns>
         
-        
         CoachingNotification GetCoachingNotification (string notificationId, List<string> expand = null);
 
         /// <summary>
@@ -298,7 +281,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotification</returns>
-        
         
         ApiResponse<CoachingNotification> GetCoachingNotificationWithHttpInfo (string notificationId, List<string> expand = null);
 
@@ -314,7 +296,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>CoachingNotificationList</returns>
         
-        
         CoachingNotificationList GetCoachingNotifications (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -329,7 +310,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotificationList</returns>
         
-        
         ApiResponse<CoachingNotificationList> GetCoachingNotificationsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -343,7 +323,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the appointment</param>
         /// <returns>CoachingAppointmentResponse</returns>
         
-        
         CoachingAppointmentResponse PatchCoachingAppointment (string appointmentId, UpdateCoachingAppointmentRequest body);
 
         /// <summary>
@@ -356,7 +335,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The new version of the appointment</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
-        
         
         ApiResponse<CoachingAppointmentResponse> PatchCoachingAppointmentWithHttpInfo (string appointmentId, UpdateCoachingAppointmentRequest body);
 
@@ -372,7 +350,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the annotation</param>
         /// <returns>CoachingAnnotation</returns>
         
-        
         CoachingAnnotation PatchCoachingAppointmentAnnotation (string appointmentId, string annotationId, CoachingAnnotation body);
 
         /// <summary>
@@ -387,7 +364,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the annotation</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
         
-        
         ApiResponse<CoachingAnnotation> PatchCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId, CoachingAnnotation body);
 
         /// <summary>
@@ -400,7 +376,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>CoachingAppointmentStatusResponse</returns>
-        
         
         CoachingAppointmentStatusResponse PatchCoachingAppointmentStatus (string appointmentId, CoachingAppointmentStatusRequest body);
 
@@ -415,7 +390,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>ApiResponse of CoachingAppointmentStatusResponse</returns>
         
-        
         ApiResponse<CoachingAppointmentStatusResponse> PatchCoachingAppointmentStatusWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body);
 
         /// <summary>
@@ -428,7 +402,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>CoachingNotification</returns>
-        
         
         CoachingNotification PatchCoachingNotification (string notificationId, CoachingNotification body);
 
@@ -443,7 +416,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>ApiResponse of CoachingNotification</returns>
         
-        
         ApiResponse<CoachingNotification> PatchCoachingNotificationWithHttpInfo (string notificationId, CoachingNotification body);
 
         /// <summary>
@@ -456,7 +428,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The annotation to add</param>
         /// <returns>CoachingAnnotation</returns>
-        
         
         CoachingAnnotation PostCoachingAppointmentAnnotations (string appointmentId, CoachingAnnotationCreateRequest body);
 
@@ -471,7 +442,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The annotation to add</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
         
-        
         ApiResponse<CoachingAnnotation> PostCoachingAppointmentAnnotationsWithHttpInfo (string appointmentId, CoachingAnnotationCreateRequest body);
 
         /// <summary>
@@ -484,7 +454,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">body</param>
         /// <returns>AddConversationResponse</returns>
-        
         
         AddConversationResponse PostCoachingAppointmentConversations (string appointmentId, AddConversationRequest body);
 
@@ -499,7 +468,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>ApiResponse of AddConversationResponse</returns>
         
-        
         ApiResponse<AddConversationResponse> PostCoachingAppointmentConversationsWithHttpInfo (string appointmentId, AddConversationRequest body);
 
         /// <summary>
@@ -511,7 +479,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The appointment to add</param>
         /// <returns>CoachingAppointmentResponse</returns>
-        
         
         CoachingAppointmentResponse PostCoachingAppointments (CreateCoachingAppointmentRequest body);
 
@@ -525,7 +492,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The appointment to add</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
         
-        
         ApiResponse<CoachingAppointmentResponse> PostCoachingAppointmentsWithHttpInfo (CreateCoachingAppointmentRequest body);
 
         /// <summary>
@@ -537,7 +503,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>CoachingAppointmentAggregateResponse</returns>
-        
         
         CoachingAppointmentAggregateResponse PostCoachingAppointmentsAggregatesQuery (CoachingAppointmentAggregateRequest body);
 
@@ -551,7 +516,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>ApiResponse of CoachingAppointmentAggregateResponse</returns>
         
-        
         ApiResponse<CoachingAppointmentAggregateResponse> PostCoachingAppointmentsAggregatesQueryWithHttpInfo (CoachingAppointmentAggregateRequest body);
 
         /// <summary>
@@ -564,7 +528,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The slot search request</param>
         /// <returns>CoachingSlotsResponse</returns>
         
-        
         CoachingSlotsResponse PostCoachingScheduleslotsQuery (CoachingSlotsRequest body);
 
         /// <summary>
@@ -576,7 +539,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>ApiResponse of CoachingSlotsResponse</returns>
-        
         
         ApiResponse<CoachingSlotsResponse> PostCoachingScheduleslotsQueryWithHttpInfo (CoachingSlotsRequest body);
 
@@ -594,7 +556,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of CoachingAppointmentReference</returns>
         
-        
         System.Threading.Tasks.Task<CoachingAppointmentReference> DeleteCoachingAppointmentAsync (string appointmentId);
 
         /// <summary>
@@ -606,7 +567,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentReference)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentReference>> DeleteCoachingAppointmentAsyncWithHttpInfo (string appointmentId);
 
@@ -621,7 +581,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of void</returns>
         
-        
         System.Threading.Tasks.Task DeleteCoachingAppointmentAnnotationAsync (string appointmentId, string annotationId);
 
         /// <summary>
@@ -635,7 +594,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of ApiResponse</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId);
 
         /// <summary>
@@ -648,7 +606,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of CoachingAppointmentResponse</returns>
         
-        
         System.Threading.Tasks.Task<CoachingAppointmentResponse> GetCoachingAppointmentAsync (string appointmentId);
 
         /// <summary>
@@ -660,7 +617,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> GetCoachingAppointmentAsyncWithHttpInfo (string appointmentId);
 
@@ -675,7 +631,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of CoachingAnnotation</returns>
         
-        
         System.Threading.Tasks.Task<CoachingAnnotation> GetCoachingAppointmentAnnotationAsync (string appointmentId, string annotationId);
 
         /// <summary>
@@ -688,7 +643,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> GetCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId);
 
@@ -704,7 +658,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of CoachingAnnotationList</returns>
         
-        
         System.Threading.Tasks.Task<CoachingAnnotationList> GetCoachingAppointmentAnnotationsAsync (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -718,7 +671,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CoachingAnnotationList)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotationList>> GetCoachingAppointmentAnnotationsAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
@@ -734,7 +686,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of CoachingAppointmentStatusResponseList</returns>
         
-        
         System.Threading.Tasks.Task<CoachingAppointmentStatusResponseList> GetCoachingAppointmentStatusesAsync (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -748,7 +699,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponseList)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponseList>> GetCoachingAppointmentStatusesAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null);
 
@@ -772,7 +722,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
         
-        
         System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsAsync (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
@@ -795,7 +744,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
@@ -816,7 +764,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
-        
         
         System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsMeAsync (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
@@ -839,7 +786,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null);
 
         /// <summary>
@@ -853,7 +799,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of CoachingNotification</returns>
         
-        
         System.Threading.Tasks.Task<CoachingNotification> GetCoachingNotificationAsync (string notificationId, List<string> expand = null);
 
         /// <summary>
@@ -866,7 +811,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotification)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> GetCoachingNotificationAsyncWithHttpInfo (string notificationId, List<string> expand = null);
 
@@ -882,7 +826,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of CoachingNotificationList</returns>
         
-        
         System.Threading.Tasks.Task<CoachingNotificationList> GetCoachingNotificationsAsync (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -897,7 +840,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotificationList)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingNotificationList>> GetCoachingNotificationsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -911,7 +853,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the appointment</param>
         /// <returns>Task of CoachingAppointmentResponse</returns>
         
-        
         System.Threading.Tasks.Task<CoachingAppointmentResponse> PatchCoachingAppointmentAsync (string appointmentId, UpdateCoachingAppointmentRequest body);
 
         /// <summary>
@@ -924,7 +865,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The new version of the appointment</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> PatchCoachingAppointmentAsyncWithHttpInfo (string appointmentId, UpdateCoachingAppointmentRequest body);
 
@@ -940,7 +880,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the annotation</param>
         /// <returns>Task of CoachingAnnotation</returns>
         
-        
         System.Threading.Tasks.Task<CoachingAnnotation> PatchCoachingAppointmentAnnotationAsync (string appointmentId, string annotationId, CoachingAnnotation body);
 
         /// <summary>
@@ -955,7 +894,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The new version of the annotation</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> PatchCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId, CoachingAnnotation body);
 
         /// <summary>
@@ -968,7 +906,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>Task of CoachingAppointmentStatusResponse</returns>
-        
         
         System.Threading.Tasks.Task<CoachingAppointmentStatusResponse> PatchCoachingAppointmentStatusAsync (string appointmentId, CoachingAppointmentStatusRequest body);
 
@@ -983,7 +920,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponse>> PatchCoachingAppointmentStatusAsyncWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body);
 
         /// <summary>
@@ -996,7 +932,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>Task of CoachingNotification</returns>
-        
         
         System.Threading.Tasks.Task<CoachingNotification> PatchCoachingNotificationAsync (string notificationId, CoachingNotification body);
 
@@ -1011,7 +946,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>Task of ApiResponse (CoachingNotification)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> PatchCoachingNotificationAsyncWithHttpInfo (string notificationId, CoachingNotification body);
 
         /// <summary>
@@ -1024,7 +958,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The annotation to add</param>
         /// <returns>Task of CoachingAnnotation</returns>
-        
         
         System.Threading.Tasks.Task<CoachingAnnotation> PostCoachingAppointmentAnnotationsAsync (string appointmentId, CoachingAnnotationCreateRequest body);
 
@@ -1039,7 +972,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The annotation to add</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> PostCoachingAppointmentAnnotationsAsyncWithHttpInfo (string appointmentId, CoachingAnnotationCreateRequest body);
 
         /// <summary>
@@ -1052,7 +984,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">body</param>
         /// <returns>Task of AddConversationResponse</returns>
-        
         
         System.Threading.Tasks.Task<AddConversationResponse> PostCoachingAppointmentConversationsAsync (string appointmentId, AddConversationRequest body);
 
@@ -1067,7 +998,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (AddConversationResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<AddConversationResponse>> PostCoachingAppointmentConversationsAsyncWithHttpInfo (string appointmentId, AddConversationRequest body);
 
         /// <summary>
@@ -1079,7 +1009,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The appointment to add</param>
         /// <returns>Task of CoachingAppointmentResponse</returns>
-        
         
         System.Threading.Tasks.Task<CoachingAppointmentResponse> PostCoachingAppointmentsAsync (CreateCoachingAppointmentRequest body);
 
@@ -1093,7 +1022,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The appointment to add</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> PostCoachingAppointmentsAsyncWithHttpInfo (CreateCoachingAppointmentRequest body);
 
         /// <summary>
@@ -1105,7 +1033,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of CoachingAppointmentAggregateResponse</returns>
-        
         
         System.Threading.Tasks.Task<CoachingAppointmentAggregateResponse> PostCoachingAppointmentsAggregatesQueryAsync (CoachingAppointmentAggregateRequest body);
 
@@ -1119,7 +1046,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentAggregateResponse)</returns>
         
-        
         System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentAggregateResponse>> PostCoachingAppointmentsAggregatesQueryAsyncWithHttpInfo (CoachingAppointmentAggregateRequest body);
 
         /// <summary>
@@ -1132,7 +1058,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The slot search request</param>
         /// <returns>Task of CoachingSlotsResponse</returns>
         
-        
         System.Threading.Tasks.Task<CoachingSlotsResponse> PostCoachingScheduleslotsQueryAsync (CoachingSlotsRequest body);
 
         /// <summary>
@@ -1144,7 +1069,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>Task of ApiResponse (CoachingSlotsResponse)</returns>
-        
         
         System.Threading.Tasks.Task<ApiResponse<CoachingSlotsResponse>> PostCoachingScheduleslotsQueryAsyncWithHttpInfo (CoachingSlotsRequest body);
 
@@ -1241,12 +1165,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an existing appointment Permission not required if you are the creator of the appointment
+        /// Delete an existing appointment 
+        /// Permission not required if you are the creator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>CoachingAppointmentReference</returns>
-        
         
         public CoachingAppointmentReference DeleteCoachingAppointment (string appointmentId)
         {
@@ -1255,12 +1179,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an existing appointment Permission not required if you are the creator of the appointment
+        /// Delete an existing appointment 
+        /// Permission not required if you are the creator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>ApiResponse of CoachingAppointmentReference</returns>
-        
         
         public ApiResponse< CoachingAppointmentReference > DeleteCoachingAppointmentWithHttpInfo (string appointmentId)
         { 
@@ -1339,12 +1263,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an existing appointment Permission not required if you are the creator of the appointment
+        /// Delete an existing appointment 
+        /// Permission not required if you are the creator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of CoachingAppointmentReference</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAppointmentReference> DeleteCoachingAppointmentAsync (string appointmentId)
         {
@@ -1354,12 +1278,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an existing appointment Permission not required if you are the creator of the appointment
+        /// Delete an existing appointment 
+        /// Permission not required if you are the creator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentReference)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentReference>> DeleteCoachingAppointmentAsyncWithHttpInfo (string appointmentId)
         { 
@@ -1440,13 +1364,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an existing annotation You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+        /// Delete an existing annotation 
+        /// You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns></returns>
-        
         
         public void DeleteCoachingAppointmentAnnotation (string appointmentId, string annotationId)
         {
@@ -1454,13 +1378,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an existing annotation You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+        /// Delete an existing annotation 
+        /// You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
         
         public ApiResponse<Object> DeleteCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId)
         { 
@@ -1543,13 +1467,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an existing annotation You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+        /// Delete an existing annotation 
+        /// You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of void</returns>
-        
         
         public async System.Threading.Tasks.Task DeleteCoachingAppointmentAnnotationAsync (string appointmentId, string annotationId)
         {
@@ -1558,13 +1482,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an existing annotation You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+        /// Delete an existing annotation 
+        /// You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of ApiResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId)
         { 
@@ -1650,12 +1574,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve an appointment Permission not required if you are the attendee, creator or facilitator of the appointment
+        /// Retrieve an appointment 
+        /// Permission not required if you are the attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>CoachingAppointmentResponse</returns>
-        
         
         public CoachingAppointmentResponse GetCoachingAppointment (string appointmentId)
         {
@@ -1664,12 +1588,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve an appointment Permission not required if you are the attendee, creator or facilitator of the appointment
+        /// Retrieve an appointment 
+        /// Permission not required if you are the attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
-        
         
         public ApiResponse< CoachingAppointmentResponse > GetCoachingAppointmentWithHttpInfo (string appointmentId)
         { 
@@ -1748,12 +1672,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve an appointment Permission not required if you are the attendee, creator or facilitator of the appointment
+        /// Retrieve an appointment 
+        /// Permission not required if you are the attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of CoachingAppointmentResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAppointmentResponse> GetCoachingAppointmentAsync (string appointmentId)
         {
@@ -1763,12 +1687,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve an appointment Permission not required if you are the attendee, creator or facilitator of the appointment
+        /// Retrieve an appointment 
+        /// Permission not required if you are the attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> GetCoachingAppointmentAsyncWithHttpInfo (string appointmentId)
         { 
@@ -1849,13 +1773,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve an annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+        /// Retrieve an annotation. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>CoachingAnnotation</returns>
-        
         
         public CoachingAnnotation GetCoachingAppointmentAnnotation (string appointmentId, string annotationId)
         {
@@ -1864,13 +1788,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve an annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+        /// Retrieve an annotation. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
-        
         
         public ApiResponse< CoachingAnnotation > GetCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId)
         { 
@@ -1953,13 +1877,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve an annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+        /// Retrieve an annotation. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of CoachingAnnotation</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAnnotation> GetCoachingAppointmentAnnotationAsync (string appointmentId, string annotationId)
         {
@@ -1969,13 +1893,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve an annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+        /// Retrieve an annotation. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> GetCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId)
         { 
@@ -2061,14 +1985,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of annotations. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+        /// Get a list of annotations. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>CoachingAnnotationList</returns>
-        
         
         public CoachingAnnotationList GetCoachingAppointmentAnnotations (string appointmentId, int? pageNumber = null, int? pageSize = null)
         {
@@ -2077,14 +2001,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of annotations. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+        /// Get a list of annotations. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CoachingAnnotationList</returns>
-        
         
         public ApiResponse< CoachingAnnotationList > GetCoachingAppointmentAnnotationsWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -2165,14 +2089,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of annotations. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+        /// Get a list of annotations. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of CoachingAnnotationList</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAnnotationList> GetCoachingAppointmentAnnotationsAsync (string appointmentId, int? pageNumber = null, int? pageSize = null)
         {
@@ -2182,14 +2106,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of annotations. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+        /// Get a list of annotations. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CoachingAnnotationList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAnnotationList>> GetCoachingAppointmentAnnotationsAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -2272,14 +2196,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of status changes for a coaching appointment. Permission not required if you are an attendee, creator or facilitator of the appointment
+        /// Get the list of status changes for a coaching appointment. 
+        /// Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>CoachingAppointmentStatusResponseList</returns>
-        
         
         public CoachingAppointmentStatusResponseList GetCoachingAppointmentStatuses (string appointmentId, int? pageNumber = null, int? pageSize = null)
         {
@@ -2288,14 +2212,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of status changes for a coaching appointment. Permission not required if you are an attendee, creator or facilitator of the appointment
+        /// Get the list of status changes for a coaching appointment. 
+        /// Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CoachingAppointmentStatusResponseList</returns>
-        
         
         public ApiResponse< CoachingAppointmentStatusResponseList > GetCoachingAppointmentStatusesWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -2376,14 +2300,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of status changes for a coaching appointment. Permission not required if you are an attendee, creator or facilitator of the appointment
+        /// Get the list of status changes for a coaching appointment. 
+        /// Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of CoachingAppointmentStatusResponseList</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAppointmentStatusResponseList> GetCoachingAppointmentStatusesAsync (string appointmentId, int? pageNumber = null, int? pageSize = null)
         {
@@ -2393,14 +2317,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of status changes for a coaching appointment. Permission not required if you are an attendee, creator or facilitator of the appointment
+        /// Get the list of status changes for a coaching appointment. 
+        /// Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponseList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponseList>> GetCoachingAppointmentStatusesAsyncWithHttpInfo (string appointmentId, int? pageNumber = null, int? pageSize = null)
         { 
@@ -2484,6 +2408,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get appointments for users and optional date range 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
@@ -2499,7 +2424,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
         
-        
         public CoachingAppointmentResponseList GetCoachingAppointments (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         {
              ApiResponse<CoachingAppointmentResponseList> localVarResponse = GetCoachingAppointmentsWithHttpInfo(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
@@ -2508,6 +2432,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get appointments for users and optional date range 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
@@ -2522,7 +2447,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
-        
         
         public ApiResponse< CoachingAppointmentResponseList > GetCoachingAppointmentsWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         { 
@@ -2612,6 +2536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get appointments for users and optional date range 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
@@ -2627,7 +2552,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
         
-        
         public async System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsAsync (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         {
              ApiResponse<CoachingAppointmentResponseList> localVarResponse = await GetCoachingAppointmentsAsyncWithHttpInfo(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
@@ -2637,6 +2561,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get appointments for users and optional date range 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userIds">The user IDs for which to retrieve appointments</param>
@@ -2651,7 +2576,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsAsyncWithHttpInfo (List<string> userIds, string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         { 
@@ -2743,6 +2667,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get my appointments for a given date range 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
@@ -2757,7 +2682,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>CoachingAppointmentResponseList</returns>
         
-        
         public CoachingAppointmentResponseList GetCoachingAppointmentsMe (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         {
              ApiResponse<CoachingAppointmentResponseList> localVarResponse = GetCoachingAppointmentsMeWithHttpInfo(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
@@ -2766,6 +2690,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get my appointments for a given date range 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
@@ -2779,7 +2704,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>ApiResponse of CoachingAppointmentResponseList</returns>
-        
         
         public ApiResponse< CoachingAppointmentResponseList > GetCoachingAppointmentsMeWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         { 
@@ -2865,6 +2789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get my appointments for a given date range 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
@@ -2879,7 +2804,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of CoachingAppointmentResponseList</returns>
         
-        
         public async System.Threading.Tasks.Task<CoachingAppointmentResponseList> GetCoachingAppointmentsMeAsync (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         {
              ApiResponse<CoachingAppointmentResponseList> localVarResponse = await GetCoachingAppointmentsMeAsyncWithHttpInfo(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition);
@@ -2889,6 +2813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get my appointments for a given date range 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="interval">Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
@@ -2902,7 +2827,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="overdue">Overdue status to filter by (optional)</param>
         /// <param name="intervalCondition">Filter condition for interval (optional)</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponseList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo (string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
         { 
@@ -2988,13 +2912,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an existing notification Permission not required if you are the owner of the notification.
+        /// Get an existing notification 
+        /// Permission not required if you are the owner of the notification.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>CoachingNotification</returns>
-        
         
         public CoachingNotification GetCoachingNotification (string notificationId, List<string> expand = null)
         {
@@ -3003,13 +2927,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an existing notification Permission not required if you are the owner of the notification.
+        /// Get an existing notification 
+        /// Permission not required if you are the owner of the notification.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotification</returns>
-        
         
         public ApiResponse< CoachingNotification > GetCoachingNotificationWithHttpInfo (string notificationId, List<string> expand = null)
         { 
@@ -3089,13 +3013,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an existing notification Permission not required if you are the owner of the notification.
+        /// Get an existing notification 
+        /// Permission not required if you are the owner of the notification.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of CoachingNotification</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingNotification> GetCoachingNotificationAsync (string notificationId, List<string> expand = null)
         {
@@ -3105,13 +3029,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an existing notification Permission not required if you are the owner of the notification.
+        /// Get an existing notification 
+        /// Permission not required if you are the owner of the notification.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotification)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> GetCoachingNotificationAsyncWithHttpInfo (string notificationId, List<string> expand = null)
         { 
@@ -3194,13 +3118,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of your notifications. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>CoachingNotificationList</returns>
-        
         
         public CoachingNotificationList GetCoachingNotifications (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
         {
@@ -3210,13 +3134,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of your notifications. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>ApiResponse of CoachingNotificationList</returns>
-        
         
         public ApiResponse< CoachingNotificationList > GetCoachingNotificationsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
         { 
@@ -3295,13 +3219,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of your notifications. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of CoachingNotificationList</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingNotificationList> GetCoachingNotificationsAsync (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
         {
@@ -3312,13 +3236,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve the list of your notifications. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="expand">Indicates a field in the response which should be expanded. (optional)</param>
         /// <returns>Task of ApiResponse (CoachingNotificationList)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingNotificationList>> GetCoachingNotificationsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> expand = null)
         { 
@@ -3397,13 +3321,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing appointment Permission not required if you are the creator or facilitator of the appointment
+        /// Update an existing appointment 
+        /// Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The new version of the appointment</param>
         /// <returns>CoachingAppointmentResponse</returns>
-        
         
         public CoachingAppointmentResponse PatchCoachingAppointment (string appointmentId, UpdateCoachingAppointmentRequest body)
         {
@@ -3412,13 +3336,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing appointment Permission not required if you are the creator or facilitator of the appointment
+        /// Update an existing appointment 
+        /// Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The new version of the appointment</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
-        
         
         public ApiResponse< CoachingAppointmentResponse > PatchCoachingAppointmentWithHttpInfo (string appointmentId, UpdateCoachingAppointmentRequest body)
         { 
@@ -3506,13 +3430,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing appointment Permission not required if you are the creator or facilitator of the appointment
+        /// Update an existing appointment 
+        /// Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The new version of the appointment</param>
         /// <returns>Task of CoachingAppointmentResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAppointmentResponse> PatchCoachingAppointmentAsync (string appointmentId, UpdateCoachingAppointmentRequest body)
         {
@@ -3522,13 +3446,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing appointment Permission not required if you are the creator or facilitator of the appointment
+        /// Update an existing appointment 
+        /// Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The new version of the appointment</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> PatchCoachingAppointmentAsyncWithHttpInfo (string appointmentId, UpdateCoachingAppointmentRequest body)
         { 
@@ -3619,14 +3543,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing annotation. You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+        /// Update an existing annotation. 
+        /// You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <param name="body">The new version of the annotation</param>
         /// <returns>CoachingAnnotation</returns>
-        
         
         public CoachingAnnotation PatchCoachingAppointmentAnnotation (string appointmentId, string annotationId, CoachingAnnotation body)
         {
@@ -3635,14 +3559,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing annotation. You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+        /// Update an existing annotation. 
+        /// You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <param name="body">The new version of the annotation</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
-        
         
         public ApiResponse< CoachingAnnotation > PatchCoachingAppointmentAnnotationWithHttpInfo (string appointmentId, string annotationId, CoachingAnnotation body)
         { 
@@ -3734,14 +3658,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing annotation. You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+        /// Update an existing annotation. 
+        /// You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <param name="body">The new version of the annotation</param>
         /// <returns>Task of CoachingAnnotation</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAnnotation> PatchCoachingAppointmentAnnotationAsync (string appointmentId, string annotationId, CoachingAnnotation body)
         {
@@ -3751,14 +3675,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing annotation. You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+        /// Update an existing annotation. 
+        /// You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="annotationId">The ID of the annotation.</param>
         /// <param name="body">The new version of the annotation</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> PatchCoachingAppointmentAnnotationAsyncWithHttpInfo (string appointmentId, string annotationId, CoachingAnnotation body)
         { 
@@ -3854,13 +3778,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the status of a coaching appointment Permission not required if you are an attendee, creator or facilitator of the appointment
+        /// Update the status of a coaching appointment 
+        /// Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>CoachingAppointmentStatusResponse</returns>
-        
         
         public CoachingAppointmentStatusResponse PatchCoachingAppointmentStatus (string appointmentId, CoachingAppointmentStatusRequest body)
         {
@@ -3869,13 +3793,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the status of a coaching appointment Permission not required if you are an attendee, creator or facilitator of the appointment
+        /// Update the status of a coaching appointment 
+        /// Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>ApiResponse of CoachingAppointmentStatusResponse</returns>
-        
         
         public ApiResponse< CoachingAppointmentStatusResponse > PatchCoachingAppointmentStatusWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body)
         { 
@@ -3963,13 +3887,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the status of a coaching appointment Permission not required if you are an attendee, creator or facilitator of the appointment
+        /// Update the status of a coaching appointment 
+        /// Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>Task of CoachingAppointmentStatusResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAppointmentStatusResponse> PatchCoachingAppointmentStatusAsync (string appointmentId, CoachingAppointmentStatusRequest body)
         {
@@ -3979,13 +3903,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the status of a coaching appointment Permission not required if you are an attendee, creator or facilitator of the appointment
+        /// Update the status of a coaching appointment 
+        /// Permission not required if you are an attendee, creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">Updated status of the coaching appointment</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentStatusResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentStatusResponse>> PatchCoachingAppointmentStatusAsyncWithHttpInfo (string appointmentId, CoachingAppointmentStatusRequest body)
         { 
@@ -4076,13 +4000,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing notification. Can only update your own notifications.
+        /// Update an existing notification. 
+        /// Can only update your own notifications.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>CoachingNotification</returns>
-        
         
         public CoachingNotification PatchCoachingNotification (string notificationId, CoachingNotification body)
         {
@@ -4091,13 +4015,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing notification. Can only update your own notifications.
+        /// Update an existing notification. 
+        /// Can only update your own notifications.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>ApiResponse of CoachingNotification</returns>
-        
         
         public ApiResponse< CoachingNotification > PatchCoachingNotificationWithHttpInfo (string notificationId, CoachingNotification body)
         { 
@@ -4185,13 +4109,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an existing notification. Can only update your own notifications.
+        /// Update an existing notification. 
+        /// Can only update your own notifications.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>Task of CoachingNotification</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingNotification> PatchCoachingNotificationAsync (string notificationId, CoachingNotification body)
         {
@@ -4201,13 +4125,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an existing notification. Can only update your own notifications.
+        /// Update an existing notification. 
+        /// Can only update your own notifications.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="notificationId">The ID of the notification.</param>
         /// <param name="body">Change the read state of a notification</param>
         /// <returns>Task of ApiResponse (CoachingNotification)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingNotification>> PatchCoachingNotificationAsyncWithHttpInfo (string notificationId, CoachingNotification body)
         { 
@@ -4298,13 +4222,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a new annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
+        /// Create a new annotation. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The annotation to add</param>
         /// <returns>CoachingAnnotation</returns>
-        
         
         public CoachingAnnotation PostCoachingAppointmentAnnotations (string appointmentId, CoachingAnnotationCreateRequest body)
         {
@@ -4313,13 +4237,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
+        /// Create a new annotation. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The annotation to add</param>
         /// <returns>ApiResponse of CoachingAnnotation</returns>
-        
         
         public ApiResponse< CoachingAnnotation > PostCoachingAppointmentAnnotationsWithHttpInfo (string appointmentId, CoachingAnnotationCreateRequest body)
         { 
@@ -4407,13 +4331,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a new annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
+        /// Create a new annotation. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The annotation to add</param>
         /// <returns>Task of CoachingAnnotation</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAnnotation> PostCoachingAppointmentAnnotationsAsync (string appointmentId, CoachingAnnotationCreateRequest body)
         {
@@ -4423,13 +4347,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new annotation. You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
+        /// Create a new annotation. 
+        /// You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">The annotation to add</param>
         /// <returns>Task of ApiResponse (CoachingAnnotation)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAnnotation>> PostCoachingAppointmentAnnotationsAsyncWithHttpInfo (string appointmentId, CoachingAnnotationCreateRequest body)
         { 
@@ -4520,13 +4444,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
+        /// Add a conversation to an appointment 
+        /// Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">body</param>
         /// <returns>AddConversationResponse</returns>
-        
         
         public AddConversationResponse PostCoachingAppointmentConversations (string appointmentId, AddConversationRequest body)
         {
@@ -4535,13 +4459,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
+        /// Add a conversation to an appointment 
+        /// Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of AddConversationResponse</returns>
-        
         
         public ApiResponse< AddConversationResponse > PostCoachingAppointmentConversationsWithHttpInfo (string appointmentId, AddConversationRequest body)
         { 
@@ -4629,13 +4553,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
+        /// Add a conversation to an appointment 
+        /// Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">body</param>
         /// <returns>Task of AddConversationResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<AddConversationResponse> PostCoachingAppointmentConversationsAsync (string appointmentId, AddConversationRequest body)
         {
@@ -4645,13 +4569,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add a conversation to an appointment Permission not required if you are the creator or facilitator of the appointment
+        /// Add a conversation to an appointment 
+        /// Permission not required if you are the creator or facilitator of the appointment
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="appointmentId">The ID of the coaching appointment.</param>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse (AddConversationResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<AddConversationResponse>> PostCoachingAppointmentConversationsAsyncWithHttpInfo (string appointmentId, AddConversationRequest body)
         { 
@@ -4743,11 +4667,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new appointment 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The appointment to add</param>
         /// <returns>CoachingAppointmentResponse</returns>
-        
         
         public CoachingAppointmentResponse PostCoachingAppointments (CreateCoachingAppointmentRequest body)
         {
@@ -4757,11 +4681,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new appointment 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The appointment to add</param>
         /// <returns>ApiResponse of CoachingAppointmentResponse</returns>
-        
         
         public ApiResponse< CoachingAppointmentResponse > PostCoachingAppointmentsWithHttpInfo (CreateCoachingAppointmentRequest body)
         { 
@@ -4846,11 +4770,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new appointment 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The appointment to add</param>
         /// <returns>Task of CoachingAppointmentResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAppointmentResponse> PostCoachingAppointmentsAsync (CreateCoachingAppointmentRequest body)
         {
@@ -4861,11 +4785,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a new appointment 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The appointment to add</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponse>> PostCoachingAppointmentsAsyncWithHttpInfo (CreateCoachingAppointmentRequest body)
         { 
@@ -4952,11 +4876,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve aggregated appointment data 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>CoachingAppointmentAggregateResponse</returns>
-        
         
         public CoachingAppointmentAggregateResponse PostCoachingAppointmentsAggregatesQuery (CoachingAppointmentAggregateRequest body)
         {
@@ -4966,11 +4890,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve aggregated appointment data 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>ApiResponse of CoachingAppointmentAggregateResponse</returns>
-        
         
         public ApiResponse< CoachingAppointmentAggregateResponse > PostCoachingAppointmentsAggregatesQueryWithHttpInfo (CoachingAppointmentAggregateRequest body)
         { 
@@ -5055,11 +4979,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve aggregated appointment data 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of CoachingAppointmentAggregateResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingAppointmentAggregateResponse> PostCoachingAppointmentsAggregatesQueryAsync (CoachingAppointmentAggregateRequest body)
         {
@@ -5070,11 +4994,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieve aggregated appointment data 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Aggregate Request</param>
         /// <returns>Task of ApiResponse (CoachingAppointmentAggregateResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentAggregateResponse>> PostCoachingAppointmentsAggregatesQueryAsyncWithHttpInfo (CoachingAppointmentAggregateRequest body)
         { 
@@ -5161,11 +5085,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of possible slots where a coaching appointment can be scheduled. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>CoachingSlotsResponse</returns>
-        
         
         public CoachingSlotsResponse PostCoachingScheduleslotsQuery (CoachingSlotsRequest body)
         {
@@ -5175,11 +5099,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of possible slots where a coaching appointment can be scheduled. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>ApiResponse of CoachingSlotsResponse</returns>
-        
         
         public ApiResponse< CoachingSlotsResponse > PostCoachingScheduleslotsQueryWithHttpInfo (CoachingSlotsRequest body)
         { 
@@ -5264,11 +5188,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of possible slots where a coaching appointment can be scheduled. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>Task of CoachingSlotsResponse</returns>
-        
         
         public async System.Threading.Tasks.Task<CoachingSlotsResponse> PostCoachingScheduleslotsQueryAsync (CoachingSlotsRequest body)
         {
@@ -5279,11 +5203,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of possible slots where a coaching appointment can be scheduled. 
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The slot search request</param>
         /// <returns>Task of ApiResponse (CoachingSlotsResponse)</returns>
-        
         
         public async System.Threading.Tasks.Task<ApiResponse<CoachingSlotsResponse>> PostCoachingScheduleslotsQueryAsyncWithHttpInfo (CoachingSlotsRequest body)
         { 

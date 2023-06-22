@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// BuForecastModification
+    /// BuForecastModificationResponse
     /// </summary>
     [DataContract]
-    public partial class BuForecastModification :  IEquatable<BuForecastModification>
+    public partial class BuForecastModificationResponse :  IEquatable<BuForecastModificationResponse>
     {
         /// <summary>
         /// The type of the modification
@@ -79,7 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Setvaluesforintervalset for "SetValuesForIntervalSet"
             /// </summary>
             [EnumMember(Value = "SetValuesForIntervalSet")]
-            Setvaluesforintervalset
+            Setvaluesforintervalset,
+            
+            /// <summary>
+            /// Enum Setmultigranularityvaluesforintervalset for "SetMultiGranularityValuesForIntervalSet"
+            /// </summary>
+            [EnumMember(Value = "SetMultiGranularityValuesForIntervalSet")]
+            Setmultigranularityvaluesforintervalset
         }
         /// <summary>
         /// The metric to which this modification applies
@@ -164,32 +170,34 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The legacy metric to which this modification applies if applicable</value>
         [DataMember(Name="legacyMetric", EmitDefaultValue=false)]
-        public LegacyMetricEnum? LegacyMetric { get; private set; }
+        public LegacyMetricEnum? LegacyMetric { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuForecastModification" /> class.
+        /// Initializes a new instance of the <see cref="BuForecastModificationResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected BuForecastModification() { }
+        protected BuForecastModificationResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuForecastModification" /> class.
+        /// Initializes a new instance of the <see cref="BuForecastModificationResponse" /> class.
         /// </summary>
         /// <param name="Type">The type of the modification (required).</param>
-        /// <param name="StartIntervalIndex">The number of 15 minute intervals past referenceStartDate representing the first interval to which to apply this modification. Must be null if values is populated.</param>
-        /// <param name="EndIntervalIndex">The number of 15 minute intervals past referenceStartDate representing the last interval to which to apply this modification.  Must be null if values is populated.</param>
+        /// <param name="StartIntervalIndex">The number of intervals past referenceStartDate representing the first interval to which this modification applies.</param>
+        /// <param name="EndIntervalIndex">The number of intervals past referenceStartDate representing the last interval to which this modification applies.</param>
         /// <param name="Metric">The metric to which this modification applies (required).</param>
-        /// <param name="Value">The value of the modification.  Must be null if \"values\" is populated.</param>
-        /// <param name="Values">The list of values to update.  Only applicable for grid-type modifications. Must be null if \"value\" is populated.</param>
+        /// <param name="LegacyMetric">The legacy metric to which this modification applies if applicable.</param>
+        /// <param name="Value">The value of the modification.</param>
+        /// <param name="Values">The list of modification values. Only applicable for grid-type modifications (required).</param>
         /// <param name="DisplayGranularity">The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
-        /// <param name="Granularity">The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
+        /// <param name="Granularity">The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
         /// <param name="Enabled">Whether the modification is enabled for the forecast (required).</param>
-        /// <param name="PlanningGroupIds">The IDs of the planning groups to which this forecast modification applies.  Leave empty to apply to all.</param>
-        public BuForecastModification(TypeEnum? Type = null, int? StartIntervalIndex = null, int? EndIntervalIndex = null, MetricEnum? Metric = null, double? Value = null, List<WfmForecastModificationIntervalOffsetValue> Values = null, string DisplayGranularity = null, string Granularity = null, bool? Enabled = null, List<string> PlanningGroupIds = null)
+        /// <param name="PlanningGroupIds">The IDs of the planning groups to which this forecast modification applies (required).</param>
+        public BuForecastModificationResponse(TypeEnum? Type = null, int? StartIntervalIndex = null, int? EndIntervalIndex = null, MetricEnum? Metric = null, LegacyMetricEnum? LegacyMetric = null, double? Value = null, List<WfmForecastModificationIntervalOffsetValue> Values = null, string DisplayGranularity = null, string Granularity = null, bool? Enabled = null, List<string> PlanningGroupIds = null)
         {
             this.Type = Type;
             this.StartIntervalIndex = StartIntervalIndex;
             this.EndIntervalIndex = EndIntervalIndex;
             this.Metric = Metric;
+            this.LegacyMetric = LegacyMetric;
             this.Value = Value;
             this.Values = Values;
             this.DisplayGranularity = DisplayGranularity;
@@ -204,18 +212,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of 15 minute intervals past referenceStartDate representing the first interval to which to apply this modification. Must be null if values is populated
+        /// The number of intervals past referenceStartDate representing the first interval to which this modification applies
         /// </summary>
-        /// <value>The number of 15 minute intervals past referenceStartDate representing the first interval to which to apply this modification. Must be null if values is populated</value>
+        /// <value>The number of intervals past referenceStartDate representing the first interval to which this modification applies</value>
         [DataMember(Name="startIntervalIndex", EmitDefaultValue=false)]
         public int? StartIntervalIndex { get; set; }
 
 
 
         /// <summary>
-        /// The number of 15 minute intervals past referenceStartDate representing the last interval to which to apply this modification.  Must be null if values is populated
+        /// The number of intervals past referenceStartDate representing the last interval to which this modification applies
         /// </summary>
-        /// <value>The number of 15 minute intervals past referenceStartDate representing the last interval to which to apply this modification.  Must be null if values is populated</value>
+        /// <value>The number of intervals past referenceStartDate representing the last interval to which this modification applies</value>
         [DataMember(Name="endIntervalIndex", EmitDefaultValue=false)]
         public int? EndIntervalIndex { get; set; }
 
@@ -226,18 +234,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The value of the modification.  Must be null if \"values\" is populated
+        /// The value of the modification
         /// </summary>
-        /// <value>The value of the modification.  Must be null if \"values\" is populated</value>
+        /// <value>The value of the modification</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
 
 
 
         /// <summary>
-        /// The list of values to update.  Only applicable for grid-type modifications. Must be null if \"value\" is populated
+        /// The list of modification values. Only applicable for grid-type modifications
         /// </summary>
-        /// <value>The list of values to update.  Only applicable for grid-type modifications. Must be null if \"value\" is populated</value>
+        /// <value>The list of modification values. Only applicable for grid-type modifications</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<WfmForecastModificationIntervalOffsetValue> Values { get; set; }
 
@@ -271,9 +279,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The IDs of the planning groups to which this forecast modification applies.  Leave empty to apply to all
+        /// The IDs of the planning groups to which this forecast modification applies
         /// </summary>
-        /// <value>The IDs of the planning groups to which this forecast modification applies.  Leave empty to apply to all</value>
+        /// <value>The IDs of the planning groups to which this forecast modification applies</value>
         [DataMember(Name="planningGroupIds", EmitDefaultValue=false)]
         public List<string> PlanningGroupIds { get; set; }
 
@@ -285,7 +293,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BuForecastModification {\n");
+            sb.Append("class BuForecastModificationResponse {\n");
 
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  StartIntervalIndex: ").Append(StartIntervalIndex).Append("\n");
@@ -323,15 +331,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BuForecastModification);
+            return this.Equals(obj as BuForecastModificationResponse);
         }
 
         /// <summary>
-        /// Returns true if BuForecastModification instances are equal
+        /// Returns true if BuForecastModificationResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of BuForecastModification to be compared</param>
+        /// <param name="other">Instance of BuForecastModificationResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BuForecastModification other)
+        public bool Equals(BuForecastModificationResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
