@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class WorkitemQuerySort :  IEquatable<WorkitemQuerySort>
     {
         /// <summary>
-        /// Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter. Sorting by priority is only supported in workbinId based queries.
+        /// Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter.
         /// </summary>
-        /// <value>Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter. Sorting by priority is only supported in workbinId based queries.</value>
+        /// <value>Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum NameEnum
         {
@@ -46,15 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
             Priority
         }
         /// <summary>
-        /// Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter. Sorting by priority is only supported in workbinId based queries.
+        /// Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter.
         /// </summary>
-        /// <value>Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter. Sorting by priority is only supported in workbinId based queries.</value>
+        /// <value>Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public NameEnum? Name { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkitemQuerySort" /> class.
         /// </summary>
-        /// <param name="Name">Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter. Sorting by priority is only supported in workbinId based queries..</param>
+        /// <param name="Name">Specify an attribute for sorting. It's possible to use an attribute both for sorting and in the query at the same time, but these restrictions apply: Only the operators EQ, LT, LTE, GT, GTE, BETWEEN and BEGINS_WITH are supported and the attribute can't be present in more than one filter..</param>
         /// <param name="Ascending">Sort Ascending.</param>
         public WorkitemQuerySort(NameEnum? Name = null, bool? Ascending = null)
         {

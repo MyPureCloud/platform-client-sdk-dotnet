@@ -13,67 +13,48 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A Presence event.
+    /// SupportCenterCategory
     /// </summary>
     [DataContract]
-    public partial class EventPresence :  IEquatable<EventPresence>
+    public partial class SupportCenterCategory :  IEquatable<SupportCenterCategory>
     {
         /// <summary>
-        /// Describes the type of Presence event.
+        /// Initializes a new instance of the <see cref="SupportCenterCategory" /> class.
         /// </summary>
-        /// <value>Describes the type of Presence event.</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum TypeEnum
+        /// <param name="Id">Id.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="Image">Image.</param>
+        public SupportCenterCategory(string Id = null, string SelfUri = null, SupportCenterImage Image = null)
         {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Join for "Join"
-            /// </summary>
-            [EnumMember(Value = "Join")]
-            Join,
-            
-            /// <summary>
-            /// Enum Disconnect for "Disconnect"
-            /// </summary>
-            [EnumMember(Value = "Disconnect")]
-            Disconnect,
-            
-            /// <summary>
-            /// Enum Clear for "Clear"
-            /// </summary>
-            [EnumMember(Value = "Clear")]
-            Clear
-        }
-        /// <summary>
-        /// Describes the type of Presence event.
-        /// </summary>
-        /// <value>Describes the type of Presence event.</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EventPresence" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected EventPresence() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EventPresence" /> class.
-        /// </summary>
-        /// <param name="Type">Describes the type of Presence event. (required).</param>
-        public EventPresence(TypeEnum? Type = null)
-        {
-            this.Type = Type;
+            this.Id = Id;
+            this.SelfUri = SelfUri;
+            this.Image = Image;
             
         }
         
 
+
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets SelfUri
+        /// </summary>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Image
+        /// </summary>
+        [DataMember(Name="image", EmitDefaultValue=false)]
+        public SupportCenterImage Image { get; set; }
 
 
         /// <summary>
@@ -83,9 +64,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EventPresence {\n");
+            sb.Append("class SupportCenterCategory {\n");
 
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,15 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EventPresence);
+            return this.Equals(obj as SupportCenterCategory);
         }
 
         /// <summary>
-        /// Returns true if EventPresence instances are equal
+        /// Returns true if SupportCenterCategory instances are equal
         /// </summary>
-        /// <param name="other">Instance of EventPresence to be compared</param>
+        /// <param name="other">Instance of SupportCenterCategory to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EventPresence other)
+        public bool Equals(SupportCenterCategory other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -127,9 +110,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.Image == other.Image ||
+                    this.Image != null &&
+                    this.Image.Equals(other.Image)
                 );
         }
 
@@ -144,8 +137,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.Image != null)
+                    hash = hash * 59 + this.Image.GetHashCode();
 
                 return hash;
             }

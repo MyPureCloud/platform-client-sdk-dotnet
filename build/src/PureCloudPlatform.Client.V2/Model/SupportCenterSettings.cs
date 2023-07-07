@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EnabledCategories">Enabled article categories for support center.</param>
         /// <param name="StyleSetting">Style attributes for support center.</param>
         /// <param name="Feedback">Customer feedback settings.</param>
-        public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<AddressableEntityRef> EnabledCategories = null, SupportCenterStyleSetting StyleSetting = null, SupportCenterFeedbackSettings Feedback = null)
+        public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<SupportCenterCategory> EnabledCategories = null, SupportCenterStyleSetting StyleSetting = null, SupportCenterFeedbackSettings Feedback = null)
         {
             this.Enabled = Enabled;
             this.KnowledgeBase = KnowledgeBase;
@@ -120,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Enabled article categories for support center</value>
         [DataMember(Name="enabledCategories", EmitDefaultValue=false)]
-        public List<AddressableEntityRef> EnabledCategories { get; set; }
+        public List<SupportCenterCategory> EnabledCategories { get; set; }
 
 
 

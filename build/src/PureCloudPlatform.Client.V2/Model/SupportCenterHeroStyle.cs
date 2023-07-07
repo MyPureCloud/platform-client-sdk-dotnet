@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="BackgroundColor">Background color for hero section, in hexadecimal format, eg #ffffff.</param>
         /// <param name="TextColor">Text color for hero section, in hexadecimal format, eg #ffffff.</param>
-        public SupportCenterHeroStyle(string BackgroundColor = null, string TextColor = null)
+        /// <param name="Image">Background image for hero section.</param>
+        public SupportCenterHeroStyle(string BackgroundColor = null, string TextColor = null, SupportCenterImage Image = null)
         {
             this.BackgroundColor = BackgroundColor;
             this.TextColor = TextColor;
+            this.Image = Image;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TextColor { get; set; }
 
 
+
+        /// <summary>
+        /// Background image for hero section
+        /// </summary>
+        /// <value>Background image for hero section</value>
+        [DataMember(Name="image", EmitDefaultValue=false)]
+        public SupportCenterImage Image { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
             sb.Append("  TextColor: ").Append(TextColor).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TextColor == other.TextColor ||
                     this.TextColor != null &&
                     this.TextColor.Equals(other.TextColor)
+                ) &&
+                (
+                    this.Image == other.Image ||
+                    this.Image != null &&
+                    this.Image.Equals(other.Image)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TextColor != null)
                     hash = hash * 59 + this.TextColor.GetHashCode();
+
+                if (this.Image != null)
+                    hash = hash * 59 + this.Image.GetHashCode();
 
                 return hash;
             }

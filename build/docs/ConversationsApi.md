@@ -3539,7 +3539,7 @@ namespace Example
 
 <a name="getconversationsemailmessages"></a>
 
-## [**EmailMessageListing**](EmailMessageListing.html) GetConversationsEmailMessages (string conversationId)
+## [**EmailMessagePreviewListing**](EmailMessagePreviewListing.html) GetConversationsEmailMessages (string conversationId)
 
 
 
@@ -3575,7 +3575,7 @@ namespace Example
             try
             { 
                 // Get conversation messages
-                EmailMessageListing result = apiInstance.GetConversationsEmailMessages(conversationId);
+                EmailMessagePreviewListing result = apiInstance.GetConversationsEmailMessages(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3597,7 +3597,7 @@ namespace Example
 
 ### Return type
 
-[**EmailMessageListing**](EmailMessageListing.html)
+[**EmailMessagePreviewListing**](EmailMessagePreviewListing.html)
 
 <a name="getconversationsemailmessagesdraft"></a>
 

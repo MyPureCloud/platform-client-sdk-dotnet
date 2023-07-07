@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class DocumentBodyBlock :  IEquatable<DocumentBodyBlock>
     {
         /// <summary>
-        /// The type of the block for the body. This determines which body block object (paragraph, list, video or image) would have a value.
+        /// The type of the block for the body. This determines which body block object (paragraph, list, video, image or table) would have a value.
         /// </summary>
-        /// <value>The type of the block for the body. This determines which body block object (paragraph, list, video or image) would have a value.</value>
+        /// <value>The type of the block for the body. This determines which body block object (paragraph, list, video, image or table) would have a value.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -61,12 +61,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unorderedlist for "UnorderedList"
             /// </summary>
             [EnumMember(Value = "UnorderedList")]
-            Unorderedlist
+            Unorderedlist,
+            
+            /// <summary>
+            /// Enum Table for "Table"
+            /// </summary>
+            [EnumMember(Value = "Table")]
+            Table
         }
         /// <summary>
-        /// The type of the block for the body. This determines which body block object (paragraph, list, video or image) would have a value.
+        /// The type of the block for the body. This determines which body block object (paragraph, list, video, image or table) would have a value.
         /// </summary>
-        /// <value>The type of the block for the body. This determines which body block object (paragraph, list, video or image) would have a value.</value>
+        /// <value>The type of the block for the body. This determines which body block object (paragraph, list, video, image or table) would have a value.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
 
@@ -78,18 +84,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentBodyBlock" /> class.
         /// </summary>
-        /// <param name="Type">The type of the block for the body. This determines which body block object (paragraph, list, video or image) would have a value. (required).</param>
-        /// <param name="Paragraph">Paragraph. It must contain a value if the type of the block is Paragraph. (required).</param>
-        /// <param name="Image">Image. It must contain a value if the type of the block is Image. (required).</param>
-        /// <param name="Video">Video. It must contain a value if the type of the block is Video. (required).</param>
-        /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList. (required).</param>
-        public DocumentBodyBlock(TypeEnum? Type = null, DocumentBodyParagraph Paragraph = null, DocumentBodyImage Image = null, DocumentBodyVideo Video = null, DocumentBodyList List = null)
+        /// <param name="Type">The type of the block for the body. This determines which body block object (paragraph, list, video, image or table) would have a value. (required).</param>
+        /// <param name="Paragraph">Paragraph. It must contain a value if the type of the block is Paragraph..</param>
+        /// <param name="Image">Image. It must contain a value if the type of the block is Image..</param>
+        /// <param name="Video">Video. It must contain a value if the type of the block is Video..</param>
+        /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList..</param>
+        /// <param name="Table">Table. It must contain a value if type of the block is Table..</param>
+        public DocumentBodyBlock(TypeEnum? Type = null, DocumentBodyParagraph Paragraph = null, DocumentBodyImage Image = null, DocumentBodyVideo Video = null, DocumentBodyList List = null, DocumentBodyTable Table = null)
         {
             this.Type = Type;
             this.Paragraph = Paragraph;
             this.Image = Image;
             this.Video = Video;
             this.List = List;
+            this.Table = Table;
             
         }
         
@@ -132,6 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DocumentBodyList List { get; set; }
 
 
+
+        /// <summary>
+        /// Table. It must contain a value if type of the block is Table.
+        /// </summary>
+        /// <value>Table. It must contain a value if type of the block is Table.</value>
+        [DataMember(Name="table", EmitDefaultValue=false)]
+        public DocumentBodyTable Table { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  Video: ").Append(Video).Append("\n");
             sb.Append("  List: ").Append(List).Append("\n");
+            sb.Append("  Table: ").Append(Table).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -210,6 +228,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.List == other.List ||
                     this.List != null &&
                     this.List.Equals(other.List)
+                ) &&
+                (
+                    this.Table == other.Table ||
+                    this.Table != null &&
+                    this.Table.Equals(other.Table)
                 );
         }
 
@@ -238,6 +261,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.List != null)
                     hash = hash * 59 + this.List.GetHashCode();
+
+                if (this.Table != null)
+                    hash = hash * 59 + this.Table.GetHashCode();
 
                 return hash;
             }

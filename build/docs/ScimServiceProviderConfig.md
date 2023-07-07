@@ -16,7 +16,7 @@ title: ScimServiceProviderConfig
 | **Bulk** | [**ScimServiceProviderConfigBulkFeature**](ScimServiceProviderConfigBulkFeature.html) | The \&quot;bulk\&quot; configuration options. | [optional] |
 | **ChangePassword** | [**ScimServiceProviderConfigSimpleFeature**](ScimServiceProviderConfigSimpleFeature.html) | The \&quot;changePassword\&quot; configuration options. | [optional] |
 | **AuthenticationSchemes** | [**List&lt;ScimServiceProviderConfigAuthenticationScheme&gt;**](ScimServiceProviderConfigAuthenticationScheme.html) | The list of supported authentication schemes. | [optional] |
-| **Meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. | [optional] |
+| **Meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. Metadata is defined as immutable per SCIM RFC. | [optional] |
 {: class="table table-striped"}
 
 

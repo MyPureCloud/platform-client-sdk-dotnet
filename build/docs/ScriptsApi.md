@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetScriptsPublishedScriptIdVariables**](ScriptsApi.html#getscriptspublishedscriptidvariables) | **GET** /api/v2/scripts/published/{scriptId}/variables | Get the published variables |
 | [**GetScriptsUploadStatus**](ScriptsApi.html#getscriptsuploadstatus) | **GET** /api/v2/scripts/uploads/{uploadId}/status | Get the upload status of an imported script |
 | [**PostScriptExport**](ScriptsApi.html#postscriptexport) | **POST** /api/v2/scripts/{scriptId}/export | Export a script via download service. |
+| [**PostScriptsPublished**](ScriptsApi.html#postscriptspublished) | **POST** /api/v2/scripts/published | Publish a script. |
 {: class="table table-striped"}
 
 <a name="getscript"></a>
@@ -930,4 +931,69 @@ namespace Example
 ### Return type
 
 [**ExportScriptResponse**](ExportScriptResponse.html)
+
+<a name="postscriptspublished"></a>
+
+## [**Script**](Script.html) PostScriptsPublished (string scriptDataVersion = null, PublishScriptRequestData body = null)
+
+
+
+Publish a script.
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostScriptsPublishedExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ScriptsApi();
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            var body = new PublishScriptRequestData(); // PublishScriptRequestData | body (optional) 
+
+            try
+            { 
+                // Publish a script.
+                Script result = apiInstance.PostScriptsPublished(scriptDataVersion, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ScriptsApi.PostScriptsPublished: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
+| **body** | [**PublishScriptRequestData**](PublishScriptRequestData.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Script**](Script.html)
 

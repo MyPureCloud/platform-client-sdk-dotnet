@@ -78,7 +78,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Setvaluesforintervalset for "SetValuesForIntervalSet"
             /// </summary>
             [EnumMember(Value = "SetValuesForIntervalSet")]
-            Setvaluesforintervalset
+            Setvaluesforintervalset,
+            
+            /// <summary>
+            /// Enum Setmultigranularityvaluesforintervalset for "SetMultiGranularityValuesForIntervalSet"
+            /// </summary>
+            [EnumMember(Value = "SetMultiGranularityValuesForIntervalSet")]
+            Setmultigranularityvaluesforintervalset
         }
         /// <summary>
         /// Gets or Sets Metric
@@ -169,11 +175,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LegacyMetric">LegacyMetric.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Values">Values.</param>
+        /// <param name="SecondaryValues">SecondaryValues.</param>
         /// <param name="Enabled">Enabled.</param>
         /// <param name="Granularity">Granularity.</param>
+        /// <param name="SecondaryGranularity">SecondaryGranularity.</param>
         /// <param name="DisplayGranularity">DisplayGranularity.</param>
         /// <param name="PlanningGroupIds">PlanningGroupIds.</param>
-        public WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification(TypeEnum? Type = null, int? StartIntervalIndex = null, int? EndIntervalIndex = null, MetricEnum? Metric = null, LegacyMetricEnum? LegacyMetric = null, double? Value = null, List<WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue> Values = null, bool? Enabled = null, string Granularity = null, string DisplayGranularity = null, List<string> PlanningGroupIds = null)
+        public WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification(TypeEnum? Type = null, int? StartIntervalIndex = null, int? EndIntervalIndex = null, MetricEnum? Metric = null, LegacyMetricEnum? LegacyMetric = null, double? Value = null, List<WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue> Values = null, List<WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue> SecondaryValues = null, bool? Enabled = null, string Granularity = null, string SecondaryGranularity = null, string DisplayGranularity = null, List<string> PlanningGroupIds = null)
         {
             this.Type = Type;
             this.StartIntervalIndex = StartIntervalIndex;
@@ -182,8 +190,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LegacyMetric = LegacyMetric;
             this.Value = Value;
             this.Values = Values;
+            this.SecondaryValues = SecondaryValues;
             this.Enabled = Enabled;
             this.Granularity = Granularity;
+            this.SecondaryGranularity = SecondaryGranularity;
             this.DisplayGranularity = DisplayGranularity;
             this.PlanningGroupIds = PlanningGroupIds;
             
@@ -230,6 +240,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets SecondaryValues
+        /// </summary>
+        [DataMember(Name="secondaryValues", EmitDefaultValue=false)]
+        public List<WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue> SecondaryValues { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
@@ -242,6 +260,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public string Granularity { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets SecondaryGranularity
+        /// </summary>
+        [DataMember(Name="secondaryGranularity", EmitDefaultValue=false)]
+        public string SecondaryGranularity { get; set; }
 
 
 
@@ -276,8 +302,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LegacyMetric: ").Append(LegacyMetric).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
+            sb.Append("  SecondaryValues: ").Append(SecondaryValues).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
+            sb.Append("  SecondaryGranularity: ").Append(SecondaryGranularity).Append("\n");
             sb.Append("  DisplayGranularity: ").Append(DisplayGranularity).Append("\n");
             sb.Append("  PlanningGroupIds: ").Append(PlanningGroupIds).Append("\n");
             sb.Append("}\n");
@@ -356,6 +384,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Values.SequenceEqual(other.Values)
                 ) &&
                 (
+                    this.SecondaryValues == other.SecondaryValues ||
+                    this.SecondaryValues != null &&
+                    this.SecondaryValues.SequenceEqual(other.SecondaryValues)
+                ) &&
+                (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
@@ -364,6 +397,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Granularity == other.Granularity ||
                     this.Granularity != null &&
                     this.Granularity.Equals(other.Granularity)
+                ) &&
+                (
+                    this.SecondaryGranularity == other.SecondaryGranularity ||
+                    this.SecondaryGranularity != null &&
+                    this.SecondaryGranularity.Equals(other.SecondaryGranularity)
                 ) &&
                 (
                     this.DisplayGranularity == other.DisplayGranularity ||
@@ -409,11 +447,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
 
+                if (this.SecondaryValues != null)
+                    hash = hash * 59 + this.SecondaryValues.GetHashCode();
+
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
 
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
+
+                if (this.SecondaryGranularity != null)
+                    hash = hash * 59 + this.SecondaryGranularity.GetHashCode();
 
                 if (this.DisplayGranularity != null)
                     hash = hash * 59 + this.DisplayGranularity.GetHashCode();

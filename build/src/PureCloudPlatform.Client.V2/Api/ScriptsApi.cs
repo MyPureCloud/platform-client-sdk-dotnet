@@ -418,6 +418,32 @@ namespace PureCloudPlatform.Client.V2.Api
         
         ApiResponse<ExportScriptResponse> PostScriptExportWithHttpInfo (string scriptId, ExportScriptRequest body = null);
 
+        /// <summary>
+        /// Publish a script.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Script</returns>
+        
+        Script PostScriptsPublished (string scriptDataVersion = null, PublishScriptRequestData body = null);
+
+        /// <summary>
+        /// Publish a script.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of Script</returns>
+        
+        ApiResponse<Script> PostScriptsPublishedWithHttpInfo (string scriptDataVersion = null, PublishScriptRequestData body = null);
+
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
@@ -823,6 +849,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ExportScriptResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExportScriptResponse>> PostScriptExportAsyncWithHttpInfo (string scriptId, ExportScriptRequest body = null);
+
+        /// <summary>
+        /// Publish a script.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of Script</returns>
+        
+        System.Threading.Tasks.Task<Script> PostScriptsPublishedAsync (string scriptDataVersion = null, PublishScriptRequestData body = null);
+
+        /// <summary>
+        /// Publish a script.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (Script)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsPublishedAsyncWithHttpInfo (string scriptDataVersion = null, PublishScriptRequestData body = null);
 
         #endregion Asynchronous Operations
 
@@ -3763,6 +3815,214 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ExportScriptResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ExportScriptResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExportScriptResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Publish a script. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Script</returns>
+        
+        public Script PostScriptsPublished (string scriptDataVersion = null, PublishScriptRequestData body = null)
+        {
+             ApiResponse<Script> localVarResponse = PostScriptsPublishedWithHttpInfo(scriptDataVersion, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Publish a script. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of Script</returns>
+        
+        public ApiResponse< Script > PostScriptsPublishedWithHttpInfo (string scriptDataVersion = null, PublishScriptRequestData body = null)
+        { 
+
+            var localVarPath = "/api/v2/scripts/published";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostScriptsPublished: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostScriptsPublished: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Script>(localVarStatusCode,
+                localVarHeaders,
+                (Script) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Script)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Publish a script. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of Script</returns>
+        
+        public async System.Threading.Tasks.Task<Script> PostScriptsPublishedAsync (string scriptDataVersion = null, PublishScriptRequestData body = null)
+        {
+             ApiResponse<Script> localVarResponse = await PostScriptsPublishedAsyncWithHttpInfo(scriptDataVersion, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Publish a script. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (Script)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsPublishedAsyncWithHttpInfo (string scriptDataVersion = null, PublishScriptRequestData body = null)
+        { 
+
+            var localVarPath = "/api/v2/scripts/published";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (scriptDataVersion != null) localVarQueryParams.Add(new Tuple<string, string>("scriptDataVersion", this.Configuration.ApiClient.ParameterToString(scriptDataVersion)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostScriptsPublished: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostScriptsPublished: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Script>(localVarStatusCode,
+                localVarHeaders,
+                (Script) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Script)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

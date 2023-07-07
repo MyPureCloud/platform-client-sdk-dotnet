@@ -1,13 +1,13 @@
 ---
-title: EmailMessageListing
+title: EmailMessagePreviewListing
 ---
-## ININ.PureCloudApi.Model.EmailMessageListing
+## ININ.PureCloudApi.Model.EmailMessagePreviewListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;EmailMessage&gt;**](EmailMessage.html) |  | [optional] |
+| **Entities** | [**List&lt;EmailMessagePreview&gt;**](EmailMessagePreview.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |

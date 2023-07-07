@@ -13,15 +13,15 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A Typing event.
+    /// MediaIceSelectedCandidate
     /// </summary>
     [DataContract]
-    public partial class EventTyping :  IEquatable<EventTyping>
+    public partial class MediaIceSelectedCandidate :  IEquatable<MediaIceSelectedCandidate>
     {
         /// <summary>
-        /// Describes the type of Typing event.
+        /// Type of the selected candidate
         /// </summary>
-        /// <value>Describes the type of Typing event.</value>
+        /// <value>Type of the selected candidate</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -34,43 +34,57 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum On for "On"
+            /// Enum Host for "host"
             /// </summary>
-            [EnumMember(Value = "On")]
-            On
+            [EnumMember(Value = "host")]
+            Host,
+            
+            /// <summary>
+            /// Enum Srflx for "srflx"
+            /// </summary>
+            [EnumMember(Value = "srflx")]
+            Srflx,
+            
+            /// <summary>
+            /// Enum Prflx for "prflx"
+            /// </summary>
+            [EnumMember(Value = "prflx")]
+            Prflx,
+            
+            /// <summary>
+            /// Enum Relay for "relay"
+            /// </summary>
+            [EnumMember(Value = "relay")]
+            Relay
         }
         /// <summary>
-        /// Describes the type of Typing event.
+        /// Type of the selected candidate
         /// </summary>
-        /// <value>Describes the type of Typing event.</value>
+        /// <value>Type of the selected candidate</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="EventTyping" /> class.
+        /// Initializes a new instance of the <see cref="MediaIceSelectedCandidate" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected EventTyping() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EventTyping" /> class.
-        /// </summary>
-        /// <param name="Type">Describes the type of Typing event. (required).</param>
-        public EventTyping(TypeEnum? Type = null)
+        /// <param name="Address">IP address and port of the candidate.</param>
+        /// <param name="Type">Type of the selected candidate.</param>
+        public MediaIceSelectedCandidate(string Address = null, TypeEnum? Type = null)
         {
+            this.Address = Address;
             this.Type = Type;
             
         }
         
 
 
-
-
         /// <summary>
-        /// The duration of the Typing event in milliseconds.
+        /// IP address and port of the candidate
         /// </summary>
-        /// <value>The duration of the Typing event in milliseconds.</value>
-        [DataMember(Name="duration", EmitDefaultValue=false)]
-        public long? Duration { get; private set; }
+        /// <value>IP address and port of the candidate</value>
+        [DataMember(Name="address", EmitDefaultValue=false)]
+        public string Address { get; set; }
+
+
 
 
         /// <summary>
@@ -80,10 +94,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EventTyping {\n");
+            sb.Append("class MediaIceSelectedCandidate {\n");
 
+            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,15 +123,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EventTyping);
+            return this.Equals(obj as MediaIceSelectedCandidate);
         }
 
         /// <summary>
-        /// Returns true if EventTyping instances are equal
+        /// Returns true if MediaIceSelectedCandidate instances are equal
         /// </summary>
-        /// <param name="other">Instance of EventTyping to be compared</param>
+        /// <param name="other">Instance of MediaIceSelectedCandidate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EventTyping other)
+        public bool Equals(MediaIceSelectedCandidate other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -125,14 +139,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Address == other.Address ||
+                    this.Address != null &&
+                    this.Address.Equals(other.Address)
+                ) &&
+                (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) &&
-                (
-                    this.Duration == other.Duration ||
-                    this.Duration != null &&
-                    this.Duration.Equals(other.Duration)
                 );
         }
 
@@ -147,11 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Address != null)
+                    hash = hash * 59 + this.Address.GetHashCode();
+
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-
-                if (this.Duration != null)
-                    hash = hash * 59 + this.Duration.GetHashCode();
 
                 return hash;
             }

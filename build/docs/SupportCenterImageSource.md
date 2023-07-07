@@ -1,13 +1,13 @@
 ---
-title: EventPresence
+title: SupportCenterImageSource
 ---
-## ININ.PureCloudApi.Model.EventPresence
+## ININ.PureCloudApi.Model.SupportCenterImageSource
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Type** | **string** | Describes the type of Presence event. | |
+| **DefaultUrl** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

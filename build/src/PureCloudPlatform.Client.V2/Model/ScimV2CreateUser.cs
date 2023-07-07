@@ -35,11 +35,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneNumbers">The list of the user's phone numbers..</param>
         /// <param name="Emails">The list of the user's email addresses..</param>
         /// <param name="ExternalId">The external ID of the user. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\"..</param>
-        /// <param name="Groups">The list of groups that the user is a member of..</param>
         /// <param name="Roles">The list of roles assigned to the user..</param>
         /// <param name="Urnietfparamsscimschemasextensionenterprise20User">The URI of the schema for the enterprise user..</param>
         /// <param name="Urnietfparamsscimschemasextensiongenesyspurecloud20User">The URI of the schema for the Genesys Cloud user..</param>
-        public ScimV2CreateUser(bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, string ExternalId = null, List<ScimV2GroupReference> Groups = null, List<ScimUserRole> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null, ScimUserExtensions Urnietfparamsscimschemasextensiongenesyspurecloud20User = null)
+        public ScimV2CreateUser(bool? Active = null, string UserName = null, string DisplayName = null, string Password = null, string Title = null, List<ScimPhoneNumber> PhoneNumbers = null, List<ScimEmail> Emails = null, string ExternalId = null, List<ScimUserRole> Roles = null, ScimV2EnterpriseUser Urnietfparamsscimschemasextensionenterprise20User = null, ScimUserExtensions Urnietfparamsscimschemasextensiongenesyspurecloud20User = null)
         {
             this.Active = Active;
             this.UserName = UserName;
@@ -49,7 +48,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PhoneNumbers = PhoneNumbers;
             this.Emails = Emails;
             this.ExternalId = ExternalId;
-            this.Groups = Groups;
             this.Roles = Roles;
             this.Urnietfparamsscimschemasextensionenterprise20User = Urnietfparamsscimschemasextensionenterprise20User;
             this.Urnietfparamsscimschemasextensiongenesyspurecloud20User = Urnietfparamsscimschemasextensiongenesyspurecloud20User;
@@ -140,11 +138,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of groups that the user is a member of.
+        /// The list of groups that the user is a member of. This list is immutable per SCIM RFC and may only be updated using the GROUPS resource endpoint.
         /// </summary>
-        /// <value>The list of groups that the user is a member of.</value>
+        /// <value>The list of groups that the user is a member of. This list is immutable per SCIM RFC and may only be updated using the GROUPS resource endpoint.</value>
         [DataMember(Name="groups", EmitDefaultValue=false)]
-        public List<ScimV2GroupReference> Groups { get; set; }
+        public List<ScimV2GroupReference> Groups { get; private set; }
 
 
 

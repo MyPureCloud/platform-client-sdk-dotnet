@@ -19,6 +19,45 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class Annotation :  IEquatable<Annotation>
     {
         /// <summary>
+        /// Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue
+        /// </summary>
+        /// <value>Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Hold for "Hold"
+            /// </summary>
+            [EnumMember(Value = "Hold")]
+            Hold,
+            
+            /// <summary>
+            /// Enum Securepause for "SecurePause"
+            /// </summary>
+            [EnumMember(Value = "SecurePause")]
+            Securepause,
+            
+            /// <summary>
+            /// Enum Floworqueue for "FlowOrQueue"
+            /// </summary>
+            [EnumMember(Value = "FlowOrQueue")]
+            Floworqueue
+        }
+        /// <summary>
+        /// Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue
+        /// </summary>
+        /// <value>Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue</value>
+        [DataMember(Name="reason", EmitDefaultValue=false)]
+        public ReasonEnum? Reason { get; private set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Annotation" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -145,6 +184,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// List of annotations
+        /// </summary>
+        /// <value>List of annotations</value>
+        [DataMember(Name="annotations", EmitDefaultValue=false)]
+        public List<Annotation> Annotations { get; private set; }
+
+
+
+        /// <summary>
+        /// Offset of annotation (milliseconds) from start of the recording before removing the cumulative duration of all pauses before this annotation
+        /// </summary>
+        /// <value>Offset of annotation (milliseconds) from start of the recording before removing the cumulative duration of all pauses before this annotation</value>
+        [DataMember(Name="realtimeLocation", EmitDefaultValue=false)]
+        public long? RealtimeLocation { get; private set; }
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -173,6 +232,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecordingDurationMs: ").Append(RecordingDurationMs).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Reason: ").Append(Reason).Append("\n");
+            sb.Append("  Annotations: ").Append(Annotations).Append("\n");
+            sb.Append("  RealtimeLocation: ").Append(RealtimeLocation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -270,6 +332,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.Reason == other.Reason ||
+                    this.Reason != null &&
+                    this.Reason.Equals(other.Reason)
+                ) &&
+                (
+                    this.Annotations == other.Annotations ||
+                    this.Annotations != null &&
+                    this.Annotations.SequenceEqual(other.Annotations)
+                ) &&
+                (
+                    this.RealtimeLocation == other.RealtimeLocation ||
+                    this.RealtimeLocation != null &&
+                    this.RealtimeLocation.Equals(other.RealtimeLocation)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -319,6 +396,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.Reason != null)
+                    hash = hash * 59 + this.Reason.GetHashCode();
+
+                if (this.Annotations != null)
+                    hash = hash * 59 + this.Annotations.GetHashCode();
+
+                if (this.RealtimeLocation != null)
+                    hash = hash * 59 + this.RealtimeLocation.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

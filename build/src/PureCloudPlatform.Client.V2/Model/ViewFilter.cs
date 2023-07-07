@@ -772,7 +772,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Assessedcontent for "AssessedContent"
             /// </summary>
             [EnumMember(Value = "AssessedContent")]
-            Assessedcontent
+            Assessedcontent,
+            
+            /// <summary>
+            /// Enum External for "External"
+            /// </summary>
+            [EnumMember(Value = "External")]
+            External
         }
         /// <summary>
         /// Gets or Sets DevelopmentStatusList

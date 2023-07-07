@@ -56,6 +56,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.journey.sessions.{id}.outcome.events", typeof(JourneyOutcomeEventsNotificationOutcomeEventsNotification)},
               {"v2.journey.sessions.{id}.web.events", typeof(JourneyWebEventsNotificationWebEventsNotification)},
               {"v2.managementunits.{id}.workforcemanagement.intraday", typeof(WfmIntradayDataUpdateTopicIntradayDataUpdate)},
+              {"v2.operations.events.{id}", typeof(OperationalEventNotificationTopicOperationalEventNotification)},
               {"v2.outbound.attemptlimits.{id}", typeof(DialerAttemptLimitsConfigChangeAttemptLimits)},
               {"v2.outbound.callabletimesets.{id}", typeof(DialerCallabletimesetConfigChangeCallableTimeSet)},
               {"v2.outbound.campaignrules.{id}", typeof(DialerCampaignRuleConfigChangeCampaignRule)},

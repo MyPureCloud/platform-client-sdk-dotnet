@@ -45,6 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Askactionresult,
             
             /// <summary>
+            /// Enum Askactiontype for "askActionType"
+            /// </summary>
+            [EnumMember(Value = "askActionType")]
+            Askactiontype,
+            
+            /// <summary>
             /// Enum Botfinalintent for "botFinalIntent"
             /// </summary>
             [EnumMember(Value = "botFinalIntent")]

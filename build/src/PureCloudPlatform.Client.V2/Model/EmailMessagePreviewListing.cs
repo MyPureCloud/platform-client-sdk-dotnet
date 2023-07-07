@@ -13,13 +13,13 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// EmailMessageListing
+    /// EmailMessagePreviewListing
     /// </summary>
     [DataContract]
-    public partial class EmailMessageListing :  IEquatable<EmailMessageListing>, IPagedResource<EmailMessage>
+    public partial class EmailMessagePreviewListing :  IEquatable<EmailMessagePreviewListing>, IPagedResource<EmailMessagePreview>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailMessageListing" /> class.
+        /// Initializes a new instance of the <see cref="EmailMessagePreviewListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastUri">LastUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public EmailMessageListing(List<EmailMessage> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
+        public EmailMessagePreviewListing(List<EmailMessagePreview> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<EmailMessage> Entities { get; set; }
+        public List<EmailMessagePreview> Entities { get; set; }
 
 
 
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EmailMessageListing {\n");
+            sb.Append("class EmailMessagePreviewListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -171,15 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EmailMessageListing);
+            return this.Equals(obj as EmailMessagePreviewListing);
         }
 
         /// <summary>
-        /// Returns true if EmailMessageListing instances are equal
+        /// Returns true if EmailMessagePreviewListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of EmailMessageListing to be compared</param>
+        /// <param name="other">Instance of EmailMessagePreviewListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EmailMessageListing other)
+        public bool Equals(EmailMessagePreviewListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

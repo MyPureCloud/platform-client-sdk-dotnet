@@ -59,6 +59,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesLines**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgeslines) | **GET** /api/v2/telephony/providers/edges/lines | Get a list of Lines |
 | [**GetTelephonyProvidersEdgesLinesTemplate**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgeslinestemplate) | **GET** /api/v2/telephony/providers/edges/lines/template | Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance |
 | [**GetTelephonyProvidersEdgesLogicalinterfaces**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgeslogicalinterfaces) | **GET** /api/v2/telephony/providers/edges/logicalinterfaces | Get edge logical interfaces. |
+| [**GetTelephonyProvidersEdgesMediastatisticsConversation**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesmediastatisticsconversation) | **GET** /api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId} | Get media endpoint statistics events. |
+| [**GetTelephonyProvidersEdgesMediastatisticsConversationCommunication**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesmediastatisticsconversationcommunication) | **GET** /api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId} | Get media endpoint statistics event. |
 | [**GetTelephonyProvidersEdgesMetrics**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesmetrics) | **GET** /api/v2/telephony/providers/edges/metrics | Get the metrics for a list of edges. |
 | [**GetTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesoutboundroute) | **GET** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Get outbound route |
 | [**GetTelephonyProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesoutboundroutes) | **GET** /api/v2/telephony/providers/edges/outboundroutes | Get outbound routes |
@@ -3507,6 +3509,138 @@ namespace Example
 ### Return type
 
 [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html)
+
+<a name="gettelephonyprovidersedgesmediastatisticsconversation"></a>
+
+## [**MediaStatisticsListing**](MediaStatisticsListing.html) GetTelephonyProvidersEdgesMediastatisticsConversation (string conversationId)
+
+
+
+Get media endpoint statistics events.
+
+GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesMediastatisticsConversationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var conversationId = conversationId_example;  // string | Identifier of the conversation
+
+            try
+            { 
+                // Get media endpoint statistics events.
+                MediaStatisticsListing result = apiInstance.GetTelephonyProvidersEdgesMediastatisticsConversation(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesMediastatisticsConversation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Identifier of the conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MediaStatisticsListing**](MediaStatisticsListing.html)
+
+<a name="gettelephonyprovidersedgesmediastatisticsconversationcommunication"></a>
+
+## [**MediaStatistics**](MediaStatistics.html) GetTelephonyProvidersEdgesMediastatisticsConversationCommunication (string conversationId, string communicationId)
+
+
+
+Get media endpoint statistics event.
+
+GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var conversationId = conversationId_example;  // string | Identifier of the conversation
+            var communicationId = communicationId_example;  // string | Identifier of the media session
+
+            try
+            { 
+                // Get media endpoint statistics event.
+                MediaStatistics result = apiInstance.GetTelephonyProvidersEdgesMediastatisticsConversationCommunication(conversationId, communicationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesMediastatisticsConversationCommunication: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Identifier of the conversation |  |
+| **communicationId** | **string**| Identifier of the media session |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MediaStatistics**](MediaStatistics.html)
 
 <a name="gettelephonyprovidersedgesmetrics"></a>
 

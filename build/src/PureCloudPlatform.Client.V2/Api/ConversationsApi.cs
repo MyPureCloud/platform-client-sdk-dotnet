@@ -1358,9 +1358,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <returns>EmailMessageListing</returns>
+        /// <returns>EmailMessagePreviewListing</returns>
         
-        EmailMessageListing GetConversationsEmailMessages (string conversationId);
+        EmailMessagePreviewListing GetConversationsEmailMessages (string conversationId);
 
         /// <summary>
         /// Get conversation messages
@@ -1370,9 +1370,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <returns>ApiResponse of EmailMessageListing</returns>
+        /// <returns>ApiResponse of EmailMessagePreviewListing</returns>
         
-        ApiResponse<EmailMessageListing> GetConversationsEmailMessagesWithHttpInfo (string conversationId);
+        ApiResponse<EmailMessagePreviewListing> GetConversationsEmailMessagesWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get conversation draft reply
@@ -7162,9 +7162,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <returns>Task of EmailMessageListing</returns>
+        /// <returns>Task of EmailMessagePreviewListing</returns>
         
-        System.Threading.Tasks.Task<EmailMessageListing> GetConversationsEmailMessagesAsync (string conversationId);
+        System.Threading.Tasks.Task<EmailMessagePreviewListing> GetConversationsEmailMessagesAsync (string conversationId);
 
         /// <summary>
         /// Get conversation messages
@@ -7174,9 +7174,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
+        /// <returns>Task of ApiResponse (EmailMessagePreviewListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> GetConversationsEmailMessagesAsyncWithHttpInfo (string conversationId);
+        System.Threading.Tasks.Task<ApiResponse<EmailMessagePreviewListing>> GetConversationsEmailMessagesAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get conversation draft reply
@@ -22431,11 +22431,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <returns>EmailMessageListing</returns>
+        /// <returns>EmailMessagePreviewListing</returns>
         
-        public EmailMessageListing GetConversationsEmailMessages (string conversationId)
+        public EmailMessagePreviewListing GetConversationsEmailMessages (string conversationId)
         {
-             ApiResponse<EmailMessageListing> localVarResponse = GetConversationsEmailMessagesWithHttpInfo(conversationId);
+             ApiResponse<EmailMessagePreviewListing> localVarResponse = GetConversationsEmailMessagesWithHttpInfo(conversationId);
              return localVarResponse.Data;
         }
 
@@ -22445,9 +22445,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <returns>ApiResponse of EmailMessageListing</returns>
+        /// <returns>ApiResponse of EmailMessagePreviewListing</returns>
         
-        public ApiResponse< EmailMessageListing > GetConversationsEmailMessagesWithHttpInfo (string conversationId)
+        public ApiResponse< EmailMessagePreviewListing > GetConversationsEmailMessagesWithHttpInfo (string conversationId)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -22515,9 +22515,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EmailMessageListing>(localVarStatusCode,
+            return new ApiResponse<EmailMessagePreviewListing>(localVarStatusCode,
                 localVarHeaders,
-                (EmailMessageListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessageListing)),
+                (EmailMessagePreviewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessagePreviewListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22529,11 +22529,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <returns>Task of EmailMessageListing</returns>
+        /// <returns>Task of EmailMessagePreviewListing</returns>
         
-        public async System.Threading.Tasks.Task<EmailMessageListing> GetConversationsEmailMessagesAsync (string conversationId)
+        public async System.Threading.Tasks.Task<EmailMessagePreviewListing> GetConversationsEmailMessagesAsync (string conversationId)
         {
-             ApiResponse<EmailMessageListing> localVarResponse = await GetConversationsEmailMessagesAsyncWithHttpInfo(conversationId);
+             ApiResponse<EmailMessagePreviewListing> localVarResponse = await GetConversationsEmailMessagesAsyncWithHttpInfo(conversationId);
              return localVarResponse.Data;
 
         }
@@ -22544,9 +22544,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
+        /// <returns>Task of ApiResponse (EmailMessagePreviewListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> GetConversationsEmailMessagesAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessagePreviewListing>> GetConversationsEmailMessagesAsyncWithHttpInfo (string conversationId)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -22615,9 +22615,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EmailMessageListing>(localVarStatusCode,
+            return new ApiResponse<EmailMessagePreviewListing>(localVarStatusCode,
                 localVarHeaders,
-                (EmailMessageListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessageListing)),
+                (EmailMessagePreviewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessagePreviewListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

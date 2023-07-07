@@ -808,7 +808,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum NotAuthorizedToViewExport for "NOT_AUTHORIZED_TO_VIEW_EXPORT"
             /// </summary>
             [EnumMember(Value = "NOT_AUTHORIZED_TO_VIEW_EXPORT")]
-            NotAuthorizedToViewExport
+            NotAuthorizedToViewExport,
+            
+            /// <summary>
+            /// Enum StaticLinkExportFailed for "STATIC_LINK_EXPORT_FAILED"
+            /// </summary>
+            [EnumMember(Value = "STATIC_LINK_EXPORT_FAILED")]
+            StaticLinkExportFailed,
+            
+            /// <summary>
+            /// Enum TooManySearchCriteria for "TOO_MANY_SEARCH_CRITERIA"
+            /// </summary>
+            [EnumMember(Value = "TOO_MANY_SEARCH_CRITERIA")]
+            TooManySearchCriteria,
+            
+            /// <summary>
+            /// Enum SearchCriteriaValuesExceedLimit for "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT")]
+            SearchCriteriaValuesExceedLimit
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
@@ -982,8 +1000,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmailErrorDescription">The optional error message in case the export fail to email.</param>
         /// <param name="IncludeDurationFormatInHeader">Indicates whether to include selected duration format to the column headers.</param>
         /// <param name="DurationFormat">Indicates the duration format for the exports.</param>
+        /// <param name="ExportAllowedToRerun">Indicates whether the export run is allowed to rerun.</param>
         /// <param name="Enabled">Enabled.</param>
-        public ReportingExportJobResponse(string Name = null, string RunId = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, bool? IncludeDurationFormatInHeader = null, DurationFormatEnum? DurationFormat = null, bool? Enabled = null)
+        public ReportingExportJobResponse(string Name = null, string RunId = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, bool? IncludeDurationFormatInHeader = null, DurationFormatEnum? DurationFormat = null, bool? ExportAllowedToRerun = null, bool? Enabled = null)
         {
             this.Name = Name;
             this.RunId = RunId;
@@ -1014,6 +1033,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EmailErrorDescription = EmailErrorDescription;
             this.IncludeDurationFormatInHeader = IncludeDurationFormatInHeader;
             this.DurationFormat = DurationFormat;
+            this.ExportAllowedToRerun = ExportAllowedToRerun;
             this.Enabled = Enabled;
             
         }
@@ -1248,6 +1268,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates whether the export run is allowed to rerun
+        /// </summary>
+        /// <value>Indicates whether the export run is allowed to rerun</value>
+        [DataMember(Name="exportAllowedToRerun", EmitDefaultValue=false)]
+        public bool? ExportAllowedToRerun { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
@@ -1302,6 +1331,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EmailErrorDescription: ").Append(EmailErrorDescription).Append("\n");
             sb.Append("  IncludeDurationFormatInHeader: ").Append(IncludeDurationFormatInHeader).Append("\n");
             sb.Append("  DurationFormat: ").Append(DurationFormat).Append("\n");
+            sb.Append("  ExportAllowedToRerun: ").Append(ExportAllowedToRerun).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -1495,6 +1525,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DurationFormat.Equals(other.DurationFormat)
                 ) &&
                 (
+                    this.ExportAllowedToRerun == other.ExportAllowedToRerun ||
+                    this.ExportAllowedToRerun != null &&
+                    this.ExportAllowedToRerun.Equals(other.ExportAllowedToRerun)
+                ) &&
+                (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
@@ -1606,6 +1641,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DurationFormat != null)
                     hash = hash * 59 + this.DurationFormat.GetHashCode();
+
+                if (this.ExportAllowedToRerun != null)
+                    hash = hash * 59 + this.ExportAllowedToRerun.GetHashCode();
 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();

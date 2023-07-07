@@ -78,9 +78,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The metadata of the SCIM resource.
+        /// The metadata of the SCIM resource. Metadata is defined as immutable per SCIM RFC.
         /// </summary>
-        /// <value>The metadata of the SCIM resource.</value>
+        /// <value>The metadata of the SCIM resource. Metadata is defined as immutable per SCIM RFC.</value>
         [DataMember(Name="meta", EmitDefaultValue=false)]
         public ScimMetadata Meta { get; private set; }
 

@@ -1387,6 +1387,60 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LogicalInterfaceEntityListing> GetTelephonyProvidersEdgesLogicalinterfacesWithHttpInfo (string edgeIds, List<string> expand = null);
 
         /// <summary>
+        /// Get media endpoint statistics events.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <returns>MediaStatisticsListing</returns>
+        
+        MediaStatisticsListing GetTelephonyProvidersEdgesMediastatisticsConversation (string conversationId);
+
+        /// <summary>
+        /// Get media endpoint statistics events.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <returns>ApiResponse of MediaStatisticsListing</returns>
+        
+        ApiResponse<MediaStatisticsListing> GetTelephonyProvidersEdgesMediastatisticsConversationWithHttpInfo (string conversationId);
+
+        /// <summary>
+        /// Get media endpoint statistics event.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <returns>MediaStatistics</returns>
+        
+        MediaStatistics GetTelephonyProvidersEdgesMediastatisticsConversationCommunication (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Get media endpoint statistics event.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <returns>ApiResponse of MediaStatistics</returns>
+        
+        ApiResponse<MediaStatistics> GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationWithHttpInfo (string conversationId, string communicationId);
+
+        /// <summary>
         /// Get the metrics for a list of edges.
         /// </summary>
         /// <remarks>
@@ -4493,6 +4547,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetTelephonyProvidersEdgesLogicalinterfacesAsyncWithHttpInfo (string edgeIds, List<string> expand = null);
+
+        /// <summary>
+        /// Get media endpoint statistics events.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <returns>Task of MediaStatisticsListing</returns>
+        
+        System.Threading.Tasks.Task<MediaStatisticsListing> GetTelephonyProvidersEdgesMediastatisticsConversationAsync (string conversationId);
+
+        /// <summary>
+        /// Get media endpoint statistics events.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <returns>Task of ApiResponse (MediaStatisticsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<MediaStatisticsListing>> GetTelephonyProvidersEdgesMediastatisticsConversationAsyncWithHttpInfo (string conversationId);
+
+        /// <summary>
+        /// Get media endpoint statistics event.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <returns>Task of MediaStatistics</returns>
+        
+        System.Threading.Tasks.Task<MediaStatistics> GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationAsync (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Get media endpoint statistics event.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <returns>Task of ApiResponse (MediaStatistics)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<MediaStatistics>> GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationAsyncWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
         /// Get the metrics for a list of edges.
@@ -16953,6 +17061,425 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LogicalInterfaceEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (LogicalInterfaceEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LogicalInterfaceEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get media endpoint statistics events. 
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <returns>MediaStatisticsListing</returns>
+        
+        public MediaStatisticsListing GetTelephonyProvidersEdgesMediastatisticsConversation (string conversationId)
+        {
+             ApiResponse<MediaStatisticsListing> localVarResponse = GetTelephonyProvidersEdgesMediastatisticsConversationWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get media endpoint statistics events. 
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <returns>ApiResponse of MediaStatisticsListing</returns>
+        
+        public ApiResponse< MediaStatisticsListing > GetTelephonyProvidersEdgesMediastatisticsConversationWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversation");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesMediastatisticsConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesMediastatisticsConversation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MediaStatisticsListing>(localVarStatusCode,
+                localVarHeaders,
+                (MediaStatisticsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaStatisticsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get media endpoint statistics events. 
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <returns>Task of MediaStatisticsListing</returns>
+        
+        public async System.Threading.Tasks.Task<MediaStatisticsListing> GetTelephonyProvidersEdgesMediastatisticsConversationAsync (string conversationId)
+        {
+             ApiResponse<MediaStatisticsListing> localVarResponse = await GetTelephonyProvidersEdgesMediastatisticsConversationAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get media endpoint statistics events. 
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <returns>Task of ApiResponse (MediaStatisticsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<MediaStatisticsListing>> GetTelephonyProvidersEdgesMediastatisticsConversationAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversation");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesMediastatisticsConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesMediastatisticsConversation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MediaStatisticsListing>(localVarStatusCode,
+                localVarHeaders,
+                (MediaStatisticsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaStatisticsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get media endpoint statistics event. 
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <returns>MediaStatistics</returns>
+        
+        public MediaStatistics GetTelephonyProvidersEdgesMediastatisticsConversationCommunication (string conversationId, string communicationId)
+        {
+             ApiResponse<MediaStatistics> localVarResponse = GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationWithHttpInfo(conversationId, communicationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get media endpoint statistics event. 
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <returns>ApiResponse of MediaStatistics</returns>
+        
+        public ApiResponse< MediaStatistics > GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationWithHttpInfo (string conversationId, string communicationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversationCommunication");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversationCommunication");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesMediastatisticsConversationCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesMediastatisticsConversationCommunication: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MediaStatistics>(localVarStatusCode,
+                localVarHeaders,
+                (MediaStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaStatistics)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get media endpoint statistics event. 
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <returns>Task of MediaStatistics</returns>
+        
+        public async System.Threading.Tasks.Task<MediaStatistics> GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationAsync (string conversationId, string communicationId)
+        {
+             ApiResponse<MediaStatistics> localVarResponse = await GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationAsyncWithHttpInfo(conversationId, communicationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get media endpoint statistics event. 
+        /// 
+        /// GetTelephonyProvidersEdgesMediastatisticsConversationCommunication is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Identifier of the conversation</param>
+        /// <param name="communicationId">Identifier of the media session</param>
+        /// <returns>Task of ApiResponse (MediaStatistics)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<MediaStatistics>> GetTelephonyProvidersEdgesMediastatisticsConversationCommunicationAsyncWithHttpInfo (string conversationId, string communicationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversationCommunication");
+            
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversationCommunication");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesMediastatisticsConversationCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesMediastatisticsConversationCommunication: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MediaStatistics>(localVarStatusCode,
+                localVarHeaders,
+                (MediaStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaStatistics)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
