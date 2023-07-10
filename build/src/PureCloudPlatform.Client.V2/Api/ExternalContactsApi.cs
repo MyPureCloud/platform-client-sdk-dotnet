@@ -3718,7 +3718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <value>The base path</value>
         public String GetBasePath()
         {
-            return this.Configuration.ApiClient.RestClient.BaseUrl.ToString();
+            return this.Configuration.ApiClient.RestClient.Options.BaseUrl.ToString();
         }
 
         /// <summary>
@@ -3837,13 +3837,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContact: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -3937,13 +3939,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContact: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4042,13 +4046,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4149,13 +4155,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4247,13 +4255,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4346,13 +4356,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4445,13 +4457,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4545,13 +4559,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4650,13 +4666,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4757,13 +4775,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4855,13 +4875,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationTrustor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4954,13 +4976,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationTrustor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5053,13 +5077,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsRelationship: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5153,13 +5179,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsRelationship: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5255,13 +5283,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContact: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5358,13 +5388,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContact: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5457,13 +5489,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactIdentifiers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5557,13 +5591,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactIdentifiers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5665,13 +5701,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5774,13 +5812,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5882,13 +5922,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5992,13 +6034,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6103,13 +6147,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6215,13 +6261,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6317,13 +6365,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactUnresolved: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6420,13 +6470,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactUnresolved: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6528,13 +6580,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6636,13 +6690,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6735,13 +6791,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6835,13 +6893,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6940,13 +7000,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7047,13 +7109,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7146,13 +7210,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7246,13 +7312,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7339,13 +7407,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7432,13 +7502,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7537,13 +7609,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7643,13 +7717,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7757,13 +7833,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7872,13 +7950,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7980,13 +8060,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8090,13 +8172,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8201,13 +8285,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8313,13 +8399,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8424,13 +8512,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8536,13 +8626,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8650,13 +8742,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8764,13 +8858,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8863,13 +8959,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8963,13 +9061,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9068,13 +9168,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9175,13 +9277,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9274,13 +9378,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9374,13 +9480,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9467,13 +9575,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9560,13 +9670,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9662,13 +9774,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationship: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9765,13 +9879,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationship: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9867,13 +9983,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsReversewhitepageslookup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9970,13 +10088,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsReversewhitepageslookup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10069,13 +10189,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10168,13 +10290,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10267,13 +10391,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10366,13 +10492,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10465,13 +10593,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10564,13 +10694,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10663,13 +10795,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10762,13 +10896,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsScanRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10872,13 +11008,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchExternalcontactsContactIdentifiers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10984,13 +11122,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchExternalcontactsContactIdentifiers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11088,13 +11228,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11193,13 +11335,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11297,13 +11441,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11402,13 +11548,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11506,13 +11654,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11611,13 +11761,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11715,13 +11867,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsUnresolved: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11820,13 +11974,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsUnresolved: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11924,13 +12080,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12029,13 +12187,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkContactsUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12133,13 +12293,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12238,13 +12400,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12342,13 +12506,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkNotesAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12447,13 +12613,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkNotesAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12551,13 +12719,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkNotesRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12656,13 +12826,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkNotesRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12760,13 +12932,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkNotesUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12865,13 +13039,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkNotesUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12969,13 +13145,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13074,13 +13252,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13178,13 +13358,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13283,13 +13465,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13387,13 +13571,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13492,13 +13678,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13596,13 +13784,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13701,13 +13891,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkOrganizationsUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13805,13 +13997,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13910,13 +14104,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14014,13 +14210,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkRelationshipsAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14119,13 +14317,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkRelationshipsAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14223,13 +14423,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkRelationshipsRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14328,13 +14530,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkRelationshipsRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14432,13 +14636,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkRelationshipsUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14537,13 +14743,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsBulkRelationshipsUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14647,13 +14855,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14759,13 +14969,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14858,13 +15070,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactPromotion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14958,13 +15172,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactPromotion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15062,13 +15278,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15167,13 +15385,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15271,13 +15491,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15376,13 +15598,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15480,13 +15704,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsIdentifierlookup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15585,13 +15811,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsIdentifierlookup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15689,13 +15917,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsMergeContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15794,13 +16024,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsMergeContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15904,13 +16136,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16016,13 +16250,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationNotes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16120,13 +16356,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16225,13 +16463,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16329,13 +16569,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16434,13 +16676,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16538,13 +16782,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16643,13 +16889,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsRelationships: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16753,13 +17001,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContact: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16865,13 +17115,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContact: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16981,13 +17233,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContactNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17100,13 +17354,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContactNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17210,13 +17466,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17322,13 +17580,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsContactsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17431,13 +17691,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17542,13 +17804,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17652,13 +17916,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17764,13 +18030,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17880,13 +18148,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17999,13 +18269,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18104,13 +18376,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationTrustorTrustorId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18211,13 +18485,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationTrustorTrustorId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18321,13 +18597,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18433,13 +18711,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18543,13 +18823,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsRelationship: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18655,13 +18937,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsRelationship: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);

@@ -7,116 +7,116 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteArchitectEmergencygroup**](ArchitectApi.html#deletearchitectemergencygroup) | **DELETE** /api/v2/architect/emergencygroups/{emergencyGroupId} | Deletes a emergency group by ID |
-| [**DeleteArchitectIvr**](ArchitectApi.html#deletearchitectivr) | **DELETE** /api/v2/architect/ivrs/{ivrId} | Delete an IVR Config. |
-| [**DeleteArchitectPrompt**](ArchitectApi.html#deletearchitectprompt) | **DELETE** /api/v2/architect/prompts/{promptId} | Delete specified user prompt |
-| [**DeleteArchitectPromptResource**](ArchitectApi.html#deletearchitectpromptresource) | **DELETE** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Delete specified user prompt resource |
-| [**DeleteArchitectPromptResourceAudio**](ArchitectApi.html#deletearchitectpromptresourceaudio) | **DELETE** /api/v2/architect/prompts/{promptId}/resources/{languageCode}/audio | Delete specified user prompt resource audio |
-| [**DeleteArchitectPrompts**](ArchitectApi.html#deletearchitectprompts) | **DELETE** /api/v2/architect/prompts | Batch-delete a list of prompts |
-| [**DeleteArchitectSchedule**](ArchitectApi.html#deletearchitectschedule) | **DELETE** /api/v2/architect/schedules/{scheduleId} | Delete a schedule by id |
-| [**DeleteArchitectSchedulegroup**](ArchitectApi.html#deletearchitectschedulegroup) | **DELETE** /api/v2/architect/schedulegroups/{scheduleGroupId} | Deletes a schedule group by ID |
-| [**DeleteArchitectSystempromptResource**](ArchitectApi.html#deletearchitectsystempromptresource) | **DELETE** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Delete a system prompt resource override. |
-| [**DeleteFlow**](ArchitectApi.html#deleteflow) | **DELETE** /api/v2/flows/{flowId} | Delete flow |
-| [**DeleteFlows**](ArchitectApi.html#deleteflows) | **DELETE** /api/v2/flows | Batch-delete a list of flows |
-| [**DeleteFlowsDatatable**](ArchitectApi.html#deleteflowsdatatable) | **DELETE** /api/v2/flows/datatables/{datatableId} | deletes a specific datatable by id |
-| [**DeleteFlowsDatatableRow**](ArchitectApi.html#deleteflowsdatatablerow) | **DELETE** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Delete a row entry |
-| [**DeleteFlowsMilestone**](ArchitectApi.html#deleteflowsmilestone) | **DELETE** /api/v2/flows/milestones/{milestoneId} | Delete a flow milestone. |
-| [**GetArchitectDependencytracking**](ArchitectApi.html#getarchitectdependencytracking) | **GET** /api/v2/architect/dependencytracking | Get Dependency Tracking objects that have a given display name |
-| [**GetArchitectDependencytrackingBuild**](ArchitectApi.html#getarchitectdependencytrackingbuild) | **GET** /api/v2/architect/dependencytracking/build | Get Dependency Tracking build status for an organization |
-| [**GetArchitectDependencytrackingConsumedresources**](ArchitectApi.html#getarchitectdependencytrackingconsumedresources) | **GET** /api/v2/architect/dependencytracking/consumedresources | Get resources that are consumed by a given Dependency Tracking object |
-| [**GetArchitectDependencytrackingConsumingresources**](ArchitectApi.html#getarchitectdependencytrackingconsumingresources) | **GET** /api/v2/architect/dependencytracking/consumingresources | Get resources that consume a given Dependency Tracking object |
-| [**GetArchitectDependencytrackingDeletedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingdeletedresourceconsumers) | **GET** /api/v2/architect/dependencytracking/deletedresourceconsumers | Get Dependency Tracking objects that consume deleted resources |
-| [**GetArchitectDependencytrackingObject**](ArchitectApi.html#getarchitectdependencytrackingobject) | **GET** /api/v2/architect/dependencytracking/object | Get a Dependency Tracking object |
-| [**GetArchitectDependencytrackingType**](ArchitectApi.html#getarchitectdependencytrackingtype) | **GET** /api/v2/architect/dependencytracking/types/{typeId} | Get a Dependency Tracking type. |
-| [**GetArchitectDependencytrackingTypes**](ArchitectApi.html#getarchitectdependencytrackingtypes) | **GET** /api/v2/architect/dependencytracking/types | Get Dependency Tracking types. |
-| [**GetArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingupdatedresourceconsumers) | **GET** /api/v2/architect/dependencytracking/updatedresourceconsumers | Get Dependency Tracking objects that depend on updated resources |
-| [**GetArchitectEmergencygroup**](ArchitectApi.html#getarchitectemergencygroup) | **GET** /api/v2/architect/emergencygroups/{emergencyGroupId} | Gets a emergency group by ID |
-| [**GetArchitectEmergencygroups**](ArchitectApi.html#getarchitectemergencygroups) | **GET** /api/v2/architect/emergencygroups | Get a list of emergency groups. |
-| [**GetArchitectIvr**](ArchitectApi.html#getarchitectivr) | **GET** /api/v2/architect/ivrs/{ivrId} | Get an IVR config. |
-| [**GetArchitectIvrs**](ArchitectApi.html#getarchitectivrs) | **GET** /api/v2/architect/ivrs | Get IVR configs. |
-| [**GetArchitectPrompt**](ArchitectApi.html#getarchitectprompt) | **GET** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
-| [**GetArchitectPromptHistoryHistoryId**](ArchitectApi.html#getarchitectprompthistoryhistoryid) | **GET** /api/v2/architect/prompts/{promptId}/history/{historyId} | Get generated prompt history |
-| [**GetArchitectPromptResource**](ArchitectApi.html#getarchitectpromptresource) | **GET** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Get specified user prompt resource |
-| [**GetArchitectPromptResources**](ArchitectApi.html#getarchitectpromptresources) | **GET** /api/v2/architect/prompts/{promptId}/resources | Get a pageable list of user prompt resources |
-| [**GetArchitectPrompts**](ArchitectApi.html#getarchitectprompts) | **GET** /api/v2/architect/prompts | Get a pageable list of user prompts |
-| [**GetArchitectSchedule**](ArchitectApi.html#getarchitectschedule) | **GET** /api/v2/architect/schedules/{scheduleId} | Get a schedule by ID |
-| [**GetArchitectSchedulegroup**](ArchitectApi.html#getarchitectschedulegroup) | **GET** /api/v2/architect/schedulegroups/{scheduleGroupId} | Gets a schedule group by ID |
-| [**GetArchitectSchedulegroups**](ArchitectApi.html#getarchitectschedulegroups) | **GET** /api/v2/architect/schedulegroups | Get a list of schedule groups. |
-| [**GetArchitectSchedules**](ArchitectApi.html#getarchitectschedules) | **GET** /api/v2/architect/schedules | Get a list of schedules. |
-| [**GetArchitectSystemprompt**](ArchitectApi.html#getarchitectsystemprompt) | **GET** /api/v2/architect/systemprompts/{promptId} | Get a system prompt |
-| [**GetArchitectSystempromptHistoryHistoryId**](ArchitectApi.html#getarchitectsystemprompthistoryhistoryid) | **GET** /api/v2/architect/systemprompts/{promptId}/history/{historyId} | Get generated prompt history |
-| [**GetArchitectSystempromptResource**](ArchitectApi.html#getarchitectsystempromptresource) | **GET** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Get a system prompt resource. |
-| [**GetArchitectSystempromptResources**](ArchitectApi.html#getarchitectsystempromptresources) | **GET** /api/v2/architect/systemprompts/{promptId}/resources | Get system prompt resources. |
-| [**GetArchitectSystemprompts**](ArchitectApi.html#getarchitectsystemprompts) | **GET** /api/v2/architect/systemprompts | Get System Prompts |
-| [**GetFlow**](ArchitectApi.html#getflow) | **GET** /api/v2/flows/{flowId} | Get flow |
-| [**GetFlowHistoryHistoryId**](ArchitectApi.html#getflowhistoryhistoryid) | **GET** /api/v2/flows/{flowId}/history/{historyId} | Get generated flow history |
-| [**GetFlowLatestconfiguration**](ArchitectApi.html#getflowlatestconfiguration) | **GET** /api/v2/flows/{flowId}/latestconfiguration | Get the latest configuration for flow |
-| [**GetFlowVersion**](ArchitectApi.html#getflowversion) | **GET** /api/v2/flows/{flowId}/versions/{versionId} | Get flow version |
-| [**GetFlowVersionConfiguration**](ArchitectApi.html#getflowversionconfiguration) | **GET** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Create flow version configuration |
-| [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **GET** /api/v2/flows/{flowId}/versions | Get flow version list |
-| [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
-| [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **GET** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by id |
-| [**GetFlowsDatatableExportJob**](ArchitectApi.html#getflowsdatatableexportjob) | **GET** /api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId} | Returns the state information about an export job |
-| [**GetFlowsDatatableImportJob**](ArchitectApi.html#getflowsdatatableimportjob) | **GET** /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId} | Returns the state information about an import job |
-| [**GetFlowsDatatableImportJobs**](ArchitectApi.html#getflowsdatatableimportjobs) | **GET** /api/v2/flows/datatables/{datatableId}/import/jobs | Get all recent import jobs |
-| [**GetFlowsDatatableRow**](ArchitectApi.html#getflowsdatatablerow) | **GET** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Returns a specific row for the datatable |
-| [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable with the given id |
-| [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
-| [**GetFlowsDatatablesDivisionview**](ArchitectApi.html#getflowsdatatablesdivisionview) | **GET** /api/v2/flows/datatables/divisionviews/{datatableId} | Returns a specific datatable by id |
-| [**GetFlowsDatatablesDivisionviews**](ArchitectApi.html#getflowsdatatablesdivisionviews) | **GET** /api/v2/flows/datatables/divisionviews | Retrieve a list of datatables for the org |
-| [**GetFlowsDivisionviews**](ArchitectApi.html#getflowsdivisionviews) | **GET** /api/v2/flows/divisionviews | Get a pageable list of basic flow information objects filterable by query parameters. |
-| [**GetFlowsExecution**](ArchitectApi.html#getflowsexecution) | **GET** /api/v2/flows/executions/{flowExecutionId} | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
-| [**GetFlowsInstance**](ArchitectApi.html#getflowsinstance) | **GET** /api/v2/flows/instances/{instanceId} | Start a process (job) to prepare a download of a singular flow execution data instance by Id |
-| [**GetFlowsInstancesJob**](ArchitectApi.html#getflowsinstancesjob) | **GET** /api/v2/flows/instances/jobs/{jobId} | Get the status and/or results of an asynchronous flow execution data retrieval job |
-| [**GetFlowsInstancesQuerycapabilities**](ArchitectApi.html#getflowsinstancesquerycapabilities) | **GET** /api/v2/flows/instances/querycapabilities | Retrieve a list of capabilities that the org can use to query for execution data |
-| [**GetFlowsJob**](ArchitectApi.html#getflowsjob) | **GET** /api/v2/flows/jobs/{jobId} | Fetch Architect Job Status |
-| [**GetFlowsMilestone**](ArchitectApi.html#getflowsmilestone) | **GET** /api/v2/flows/milestones/{milestoneId} | Get a flow milestone |
-| [**GetFlowsMilestones**](ArchitectApi.html#getflowsmilestones) | **GET** /api/v2/flows/milestones | Get a pageable list of flow milestones, filtered by query parameters |
-| [**GetFlowsMilestonesDivisionviews**](ArchitectApi.html#getflowsmilestonesdivisionviews) | **GET** /api/v2/flows/milestones/divisionviews | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
-| [**GetFlowsOutcome**](ArchitectApi.html#getflowsoutcome) | **GET** /api/v2/flows/outcomes/{flowOutcomeId} | Get a flow outcome |
-| [**GetFlowsOutcomes**](ArchitectApi.html#getflowsoutcomes) | **GET** /api/v2/flows/outcomes | Get a pageable list of flow outcomes, filtered by query parameters |
-| [**GetFlowsOutcomesDivisionviews**](ArchitectApi.html#getflowsoutcomesdivisionviews) | **GET** /api/v2/flows/outcomes/divisionviews | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
-| [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
-| [**PostArchitectEmergencygroups**](ArchitectApi.html#postarchitectemergencygroups) | **POST** /api/v2/architect/emergencygroups | Creates a new emergency group |
-| [**PostArchitectIvrs**](ArchitectApi.html#postarchitectivrs) | **POST** /api/v2/architect/ivrs | Create IVR config. |
-| [**PostArchitectPromptHistory**](ArchitectApi.html#postarchitectprompthistory) | **POST** /api/v2/architect/prompts/{promptId}/history | Generate prompt history |
-| [**PostArchitectPromptResources**](ArchitectApi.html#postarchitectpromptresources) | **POST** /api/v2/architect/prompts/{promptId}/resources | Create a new user prompt resource |
-| [**PostArchitectPrompts**](ArchitectApi.html#postarchitectprompts) | **POST** /api/v2/architect/prompts | Create a new user prompt |
-| [**PostArchitectSchedulegroups**](ArchitectApi.html#postarchitectschedulegroups) | **POST** /api/v2/architect/schedulegroups | Creates a new schedule group |
-| [**PostArchitectSchedules**](ArchitectApi.html#postarchitectschedules) | **POST** /api/v2/architect/schedules | Create a new schedule. |
-| [**PostArchitectSystempromptHistory**](ArchitectApi.html#postarchitectsystemprompthistory) | **POST** /api/v2/architect/systemprompts/{promptId}/history | Generate system prompt history |
-| [**PostArchitectSystempromptResources**](ArchitectApi.html#postarchitectsystempromptresources) | **POST** /api/v2/architect/systemprompts/{promptId}/resources | Create system prompt resource override. |
-| [**PostFlowHistory**](ArchitectApi.html#postflowhistory) | **POST** /api/v2/flows/{flowId}/history | Generate flow history |
-| [**PostFlowVersions**](ArchitectApi.html#postflowversions) | **POST** /api/v2/flows/{flowId}/versions | Create flow version |
-| [**PostFlows**](ArchitectApi.html#postflows) | **POST** /api/v2/flows | Create flow |
-| [**PostFlowsActionsCheckin**](ArchitectApi.html#postflowsactionscheckin) | **POST** /api/v2/flows/actions/checkin | Check-in flow |
-| [**PostFlowsActionsCheckout**](ArchitectApi.html#postflowsactionscheckout) | **POST** /api/v2/flows/actions/checkout | Check-out flow |
-| [**PostFlowsActionsDeactivate**](ArchitectApi.html#postflowsactionsdeactivate) | **POST** /api/v2/flows/actions/deactivate | Deactivate flow |
-| [**PostFlowsActionsPublish**](ArchitectApi.html#postflowsactionspublish) | **POST** /api/v2/flows/actions/publish | Publish flow |
-| [**PostFlowsActionsRevert**](ArchitectApi.html#postflowsactionsrevert) | **POST** /api/v2/flows/actions/revert | Revert flow |
-| [**PostFlowsActionsUnlock**](ArchitectApi.html#postflowsactionsunlock) | **POST** /api/v2/flows/actions/unlock | Unlock flow |
-| [**PostFlowsDatatableExportJobs**](ArchitectApi.html#postflowsdatatableexportjobs) | **POST** /api/v2/flows/datatables/{datatableId}/export/jobs | Begin an export process for exporting all rows from a datatable |
-| [**PostFlowsDatatableImportJobs**](ArchitectApi.html#postflowsdatatableimportjobs) | **POST** /api/v2/flows/datatables/{datatableId}/import/jobs | Begin an import process for importing rows into a datatable |
-| [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
-| [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **POST** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
-| [**PostFlowsExecutions**](ArchitectApi.html#postflowsexecutions) | **POST** /api/v2/flows/executions | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
-| [**PostFlowsInstancesJobs**](ArchitectApi.html#postflowsinstancesjobs) | **POST** /api/v2/flows/instances/jobs | Start a process (job) that will prepare a list of execution data IDs for download. |
-| [**PostFlowsInstancesQuery**](ArchitectApi.html#postflowsinstancesquery) | **POST** /api/v2/flows/instances/query | Query the database of existing flow histories to look for particular flow criteria |
-| [**PostFlowsJobs**](ArchitectApi.html#postflowsjobs) | **POST** /api/v2/flows/jobs | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
-| [**PostFlowsMilestones**](ArchitectApi.html#postflowsmilestones) | **POST** /api/v2/flows/milestones | Create a flow milestone |
-| [**PostFlowsOutcomes**](ArchitectApi.html#postflowsoutcomes) | **POST** /api/v2/flows/outcomes | Create a flow outcome |
-| [**PutArchitectEmergencygroup**](ArchitectApi.html#putarchitectemergencygroup) | **PUT** /api/v2/architect/emergencygroups/{emergencyGroupId} | Updates a emergency group by ID |
-| [**PutArchitectIvr**](ArchitectApi.html#putarchitectivr) | **PUT** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
-| [**PutArchitectPrompt**](ArchitectApi.html#putarchitectprompt) | **PUT** /api/v2/architect/prompts/{promptId} | Update specified user prompt |
-| [**PutArchitectPromptResource**](ArchitectApi.html#putarchitectpromptresource) | **PUT** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Update specified user prompt resource |
-| [**PutArchitectSchedule**](ArchitectApi.html#putarchitectschedule) | **PUT** /api/v2/architect/schedules/{scheduleId} | Update schedule by ID |
-| [**PutArchitectSchedulegroup**](ArchitectApi.html#putarchitectschedulegroup) | **PUT** /api/v2/architect/schedulegroups/{scheduleGroupId} | Updates a schedule group by ID |
-| [**PutArchitectSystempromptResource**](ArchitectApi.html#putarchitectsystempromptresource) | **PUT** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Updates a system prompt resource override. |
-| [**PutFlow**](ArchitectApi.html#putflow) | **PUT** /api/v2/flows/{flowId} | Update flow |
-| [**PutFlowsDatatable**](ArchitectApi.html#putflowsdatatable) | **PUT** /api/v2/flows/datatables/{datatableId} | Updates a specific datatable by id |
-| [**PutFlowsDatatableRow**](ArchitectApi.html#putflowsdatatablerow) | **PUT** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Update a row entry |
-| [**PutFlowsMilestone**](ArchitectApi.html#putflowsmilestone) | **PUT** /api/v2/flows/milestones/{milestoneId} | Updates a flow milestone |
-| [**PutFlowsOutcome**](ArchitectApi.html#putflowsoutcome) | **PUT** /api/v2/flows/outcomes/{flowOutcomeId} | Updates a flow outcome |
+| [**DeleteArchitectEmergencygroup**](ArchitectApi.html#deletearchitectemergencygroup) | **Delete** /api/v2/architect/emergencygroups/{emergencyGroupId} | Deletes a emergency group by ID |
+| [**DeleteArchitectIvr**](ArchitectApi.html#deletearchitectivr) | **Delete** /api/v2/architect/ivrs/{ivrId} | Delete an IVR Config. |
+| [**DeleteArchitectPrompt**](ArchitectApi.html#deletearchitectprompt) | **Delete** /api/v2/architect/prompts/{promptId} | Delete specified user prompt |
+| [**DeleteArchitectPromptResource**](ArchitectApi.html#deletearchitectpromptresource) | **Delete** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Delete specified user prompt resource |
+| [**DeleteArchitectPromptResourceAudio**](ArchitectApi.html#deletearchitectpromptresourceaudio) | **Delete** /api/v2/architect/prompts/{promptId}/resources/{languageCode}/audio | Delete specified user prompt resource audio |
+| [**DeleteArchitectPrompts**](ArchitectApi.html#deletearchitectprompts) | **Delete** /api/v2/architect/prompts | Batch-delete a list of prompts |
+| [**DeleteArchitectSchedule**](ArchitectApi.html#deletearchitectschedule) | **Delete** /api/v2/architect/schedules/{scheduleId} | Delete a schedule by id |
+| [**DeleteArchitectSchedulegroup**](ArchitectApi.html#deletearchitectschedulegroup) | **Delete** /api/v2/architect/schedulegroups/{scheduleGroupId} | Deletes a schedule group by ID |
+| [**DeleteArchitectSystempromptResource**](ArchitectApi.html#deletearchitectsystempromptresource) | **Delete** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Delete a system prompt resource override. |
+| [**DeleteFlow**](ArchitectApi.html#deleteflow) | **Delete** /api/v2/flows/{flowId} | Delete flow |
+| [**DeleteFlows**](ArchitectApi.html#deleteflows) | **Delete** /api/v2/flows | Batch-delete a list of flows |
+| [**DeleteFlowsDatatable**](ArchitectApi.html#deleteflowsdatatable) | **Delete** /api/v2/flows/datatables/{datatableId} | deletes a specific datatable by id |
+| [**DeleteFlowsDatatableRow**](ArchitectApi.html#deleteflowsdatatablerow) | **Delete** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Delete a row entry |
+| [**DeleteFlowsMilestone**](ArchitectApi.html#deleteflowsmilestone) | **Delete** /api/v2/flows/milestones/{milestoneId} | Delete a flow milestone. |
+| [**GetArchitectDependencytracking**](ArchitectApi.html#getarchitectdependencytracking) | **Get** /api/v2/architect/dependencytracking | Get Dependency Tracking objects that have a given display name |
+| [**GetArchitectDependencytrackingBuild**](ArchitectApi.html#getarchitectdependencytrackingbuild) | **Get** /api/v2/architect/dependencytracking/build | Get Dependency Tracking build status for an organization |
+| [**GetArchitectDependencytrackingConsumedresources**](ArchitectApi.html#getarchitectdependencytrackingconsumedresources) | **Get** /api/v2/architect/dependencytracking/consumedresources | Get resources that are consumed by a given Dependency Tracking object |
+| [**GetArchitectDependencytrackingConsumingresources**](ArchitectApi.html#getarchitectdependencytrackingconsumingresources) | **Get** /api/v2/architect/dependencytracking/consumingresources | Get resources that consume a given Dependency Tracking object |
+| [**GetArchitectDependencytrackingDeletedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingdeletedresourceconsumers) | **Get** /api/v2/architect/dependencytracking/deletedresourceconsumers | Get Dependency Tracking objects that consume deleted resources |
+| [**GetArchitectDependencytrackingObject**](ArchitectApi.html#getarchitectdependencytrackingobject) | **Get** /api/v2/architect/dependencytracking/object | Get a Dependency Tracking object |
+| [**GetArchitectDependencytrackingType**](ArchitectApi.html#getarchitectdependencytrackingtype) | **Get** /api/v2/architect/dependencytracking/types/{typeId} | Get a Dependency Tracking type. |
+| [**GetArchitectDependencytrackingTypes**](ArchitectApi.html#getarchitectdependencytrackingtypes) | **Get** /api/v2/architect/dependencytracking/types | Get Dependency Tracking types. |
+| [**GetArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingupdatedresourceconsumers) | **Get** /api/v2/architect/dependencytracking/updatedresourceconsumers | Get Dependency Tracking objects that depend on updated resources |
+| [**GetArchitectEmergencygroup**](ArchitectApi.html#getarchitectemergencygroup) | **Get** /api/v2/architect/emergencygroups/{emergencyGroupId} | Gets a emergency group by ID |
+| [**GetArchitectEmergencygroups**](ArchitectApi.html#getarchitectemergencygroups) | **Get** /api/v2/architect/emergencygroups | Get a list of emergency groups. |
+| [**GetArchitectIvr**](ArchitectApi.html#getarchitectivr) | **Get** /api/v2/architect/ivrs/{ivrId} | Get an IVR config. |
+| [**GetArchitectIvrs**](ArchitectApi.html#getarchitectivrs) | **Get** /api/v2/architect/ivrs | Get IVR configs. |
+| [**GetArchitectPrompt**](ArchitectApi.html#getarchitectprompt) | **Get** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
+| [**GetArchitectPromptHistoryHistoryId**](ArchitectApi.html#getarchitectprompthistoryhistoryid) | **Get** /api/v2/architect/prompts/{promptId}/history/{historyId} | Get generated prompt history |
+| [**GetArchitectPromptResource**](ArchitectApi.html#getarchitectpromptresource) | **Get** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Get specified user prompt resource |
+| [**GetArchitectPromptResources**](ArchitectApi.html#getarchitectpromptresources) | **Get** /api/v2/architect/prompts/{promptId}/resources | Get a pageable list of user prompt resources |
+| [**GetArchitectPrompts**](ArchitectApi.html#getarchitectprompts) | **Get** /api/v2/architect/prompts | Get a pageable list of user prompts |
+| [**GetArchitectSchedule**](ArchitectApi.html#getarchitectschedule) | **Get** /api/v2/architect/schedules/{scheduleId} | Get a schedule by ID |
+| [**GetArchitectSchedulegroup**](ArchitectApi.html#getarchitectschedulegroup) | **Get** /api/v2/architect/schedulegroups/{scheduleGroupId} | Gets a schedule group by ID |
+| [**GetArchitectSchedulegroups**](ArchitectApi.html#getarchitectschedulegroups) | **Get** /api/v2/architect/schedulegroups | Get a list of schedule groups. |
+| [**GetArchitectSchedules**](ArchitectApi.html#getarchitectschedules) | **Get** /api/v2/architect/schedules | Get a list of schedules. |
+| [**GetArchitectSystemprompt**](ArchitectApi.html#getarchitectsystemprompt) | **Get** /api/v2/architect/systemprompts/{promptId} | Get a system prompt |
+| [**GetArchitectSystempromptHistoryHistoryId**](ArchitectApi.html#getarchitectsystemprompthistoryhistoryid) | **Get** /api/v2/architect/systemprompts/{promptId}/history/{historyId} | Get generated prompt history |
+| [**GetArchitectSystempromptResource**](ArchitectApi.html#getarchitectsystempromptresource) | **Get** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Get a system prompt resource. |
+| [**GetArchitectSystempromptResources**](ArchitectApi.html#getarchitectsystempromptresources) | **Get** /api/v2/architect/systemprompts/{promptId}/resources | Get system prompt resources. |
+| [**GetArchitectSystemprompts**](ArchitectApi.html#getarchitectsystemprompts) | **Get** /api/v2/architect/systemprompts | Get System Prompts |
+| [**GetFlow**](ArchitectApi.html#getflow) | **Get** /api/v2/flows/{flowId} | Get flow |
+| [**GetFlowHistoryHistoryId**](ArchitectApi.html#getflowhistoryhistoryid) | **Get** /api/v2/flows/{flowId}/history/{historyId} | Get generated flow history |
+| [**GetFlowLatestconfiguration**](ArchitectApi.html#getflowlatestconfiguration) | **Get** /api/v2/flows/{flowId}/latestconfiguration | Get the latest configuration for flow |
+| [**GetFlowVersion**](ArchitectApi.html#getflowversion) | **Get** /api/v2/flows/{flowId}/versions/{versionId} | Get flow version |
+| [**GetFlowVersionConfiguration**](ArchitectApi.html#getflowversionconfiguration) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Create flow version configuration |
+| [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **Get** /api/v2/flows/{flowId}/versions | Get flow version list |
+| [**GetFlows**](ArchitectApi.html#getflows) | **Get** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
+| [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **Get** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by id |
+| [**GetFlowsDatatableExportJob**](ArchitectApi.html#getflowsdatatableexportjob) | **Get** /api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId} | Returns the state information about an export job |
+| [**GetFlowsDatatableImportJob**](ArchitectApi.html#getflowsdatatableimportjob) | **Get** /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId} | Returns the state information about an import job |
+| [**GetFlowsDatatableImportJobs**](ArchitectApi.html#getflowsdatatableimportjobs) | **Get** /api/v2/flows/datatables/{datatableId}/import/jobs | Get all recent import jobs |
+| [**GetFlowsDatatableRow**](ArchitectApi.html#getflowsdatatablerow) | **Get** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Returns a specific row for the datatable |
+| [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **Get** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable with the given id |
+| [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **Get** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
+| [**GetFlowsDatatablesDivisionview**](ArchitectApi.html#getflowsdatatablesdivisionview) | **Get** /api/v2/flows/datatables/divisionviews/{datatableId} | Returns a specific datatable by id |
+| [**GetFlowsDatatablesDivisionviews**](ArchitectApi.html#getflowsdatatablesdivisionviews) | **Get** /api/v2/flows/datatables/divisionviews | Retrieve a list of datatables for the org |
+| [**GetFlowsDivisionviews**](ArchitectApi.html#getflowsdivisionviews) | **Get** /api/v2/flows/divisionviews | Get a pageable list of basic flow information objects filterable by query parameters. |
+| [**GetFlowsExecution**](ArchitectApi.html#getflowsexecution) | **Get** /api/v2/flows/executions/{flowExecutionId} | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
+| [**GetFlowsInstance**](ArchitectApi.html#getflowsinstance) | **Get** /api/v2/flows/instances/{instanceId} | Start a process (job) to prepare a download of a singular flow execution data instance by Id |
+| [**GetFlowsInstancesJob**](ArchitectApi.html#getflowsinstancesjob) | **Get** /api/v2/flows/instances/jobs/{jobId} | Get the status and/or results of an asynchronous flow execution data retrieval job |
+| [**GetFlowsInstancesQuerycapabilities**](ArchitectApi.html#getflowsinstancesquerycapabilities) | **Get** /api/v2/flows/instances/querycapabilities | Retrieve a list of capabilities that the org can use to query for execution data |
+| [**GetFlowsJob**](ArchitectApi.html#getflowsjob) | **Get** /api/v2/flows/jobs/{jobId} | Fetch Architect Job Status |
+| [**GetFlowsMilestone**](ArchitectApi.html#getflowsmilestone) | **Get** /api/v2/flows/milestones/{milestoneId} | Get a flow milestone |
+| [**GetFlowsMilestones**](ArchitectApi.html#getflowsmilestones) | **Get** /api/v2/flows/milestones | Get a pageable list of flow milestones, filtered by query parameters |
+| [**GetFlowsMilestonesDivisionviews**](ArchitectApi.html#getflowsmilestonesdivisionviews) | **Get** /api/v2/flows/milestones/divisionviews | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
+| [**GetFlowsOutcome**](ArchitectApi.html#getflowsoutcome) | **Get** /api/v2/flows/outcomes/{flowOutcomeId} | Get a flow outcome |
+| [**GetFlowsOutcomes**](ArchitectApi.html#getflowsoutcomes) | **Get** /api/v2/flows/outcomes | Get a pageable list of flow outcomes, filtered by query parameters |
+| [**GetFlowsOutcomesDivisionviews**](ArchitectApi.html#getflowsoutcomesdivisionviews) | **Get** /api/v2/flows/outcomes/divisionviews | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
+| [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **Post** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
+| [**PostArchitectEmergencygroups**](ArchitectApi.html#postarchitectemergencygroups) | **Post** /api/v2/architect/emergencygroups | Creates a new emergency group |
+| [**PostArchitectIvrs**](ArchitectApi.html#postarchitectivrs) | **Post** /api/v2/architect/ivrs | Create IVR config. |
+| [**PostArchitectPromptHistory**](ArchitectApi.html#postarchitectprompthistory) | **Post** /api/v2/architect/prompts/{promptId}/history | Generate prompt history |
+| [**PostArchitectPromptResources**](ArchitectApi.html#postarchitectpromptresources) | **Post** /api/v2/architect/prompts/{promptId}/resources | Create a new user prompt resource |
+| [**PostArchitectPrompts**](ArchitectApi.html#postarchitectprompts) | **Post** /api/v2/architect/prompts | Create a new user prompt |
+| [**PostArchitectSchedulegroups**](ArchitectApi.html#postarchitectschedulegroups) | **Post** /api/v2/architect/schedulegroups | Creates a new schedule group |
+| [**PostArchitectSchedules**](ArchitectApi.html#postarchitectschedules) | **Post** /api/v2/architect/schedules | Create a new schedule. |
+| [**PostArchitectSystempromptHistory**](ArchitectApi.html#postarchitectsystemprompthistory) | **Post** /api/v2/architect/systemprompts/{promptId}/history | Generate system prompt history |
+| [**PostArchitectSystempromptResources**](ArchitectApi.html#postarchitectsystempromptresources) | **Post** /api/v2/architect/systemprompts/{promptId}/resources | Create system prompt resource override. |
+| [**PostFlowHistory**](ArchitectApi.html#postflowhistory) | **Post** /api/v2/flows/{flowId}/history | Generate flow history |
+| [**PostFlowVersions**](ArchitectApi.html#postflowversions) | **Post** /api/v2/flows/{flowId}/versions | Create flow version |
+| [**PostFlows**](ArchitectApi.html#postflows) | **Post** /api/v2/flows | Create flow |
+| [**PostFlowsActionsCheckin**](ArchitectApi.html#postflowsactionscheckin) | **Post** /api/v2/flows/actions/checkin | Check-in flow |
+| [**PostFlowsActionsCheckout**](ArchitectApi.html#postflowsactionscheckout) | **Post** /api/v2/flows/actions/checkout | Check-out flow |
+| [**PostFlowsActionsDeactivate**](ArchitectApi.html#postflowsactionsdeactivate) | **Post** /api/v2/flows/actions/deactivate | Deactivate flow |
+| [**PostFlowsActionsPublish**](ArchitectApi.html#postflowsactionspublish) | **Post** /api/v2/flows/actions/publish | Publish flow |
+| [**PostFlowsActionsRevert**](ArchitectApi.html#postflowsactionsrevert) | **Post** /api/v2/flows/actions/revert | Revert flow |
+| [**PostFlowsActionsUnlock**](ArchitectApi.html#postflowsactionsunlock) | **Post** /api/v2/flows/actions/unlock | Unlock flow |
+| [**PostFlowsDatatableExportJobs**](ArchitectApi.html#postflowsdatatableexportjobs) | **Post** /api/v2/flows/datatables/{datatableId}/export/jobs | Begin an export process for exporting all rows from a datatable |
+| [**PostFlowsDatatableImportJobs**](ArchitectApi.html#postflowsdatatableimportjobs) | **Post** /api/v2/flows/datatables/{datatableId}/import/jobs | Begin an import process for importing rows into a datatable |
+| [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **Post** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
+| [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **Post** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
+| [**PostFlowsExecutions**](ArchitectApi.html#postflowsexecutions) | **Post** /api/v2/flows/executions | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
+| [**PostFlowsInstancesJobs**](ArchitectApi.html#postflowsinstancesjobs) | **Post** /api/v2/flows/instances/jobs | Start a process (job) that will prepare a list of execution data IDs for download. |
+| [**PostFlowsInstancesQuery**](ArchitectApi.html#postflowsinstancesquery) | **Post** /api/v2/flows/instances/query | Query the database of existing flow histories to look for particular flow criteria |
+| [**PostFlowsJobs**](ArchitectApi.html#postflowsjobs) | **Post** /api/v2/flows/jobs | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
+| [**PostFlowsMilestones**](ArchitectApi.html#postflowsmilestones) | **Post** /api/v2/flows/milestones | Create a flow milestone |
+| [**PostFlowsOutcomes**](ArchitectApi.html#postflowsoutcomes) | **Post** /api/v2/flows/outcomes | Create a flow outcome |
+| [**PutArchitectEmergencygroup**](ArchitectApi.html#putarchitectemergencygroup) | **Put** /api/v2/architect/emergencygroups/{emergencyGroupId} | Updates a emergency group by ID |
+| [**PutArchitectIvr**](ArchitectApi.html#putarchitectivr) | **Put** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
+| [**PutArchitectPrompt**](ArchitectApi.html#putarchitectprompt) | **Put** /api/v2/architect/prompts/{promptId} | Update specified user prompt |
+| [**PutArchitectPromptResource**](ArchitectApi.html#putarchitectpromptresource) | **Put** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Update specified user prompt resource |
+| [**PutArchitectSchedule**](ArchitectApi.html#putarchitectschedule) | **Put** /api/v2/architect/schedules/{scheduleId} | Update schedule by ID |
+| [**PutArchitectSchedulegroup**](ArchitectApi.html#putarchitectschedulegroup) | **Put** /api/v2/architect/schedulegroups/{scheduleGroupId} | Updates a schedule group by ID |
+| [**PutArchitectSystempromptResource**](ArchitectApi.html#putarchitectsystempromptresource) | **Put** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Updates a system prompt resource override. |
+| [**PutFlow**](ArchitectApi.html#putflow) | **Put** /api/v2/flows/{flowId} | Update flow |
+| [**PutFlowsDatatable**](ArchitectApi.html#putflowsdatatable) | **Put** /api/v2/flows/datatables/{datatableId} | Updates a specific datatable by id |
+| [**PutFlowsDatatableRow**](ArchitectApi.html#putflowsdatatablerow) | **Put** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Update a row entry |
+| [**PutFlowsMilestone**](ArchitectApi.html#putflowsmilestone) | **Put** /api/v2/flows/milestones/{milestoneId} | Updates a flow milestone |
+| [**PutFlowsOutcome**](ArchitectApi.html#putflowsoutcome) | **Put** /api/v2/flows/outcomes/{flowOutcomeId} | Updates a flow outcome |
 {: class="table table-striped"}
 
 <a name="deletearchitectemergencygroup"></a>

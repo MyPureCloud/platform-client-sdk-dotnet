@@ -7,20 +7,20 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetScript**](ScriptsApi.html#getscript) | **GET** /api/v2/scripts/{scriptId} | Get a script |
-| [**GetScriptPage**](ScriptsApi.html#getscriptpage) | **GET** /api/v2/scripts/{scriptId}/pages/{pageId} | Get a page |
-| [**GetScriptPages**](ScriptsApi.html#getscriptpages) | **GET** /api/v2/scripts/{scriptId}/pages | Get the list of pages |
-| [**GetScripts**](ScriptsApi.html#getscripts) | **GET** /api/v2/scripts | Get the list of scripts |
-| [**GetScriptsDivisionviews**](ScriptsApi.html#getscriptsdivisionviews) | **GET** /api/v2/scripts/divisionviews | Get the metadata for a list of scripts |
-| [**GetScriptsPublished**](ScriptsApi.html#getscriptspublished) | **GET** /api/v2/scripts/published | Get the published scripts. |
-| [**GetScriptsPublishedDivisionviews**](ScriptsApi.html#getscriptspublisheddivisionviews) | **GET** /api/v2/scripts/published/divisionviews | Get the published scripts metadata. |
-| [**GetScriptsPublishedScriptId**](ScriptsApi.html#getscriptspublishedscriptid) | **GET** /api/v2/scripts/published/{scriptId} | Get the published script. |
-| [**GetScriptsPublishedScriptIdPage**](ScriptsApi.html#getscriptspublishedscriptidpage) | **GET** /api/v2/scripts/published/{scriptId}/pages/{pageId} | Get the published page. |
-| [**GetScriptsPublishedScriptIdPages**](ScriptsApi.html#getscriptspublishedscriptidpages) | **GET** /api/v2/scripts/published/{scriptId}/pages | Get the list of published pages |
-| [**GetScriptsPublishedScriptIdVariables**](ScriptsApi.html#getscriptspublishedscriptidvariables) | **GET** /api/v2/scripts/published/{scriptId}/variables | Get the published variables |
-| [**GetScriptsUploadStatus**](ScriptsApi.html#getscriptsuploadstatus) | **GET** /api/v2/scripts/uploads/{uploadId}/status | Get the upload status of an imported script |
-| [**PostScriptExport**](ScriptsApi.html#postscriptexport) | **POST** /api/v2/scripts/{scriptId}/export | Export a script via download service. |
-| [**PostScriptsPublished**](ScriptsApi.html#postscriptspublished) | **POST** /api/v2/scripts/published | Publish a script. |
+| [**GetScript**](ScriptsApi.html#getscript) | **Get** /api/v2/scripts/{scriptId} | Get a script |
+| [**GetScriptPage**](ScriptsApi.html#getscriptpage) | **Get** /api/v2/scripts/{scriptId}/pages/{pageId} | Get a page |
+| [**GetScriptPages**](ScriptsApi.html#getscriptpages) | **Get** /api/v2/scripts/{scriptId}/pages | Get the list of pages |
+| [**GetScripts**](ScriptsApi.html#getscripts) | **Get** /api/v2/scripts | Get the list of scripts |
+| [**GetScriptsDivisionviews**](ScriptsApi.html#getscriptsdivisionviews) | **Get** /api/v2/scripts/divisionviews | Get the metadata for a list of scripts |
+| [**GetScriptsPublished**](ScriptsApi.html#getscriptspublished) | **Get** /api/v2/scripts/published | Get the published scripts. |
+| [**GetScriptsPublishedDivisionviews**](ScriptsApi.html#getscriptspublisheddivisionviews) | **Get** /api/v2/scripts/published/divisionviews | Get the published scripts metadata. |
+| [**GetScriptsPublishedScriptId**](ScriptsApi.html#getscriptspublishedscriptid) | **Get** /api/v2/scripts/published/{scriptId} | Get the published script. |
+| [**GetScriptsPublishedScriptIdPage**](ScriptsApi.html#getscriptspublishedscriptidpage) | **Get** /api/v2/scripts/published/{scriptId}/pages/{pageId} | Get the published page. |
+| [**GetScriptsPublishedScriptIdPages**](ScriptsApi.html#getscriptspublishedscriptidpages) | **Get** /api/v2/scripts/published/{scriptId}/pages | Get the list of published pages |
+| [**GetScriptsPublishedScriptIdVariables**](ScriptsApi.html#getscriptspublishedscriptidvariables) | **Get** /api/v2/scripts/published/{scriptId}/variables | Get the published variables |
+| [**GetScriptsUploadStatus**](ScriptsApi.html#getscriptsuploadstatus) | **Get** /api/v2/scripts/uploads/{uploadId}/status | Get the upload status of an imported script |
+| [**PostScriptExport**](ScriptsApi.html#postscriptexport) | **Post** /api/v2/scripts/{scriptId}/export | Export a script via download service. |
+| [**PostScriptsPublished**](ScriptsApi.html#postscriptspublished) | **Post** /api/v2/scripts/published | Publish a script. |
 {: class="table table-striped"}
 
 <a name="getscript"></a>

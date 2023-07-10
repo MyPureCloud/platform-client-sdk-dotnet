@@ -7,25 +7,25 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteWebchatDeployment**](WebChatApi.html#deletewebchatdeployment) | **DELETE** /api/v2/webchat/deployments/{deploymentId} | Delete a WebChat deployment |
-| [**DeleteWebchatGuestConversationMember**](WebChatApi.html#deletewebchatguestconversationmember) | **DELETE** /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId} | Remove a member from a chat conversation |
-| [**DeleteWebchatSettings**](WebChatApi.html#deletewebchatsettings) | **DELETE** /api/v2/webchat/settings | Remove WebChat deployment settings |
-| [**GetWebchatDeployment**](WebChatApi.html#getwebchatdeployment) | **GET** /api/v2/webchat/deployments/{deploymentId} | Get a WebChat deployment |
-| [**GetWebchatDeployments**](WebChatApi.html#getwebchatdeployments) | **GET** /api/v2/webchat/deployments | List WebChat deployments |
-| [**GetWebchatGuestConversationMediarequest**](WebChatApi.html#getwebchatguestconversationmediarequest) | **GET** /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId} | Get a media request in the conversation |
-| [**GetWebchatGuestConversationMediarequests**](WebChatApi.html#getwebchatguestconversationmediarequests) | **GET** /api/v2/webchat/guest/conversations/{conversationId}/mediarequests | Get all media requests to the guest in the conversation |
-| [**GetWebchatGuestConversationMember**](WebChatApi.html#getwebchatguestconversationmember) | **GET** /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId} | Get a web chat conversation member |
-| [**GetWebchatGuestConversationMembers**](WebChatApi.html#getwebchatguestconversationmembers) | **GET** /api/v2/webchat/guest/conversations/{conversationId}/members | Get the members of a chat conversation. |
-| [**GetWebchatGuestConversationMessage**](WebChatApi.html#getwebchatguestconversationmessage) | **GET** /api/v2/webchat/guest/conversations/{conversationId}/messages/{messageId} | Get a web chat conversation message |
-| [**GetWebchatGuestConversationMessages**](WebChatApi.html#getwebchatguestconversationmessages) | **GET** /api/v2/webchat/guest/conversations/{conversationId}/messages | Get the messages of a chat conversation. |
-| [**GetWebchatSettings**](WebChatApi.html#getwebchatsettings) | **GET** /api/v2/webchat/settings | Get WebChat deployment settings |
-| [**PatchWebchatGuestConversationMediarequest**](WebChatApi.html#patchwebchatguestconversationmediarequest) | **PATCH** /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId} | Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED |
-| [**PostWebchatDeployments**](WebChatApi.html#postwebchatdeployments) | **POST** /api/v2/webchat/deployments | Create WebChat deployment |
-| [**PostWebchatGuestConversationMemberMessages**](WebChatApi.html#postwebchatguestconversationmembermessages) | **POST** /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/messages | Send a message in a chat conversation. |
-| [**PostWebchatGuestConversationMemberTyping**](WebChatApi.html#postwebchatguestconversationmembertyping) | **POST** /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/typing | Send a typing-indicator in a chat conversation. |
-| [**PostWebchatGuestConversations**](WebChatApi.html#postwebchatguestconversations) | **POST** /api/v2/webchat/guest/conversations | Create an ACD chat conversation from an external customer. |
-| [**PutWebchatDeployment**](WebChatApi.html#putwebchatdeployment) | **PUT** /api/v2/webchat/deployments/{deploymentId} | Update a WebChat deployment |
-| [**PutWebchatSettings**](WebChatApi.html#putwebchatsettings) | **PUT** /api/v2/webchat/settings | Update WebChat deployment settings |
+| [**DeleteWebchatDeployment**](WebChatApi.html#deletewebchatdeployment) | **Delete** /api/v2/webchat/deployments/{deploymentId} | Delete a WebChat deployment |
+| [**DeleteWebchatGuestConversationMember**](WebChatApi.html#deletewebchatguestconversationmember) | **Delete** /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId} | Remove a member from a chat conversation |
+| [**DeleteWebchatSettings**](WebChatApi.html#deletewebchatsettings) | **Delete** /api/v2/webchat/settings | Remove WebChat deployment settings |
+| [**GetWebchatDeployment**](WebChatApi.html#getwebchatdeployment) | **Get** /api/v2/webchat/deployments/{deploymentId} | Get a WebChat deployment |
+| [**GetWebchatDeployments**](WebChatApi.html#getwebchatdeployments) | **Get** /api/v2/webchat/deployments | List WebChat deployments |
+| [**GetWebchatGuestConversationMediarequest**](WebChatApi.html#getwebchatguestconversationmediarequest) | **Get** /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId} | Get a media request in the conversation |
+| [**GetWebchatGuestConversationMediarequests**](WebChatApi.html#getwebchatguestconversationmediarequests) | **Get** /api/v2/webchat/guest/conversations/{conversationId}/mediarequests | Get all media requests to the guest in the conversation |
+| [**GetWebchatGuestConversationMember**](WebChatApi.html#getwebchatguestconversationmember) | **Get** /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId} | Get a web chat conversation member |
+| [**GetWebchatGuestConversationMembers**](WebChatApi.html#getwebchatguestconversationmembers) | **Get** /api/v2/webchat/guest/conversations/{conversationId}/members | Get the members of a chat conversation. |
+| [**GetWebchatGuestConversationMessage**](WebChatApi.html#getwebchatguestconversationmessage) | **Get** /api/v2/webchat/guest/conversations/{conversationId}/messages/{messageId} | Get a web chat conversation message |
+| [**GetWebchatGuestConversationMessages**](WebChatApi.html#getwebchatguestconversationmessages) | **Get** /api/v2/webchat/guest/conversations/{conversationId}/messages | Get the messages of a chat conversation. |
+| [**GetWebchatSettings**](WebChatApi.html#getwebchatsettings) | **Get** /api/v2/webchat/settings | Get WebChat deployment settings |
+| [**PatchWebchatGuestConversationMediarequest**](WebChatApi.html#patchwebchatguestconversationmediarequest) | **Patch** /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId} | Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED |
+| [**PostWebchatDeployments**](WebChatApi.html#postwebchatdeployments) | **Post** /api/v2/webchat/deployments | Create WebChat deployment |
+| [**PostWebchatGuestConversationMemberMessages**](WebChatApi.html#postwebchatguestconversationmembermessages) | **Post** /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/messages | Send a message in a chat conversation. |
+| [**PostWebchatGuestConversationMemberTyping**](WebChatApi.html#postwebchatguestconversationmembertyping) | **Post** /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/typing | Send a typing-indicator in a chat conversation. |
+| [**PostWebchatGuestConversations**](WebChatApi.html#postwebchatguestconversations) | **Post** /api/v2/webchat/guest/conversations | Create an ACD chat conversation from an external customer. |
+| [**PutWebchatDeployment**](WebChatApi.html#putwebchatdeployment) | **Put** /api/v2/webchat/deployments/{deploymentId} | Update a WebChat deployment |
+| [**PutWebchatSettings**](WebChatApi.html#putwebchatsettings) | **Put** /api/v2/webchat/settings | Update WebChat deployment settings |
 {: class="table table-striped"}
 
 <a name="deletewebchatdeployment"></a>

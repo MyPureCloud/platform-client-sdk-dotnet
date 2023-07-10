@@ -11670,7 +11670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <value>The base path</value>
         public String GetBasePath()
         {
-            return this.Configuration.ApiClient.RestClient.BaseUrl.ToString();
+            return this.Configuration.ApiClient.RestClient.Options.BaseUrl.ToString();
         }
 
         /// <summary>
@@ -11788,13 +11788,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11887,13 +11889,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11997,13 +12001,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationParticipantCode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12110,13 +12116,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationParticipantCode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12214,13 +12222,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationParticipantFlaggedreason: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12320,13 +12330,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationParticipantFlaggedreason: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12424,13 +12436,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsCallParticipantConsult: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12530,13 +12544,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsCallParticipantConsult: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12634,13 +12650,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsEmailMessagesDraftAttachment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12740,13 +12758,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsEmailMessagesDraftAttachment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12838,13 +12858,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsFacebookIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12937,13 +12959,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsFacebookIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13035,13 +13059,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsInstagramIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13134,13 +13160,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsInstagramIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13232,13 +13260,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsLineIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13331,13 +13361,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsLineIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13429,13 +13461,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13528,13 +13562,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13626,13 +13662,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13725,13 +13763,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13824,13 +13864,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13924,13 +13966,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14022,13 +14066,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14121,13 +14167,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14220,13 +14268,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14320,13 +14370,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14421,13 +14473,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsAggregatesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14523,13 +14577,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsAggregatesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14627,13 +14683,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsAggregatesJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14732,13 +14790,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsAggregatesJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14828,13 +14888,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14924,13 +14986,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15023,13 +15087,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15123,13 +15189,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15228,13 +15296,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15334,13 +15404,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15427,13 +15499,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobsAvailability: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15520,13 +15594,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsConversationsDetailsJobsAvailability: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15619,13 +15695,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15719,13 +15797,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15830,13 +15910,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15944,13 +16026,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16049,13 +16133,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16156,13 +16242,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16264,13 +16352,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16374,13 +16464,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16479,13 +16571,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16586,13 +16680,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16685,13 +16781,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16785,13 +16883,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16881,13 +16981,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16977,13 +17079,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17076,13 +17180,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17176,13 +17282,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17290,13 +17398,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17407,13 +17517,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17515,13 +17627,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17625,13 +17739,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17730,13 +17846,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17837,13 +17955,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17936,13 +18056,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18036,13 +18158,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18150,13 +18274,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbackParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18267,13 +18393,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbackParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18375,13 +18503,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbackParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18485,13 +18615,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbackParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18590,13 +18722,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbackParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18697,13 +18831,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbackParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18790,13 +18926,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18883,13 +19021,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18976,13 +19116,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCalls: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19069,13 +19211,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCalls: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19174,13 +19318,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallsHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19279,13 +19425,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallsHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19372,13 +19520,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallsMaximumconferenceparties: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19465,13 +19615,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallsMaximumconferenceparties: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19564,13 +19716,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChat: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19664,13 +19818,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChat: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19769,13 +19925,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19876,13 +20034,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19987,13 +20147,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20099,13 +20261,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20213,13 +20377,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20330,13 +20496,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20438,13 +20606,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20548,13 +20718,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20653,13 +20825,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20760,13 +20934,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20853,13 +21029,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChats: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20946,13 +21124,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChats: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21045,13 +21225,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21145,13 +21327,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21259,13 +21443,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessionParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21376,13 +21562,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessionParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21484,13 +21672,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessionParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21594,13 +21784,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessionParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21699,13 +21891,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessionParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21806,13 +22000,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessionParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21899,13 +22095,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21992,13 +22190,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22091,13 +22291,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmail: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22191,13 +22393,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmail: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22296,13 +22500,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22403,13 +22609,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22502,13 +22710,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22602,13 +22812,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22701,13 +22913,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailMessagesDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22801,13 +23015,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailMessagesDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -22915,13 +23131,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23032,13 +23250,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23140,13 +23360,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23250,13 +23472,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23355,13 +23579,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23462,13 +23688,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23561,13 +23789,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23661,13 +23891,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23754,13 +23986,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23847,13 +24081,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -23946,13 +24182,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24046,13 +24284,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24139,13 +24379,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24232,13 +24474,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24331,13 +24575,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24431,13 +24677,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24542,13 +24790,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageCommunicationMessagesMediaMediaId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24656,13 +24906,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageCommunicationMessagesMediaMediaId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24758,13 +25010,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24861,13 +25115,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -24969,13 +25225,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25079,13 +25337,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25193,13 +25453,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25310,13 +25572,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25418,13 +25682,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25528,13 +25794,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageParticipantWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25633,13 +25901,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25740,13 +26010,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageParticipantWrapupcodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25833,13 +26105,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -25926,13 +26200,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26019,13 +26295,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingFacebookApp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26112,13 +26390,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingFacebookApp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26220,13 +26500,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26328,13 +26610,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26436,13 +26720,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsFacebook: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26544,13 +26830,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsFacebook: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26646,13 +26934,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsFacebookIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26749,13 +27039,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsFacebookIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26857,13 +27149,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsInstagram: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -26965,13 +27259,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsInstagram: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27067,13 +27363,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsInstagramIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27170,13 +27468,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsInstagramIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27278,13 +27578,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsLine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27386,13 +27688,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsLine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27488,13 +27792,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsLineIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27591,13 +27897,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsLineIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27699,13 +28007,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27807,13 +28117,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -27909,13 +28221,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28012,13 +28326,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28120,13 +28436,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28228,13 +28546,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28330,13 +28650,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28433,13 +28755,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28541,13 +28865,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsWhatsapp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28649,13 +28975,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsWhatsapp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28751,13 +29079,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28854,13 +29184,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -28959,13 +29291,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSticker: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29065,13 +29399,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSticker: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29164,13 +29500,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29263,13 +29601,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29356,13 +29696,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29449,13 +29791,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29548,13 +29892,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29648,13 +29994,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29741,13 +30089,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingThreadingtimeline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29834,13 +30184,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingThreadingtimeline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -29948,13 +30300,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenshareParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30065,13 +30419,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenshareParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30158,13 +30514,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30251,13 +30609,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30365,13 +30725,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsSocialParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30482,13 +30844,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsSocialParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30583,13 +30947,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsVideoDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30685,13 +31051,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsVideoDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30799,13 +31167,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsVideoParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -30916,13 +31286,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsVideoParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31031,13 +31403,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31149,13 +31523,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31264,13 +31640,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31382,13 +31760,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31492,13 +31872,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31604,13 +31986,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31726,13 +32110,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsAftercallworkConversationIdParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31852,13 +32238,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsAftercallworkConversationIdParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -31962,13 +32350,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -32074,13 +32464,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -32189,13 +32581,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -32307,13 +32701,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -32422,13 +32818,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -32540,13 +32938,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -32662,13 +33062,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -32788,13 +33190,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -32904,13 +33308,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantConsult: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33023,13 +33429,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantConsult: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33133,13 +33541,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33245,13 +33655,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33360,13 +33772,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbackParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33478,13 +33892,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbackParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33593,13 +34009,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbackParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33711,13 +34129,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbackParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33833,13 +34253,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbackParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -33959,13 +34381,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbackParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34063,13 +34487,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34168,13 +34594,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34278,13 +34706,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChat: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34390,13 +34820,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChat: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34505,13 +34937,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChatParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34623,13 +35057,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChatParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34738,13 +35174,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChatParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34856,13 +35294,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChatParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -34978,13 +35418,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChatParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -35104,13 +35546,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChatParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -35214,13 +35658,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -35326,13 +35772,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -35438,13 +35886,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesessionParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -35552,13 +36002,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesessionParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -35664,13 +36116,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesessionParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -35778,13 +36232,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesessionParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -35900,13 +36356,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesessionParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36026,13 +36484,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesessionParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36136,13 +36596,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmail: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36248,13 +36710,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmail: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36361,13 +36825,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailMessagesDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36475,13 +36941,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailMessagesDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36590,13 +37058,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36708,13 +37178,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36823,13 +37295,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -36941,13 +37415,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37063,13 +37539,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37189,13 +37667,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37299,13 +37779,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37411,13 +37893,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37523,13 +38007,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessageParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37637,13 +38123,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessageParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37749,13 +38237,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessageParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37863,13 +38353,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessageParticipantAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -37985,13 +38477,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessageParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38111,13 +38605,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessageParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38221,13 +38717,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsFacebookIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38333,13 +38831,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsFacebookIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38443,13 +38943,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsInstagramIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38555,13 +39057,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsInstagramIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38665,13 +39169,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38777,13 +39283,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsOpenIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38887,13 +39395,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -38999,13 +39509,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsTwitterIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39109,13 +39621,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39221,13 +39735,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsWhatsappIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39331,13 +39847,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39443,13 +39961,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingSupportedcontentSupportedContentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39546,13 +40066,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39650,13 +40172,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39760,13 +40284,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationDetailsProperties: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39872,13 +40398,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationDetailsProperties: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -39984,13 +40512,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsActivityQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40097,13 +40627,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsActivityQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40203,13 +40735,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsAggregatesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40310,13 +40844,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsAggregatesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40414,13 +40950,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40519,13 +41057,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40623,13 +41163,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsDetailsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40728,13 +41270,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsDetailsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40832,13 +41376,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsDetailsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -40937,13 +41483,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsConversationsDetailsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41047,13 +41595,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationAssign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41159,13 +41709,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationAssign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41258,13 +41810,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationCobrowse: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41358,13 +41912,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationCobrowse: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41457,13 +42013,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationDisconnect: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41557,13 +42115,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationDisconnect: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41669,13 +42229,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41783,13 +42345,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -41895,13 +42459,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantDigits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42009,13 +42575,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantDigits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42124,13 +42692,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42242,13 +42812,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42357,13 +42929,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantReplaceAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42475,13 +43049,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantReplaceAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42590,13 +43166,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantReplaceExternal: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42708,13 +43286,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantReplaceExternal: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42823,13 +43403,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantReplaceQueue: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -42941,13 +43523,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantReplaceQueue: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43054,13 +43638,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantSecureivrsessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43169,13 +43755,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantSecureivrsessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43279,13 +43867,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43391,13 +43981,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43495,13 +44087,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantCoach: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43601,13 +44195,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantCoach: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43719,13 +44315,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43840,13 +44438,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -43956,13 +44556,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantConsult: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44075,13 +44677,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantConsult: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44191,13 +44795,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantConsultAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44310,13 +44916,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantConsultAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44426,13 +45034,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantConsultExternal: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44545,13 +45155,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantConsultExternal: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44661,13 +45273,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantConsultQueue: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44780,13 +45394,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantConsultQueue: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44884,13 +45500,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantMonitor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -44990,13 +45608,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantMonitor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -45105,13 +45725,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -45223,13 +45845,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -45333,13 +45957,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipants: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -45445,13 +46071,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallParticipants: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -45563,13 +46191,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbackParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -45684,13 +46314,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbackParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -45799,13 +46431,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbackParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -45917,13 +46551,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbackParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46021,13 +46657,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46126,13 +46764,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46229,13 +46869,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbacksBulkDisconnect: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46333,13 +46975,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbacksBulkDisconnect: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46437,13 +47081,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbacksBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46542,13 +47188,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCallbacksBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46646,13 +47294,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCalls: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46751,13 +47401,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCalls: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46867,13 +47519,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -46986,13 +47640,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47091,13 +47747,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationTyping: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47198,13 +47856,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatCommunicationTyping: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47316,13 +47976,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47437,13 +48099,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47552,13 +48216,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47670,13 +48336,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChatParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47774,13 +48442,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChats: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47879,13 +48549,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsChats: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -47997,13 +48669,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCobrowsesessionParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -48118,13 +48792,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCobrowsesessionParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -48230,13 +48906,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCobrowsesessionParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -48344,13 +49022,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsCobrowsesessionParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -48454,13 +49134,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailInboundmessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -48566,13 +49248,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailInboundmessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -48676,13 +49360,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -48788,13 +49474,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -48898,13 +49586,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessagesDraftAttachmentsCopy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49010,13 +49700,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessagesDraftAttachmentsCopy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49128,13 +49820,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49249,13 +49943,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49364,13 +50060,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49482,13 +50180,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49586,13 +50286,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49691,13 +50393,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49795,13 +50499,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailsAgentless: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -49900,13 +50606,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailsAgentless: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50004,13 +50712,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsFaxes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50109,13 +50819,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsFaxes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50213,13 +50925,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50318,13 +51032,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50422,13 +51138,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurationsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50527,13 +51245,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurationsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50646,13 +51366,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50768,13 +51490,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50873,13 +51597,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationMessagesMedia: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -50980,13 +51706,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationMessagesMedia: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -51095,13 +51823,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationTyping: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -51213,13 +51943,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationTyping: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -51323,13 +52055,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageMessagesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -51434,13 +52168,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageMessagesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -51552,13 +52288,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -51673,13 +52411,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -51779,13 +52519,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantMonitor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -51887,13 +52629,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantMonitor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52002,13 +52746,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52120,13 +52866,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52224,13 +52972,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52329,13 +53079,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52433,13 +53185,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesAgentless: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52538,13 +53292,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesAgentless: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52642,13 +53398,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesInboundOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52747,13 +53505,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagesInboundOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52851,13 +53611,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsFacebook: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -52956,13 +53718,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsFacebook: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53060,13 +53824,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsInstagram: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53165,13 +53931,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsInstagram: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53269,13 +54037,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsLine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53374,13 +54144,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsLine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53478,13 +54250,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53583,13 +54357,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsOpen: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53687,13 +54463,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsTwitter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53792,13 +54570,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsTwitter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -53896,13 +54676,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsWhatsapp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54001,13 +54783,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsWhatsapp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54105,13 +54889,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingSupportedcontent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54210,13 +54996,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingSupportedcontent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54314,13 +55102,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsParticipantsAttributesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54419,13 +55209,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsParticipantsAttributesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54537,13 +55329,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsScreenshareParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54658,13 +55452,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsScreenshareParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54776,13 +55572,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsSocialParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -54897,13 +55695,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsSocialParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55015,13 +55815,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsVideoParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55136,13 +55938,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsVideoParticipantCommunicationWrapup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55240,13 +56044,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationParticipantFlaggedreason: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55346,13 +56152,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationParticipantFlaggedreason: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55456,13 +56264,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55568,13 +56378,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55678,13 +56490,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55790,13 +56604,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -55912,13 +56728,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsCallParticipantCommunicationUuidata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56038,13 +56856,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsCallParticipantCommunicationUuidata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56148,13 +56968,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsCallRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56260,13 +57082,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsCallRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56370,13 +57194,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsCallbackRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56482,13 +57308,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsCallbackRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56592,13 +57420,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsChatRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56704,13 +57534,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsChatRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56814,13 +57646,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsCobrowsesessionRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -56926,13 +57760,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsCobrowsesessionRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57036,13 +57872,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsEmailMessagesDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57148,13 +57986,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsEmailMessagesDraft: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57258,13 +58098,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsEmailRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57370,13 +58212,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsEmailRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57480,13 +58324,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57592,13 +58438,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57702,13 +58550,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessageRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57814,13 +58664,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessageRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -57924,13 +58776,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIntegrationsLineIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58036,13 +58890,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIntegrationsLineIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58140,13 +58996,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingSupportedcontentDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58245,13 +59103,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingSupportedcontentDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58349,13 +59209,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingThreadingtimeline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58454,13 +59316,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingThreadingtimeline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58564,13 +59428,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsScreenshareRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58676,13 +59542,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsScreenshareRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58786,13 +59654,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsSocialRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -58898,13 +59768,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsSocialRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -59008,13 +59880,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsVideoRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -59120,13 +59994,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsVideoRecordingstate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);

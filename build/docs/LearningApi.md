@@ -7,34 +7,34 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLearningAssignment**](LearningApi.html#deletelearningassignment) | **DELETE** /api/v2/learning/assignments/{assignmentId} | Delete a learning assignment |
-| [**DeleteLearningModule**](LearningApi.html#deletelearningmodule) | **DELETE** /api/v2/learning/modules/{moduleId} | Delete a learning module |
-| [**GetLearningAssignment**](LearningApi.html#getlearningassignment) | **GET** /api/v2/learning/assignments/{assignmentId} | Get Learning Assignment |
-| [**GetLearningAssignments**](LearningApi.html#getlearningassignments) | **GET** /api/v2/learning/assignments | List of Learning module Assignments |
-| [**GetLearningAssignmentsMe**](LearningApi.html#getlearningassignmentsme) | **GET** /api/v2/learning/assignments/me | List of Learning Assignments assigned to current user |
-| [**GetLearningModule**](LearningApi.html#getlearningmodule) | **GET** /api/v2/learning/modules/{moduleId} | Get a learning module |
-| [**GetLearningModuleJob**](LearningApi.html#getlearningmodulejob) | **GET** /api/v2/learning/modules/{moduleId}/jobs/{jobId} | Get a specific Learning Module job status |
-| [**GetLearningModuleRule**](LearningApi.html#getlearningmodulerule) | **GET** /api/v2/learning/modules/{moduleId}/rule | Get a learning module rule |
-| [**GetLearningModuleVersion**](LearningApi.html#getlearningmoduleversion) | **GET** /api/v2/learning/modules/{moduleId}/versions/{versionId} | Get specific version of a published module |
-| [**GetLearningModules**](LearningApi.html#getlearningmodules) | **GET** /api/v2/learning/modules | Get all learning modules of an organization |
-| [**GetLearningModulesAssignments**](LearningApi.html#getlearningmodulesassignments) | **GET** /api/v2/learning/modules/assignments | Get all learning modules of an organization including assignments for a specific user |
-| [**GetLearningModulesCoverartCoverArtId**](LearningApi.html#getlearningmodulescoverartcoverartid) | **GET** /api/v2/learning/modules/coverart/{coverArtId} | Get a specific Learning Module cover art using ID |
-| [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **PATCH** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
-| [**PatchLearningAssignmentReschedule**](LearningApi.html#patchlearningassignmentreschedule) | **PATCH** /api/v2/learning/assignments/{assignmentId}/reschedule | Reschedule Learning Assignment |
-| [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **POST** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
-| [**PostLearningAssignmentReassign**](LearningApi.html#postlearningassignmentreassign) | **POST** /api/v2/learning/assignments/{assignmentId}/reassign | Reassign Learning Assignment |
-| [**PostLearningAssignmentReset**](LearningApi.html#postlearningassignmentreset) | **POST** /api/v2/learning/assignments/{assignmentId}/reset | Reset Learning Assignment |
-| [**PostLearningAssignments**](LearningApi.html#postlearningassignments) | **POST** /api/v2/learning/assignments | Create Learning Assignment |
-| [**PostLearningAssignmentsAggregatesQuery**](LearningApi.html#postlearningassignmentsaggregatesquery) | **POST** /api/v2/learning/assignments/aggregates/query | Retrieve aggregated assignment data |
-| [**PostLearningAssignmentsBulkadd**](LearningApi.html#postlearningassignmentsbulkadd) | **POST** /api/v2/learning/assignments/bulkadd | Add multiple learning assignments |
-| [**PostLearningAssignmentsBulkremove**](LearningApi.html#postlearningassignmentsbulkremove) | **POST** /api/v2/learning/assignments/bulkremove | Remove multiple Learning Assignments |
-| [**PostLearningModuleJobs**](LearningApi.html#postlearningmodulejobs) | **POST** /api/v2/learning/modules/{moduleId}/jobs | Starts a specified operation on learning module |
-| [**PostLearningModulePublish**](LearningApi.html#postlearningmodulepublish) | **POST** /api/v2/learning/modules/{moduleId}/publish | Publish a Learning module |
-| [**PostLearningModules**](LearningApi.html#postlearningmodules) | **POST** /api/v2/learning/modules | Create a new learning module |
-| [**PostLearningRulesQuery**](LearningApi.html#postlearningrulesquery) | **POST** /api/v2/learning/rules/query | Get users for learning module rule |
-| [**PostLearningScheduleslotsQuery**](LearningApi.html#postlearningscheduleslotsquery) | **POST** /api/v2/learning/scheduleslots/query | Get list of possible slots where a learning activity can be scheduled. |
-| [**PutLearningModule**](LearningApi.html#putlearningmodule) | **PUT** /api/v2/learning/modules/{moduleId} | Update a learning module |
-| [**PutLearningModuleRule**](LearningApi.html#putlearningmodulerule) | **PUT** /api/v2/learning/modules/{moduleId}/rule | Update a learning module rule |
+| [**DeleteLearningAssignment**](LearningApi.html#deletelearningassignment) | **Delete** /api/v2/learning/assignments/{assignmentId} | Delete a learning assignment |
+| [**DeleteLearningModule**](LearningApi.html#deletelearningmodule) | **Delete** /api/v2/learning/modules/{moduleId} | Delete a learning module |
+| [**GetLearningAssignment**](LearningApi.html#getlearningassignment) | **Get** /api/v2/learning/assignments/{assignmentId} | Get Learning Assignment |
+| [**GetLearningAssignments**](LearningApi.html#getlearningassignments) | **Get** /api/v2/learning/assignments | List of Learning module Assignments |
+| [**GetLearningAssignmentsMe**](LearningApi.html#getlearningassignmentsme) | **Get** /api/v2/learning/assignments/me | List of Learning Assignments assigned to current user |
+| [**GetLearningModule**](LearningApi.html#getlearningmodule) | **Get** /api/v2/learning/modules/{moduleId} | Get a learning module |
+| [**GetLearningModuleJob**](LearningApi.html#getlearningmodulejob) | **Get** /api/v2/learning/modules/{moduleId}/jobs/{jobId} | Get a specific Learning Module job status |
+| [**GetLearningModuleRule**](LearningApi.html#getlearningmodulerule) | **Get** /api/v2/learning/modules/{moduleId}/rule | Get a learning module rule |
+| [**GetLearningModuleVersion**](LearningApi.html#getlearningmoduleversion) | **Get** /api/v2/learning/modules/{moduleId}/versions/{versionId} | Get specific version of a published module |
+| [**GetLearningModules**](LearningApi.html#getlearningmodules) | **Get** /api/v2/learning/modules | Get all learning modules of an organization |
+| [**GetLearningModulesAssignments**](LearningApi.html#getlearningmodulesassignments) | **Get** /api/v2/learning/modules/assignments | Get all learning modules of an organization including assignments for a specific user |
+| [**GetLearningModulesCoverartCoverArtId**](LearningApi.html#getlearningmodulescoverartcoverartid) | **Get** /api/v2/learning/modules/coverart/{coverArtId} | Get a specific Learning Module cover art using ID |
+| [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **Patch** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
+| [**PatchLearningAssignmentReschedule**](LearningApi.html#patchlearningassignmentreschedule) | **Patch** /api/v2/learning/assignments/{assignmentId}/reschedule | Reschedule Learning Assignment |
+| [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **Post** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
+| [**PostLearningAssignmentReassign**](LearningApi.html#postlearningassignmentreassign) | **Post** /api/v2/learning/assignments/{assignmentId}/reassign | Reassign Learning Assignment |
+| [**PostLearningAssignmentReset**](LearningApi.html#postlearningassignmentreset) | **Post** /api/v2/learning/assignments/{assignmentId}/reset | Reset Learning Assignment |
+| [**PostLearningAssignments**](LearningApi.html#postlearningassignments) | **Post** /api/v2/learning/assignments | Create Learning Assignment |
+| [**PostLearningAssignmentsAggregatesQuery**](LearningApi.html#postlearningassignmentsaggregatesquery) | **Post** /api/v2/learning/assignments/aggregates/query | Retrieve aggregated assignment data |
+| [**PostLearningAssignmentsBulkadd**](LearningApi.html#postlearningassignmentsbulkadd) | **Post** /api/v2/learning/assignments/bulkadd | Add multiple learning assignments |
+| [**PostLearningAssignmentsBulkremove**](LearningApi.html#postlearningassignmentsbulkremove) | **Post** /api/v2/learning/assignments/bulkremove | Remove multiple Learning Assignments |
+| [**PostLearningModuleJobs**](LearningApi.html#postlearningmodulejobs) | **Post** /api/v2/learning/modules/{moduleId}/jobs | Starts a specified operation on learning module |
+| [**PostLearningModulePublish**](LearningApi.html#postlearningmodulepublish) | **Post** /api/v2/learning/modules/{moduleId}/publish | Publish a Learning module |
+| [**PostLearningModules**](LearningApi.html#postlearningmodules) | **Post** /api/v2/learning/modules | Create a new learning module |
+| [**PostLearningRulesQuery**](LearningApi.html#postlearningrulesquery) | **Post** /api/v2/learning/rules/query | Get users for learning module rule |
+| [**PostLearningScheduleslotsQuery**](LearningApi.html#postlearningscheduleslotsquery) | **Post** /api/v2/learning/scheduleslots/query | Get list of possible slots where a learning activity can be scheduled. |
+| [**PutLearningModule**](LearningApi.html#putlearningmodule) | **Put** /api/v2/learning/modules/{moduleId} | Update a learning module |
+| [**PutLearningModuleRule**](LearningApi.html#putlearningmodulerule) | **Put** /api/v2/learning/modules/{moduleId}/rule | Update a learning module rule |
 {: class="table table-striped"}
 
 <a name="deletelearningassignment"></a>

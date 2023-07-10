@@ -7,67 +7,67 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteQualityCalibration**](QualityApi.html#deletequalitycalibration) | **DELETE** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
-| [**DeleteQualityConversationEvaluation**](QualityApi.html#deletequalityconversationevaluation) | **DELETE** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
-| [**DeleteQualityForm**](QualityApi.html#deletequalityform) | **DELETE** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
-| [**DeleteQualityFormsEvaluation**](QualityApi.html#deletequalityformsevaluation) | **DELETE** /api/v2/quality/forms/evaluations/{formId} | Delete an evaluation form. |
-| [**DeleteQualityFormsSurvey**](QualityApi.html#deletequalityformssurvey) | **DELETE** /api/v2/quality/forms/surveys/{formId} | Delete a survey form. |
-| [**GetAnalyticsEvaluationsAggregatesJob**](QualityApi.html#getanalyticsevaluationsaggregatesjob) | **GET** /api/v2/analytics/evaluations/aggregates/jobs/{jobId} | Get status for async query for evaluation aggregates |
-| [**GetAnalyticsEvaluationsAggregatesJobResults**](QualityApi.html#getanalyticsevaluationsaggregatesjobresults) | **GET** /api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsSurveysAggregatesJob**](QualityApi.html#getanalyticssurveysaggregatesjob) | **GET** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
-| [**GetAnalyticsSurveysAggregatesJobResults**](QualityApi.html#getanalyticssurveysaggregatesjobresults) | **GET** /api/v2/analytics/surveys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetQualityAgentsActivity**](QualityApi.html#getqualityagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
-| [**GetQualityCalibration**](QualityApi.html#getqualitycalibration) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id.  Requires either calibrator id or conversation id |
-| [**GetQualityCalibrations**](QualityApi.html#getqualitycalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
-| [**GetQualityConversationEvaluation**](QualityApi.html#getqualityconversationevaluation) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
-| [**GetQualityConversationSurveys**](QualityApi.html#getqualityconversationsurveys) | **GET** /api/v2/quality/conversations/{conversationId}/surveys | Get the surveys for a conversation |
-| [**GetQualityConversationsAuditsQueryTransactionId**](QualityApi.html#getqualityconversationsauditsquerytransactionid) | **GET** /api/v2/quality/conversations/audits/query/{transactionId} | Get status of audit query execution |
-| [**GetQualityConversationsAuditsQueryTransactionIdResults**](QualityApi.html#getqualityconversationsauditsquerytransactionidresults) | **GET** /api/v2/quality/conversations/audits/query/{transactionId}/results | Get results of audit query |
-| [**GetQualityEvaluationsQuery**](QualityApi.html#getqualityevaluationsquery) | **GET** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
-| [**GetQualityEvaluatorsActivity**](QualityApi.html#getqualityevaluatorsactivity) | **GET** /api/v2/quality/evaluators/activity | Get an evaluator activity |
-| [**GetQualityForm**](QualityApi.html#getqualityform) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
-| [**GetQualityFormVersions**](QualityApi.html#getqualityformversions) | **GET** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
-| [**GetQualityForms**](QualityApi.html#getqualityforms) | **GET** /api/v2/quality/forms | Get the list of evaluation forms |
-| [**GetQualityFormsEvaluation**](QualityApi.html#getqualityformsevaluation) | **GET** /api/v2/quality/forms/evaluations/{formId} | Get an evaluation form |
-| [**GetQualityFormsEvaluationVersions**](QualityApi.html#getqualityformsevaluationversions) | **GET** /api/v2/quality/forms/evaluations/{formId}/versions | Gets all the revisions for a specific evaluation. |
-| [**GetQualityFormsEvaluations**](QualityApi.html#getqualityformsevaluations) | **GET** /api/v2/quality/forms/evaluations | Get the list of evaluation forms |
-| [**GetQualityFormsEvaluationsBulkContexts**](QualityApi.html#getqualityformsevaluationsbulkcontexts) | **GET** /api/v2/quality/forms/evaluations/bulk/contexts | Retrieve a list of the latest published evaluation form versions by context ids |
-| [**GetQualityFormsSurvey**](QualityApi.html#getqualityformssurvey) | **GET** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
-| [**GetQualityFormsSurveyVersions**](QualityApi.html#getqualityformssurveyversions) | **GET** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
-| [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **GET** /api/v2/quality/forms/surveys | Get the list of survey forms |
-| [**GetQualityFormsSurveysBulk**](QualityApi.html#getqualityformssurveysbulk) | **GET** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
-| [**GetQualityFormsSurveysBulkContexts**](QualityApi.html#getqualityformssurveysbulkcontexts) | **GET** /api/v2/quality/forms/surveys/bulk/contexts | Retrieve a list of the latest form versions by context ids |
-| [**GetQualityPublishedform**](QualityApi.html#getqualitypublishedform) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
-| [**GetQualityPublishedforms**](QualityApi.html#getqualitypublishedforms) | **GET** /api/v2/quality/publishedforms | Get the published evaluation forms. |
-| [**GetQualityPublishedformsEvaluation**](QualityApi.html#getqualitypublishedformsevaluation) | **GET** /api/v2/quality/publishedforms/evaluations/{formId} | Get the most recent published version of an evaluation form. |
-| [**GetQualityPublishedformsEvaluations**](QualityApi.html#getqualitypublishedformsevaluations) | **GET** /api/v2/quality/publishedforms/evaluations | Get the published evaluation forms. |
-| [**GetQualityPublishedformsSurvey**](QualityApi.html#getqualitypublishedformssurvey) | **GET** /api/v2/quality/publishedforms/surveys/{formId} | Get the most recent published version of a survey form. |
-| [**GetQualityPublishedformsSurveys**](QualityApi.html#getqualitypublishedformssurveys) | **GET** /api/v2/quality/publishedforms/surveys | Get the published survey forms. |
-| [**GetQualitySurvey**](QualityApi.html#getqualitysurvey) | **GET** /api/v2/quality/surveys/{surveyId} | Get a survey for a conversation |
-| [**GetQualitySurveysScorable**](QualityApi.html#getqualitysurveysscorable) | **GET** /api/v2/quality/surveys/scorable | Get a survey as an end-customer, for the purposes of scoring it. |
-| [**PatchQualityFormsSurvey**](QualityApi.html#patchqualityformssurvey) | **PATCH** /api/v2/quality/forms/surveys/{formId} | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
-| [**PostAnalyticsEvaluationsAggregatesJobs**](QualityApi.html#postanalyticsevaluationsaggregatesjobs) | **POST** /api/v2/analytics/evaluations/aggregates/jobs | Query for evaluation aggregates asynchronously |
-| [**PostAnalyticsEvaluationsAggregatesQuery**](QualityApi.html#postanalyticsevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
-| [**PostAnalyticsSurveysAggregatesJobs**](QualityApi.html#postanalyticssurveysaggregatesjobs) | **POST** /api/v2/analytics/surveys/aggregates/jobs | Query for survey aggregates asynchronously |
-| [**PostAnalyticsSurveysAggregatesQuery**](QualityApi.html#postanalyticssurveysaggregatesquery) | **POST** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
-| [**PostQualityCalibrations**](QualityApi.html#postqualitycalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
-| [**PostQualityConversationEvaluations**](QualityApi.html#postqualityconversationevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
-| [**PostQualityConversationsAuditsQuery**](QualityApi.html#postqualityconversationsauditsquery) | **POST** /api/v2/quality/conversations/audits/query | Create audit query execution |
-| [**PostQualityEvaluationsAggregatesQueryMe**](QualityApi.html#postqualityevaluationsaggregatesqueryme) | **POST** /api/v2/quality/evaluations/aggregates/query/me | Query for evaluation aggregates for the current user |
-| [**PostQualityEvaluationsScoring**](QualityApi.html#postqualityevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
-| [**PostQualityForms**](QualityApi.html#postqualityforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
-| [**PostQualityFormsEvaluations**](QualityApi.html#postqualityformsevaluations) | **POST** /api/v2/quality/forms/evaluations | Create an evaluation form. |
-| [**PostQualityFormsSurveys**](QualityApi.html#postqualityformssurveys) | **POST** /api/v2/quality/forms/surveys | Create a survey form. |
-| [**PostQualityPublishedforms**](QualityApi.html#postqualitypublishedforms) | **POST** /api/v2/quality/publishedforms | Publish an evaluation form. |
-| [**PostQualityPublishedformsEvaluations**](QualityApi.html#postqualitypublishedformsevaluations) | **POST** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
-| [**PostQualityPublishedformsSurveys**](QualityApi.html#postqualitypublishedformssurveys) | **POST** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
-| [**PostQualitySurveysScoring**](QualityApi.html#postqualitysurveysscoring) | **POST** /api/v2/quality/surveys/scoring | Score survey |
-| [**PutQualityCalibration**](QualityApi.html#putqualitycalibration) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
-| [**PutQualityConversationEvaluation**](QualityApi.html#putqualityconversationevaluation) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
-| [**PutQualityForm**](QualityApi.html#putqualityform) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
-| [**PutQualityFormsEvaluation**](QualityApi.html#putqualityformsevaluation) | **PUT** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
-| [**PutQualityFormsSurvey**](QualityApi.html#putqualityformssurvey) | **PUT** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
-| [**PutQualitySurveysScorable**](QualityApi.html#putqualitysurveysscorable) | **PUT** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
+| [**DeleteQualityCalibration**](QualityApi.html#deletequalitycalibration) | **Delete** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
+| [**DeleteQualityConversationEvaluation**](QualityApi.html#deletequalityconversationevaluation) | **Delete** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
+| [**DeleteQualityForm**](QualityApi.html#deletequalityform) | **Delete** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
+| [**DeleteQualityFormsEvaluation**](QualityApi.html#deletequalityformsevaluation) | **Delete** /api/v2/quality/forms/evaluations/{formId} | Delete an evaluation form. |
+| [**DeleteQualityFormsSurvey**](QualityApi.html#deletequalityformssurvey) | **Delete** /api/v2/quality/forms/surveys/{formId} | Delete a survey form. |
+| [**GetAnalyticsEvaluationsAggregatesJob**](QualityApi.html#getanalyticsevaluationsaggregatesjob) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId} | Get status for async query for evaluation aggregates |
+| [**GetAnalyticsEvaluationsAggregatesJobResults**](QualityApi.html#getanalyticsevaluationsaggregatesjobresults) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsSurveysAggregatesJob**](QualityApi.html#getanalyticssurveysaggregatesjob) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
+| [**GetAnalyticsSurveysAggregatesJobResults**](QualityApi.html#getanalyticssurveysaggregatesjobresults) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetQualityAgentsActivity**](QualityApi.html#getqualityagentsactivity) | **Get** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
+| [**GetQualityCalibration**](QualityApi.html#getqualitycalibration) | **Get** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id.  Requires either calibrator id or conversation id |
+| [**GetQualityCalibrations**](QualityApi.html#getqualitycalibrations) | **Get** /api/v2/quality/calibrations | Get the list of calibrations |
+| [**GetQualityConversationEvaluation**](QualityApi.html#getqualityconversationevaluation) | **Get** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
+| [**GetQualityConversationSurveys**](QualityApi.html#getqualityconversationsurveys) | **Get** /api/v2/quality/conversations/{conversationId}/surveys | Get the surveys for a conversation |
+| [**GetQualityConversationsAuditsQueryTransactionId**](QualityApi.html#getqualityconversationsauditsquerytransactionid) | **Get** /api/v2/quality/conversations/audits/query/{transactionId} | Get status of audit query execution |
+| [**GetQualityConversationsAuditsQueryTransactionIdResults**](QualityApi.html#getqualityconversationsauditsquerytransactionidresults) | **Get** /api/v2/quality/conversations/audits/query/{transactionId}/results | Get results of audit query |
+| [**GetQualityEvaluationsQuery**](QualityApi.html#getqualityevaluationsquery) | **Get** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
+| [**GetQualityEvaluatorsActivity**](QualityApi.html#getqualityevaluatorsactivity) | **Get** /api/v2/quality/evaluators/activity | Get an evaluator activity |
+| [**GetQualityForm**](QualityApi.html#getqualityform) | **Get** /api/v2/quality/forms/{formId} | Get an evaluation form |
+| [**GetQualityFormVersions**](QualityApi.html#getqualityformversions) | **Get** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
+| [**GetQualityForms**](QualityApi.html#getqualityforms) | **Get** /api/v2/quality/forms | Get the list of evaluation forms |
+| [**GetQualityFormsEvaluation**](QualityApi.html#getqualityformsevaluation) | **Get** /api/v2/quality/forms/evaluations/{formId} | Get an evaluation form |
+| [**GetQualityFormsEvaluationVersions**](QualityApi.html#getqualityformsevaluationversions) | **Get** /api/v2/quality/forms/evaluations/{formId}/versions | Gets all the revisions for a specific evaluation. |
+| [**GetQualityFormsEvaluations**](QualityApi.html#getqualityformsevaluations) | **Get** /api/v2/quality/forms/evaluations | Get the list of evaluation forms |
+| [**GetQualityFormsEvaluationsBulkContexts**](QualityApi.html#getqualityformsevaluationsbulkcontexts) | **Get** /api/v2/quality/forms/evaluations/bulk/contexts | Retrieve a list of the latest published evaluation form versions by context ids |
+| [**GetQualityFormsSurvey**](QualityApi.html#getqualityformssurvey) | **Get** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
+| [**GetQualityFormsSurveyVersions**](QualityApi.html#getqualityformssurveyversions) | **Get** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
+| [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **Get** /api/v2/quality/forms/surveys | Get the list of survey forms |
+| [**GetQualityFormsSurveysBulk**](QualityApi.html#getqualityformssurveysbulk) | **Get** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
+| [**GetQualityFormsSurveysBulkContexts**](QualityApi.html#getqualityformssurveysbulkcontexts) | **Get** /api/v2/quality/forms/surveys/bulk/contexts | Retrieve a list of the latest form versions by context ids |
+| [**GetQualityPublishedform**](QualityApi.html#getqualitypublishedform) | **Get** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
+| [**GetQualityPublishedforms**](QualityApi.html#getqualitypublishedforms) | **Get** /api/v2/quality/publishedforms | Get the published evaluation forms. |
+| [**GetQualityPublishedformsEvaluation**](QualityApi.html#getqualitypublishedformsevaluation) | **Get** /api/v2/quality/publishedforms/evaluations/{formId} | Get the most recent published version of an evaluation form. |
+| [**GetQualityPublishedformsEvaluations**](QualityApi.html#getqualitypublishedformsevaluations) | **Get** /api/v2/quality/publishedforms/evaluations | Get the published evaluation forms. |
+| [**GetQualityPublishedformsSurvey**](QualityApi.html#getqualitypublishedformssurvey) | **Get** /api/v2/quality/publishedforms/surveys/{formId} | Get the most recent published version of a survey form. |
+| [**GetQualityPublishedformsSurveys**](QualityApi.html#getqualitypublishedformssurveys) | **Get** /api/v2/quality/publishedforms/surveys | Get the published survey forms. |
+| [**GetQualitySurvey**](QualityApi.html#getqualitysurvey) | **Get** /api/v2/quality/surveys/{surveyId} | Get a survey for a conversation |
+| [**GetQualitySurveysScorable**](QualityApi.html#getqualitysurveysscorable) | **Get** /api/v2/quality/surveys/scorable | Get a survey as an end-customer, for the purposes of scoring it. |
+| [**PatchQualityFormsSurvey**](QualityApi.html#patchqualityformssurvey) | **Patch** /api/v2/quality/forms/surveys/{formId} | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
+| [**PostAnalyticsEvaluationsAggregatesJobs**](QualityApi.html#postanalyticsevaluationsaggregatesjobs) | **Post** /api/v2/analytics/evaluations/aggregates/jobs | Query for evaluation aggregates asynchronously |
+| [**PostAnalyticsEvaluationsAggregatesQuery**](QualityApi.html#postanalyticsevaluationsaggregatesquery) | **Post** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
+| [**PostAnalyticsSurveysAggregatesJobs**](QualityApi.html#postanalyticssurveysaggregatesjobs) | **Post** /api/v2/analytics/surveys/aggregates/jobs | Query for survey aggregates asynchronously |
+| [**PostAnalyticsSurveysAggregatesQuery**](QualityApi.html#postanalyticssurveysaggregatesquery) | **Post** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
+| [**PostQualityCalibrations**](QualityApi.html#postqualitycalibrations) | **Post** /api/v2/quality/calibrations | Create a calibration |
+| [**PostQualityConversationEvaluations**](QualityApi.html#postqualityconversationevaluations) | **Post** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
+| [**PostQualityConversationsAuditsQuery**](QualityApi.html#postqualityconversationsauditsquery) | **Post** /api/v2/quality/conversations/audits/query | Create audit query execution |
+| [**PostQualityEvaluationsAggregatesQueryMe**](QualityApi.html#postqualityevaluationsaggregatesqueryme) | **Post** /api/v2/quality/evaluations/aggregates/query/me | Query for evaluation aggregates for the current user |
+| [**PostQualityEvaluationsScoring**](QualityApi.html#postqualityevaluationsscoring) | **Post** /api/v2/quality/evaluations/scoring | Score evaluation |
+| [**PostQualityForms**](QualityApi.html#postqualityforms) | **Post** /api/v2/quality/forms | Create an evaluation form. |
+| [**PostQualityFormsEvaluations**](QualityApi.html#postqualityformsevaluations) | **Post** /api/v2/quality/forms/evaluations | Create an evaluation form. |
+| [**PostQualityFormsSurveys**](QualityApi.html#postqualityformssurveys) | **Post** /api/v2/quality/forms/surveys | Create a survey form. |
+| [**PostQualityPublishedforms**](QualityApi.html#postqualitypublishedforms) | **Post** /api/v2/quality/publishedforms | Publish an evaluation form. |
+| [**PostQualityPublishedformsEvaluations**](QualityApi.html#postqualitypublishedformsevaluations) | **Post** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
+| [**PostQualityPublishedformsSurveys**](QualityApi.html#postqualitypublishedformssurveys) | **Post** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
+| [**PostQualitySurveysScoring**](QualityApi.html#postqualitysurveysscoring) | **Post** /api/v2/quality/surveys/scoring | Score survey |
+| [**PutQualityCalibration**](QualityApi.html#putqualitycalibration) | **Put** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
+| [**PutQualityConversationEvaluation**](QualityApi.html#putqualityconversationevaluation) | **Put** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
+| [**PutQualityForm**](QualityApi.html#putqualityform) | **Put** /api/v2/quality/forms/{formId} | Update an evaluation form. |
+| [**PutQualityFormsEvaluation**](QualityApi.html#putqualityformsevaluation) | **Put** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
+| [**PutQualityFormsSurvey**](QualityApi.html#putqualityformssurvey) | **Put** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
+| [**PutQualitySurveysScorable**](QualityApi.html#putqualitysurveysscorable) | **Put** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table table-striped"}
 
 <a name="deletequalitycalibration"></a>

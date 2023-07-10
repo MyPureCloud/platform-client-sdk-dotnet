@@ -7,11 +7,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteMobiledevice**](MobileDevicesApi.html#deletemobiledevice) | **DELETE** /api/v2/mobiledevices/{deviceId} | Delete device |
-| [**GetMobiledevice**](MobileDevicesApi.html#getmobiledevice) | **GET** /api/v2/mobiledevices/{deviceId} | Get device |
-| [**GetMobiledevices**](MobileDevicesApi.html#getmobiledevices) | **GET** /api/v2/mobiledevices | Get a list of all devices. |
-| [**PostMobiledevices**](MobileDevicesApi.html#postmobiledevices) | **POST** /api/v2/mobiledevices | Create User device |
-| [**PutMobiledevice**](MobileDevicesApi.html#putmobiledevice) | **PUT** /api/v2/mobiledevices/{deviceId} | Update device |
+| [**DeleteMobiledevice**](MobileDevicesApi.html#deletemobiledevice) | **Delete** /api/v2/mobiledevices/{deviceId} | Delete device |
+| [**GetMobiledevice**](MobileDevicesApi.html#getmobiledevice) | **Get** /api/v2/mobiledevices/{deviceId} | Get device |
+| [**GetMobiledevices**](MobileDevicesApi.html#getmobiledevices) | **Get** /api/v2/mobiledevices | Get a list of all devices. |
+| [**PostMobiledevices**](MobileDevicesApi.html#postmobiledevices) | **Post** /api/v2/mobiledevices | Create User device |
+| [**PutMobiledevice**](MobileDevicesApi.html#putmobiledevice) | **Put** /api/v2/mobiledevices/{deviceId} | Update device |
 {: class="table table-striped"}
 
 <a name="deletemobiledevice"></a>

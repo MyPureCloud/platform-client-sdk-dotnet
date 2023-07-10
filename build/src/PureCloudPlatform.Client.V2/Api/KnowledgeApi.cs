@@ -4542,7 +4542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <value>The base path</value>
         public String GetBasePath()
         {
-            return this.Configuration.ApiClient.RestClient.BaseUrl.ToString();
+            return this.Configuration.ApiClient.RestClient.Options.BaseUrl.ToString();
         }
 
         /// <summary>
@@ -4661,13 +4661,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4761,13 +4763,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4866,13 +4870,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -4973,13 +4979,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5077,13 +5085,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5183,13 +5193,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5293,13 +5305,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5406,13 +5420,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5510,13 +5526,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseExportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5616,13 +5634,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseExportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5720,13 +5740,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseImportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5826,13 +5848,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseImportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -5931,13 +5955,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6038,13 +6064,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6149,13 +6177,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseLanguageCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6263,13 +6293,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseLanguageCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6374,13 +6406,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseLanguageDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6488,13 +6522,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseLanguageDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6598,13 +6634,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseLanguageDocumentsImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6711,13 +6749,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeKnowledgebaseLanguageDocumentsImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6830,13 +6870,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeGuestSessionCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -6950,13 +6992,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeGuestSessionCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7048,13 +7092,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeGuestSessionDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7148,13 +7194,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeGuestSessionDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7246,13 +7294,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeGuestSessionDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7345,13 +7395,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeGuestSessionDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7444,13 +7496,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7544,13 +7598,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7670,13 +7726,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7797,13 +7855,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -7902,13 +7962,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8009,13 +8071,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8120,13 +8184,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8233,13 +8299,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8347,13 +8415,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8464,13 +8534,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8581,13 +8653,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVariations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8700,13 +8774,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVariations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8814,13 +8890,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -8931,13 +9009,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9048,13 +9128,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVersionVariation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9169,13 +9251,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVersionVariation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9289,13 +9373,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVersionVariations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9412,13 +9498,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVersionVariations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9529,13 +9617,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9648,13 +9738,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9780,13 +9872,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -9913,13 +10007,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10018,13 +10114,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseExportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10125,13 +10223,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseExportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10230,13 +10330,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseImportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10337,13 +10439,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseImportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10442,13 +10546,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10549,13 +10655,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10663,13 +10771,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLabels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10778,13 +10888,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLabels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -10898,13 +11010,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11020,13 +11134,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11131,13 +11247,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11245,13 +11363,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11356,13 +11476,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11470,13 +11592,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11589,13 +11713,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageDocumentUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11712,13 +11838,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageDocumentUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11844,13 +11972,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -11978,13 +12108,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12089,13 +12221,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageDocumentsImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12203,13 +12337,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageDocumentsImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12314,13 +12450,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageTraining: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12428,13 +12566,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageTraining: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12548,13 +12688,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageTrainings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12670,13 +12812,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseLanguageTrainings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12778,13 +12922,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUnansweredGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -12888,13 +13034,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUnansweredGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13002,13 +13150,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13119,13 +13269,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13221,13 +13373,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUnansweredGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13324,13 +13478,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUnansweredGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13444,13 +13600,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebases: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13564,13 +13722,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebases: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13672,13 +13832,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeGuestSessionDocumentsSearchSearchId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13783,13 +13945,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeGuestSessionDocumentsSearchSearchId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -13893,13 +14057,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14005,13 +14171,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14121,13 +14289,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14240,13 +14410,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14356,13 +14528,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14475,13 +14649,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14597,13 +14773,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14723,13 +14901,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentVariation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14835,13 +15015,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentsSearchSearchId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -14949,13 +15131,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentsSearchSearchId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15065,13 +15249,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseImportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15184,13 +15370,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseImportJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15300,13 +15488,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15419,13 +15609,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15541,13 +15733,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLanguageCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15667,13 +15861,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLanguageCategory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15789,13 +15985,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLanguageDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -15915,13 +16113,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLanguageDocument: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16031,13 +16231,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLanguageDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16150,13 +16352,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLanguageDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16272,13 +16476,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLanguageDocumentsImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16398,13 +16604,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseLanguageDocumentsImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16520,13 +16728,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16646,13 +16856,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16750,13 +16962,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeDocumentuploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16855,13 +17069,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeDocumentuploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -16958,13 +17174,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessionDocumentsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17062,13 +17280,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessionDocumentsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17162,13 +17382,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessionDocumentsSearchSuggestions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17263,13 +17485,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessionDocumentsSearchSuggestions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17360,13 +17584,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17458,13 +17684,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17568,13 +17796,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17680,13 +17910,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17796,13 +18028,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentVariations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -17915,13 +18149,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentVariations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18031,13 +18267,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18150,13 +18388,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18260,13 +18500,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18372,13 +18614,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18484,13 +18728,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18598,13 +18844,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18710,13 +18958,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18824,13 +19074,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -18934,13 +19186,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19045,13 +19299,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19152,13 +19408,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsSearchSuggestions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19260,13 +19518,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsSearchSuggestions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19372,13 +19632,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19486,13 +19748,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19596,13 +19860,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseExportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19708,13 +19974,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseExportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19818,13 +20086,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseImportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -19930,13 +20200,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseImportJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20040,13 +20312,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLabels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20152,13 +20426,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLabels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20268,13 +20544,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20387,13 +20665,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageCategories: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20511,13 +20791,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageDocumentUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20639,13 +20921,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageDocumentUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20755,13 +21039,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20874,13 +21160,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageDocuments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -20990,13 +21278,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageDocumentsImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21109,13 +21399,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageDocumentsImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21220,13 +21512,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageTrainingPromote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21334,13 +21628,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageTrainingPromote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21439,13 +21735,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageTrainings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21546,13 +21844,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseLanguageTrainings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21653,13 +21953,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21761,13 +22063,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21865,13 +22169,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebases: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
@@ -21970,13 +22276,15 @@ namespace PureCloudPlatform.Client.V2.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebases: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);

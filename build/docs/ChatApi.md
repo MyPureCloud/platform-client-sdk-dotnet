@@ -7,12 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetChatSettings**](ChatApi.html#getchatsettings) | **GET** /api/v2/chat/settings | Get Chat Settings. |
-| [**GetChatsSettings**](ChatApi.html#getchatssettings) | **GET** /api/v2/chats/settings | Get Chat Settings. |
-| [**PatchChatSettings**](ChatApi.html#patchchatsettings) | **PATCH** /api/v2/chat/settings | Patch Chat Settings. |
-| [**PatchChatsSettings**](ChatApi.html#patchchatssettings) | **PATCH** /api/v2/chats/settings | Patch Chat Settings. |
-| [**PutChatSettings**](ChatApi.html#putchatsettings) | **PUT** /api/v2/chat/settings | Update Chat Settings. |
-| [**PutChatsSettings**](ChatApi.html#putchatssettings) | **PUT** /api/v2/chats/settings | Update Chat Settings. |
+| [**GetChatSettings**](ChatApi.html#getchatsettings) | **Get** /api/v2/chat/settings | Get Chat Settings. |
+| [**GetChatsSettings**](ChatApi.html#getchatssettings) | **Get** /api/v2/chats/settings | Get Chat Settings. |
+| [**PatchChatSettings**](ChatApi.html#patchchatsettings) | **Patch** /api/v2/chat/settings | Patch Chat Settings. |
+| [**PatchChatsSettings**](ChatApi.html#patchchatssettings) | **Patch** /api/v2/chats/settings | Patch Chat Settings. |
+| [**PutChatSettings**](ChatApi.html#putchatsettings) | **Put** /api/v2/chat/settings | Update Chat Settings. |
+| [**PutChatsSettings**](ChatApi.html#putchatssettings) | **Put** /api/v2/chats/settings | Update Chat Settings. |
 {: class="table table-striped"}
 
 <a name="getchatsettings"></a>

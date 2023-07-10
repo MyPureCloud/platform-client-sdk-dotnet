@@ -7,11 +7,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteMessagingSupportedcontentSupportedContentId**](MessagingApi.html#deletemessagingsupportedcontentsupportedcontentid) | **DELETE** /api/v2/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
-| [**GetMessagingSupportedcontent**](MessagingApi.html#getmessagingsupportedcontent) | **GET** /api/v2/messaging/supportedcontent | Get a list of Supported Content profiles |
-| [**GetMessagingSupportedcontentSupportedContentId**](MessagingApi.html#getmessagingsupportedcontentsupportedcontentid) | **GET** /api/v2/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
-| [**PatchMessagingSupportedcontentSupportedContentId**](MessagingApi.html#patchmessagingsupportedcontentsupportedcontentid) | **PATCH** /api/v2/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
-| [**PostMessagingSupportedcontent**](MessagingApi.html#postmessagingsupportedcontent) | **POST** /api/v2/messaging/supportedcontent | Create a Supported Content profile |
+| [**DeleteMessagingSupportedcontentSupportedContentId**](MessagingApi.html#deletemessagingsupportedcontentsupportedcontentid) | **Delete** /api/v2/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
+| [**GetMessagingSupportedcontent**](MessagingApi.html#getmessagingsupportedcontent) | **Get** /api/v2/messaging/supportedcontent | Get a list of Supported Content profiles |
+| [**GetMessagingSupportedcontentSupportedContentId**](MessagingApi.html#getmessagingsupportedcontentsupportedcontentid) | **Get** /api/v2/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
+| [**PatchMessagingSupportedcontentSupportedContentId**](MessagingApi.html#patchmessagingsupportedcontentsupportedcontentid) | **Patch** /api/v2/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
+| [**PostMessagingSupportedcontent**](MessagingApi.html#postmessagingsupportedcontent) | **Post** /api/v2/messaging/supportedcontent | Create a Supported Content profile |
 {: class="table table-striped"}
 
 <a name="deletemessagingsupportedcontentsupportedcontentid"></a>

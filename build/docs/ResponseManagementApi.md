@@ -7,23 +7,23 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteResponsemanagementLibrary**](ResponseManagementApi.html#deleteresponsemanagementlibrary) | **DELETE** /api/v2/responsemanagement/libraries/{libraryId} | Delete an existing response library. |
-| [**DeleteResponsemanagementResponse**](ResponseManagementApi.html#deleteresponsemanagementresponse) | **DELETE** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
-| [**DeleteResponsemanagementResponseasset**](ResponseManagementApi.html#deleteresponsemanagementresponseasset) | **DELETE** /api/v2/responsemanagement/responseassets/{responseAssetId} | Delete response asset |
-| [**GetResponsemanagementLibraries**](ResponseManagementApi.html#getresponsemanagementlibraries) | **GET** /api/v2/responsemanagement/libraries | Gets a list of existing response libraries. |
-| [**GetResponsemanagementLibrary**](ResponseManagementApi.html#getresponsemanagementlibrary) | **GET** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
-| [**GetResponsemanagementResponse**](ResponseManagementApi.html#getresponsemanagementresponse) | **GET** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
-| [**GetResponsemanagementResponseasset**](ResponseManagementApi.html#getresponsemanagementresponseasset) | **GET** /api/v2/responsemanagement/responseassets/{responseAssetId} | Get response asset information |
-| [**GetResponsemanagementResponseassetsStatusStatusId**](ResponseManagementApi.html#getresponsemanagementresponseassetsstatusstatusid) | **GET** /api/v2/responsemanagement/responseassets/status/{statusId} | Get response asset upload status |
-| [**GetResponsemanagementResponses**](ResponseManagementApi.html#getresponsemanagementresponses) | **GET** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
-| [**PostResponsemanagementLibraries**](ResponseManagementApi.html#postresponsemanagementlibraries) | **POST** /api/v2/responsemanagement/libraries | Create a response library. |
-| [**PostResponsemanagementResponseassetsSearch**](ResponseManagementApi.html#postresponsemanagementresponseassetssearch) | **POST** /api/v2/responsemanagement/responseassets/search | Search response assets |
-| [**PostResponsemanagementResponseassetsUploads**](ResponseManagementApi.html#postresponsemanagementresponseassetsuploads) | **POST** /api/v2/responsemanagement/responseassets/uploads | Creates pre-signed url for uploading response asset |
-| [**PostResponsemanagementResponses**](ResponseManagementApi.html#postresponsemanagementresponses) | **POST** /api/v2/responsemanagement/responses | Create a response. |
-| [**PostResponsemanagementResponsesQuery**](ResponseManagementApi.html#postresponsemanagementresponsesquery) | **POST** /api/v2/responsemanagement/responses/query | Query responses |
-| [**PutResponsemanagementLibrary**](ResponseManagementApi.html#putresponsemanagementlibrary) | **PUT** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
-| [**PutResponsemanagementResponse**](ResponseManagementApi.html#putresponsemanagementresponse) | **PUT** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
-| [**PutResponsemanagementResponseasset**](ResponseManagementApi.html#putresponsemanagementresponseasset) | **PUT** /api/v2/responsemanagement/responseassets/{responseAssetId} | Update response asset |
+| [**DeleteResponsemanagementLibrary**](ResponseManagementApi.html#deleteresponsemanagementlibrary) | **Delete** /api/v2/responsemanagement/libraries/{libraryId} | Delete an existing response library. |
+| [**DeleteResponsemanagementResponse**](ResponseManagementApi.html#deleteresponsemanagementresponse) | **Delete** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
+| [**DeleteResponsemanagementResponseasset**](ResponseManagementApi.html#deleteresponsemanagementresponseasset) | **Delete** /api/v2/responsemanagement/responseassets/{responseAssetId} | Delete response asset |
+| [**GetResponsemanagementLibraries**](ResponseManagementApi.html#getresponsemanagementlibraries) | **Get** /api/v2/responsemanagement/libraries | Gets a list of existing response libraries. |
+| [**GetResponsemanagementLibrary**](ResponseManagementApi.html#getresponsemanagementlibrary) | **Get** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
+| [**GetResponsemanagementResponse**](ResponseManagementApi.html#getresponsemanagementresponse) | **Get** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
+| [**GetResponsemanagementResponseasset**](ResponseManagementApi.html#getresponsemanagementresponseasset) | **Get** /api/v2/responsemanagement/responseassets/{responseAssetId} | Get response asset information |
+| [**GetResponsemanagementResponseassetsStatusStatusId**](ResponseManagementApi.html#getresponsemanagementresponseassetsstatusstatusid) | **Get** /api/v2/responsemanagement/responseassets/status/{statusId} | Get response asset upload status |
+| [**GetResponsemanagementResponses**](ResponseManagementApi.html#getresponsemanagementresponses) | **Get** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
+| [**PostResponsemanagementLibraries**](ResponseManagementApi.html#postresponsemanagementlibraries) | **Post** /api/v2/responsemanagement/libraries | Create a response library. |
+| [**PostResponsemanagementResponseassetsSearch**](ResponseManagementApi.html#postresponsemanagementresponseassetssearch) | **Post** /api/v2/responsemanagement/responseassets/search | Search response assets |
+| [**PostResponsemanagementResponseassetsUploads**](ResponseManagementApi.html#postresponsemanagementresponseassetsuploads) | **Post** /api/v2/responsemanagement/responseassets/uploads | Creates pre-signed url for uploading response asset |
+| [**PostResponsemanagementResponses**](ResponseManagementApi.html#postresponsemanagementresponses) | **Post** /api/v2/responsemanagement/responses | Create a response. |
+| [**PostResponsemanagementResponsesQuery**](ResponseManagementApi.html#postresponsemanagementresponsesquery) | **Post** /api/v2/responsemanagement/responses/query | Query responses |
+| [**PutResponsemanagementLibrary**](ResponseManagementApi.html#putresponsemanagementlibrary) | **Put** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
+| [**PutResponsemanagementResponse**](ResponseManagementApi.html#putresponsemanagementresponse) | **Put** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
+| [**PutResponsemanagementResponseasset**](ResponseManagementApi.html#putresponsemanagementresponseasset) | **Put** /api/v2/responsemanagement/responseassets/{responseAssetId} | Update response asset |
 {: class="table table-striped"}
 
 <a name="deleteresponsemanagementlibrary"></a>

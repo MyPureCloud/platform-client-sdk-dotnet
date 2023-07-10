@@ -7,14 +7,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteNotificationsChannelSubscriptions**](NotificationsApi.html#deletenotificationschannelsubscriptions) | **DELETE** /api/v2/notifications/channels/{channelId}/subscriptions | Remove all subscriptions |
-| [**GetNotificationsAvailabletopics**](NotificationsApi.html#getnotificationsavailabletopics) | **GET** /api/v2/notifications/availabletopics | Get available notification topics. |
-| [**GetNotificationsChannelSubscriptions**](NotificationsApi.html#getnotificationschannelsubscriptions) | **GET** /api/v2/notifications/channels/{channelId}/subscriptions | The list of all subscriptions for this channel |
-| [**GetNotificationsChannels**](NotificationsApi.html#getnotificationschannels) | **GET** /api/v2/notifications/channels | The list of existing channels |
-| [**HeadNotificationsChannel**](NotificationsApi.html#headnotificationschannel) | **HEAD** /api/v2/notifications/channels/{channelId} | Verify a channel still exists and is valid |
-| [**PostNotificationsChannelSubscriptions**](NotificationsApi.html#postnotificationschannelsubscriptions) | **POST** /api/v2/notifications/channels/{channelId}/subscriptions | Add a list of subscriptions to the existing list of subscriptions |
-| [**PostNotificationsChannels**](NotificationsApi.html#postnotificationschannels) | **POST** /api/v2/notifications/channels | Create a new channel |
-| [**PutNotificationsChannelSubscriptions**](NotificationsApi.html#putnotificationschannelsubscriptions) | **PUT** /api/v2/notifications/channels/{channelId}/subscriptions | Replace the current list of subscriptions with a new list. |
+| [**DeleteNotificationsChannelSubscriptions**](NotificationsApi.html#deletenotificationschannelsubscriptions) | **Delete** /api/v2/notifications/channels/{channelId}/subscriptions | Remove all subscriptions |
+| [**GetNotificationsAvailabletopics**](NotificationsApi.html#getnotificationsavailabletopics) | **Get** /api/v2/notifications/availabletopics | Get available notification topics. |
+| [**GetNotificationsChannelSubscriptions**](NotificationsApi.html#getnotificationschannelsubscriptions) | **Get** /api/v2/notifications/channels/{channelId}/subscriptions | The list of all subscriptions for this channel |
+| [**GetNotificationsChannels**](NotificationsApi.html#getnotificationschannels) | **Get** /api/v2/notifications/channels | The list of existing channels |
+| [**HeadNotificationsChannel**](NotificationsApi.html#headnotificationschannel) | **Head** /api/v2/notifications/channels/{channelId} | Verify a channel still exists and is valid |
+| [**PostNotificationsChannelSubscriptions**](NotificationsApi.html#postnotificationschannelsubscriptions) | **Post** /api/v2/notifications/channels/{channelId}/subscriptions | Add a list of subscriptions to the existing list of subscriptions |
+| [**PostNotificationsChannels**](NotificationsApi.html#postnotificationschannels) | **Post** /api/v2/notifications/channels | Create a new channel |
+| [**PutNotificationsChannelSubscriptions**](NotificationsApi.html#putnotificationschannelsubscriptions) | **Put** /api/v2/notifications/channels/{channelId}/subscriptions | Replace the current list of subscriptions with a new list. |
 {: class="table table-striped"}
 
 <a name="deletenotificationschannelsubscriptions"></a>

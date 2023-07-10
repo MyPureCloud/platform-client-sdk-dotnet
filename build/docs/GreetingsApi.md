@@ -7,22 +7,22 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteGreeting**](GreetingsApi.html#deletegreeting) | **DELETE** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
-| [**GetGreeting**](GreetingsApi.html#getgreeting) | **GET** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
-| [**GetGreetingMedia**](GreetingsApi.html#getgreetingmedia) | **GET** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
-| [**GetGreetings**](GreetingsApi.html#getgreetings) | **GET** /api/v2/greetings | Gets an Organization&#39;s Greetings |
-| [**GetGreetingsDefaults**](GreetingsApi.html#getgreetingsdefaults) | **GET** /api/v2/greetings/defaults | Get an Organization&#39;s DefaultGreetingList |
-| [**GetGroupGreetings**](GreetingsApi.html#getgroupgreetings) | **GET** /api/v2/groups/{groupId}/greetings | Get a list of the Group&#39;s Greetings |
-| [**GetGroupGreetingsDefaults**](GreetingsApi.html#getgroupgreetingsdefaults) | **GET** /api/v2/groups/{groupId}/greetings/defaults | Grabs the list of Default Greetings given a Group&#39;s ID |
-| [**GetUserGreetings**](GreetingsApi.html#getusergreetings) | **GET** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
-| [**GetUserGreetingsDefaults**](GreetingsApi.html#getusergreetingsdefaults) | **GET** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
-| [**PostGreetings**](GreetingsApi.html#postgreetings) | **POST** /api/v2/greetings | Create a Greeting for an Organization |
-| [**PostGroupGreetings**](GreetingsApi.html#postgroupgreetings) | **POST** /api/v2/groups/{groupId}/greetings | Creates a Greeting for a Group |
-| [**PostUserGreetings**](GreetingsApi.html#postusergreetings) | **POST** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
-| [**PutGreeting**](GreetingsApi.html#putgreeting) | **PUT** /api/v2/greetings/{greetingId} | Updates the Greeting with the given GreetingId |
-| [**PutGreetingsDefaults**](GreetingsApi.html#putgreetingsdefaults) | **PUT** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
-| [**PutGroupGreetingsDefaults**](GreetingsApi.html#putgroupgreetingsdefaults) | **PUT** /api/v2/groups/{groupId}/greetings/defaults | Updates the DefaultGreetingList of the specified Group |
-| [**PutUserGreetingsDefaults**](GreetingsApi.html#putusergreetingsdefaults) | **PUT** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
+| [**DeleteGreeting**](GreetingsApi.html#deletegreeting) | **Delete** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
+| [**GetGreeting**](GreetingsApi.html#getgreeting) | **Get** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
+| [**GetGreetingMedia**](GreetingsApi.html#getgreetingmedia) | **Get** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
+| [**GetGreetings**](GreetingsApi.html#getgreetings) | **Get** /api/v2/greetings | Gets an Organization&#39;s Greetings |
+| [**GetGreetingsDefaults**](GreetingsApi.html#getgreetingsdefaults) | **Get** /api/v2/greetings/defaults | Get an Organization&#39;s DefaultGreetingList |
+| [**GetGroupGreetings**](GreetingsApi.html#getgroupgreetings) | **Get** /api/v2/groups/{groupId}/greetings | Get a list of the Group&#39;s Greetings |
+| [**GetGroupGreetingsDefaults**](GreetingsApi.html#getgroupgreetingsdefaults) | **Get** /api/v2/groups/{groupId}/greetings/defaults | Grabs the list of Default Greetings given a Group&#39;s ID |
+| [**GetUserGreetings**](GreetingsApi.html#getusergreetings) | **Get** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
+| [**GetUserGreetingsDefaults**](GreetingsApi.html#getusergreetingsdefaults) | **Get** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
+| [**PostGreetings**](GreetingsApi.html#postgreetings) | **Post** /api/v2/greetings | Create a Greeting for an Organization |
+| [**PostGroupGreetings**](GreetingsApi.html#postgroupgreetings) | **Post** /api/v2/groups/{groupId}/greetings | Creates a Greeting for a Group |
+| [**PostUserGreetings**](GreetingsApi.html#postusergreetings) | **Post** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
+| [**PutGreeting**](GreetingsApi.html#putgreeting) | **Put** /api/v2/greetings/{greetingId} | Updates the Greeting with the given GreetingId |
+| [**PutGreetingsDefaults**](GreetingsApi.html#putgreetingsdefaults) | **Put** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
+| [**PutGroupGreetingsDefaults**](GreetingsApi.html#putgroupgreetingsdefaults) | **Put** /api/v2/groups/{groupId}/greetings/defaults | Updates the DefaultGreetingList of the specified Group |
+| [**PutUserGreetingsDefaults**](GreetingsApi.html#putusergreetingsdefaults) | **Put** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
 {: class="table table-striped"}
 
 <a name="deletegreeting"></a>

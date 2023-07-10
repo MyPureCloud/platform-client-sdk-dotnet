@@ -7,94 +7,94 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAnalyticsUsersDetailsJob**](UsersApi.html#deleteanalyticsusersdetailsjob) | **DELETE** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
-| [**DeleteAuthorizationSubjectDivisionRole**](UsersApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
-| [**DeleteRoutingUserUtilization**](UsersApi.html#deleteroutinguserutilization) | **DELETE** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
-| [**DeleteUser**](UsersApi.html#deleteuser) | **DELETE** /api/v2/users/{userId} | Delete user |
-| [**DeleteUserRoutinglanguage**](UsersApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
-| [**DeleteUserRoutingskill**](UsersApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
-| [**DeleteUserStationAssociatedstation**](UsersApi.html#deleteuserstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
-| [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
-| [**GetAnalyticsUsersAggregatesJob**](UsersApi.html#getanalyticsusersaggregatesjob) | **GET** /api/v2/analytics/users/aggregates/jobs/{jobId} | Get status for async query for user aggregates |
-| [**GetAnalyticsUsersAggregatesJobResults**](UsersApi.html#getanalyticsusersaggregatesjobresults) | **GET** /api/v2/analytics/users/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsUsersDetailsJob**](UsersApi.html#getanalyticsusersdetailsjob) | **GET** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
-| [**GetAnalyticsUsersDetailsJobResults**](UsersApi.html#getanalyticsusersdetailsjobresults) | **GET** /api/v2/analytics/users/details/jobs/{jobId}/results | Fetch a page of results for an async query |
-| [**GetAnalyticsUsersDetailsJobsAvailability**](UsersApi.html#getanalyticsusersdetailsjobsavailability) | **GET** /api/v2/analytics/users/details/jobs/availability | Lookup the datalake availability date and time |
-| [**GetAuthorizationDivisionspermittedMe**](UsersApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
-| [**GetAuthorizationDivisionspermittedPagedMe**](UsersApi.html#getauthorizationdivisionspermittedpagedme) | **GET** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
-| [**GetAuthorizationDivisionspermittedPagedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedpagedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
-| [**GetAuthorizationSubject**](UsersApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
-| [**GetAuthorizationSubjectsMe**](UsersApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
-| [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
-| [**GetProfilesUsers**](UsersApi.html#getprofilesusers) | **GET** /api/v2/profiles/users | Get a user profile listing |
-| [**GetRoutingUserUtilization**](UsersApi.html#getroutinguserutilization) | **GET** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
-| [**GetUser**](UsersApi.html#getuser) | **GET** /api/v2/users/{userId} | Get user. |
-| [**GetUserAdjacents**](UsersApi.html#getuseradjacents) | **GET** /api/v2/users/{userId}/adjacents | Get adjacents |
-| [**GetUserCallforwarding**](UsersApi.html#getusercallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
-| [**GetUserDirectreports**](UsersApi.html#getuserdirectreports) | **GET** /api/v2/users/{userId}/directreports | Get direct reports |
-| [**GetUserFavorites**](UsersApi.html#getuserfavorites) | **GET** /api/v2/users/{userId}/favorites | Deprecated; will be revived with new contract |
-| [**GetUserGeolocation**](UsersApi.html#getusergeolocation) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
-| [**GetUserOutofoffice**](UsersApi.html#getuseroutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
-| [**GetUserProfile**](UsersApi.html#getuserprofile) | **GET** /api/v2/users/{userId}/profile | Get user profile |
-| [**GetUserProfileskills**](UsersApi.html#getuserprofileskills) | **GET** /api/v2/users/{userId}/profileskills | List profile skills for a user |
-| [**GetUserQueues**](UsersApi.html#getuserqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
-| [**GetUserRoles**](UsersApi.html#getuserroles) | **GET** /api/v2/users/{subjectId}/roles | Returns a listing of roles and permissions for a user. |
-| [**GetUserRoutinglanguages**](UsersApi.html#getuserroutinglanguages) | **GET** /api/v2/users/{userId}/routinglanguages | List routing language for user |
-| [**GetUserRoutingskills**](UsersApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
-| [**GetUserRoutingstatus**](UsersApi.html#getuserroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
-| [**GetUserSkillgroups**](UsersApi.html#getuserskillgroups) | **GET** /api/v2/users/{userId}/skillgroups | Get skill groups for a user |
-| [**GetUserState**](UsersApi.html#getuserstate) | **GET** /api/v2/users/{userId}/state | Get user state information. |
-| [**GetUserStation**](UsersApi.html#getuserstation) | **GET** /api/v2/users/{userId}/station | Get station information for user |
-| [**GetUserSuperiors**](UsersApi.html#getusersuperiors) | **GET** /api/v2/users/{userId}/superiors | Get superiors |
-| [**GetUserTrustors**](UsersApi.html#getusertrustors) | **GET** /api/v2/users/{userId}/trustors | List the organizations that have authorized/trusted the user. |
-| [**GetUsers**](UsersApi.html#getusers) | **GET** /api/v2/users | Get the list of available users. |
-| [**GetUsersDevelopmentActivities**](UsersApi.html#getusersdevelopmentactivities) | **GET** /api/v2/users/development/activities | Get list of Development Activities |
-| [**GetUsersDevelopmentActivitiesMe**](UsersApi.html#getusersdevelopmentactivitiesme) | **GET** /api/v2/users/development/activities/me | Get list of Development Activities for current user |
-| [**GetUsersDevelopmentActivity**](UsersApi.html#getusersdevelopmentactivity) | **GET** /api/v2/users/development/activities/{activityId} | Get a Development Activity |
-| [**GetUsersMe**](UsersApi.html#getusersme) | **GET** /api/v2/users/me | Get current user details. |
-| [**GetUsersSearch**](UsersApi.html#getuserssearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
-| [**PatchUser**](UsersApi.html#patchuser) | **PATCH** /api/v2/users/{userId} | Update user |
-| [**PatchUserCallforwarding**](UsersApi.html#patchusercallforwarding) | **PATCH** /api/v2/users/{userId}/callforwarding | Patch a user&#39;s CallForwarding |
-| [**PatchUserGeolocation**](UsersApi.html#patchusergeolocation) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
-| [**PatchUserQueue**](UsersApi.html#patchuserqueue) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
-| [**PatchUserQueues**](UsersApi.html#patchuserqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
-| [**PatchUserRoutinglanguage**](UsersApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
-| [**PatchUserRoutinglanguagesBulk**](UsersApi.html#patchuserroutinglanguagesbulk) | **PATCH** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
-| [**PatchUserRoutingskillsBulk**](UsersApi.html#patchuserroutingskillsbulk) | **PATCH** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
-| [**PatchUsersBulk**](UsersApi.html#patchusersbulk) | **PATCH** /api/v2/users/bulk | Update bulk acd autoanswer on users |
-| [**PostAnalyticsUsersActivityQuery**](UsersApi.html#postanalyticsusersactivityquery) | **POST** /api/v2/analytics/users/activity/query | Query for user activity observations |
-| [**PostAnalyticsUsersAggregatesJobs**](UsersApi.html#postanalyticsusersaggregatesjobs) | **POST** /api/v2/analytics/users/aggregates/jobs | Query for user aggregates asynchronously |
-| [**PostAnalyticsUsersAggregatesQuery**](UsersApi.html#postanalyticsusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
-| [**PostAnalyticsUsersDetailsJobs**](UsersApi.html#postanalyticsusersdetailsjobs) | **POST** /api/v2/analytics/users/details/jobs | Query for user details asynchronously |
-| [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
-| [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
-| [**PostAuthorizationSubjectBulkadd**](UsersApi.html#postauthorizationsubjectbulkadd) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkadd | Bulk-grant roles and divisions to a subject. |
-| [**PostAuthorizationSubjectBulkremove**](UsersApi.html#postauthorizationsubjectbulkremove) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkremove | Bulk-remove grants from a subject. |
-| [**PostAuthorizationSubjectBulkreplace**](UsersApi.html#postauthorizationsubjectbulkreplace) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkreplace | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
-| [**PostAuthorizationSubjectDivisionRole**](UsersApi.html#postauthorizationsubjectdivisionrole) | **POST** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
-| [**PostUserExternalid**](UsersApi.html#postuserexternalid) | **POST** /api/v2/users/{userId}/externalid | Create mapping between external identifier and user. Limit 100 per entity. |
-| [**PostUserInvite**](UsersApi.html#postuserinvite) | **POST** /api/v2/users/{userId}/invite | Send an activation email to the user |
-| [**PostUserPassword**](UsersApi.html#postuserpassword) | **POST** /api/v2/users/{userId}/password | Change a users password |
-| [**PostUserRoutinglanguages**](UsersApi.html#postuserroutinglanguages) | **POST** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
-| [**PostUserRoutingskills**](UsersApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
-| [**PostUsers**](UsersApi.html#postusers) | **POST** /api/v2/users | Create user |
-| [**PostUsersDevelopmentActivitiesAggregatesQuery**](UsersApi.html#postusersdevelopmentactivitiesaggregatesquery) | **POST** /api/v2/users/development/activities/aggregates/query | Retrieve aggregated development activity data |
-| [**PostUsersMePassword**](UsersApi.html#postusersmepassword) | **POST** /api/v2/users/me/password | Change your password |
-| [**PostUsersSearch**](UsersApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
-| [**PostUsersSearchConversationTarget**](UsersApi.html#postuserssearchconversationtarget) | **POST** /api/v2/users/search/conversation/target | Search users as conversation targets |
-| [**PostUsersSearchQueuemembersManage**](UsersApi.html#postuserssearchqueuemembersmanage) | **POST** /api/v2/users/search/queuemembers/manage | Search manage queue member |
-| [**PostUsersSearchTeamsAssign**](UsersApi.html#postuserssearchteamsassign) | **POST** /api/v2/users/search/teams/assign | Search users assigned to teams |
-| [**PutRoutingUserUtilization**](UsersApi.html#putroutinguserutilization) | **PUT** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
-| [**PutUserCallforwarding**](UsersApi.html#putusercallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
-| [**PutUserOutofoffice**](UsersApi.html#putuseroutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
-| [**PutUserProfileskills**](UsersApi.html#putuserprofileskills) | **PUT** /api/v2/users/{userId}/profileskills | Update profile skills for a user |
-| [**PutUserRoles**](UsersApi.html#putuserroles) | **PUT** /api/v2/users/{subjectId}/roles | Sets the user&#39;s roles |
-| [**PutUserRoutingskill**](UsersApi.html#putuserroutingskill) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
-| [**PutUserRoutingskillsBulk**](UsersApi.html#putuserroutingskillsbulk) | **PUT** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
-| [**PutUserRoutingstatus**](UsersApi.html#putuserroutingstatus) | **PUT** /api/v2/users/{userId}/routingstatus | Update the routing status of a user |
-| [**PutUserState**](UsersApi.html#putuserstate) | **PUT** /api/v2/users/{userId}/state | Update user state information. |
-| [**PutUserStationAssociatedstationStationId**](UsersApi.html#putuserstationassociatedstationstationid) | **PUT** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
-| [**PutUserStationDefaultstationStationId**](UsersApi.html#putuserstationdefaultstationstationid) | **PUT** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
+| [**DeleteAnalyticsUsersDetailsJob**](UsersApi.html#deleteanalyticsusersdetailsjob) | **Delete** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
+| [**DeleteAuthorizationSubjectDivisionRole**](UsersApi.html#deleteauthorizationsubjectdivisionrole) | **Delete** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
+| [**DeleteRoutingUserUtilization**](UsersApi.html#deleteroutinguserutilization) | **Delete** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
+| [**DeleteUser**](UsersApi.html#deleteuser) | **Delete** /api/v2/users/{userId} | Delete user |
+| [**DeleteUserRoutinglanguage**](UsersApi.html#deleteuserroutinglanguage) | **Delete** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
+| [**DeleteUserRoutingskill**](UsersApi.html#deleteuserroutingskill) | **Delete** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
+| [**DeleteUserStationAssociatedstation**](UsersApi.html#deleteuserstationassociatedstation) | **Delete** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
+| [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **Delete** /api/v2/users/{userId}/station/defaultstation | Clear default station |
+| [**GetAnalyticsUsersAggregatesJob**](UsersApi.html#getanalyticsusersaggregatesjob) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId} | Get status for async query for user aggregates |
+| [**GetAnalyticsUsersAggregatesJobResults**](UsersApi.html#getanalyticsusersaggregatesjobresults) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsUsersDetailsJob**](UsersApi.html#getanalyticsusersdetailsjob) | **Get** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
+| [**GetAnalyticsUsersDetailsJobResults**](UsersApi.html#getanalyticsusersdetailsjobresults) | **Get** /api/v2/analytics/users/details/jobs/{jobId}/results | Fetch a page of results for an async query |
+| [**GetAnalyticsUsersDetailsJobsAvailability**](UsersApi.html#getanalyticsusersdetailsjobsavailability) | **Get** /api/v2/analytics/users/details/jobs/availability | Lookup the datalake availability date and time |
+| [**GetAuthorizationDivisionspermittedMe**](UsersApi.html#getauthorizationdivisionspermittedme) | **Get** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedPagedMe**](UsersApi.html#getauthorizationdivisionspermittedpagedme) | **Get** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedPagedSubjectId**](UsersApi.html#getauthorizationdivisionspermittedpagedsubjectid) | **Get** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
+| [**GetAuthorizationSubject**](UsersApi.html#getauthorizationsubject) | **Get** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
+| [**GetAuthorizationSubjectsMe**](UsersApi.html#getauthorizationsubjectsme) | **Get** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
+| [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **Get** /api/v2/fieldconfig | Fetch field config for an entity type |
+| [**GetProfilesUsers**](UsersApi.html#getprofilesusers) | **Get** /api/v2/profiles/users | Get a user profile listing |
+| [**GetRoutingUserUtilization**](UsersApi.html#getroutinguserutilization) | **Get** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
+| [**GetUser**](UsersApi.html#getuser) | **Get** /api/v2/users/{userId} | Get user. |
+| [**GetUserAdjacents**](UsersApi.html#getuseradjacents) | **Get** /api/v2/users/{userId}/adjacents | Get adjacents |
+| [**GetUserCallforwarding**](UsersApi.html#getusercallforwarding) | **Get** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
+| [**GetUserDirectreports**](UsersApi.html#getuserdirectreports) | **Get** /api/v2/users/{userId}/directreports | Get direct reports |
+| [**GetUserFavorites**](UsersApi.html#getuserfavorites) | **Get** /api/v2/users/{userId}/favorites | Deprecated; will be revived with new contract |
+| [**GetUserGeolocation**](UsersApi.html#getusergeolocation) | **Get** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
+| [**GetUserOutofoffice**](UsersApi.html#getuseroutofoffice) | **Get** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
+| [**GetUserProfile**](UsersApi.html#getuserprofile) | **Get** /api/v2/users/{userId}/profile | Get user profile |
+| [**GetUserProfileskills**](UsersApi.html#getuserprofileskills) | **Get** /api/v2/users/{userId}/profileskills | List profile skills for a user |
+| [**GetUserQueues**](UsersApi.html#getuserqueues) | **Get** /api/v2/users/{userId}/queues | Get queues for user |
+| [**GetUserRoles**](UsersApi.html#getuserroles) | **Get** /api/v2/users/{subjectId}/roles | Returns a listing of roles and permissions for a user. |
+| [**GetUserRoutinglanguages**](UsersApi.html#getuserroutinglanguages) | **Get** /api/v2/users/{userId}/routinglanguages | List routing language for user |
+| [**GetUserRoutingskills**](UsersApi.html#getuserroutingskills) | **Get** /api/v2/users/{userId}/routingskills | List routing skills for user |
+| [**GetUserRoutingstatus**](UsersApi.html#getuserroutingstatus) | **Get** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
+| [**GetUserSkillgroups**](UsersApi.html#getuserskillgroups) | **Get** /api/v2/users/{userId}/skillgroups | Get skill groups for a user |
+| [**GetUserState**](UsersApi.html#getuserstate) | **Get** /api/v2/users/{userId}/state | Get user state information. |
+| [**GetUserStation**](UsersApi.html#getuserstation) | **Get** /api/v2/users/{userId}/station | Get station information for user |
+| [**GetUserSuperiors**](UsersApi.html#getusersuperiors) | **Get** /api/v2/users/{userId}/superiors | Get superiors |
+| [**GetUserTrustors**](UsersApi.html#getusertrustors) | **Get** /api/v2/users/{userId}/trustors | List the organizations that have authorized/trusted the user. |
+| [**GetUsers**](UsersApi.html#getusers) | **Get** /api/v2/users | Get the list of available users. |
+| [**GetUsersDevelopmentActivities**](UsersApi.html#getusersdevelopmentactivities) | **Get** /api/v2/users/development/activities | Get list of Development Activities |
+| [**GetUsersDevelopmentActivitiesMe**](UsersApi.html#getusersdevelopmentactivitiesme) | **Get** /api/v2/users/development/activities/me | Get list of Development Activities for current user |
+| [**GetUsersDevelopmentActivity**](UsersApi.html#getusersdevelopmentactivity) | **Get** /api/v2/users/development/activities/{activityId} | Get a Development Activity |
+| [**GetUsersMe**](UsersApi.html#getusersme) | **Get** /api/v2/users/me | Get current user details. |
+| [**GetUsersSearch**](UsersApi.html#getuserssearch) | **Get** /api/v2/users/search | Search users using the q64 value returned from a previous search |
+| [**PatchUser**](UsersApi.html#patchuser) | **Patch** /api/v2/users/{userId} | Update user |
+| [**PatchUserCallforwarding**](UsersApi.html#patchusercallforwarding) | **Patch** /api/v2/users/{userId}/callforwarding | Patch a user&#39;s CallForwarding |
+| [**PatchUserGeolocation**](UsersApi.html#patchusergeolocation) | **Patch** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
+| [**PatchUserQueue**](UsersApi.html#patchuserqueue) | **Patch** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
+| [**PatchUserQueues**](UsersApi.html#patchuserqueues) | **Patch** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
+| [**PatchUserRoutinglanguage**](UsersApi.html#patchuserroutinglanguage) | **Patch** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
+| [**PatchUserRoutinglanguagesBulk**](UsersApi.html#patchuserroutinglanguagesbulk) | **Patch** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
+| [**PatchUserRoutingskillsBulk**](UsersApi.html#patchuserroutingskillsbulk) | **Patch** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
+| [**PatchUsersBulk**](UsersApi.html#patchusersbulk) | **Patch** /api/v2/users/bulk | Update bulk acd autoanswer on users |
+| [**PostAnalyticsUsersActivityQuery**](UsersApi.html#postanalyticsusersactivityquery) | **Post** /api/v2/analytics/users/activity/query | Query for user activity observations |
+| [**PostAnalyticsUsersAggregatesJobs**](UsersApi.html#postanalyticsusersaggregatesjobs) | **Post** /api/v2/analytics/users/aggregates/jobs | Query for user aggregates asynchronously |
+| [**PostAnalyticsUsersAggregatesQuery**](UsersApi.html#postanalyticsusersaggregatesquery) | **Post** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
+| [**PostAnalyticsUsersDetailsJobs**](UsersApi.html#postanalyticsusersdetailsjobs) | **Post** /api/v2/analytics/users/details/jobs | Query for user details asynchronously |
+| [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **Post** /api/v2/analytics/users/details/query | Query for user details |
+| [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **Post** /api/v2/analytics/users/observations/query | Query for user observations |
+| [**PostAuthorizationSubjectBulkadd**](UsersApi.html#postauthorizationsubjectbulkadd) | **Post** /api/v2/authorization/subjects/{subjectId}/bulkadd | Bulk-grant roles and divisions to a subject. |
+| [**PostAuthorizationSubjectBulkremove**](UsersApi.html#postauthorizationsubjectbulkremove) | **Post** /api/v2/authorization/subjects/{subjectId}/bulkremove | Bulk-remove grants from a subject. |
+| [**PostAuthorizationSubjectBulkreplace**](UsersApi.html#postauthorizationsubjectbulkreplace) | **Post** /api/v2/authorization/subjects/{subjectId}/bulkreplace | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
+| [**PostAuthorizationSubjectDivisionRole**](UsersApi.html#postauthorizationsubjectdivisionrole) | **Post** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
+| [**PostUserExternalid**](UsersApi.html#postuserexternalid) | **Post** /api/v2/users/{userId}/externalid | Create mapping between external identifier and user. Limit 100 per entity. |
+| [**PostUserInvite**](UsersApi.html#postuserinvite) | **Post** /api/v2/users/{userId}/invite | Send an activation email to the user |
+| [**PostUserPassword**](UsersApi.html#postuserpassword) | **Post** /api/v2/users/{userId}/password | Change a users password |
+| [**PostUserRoutinglanguages**](UsersApi.html#postuserroutinglanguages) | **Post** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
+| [**PostUserRoutingskills**](UsersApi.html#postuserroutingskills) | **Post** /api/v2/users/{userId}/routingskills | Add routing skill to user |
+| [**PostUsers**](UsersApi.html#postusers) | **Post** /api/v2/users | Create user |
+| [**PostUsersDevelopmentActivitiesAggregatesQuery**](UsersApi.html#postusersdevelopmentactivitiesaggregatesquery) | **Post** /api/v2/users/development/activities/aggregates/query | Retrieve aggregated development activity data |
+| [**PostUsersMePassword**](UsersApi.html#postusersmepassword) | **Post** /api/v2/users/me/password | Change your password |
+| [**PostUsersSearch**](UsersApi.html#postuserssearch) | **Post** /api/v2/users/search | Search users |
+| [**PostUsersSearchConversationTarget**](UsersApi.html#postuserssearchconversationtarget) | **Post** /api/v2/users/search/conversation/target | Search users as conversation targets |
+| [**PostUsersSearchQueuemembersManage**](UsersApi.html#postuserssearchqueuemembersmanage) | **Post** /api/v2/users/search/queuemembers/manage | Search manage queue member |
+| [**PostUsersSearchTeamsAssign**](UsersApi.html#postuserssearchteamsassign) | **Post** /api/v2/users/search/teams/assign | Search users assigned to teams |
+| [**PutRoutingUserUtilization**](UsersApi.html#putroutinguserutilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
+| [**PutUserCallforwarding**](UsersApi.html#putusercallforwarding) | **Put** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
+| [**PutUserOutofoffice**](UsersApi.html#putuseroutofoffice) | **Put** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
+| [**PutUserProfileskills**](UsersApi.html#putuserprofileskills) | **Put** /api/v2/users/{userId}/profileskills | Update profile skills for a user |
+| [**PutUserRoles**](UsersApi.html#putuserroles) | **Put** /api/v2/users/{subjectId}/roles | Sets the user&#39;s roles |
+| [**PutUserRoutingskill**](UsersApi.html#putuserroutingskill) | **Put** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
+| [**PutUserRoutingskillsBulk**](UsersApi.html#putuserroutingskillsbulk) | **Put** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
+| [**PutUserRoutingstatus**](UsersApi.html#putuserroutingstatus) | **Put** /api/v2/users/{userId}/routingstatus | Update the routing status of a user |
+| [**PutUserState**](UsersApi.html#putuserstate) | **Put** /api/v2/users/{userId}/state | Update user state information. |
+| [**PutUserStationAssociatedstationStationId**](UsersApi.html#putuserstationassociatedstationstationid) | **Put** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
+| [**PutUserStationDefaultstationStationId**](UsersApi.html#putuserstationdefaultstationstationid) | **Put** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
 {: class="table table-striped"}
 
 <a name="deleteanalyticsusersdetailsjob"></a>

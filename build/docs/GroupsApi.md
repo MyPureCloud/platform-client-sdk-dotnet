@@ -7,24 +7,24 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteGroup**](GroupsApi.html#deletegroup) | **DELETE** /api/v2/groups/{groupId} | Delete group |
-| [**DeleteGroupDynamicsettings**](GroupsApi.html#deletegroupdynamicsettings) | **DELETE** /api/v2/groups/{groupId}/dynamicsettings | Remove dynamic group definition |
-| [**DeleteGroupMembers**](GroupsApi.html#deletegroupmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
-| [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
-| [**GetGroup**](GroupsApi.html#getgroup) | **GET** /api/v2/groups/{groupId} | Get group |
-| [**GetGroupDynamicsettings**](GroupsApi.html#getgroupdynamicsettings) | **GET** /api/v2/groups/{groupId}/dynamicsettings | Get dynamic group definition |
-| [**GetGroupIndividuals**](GroupsApi.html#getgroupindividuals) | **GET** /api/v2/groups/{groupId}/individuals | Get all individuals associated with the group |
-| [**GetGroupMembers**](GroupsApi.html#getgroupmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members, includes individuals, owners, and dynamically included people |
-| [**GetGroupProfile**](GroupsApi.html#getgroupprofile) | **GET** /api/v2/groups/{groupId}/profile | Get group profile |
-| [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
-| [**GetGroupsSearch**](GroupsApi.html#getgroupssearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
-| [**GetProfilesGroups**](GroupsApi.html#getprofilesgroups) | **GET** /api/v2/profiles/groups | Get group profile listing |
-| [**PostGroupMembers**](GroupsApi.html#postgroupmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
-| [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
-| [**PostGroupsDynamicsettingsPreview**](GroupsApi.html#postgroupsdynamicsettingspreview) | **POST** /api/v2/groups/dynamicsettings/preview | Preview the number of users selected for a dynamic group definition query |
-| [**PostGroupsSearch**](GroupsApi.html#postgroupssearch) | **POST** /api/v2/groups/search | Search groups |
-| [**PutGroup**](GroupsApi.html#putgroup) | **PUT** /api/v2/groups/{groupId} | Update group |
-| [**PutGroupDynamicsettings**](GroupsApi.html#putgroupdynamicsettings) | **PUT** /api/v2/groups/{groupId}/dynamicsettings | Create / Update dynamic group definition |
+| [**DeleteGroup**](GroupsApi.html#deletegroup) | **Delete** /api/v2/groups/{groupId} | Delete group |
+| [**DeleteGroupDynamicsettings**](GroupsApi.html#deletegroupdynamicsettings) | **Delete** /api/v2/groups/{groupId}/dynamicsettings | Remove dynamic group definition |
+| [**DeleteGroupMembers**](GroupsApi.html#deletegroupmembers) | **Delete** /api/v2/groups/{groupId}/members | Remove members |
+| [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | **Get** /api/v2/fieldconfig | Fetch field config for an entity type |
+| [**GetGroup**](GroupsApi.html#getgroup) | **Get** /api/v2/groups/{groupId} | Get group |
+| [**GetGroupDynamicsettings**](GroupsApi.html#getgroupdynamicsettings) | **Get** /api/v2/groups/{groupId}/dynamicsettings | Get dynamic group definition |
+| [**GetGroupIndividuals**](GroupsApi.html#getgroupindividuals) | **Get** /api/v2/groups/{groupId}/individuals | Get all individuals associated with the group |
+| [**GetGroupMembers**](GroupsApi.html#getgroupmembers) | **Get** /api/v2/groups/{groupId}/members | Get group members, includes individuals, owners, and dynamically included people |
+| [**GetGroupProfile**](GroupsApi.html#getgroupprofile) | **Get** /api/v2/groups/{groupId}/profile | Get group profile |
+| [**GetGroups**](GroupsApi.html#getgroups) | **Get** /api/v2/groups | Get a group list |
+| [**GetGroupsSearch**](GroupsApi.html#getgroupssearch) | **Get** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
+| [**GetProfilesGroups**](GroupsApi.html#getprofilesgroups) | **Get** /api/v2/profiles/groups | Get group profile listing |
+| [**PostGroupMembers**](GroupsApi.html#postgroupmembers) | **Post** /api/v2/groups/{groupId}/members | Add members |
+| [**PostGroups**](GroupsApi.html#postgroups) | **Post** /api/v2/groups | Create a group |
+| [**PostGroupsDynamicsettingsPreview**](GroupsApi.html#postgroupsdynamicsettingspreview) | **Post** /api/v2/groups/dynamicsettings/preview | Preview the number of users selected for a dynamic group definition query |
+| [**PostGroupsSearch**](GroupsApi.html#postgroupssearch) | **Post** /api/v2/groups/search | Search groups |
+| [**PutGroup**](GroupsApi.html#putgroup) | **Put** /api/v2/groups/{groupId} | Update group |
+| [**PutGroupDynamicsettings**](GroupsApi.html#putgroupdynamicsettings) | **Put** /api/v2/groups/{groupId}/dynamicsettings | Create / Update dynamic group definition |
 {: class="table table-striped"}
 
 <a name="deletegroup"></a>

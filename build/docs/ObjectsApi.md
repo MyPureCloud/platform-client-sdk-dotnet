@@ -7,15 +7,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAuthorizationDivision**](ObjectsApi.html#deleteauthorizationdivision) | **DELETE** /api/v2/authorization/divisions/{divisionId} | Delete a division. |
-| [**GetAuthorizationDivision**](ObjectsApi.html#getauthorizationdivision) | **GET** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
-| [**GetAuthorizationDivisions**](ObjectsApi.html#getauthorizationdivisions) | **GET** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
-| [**GetAuthorizationDivisionsHome**](ObjectsApi.html#getauthorizationdivisionshome) | **GET** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
-| [**GetAuthorizationDivisionsLimit**](ObjectsApi.html#getauthorizationdivisionslimit) | **GET** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
-| [**PostAuthorizationDivisionObject**](ObjectsApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
-| [**PostAuthorizationDivisionRestore**](ObjectsApi.html#postauthorizationdivisionrestore) | **POST** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
-| [**PostAuthorizationDivisions**](ObjectsApi.html#postauthorizationdivisions) | **POST** /api/v2/authorization/divisions | Create a division. |
-| [**PutAuthorizationDivision**](ObjectsApi.html#putauthorizationdivision) | **PUT** /api/v2/authorization/divisions/{divisionId} | Update a division. |
+| [**DeleteAuthorizationDivision**](ObjectsApi.html#deleteauthorizationdivision) | **Delete** /api/v2/authorization/divisions/{divisionId} | Delete a division. |
+| [**GetAuthorizationDivision**](ObjectsApi.html#getauthorizationdivision) | **Get** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
+| [**GetAuthorizationDivisions**](ObjectsApi.html#getauthorizationdivisions) | **Get** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
+| [**GetAuthorizationDivisionsHome**](ObjectsApi.html#getauthorizationdivisionshome) | **Get** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
+| [**GetAuthorizationDivisionsLimit**](ObjectsApi.html#getauthorizationdivisionslimit) | **Get** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
+| [**PostAuthorizationDivisionObject**](ObjectsApi.html#postauthorizationdivisionobject) | **Post** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
+| [**PostAuthorizationDivisionRestore**](ObjectsApi.html#postauthorizationdivisionrestore) | **Post** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
+| [**PostAuthorizationDivisions**](ObjectsApi.html#postauthorizationdivisions) | **Post** /api/v2/authorization/divisions | Create a division. |
+| [**PutAuthorizationDivision**](ObjectsApi.html#putauthorizationdivision) | **Put** /api/v2/authorization/divisions/{divisionId} | Update a division. |
 {: class="table table-striped"}
 
 <a name="deleteauthorizationdivision"></a>

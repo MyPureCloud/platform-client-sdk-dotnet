@@ -7,25 +7,25 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteWebdeploymentsConfiguration**](WebDeploymentsApi.html#deletewebdeploymentsconfiguration) | **DELETE** /api/v2/webdeployments/configurations/{configurationId} | Delete all versions of a configuration |
-| [**DeleteWebdeploymentsDeployment**](WebDeploymentsApi.html#deletewebdeploymentsdeployment) | **DELETE** /api/v2/webdeployments/deployments/{deploymentId} | Delete a deployment |
-| [**DeleteWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsApi.html#deletewebdeploymentsdeploymentcobrowsesessionid) | **DELETE** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Deletes a cobrowse session |
-| [**DeleteWebdeploymentsTokenRevoke**](WebDeploymentsApi.html#deletewebdeploymentstokenrevoke) | **DELETE** /api/v2/webdeployments/token/revoke | Invalidate JWT |
-| [**GetWebdeploymentsConfigurationVersion**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversion) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions/{versionId} | Get a configuration version |
-| [**GetWebdeploymentsConfigurationVersions**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversions) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions | Get the versions of a configuration |
-| [**GetWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversionsdraft) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Get the configuration draft |
-| [**GetWebdeploymentsConfigurations**](WebDeploymentsApi.html#getwebdeploymentsconfigurations) | **GET** /api/v2/webdeployments/configurations | View configuration drafts |
-| [**GetWebdeploymentsDeployment**](WebDeploymentsApi.html#getwebdeploymentsdeployment) | **GET** /api/v2/webdeployments/deployments/{deploymentId} | Get a deployment |
-| [**GetWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsApi.html#getwebdeploymentsdeploymentcobrowsesessionid) | **GET** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Retrieves a cobrowse session |
-| [**GetWebdeploymentsDeploymentConfigurations**](WebDeploymentsApi.html#getwebdeploymentsdeploymentconfigurations) | **GET** /api/v2/webdeployments/deployments/{deploymentId}/configurations | Get active configuration for a given deployment |
-| [**GetWebdeploymentsDeployments**](WebDeploymentsApi.html#getwebdeploymentsdeployments) | **GET** /api/v2/webdeployments/deployments | Get deployments |
-| [**PostWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsApi.html#postwebdeploymentsconfigurationversionsdraftpublish) | **POST** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
-| [**PostWebdeploymentsConfigurations**](WebDeploymentsApi.html#postwebdeploymentsconfigurations) | **POST** /api/v2/webdeployments/configurations | Create a configuration draft |
-| [**PostWebdeploymentsDeployments**](WebDeploymentsApi.html#postwebdeploymentsdeployments) | **POST** /api/v2/webdeployments/deployments | Create a deployment |
-| [**PostWebdeploymentsTokenOauthcodegrantjwtexchange**](WebDeploymentsApi.html#postwebdeploymentstokenoauthcodegrantjwtexchange) | **POST** /api/v2/webdeployments/token/oauthcodegrantjwtexchange | Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. |
-| [**PostWebdeploymentsTokenRefresh**](WebDeploymentsApi.html#postwebdeploymentstokenrefresh) | **POST** /api/v2/webdeployments/token/refresh | Refresh a JWT. |
-| [**PutWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#putwebdeploymentsconfigurationversionsdraft) | **PUT** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Update the configuration draft |
-| [**PutWebdeploymentsDeployment**](WebDeploymentsApi.html#putwebdeploymentsdeployment) | **PUT** /api/v2/webdeployments/deployments/{deploymentId} | Update a deployment |
+| [**DeleteWebdeploymentsConfiguration**](WebDeploymentsApi.html#deletewebdeploymentsconfiguration) | **Delete** /api/v2/webdeployments/configurations/{configurationId} | Delete all versions of a configuration |
+| [**DeleteWebdeploymentsDeployment**](WebDeploymentsApi.html#deletewebdeploymentsdeployment) | **Delete** /api/v2/webdeployments/deployments/{deploymentId} | Delete a deployment |
+| [**DeleteWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsApi.html#deletewebdeploymentsdeploymentcobrowsesessionid) | **Delete** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Deletes a cobrowse session |
+| [**DeleteWebdeploymentsTokenRevoke**](WebDeploymentsApi.html#deletewebdeploymentstokenrevoke) | **Delete** /api/v2/webdeployments/token/revoke | Invalidate JWT |
+| [**GetWebdeploymentsConfigurationVersion**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversion) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions/{versionId} | Get a configuration version |
+| [**GetWebdeploymentsConfigurationVersions**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversions) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions | Get the versions of a configuration |
+| [**GetWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversionsdraft) | **Get** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Get the configuration draft |
+| [**GetWebdeploymentsConfigurations**](WebDeploymentsApi.html#getwebdeploymentsconfigurations) | **Get** /api/v2/webdeployments/configurations | View configuration drafts |
+| [**GetWebdeploymentsDeployment**](WebDeploymentsApi.html#getwebdeploymentsdeployment) | **Get** /api/v2/webdeployments/deployments/{deploymentId} | Get a deployment |
+| [**GetWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsApi.html#getwebdeploymentsdeploymentcobrowsesessionid) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Retrieves a cobrowse session |
+| [**GetWebdeploymentsDeploymentConfigurations**](WebDeploymentsApi.html#getwebdeploymentsdeploymentconfigurations) | **Get** /api/v2/webdeployments/deployments/{deploymentId}/configurations | Get active configuration for a given deployment |
+| [**GetWebdeploymentsDeployments**](WebDeploymentsApi.html#getwebdeploymentsdeployments) | **Get** /api/v2/webdeployments/deployments | Get deployments |
+| [**PostWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsApi.html#postwebdeploymentsconfigurationversionsdraftpublish) | **Post** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
+| [**PostWebdeploymentsConfigurations**](WebDeploymentsApi.html#postwebdeploymentsconfigurations) | **Post** /api/v2/webdeployments/configurations | Create a configuration draft |
+| [**PostWebdeploymentsDeployments**](WebDeploymentsApi.html#postwebdeploymentsdeployments) | **Post** /api/v2/webdeployments/deployments | Create a deployment |
+| [**PostWebdeploymentsTokenOauthcodegrantjwtexchange**](WebDeploymentsApi.html#postwebdeploymentstokenoauthcodegrantjwtexchange) | **Post** /api/v2/webdeployments/token/oauthcodegrantjwtexchange | Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. |
+| [**PostWebdeploymentsTokenRefresh**](WebDeploymentsApi.html#postwebdeploymentstokenrefresh) | **Post** /api/v2/webdeployments/token/refresh | Refresh a JWT. |
+| [**PutWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#putwebdeploymentsconfigurationversionsdraft) | **Put** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Update the configuration draft |
+| [**PutWebdeploymentsDeployment**](WebDeploymentsApi.html#putwebdeploymentsdeployment) | **Put** /api/v2/webdeployments/deployments/{deploymentId} | Update a deployment |
 {: class="table table-striped"}
 
 <a name="deletewebdeploymentsconfiguration"></a>

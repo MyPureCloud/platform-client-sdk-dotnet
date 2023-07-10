@@ -7,64 +7,64 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteConversationRecordingAnnotation**](RecordingApi.html#deleteconversationrecordingannotation) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
-| [**DeleteOrphanrecording**](RecordingApi.html#deleteorphanrecording) | **DELETE** /api/v2/orphanrecordings/{orphanId} | Deletes a single orphan recording |
-| [**DeleteRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#deleterecordingcrossplatformmediaretentionpolicies) | **DELETE** /api/v2/recording/crossplatform/mediaretentionpolicies | Delete media retention policies |
-| [**DeleteRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#deleterecordingcrossplatformmediaretentionpolicy) | **DELETE** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**DeleteRecordingJob**](RecordingApi.html#deleterecordingjob) | **DELETE** /api/v2/recording/jobs/{jobId} | Delete the recording bulk job |
-| [**DeleteRecordingMediaretentionpolicies**](RecordingApi.html#deleterecordingmediaretentionpolicies) | **DELETE** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
-| [**DeleteRecordingMediaretentionpolicy**](RecordingApi.html#deleterecordingmediaretentionpolicy) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**GetConversationRecording**](RecordingApi.html#getconversationrecording) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
-| [**GetConversationRecordingAnnotation**](RecordingApi.html#getconversationrecordingannotation) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
-| [**GetConversationRecordingAnnotations**](RecordingApi.html#getconversationrecordingannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
-| [**GetConversationRecordingmetadata**](RecordingApi.html#getconversationrecordingmetadata) | **GET** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. |
-| [**GetConversationRecordingmetadataRecordingId**](RecordingApi.html#getconversationrecordingmetadatarecordingid) | **GET** /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} | Get metadata for a specific recording. Does not return playable media. |
-| [**GetConversationRecordings**](RecordingApi.html#getconversationrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
-| [**GetOrphanrecording**](RecordingApi.html#getorphanrecording) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
-| [**GetOrphanrecordingMedia**](RecordingApi.html#getorphanrecordingmedia) | **GET** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
-| [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
-| [**GetRecordingBatchrequest**](RecordingApi.html#getrecordingbatchrequest) | **GET** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results |
-| [**GetRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicies) | **GET** /api/v2/recording/crossplatform/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
-| [**GetRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicy) | **GET** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Get a media retention policy |
-| [**GetRecordingJob**](RecordingApi.html#getrecordingjob) | **GET** /api/v2/recording/jobs/{jobId} | Get the status of the job associated with the job id. |
-| [**GetRecordingJobFailedrecordings**](RecordingApi.html#getrecordingjobfailedrecordings) | **GET** /api/v2/recording/jobs/{jobId}/failedrecordings | Get IDs of recordings that the bulk job failed for |
-| [**GetRecordingJobs**](RecordingApi.html#getrecordingjobs) | **GET** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
-| [**GetRecordingKeyconfiguration**](RecordingApi.html#getrecordingkeyconfiguration) | **GET** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Get the encryption key configurations |
-| [**GetRecordingKeyconfigurations**](RecordingApi.html#getrecordingkeyconfigurations) | **GET** /api/v2/recording/keyconfigurations | Get a list of key configurations data |
-| [**GetRecordingMediaretentionpolicies**](RecordingApi.html#getrecordingmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
-| [**GetRecordingMediaretentionpolicy**](RecordingApi.html#getrecordingmediaretentionpolicy) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
-| [**GetRecordingRecordingkeys**](RecordingApi.html#getrecordingrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
-| [**GetRecordingRecordingkeysRotationschedule**](RecordingApi.html#getrecordingrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
-| [**GetRecordingSettings**](RecordingApi.html#getrecordingsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
-| [**GetRecordingUploadsReport**](RecordingApi.html#getrecordinguploadsreport) | **GET** /api/v2/recording/uploads/reports/{reportId} | Get the status of a recording upload status report |
-| [**GetRecordingsRetentionQuery**](RecordingApi.html#getrecordingsretentionquery) | **GET** /api/v2/recordings/retention/query | Query for recording retention data |
-| [**GetRecordingsScreensessions**](RecordingApi.html#getrecordingsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
-| [**PatchRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#patchrecordingcrossplatformmediaretentionpolicy) | **PATCH** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
-| [**PatchRecordingMediaretentionpolicy**](RecordingApi.html#patchrecordingmediaretentionpolicy) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
-| [**PatchRecordingsScreensession**](RecordingApi.html#patchrecordingsscreensession) | **PATCH** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
-| [**PostConversationRecordingAnnotations**](RecordingApi.html#postconversationrecordingannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
-| [**PostRecordingBatchrequests**](RecordingApi.html#postrecordingbatchrequests) | **POST** /api/v2/recording/batchrequests | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
-| [**PostRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#postrecordingcrossplatformmediaretentionpolicies) | **POST** /api/v2/recording/crossplatform/mediaretentionpolicies | Create media retention policy |
-| [**PostRecordingJobs**](RecordingApi.html#postrecordingjobs) | **POST** /api/v2/recording/jobs | Create a recording bulk job. |
-| [**PostRecordingKeyconfigurations**](RecordingApi.html#postrecordingkeyconfigurations) | **POST** /api/v2/recording/keyconfigurations | Setup configurations for encryption key creation |
-| [**PostRecordingKeyconfigurationsValidate**](RecordingApi.html#postrecordingkeyconfigurationsvalidate) | **POST** /api/v2/recording/keyconfigurations/validate | Validate encryption key configurations without saving it |
-| [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **POST** /api/v2/recording/localkeys | create a local key management recording key |
-| [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
-| [**PostRecordingRecordingkeys**](RecordingApi.html#postrecordingrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
-| [**PostRecordingUploadsReports**](RecordingApi.html#postrecordinguploadsreports) | **POST** /api/v2/recording/uploads/reports | Creates a recording upload status report |
-| [**PostRecordingsDeletionprotection**](RecordingApi.html#postrecordingsdeletionprotection) | **POST** /api/v2/recordings/deletionprotection | Get a list of conversations with protected recordings |
-| [**PostRecordingsScreensessionsAcknowledge**](RecordingApi.html#postrecordingsscreensessionsacknowledge) | **POST** /api/v2/recordings/screensessions/acknowledge | Acknowledge a screen recording. |
-| [**PostRecordingsScreensessionsMetadata**](RecordingApi.html#postrecordingsscreensessionsmetadata) | **POST** /api/v2/recordings/screensessions/metadata | Provide meta-data a screen recording. |
-| [**PutConversationRecording**](RecordingApi.html#putconversationrecording) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
-| [**PutConversationRecordingAnnotation**](RecordingApi.html#putconversationrecordingannotation) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
-| [**PutOrphanrecording**](RecordingApi.html#putorphanrecording) | **PUT** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
-| [**PutRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#putrecordingcrossplatformmediaretentionpolicy) | **PUT** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Update a media retention policy |
-| [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **PUT** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
-| [**PutRecordingKeyconfiguration**](RecordingApi.html#putrecordingkeyconfiguration) | **PUT** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Update the encryption key configurations |
-| [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
-| [**PutRecordingRecordingkeysRotationschedule**](RecordingApi.html#putrecordingrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
-| [**PutRecordingSettings**](RecordingApi.html#putrecordingsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
-| [**PutRecordingsDeletionprotection**](RecordingApi.html#putrecordingsdeletionprotection) | **PUT** /api/v2/recordings/deletionprotection | Apply or revoke recording protection for conversations |
+| [**DeleteConversationRecordingAnnotation**](RecordingApi.html#deleteconversationrecordingannotation) | **Delete** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
+| [**DeleteOrphanrecording**](RecordingApi.html#deleteorphanrecording) | **Delete** /api/v2/orphanrecordings/{orphanId} | Deletes a single orphan recording |
+| [**DeleteRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#deleterecordingcrossplatformmediaretentionpolicies) | **Delete** /api/v2/recording/crossplatform/mediaretentionpolicies | Delete media retention policies |
+| [**DeleteRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#deleterecordingcrossplatformmediaretentionpolicy) | **Delete** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Delete a media retention policy |
+| [**DeleteRecordingJob**](RecordingApi.html#deleterecordingjob) | **Delete** /api/v2/recording/jobs/{jobId} | Delete the recording bulk job |
+| [**DeleteRecordingMediaretentionpolicies**](RecordingApi.html#deleterecordingmediaretentionpolicies) | **Delete** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
+| [**DeleteRecordingMediaretentionpolicy**](RecordingApi.html#deleterecordingmediaretentionpolicy) | **Delete** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
+| [**GetConversationRecording**](RecordingApi.html#getconversationrecording) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
+| [**GetConversationRecordingAnnotation**](RecordingApi.html#getconversationrecordingannotation) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
+| [**GetConversationRecordingAnnotations**](RecordingApi.html#getconversationrecordingannotations) | **Get** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
+| [**GetConversationRecordingmetadata**](RecordingApi.html#getconversationrecordingmetadata) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. |
+| [**GetConversationRecordingmetadataRecordingId**](RecordingApi.html#getconversationrecordingmetadatarecordingid) | **Get** /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} | Get metadata for a specific recording. Does not return playable media. |
+| [**GetConversationRecordings**](RecordingApi.html#getconversationrecordings) | **Get** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
+| [**GetOrphanrecording**](RecordingApi.html#getorphanrecording) | **Get** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
+| [**GetOrphanrecordingMedia**](RecordingApi.html#getorphanrecordingmedia) | **Get** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
+| [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **Get** /api/v2/orphanrecordings | Gets all orphan recordings |
+| [**GetRecordingBatchrequest**](RecordingApi.html#getrecordingbatchrequest) | **Get** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results |
+| [**GetRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicies) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
+| [**GetRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicy) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Get a media retention policy |
+| [**GetRecordingJob**](RecordingApi.html#getrecordingjob) | **Get** /api/v2/recording/jobs/{jobId} | Get the status of the job associated with the job id. |
+| [**GetRecordingJobFailedrecordings**](RecordingApi.html#getrecordingjobfailedrecordings) | **Get** /api/v2/recording/jobs/{jobId}/failedrecordings | Get IDs of recordings that the bulk job failed for |
+| [**GetRecordingJobs**](RecordingApi.html#getrecordingjobs) | **Get** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
+| [**GetRecordingKeyconfiguration**](RecordingApi.html#getrecordingkeyconfiguration) | **Get** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Get the encryption key configurations |
+| [**GetRecordingKeyconfigurations**](RecordingApi.html#getrecordingkeyconfigurations) | **Get** /api/v2/recording/keyconfigurations | Get a list of key configurations data |
+| [**GetRecordingMediaretentionpolicies**](RecordingApi.html#getrecordingmediaretentionpolicies) | **Get** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
+| [**GetRecordingMediaretentionpolicy**](RecordingApi.html#getrecordingmediaretentionpolicy) | **Get** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
+| [**GetRecordingRecordingkeys**](RecordingApi.html#getrecordingrecordingkeys) | **Get** /api/v2/recording/recordingkeys | Get encryption key list |
+| [**GetRecordingRecordingkeysRotationschedule**](RecordingApi.html#getrecordingrecordingkeysrotationschedule) | **Get** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
+| [**GetRecordingSettings**](RecordingApi.html#getrecordingsettings) | **Get** /api/v2/recording/settings | Get the Recording Settings for the Organization |
+| [**GetRecordingUploadsReport**](RecordingApi.html#getrecordinguploadsreport) | **Get** /api/v2/recording/uploads/reports/{reportId} | Get the status of a recording upload status report |
+| [**GetRecordingsRetentionQuery**](RecordingApi.html#getrecordingsretentionquery) | **Get** /api/v2/recordings/retention/query | Query for recording retention data |
+| [**GetRecordingsScreensessions**](RecordingApi.html#getrecordingsscreensessions) | **Get** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
+| [**PatchRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#patchrecordingcrossplatformmediaretentionpolicy) | **Patch** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
+| [**PatchRecordingMediaretentionpolicy**](RecordingApi.html#patchrecordingmediaretentionpolicy) | **Patch** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
+| [**PatchRecordingsScreensession**](RecordingApi.html#patchrecordingsscreensession) | **Patch** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
+| [**PostConversationRecordingAnnotations**](RecordingApi.html#postconversationrecordingannotations) | **Post** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
+| [**PostRecordingBatchrequests**](RecordingApi.html#postrecordingbatchrequests) | **Post** /api/v2/recording/batchrequests | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
+| [**PostRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#postrecordingcrossplatformmediaretentionpolicies) | **Post** /api/v2/recording/crossplatform/mediaretentionpolicies | Create media retention policy |
+| [**PostRecordingJobs**](RecordingApi.html#postrecordingjobs) | **Post** /api/v2/recording/jobs | Create a recording bulk job. |
+| [**PostRecordingKeyconfigurations**](RecordingApi.html#postrecordingkeyconfigurations) | **Post** /api/v2/recording/keyconfigurations | Setup configurations for encryption key creation |
+| [**PostRecordingKeyconfigurationsValidate**](RecordingApi.html#postrecordingkeyconfigurationsvalidate) | **Post** /api/v2/recording/keyconfigurations/validate | Validate encryption key configurations without saving it |
+| [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **Post** /api/v2/recording/localkeys | create a local key management recording key |
+| [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **Post** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
+| [**PostRecordingRecordingkeys**](RecordingApi.html#postrecordingrecordingkeys) | **Post** /api/v2/recording/recordingkeys | Create encryption key |
+| [**PostRecordingUploadsReports**](RecordingApi.html#postrecordinguploadsreports) | **Post** /api/v2/recording/uploads/reports | Creates a recording upload status report |
+| [**PostRecordingsDeletionprotection**](RecordingApi.html#postrecordingsdeletionprotection) | **Post** /api/v2/recordings/deletionprotection | Get a list of conversations with protected recordings |
+| [**PostRecordingsScreensessionsAcknowledge**](RecordingApi.html#postrecordingsscreensessionsacknowledge) | **Post** /api/v2/recordings/screensessions/acknowledge | Acknowledge a screen recording. |
+| [**PostRecordingsScreensessionsMetadata**](RecordingApi.html#postrecordingsscreensessionsmetadata) | **Post** /api/v2/recordings/screensessions/metadata | Provide meta-data a screen recording. |
+| [**PutConversationRecording**](RecordingApi.html#putconversationrecording) | **Put** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
+| [**PutConversationRecordingAnnotation**](RecordingApi.html#putconversationrecordingannotation) | **Put** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
+| [**PutOrphanrecording**](RecordingApi.html#putorphanrecording) | **Put** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
+| [**PutRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#putrecordingcrossplatformmediaretentionpolicy) | **Put** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Update a media retention policy |
+| [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **Put** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
+| [**PutRecordingKeyconfiguration**](RecordingApi.html#putrecordingkeyconfiguration) | **Put** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Update the encryption key configurations |
+| [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **Put** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
+| [**PutRecordingRecordingkeysRotationschedule**](RecordingApi.html#putrecordingrecordingkeysrotationschedule) | **Put** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
+| [**PutRecordingSettings**](RecordingApi.html#putrecordingsettings) | **Put** /api/v2/recording/settings | Update the Recording Settings for the Organization |
+| [**PutRecordingsDeletionprotection**](RecordingApi.html#putrecordingsdeletionprotection) | **Put** /api/v2/recordings/deletionprotection | Apply or revoke recording protection for conversations |
 {: class="table table-striped"}
 
 <a name="deleteconversationrecordingannotation"></a>

@@ -7,31 +7,31 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetDocumentationGknSearch**](SearchApi.html#getdocumentationgknsearch) | **GET** /api/v2/documentation/gkn/search | Search gkn documentation using the q64 value returned from a previous search |
-| [**GetDocumentationSearch**](SearchApi.html#getdocumentationsearch) | **GET** /api/v2/documentation/search | Search documentation using the q64 value returned from a previous search |
-| [**GetGroupsSearch**](SearchApi.html#getgroupssearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
-| [**GetLocationsSearch**](SearchApi.html#getlocationssearch) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
-| [**GetSearch**](SearchApi.html#getsearch) | **GET** /api/v2/search | Search using the q64 value returned from a previous search. |
-| [**GetSearchSuggest**](SearchApi.html#getsearchsuggest) | **GET** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
-| [**GetUsersSearch**](SearchApi.html#getuserssearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
-| [**GetVoicemailSearch**](SearchApi.html#getvoicemailsearch) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
-| [**PostAnalyticsConversationsTranscriptsQuery**](SearchApi.html#postanalyticsconversationstranscriptsquery) | **POST** /api/v2/analytics/conversations/transcripts/query | Search resources. |
-| [**PostConversationsParticipantsAttributesSearch**](SearchApi.html#postconversationsparticipantsattributessearch) | **POST** /api/v2/conversations/participants/attributes/search | Search conversations |
-| [**PostDocumentationAllSearch**](SearchApi.html#postdocumentationallsearch) | **POST** /api/v2/documentation/all/search | Search all documents |
-| [**PostDocumentationGknSearch**](SearchApi.html#postdocumentationgknsearch) | **POST** /api/v2/documentation/gkn/search | Search gkn documentation |
-| [**PostDocumentationSearch**](SearchApi.html#postdocumentationsearch) | **POST** /api/v2/documentation/search | Search documentation |
-| [**PostGroupsSearch**](SearchApi.html#postgroupssearch) | **POST** /api/v2/groups/search | Search groups |
-| [**PostKnowledgeKnowledgebaseSearch**](SearchApi.html#postknowledgeknowledgebasesearch) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search | Search Documents |
-| [**PostLocationsSearch**](SearchApi.html#postlocationssearch) | **POST** /api/v2/locations/search | Search locations |
-| [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/search | Search resources. |
-| [**PostSearchSuggest**](SearchApi.html#postsearchsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
-| [**PostSpeechandtextanalyticsTranscriptsSearch**](SearchApi.html#postspeechandtextanalyticstranscriptssearch) | **POST** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
-| [**PostTeamsSearch**](SearchApi.html#postteamssearch) | **POST** /api/v2/teams/search | Search resources. |
-| [**PostUsersSearch**](SearchApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
-| [**PostUsersSearchConversationTarget**](SearchApi.html#postuserssearchconversationtarget) | **POST** /api/v2/users/search/conversation/target | Search users as conversation targets |
-| [**PostUsersSearchQueuemembersManage**](SearchApi.html#postuserssearchqueuemembersmanage) | **POST** /api/v2/users/search/queuemembers/manage | Search manage queue member |
-| [**PostUsersSearchTeamsAssign**](SearchApi.html#postuserssearchteamsassign) | **POST** /api/v2/users/search/teams/assign | Search users assigned to teams |
-| [**PostVoicemailSearch**](SearchApi.html#postvoicemailsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
+| [**GetDocumentationGknSearch**](SearchApi.html#getdocumentationgknsearch) | **Get** /api/v2/documentation/gkn/search | Search gkn documentation using the q64 value returned from a previous search |
+| [**GetDocumentationSearch**](SearchApi.html#getdocumentationsearch) | **Get** /api/v2/documentation/search | Search documentation using the q64 value returned from a previous search |
+| [**GetGroupsSearch**](SearchApi.html#getgroupssearch) | **Get** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
+| [**GetLocationsSearch**](SearchApi.html#getlocationssearch) | **Get** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
+| [**GetSearch**](SearchApi.html#getsearch) | **Get** /api/v2/search | Search using the q64 value returned from a previous search. |
+| [**GetSearchSuggest**](SearchApi.html#getsearchsuggest) | **Get** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**GetUsersSearch**](SearchApi.html#getuserssearch) | **Get** /api/v2/users/search | Search users using the q64 value returned from a previous search |
+| [**GetVoicemailSearch**](SearchApi.html#getvoicemailsearch) | **Get** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
+| [**PostAnalyticsConversationsTranscriptsQuery**](SearchApi.html#postanalyticsconversationstranscriptsquery) | **Post** /api/v2/analytics/conversations/transcripts/query | Search resources. |
+| [**PostConversationsParticipantsAttributesSearch**](SearchApi.html#postconversationsparticipantsattributessearch) | **Post** /api/v2/conversations/participants/attributes/search | Search conversations |
+| [**PostDocumentationAllSearch**](SearchApi.html#postdocumentationallsearch) | **Post** /api/v2/documentation/all/search | Search all documents |
+| [**PostDocumentationGknSearch**](SearchApi.html#postdocumentationgknsearch) | **Post** /api/v2/documentation/gkn/search | Search gkn documentation |
+| [**PostDocumentationSearch**](SearchApi.html#postdocumentationsearch) | **Post** /api/v2/documentation/search | Search documentation |
+| [**PostGroupsSearch**](SearchApi.html#postgroupssearch) | **Post** /api/v2/groups/search | Search groups |
+| [**PostKnowledgeKnowledgebaseSearch**](SearchApi.html#postknowledgeknowledgebasesearch) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search | Search Documents |
+| [**PostLocationsSearch**](SearchApi.html#postlocationssearch) | **Post** /api/v2/locations/search | Search locations |
+| [**PostSearch**](SearchApi.html#postsearch) | **Post** /api/v2/search | Search resources. |
+| [**PostSearchSuggest**](SearchApi.html#postsearchsuggest) | **Post** /api/v2/search/suggest | Suggest resources. |
+| [**PostSpeechandtextanalyticsTranscriptsSearch**](SearchApi.html#postspeechandtextanalyticstranscriptssearch) | **Post** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
+| [**PostTeamsSearch**](SearchApi.html#postteamssearch) | **Post** /api/v2/teams/search | Search resources. |
+| [**PostUsersSearch**](SearchApi.html#postuserssearch) | **Post** /api/v2/users/search | Search users |
+| [**PostUsersSearchConversationTarget**](SearchApi.html#postuserssearchconversationtarget) | **Post** /api/v2/users/search/conversation/target | Search users as conversation targets |
+| [**PostUsersSearchQueuemembersManage**](SearchApi.html#postuserssearchqueuemembersmanage) | **Post** /api/v2/users/search/queuemembers/manage | Search manage queue member |
+| [**PostUsersSearchTeamsAssign**](SearchApi.html#postuserssearchteamsassign) | **Post** /api/v2/users/search/teams/assign | Search users assigned to teams |
+| [**PostVoicemailSearch**](SearchApi.html#postvoicemailsearch) | **Post** /api/v2/voicemail/search | Search voicemails |
 {: class="table table-striped"}
 
 <a name="getdocumentationgknsearch"></a>

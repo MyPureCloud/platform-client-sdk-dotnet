@@ -7,19 +7,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteOauthClient**](OAuthApi.html#deleteoauthclient) | **DELETE** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
-| [**GetOauthAuthorization**](OAuthApi.html#getoauthauthorization) | **GET** /api/v2/oauth/authorizations/{clientId} | Get a client that is authorized by the resource owner |
-| [**GetOauthAuthorizations**](OAuthApi.html#getoauthauthorizations) | **GET** /api/v2/oauth/authorizations | List clients that have been authorized, requested, or revoked by the resource owner |
-| [**GetOauthClient**](OAuthApi.html#getoauthclient) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
-| [**GetOauthClientUsageQueryResult**](OAuthApi.html#getoauthclientusagequeryresult) | **GET** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
-| [**GetOauthClientUsageSummary**](OAuthApi.html#getoauthclientusagesummary) | **GET** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
-| [**GetOauthClients**](OAuthApi.html#getoauthclients) | **GET** /api/v2/oauth/clients | The list of OAuth clients |
-| [**GetOauthScope**](OAuthApi.html#getoauthscope) | **GET** /api/v2/oauth/scopes/{scopeId} | An OAuth scope |
-| [**GetOauthScopes**](OAuthApi.html#getoauthscopes) | **GET** /api/v2/oauth/scopes | The list of OAuth scopes |
-| [**PostOauthClientSecret**](OAuthApi.html#postoauthclientsecret) | **POST** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
-| [**PostOauthClientUsageQuery**](OAuthApi.html#postoauthclientusagequery) | **POST** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
-| [**PostOauthClients**](OAuthApi.html#postoauthclients) | **POST** /api/v2/oauth/clients | Create OAuth client |
-| [**PutOauthClient**](OAuthApi.html#putoauthclient) | **PUT** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
+| [**DeleteOauthClient**](OAuthApi.html#deleteoauthclient) | **Delete** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
+| [**GetOauthAuthorization**](OAuthApi.html#getoauthauthorization) | **Get** /api/v2/oauth/authorizations/{clientId} | Get a client that is authorized by the resource owner |
+| [**GetOauthAuthorizations**](OAuthApi.html#getoauthauthorizations) | **Get** /api/v2/oauth/authorizations | List clients that have been authorized, requested, or revoked by the resource owner |
+| [**GetOauthClient**](OAuthApi.html#getoauthclient) | **Get** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
+| [**GetOauthClientUsageQueryResult**](OAuthApi.html#getoauthclientusagequeryresult) | **Get** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
+| [**GetOauthClientUsageSummary**](OAuthApi.html#getoauthclientusagesummary) | **Get** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
+| [**GetOauthClients**](OAuthApi.html#getoauthclients) | **Get** /api/v2/oauth/clients | The list of OAuth clients |
+| [**GetOauthScope**](OAuthApi.html#getoauthscope) | **Get** /api/v2/oauth/scopes/{scopeId} | An OAuth scope |
+| [**GetOauthScopes**](OAuthApi.html#getoauthscopes) | **Get** /api/v2/oauth/scopes | The list of OAuth scopes |
+| [**PostOauthClientSecret**](OAuthApi.html#postoauthclientsecret) | **Post** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
+| [**PostOauthClientUsageQuery**](OAuthApi.html#postoauthclientusagequery) | **Post** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
+| [**PostOauthClients**](OAuthApi.html#postoauthclients) | **Post** /api/v2/oauth/clients | Create OAuth client |
+| [**PutOauthClient**](OAuthApi.html#putoauthclient) | **Put** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
 {: class="table table-striped"}
 
 <a name="deleteoauthclient"></a>

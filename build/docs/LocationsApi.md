@@ -7,14 +7,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLocation**](LocationsApi.html#deletelocation) | **DELETE** /api/v2/locations/{locationId} | Delete a location |
-| [**GetLocation**](LocationsApi.html#getlocation) | **GET** /api/v2/locations/{locationId} | Get Location by ID. |
-| [**GetLocationSublocations**](LocationsApi.html#getlocationsublocations) | **GET** /api/v2/locations/{locationId}/sublocations | Get sublocations for location ID. |
-| [**GetLocations**](LocationsApi.html#getlocations) | **GET** /api/v2/locations | Get a list of all locations. |
-| [**GetLocationsSearch**](LocationsApi.html#getlocationssearch) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
-| [**PatchLocation**](LocationsApi.html#patchlocation) | **PATCH** /api/v2/locations/{locationId} | Update a location |
-| [**PostLocations**](LocationsApi.html#postlocations) | **POST** /api/v2/locations | Create a location |
-| [**PostLocationsSearch**](LocationsApi.html#postlocationssearch) | **POST** /api/v2/locations/search | Search locations |
+| [**DeleteLocation**](LocationsApi.html#deletelocation) | **Delete** /api/v2/locations/{locationId} | Delete a location |
+| [**GetLocation**](LocationsApi.html#getlocation) | **Get** /api/v2/locations/{locationId} | Get Location by ID. |
+| [**GetLocationSublocations**](LocationsApi.html#getlocationsublocations) | **Get** /api/v2/locations/{locationId}/sublocations | Get sublocations for location ID. |
+| [**GetLocations**](LocationsApi.html#getlocations) | **Get** /api/v2/locations | Get a list of all locations. |
+| [**GetLocationsSearch**](LocationsApi.html#getlocationssearch) | **Get** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
+| [**PatchLocation**](LocationsApi.html#patchlocation) | **Patch** /api/v2/locations/{locationId} | Update a location |
+| [**PostLocations**](LocationsApi.html#postlocations) | **Post** /api/v2/locations | Create a location |
+| [**PostLocationsSearch**](LocationsApi.html#postlocationssearch) | **Post** /api/v2/locations/search | Search locations |
 {: class="table table-striped"}
 
 <a name="deletelocation"></a>

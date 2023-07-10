@@ -7,24 +7,24 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
-| [**GetOrganizationsAuthenticationSettings**](OrganizationApi.html#getorganizationsauthenticationsettings) | **GET** /api/v2/organizations/authentication/settings | Gets the organization&#39;s settings |
-| [**GetOrganizationsEmbeddedintegration**](OrganizationApi.html#getorganizationsembeddedintegration) | **GET** /api/v2/organizations/embeddedintegration | Get the list of domains that will be allowed to embed PureCloud applications |
-| [**GetOrganizationsIpaddressauthentication**](OrganizationApi.html#getorganizationsipaddressauthentication) | **GET** /api/v2/organizations/ipaddressauthentication | Get organization IP address whitelist settings |
-| [**GetOrganizationsLimitsChangerequest**](OrganizationApi.html#getorganizationslimitschangerequest) | **GET** /api/v2/organizations/limits/changerequests/{requestId} | Get a limit change request |
-| [**GetOrganizationsLimitsChangerequests**](OrganizationApi.html#getorganizationslimitschangerequests) | **GET** /api/v2/organizations/limits/changerequests | Get the available limit change requests |
-| [**GetOrganizationsLimitsDocs**](OrganizationApi.html#getorganizationslimitsdocs) | **GET** /api/v2/organizations/limits/docs | Get a link to the limit documentation |
-| [**GetOrganizationsLimitsNamespace**](OrganizationApi.html#getorganizationslimitsnamespace) | **GET** /api/v2/organizations/limits/namespaces/{namespaceName} | Get the effective limits in a namespace for an organization |
-| [**GetOrganizationsLimitsNamespaceDefaults**](OrganizationApi.html#getorganizationslimitsnamespacedefaults) | **GET** /api/v2/organizations/limits/namespaces/{namespaceName}/defaults | Get the default limits in a namespace for an organization |
-| [**GetOrganizationsLimitsNamespaces**](OrganizationApi.html#getorganizationslimitsnamespaces) | **GET** /api/v2/organizations/limits/namespaces | Get the available limit namespaces |
-| [**GetOrganizationsMe**](OrganizationApi.html#getorganizationsme) | **GET** /api/v2/organizations/me | Get organization. |
-| [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
-| [**PatchOrganizationsAuthenticationSettings**](OrganizationApi.html#patchorganizationsauthenticationsettings) | **PATCH** /api/v2/organizations/authentication/settings | Update the organization&#39;s settings |
-| [**PatchOrganizationsFeature**](OrganizationApi.html#patchorganizationsfeature) | **PATCH** /api/v2/organizations/features/{featureName} | Update organization |
-| [**PutOrganizationsEmbeddedintegration**](OrganizationApi.html#putorganizationsembeddedintegration) | **PUT** /api/v2/organizations/embeddedintegration | Update the list of domains that will be allowed to embed PureCloud applications |
-| [**PutOrganizationsIpaddressauthentication**](OrganizationApi.html#putorganizationsipaddressauthentication) | **PUT** /api/v2/organizations/ipaddressauthentication | Update organization IP address whitelist settings |
-| [**PutOrganizationsMe**](OrganizationApi.html#putorganizationsme) | **PUT** /api/v2/organizations/me | Update organization. |
-| [**PutOrganizationsWhitelist**](OrganizationApi.html#putorganizationswhitelist) | **PUT** /api/v2/organizations/whitelist | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
+| [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | **Get** /api/v2/fieldconfig | Fetch field config for an entity type |
+| [**GetOrganizationsAuthenticationSettings**](OrganizationApi.html#getorganizationsauthenticationsettings) | **Get** /api/v2/organizations/authentication/settings | Gets the organization&#39;s settings |
+| [**GetOrganizationsEmbeddedintegration**](OrganizationApi.html#getorganizationsembeddedintegration) | **Get** /api/v2/organizations/embeddedintegration | Get the list of domains that will be allowed to embed PureCloud applications |
+| [**GetOrganizationsIpaddressauthentication**](OrganizationApi.html#getorganizationsipaddressauthentication) | **Get** /api/v2/organizations/ipaddressauthentication | Get organization IP address whitelist settings |
+| [**GetOrganizationsLimitsChangerequest**](OrganizationApi.html#getorganizationslimitschangerequest) | **Get** /api/v2/organizations/limits/changerequests/{requestId} | Get a limit change request |
+| [**GetOrganizationsLimitsChangerequests**](OrganizationApi.html#getorganizationslimitschangerequests) | **Get** /api/v2/organizations/limits/changerequests | Get the available limit change requests |
+| [**GetOrganizationsLimitsDocs**](OrganizationApi.html#getorganizationslimitsdocs) | **Get** /api/v2/organizations/limits/docs | Get a link to the limit documentation |
+| [**GetOrganizationsLimitsNamespace**](OrganizationApi.html#getorganizationslimitsnamespace) | **Get** /api/v2/organizations/limits/namespaces/{namespaceName} | Get the effective limits in a namespace for an organization |
+| [**GetOrganizationsLimitsNamespaceDefaults**](OrganizationApi.html#getorganizationslimitsnamespacedefaults) | **Get** /api/v2/organizations/limits/namespaces/{namespaceName}/defaults | Get the default limits in a namespace for an organization |
+| [**GetOrganizationsLimitsNamespaces**](OrganizationApi.html#getorganizationslimitsnamespaces) | **Get** /api/v2/organizations/limits/namespaces | Get the available limit namespaces |
+| [**GetOrganizationsMe**](OrganizationApi.html#getorganizationsme) | **Get** /api/v2/organizations/me | Get organization. |
+| [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **Get** /api/v2/organizations/whitelist | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
+| [**PatchOrganizationsAuthenticationSettings**](OrganizationApi.html#patchorganizationsauthenticationsettings) | **Patch** /api/v2/organizations/authentication/settings | Update the organization&#39;s settings |
+| [**PatchOrganizationsFeature**](OrganizationApi.html#patchorganizationsfeature) | **Patch** /api/v2/organizations/features/{featureName} | Update organization |
+| [**PutOrganizationsEmbeddedintegration**](OrganizationApi.html#putorganizationsembeddedintegration) | **Put** /api/v2/organizations/embeddedintegration | Update the list of domains that will be allowed to embed PureCloud applications |
+| [**PutOrganizationsIpaddressauthentication**](OrganizationApi.html#putorganizationsipaddressauthentication) | **Put** /api/v2/organizations/ipaddressauthentication | Update organization IP address whitelist settings |
+| [**PutOrganizationsMe**](OrganizationApi.html#putorganizationsme) | **Put** /api/v2/organizations/me | Update organization. |
+| [**PutOrganizationsWhitelist**](OrganizationApi.html#putorganizationswhitelist) | **Put** /api/v2/organizations/whitelist | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
 {: class="table table-striped"}
 
 <a name="getfieldconfig"></a>

@@ -7,138 +7,138 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteOutboundAttemptlimit**](OutboundApi.html#deleteoutboundattemptlimit) | **DELETE** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Delete attempt limits |
-| [**DeleteOutboundCallabletimeset**](OutboundApi.html#deleteoutboundcallabletimeset) | **DELETE** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
-| [**DeleteOutboundCallanalysisresponseset**](OutboundApi.html#deleteoutboundcallanalysisresponseset) | **DELETE** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
-| [**DeleteOutboundCampaign**](OutboundApi.html#deleteoutboundcampaign) | **DELETE** /api/v2/outbound/campaigns/{campaignId} | Delete a campaign. |
-| [**DeleteOutboundCampaignProgress**](OutboundApi.html#deleteoutboundcampaignprogress) | **DELETE** /api/v2/outbound/campaigns/{campaignId}/progress | Reset campaign progress and recycle the campaign |
-| [**DeleteOutboundCampaignrule**](OutboundApi.html#deleteoutboundcampaignrule) | **DELETE** /api/v2/outbound/campaignrules/{campaignRuleId} | Delete Campaign Rule |
-| [**DeleteOutboundContactlist**](OutboundApi.html#deleteoutboundcontactlist) | **DELETE** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
-| [**DeleteOutboundContactlistContact**](OutboundApi.html#deleteoutboundcontactlistcontact) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
-| [**DeleteOutboundContactlistContacts**](OutboundApi.html#deleteoutboundcontactlistcontacts) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts | Delete contacts from a contact list. |
-| [**DeleteOutboundContactlistfilter**](OutboundApi.html#deleteoutboundcontactlistfilter) | **DELETE** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Delete Contact List Filter |
-| [**DeleteOutboundContactlists**](OutboundApi.html#deleteoutboundcontactlists) | **DELETE** /api/v2/outbound/contactlists | Delete multiple contact lists. |
-| [**DeleteOutboundDigitalruleset**](OutboundApi.html#deleteoutbounddigitalruleset) | **DELETE** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Delete an Outbound Digital Rule Set |
-| [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
-| [**DeleteOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#deleteoutbounddnclistcustomexclusioncolumns) | **DELETE** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Deletes all or expired custom exclusion column entries from a DNC list. |
-| [**DeleteOutboundDnclistEmailaddresses**](OutboundApi.html#deleteoutbounddnclistemailaddresses) | **DELETE** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Deletes all or expired email addresses from a DNC list. |
-| [**DeleteOutboundDnclistPhonenumbers**](OutboundApi.html#deleteoutbounddnclistphonenumbers) | **DELETE** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Deletes all or expired phone numbers from a DNC list. |
-| [**DeleteOutboundMessagingcampaign**](OutboundApi.html#deleteoutboundmessagingcampaign) | **DELETE** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Delete an Outbound Messaging Campaign |
-| [**DeleteOutboundMessagingcampaignProgress**](OutboundApi.html#deleteoutboundmessagingcampaignprogress) | **DELETE** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Reset messaging campaign progress and recycle the messaging campaign |
-| [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule Set. |
-| [**DeleteOutboundSchedulesCampaign**](OutboundApi.html#deleteoutboundschedulescampaign) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
-| [**DeleteOutboundSchedulesEmailcampaign**](OutboundApi.html#deleteoutboundschedulesemailcampaign) | **DELETE** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Delete an email campaign schedule. |
-| [**DeleteOutboundSchedulesMessagingcampaign**](OutboundApi.html#deleteoutboundschedulesmessagingcampaign) | **DELETE** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Delete a messaging campaign schedule. |
-| [**DeleteOutboundSchedulesSequence**](OutboundApi.html#deleteoutboundschedulessequence) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
-| [**DeleteOutboundSequence**](OutboundApi.html#deleteoutboundsequence) | **DELETE** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
-| [**GetOutboundAttemptlimit**](OutboundApi.html#getoutboundattemptlimit) | **GET** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Get attempt limits |
-| [**GetOutboundAttemptlimits**](OutboundApi.html#getoutboundattemptlimits) | **GET** /api/v2/outbound/attemptlimits | Query attempt limits list |
-| [**GetOutboundCallabletimeset**](OutboundApi.html#getoutboundcallabletimeset) | **GET** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
-| [**GetOutboundCallabletimesets**](OutboundApi.html#getoutboundcallabletimesets) | **GET** /api/v2/outbound/callabletimesets | Query callable time set list |
-| [**GetOutboundCallanalysisresponseset**](OutboundApi.html#getoutboundcallanalysisresponseset) | **GET** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
-| [**GetOutboundCallanalysisresponsesets**](OutboundApi.html#getoutboundcallanalysisresponsesets) | **GET** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
-| [**GetOutboundCampaign**](OutboundApi.html#getoutboundcampaign) | **GET** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
-| [**GetOutboundCampaignAgentownedmappingpreviewResults**](OutboundApi.html#getoutboundcampaignagentownedmappingpreviewresults) | **GET** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results | Get a preview of how agents will be mapped to this campaign&#39;s contact list. |
-| [**GetOutboundCampaignDiagnostics**](OutboundApi.html#getoutboundcampaigndiagnostics) | **GET** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
-| [**GetOutboundCampaignInteractions**](OutboundApi.html#getoutboundcampaigninteractions) | **GET** /api/v2/outbound/campaigns/{campaignId}/interactions | Get dialer campaign interactions. |
-| [**GetOutboundCampaignProgress**](OutboundApi.html#getoutboundcampaignprogress) | **GET** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
-| [**GetOutboundCampaignStats**](OutboundApi.html#getoutboundcampaignstats) | **GET** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
-| [**GetOutboundCampaignrule**](OutboundApi.html#getoutboundcampaignrule) | **GET** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
-| [**GetOutboundCampaignrules**](OutboundApi.html#getoutboundcampaignrules) | **GET** /api/v2/outbound/campaignrules | Query Campaign Rule list |
-| [**GetOutboundCampaigns**](OutboundApi.html#getoutboundcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
-| [**GetOutboundCampaignsAll**](OutboundApi.html#getoutboundcampaignsall) | **GET** /api/v2/outbound/campaigns/all | Query across all types of campaigns by division |
-| [**GetOutboundCampaignsAllDivisionviews**](OutboundApi.html#getoutboundcampaignsalldivisionviews) | **GET** /api/v2/outbound/campaigns/all/divisionviews | Query across all types of campaigns |
-| [**GetOutboundCampaignsDivisionview**](OutboundApi.html#getoutboundcampaignsdivisionview) | **GET** /api/v2/outbound/campaigns/divisionviews/{campaignId} | Get a basic Campaign information object |
-| [**GetOutboundCampaignsDivisionviews**](OutboundApi.html#getoutboundcampaignsdivisionviews) | **GET** /api/v2/outbound/campaigns/divisionviews | Query a list of basic Campaign information objects |
-| [**GetOutboundContactlist**](OutboundApi.html#getoutboundcontactlist) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
-| [**GetOutboundContactlistContact**](OutboundApi.html#getoutboundcontactlistcontact) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
-| [**GetOutboundContactlistExport**](OutboundApi.html#getoutboundcontactlistexport) | **GET** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
-| [**GetOutboundContactlistImportstatus**](OutboundApi.html#getoutboundcontactlistimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
-| [**GetOutboundContactlistTimezonemappingpreview**](OutboundApi.html#getoutboundcontactlisttimezonemappingpreview) | **GET** /api/v2/outbound/contactlists/{contactListId}/timezonemappingpreview | Preview the result of applying Automatic Time Zone Mapping to a contact list |
-| [**GetOutboundContactlistfilter**](OutboundApi.html#getoutboundcontactlistfilter) | **GET** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Get Contact list filter |
-| [**GetOutboundContactlistfilters**](OutboundApi.html#getoutboundcontactlistfilters) | **GET** /api/v2/outbound/contactlistfilters | Query Contact list filters |
-| [**GetOutboundContactlists**](OutboundApi.html#getoutboundcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
-| [**GetOutboundContactlistsDivisionview**](OutboundApi.html#getoutboundcontactlistsdivisionview) | **GET** /api/v2/outbound/contactlists/divisionviews/{contactListId} | Get a basic ContactList information object |
-| [**GetOutboundContactlistsDivisionviews**](OutboundApi.html#getoutboundcontactlistsdivisionviews) | **GET** /api/v2/outbound/contactlists/divisionviews | Query a list of simplified contact list objects. |
-| [**GetOutboundDigitalruleset**](OutboundApi.html#getoutbounddigitalruleset) | **GET** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Get an Outbound Digital Rule Set |
-| [**GetOutboundDigitalrulesets**](OutboundApi.html#getoutbounddigitalrulesets) | **GET** /api/v2/outbound/digitalrulesets | Query a list of Outbound Digital Rule Sets |
-| [**GetOutboundDnclist**](OutboundApi.html#getoutbounddnclist) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
-| [**GetOutboundDnclistExport**](OutboundApi.html#getoutbounddnclistexport) | **GET** /api/v2/outbound/dnclists/{dncListId}/export | Get the URI of a DNC list export. |
-| [**GetOutboundDnclistImportstatus**](OutboundApi.html#getoutbounddnclistimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
-| [**GetOutboundDnclists**](OutboundApi.html#getoutbounddnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
-| [**GetOutboundDnclistsDivisionview**](OutboundApi.html#getoutbounddnclistsdivisionview) | **GET** /api/v2/outbound/dnclists/divisionviews/{dncListId} | Get a basic DncList information object |
-| [**GetOutboundDnclistsDivisionviews**](OutboundApi.html#getoutbounddnclistsdivisionviews) | **GET** /api/v2/outbound/dnclists/divisionviews | Query a list of simplified dnc list objects. |
-| [**GetOutboundEvent**](OutboundApi.html#getoutboundevent) | **GET** /api/v2/outbound/events/{eventId} | Get Dialer Event |
-| [**GetOutboundEvents**](OutboundApi.html#getoutboundevents) | **GET** /api/v2/outbound/events | Query Event Logs |
-| [**GetOutboundMessagingcampaign**](OutboundApi.html#getoutboundmessagingcampaign) | **GET** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Get an Outbound Messaging Campaign |
-| [**GetOutboundMessagingcampaignDiagnostics**](OutboundApi.html#getoutboundmessagingcampaigndiagnostics) | **GET** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics | Get messaging campaign diagnostics |
-| [**GetOutboundMessagingcampaignProgress**](OutboundApi.html#getoutboundmessagingcampaignprogress) | **GET** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Get messaging campaign&#39;s progress |
-| [**GetOutboundMessagingcampaigns**](OutboundApi.html#getoutboundmessagingcampaigns) | **GET** /api/v2/outbound/messagingcampaigns | Query a list of Messaging Campaigns |
-| [**GetOutboundMessagingcampaignsDivisionview**](OutboundApi.html#getoutboundmessagingcampaignsdivisionview) | **GET** /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId} | Get a basic Messaging Campaign information object |
-| [**GetOutboundMessagingcampaignsDivisionviews**](OutboundApi.html#getoutboundmessagingcampaignsdivisionviews) | **GET** /api/v2/outbound/messagingcampaigns/divisionviews | Query a list of basic Messaging Campaign information objects |
-| [**GetOutboundRuleset**](OutboundApi.html#getoutboundruleset) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
-| [**GetOutboundRulesets**](OutboundApi.html#getoutboundrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
-| [**GetOutboundSchedulesCampaign**](OutboundApi.html#getoutboundschedulescampaign) | **GET** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
-| [**GetOutboundSchedulesCampaigns**](OutboundApi.html#getoutboundschedulescampaigns) | **GET** /api/v2/outbound/schedules/campaigns | Query for a list of dialer campaign schedules. |
-| [**GetOutboundSchedulesEmailcampaign**](OutboundApi.html#getoutboundschedulesemailcampaign) | **GET** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Get an email campaign schedule. |
-| [**GetOutboundSchedulesEmailcampaigns**](OutboundApi.html#getoutboundschedulesemailcampaigns) | **GET** /api/v2/outbound/schedules/emailcampaigns | Query for a list of email campaign schedules. |
-| [**GetOutboundSchedulesMessagingcampaign**](OutboundApi.html#getoutboundschedulesmessagingcampaign) | **GET** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Get a messaging campaign schedule. |
-| [**GetOutboundSchedulesMessagingcampaigns**](OutboundApi.html#getoutboundschedulesmessagingcampaigns) | **GET** /api/v2/outbound/schedules/messagingcampaigns | Query for a list of messaging campaign schedules. |
-| [**GetOutboundSchedulesSequence**](OutboundApi.html#getoutboundschedulessequence) | **GET** /api/v2/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
-| [**GetOutboundSchedulesSequences**](OutboundApi.html#getoutboundschedulessequences) | **GET** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
-| [**GetOutboundSequence**](OutboundApi.html#getoutboundsequence) | **GET** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
-| [**GetOutboundSequences**](OutboundApi.html#getoutboundsequences) | **GET** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
-| [**GetOutboundSettings**](OutboundApi.html#getoutboundsettings) | **GET** /api/v2/outbound/settings | Get the outbound settings for this organization |
-| [**GetOutboundWrapupcodemappings**](OutboundApi.html#getoutboundwrapupcodemappings) | **GET** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
-| [**PatchOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#patchoutbounddnclistcustomexclusioncolumns) | **PATCH** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Add entries to or delete entries from a DNC list. |
-| [**PatchOutboundDnclistEmailaddresses**](OutboundApi.html#patchoutbounddnclistemailaddresses) | **PATCH** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add emails to or Delete emails from a DNC list. |
-| [**PatchOutboundDnclistPhonenumbers**](OutboundApi.html#patchoutbounddnclistphonenumbers) | **PATCH** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add numbers to or delete numbers from a DNC list. |
-| [**PatchOutboundSettings**](OutboundApi.html#patchoutboundsettings) | **PATCH** /api/v2/outbound/settings | Update the outbound settings for this organization |
-| [**PostOutboundAttemptlimits**](OutboundApi.html#postoutboundattemptlimits) | **POST** /api/v2/outbound/attemptlimits | Create attempt limits |
-| [**PostOutboundAudits**](OutboundApi.html#postoutboundaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
-| [**PostOutboundCallabletimesets**](OutboundApi.html#postoutboundcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
-| [**PostOutboundCallanalysisresponsesets**](OutboundApi.html#postoutboundcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
-| [**PostOutboundCampaignAgentownedmappingpreview**](OutboundApi.html#postoutboundcampaignagentownedmappingpreview) | **POST** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
-| [**PostOutboundCampaignCallbackSchedule**](OutboundApi.html#postoutboundcampaigncallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign (Deprecated) |
-| [**PostOutboundCampaignrules**](OutboundApi.html#postoutboundcampaignrules) | **POST** /api/v2/outbound/campaignrules | Create Campaign Rule |
-| [**PostOutboundCampaigns**](OutboundApi.html#postoutboundcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
-| [**PostOutboundCampaignsProgress**](OutboundApi.html#postoutboundcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
-| [**PostOutboundContactlistClear**](OutboundApi.html#postoutboundcontactlistclear) | **POST** /api/v2/outbound/contactlists/{contactListId}/clear | Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. |
-| [**PostOutboundContactlistContacts**](OutboundApi.html#postoutboundcontactlistcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
-| [**PostOutboundContactlistContactsBulk**](OutboundApi.html#postoutboundcontactlistcontactsbulk) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk | Get contacts from a contact list. |
-| [**PostOutboundContactlistExport**](OutboundApi.html#postoutboundcontactlistexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
-| [**PostOutboundContactlistfilters**](OutboundApi.html#postoutboundcontactlistfilters) | **POST** /api/v2/outbound/contactlistfilters | Create Contact List Filter |
-| [**PostOutboundContactlistfiltersPreview**](OutboundApi.html#postoutboundcontactlistfilterspreview) | **POST** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
-| [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
-| [**PostOutboundConversationDnc**](OutboundApi.html#postoutboundconversationdnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
-| [**PostOutboundDigitalrulesets**](OutboundApi.html#postoutbounddigitalrulesets) | **POST** /api/v2/outbound/digitalrulesets | Create an Outbound Digital Rule Set |
-| [**PostOutboundDnclistEmailaddresses**](OutboundApi.html#postoutbounddnclistemailaddresses) | **POST** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add email addresses to a DNC list. |
-| [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
-| [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a DNC list. |
-| [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
-| [**PostOutboundMessagingcampaigns**](OutboundApi.html#postoutboundmessagingcampaigns) | **POST** /api/v2/outbound/messagingcampaigns | Create a Messaging Campaign |
-| [**PostOutboundMessagingcampaignsProgress**](OutboundApi.html#postoutboundmessagingcampaignsprogress) | **POST** /api/v2/outbound/messagingcampaigns/progress | Get progress for a list of messaging campaigns |
-| [**PostOutboundRulesets**](OutboundApi.html#postoutboundrulesets) | **POST** /api/v2/outbound/rulesets | Create a Rule Set. |
-| [**PostOutboundSequences**](OutboundApi.html#postoutboundsequences) | **POST** /api/v2/outbound/sequences | Create a new campaign sequence. |
-| [**PutOutboundAttemptlimit**](OutboundApi.html#putoutboundattemptlimit) | **PUT** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Update attempt limits |
-| [**PutOutboundCallabletimeset**](OutboundApi.html#putoutboundcallabletimeset) | **PUT** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
-| [**PutOutboundCallanalysisresponseset**](OutboundApi.html#putoutboundcallanalysisresponseset) | **PUT** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
-| [**PutOutboundCampaign**](OutboundApi.html#putoutboundcampaign) | **PUT** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
-| [**PutOutboundCampaignAgent**](OutboundApi.html#putoutboundcampaignagent) | **PUT** /api/v2/outbound/campaigns/{campaignId}/agents/{userId} | Send notification that an agent&#39;s state changed  |
-| [**PutOutboundCampaignrule**](OutboundApi.html#putoutboundcampaignrule) | **PUT** /api/v2/outbound/campaignrules/{campaignRuleId} | Update Campaign Rule |
-| [**PutOutboundContactlist**](OutboundApi.html#putoutboundcontactlist) | **PUT** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
-| [**PutOutboundContactlistContact**](OutboundApi.html#putoutboundcontactlistcontact) | **PUT** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
-| [**PutOutboundContactlistfilter**](OutboundApi.html#putoutboundcontactlistfilter) | **PUT** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Update Contact List Filter |
-| [**PutOutboundDigitalruleset**](OutboundApi.html#putoutbounddigitalruleset) | **PUT** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Update an Outbound Digital Rule Set |
-| [**PutOutboundDnclist**](OutboundApi.html#putoutbounddnclist) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
-| [**PutOutboundMessagingcampaign**](OutboundApi.html#putoutboundmessagingcampaign) | **PUT** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Update an Outbound Messaging Campaign |
-| [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a Rule Set. |
-| [**PutOutboundSchedulesCampaign**](OutboundApi.html#putoutboundschedulescampaign) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
-| [**PutOutboundSchedulesEmailcampaign**](OutboundApi.html#putoutboundschedulesemailcampaign) | **PUT** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Update an email campaign schedule. |
-| [**PutOutboundSchedulesMessagingcampaign**](OutboundApi.html#putoutboundschedulesmessagingcampaign) | **PUT** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Update a new messaging campaign schedule. |
-| [**PutOutboundSchedulesSequence**](OutboundApi.html#putoutboundschedulessequence) | **PUT** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
-| [**PutOutboundSequence**](OutboundApi.html#putoutboundsequence) | **PUT** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
-| [**PutOutboundWrapupcodemappings**](OutboundApi.html#putoutboundwrapupcodemappings) | **PUT** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
+| [**DeleteOutboundAttemptlimit**](OutboundApi.html#deleteoutboundattemptlimit) | **Delete** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Delete attempt limits |
+| [**DeleteOutboundCallabletimeset**](OutboundApi.html#deleteoutboundcallabletimeset) | **Delete** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
+| [**DeleteOutboundCallanalysisresponseset**](OutboundApi.html#deleteoutboundcallanalysisresponseset) | **Delete** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
+| [**DeleteOutboundCampaign**](OutboundApi.html#deleteoutboundcampaign) | **Delete** /api/v2/outbound/campaigns/{campaignId} | Delete a campaign. |
+| [**DeleteOutboundCampaignProgress**](OutboundApi.html#deleteoutboundcampaignprogress) | **Delete** /api/v2/outbound/campaigns/{campaignId}/progress | Reset campaign progress and recycle the campaign |
+| [**DeleteOutboundCampaignrule**](OutboundApi.html#deleteoutboundcampaignrule) | **Delete** /api/v2/outbound/campaignrules/{campaignRuleId} | Delete Campaign Rule |
+| [**DeleteOutboundContactlist**](OutboundApi.html#deleteoutboundcontactlist) | **Delete** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
+| [**DeleteOutboundContactlistContact**](OutboundApi.html#deleteoutboundcontactlistcontact) | **Delete** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
+| [**DeleteOutboundContactlistContacts**](OutboundApi.html#deleteoutboundcontactlistcontacts) | **Delete** /api/v2/outbound/contactlists/{contactListId}/contacts | Delete contacts from a contact list. |
+| [**DeleteOutboundContactlistfilter**](OutboundApi.html#deleteoutboundcontactlistfilter) | **Delete** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Delete Contact List Filter |
+| [**DeleteOutboundContactlists**](OutboundApi.html#deleteoutboundcontactlists) | **Delete** /api/v2/outbound/contactlists | Delete multiple contact lists. |
+| [**DeleteOutboundDigitalruleset**](OutboundApi.html#deleteoutbounddigitalruleset) | **Delete** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Delete an Outbound Digital Rule Set |
+| [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **Delete** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
+| [**DeleteOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#deleteoutbounddnclistcustomexclusioncolumns) | **Delete** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Deletes all or expired custom exclusion column entries from a DNC list. |
+| [**DeleteOutboundDnclistEmailaddresses**](OutboundApi.html#deleteoutbounddnclistemailaddresses) | **Delete** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Deletes all or expired email addresses from a DNC list. |
+| [**DeleteOutboundDnclistPhonenumbers**](OutboundApi.html#deleteoutbounddnclistphonenumbers) | **Delete** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Deletes all or expired phone numbers from a DNC list. |
+| [**DeleteOutboundMessagingcampaign**](OutboundApi.html#deleteoutboundmessagingcampaign) | **Delete** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Delete an Outbound Messaging Campaign |
+| [**DeleteOutboundMessagingcampaignProgress**](OutboundApi.html#deleteoutboundmessagingcampaignprogress) | **Delete** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Reset messaging campaign progress and recycle the messaging campaign |
+| [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **Delete** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule Set. |
+| [**DeleteOutboundSchedulesCampaign**](OutboundApi.html#deleteoutboundschedulescampaign) | **Delete** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
+| [**DeleteOutboundSchedulesEmailcampaign**](OutboundApi.html#deleteoutboundschedulesemailcampaign) | **Delete** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Delete an email campaign schedule. |
+| [**DeleteOutboundSchedulesMessagingcampaign**](OutboundApi.html#deleteoutboundschedulesmessagingcampaign) | **Delete** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Delete a messaging campaign schedule. |
+| [**DeleteOutboundSchedulesSequence**](OutboundApi.html#deleteoutboundschedulessequence) | **Delete** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
+| [**DeleteOutboundSequence**](OutboundApi.html#deleteoutboundsequence) | **Delete** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
+| [**GetOutboundAttemptlimit**](OutboundApi.html#getoutboundattemptlimit) | **Get** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Get attempt limits |
+| [**GetOutboundAttemptlimits**](OutboundApi.html#getoutboundattemptlimits) | **Get** /api/v2/outbound/attemptlimits | Query attempt limits list |
+| [**GetOutboundCallabletimeset**](OutboundApi.html#getoutboundcallabletimeset) | **Get** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
+| [**GetOutboundCallabletimesets**](OutboundApi.html#getoutboundcallabletimesets) | **Get** /api/v2/outbound/callabletimesets | Query callable time set list |
+| [**GetOutboundCallanalysisresponseset**](OutboundApi.html#getoutboundcallanalysisresponseset) | **Get** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
+| [**GetOutboundCallanalysisresponsesets**](OutboundApi.html#getoutboundcallanalysisresponsesets) | **Get** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
+| [**GetOutboundCampaign**](OutboundApi.html#getoutboundcampaign) | **Get** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
+| [**GetOutboundCampaignAgentownedmappingpreviewResults**](OutboundApi.html#getoutboundcampaignagentownedmappingpreviewresults) | **Get** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results | Get a preview of how agents will be mapped to this campaign&#39;s contact list. |
+| [**GetOutboundCampaignDiagnostics**](OutboundApi.html#getoutboundcampaigndiagnostics) | **Get** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
+| [**GetOutboundCampaignInteractions**](OutboundApi.html#getoutboundcampaigninteractions) | **Get** /api/v2/outbound/campaigns/{campaignId}/interactions | Get dialer campaign interactions. |
+| [**GetOutboundCampaignProgress**](OutboundApi.html#getoutboundcampaignprogress) | **Get** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
+| [**GetOutboundCampaignStats**](OutboundApi.html#getoutboundcampaignstats) | **Get** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
+| [**GetOutboundCampaignrule**](OutboundApi.html#getoutboundcampaignrule) | **Get** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
+| [**GetOutboundCampaignrules**](OutboundApi.html#getoutboundcampaignrules) | **Get** /api/v2/outbound/campaignrules | Query Campaign Rule list |
+| [**GetOutboundCampaigns**](OutboundApi.html#getoutboundcampaigns) | **Get** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
+| [**GetOutboundCampaignsAll**](OutboundApi.html#getoutboundcampaignsall) | **Get** /api/v2/outbound/campaigns/all | Query across all types of campaigns by division |
+| [**GetOutboundCampaignsAllDivisionviews**](OutboundApi.html#getoutboundcampaignsalldivisionviews) | **Get** /api/v2/outbound/campaigns/all/divisionviews | Query across all types of campaigns |
+| [**GetOutboundCampaignsDivisionview**](OutboundApi.html#getoutboundcampaignsdivisionview) | **Get** /api/v2/outbound/campaigns/divisionviews/{campaignId} | Get a basic Campaign information object |
+| [**GetOutboundCampaignsDivisionviews**](OutboundApi.html#getoutboundcampaignsdivisionviews) | **Get** /api/v2/outbound/campaigns/divisionviews | Query a list of basic Campaign information objects |
+| [**GetOutboundContactlist**](OutboundApi.html#getoutboundcontactlist) | **Get** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
+| [**GetOutboundContactlistContact**](OutboundApi.html#getoutboundcontactlistcontact) | **Get** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
+| [**GetOutboundContactlistExport**](OutboundApi.html#getoutboundcontactlistexport) | **Get** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
+| [**GetOutboundContactlistImportstatus**](OutboundApi.html#getoutboundcontactlistimportstatus) | **Get** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
+| [**GetOutboundContactlistTimezonemappingpreview**](OutboundApi.html#getoutboundcontactlisttimezonemappingpreview) | **Get** /api/v2/outbound/contactlists/{contactListId}/timezonemappingpreview | Preview the result of applying Automatic Time Zone Mapping to a contact list |
+| [**GetOutboundContactlistfilter**](OutboundApi.html#getoutboundcontactlistfilter) | **Get** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Get Contact list filter |
+| [**GetOutboundContactlistfilters**](OutboundApi.html#getoutboundcontactlistfilters) | **Get** /api/v2/outbound/contactlistfilters | Query Contact list filters |
+| [**GetOutboundContactlists**](OutboundApi.html#getoutboundcontactlists) | **Get** /api/v2/outbound/contactlists | Query a list of contact lists. |
+| [**GetOutboundContactlistsDivisionview**](OutboundApi.html#getoutboundcontactlistsdivisionview) | **Get** /api/v2/outbound/contactlists/divisionviews/{contactListId} | Get a basic ContactList information object |
+| [**GetOutboundContactlistsDivisionviews**](OutboundApi.html#getoutboundcontactlistsdivisionviews) | **Get** /api/v2/outbound/contactlists/divisionviews | Query a list of simplified contact list objects. |
+| [**GetOutboundDigitalruleset**](OutboundApi.html#getoutbounddigitalruleset) | **Get** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Get an Outbound Digital Rule Set |
+| [**GetOutboundDigitalrulesets**](OutboundApi.html#getoutbounddigitalrulesets) | **Get** /api/v2/outbound/digitalrulesets | Query a list of Outbound Digital Rule Sets |
+| [**GetOutboundDnclist**](OutboundApi.html#getoutbounddnclist) | **Get** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
+| [**GetOutboundDnclistExport**](OutboundApi.html#getoutbounddnclistexport) | **Get** /api/v2/outbound/dnclists/{dncListId}/export | Get the URI of a DNC list export. |
+| [**GetOutboundDnclistImportstatus**](OutboundApi.html#getoutbounddnclistimportstatus) | **Get** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
+| [**GetOutboundDnclists**](OutboundApi.html#getoutbounddnclists) | **Get** /api/v2/outbound/dnclists | Query dialer DNC lists |
+| [**GetOutboundDnclistsDivisionview**](OutboundApi.html#getoutbounddnclistsdivisionview) | **Get** /api/v2/outbound/dnclists/divisionviews/{dncListId} | Get a basic DncList information object |
+| [**GetOutboundDnclistsDivisionviews**](OutboundApi.html#getoutbounddnclistsdivisionviews) | **Get** /api/v2/outbound/dnclists/divisionviews | Query a list of simplified dnc list objects. |
+| [**GetOutboundEvent**](OutboundApi.html#getoutboundevent) | **Get** /api/v2/outbound/events/{eventId} | Get Dialer Event |
+| [**GetOutboundEvents**](OutboundApi.html#getoutboundevents) | **Get** /api/v2/outbound/events | Query Event Logs |
+| [**GetOutboundMessagingcampaign**](OutboundApi.html#getoutboundmessagingcampaign) | **Get** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Get an Outbound Messaging Campaign |
+| [**GetOutboundMessagingcampaignDiagnostics**](OutboundApi.html#getoutboundmessagingcampaigndiagnostics) | **Get** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics | Get messaging campaign diagnostics |
+| [**GetOutboundMessagingcampaignProgress**](OutboundApi.html#getoutboundmessagingcampaignprogress) | **Get** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Get messaging campaign&#39;s progress |
+| [**GetOutboundMessagingcampaigns**](OutboundApi.html#getoutboundmessagingcampaigns) | **Get** /api/v2/outbound/messagingcampaigns | Query a list of Messaging Campaigns |
+| [**GetOutboundMessagingcampaignsDivisionview**](OutboundApi.html#getoutboundmessagingcampaignsdivisionview) | **Get** /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId} | Get a basic Messaging Campaign information object |
+| [**GetOutboundMessagingcampaignsDivisionviews**](OutboundApi.html#getoutboundmessagingcampaignsdivisionviews) | **Get** /api/v2/outbound/messagingcampaigns/divisionviews | Query a list of basic Messaging Campaign information objects |
+| [**GetOutboundRuleset**](OutboundApi.html#getoutboundruleset) | **Get** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
+| [**GetOutboundRulesets**](OutboundApi.html#getoutboundrulesets) | **Get** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
+| [**GetOutboundSchedulesCampaign**](OutboundApi.html#getoutboundschedulescampaign) | **Get** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
+| [**GetOutboundSchedulesCampaigns**](OutboundApi.html#getoutboundschedulescampaigns) | **Get** /api/v2/outbound/schedules/campaigns | Query for a list of dialer campaign schedules. |
+| [**GetOutboundSchedulesEmailcampaign**](OutboundApi.html#getoutboundschedulesemailcampaign) | **Get** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Get an email campaign schedule. |
+| [**GetOutboundSchedulesEmailcampaigns**](OutboundApi.html#getoutboundschedulesemailcampaigns) | **Get** /api/v2/outbound/schedules/emailcampaigns | Query for a list of email campaign schedules. |
+| [**GetOutboundSchedulesMessagingcampaign**](OutboundApi.html#getoutboundschedulesmessagingcampaign) | **Get** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Get a messaging campaign schedule. |
+| [**GetOutboundSchedulesMessagingcampaigns**](OutboundApi.html#getoutboundschedulesmessagingcampaigns) | **Get** /api/v2/outbound/schedules/messagingcampaigns | Query for a list of messaging campaign schedules. |
+| [**GetOutboundSchedulesSequence**](OutboundApi.html#getoutboundschedulessequence) | **Get** /api/v2/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
+| [**GetOutboundSchedulesSequences**](OutboundApi.html#getoutboundschedulessequences) | **Get** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
+| [**GetOutboundSequence**](OutboundApi.html#getoutboundsequence) | **Get** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
+| [**GetOutboundSequences**](OutboundApi.html#getoutboundsequences) | **Get** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
+| [**GetOutboundSettings**](OutboundApi.html#getoutboundsettings) | **Get** /api/v2/outbound/settings | Get the outbound settings for this organization |
+| [**GetOutboundWrapupcodemappings**](OutboundApi.html#getoutboundwrapupcodemappings) | **Get** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
+| [**PatchOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#patchoutbounddnclistcustomexclusioncolumns) | **Patch** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Add entries to or delete entries from a DNC list. |
+| [**PatchOutboundDnclistEmailaddresses**](OutboundApi.html#patchoutbounddnclistemailaddresses) | **Patch** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add emails to or Delete emails from a DNC list. |
+| [**PatchOutboundDnclistPhonenumbers**](OutboundApi.html#patchoutbounddnclistphonenumbers) | **Patch** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add numbers to or delete numbers from a DNC list. |
+| [**PatchOutboundSettings**](OutboundApi.html#patchoutboundsettings) | **Patch** /api/v2/outbound/settings | Update the outbound settings for this organization |
+| [**PostOutboundAttemptlimits**](OutboundApi.html#postoutboundattemptlimits) | **Post** /api/v2/outbound/attemptlimits | Create attempt limits |
+| [**PostOutboundAudits**](OutboundApi.html#postoutboundaudits) | **Post** /api/v2/outbound/audits | Retrieves audits for dialer. |
+| [**PostOutboundCallabletimesets**](OutboundApi.html#postoutboundcallabletimesets) | **Post** /api/v2/outbound/callabletimesets | Create callable time set |
+| [**PostOutboundCallanalysisresponsesets**](OutboundApi.html#postoutboundcallanalysisresponsesets) | **Post** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
+| [**PostOutboundCampaignAgentownedmappingpreview**](OutboundApi.html#postoutboundcampaignagentownedmappingpreview) | **Post** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
+| [**PostOutboundCampaignCallbackSchedule**](OutboundApi.html#postoutboundcampaigncallbackschedule) | **Post** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign (Deprecated) |
+| [**PostOutboundCampaignrules**](OutboundApi.html#postoutboundcampaignrules) | **Post** /api/v2/outbound/campaignrules | Create Campaign Rule |
+| [**PostOutboundCampaigns**](OutboundApi.html#postoutboundcampaigns) | **Post** /api/v2/outbound/campaigns | Create a campaign. |
+| [**PostOutboundCampaignsProgress**](OutboundApi.html#postoutboundcampaignsprogress) | **Post** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
+| [**PostOutboundContactlistClear**](OutboundApi.html#postoutboundcontactlistclear) | **Post** /api/v2/outbound/contactlists/{contactListId}/clear | Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. |
+| [**PostOutboundContactlistContacts**](OutboundApi.html#postoutboundcontactlistcontacts) | **Post** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
+| [**PostOutboundContactlistContactsBulk**](OutboundApi.html#postoutboundcontactlistcontactsbulk) | **Post** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk | Get contacts from a contact list. |
+| [**PostOutboundContactlistExport**](OutboundApi.html#postoutboundcontactlistexport) | **Post** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
+| [**PostOutboundContactlistfilters**](OutboundApi.html#postoutboundcontactlistfilters) | **Post** /api/v2/outbound/contactlistfilters | Create Contact List Filter |
+| [**PostOutboundContactlistfiltersPreview**](OutboundApi.html#postoutboundcontactlistfilterspreview) | **Post** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
+| [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **Post** /api/v2/outbound/contactlists | Create a contact List. |
+| [**PostOutboundConversationDnc**](OutboundApi.html#postoutboundconversationdnc) | **Post** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
+| [**PostOutboundDigitalrulesets**](OutboundApi.html#postoutbounddigitalrulesets) | **Post** /api/v2/outbound/digitalrulesets | Create an Outbound Digital Rule Set |
+| [**PostOutboundDnclistEmailaddresses**](OutboundApi.html#postoutbounddnclistemailaddresses) | **Post** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add email addresses to a DNC list. |
+| [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **Post** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
+| [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **Post** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a DNC list. |
+| [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **Post** /api/v2/outbound/dnclists | Create dialer DNC list |
+| [**PostOutboundMessagingcampaigns**](OutboundApi.html#postoutboundmessagingcampaigns) | **Post** /api/v2/outbound/messagingcampaigns | Create a Messaging Campaign |
+| [**PostOutboundMessagingcampaignsProgress**](OutboundApi.html#postoutboundmessagingcampaignsprogress) | **Post** /api/v2/outbound/messagingcampaigns/progress | Get progress for a list of messaging campaigns |
+| [**PostOutboundRulesets**](OutboundApi.html#postoutboundrulesets) | **Post** /api/v2/outbound/rulesets | Create a Rule Set. |
+| [**PostOutboundSequences**](OutboundApi.html#postoutboundsequences) | **Post** /api/v2/outbound/sequences | Create a new campaign sequence. |
+| [**PutOutboundAttemptlimit**](OutboundApi.html#putoutboundattemptlimit) | **Put** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Update attempt limits |
+| [**PutOutboundCallabletimeset**](OutboundApi.html#putoutboundcallabletimeset) | **Put** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
+| [**PutOutboundCallanalysisresponseset**](OutboundApi.html#putoutboundcallanalysisresponseset) | **Put** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
+| [**PutOutboundCampaign**](OutboundApi.html#putoutboundcampaign) | **Put** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
+| [**PutOutboundCampaignAgent**](OutboundApi.html#putoutboundcampaignagent) | **Put** /api/v2/outbound/campaigns/{campaignId}/agents/{userId} | Send notification that an agent&#39;s state changed  |
+| [**PutOutboundCampaignrule**](OutboundApi.html#putoutboundcampaignrule) | **Put** /api/v2/outbound/campaignrules/{campaignRuleId} | Update Campaign Rule |
+| [**PutOutboundContactlist**](OutboundApi.html#putoutboundcontactlist) | **Put** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
+| [**PutOutboundContactlistContact**](OutboundApi.html#putoutboundcontactlistcontact) | **Put** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
+| [**PutOutboundContactlistfilter**](OutboundApi.html#putoutboundcontactlistfilter) | **Put** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Update Contact List Filter |
+| [**PutOutboundDigitalruleset**](OutboundApi.html#putoutbounddigitalruleset) | **Put** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Update an Outbound Digital Rule Set |
+| [**PutOutboundDnclist**](OutboundApi.html#putoutbounddnclist) | **Put** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
+| [**PutOutboundMessagingcampaign**](OutboundApi.html#putoutboundmessagingcampaign) | **Put** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Update an Outbound Messaging Campaign |
+| [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **Put** /api/v2/outbound/rulesets/{ruleSetId} | Update a Rule Set. |
+| [**PutOutboundSchedulesCampaign**](OutboundApi.html#putoutboundschedulescampaign) | **Put** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
+| [**PutOutboundSchedulesEmailcampaign**](OutboundApi.html#putoutboundschedulesemailcampaign) | **Put** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Update an email campaign schedule. |
+| [**PutOutboundSchedulesMessagingcampaign**](OutboundApi.html#putoutboundschedulesmessagingcampaign) | **Put** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Update a new messaging campaign schedule. |
+| [**PutOutboundSchedulesSequence**](OutboundApi.html#putoutboundschedulessequence) | **Put** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
+| [**PutOutboundSequence**](OutboundApi.html#putoutboundsequence) | **Put** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
+| [**PutOutboundWrapupcodemappings**](OutboundApi.html#putoutboundwrapupcodemappings) | **Put** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
 {: class="table table-striped"}
 
 <a name="deleteoutboundattemptlimit"></a>

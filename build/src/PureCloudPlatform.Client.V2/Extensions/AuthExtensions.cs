@@ -85,8 +85,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
             headerParams["Authorization"] = "Basic " + basicAuth;
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse)CallTokenApi(apiClient, path_,
-                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+            RestResponse response = (RestResponse)CallTokenApi(apiClient, path_,
+                Method.Post, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
@@ -101,7 +101,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
             apiClient.Configuration.AuthTokenInfo = authTokenInfo;
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                response.Headers
+                 .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
                 authTokenInfo,
                 response.Content,
                 response.StatusDescription);
@@ -164,8 +166,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
             headerParams["Authorization"] = "Basic " + basicAuth;
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse)CallTokenApi(apiClient, path_,
-                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+            RestResponse response = (RestResponse)CallTokenApi(apiClient, path_,
+                Method.Post, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
@@ -177,7 +179,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
                     response.ErrorMessage);
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
                 (AuthTokenInfo) apiClient.Deserialize(response, typeof (AuthTokenInfo)),
                 response.Content,
                 response.StatusDescription);
@@ -190,9 +193,19 @@ namespace PureCloudPlatform.Client.V2.Extensions
             String contentType)
         {
             var regex = new Regex(@"://(api)\.");
-            var authUrl = regex.Replace(apiClient.RestClient.BaseUrl.ToString(), "://login.");
-            var restClient = new RestClient(authUrl);
-            restClient.Proxy = apiClient.RestClient.Proxy;
+            var authUrl = regex.Replace(apiClient.ClientOptions.BaseUrl.ToString(), "://login.");
+            var options = new RestClientOptions(new Uri(authUrl));
+            
+            if (apiClient.ClientOptions != null && apiClient.ClientOptions.Proxy != null)
+            {
+                options = new RestClientOptions(new Uri(authUrl))
+                {
+                    Proxy = apiClient.ClientOptions.Proxy
+                };
+               
+            }
+            
+            var restClient = new RestClient(options);
 
             var request = PrepareTokenRequest(
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
@@ -203,11 +216,13 @@ namespace PureCloudPlatform.Client.V2.Extensions
             int statusCode = (int)response.StatusCode;
             var fullUrl = restClient.BuildUri(request);
             string url = fullUrl == null ? path : fullUrl.ToString();
-            apiClient.Configuration.Logger.Trace(method.ToString(), url, postBody, statusCode, headerParams, response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()));
+            apiClient.Configuration.Logger.Trace(method.ToString(), url, postBody, statusCode, headerParams, response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()));
             apiClient.Configuration.Logger.Debug(method.ToString(), url, postBody, statusCode, headerParams);
 
             if (statusCode >= 400 || statusCode == 0)
-                apiClient.Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, statusCode, headerParams, response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()));
+                apiClient.Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, statusCode, headerParams, response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()));
 
             return (Object) response;
         }
@@ -238,7 +253,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
             // add file parameter, if any
             foreach (var param in fileParams)
-                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);
+                request.AddFile(param.Value.Name, param.Value.GetFile, param.Value.FileName, param.Value.ContentType);
 
             if (postBody != null) // http body (model or byte[]) parameter
             {

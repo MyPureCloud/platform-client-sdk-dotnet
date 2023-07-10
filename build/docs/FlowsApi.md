@@ -7,12 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetAnalyticsFlowsAggregatesJob**](FlowsApi.html#getanalyticsflowsaggregatesjob) | **GET** /api/v2/analytics/flows/aggregates/jobs/{jobId} | Get status for async query for Flow aggregates |
-| [**GetAnalyticsFlowsAggregatesJobResults**](FlowsApi.html#getanalyticsflowsaggregatesjobresults) | **GET** /api/v2/analytics/flows/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**PostAnalyticsFlowsActivityQuery**](FlowsApi.html#postanalyticsflowsactivityquery) | **POST** /api/v2/analytics/flows/activity/query | Query for flow activity observations |
-| [**PostAnalyticsFlowsAggregatesJobs**](FlowsApi.html#postanalyticsflowsaggregatesjobs) | **POST** /api/v2/analytics/flows/aggregates/jobs | Query for flow aggregates asynchronously |
-| [**PostAnalyticsFlowsAggregatesQuery**](FlowsApi.html#postanalyticsflowsaggregatesquery) | **POST** /api/v2/analytics/flows/aggregates/query | Query for flow aggregates |
-| [**PostAnalyticsFlowsObservationsQuery**](FlowsApi.html#postanalyticsflowsobservationsquery) | **POST** /api/v2/analytics/flows/observations/query | Query for flow observations |
+| [**GetAnalyticsFlowsAggregatesJob**](FlowsApi.html#getanalyticsflowsaggregatesjob) | **Get** /api/v2/analytics/flows/aggregates/jobs/{jobId} | Get status for async query for Flow aggregates |
+| [**GetAnalyticsFlowsAggregatesJobResults**](FlowsApi.html#getanalyticsflowsaggregatesjobresults) | **Get** /api/v2/analytics/flows/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**PostAnalyticsFlowsActivityQuery**](FlowsApi.html#postanalyticsflowsactivityquery) | **Post** /api/v2/analytics/flows/activity/query | Query for flow activity observations |
+| [**PostAnalyticsFlowsAggregatesJobs**](FlowsApi.html#postanalyticsflowsaggregatesjobs) | **Post** /api/v2/analytics/flows/aggregates/jobs | Query for flow aggregates asynchronously |
+| [**PostAnalyticsFlowsAggregatesQuery**](FlowsApi.html#postanalyticsflowsaggregatesquery) | **Post** /api/v2/analytics/flows/aggregates/query | Query for flow aggregates |
+| [**PostAnalyticsFlowsObservationsQuery**](FlowsApi.html#postanalyticsflowsobservationsquery) | **Post** /api/v2/analytics/flows/observations/query | Query for flow observations |
 {: class="table table-striped"}
 
 <a name="getanalyticsflowsaggregatesjob"></a>

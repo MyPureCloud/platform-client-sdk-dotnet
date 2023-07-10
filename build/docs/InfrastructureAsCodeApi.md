@@ -7,11 +7,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetInfrastructureascodeAccelerator**](InfrastructureAsCodeApi.html#getinfrastructureascodeaccelerator) | **GET** /api/v2/infrastructureascode/accelerators/{acceleratorId} | Get information about an accelerator |
-| [**GetInfrastructureascodeAccelerators**](InfrastructureAsCodeApi.html#getinfrastructureascodeaccelerators) | **GET** /api/v2/infrastructureascode/accelerators | Get a list of available accelerators |
-| [**GetInfrastructureascodeJob**](InfrastructureAsCodeApi.html#getinfrastructureascodejob) | **GET** /api/v2/infrastructureascode/jobs/{jobId} | Get job status and results |
-| [**GetInfrastructureascodeJobs**](InfrastructureAsCodeApi.html#getinfrastructureascodejobs) | **GET** /api/v2/infrastructureascode/jobs | Get job history |
-| [**PostInfrastructureascodeJobs**](InfrastructureAsCodeApi.html#postinfrastructureascodejobs) | **POST** /api/v2/infrastructureascode/jobs | Create a Job |
+| [**GetInfrastructureascodeAccelerator**](InfrastructureAsCodeApi.html#getinfrastructureascodeaccelerator) | **Get** /api/v2/infrastructureascode/accelerators/{acceleratorId} | Get information about an accelerator |
+| [**GetInfrastructureascodeAccelerators**](InfrastructureAsCodeApi.html#getinfrastructureascodeaccelerators) | **Get** /api/v2/infrastructureascode/accelerators | Get a list of available accelerators |
+| [**GetInfrastructureascodeJob**](InfrastructureAsCodeApi.html#getinfrastructureascodejob) | **Get** /api/v2/infrastructureascode/jobs/{jobId} | Get job status and results |
+| [**GetInfrastructureascodeJobs**](InfrastructureAsCodeApi.html#getinfrastructureascodejobs) | **Get** /api/v2/infrastructureascode/jobs | Get job history |
+| [**PostInfrastructureascodeJobs**](InfrastructureAsCodeApi.html#postinfrastructureascodejobs) | **Post** /api/v2/infrastructureascode/jobs | Create a Job |
 {: class="table table-striped"}
 
 <a name="getinfrastructureascodeaccelerator"></a>

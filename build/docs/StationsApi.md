@@ -7,9 +7,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteStationAssociateduser**](StationsApi.html#deletestationassociateduser) | **DELETE** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
-| [**GetStation**](StationsApi.html#getstation) | **GET** /api/v2/stations/{stationId} | Get station. |
-| [**GetStations**](StationsApi.html#getstations) | **GET** /api/v2/stations | Get the list of available stations. |
+| [**DeleteStationAssociateduser**](StationsApi.html#deletestationassociateduser) | **Delete** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
+| [**GetStation**](StationsApi.html#getstation) | **Get** /api/v2/stations/{stationId} | Get station. |
+| [**GetStations**](StationsApi.html#getstations) | **Get** /api/v2/stations | Get the list of available stations. |
 {: class="table table-striped"}
 
 <a name="deletestationassociateduser"></a>

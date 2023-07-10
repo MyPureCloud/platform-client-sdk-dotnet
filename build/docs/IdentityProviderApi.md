@@ -7,40 +7,40 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteIdentityprovidersAdfs**](IdentityProviderApi.html#deleteidentityprovidersadfs) | **DELETE** /api/v2/identityproviders/adfs | Delete ADFS Identity Provider |
-| [**DeleteIdentityprovidersCic**](IdentityProviderApi.html#deleteidentityproviderscic) | **DELETE** /api/v2/identityproviders/cic | Delete Customer Interaction Center (CIC) Identity Provider |
-| [**DeleteIdentityprovidersGeneric**](IdentityProviderApi.html#deleteidentityprovidersgeneric) | **DELETE** /api/v2/identityproviders/generic | Delete Generic SAML Identity Provider |
-| [**DeleteIdentityprovidersGsuite**](IdentityProviderApi.html#deleteidentityprovidersgsuite) | **DELETE** /api/v2/identityproviders/gsuite | Delete G Suite Identity Provider |
-| [**DeleteIdentityprovidersIdentitynow**](IdentityProviderApi.html#deleteidentityprovidersidentitynow) | **DELETE** /api/v2/identityproviders/identitynow | Delete IdentityNow Provider |
-| [**DeleteIdentityprovidersOkta**](IdentityProviderApi.html#deleteidentityprovidersokta) | **DELETE** /api/v2/identityproviders/okta | Delete Okta Identity Provider |
-| [**DeleteIdentityprovidersOnelogin**](IdentityProviderApi.html#deleteidentityprovidersonelogin) | **DELETE** /api/v2/identityproviders/onelogin | Delete OneLogin Identity Provider |
-| [**DeleteIdentityprovidersPing**](IdentityProviderApi.html#deleteidentityprovidersping) | **DELETE** /api/v2/identityproviders/ping | Delete Ping Identity Provider |
-| [**DeleteIdentityprovidersPurecloud**](IdentityProviderApi.html#deleteidentityproviderspurecloud) | **DELETE** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
-| [**DeleteIdentityprovidersPureengage**](IdentityProviderApi.html#deleteidentityproviderspureengage) | **DELETE** /api/v2/identityproviders/pureengage | Delete PureEngage Identity Provider |
-| [**DeleteIdentityprovidersSalesforce**](IdentityProviderApi.html#deleteidentityproviderssalesforce) | **DELETE** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
-| [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
-| [**GetIdentityprovidersAdfs**](IdentityProviderApi.html#getidentityprovidersadfs) | **GET** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
-| [**GetIdentityprovidersCic**](IdentityProviderApi.html#getidentityproviderscic) | **GET** /api/v2/identityproviders/cic | Get Customer Interaction Center (CIC) Identity Provider |
-| [**GetIdentityprovidersGeneric**](IdentityProviderApi.html#getidentityprovidersgeneric) | **GET** /api/v2/identityproviders/generic | Get Generic SAML Identity Provider |
-| [**GetIdentityprovidersGsuite**](IdentityProviderApi.html#getidentityprovidersgsuite) | **GET** /api/v2/identityproviders/gsuite | Get G Suite Identity Provider |
-| [**GetIdentityprovidersIdentitynow**](IdentityProviderApi.html#getidentityprovidersidentitynow) | **GET** /api/v2/identityproviders/identitynow | Get IdentityNow Provider |
-| [**GetIdentityprovidersOkta**](IdentityProviderApi.html#getidentityprovidersokta) | **GET** /api/v2/identityproviders/okta | Get Okta Identity Provider |
-| [**GetIdentityprovidersOnelogin**](IdentityProviderApi.html#getidentityprovidersonelogin) | **GET** /api/v2/identityproviders/onelogin | Get OneLogin Identity Provider |
-| [**GetIdentityprovidersPing**](IdentityProviderApi.html#getidentityprovidersping) | **GET** /api/v2/identityproviders/ping | Get Ping Identity Provider |
-| [**GetIdentityprovidersPurecloud**](IdentityProviderApi.html#getidentityproviderspurecloud) | **GET** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
-| [**GetIdentityprovidersPureengage**](IdentityProviderApi.html#getidentityproviderspureengage) | **GET** /api/v2/identityproviders/pureengage | Get PureEngage Identity Provider |
-| [**GetIdentityprovidersSalesforce**](IdentityProviderApi.html#getidentityproviderssalesforce) | **GET** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
-| [**PutIdentityprovidersAdfs**](IdentityProviderApi.html#putidentityprovidersadfs) | **PUT** /api/v2/identityproviders/adfs | Update/Create ADFS Identity Provider |
-| [**PutIdentityprovidersCic**](IdentityProviderApi.html#putidentityproviderscic) | **PUT** /api/v2/identityproviders/cic | Update/Create Customer Interaction Center (CIC) Identity Provider |
-| [**PutIdentityprovidersGeneric**](IdentityProviderApi.html#putidentityprovidersgeneric) | **PUT** /api/v2/identityproviders/generic | Update/Create Generic SAML Identity Provider |
-| [**PutIdentityprovidersGsuite**](IdentityProviderApi.html#putidentityprovidersgsuite) | **PUT** /api/v2/identityproviders/gsuite | Update/Create G Suite Identity Provider |
-| [**PutIdentityprovidersIdentitynow**](IdentityProviderApi.html#putidentityprovidersidentitynow) | **PUT** /api/v2/identityproviders/identitynow | Update/Create IdentityNow Provider |
-| [**PutIdentityprovidersOkta**](IdentityProviderApi.html#putidentityprovidersokta) | **PUT** /api/v2/identityproviders/okta | Update/Create Okta Identity Provider |
-| [**PutIdentityprovidersOnelogin**](IdentityProviderApi.html#putidentityprovidersonelogin) | **PUT** /api/v2/identityproviders/onelogin | Update/Create OneLogin Identity Provider |
-| [**PutIdentityprovidersPing**](IdentityProviderApi.html#putidentityprovidersping) | **PUT** /api/v2/identityproviders/ping | Update/Create Ping Identity Provider |
-| [**PutIdentityprovidersPurecloud**](IdentityProviderApi.html#putidentityproviderspurecloud) | **PUT** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
-| [**PutIdentityprovidersPureengage**](IdentityProviderApi.html#putidentityproviderspureengage) | **PUT** /api/v2/identityproviders/pureengage | Update/Create PureEngage Identity Provider |
-| [**PutIdentityprovidersSalesforce**](IdentityProviderApi.html#putidentityproviderssalesforce) | **PUT** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
+| [**DeleteIdentityprovidersAdfs**](IdentityProviderApi.html#deleteidentityprovidersadfs) | **Delete** /api/v2/identityproviders/adfs | Delete ADFS Identity Provider |
+| [**DeleteIdentityprovidersCic**](IdentityProviderApi.html#deleteidentityproviderscic) | **Delete** /api/v2/identityproviders/cic | Delete Customer Interaction Center (CIC) Identity Provider |
+| [**DeleteIdentityprovidersGeneric**](IdentityProviderApi.html#deleteidentityprovidersgeneric) | **Delete** /api/v2/identityproviders/generic | Delete Generic SAML Identity Provider |
+| [**DeleteIdentityprovidersGsuite**](IdentityProviderApi.html#deleteidentityprovidersgsuite) | **Delete** /api/v2/identityproviders/gsuite | Delete G Suite Identity Provider |
+| [**DeleteIdentityprovidersIdentitynow**](IdentityProviderApi.html#deleteidentityprovidersidentitynow) | **Delete** /api/v2/identityproviders/identitynow | Delete IdentityNow Provider |
+| [**DeleteIdentityprovidersOkta**](IdentityProviderApi.html#deleteidentityprovidersokta) | **Delete** /api/v2/identityproviders/okta | Delete Okta Identity Provider |
+| [**DeleteIdentityprovidersOnelogin**](IdentityProviderApi.html#deleteidentityprovidersonelogin) | **Delete** /api/v2/identityproviders/onelogin | Delete OneLogin Identity Provider |
+| [**DeleteIdentityprovidersPing**](IdentityProviderApi.html#deleteidentityprovidersping) | **Delete** /api/v2/identityproviders/ping | Delete Ping Identity Provider |
+| [**DeleteIdentityprovidersPurecloud**](IdentityProviderApi.html#deleteidentityproviderspurecloud) | **Delete** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
+| [**DeleteIdentityprovidersPureengage**](IdentityProviderApi.html#deleteidentityproviderspureengage) | **Delete** /api/v2/identityproviders/pureengage | Delete PureEngage Identity Provider |
+| [**DeleteIdentityprovidersSalesforce**](IdentityProviderApi.html#deleteidentityproviderssalesforce) | **Delete** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
+| [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **Get** /api/v2/identityproviders | The list of identity providers |
+| [**GetIdentityprovidersAdfs**](IdentityProviderApi.html#getidentityprovidersadfs) | **Get** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
+| [**GetIdentityprovidersCic**](IdentityProviderApi.html#getidentityproviderscic) | **Get** /api/v2/identityproviders/cic | Get Customer Interaction Center (CIC) Identity Provider |
+| [**GetIdentityprovidersGeneric**](IdentityProviderApi.html#getidentityprovidersgeneric) | **Get** /api/v2/identityproviders/generic | Get Generic SAML Identity Provider |
+| [**GetIdentityprovidersGsuite**](IdentityProviderApi.html#getidentityprovidersgsuite) | **Get** /api/v2/identityproviders/gsuite | Get G Suite Identity Provider |
+| [**GetIdentityprovidersIdentitynow**](IdentityProviderApi.html#getidentityprovidersidentitynow) | **Get** /api/v2/identityproviders/identitynow | Get IdentityNow Provider |
+| [**GetIdentityprovidersOkta**](IdentityProviderApi.html#getidentityprovidersokta) | **Get** /api/v2/identityproviders/okta | Get Okta Identity Provider |
+| [**GetIdentityprovidersOnelogin**](IdentityProviderApi.html#getidentityprovidersonelogin) | **Get** /api/v2/identityproviders/onelogin | Get OneLogin Identity Provider |
+| [**GetIdentityprovidersPing**](IdentityProviderApi.html#getidentityprovidersping) | **Get** /api/v2/identityproviders/ping | Get Ping Identity Provider |
+| [**GetIdentityprovidersPurecloud**](IdentityProviderApi.html#getidentityproviderspurecloud) | **Get** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
+| [**GetIdentityprovidersPureengage**](IdentityProviderApi.html#getidentityproviderspureengage) | **Get** /api/v2/identityproviders/pureengage | Get PureEngage Identity Provider |
+| [**GetIdentityprovidersSalesforce**](IdentityProviderApi.html#getidentityproviderssalesforce) | **Get** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
+| [**PutIdentityprovidersAdfs**](IdentityProviderApi.html#putidentityprovidersadfs) | **Put** /api/v2/identityproviders/adfs | Update/Create ADFS Identity Provider |
+| [**PutIdentityprovidersCic**](IdentityProviderApi.html#putidentityproviderscic) | **Put** /api/v2/identityproviders/cic | Update/Create Customer Interaction Center (CIC) Identity Provider |
+| [**PutIdentityprovidersGeneric**](IdentityProviderApi.html#putidentityprovidersgeneric) | **Put** /api/v2/identityproviders/generic | Update/Create Generic SAML Identity Provider |
+| [**PutIdentityprovidersGsuite**](IdentityProviderApi.html#putidentityprovidersgsuite) | **Put** /api/v2/identityproviders/gsuite | Update/Create G Suite Identity Provider |
+| [**PutIdentityprovidersIdentitynow**](IdentityProviderApi.html#putidentityprovidersidentitynow) | **Put** /api/v2/identityproviders/identitynow | Update/Create IdentityNow Provider |
+| [**PutIdentityprovidersOkta**](IdentityProviderApi.html#putidentityprovidersokta) | **Put** /api/v2/identityproviders/okta | Update/Create Okta Identity Provider |
+| [**PutIdentityprovidersOnelogin**](IdentityProviderApi.html#putidentityprovidersonelogin) | **Put** /api/v2/identityproviders/onelogin | Update/Create OneLogin Identity Provider |
+| [**PutIdentityprovidersPing**](IdentityProviderApi.html#putidentityprovidersping) | **Put** /api/v2/identityproviders/ping | Update/Create Ping Identity Provider |
+| [**PutIdentityprovidersPurecloud**](IdentityProviderApi.html#putidentityproviderspurecloud) | **Put** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
+| [**PutIdentityprovidersPureengage**](IdentityProviderApi.html#putidentityproviderspureengage) | **Put** /api/v2/identityproviders/pureengage | Update/Create PureEngage Identity Provider |
+| [**PutIdentityprovidersSalesforce**](IdentityProviderApi.html#putidentityproviderssalesforce) | **Put** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
 {: class="table table-striped"}
 
 <a name="deleteidentityprovidersadfs"></a>

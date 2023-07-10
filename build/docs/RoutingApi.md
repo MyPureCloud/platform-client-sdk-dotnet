@@ -7,139 +7,139 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteRoutingAssessment**](RoutingApi.html#deleteroutingassessment) | **DELETE** /api/v2/routing/assessments/{assessmentId} | Delete single benefit assessment. |
-| [**DeleteRoutingEmailDomain**](RoutingApi.html#deleteroutingemaildomain) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
-| [**DeleteRoutingEmailDomainRoute**](RoutingApi.html#deleteroutingemaildomainroute) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
-| [**DeleteRoutingEmailOutboundDomain**](RoutingApi.html#deleteroutingemailoutbounddomain) | **DELETE** /api/v2/routing/email/outbound/domains/{domainId} | Delete an outbound domain |
-| [**DeleteRoutingLanguage**](RoutingApi.html#deleteroutinglanguage) | **DELETE** /api/v2/routing/languages/{languageId} | Delete a routing language |
-| [**DeleteRoutingPredictor**](RoutingApi.html#deleteroutingpredictor) | **DELETE** /api/v2/routing/predictors/{predictorId} | Delete single predictor. |
-| [**DeleteRoutingQueue**](RoutingApi.html#deleteroutingqueue) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
-| [**DeleteRoutingQueueMember**](RoutingApi.html#deleteroutingqueuemember) | **DELETE** /api/v2/routing/queues/{queueId}/members/{memberId} | Delete a queue member. |
-| [**DeleteRoutingQueueUser**](RoutingApi.html#deleteroutingqueueuser) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. |
-| [**DeleteRoutingQueueWrapupcode**](RoutingApi.html#deleteroutingqueuewrapupcode) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
-| [**DeleteRoutingSettings**](RoutingApi.html#deleteroutingsettings) | **DELETE** /api/v2/routing/settings | Delete an organization&#39;s routing settings |
-| [**DeleteRoutingSkill**](RoutingApi.html#deleteroutingskill) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
-| [**DeleteRoutingSkillgroup**](RoutingApi.html#deleteroutingskillgroup) | **DELETE** /api/v2/routing/skillgroups/{skillGroupId} | Remove skill group definition |
-| [**DeleteRoutingSmsAddress**](RoutingApi.html#deleteroutingsmsaddress) | **DELETE** /api/v2/routing/sms/addresses/{addressId} | Delete an Address by Id for SMS |
-| [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **DELETE** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
-| [**DeleteRoutingUserUtilization**](RoutingApi.html#deleteroutinguserutilization) | **DELETE** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
-| [**DeleteRoutingUtilization**](RoutingApi.html#deleteroutingutilization) | **DELETE** /api/v2/routing/utilization | Delete the organization-wide max utilization settings and revert to the system default. |
-| [**DeleteRoutingUtilizationTag**](RoutingApi.html#deleteroutingutilizationtag) | **DELETE** /api/v2/routing/utilization/tags/{tagId} | Delete an utilization tag |
-| [**DeleteRoutingWrapupcode**](RoutingApi.html#deleteroutingwrapupcode) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
-| [**DeleteUserRoutinglanguage**](RoutingApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
-| [**DeleteUserRoutingskill**](RoutingApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
-| [**GetRoutingAssessment**](RoutingApi.html#getroutingassessment) | **GET** /api/v2/routing/assessments/{assessmentId} | Retrieve a single benefit assessment. |
-| [**GetRoutingAssessments**](RoutingApi.html#getroutingassessments) | **GET** /api/v2/routing/assessments | Retrieve all benefit assessments. |
-| [**GetRoutingAssessmentsJob**](RoutingApi.html#getroutingassessmentsjob) | **GET** /api/v2/routing/assessments/jobs/{jobId} | Retrieve a single benefit assessments job. |
-| [**GetRoutingAssessmentsJobs**](RoutingApi.html#getroutingassessmentsjobs) | **GET** /api/v2/routing/assessments/jobs | Retrieve all benefit assessment jobs. |
-| [**GetRoutingAvailablemediatypes**](RoutingApi.html#getroutingavailablemediatypes) | **GET** /api/v2/routing/availablemediatypes | Get available media types |
-| [**GetRoutingEmailDomain**](RoutingApi.html#getroutingemaildomain) | **GET** /api/v2/routing/email/domains/{domainId} | Get domain |
-| [**GetRoutingEmailDomainRoute**](RoutingApi.html#getroutingemaildomainroute) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
-| [**GetRoutingEmailDomainRoutes**](RoutingApi.html#getroutingemaildomainroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
-| [**GetRoutingEmailDomains**](RoutingApi.html#getroutingemaildomains) | **GET** /api/v2/routing/email/domains | Get domains |
-| [**GetRoutingEmailOutboundDomain**](RoutingApi.html#getroutingemailoutbounddomain) | **GET** /api/v2/routing/email/outbound/domains/{domainId} | Get domain |
-| [**GetRoutingEmailOutboundDomainActivation**](RoutingApi.html#getroutingemailoutbounddomainactivation) | **GET** /api/v2/routing/email/outbound/domains/{domainId}/activation | Get activation status (cname + dkim) of an outbound domain |
-| [**GetRoutingEmailOutboundDomainSearch**](RoutingApi.html#getroutingemailoutbounddomainsearch) | **GET** /api/v2/routing/email/outbound/domains/{domainId}/search | Search a domain across organizations |
-| [**GetRoutingEmailOutboundDomains**](RoutingApi.html#getroutingemailoutbounddomains) | **GET** /api/v2/routing/email/outbound/domains | Get outbound domains |
-| [**GetRoutingEmailSetup**](RoutingApi.html#getroutingemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
-| [**GetRoutingLanguage**](RoutingApi.html#getroutinglanguage) | **GET** /api/v2/routing/languages/{languageId} | Get a routing language |
-| [**GetRoutingLanguages**](RoutingApi.html#getroutinglanguages) | **GET** /api/v2/routing/languages | Get the list of supported languages. |
-| [**GetRoutingMessageRecipient**](RoutingApi.html#getroutingmessagerecipient) | **GET** /api/v2/routing/message/recipients/{recipientId} | Get a recipient |
-| [**GetRoutingMessageRecipients**](RoutingApi.html#getroutingmessagerecipients) | **GET** /api/v2/routing/message/recipients | Get recipients |
-| [**GetRoutingPredictor**](RoutingApi.html#getroutingpredictor) | **GET** /api/v2/routing/predictors/{predictorId} | Retrieve a single predictor. |
-| [**GetRoutingPredictorModelFeatures**](RoutingApi.html#getroutingpredictormodelfeatures) | **GET** /api/v2/routing/predictors/{predictorId}/models/{modelId}/features | Retrieve Predictor Model Features. |
-| [**GetRoutingPredictorModels**](RoutingApi.html#getroutingpredictormodels) | **GET** /api/v2/routing/predictors/{predictorId}/models | Retrieve Predictor Models and Top Features. |
-| [**GetRoutingPredictors**](RoutingApi.html#getroutingpredictors) | **GET** /api/v2/routing/predictors | Retrieve all predictors. |
-| [**GetRoutingPredictorsKeyperformanceindicators**](RoutingApi.html#getroutingpredictorskeyperformanceindicators) | **GET** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators |
-| [**GetRoutingQueue**](RoutingApi.html#getroutingqueue) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
-| [**GetRoutingQueueComparisonperiod**](RoutingApi.html#getroutingqueuecomparisonperiod) | **GET** /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId} | Get a Comparison Period. |
-| [**GetRoutingQueueComparisonperiods**](RoutingApi.html#getroutingqueuecomparisonperiods) | **GET** /api/v2/routing/queues/{queueId}/comparisonperiods | Get list of comparison periods |
-| [**GetRoutingQueueEstimatedwaittime**](RoutingApi.html#getroutingqueueestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
-| [**GetRoutingQueueMediatypeEstimatedwaittime**](RoutingApi.html#getroutingqueuemediatypeestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/mediatypes/{mediaType}/estimatedwaittime | Get Estimated Wait Time |
-| [**GetRoutingQueueMembers**](RoutingApi.html#getroutingqueuemembers) | **GET** /api/v2/routing/queues/{queueId}/members | Get the members of this queue. |
-| [**GetRoutingQueueUsers**](RoutingApi.html#getroutingqueueusers) | **GET** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. |
-| [**GetRoutingQueueWrapupcodes**](RoutingApi.html#getroutingqueuewrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
-| [**GetRoutingQueues**](RoutingApi.html#getroutingqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
-| [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **GET** /api/v2/routing/queues/divisionviews | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
-| [**GetRoutingQueuesDivisionviewsAll**](RoutingApi.html#getroutingqueuesdivisionviewsall) | **GET** /api/v2/routing/queues/divisionviews/all | Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization. |
-| [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **GET** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
-| [**GetRoutingSettings**](RoutingApi.html#getroutingsettings) | **GET** /api/v2/routing/settings | Get an organization&#39;s routing settings |
-| [**GetRoutingSettingsContactcenter**](RoutingApi.html#getroutingsettingscontactcenter) | **GET** /api/v2/routing/settings/contactcenter | Get Contact Center Settings |
-| [**GetRoutingSettingsTranscription**](RoutingApi.html#getroutingsettingstranscription) | **GET** /api/v2/routing/settings/transcription | Get Transcription Settings |
-| [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
-| [**GetRoutingSkillgroup**](RoutingApi.html#getroutingskillgroup) | **GET** /api/v2/routing/skillgroups/{skillGroupId} | Get skill group |
-| [**GetRoutingSkillgroupMembers**](RoutingApi.html#getroutingskillgroupmembers) | **GET** /api/v2/routing/skillgroups/{skillGroupId}/members | Get skill group members |
-| [**GetRoutingSkillgroupMembersDivisions**](RoutingApi.html#getroutingskillgroupmembersdivisions) | **GET** /api/v2/routing/skillgroups/{skillGroupId}/members/divisions | Get list of member divisions for this skill group. |
-| [**GetRoutingSkillgroups**](RoutingApi.html#getroutingskillgroups) | **GET** /api/v2/routing/skillgroups | Get skill group listing |
-| [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
-| [**GetRoutingSmsAddress**](RoutingApi.html#getroutingsmsaddress) | **GET** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
-| [**GetRoutingSmsAddresses**](RoutingApi.html#getroutingsmsaddresses) | **GET** /api/v2/routing/sms/addresses | Get a list of Addresses for SMS |
-| [**GetRoutingSmsAvailablephonenumbers**](RoutingApi.html#getroutingsmsavailablephonenumbers) | **GET** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
-| [**GetRoutingSmsPhonenumber**](RoutingApi.html#getroutingsmsphonenumber) | **GET** /api/v2/routing/sms/phonenumbers/{addressId} | Get a phone number provisioned for SMS. |
-| [**GetRoutingSmsPhonenumbers**](RoutingApi.html#getroutingsmsphonenumbers) | **GET** /api/v2/routing/sms/phonenumbers | Get a list of provisioned phone numbers. |
-| [**GetRoutingUserUtilization**](RoutingApi.html#getroutinguserutilization) | **GET** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
-| [**GetRoutingUtilization**](RoutingApi.html#getroutingutilization) | **GET** /api/v2/routing/utilization | Get the organization-wide max utilization settings. |
-| [**GetRoutingUtilizationTag**](RoutingApi.html#getroutingutilizationtag) | **GET** /api/v2/routing/utilization/tags/{tagId} | Get details about this utilization tag |
-| [**GetRoutingUtilizationTagAgents**](RoutingApi.html#getroutingutilizationtagagents) | **GET** /api/v2/routing/utilization/tags/{tagId}/agents | Get list of agent ids associated with a utilization tag |
-| [**GetRoutingUtilizationTags**](RoutingApi.html#getroutingutilizationtags) | **GET** /api/v2/routing/utilization/tags | Get list of utilization tags |
-| [**GetRoutingWrapupcode**](RoutingApi.html#getroutingwrapupcode) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
-| [**GetRoutingWrapupcodes**](RoutingApi.html#getroutingwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
-| [**GetUserQueues**](RoutingApi.html#getuserqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
-| [**GetUserRoutinglanguages**](RoutingApi.html#getuserroutinglanguages) | **GET** /api/v2/users/{userId}/routinglanguages | List routing language for user |
-| [**GetUserRoutingskills**](RoutingApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
-| [**GetUserSkillgroups**](RoutingApi.html#getuserskillgroups) | **GET** /api/v2/users/{userId}/skillgroups | Get skill groups for a user |
-| [**PatchRoutingConversation**](RoutingApi.html#patchroutingconversation) | **PATCH** /api/v2/routing/conversations/{conversationId} | Update attributes of an in-queue conversation |
-| [**PatchRoutingEmailDomain**](RoutingApi.html#patchroutingemaildomain) | **PATCH** /api/v2/routing/email/domains/{domainId} | Update domain settings |
-| [**PatchRoutingEmailDomainValidate**](RoutingApi.html#patchroutingemaildomainvalidate) | **PATCH** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
-| [**PatchRoutingPredictor**](RoutingApi.html#patchroutingpredictor) | **PATCH** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
-| [**PatchRoutingQueueMember**](RoutingApi.html#patchroutingqueuemember) | **PATCH** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
-| [**PatchRoutingQueueMembers**](RoutingApi.html#patchroutingqueuemembers) | **PATCH** /api/v2/routing/queues/{queueId}/members | Join or unjoin a set of users for a queue |
-| [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
-| [**PatchRoutingQueueUsers**](RoutingApi.html#patchroutingqueueusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
-| [**PatchRoutingSettingsContactcenter**](RoutingApi.html#patchroutingsettingscontactcenter) | **PATCH** /api/v2/routing/settings/contactcenter | Update Contact Center Settings |
-| [**PatchRoutingSkillgroup**](RoutingApi.html#patchroutingskillgroup) | **PATCH** /api/v2/routing/skillgroups/{skillGroupId} | Update skill group definition |
-| [**PatchUserQueue**](RoutingApi.html#patchuserqueue) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
-| [**PatchUserQueues**](RoutingApi.html#patchuserqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
-| [**PatchUserRoutinglanguage**](RoutingApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
-| [**PatchUserRoutinglanguagesBulk**](RoutingApi.html#patchuserroutinglanguagesbulk) | **PATCH** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
-| [**PatchUserRoutingskillsBulk**](RoutingApi.html#patchuserroutingskillsbulk) | **PATCH** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
-| [**PostAnalyticsQueuesObservationsQuery**](RoutingApi.html#postanalyticsqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
-| [**PostAnalyticsRoutingActivityQuery**](RoutingApi.html#postanalyticsroutingactivityquery) | **POST** /api/v2/analytics/routing/activity/query | Query for user activity observations |
-| [**PostRoutingAssessments**](RoutingApi.html#postroutingassessments) | **POST** /api/v2/routing/assessments | Create a benefit assessment. |
-| [**PostRoutingAssessmentsJobs**](RoutingApi.html#postroutingassessmentsjobs) | **POST** /api/v2/routing/assessments/jobs | Create a benefit assessment job. |
-| [**PostRoutingEmailDomainRoutes**](RoutingApi.html#postroutingemaildomainroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
-| [**PostRoutingEmailDomainTestconnection**](RoutingApi.html#postroutingemaildomaintestconnection) | **POST** /api/v2/routing/email/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this domain |
-| [**PostRoutingEmailDomains**](RoutingApi.html#postroutingemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
-| [**PostRoutingEmailOutboundDomains**](RoutingApi.html#postroutingemailoutbounddomains) | **POST** /api/v2/routing/email/outbound/domains | Create a domain |
-| [**PostRoutingEmailOutboundDomainsSimulated**](RoutingApi.html#postroutingemailoutbounddomainssimulated) | **POST** /api/v2/routing/email/outbound/domains/simulated | Create a simulated domain |
-| [**PostRoutingLanguages**](RoutingApi.html#postroutinglanguages) | **POST** /api/v2/routing/languages | Create Language |
-| [**PostRoutingPredictors**](RoutingApi.html#postroutingpredictors) | **POST** /api/v2/routing/predictors | Create a predictor. |
-| [**PostRoutingQueueMembers**](RoutingApi.html#postroutingqueuemembers) | **POST** /api/v2/routing/queues/{queueId}/members | Bulk add or delete up to 100 queue members |
-| [**PostRoutingQueueUsers**](RoutingApi.html#postroutingqueueusers) | **POST** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
-| [**PostRoutingQueueWrapupcodes**](RoutingApi.html#postroutingqueuewrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
-| [**PostRoutingQueues**](RoutingApi.html#postroutingqueues) | **POST** /api/v2/routing/queues | Create a queue |
-| [**PostRoutingSkillgroupMembersDivisions**](RoutingApi.html#postroutingskillgroupmembersdivisions) | **POST** /api/v2/routing/skillgroups/{skillGroupId}/members/divisions | Add or remove member divisions for this skill group. |
-| [**PostRoutingSkillgroups**](RoutingApi.html#postroutingskillgroups) | **POST** /api/v2/routing/skillgroups | Create a skill group |
-| [**PostRoutingSkills**](RoutingApi.html#postroutingskills) | **POST** /api/v2/routing/skills | Create Skill |
-| [**PostRoutingSmsAddresses**](RoutingApi.html#postroutingsmsaddresses) | **POST** /api/v2/routing/sms/addresses | Provision an Address for SMS |
-| [**PostRoutingSmsPhonenumbers**](RoutingApi.html#postroutingsmsphonenumbers) | **POST** /api/v2/routing/sms/phonenumbers | Provision a phone number for SMS |
-| [**PostRoutingSmsPhonenumbersImport**](RoutingApi.html#postroutingsmsphonenumbersimport) | **POST** /api/v2/routing/sms/phonenumbers/import | Imports a phone number for SMS |
-| [**PostRoutingUtilizationTags**](RoutingApi.html#postroutingutilizationtags) | **POST** /api/v2/routing/utilization/tags | Create an utilization tag |
-| [**PostRoutingWrapupcodes**](RoutingApi.html#postroutingwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
-| [**PostUserRoutinglanguages**](RoutingApi.html#postuserroutinglanguages) | **POST** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
-| [**PostUserRoutingskills**](RoutingApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
-| [**PutRoutingEmailDomainRoute**](RoutingApi.html#putroutingemaildomainroute) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
-| [**PutRoutingEmailOutboundDomainActivation**](RoutingApi.html#putroutingemailoutbounddomainactivation) | **PUT** /api/v2/routing/email/outbound/domains/{domainId}/activation | Request an activation status (cname + dkim) update of an outbound domain |
-| [**PutRoutingMessageRecipient**](RoutingApi.html#putroutingmessagerecipient) | **PUT** /api/v2/routing/message/recipients/{recipientId} | Update a recipient |
-| [**PutRoutingQueue**](RoutingApi.html#putroutingqueue) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
-| [**PutRoutingSettings**](RoutingApi.html#putroutingsettings) | **PUT** /api/v2/routing/settings | Update an organization&#39;s routing settings |
-| [**PutRoutingSettingsTranscription**](RoutingApi.html#putroutingsettingstranscription) | **PUT** /api/v2/routing/settings/transcription | Update Transcription Settings |
-| [**PutRoutingSmsPhonenumber**](RoutingApi.html#putroutingsmsphonenumber) | **PUT** /api/v2/routing/sms/phonenumbers/{addressId} | Update a phone number provisioned for SMS. |
-| [**PutRoutingUserUtilization**](RoutingApi.html#putroutinguserutilization) | **PUT** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
-| [**PutRoutingUtilization**](RoutingApi.html#putroutingutilization) | **PUT** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
-| [**PutRoutingWrapupcode**](RoutingApi.html#putroutingwrapupcode) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
-| [**PutUserRoutingskill**](RoutingApi.html#putuserroutingskill) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
-| [**PutUserRoutingskillsBulk**](RoutingApi.html#putuserroutingskillsbulk) | **PUT** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
+| [**DeleteRoutingAssessment**](RoutingApi.html#deleteroutingassessment) | **Delete** /api/v2/routing/assessments/{assessmentId} | Delete single benefit assessment. |
+| [**DeleteRoutingEmailDomain**](RoutingApi.html#deleteroutingemaildomain) | **Delete** /api/v2/routing/email/domains/{domainId} | Delete a domain |
+| [**DeleteRoutingEmailDomainRoute**](RoutingApi.html#deleteroutingemaildomainroute) | **Delete** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
+| [**DeleteRoutingEmailOutboundDomain**](RoutingApi.html#deleteroutingemailoutbounddomain) | **Delete** /api/v2/routing/email/outbound/domains/{domainId} | Delete an outbound domain |
+| [**DeleteRoutingLanguage**](RoutingApi.html#deleteroutinglanguage) | **Delete** /api/v2/routing/languages/{languageId} | Delete a routing language |
+| [**DeleteRoutingPredictor**](RoutingApi.html#deleteroutingpredictor) | **Delete** /api/v2/routing/predictors/{predictorId} | Delete single predictor. |
+| [**DeleteRoutingQueue**](RoutingApi.html#deleteroutingqueue) | **Delete** /api/v2/routing/queues/{queueId} | Delete a queue |
+| [**DeleteRoutingQueueMember**](RoutingApi.html#deleteroutingqueuemember) | **Delete** /api/v2/routing/queues/{queueId}/members/{memberId} | Delete a queue member. |
+| [**DeleteRoutingQueueUser**](RoutingApi.html#deleteroutingqueueuser) | **Delete** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. |
+| [**DeleteRoutingQueueWrapupcode**](RoutingApi.html#deleteroutingqueuewrapupcode) | **Delete** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
+| [**DeleteRoutingSettings**](RoutingApi.html#deleteroutingsettings) | **Delete** /api/v2/routing/settings | Delete an organization&#39;s routing settings |
+| [**DeleteRoutingSkill**](RoutingApi.html#deleteroutingskill) | **Delete** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
+| [**DeleteRoutingSkillgroup**](RoutingApi.html#deleteroutingskillgroup) | **Delete** /api/v2/routing/skillgroups/{skillGroupId} | Remove skill group definition |
+| [**DeleteRoutingSmsAddress**](RoutingApi.html#deleteroutingsmsaddress) | **Delete** /api/v2/routing/sms/addresses/{addressId} | Delete an Address by Id for SMS |
+| [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **Delete** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
+| [**DeleteRoutingUserUtilization**](RoutingApi.html#deleteroutinguserutilization) | **Delete** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
+| [**DeleteRoutingUtilization**](RoutingApi.html#deleteroutingutilization) | **Delete** /api/v2/routing/utilization | Delete the organization-wide max utilization settings and revert to the system default. |
+| [**DeleteRoutingUtilizationTag**](RoutingApi.html#deleteroutingutilizationtag) | **Delete** /api/v2/routing/utilization/tags/{tagId} | Delete an utilization tag |
+| [**DeleteRoutingWrapupcode**](RoutingApi.html#deleteroutingwrapupcode) | **Delete** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
+| [**DeleteUserRoutinglanguage**](RoutingApi.html#deleteuserroutinglanguage) | **Delete** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
+| [**DeleteUserRoutingskill**](RoutingApi.html#deleteuserroutingskill) | **Delete** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
+| [**GetRoutingAssessment**](RoutingApi.html#getroutingassessment) | **Get** /api/v2/routing/assessments/{assessmentId} | Retrieve a single benefit assessment. |
+| [**GetRoutingAssessments**](RoutingApi.html#getroutingassessments) | **Get** /api/v2/routing/assessments | Retrieve all benefit assessments. |
+| [**GetRoutingAssessmentsJob**](RoutingApi.html#getroutingassessmentsjob) | **Get** /api/v2/routing/assessments/jobs/{jobId} | Retrieve a single benefit assessments job. |
+| [**GetRoutingAssessmentsJobs**](RoutingApi.html#getroutingassessmentsjobs) | **Get** /api/v2/routing/assessments/jobs | Retrieve all benefit assessment jobs. |
+| [**GetRoutingAvailablemediatypes**](RoutingApi.html#getroutingavailablemediatypes) | **Get** /api/v2/routing/availablemediatypes | Get available media types |
+| [**GetRoutingEmailDomain**](RoutingApi.html#getroutingemaildomain) | **Get** /api/v2/routing/email/domains/{domainId} | Get domain |
+| [**GetRoutingEmailDomainRoute**](RoutingApi.html#getroutingemaildomainroute) | **Get** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
+| [**GetRoutingEmailDomainRoutes**](RoutingApi.html#getroutingemaildomainroutes) | **Get** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
+| [**GetRoutingEmailDomains**](RoutingApi.html#getroutingemaildomains) | **Get** /api/v2/routing/email/domains | Get domains |
+| [**GetRoutingEmailOutboundDomain**](RoutingApi.html#getroutingemailoutbounddomain) | **Get** /api/v2/routing/email/outbound/domains/{domainId} | Get domain |
+| [**GetRoutingEmailOutboundDomainActivation**](RoutingApi.html#getroutingemailoutbounddomainactivation) | **Get** /api/v2/routing/email/outbound/domains/{domainId}/activation | Get activation status (cname + dkim) of an outbound domain |
+| [**GetRoutingEmailOutboundDomainSearch**](RoutingApi.html#getroutingemailoutbounddomainsearch) | **Get** /api/v2/routing/email/outbound/domains/{domainId}/search | Search a domain across organizations |
+| [**GetRoutingEmailOutboundDomains**](RoutingApi.html#getroutingemailoutbounddomains) | **Get** /api/v2/routing/email/outbound/domains | Get outbound domains |
+| [**GetRoutingEmailSetup**](RoutingApi.html#getroutingemailsetup) | **Get** /api/v2/routing/email/setup | Get email setup |
+| [**GetRoutingLanguage**](RoutingApi.html#getroutinglanguage) | **Get** /api/v2/routing/languages/{languageId} | Get a routing language |
+| [**GetRoutingLanguages**](RoutingApi.html#getroutinglanguages) | **Get** /api/v2/routing/languages | Get the list of supported languages. |
+| [**GetRoutingMessageRecipient**](RoutingApi.html#getroutingmessagerecipient) | **Get** /api/v2/routing/message/recipients/{recipientId} | Get a recipient |
+| [**GetRoutingMessageRecipients**](RoutingApi.html#getroutingmessagerecipients) | **Get** /api/v2/routing/message/recipients | Get recipients |
+| [**GetRoutingPredictor**](RoutingApi.html#getroutingpredictor) | **Get** /api/v2/routing/predictors/{predictorId} | Retrieve a single predictor. |
+| [**GetRoutingPredictorModelFeatures**](RoutingApi.html#getroutingpredictormodelfeatures) | **Get** /api/v2/routing/predictors/{predictorId}/models/{modelId}/features | Retrieve Predictor Model Features. |
+| [**GetRoutingPredictorModels**](RoutingApi.html#getroutingpredictormodels) | **Get** /api/v2/routing/predictors/{predictorId}/models | Retrieve Predictor Models and Top Features. |
+| [**GetRoutingPredictors**](RoutingApi.html#getroutingpredictors) | **Get** /api/v2/routing/predictors | Retrieve all predictors. |
+| [**GetRoutingPredictorsKeyperformanceindicators**](RoutingApi.html#getroutingpredictorskeyperformanceindicators) | **Get** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators |
+| [**GetRoutingQueue**](RoutingApi.html#getroutingqueue) | **Get** /api/v2/routing/queues/{queueId} | Get details about this queue. |
+| [**GetRoutingQueueComparisonperiod**](RoutingApi.html#getroutingqueuecomparisonperiod) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId} | Get a Comparison Period. |
+| [**GetRoutingQueueComparisonperiods**](RoutingApi.html#getroutingqueuecomparisonperiods) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods | Get list of comparison periods |
+| [**GetRoutingQueueEstimatedwaittime**](RoutingApi.html#getroutingqueueestimatedwaittime) | **Get** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
+| [**GetRoutingQueueMediatypeEstimatedwaittime**](RoutingApi.html#getroutingqueuemediatypeestimatedwaittime) | **Get** /api/v2/routing/queues/{queueId}/mediatypes/{mediaType}/estimatedwaittime | Get Estimated Wait Time |
+| [**GetRoutingQueueMembers**](RoutingApi.html#getroutingqueuemembers) | **Get** /api/v2/routing/queues/{queueId}/members | Get the members of this queue. |
+| [**GetRoutingQueueUsers**](RoutingApi.html#getroutingqueueusers) | **Get** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. |
+| [**GetRoutingQueueWrapupcodes**](RoutingApi.html#getroutingqueuewrapupcodes) | **Get** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
+| [**GetRoutingQueues**](RoutingApi.html#getroutingqueues) | **Get** /api/v2/routing/queues | Get list of queues. |
+| [**GetRoutingQueuesDivisionviews**](RoutingApi.html#getroutingqueuesdivisionviews) | **Get** /api/v2/routing/queues/divisionviews | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
+| [**GetRoutingQueuesDivisionviewsAll**](RoutingApi.html#getroutingqueuesdivisionviewsall) | **Get** /api/v2/routing/queues/divisionviews/all | Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization. |
+| [**GetRoutingQueuesMe**](RoutingApi.html#getroutingqueuesme) | **Get** /api/v2/routing/queues/me | Get a paged listing of queues the user is a member of. |
+| [**GetRoutingSettings**](RoutingApi.html#getroutingsettings) | **Get** /api/v2/routing/settings | Get an organization&#39;s routing settings |
+| [**GetRoutingSettingsContactcenter**](RoutingApi.html#getroutingsettingscontactcenter) | **Get** /api/v2/routing/settings/contactcenter | Get Contact Center Settings |
+| [**GetRoutingSettingsTranscription**](RoutingApi.html#getroutingsettingstranscription) | **Get** /api/v2/routing/settings/transcription | Get Transcription Settings |
+| [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **Get** /api/v2/routing/skills/{skillId} | Get Routing Skill |
+| [**GetRoutingSkillgroup**](RoutingApi.html#getroutingskillgroup) | **Get** /api/v2/routing/skillgroups/{skillGroupId} | Get skill group |
+| [**GetRoutingSkillgroupMembers**](RoutingApi.html#getroutingskillgroupmembers) | **Get** /api/v2/routing/skillgroups/{skillGroupId}/members | Get skill group members |
+| [**GetRoutingSkillgroupMembersDivisions**](RoutingApi.html#getroutingskillgroupmembersdivisions) | **Get** /api/v2/routing/skillgroups/{skillGroupId}/members/divisions | Get list of member divisions for this skill group. |
+| [**GetRoutingSkillgroups**](RoutingApi.html#getroutingskillgroups) | **Get** /api/v2/routing/skillgroups | Get skill group listing |
+| [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **Get** /api/v2/routing/skills | Get the list of routing skills. |
+| [**GetRoutingSmsAddress**](RoutingApi.html#getroutingsmsaddress) | **Get** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
+| [**GetRoutingSmsAddresses**](RoutingApi.html#getroutingsmsaddresses) | **Get** /api/v2/routing/sms/addresses | Get a list of Addresses for SMS |
+| [**GetRoutingSmsAvailablephonenumbers**](RoutingApi.html#getroutingsmsavailablephonenumbers) | **Get** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
+| [**GetRoutingSmsPhonenumber**](RoutingApi.html#getroutingsmsphonenumber) | **Get** /api/v2/routing/sms/phonenumbers/{addressId} | Get a phone number provisioned for SMS. |
+| [**GetRoutingSmsPhonenumbers**](RoutingApi.html#getroutingsmsphonenumbers) | **Get** /api/v2/routing/sms/phonenumbers | Get a list of provisioned phone numbers. |
+| [**GetRoutingUserUtilization**](RoutingApi.html#getroutinguserutilization) | **Get** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
+| [**GetRoutingUtilization**](RoutingApi.html#getroutingutilization) | **Get** /api/v2/routing/utilization | Get the organization-wide max utilization settings. |
+| [**GetRoutingUtilizationTag**](RoutingApi.html#getroutingutilizationtag) | **Get** /api/v2/routing/utilization/tags/{tagId} | Get details about this utilization tag |
+| [**GetRoutingUtilizationTagAgents**](RoutingApi.html#getroutingutilizationtagagents) | **Get** /api/v2/routing/utilization/tags/{tagId}/agents | Get list of agent ids associated with a utilization tag |
+| [**GetRoutingUtilizationTags**](RoutingApi.html#getroutingutilizationtags) | **Get** /api/v2/routing/utilization/tags | Get list of utilization tags |
+| [**GetRoutingWrapupcode**](RoutingApi.html#getroutingwrapupcode) | **Get** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
+| [**GetRoutingWrapupcodes**](RoutingApi.html#getroutingwrapupcodes) | **Get** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
+| [**GetUserQueues**](RoutingApi.html#getuserqueues) | **Get** /api/v2/users/{userId}/queues | Get queues for user |
+| [**GetUserRoutinglanguages**](RoutingApi.html#getuserroutinglanguages) | **Get** /api/v2/users/{userId}/routinglanguages | List routing language for user |
+| [**GetUserRoutingskills**](RoutingApi.html#getuserroutingskills) | **Get** /api/v2/users/{userId}/routingskills | List routing skills for user |
+| [**GetUserSkillgroups**](RoutingApi.html#getuserskillgroups) | **Get** /api/v2/users/{userId}/skillgroups | Get skill groups for a user |
+| [**PatchRoutingConversation**](RoutingApi.html#patchroutingconversation) | **Patch** /api/v2/routing/conversations/{conversationId} | Update attributes of an in-queue conversation |
+| [**PatchRoutingEmailDomain**](RoutingApi.html#patchroutingemaildomain) | **Patch** /api/v2/routing/email/domains/{domainId} | Update domain settings |
+| [**PatchRoutingEmailDomainValidate**](RoutingApi.html#patchroutingemaildomainvalidate) | **Patch** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
+| [**PatchRoutingPredictor**](RoutingApi.html#patchroutingpredictor) | **Patch** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
+| [**PatchRoutingQueueMember**](RoutingApi.html#patchroutingqueuemember) | **Patch** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
+| [**PatchRoutingQueueMembers**](RoutingApi.html#patchroutingqueuemembers) | **Patch** /api/v2/routing/queues/{queueId}/members | Join or unjoin a set of users for a queue |
+| [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **Patch** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
+| [**PatchRoutingQueueUsers**](RoutingApi.html#patchroutingqueueusers) | **Patch** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
+| [**PatchRoutingSettingsContactcenter**](RoutingApi.html#patchroutingsettingscontactcenter) | **Patch** /api/v2/routing/settings/contactcenter | Update Contact Center Settings |
+| [**PatchRoutingSkillgroup**](RoutingApi.html#patchroutingskillgroup) | **Patch** /api/v2/routing/skillgroups/{skillGroupId} | Update skill group definition |
+| [**PatchUserQueue**](RoutingApi.html#patchuserqueue) | **Patch** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
+| [**PatchUserQueues**](RoutingApi.html#patchuserqueues) | **Patch** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
+| [**PatchUserRoutinglanguage**](RoutingApi.html#patchuserroutinglanguage) | **Patch** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
+| [**PatchUserRoutinglanguagesBulk**](RoutingApi.html#patchuserroutinglanguagesbulk) | **Patch** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
+| [**PatchUserRoutingskillsBulk**](RoutingApi.html#patchuserroutingskillsbulk) | **Patch** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
+| [**PostAnalyticsQueuesObservationsQuery**](RoutingApi.html#postanalyticsqueuesobservationsquery) | **Post** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostAnalyticsRoutingActivityQuery**](RoutingApi.html#postanalyticsroutingactivityquery) | **Post** /api/v2/analytics/routing/activity/query | Query for user activity observations |
+| [**PostRoutingAssessments**](RoutingApi.html#postroutingassessments) | **Post** /api/v2/routing/assessments | Create a benefit assessment. |
+| [**PostRoutingAssessmentsJobs**](RoutingApi.html#postroutingassessmentsjobs) | **Post** /api/v2/routing/assessments/jobs | Create a benefit assessment job. |
+| [**PostRoutingEmailDomainRoutes**](RoutingApi.html#postroutingemaildomainroutes) | **Post** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
+| [**PostRoutingEmailDomainTestconnection**](RoutingApi.html#postroutingemaildomaintestconnection) | **Post** /api/v2/routing/email/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this domain |
+| [**PostRoutingEmailDomains**](RoutingApi.html#postroutingemaildomains) | **Post** /api/v2/routing/email/domains | Create a domain |
+| [**PostRoutingEmailOutboundDomains**](RoutingApi.html#postroutingemailoutbounddomains) | **Post** /api/v2/routing/email/outbound/domains | Create a domain |
+| [**PostRoutingEmailOutboundDomainsSimulated**](RoutingApi.html#postroutingemailoutbounddomainssimulated) | **Post** /api/v2/routing/email/outbound/domains/simulated | Create a simulated domain |
+| [**PostRoutingLanguages**](RoutingApi.html#postroutinglanguages) | **Post** /api/v2/routing/languages | Create Language |
+| [**PostRoutingPredictors**](RoutingApi.html#postroutingpredictors) | **Post** /api/v2/routing/predictors | Create a predictor. |
+| [**PostRoutingQueueMembers**](RoutingApi.html#postroutingqueuemembers) | **Post** /api/v2/routing/queues/{queueId}/members | Bulk add or delete up to 100 queue members |
+| [**PostRoutingQueueUsers**](RoutingApi.html#postroutingqueueusers) | **Post** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
+| [**PostRoutingQueueWrapupcodes**](RoutingApi.html#postroutingqueuewrapupcodes) | **Post** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
+| [**PostRoutingQueues**](RoutingApi.html#postroutingqueues) | **Post** /api/v2/routing/queues | Create a queue |
+| [**PostRoutingSkillgroupMembersDivisions**](RoutingApi.html#postroutingskillgroupmembersdivisions) | **Post** /api/v2/routing/skillgroups/{skillGroupId}/members/divisions | Add or remove member divisions for this skill group. |
+| [**PostRoutingSkillgroups**](RoutingApi.html#postroutingskillgroups) | **Post** /api/v2/routing/skillgroups | Create a skill group |
+| [**PostRoutingSkills**](RoutingApi.html#postroutingskills) | **Post** /api/v2/routing/skills | Create Skill |
+| [**PostRoutingSmsAddresses**](RoutingApi.html#postroutingsmsaddresses) | **Post** /api/v2/routing/sms/addresses | Provision an Address for SMS |
+| [**PostRoutingSmsPhonenumbers**](RoutingApi.html#postroutingsmsphonenumbers) | **Post** /api/v2/routing/sms/phonenumbers | Provision a phone number for SMS |
+| [**PostRoutingSmsPhonenumbersImport**](RoutingApi.html#postroutingsmsphonenumbersimport) | **Post** /api/v2/routing/sms/phonenumbers/import | Imports a phone number for SMS |
+| [**PostRoutingUtilizationTags**](RoutingApi.html#postroutingutilizationtags) | **Post** /api/v2/routing/utilization/tags | Create an utilization tag |
+| [**PostRoutingWrapupcodes**](RoutingApi.html#postroutingwrapupcodes) | **Post** /api/v2/routing/wrapupcodes | Create a wrap-up code |
+| [**PostUserRoutinglanguages**](RoutingApi.html#postuserroutinglanguages) | **Post** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
+| [**PostUserRoutingskills**](RoutingApi.html#postuserroutingskills) | **Post** /api/v2/users/{userId}/routingskills | Add routing skill to user |
+| [**PutRoutingEmailDomainRoute**](RoutingApi.html#putroutingemaildomainroute) | **Put** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
+| [**PutRoutingEmailOutboundDomainActivation**](RoutingApi.html#putroutingemailoutbounddomainactivation) | **Put** /api/v2/routing/email/outbound/domains/{domainId}/activation | Request an activation status (cname + dkim) update of an outbound domain |
+| [**PutRoutingMessageRecipient**](RoutingApi.html#putroutingmessagerecipient) | **Put** /api/v2/routing/message/recipients/{recipientId} | Update a recipient |
+| [**PutRoutingQueue**](RoutingApi.html#putroutingqueue) | **Put** /api/v2/routing/queues/{queueId} | Update a queue |
+| [**PutRoutingSettings**](RoutingApi.html#putroutingsettings) | **Put** /api/v2/routing/settings | Update an organization&#39;s routing settings |
+| [**PutRoutingSettingsTranscription**](RoutingApi.html#putroutingsettingstranscription) | **Put** /api/v2/routing/settings/transcription | Update Transcription Settings |
+| [**PutRoutingSmsPhonenumber**](RoutingApi.html#putroutingsmsphonenumber) | **Put** /api/v2/routing/sms/phonenumbers/{addressId} | Update a phone number provisioned for SMS. |
+| [**PutRoutingUserUtilization**](RoutingApi.html#putroutinguserutilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
+| [**PutRoutingUtilization**](RoutingApi.html#putroutingutilization) | **Put** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
+| [**PutRoutingWrapupcode**](RoutingApi.html#putroutingwrapupcode) | **Put** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
+| [**PutUserRoutingskill**](RoutingApi.html#putuserroutingskill) | **Put** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
+| [**PutUserRoutingskillsBulk**](RoutingApi.html#putuserroutingskillsbulk) | **Put** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
 {: class="table table-striped"}
 
 <a name="deleteroutingassessment"></a>

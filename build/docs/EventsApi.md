@@ -7,9 +7,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**PostEventsConversations**](EventsApi.html#posteventsconversations) | **POST** /api/v2/events/conversations | Publish Conversation Batch Events |
-| [**PostEventsUsersPresence**](EventsApi.html#posteventsuserspresence) | **POST** /api/v2/events/users/presence | Publish User Presence Status Batch Events |
-| [**PostEventsUsersRoutingstatus**](EventsApi.html#posteventsusersroutingstatus) | **POST** /api/v2/events/users/routingstatus | Publish Agent Routing Status Batch Events |
+| [**PostEventsConversations**](EventsApi.html#posteventsconversations) | **Post** /api/v2/events/conversations | Publish Conversation Batch Events |
+| [**PostEventsUsersPresence**](EventsApi.html#posteventsuserspresence) | **Post** /api/v2/events/users/presence | Publish User Presence Status Batch Events |
+| [**PostEventsUsersRoutingstatus**](EventsApi.html#posteventsusersroutingstatus) | **Post** /api/v2/events/users/routingstatus | Publish Agent Routing Status Batch Events |
 {: class="table table-striped"}
 
 <a name="posteventsconversations"></a>

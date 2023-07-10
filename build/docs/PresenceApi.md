@@ -7,33 +7,33 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeletePresenceDefinition0**](PresenceApi.html#deletepresencedefinition0) | **DELETE** /api/v2/presence/definitions/{definitionId} | Delete a Presence Definition |
-| [**DeletePresenceSource**](PresenceApi.html#deletepresencesource) | **DELETE** /api/v2/presence/sources/{sourceId} | Delete a Presence Source |
-| [**DeletePresencedefinition**](PresenceApi.html#deletepresencedefinition) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
-| [**GetPresenceDefinition0**](PresenceApi.html#getpresencedefinition0) | **GET** /api/v2/presence/definitions/{definitionId} | Get a Presence Definition |
-| [**GetPresenceDefinitions0**](PresenceApi.html#getpresencedefinitions0) | **GET** /api/v2/presence/definitions | Get a list of Presence Definitions |
-| [**GetPresenceSettings**](PresenceApi.html#getpresencesettings) | **GET** /api/v2/presence/settings | Get the presence settings |
-| [**GetPresenceSource**](PresenceApi.html#getpresencesource) | **GET** /api/v2/presence/sources/{sourceId} | Get a Presence Source |
-| [**GetPresenceSources**](PresenceApi.html#getpresencesources) | **GET** /api/v2/presence/sources | Get a list of Presence Sources |
-| [**GetPresenceUserPrimarysource**](PresenceApi.html#getpresenceuserprimarysource) | **GET** /api/v2/presence/users/{userId}/primarysource | Get a user&#39;s Primary Presence Source |
-| [**GetPresencedefinition**](PresenceApi.html#getpresencedefinition) | **GET** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
-| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
-| [**GetSystempresences**](PresenceApi.html#getsystempresences) | **GET** /api/v2/systempresences | Get the list of SystemPresences |
-| [**GetUserPresence**](PresenceApi.html#getuserpresence) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
-| [**GetUserPresencesPurecloud**](PresenceApi.html#getuserpresencespurecloud) | **GET** /api/v2/users/{userId}/presences/purecloud | Get a user&#39;s Genesys Cloud presence. |
-| [**GetUsersPresenceBulk**](PresenceApi.html#getuserspresencebulk) | **GET** /api/v2/users/presences/{sourceId}/bulk | Get bulk user presences for a single presence source |
-| [**GetUsersPresencesPurecloudBulk**](PresenceApi.html#getuserspresencespurecloudbulk) | **GET** /api/v2/users/presences/purecloud/bulk | Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source |
-| [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
-| [**PatchUserPresencesPurecloud**](PresenceApi.html#patchuserpresencespurecloud) | **PATCH** /api/v2/users/{userId}/presences/purecloud | Patch a Genesys Cloud user&#39;s presence |
-| [**PostPresenceDefinitions0**](PresenceApi.html#postpresencedefinitions0) | **POST** /api/v2/presence/definitions | Create a Presence Definition |
-| [**PostPresenceSources**](PresenceApi.html#postpresencesources) | **POST** /api/v2/presence/sources | Create a Presence Source |
-| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
-| [**PutPresenceDefinition0**](PresenceApi.html#putpresencedefinition0) | **PUT** /api/v2/presence/definitions/{definitionId} | Update a Presence Definition |
-| [**PutPresenceSettings**](PresenceApi.html#putpresencesettings) | **PUT** /api/v2/presence/settings | Update the presence settings |
-| [**PutPresenceSource**](PresenceApi.html#putpresencesource) | **PUT** /api/v2/presence/sources/{sourceId} | Update a Presence Source |
-| [**PutPresenceUserPrimarysource**](PresenceApi.html#putpresenceuserprimarysource) | **PUT** /api/v2/presence/users/{userId}/primarysource | Update a user&#39;s Primary Presence Source |
-| [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
-| [**PutUsersPresencesBulk**](PresenceApi.html#putuserspresencesbulk) | **PUT** /api/v2/users/presences/bulk | Update bulk user Presences |
+| [**DeletePresenceDefinition0**](PresenceApi.html#deletepresencedefinition0) | **Delete** /api/v2/presence/definitions/{definitionId} | Delete a Presence Definition |
+| [**DeletePresenceSource**](PresenceApi.html#deletepresencesource) | **Delete** /api/v2/presence/sources/{sourceId} | Delete a Presence Source |
+| [**DeletePresencedefinition**](PresenceApi.html#deletepresencedefinition) | **Delete** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
+| [**GetPresenceDefinition0**](PresenceApi.html#getpresencedefinition0) | **Get** /api/v2/presence/definitions/{definitionId} | Get a Presence Definition |
+| [**GetPresenceDefinitions0**](PresenceApi.html#getpresencedefinitions0) | **Get** /api/v2/presence/definitions | Get a list of Presence Definitions |
+| [**GetPresenceSettings**](PresenceApi.html#getpresencesettings) | **Get** /api/v2/presence/settings | Get the presence settings |
+| [**GetPresenceSource**](PresenceApi.html#getpresencesource) | **Get** /api/v2/presence/sources/{sourceId} | Get a Presence Source |
+| [**GetPresenceSources**](PresenceApi.html#getpresencesources) | **Get** /api/v2/presence/sources | Get a list of Presence Sources |
+| [**GetPresenceUserPrimarysource**](PresenceApi.html#getpresenceuserprimarysource) | **Get** /api/v2/presence/users/{userId}/primarysource | Get a user&#39;s Primary Presence Source |
+| [**GetPresencedefinition**](PresenceApi.html#getpresencedefinition) | **Get** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
+| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **Get** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
+| [**GetSystempresences**](PresenceApi.html#getsystempresences) | **Get** /api/v2/systempresences | Get the list of SystemPresences |
+| [**GetUserPresence**](PresenceApi.html#getuserpresence) | **Get** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
+| [**GetUserPresencesPurecloud**](PresenceApi.html#getuserpresencespurecloud) | **Get** /api/v2/users/{userId}/presences/purecloud | Get a user&#39;s Genesys Cloud presence. |
+| [**GetUsersPresenceBulk**](PresenceApi.html#getuserspresencebulk) | **Get** /api/v2/users/presences/{sourceId}/bulk | Get bulk user presences for a single presence source |
+| [**GetUsersPresencesPurecloudBulk**](PresenceApi.html#getuserspresencespurecloudbulk) | **Get** /api/v2/users/presences/purecloud/bulk | Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source |
+| [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **Patch** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
+| [**PatchUserPresencesPurecloud**](PresenceApi.html#patchuserpresencespurecloud) | **Patch** /api/v2/users/{userId}/presences/purecloud | Patch a Genesys Cloud user&#39;s presence |
+| [**PostPresenceDefinitions0**](PresenceApi.html#postpresencedefinitions0) | **Post** /api/v2/presence/definitions | Create a Presence Definition |
+| [**PostPresenceSources**](PresenceApi.html#postpresencesources) | **Post** /api/v2/presence/sources | Create a Presence Source |
+| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **Post** /api/v2/presencedefinitions | Create a Presence Definition |
+| [**PutPresenceDefinition0**](PresenceApi.html#putpresencedefinition0) | **Put** /api/v2/presence/definitions/{definitionId} | Update a Presence Definition |
+| [**PutPresenceSettings**](PresenceApi.html#putpresencesettings) | **Put** /api/v2/presence/settings | Update the presence settings |
+| [**PutPresenceSource**](PresenceApi.html#putpresencesource) | **Put** /api/v2/presence/sources/{sourceId} | Update a Presence Source |
+| [**PutPresenceUserPrimarysource**](PresenceApi.html#putpresenceuserprimarysource) | **Put** /api/v2/presence/users/{userId}/primarysource | Update a user&#39;s Primary Presence Source |
+| [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **Put** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
+| [**PutUsersPresencesBulk**](PresenceApi.html#putuserspresencesbulk) | **Put** /api/v2/users/presences/bulk | Update bulk user Presences |
 {: class="table table-striped"}
 
 <a name="deletepresencedefinition0"></a>

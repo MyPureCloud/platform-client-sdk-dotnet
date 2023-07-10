@@ -7,11 +7,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteWidgetsDeployment**](WidgetsApi.html#deletewidgetsdeployment) | **DELETE** /api/v2/widgets/deployments/{deploymentId} | Delete a Widget deployment |
-| [**GetWidgetsDeployment**](WidgetsApi.html#getwidgetsdeployment) | **GET** /api/v2/widgets/deployments/{deploymentId} | Get a Widget deployment |
-| [**GetWidgetsDeployments**](WidgetsApi.html#getwidgetsdeployments) | **GET** /api/v2/widgets/deployments | List Widget deployments |
-| [**PostWidgetsDeployments**](WidgetsApi.html#postwidgetsdeployments) | **POST** /api/v2/widgets/deployments | Create Widget deployment |
-| [**PutWidgetsDeployment**](WidgetsApi.html#putwidgetsdeployment) | **PUT** /api/v2/widgets/deployments/{deploymentId} | Update a Widget deployment |
+| [**DeleteWidgetsDeployment**](WidgetsApi.html#deletewidgetsdeployment) | **Delete** /api/v2/widgets/deployments/{deploymentId} | Delete a Widget deployment |
+| [**GetWidgetsDeployment**](WidgetsApi.html#getwidgetsdeployment) | **Get** /api/v2/widgets/deployments/{deploymentId} | Get a Widget deployment |
+| [**GetWidgetsDeployments**](WidgetsApi.html#getwidgetsdeployments) | **Get** /api/v2/widgets/deployments | List Widget deployments |
+| [**PostWidgetsDeployments**](WidgetsApi.html#postwidgetsdeployments) | **Post** /api/v2/widgets/deployments | Create Widget deployment |
+| [**PutWidgetsDeployment**](WidgetsApi.html#putwidgetsdeployment) | **Put** /api/v2/widgets/deployments/{deploymentId} | Update a Widget deployment |
 {: class="table table-striped"}
 
 <a name="deletewidgetsdeployment"></a>

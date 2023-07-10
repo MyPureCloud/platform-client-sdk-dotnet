@@ -7,14 +7,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteProcessautomationTrigger**](ProcessAutomationApi.html#deleteprocessautomationtrigger) | **DELETE** /api/v2/processautomation/triggers/{triggerId} | Delete a Trigger |
-| [**GetProcessautomationTrigger**](ProcessAutomationApi.html#getprocessautomationtrigger) | **GET** /api/v2/processautomation/triggers/{triggerId} | Retrieve a single Trigger matching id |
-| [**GetProcessautomationTriggers**](ProcessAutomationApi.html#getprocessautomationtriggers) | **GET** /api/v2/processautomation/triggers | Retrieves all triggers, optionally filtered by query parameters. |
-| [**GetProcessautomationTriggersTopics**](ProcessAutomationApi.html#getprocessautomationtriggerstopics) | **GET** /api/v2/processautomation/triggers/topics | Get topics available for organization |
-| [**PostProcessautomationTriggerTest**](ProcessAutomationApi.html#postprocessautomationtriggertest) | **POST** /api/v2/processautomation/triggers/{triggerId}/test | Test the matching of a Trigger based on provided event body |
-| [**PostProcessautomationTriggers**](ProcessAutomationApi.html#postprocessautomationtriggers) | **POST** /api/v2/processautomation/triggers | Create a Trigger |
-| [**PostProcessautomationTriggersTopicTest**](ProcessAutomationApi.html#postprocessautomationtriggerstopictest) | **POST** /api/v2/processautomation/triggers/topics/{topicName}/test | Test the matching of all organization Triggers on given topic using provided event body |
-| [**PutProcessautomationTrigger**](ProcessAutomationApi.html#putprocessautomationtrigger) | **PUT** /api/v2/processautomation/triggers/{triggerId} | Update a Trigger |
+| [**DeleteProcessautomationTrigger**](ProcessAutomationApi.html#deleteprocessautomationtrigger) | **Delete** /api/v2/processautomation/triggers/{triggerId} | Delete a Trigger |
+| [**GetProcessautomationTrigger**](ProcessAutomationApi.html#getprocessautomationtrigger) | **Get** /api/v2/processautomation/triggers/{triggerId} | Retrieve a single Trigger matching id |
+| [**GetProcessautomationTriggers**](ProcessAutomationApi.html#getprocessautomationtriggers) | **Get** /api/v2/processautomation/triggers | Retrieves all triggers, optionally filtered by query parameters. |
+| [**GetProcessautomationTriggersTopics**](ProcessAutomationApi.html#getprocessautomationtriggerstopics) | **Get** /api/v2/processautomation/triggers/topics | Get topics available for organization |
+| [**PostProcessautomationTriggerTest**](ProcessAutomationApi.html#postprocessautomationtriggertest) | **Post** /api/v2/processautomation/triggers/{triggerId}/test | Test the matching of a Trigger based on provided event body |
+| [**PostProcessautomationTriggers**](ProcessAutomationApi.html#postprocessautomationtriggers) | **Post** /api/v2/processautomation/triggers | Create a Trigger |
+| [**PostProcessautomationTriggersTopicTest**](ProcessAutomationApi.html#postprocessautomationtriggerstopictest) | **Post** /api/v2/processautomation/triggers/topics/{topicName}/test | Test the matching of all organization Triggers on given topic using provided event body |
+| [**PutProcessautomationTrigger**](ProcessAutomationApi.html#putprocessautomationtrigger) | **Put** /api/v2/processautomation/triggers/{triggerId} | Update a Trigger |
 {: class="table table-striped"}
 
 <a name="deleteprocessautomationtrigger"></a>

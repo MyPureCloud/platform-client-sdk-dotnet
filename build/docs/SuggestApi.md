@@ -7,10 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetSearch**](SuggestApi.html#getsearch) | **GET** /api/v2/search | Search using the q64 value returned from a previous search. |
-| [**GetSearchSuggest**](SuggestApi.html#getsearchsuggest) | **GET** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
-| [**PostSearch**](SuggestApi.html#postsearch) | **POST** /api/v2/search | Search resources. |
-| [**PostSearchSuggest**](SuggestApi.html#postsearchsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
+| [**GetSearch**](SuggestApi.html#getsearch) | **Get** /api/v2/search | Search using the q64 value returned from a previous search. |
+| [**GetSearchSuggest**](SuggestApi.html#getsearchsuggest) | **Get** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**PostSearch**](SuggestApi.html#postsearch) | **Post** /api/v2/search | Search resources. |
+| [**PostSearchSuggest**](SuggestApi.html#postsearchsuggest) | **Post** /api/v2/search/suggest | Suggest resources. |
 {: class="table table-striped"}
 
 <a name="getsearch"></a>

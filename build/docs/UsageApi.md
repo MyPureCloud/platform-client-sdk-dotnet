@@ -7,13 +7,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetOauthClientUsageQueryResult**](UsageApi.html#getoauthclientusagequeryresult) | **GET** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
-| [**GetOauthClientUsageSummary**](UsageApi.html#getoauthclientusagesummary) | **GET** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
-| [**GetUsageQueryExecutionIdResults**](UsageApi.html#getusagequeryexecutionidresults) | **GET** /api/v2/usage/query/{executionId}/results | Get the results of a usage query |
-| [**GetUsageSimplesearchExecutionIdResults**](UsageApi.html#getusagesimplesearchexecutionidresults) | **GET** /api/v2/usage/simplesearch/{executionId}/results | Get the results of a usage search |
-| [**PostOauthClientUsageQuery**](UsageApi.html#postoauthclientusagequery) | **POST** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
-| [**PostUsageQuery**](UsageApi.html#postusagequery) | **POST** /api/v2/usage/query | Query organization API Usage -  |
-| [**PostUsageSimplesearch**](UsageApi.html#postusagesimplesearch) | **POST** /api/v2/usage/simplesearch | Search organization API Usage -  |
+| [**GetOauthClientUsageQueryResult**](UsageApi.html#getoauthclientusagequeryresult) | **Get** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
+| [**GetOauthClientUsageSummary**](UsageApi.html#getoauthclientusagesummary) | **Get** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
+| [**GetUsageQueryExecutionIdResults**](UsageApi.html#getusagequeryexecutionidresults) | **Get** /api/v2/usage/query/{executionId}/results | Get the results of a usage query |
+| [**GetUsageSimplesearchExecutionIdResults**](UsageApi.html#getusagesimplesearchexecutionidresults) | **Get** /api/v2/usage/simplesearch/{executionId}/results | Get the results of a usage search |
+| [**PostOauthClientUsageQuery**](UsageApi.html#postoauthclientusagequery) | **Post** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
+| [**PostUsageQuery**](UsageApi.html#postusagequery) | **Post** /api/v2/usage/query | Query organization API Usage -  |
+| [**PostUsageSimplesearch**](UsageApi.html#postusagesimplesearch) | **Post** /api/v2/usage/simplesearch | Search organization API Usage -  |
 {: class="table table-striped"}
 
 <a name="getoauthclientusagequeryresult"></a>

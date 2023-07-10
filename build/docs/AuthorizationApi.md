@@ -7,48 +7,48 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAuthorizationDivision**](AuthorizationApi.html#deleteauthorizationdivision) | **DELETE** /api/v2/authorization/divisions/{divisionId} | Delete a division. |
-| [**DeleteAuthorizationRole**](AuthorizationApi.html#deleteauthorizationrole) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
-| [**DeleteAuthorizationSubjectDivisionRole**](AuthorizationApi.html#deleteauthorizationsubjectdivisionrole) | **DELETE** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
-| [**GetAuthorizationDivision**](AuthorizationApi.html#getauthorizationdivision) | **GET** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
-| [**GetAuthorizationDivisionGrants**](AuthorizationApi.html#getauthorizationdivisiongrants) | **GET** /api/v2/authorization/divisions/{divisionId}/grants | Gets all grants for a given division. |
-| [**GetAuthorizationDivisions**](AuthorizationApi.html#getauthorizationdivisions) | **GET** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
-| [**GetAuthorizationDivisionsHome**](AuthorizationApi.html#getauthorizationdivisionshome) | **GET** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
-| [**GetAuthorizationDivisionsLimit**](AuthorizationApi.html#getauthorizationdivisionslimit) | **GET** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
-| [**GetAuthorizationDivisionspermittedMe**](AuthorizationApi.html#getauthorizationdivisionspermittedme) | **GET** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
-| [**GetAuthorizationDivisionspermittedPagedMe**](AuthorizationApi.html#getauthorizationdivisionspermittedpagedme) | **GET** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
-| [**GetAuthorizationDivisionspermittedPagedSubjectId**](AuthorizationApi.html#getauthorizationdivisionspermittedpagedsubjectid) | **GET** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
-| [**GetAuthorizationPermissions**](AuthorizationApi.html#getauthorizationpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
-| [**GetAuthorizationProducts**](AuthorizationApi.html#getauthorizationproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
-| [**GetAuthorizationRole**](AuthorizationApi.html#getauthorizationrole) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
-| [**GetAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#getauthorizationrolecomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison |
-| [**GetAuthorizationRoleSubjectgrants**](AuthorizationApi.html#getauthorizationrolesubjectgrants) | **GET** /api/v2/authorization/roles/{roleId}/subjectgrants | Get the subjects&#39; granted divisions in the specified role. |
-| [**GetAuthorizationRoleUsers**](AuthorizationApi.html#getauthorizationroleusers) | **GET** /api/v2/authorization/roles/{roleId}/users | Get a list of the users in a specified role. |
-| [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
-| [**GetAuthorizationSettings**](AuthorizationApi.html#getauthorizationsettings) | **GET** /api/v2/authorization/settings | Get authorization settings |
-| [**GetAuthorizationSubject**](AuthorizationApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
-| [**GetAuthorizationSubjectsMe**](AuthorizationApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
-| [**GetAuthorizationSubjectsRolecounts**](AuthorizationApi.html#getauthorizationsubjectsrolecounts) | **GET** /api/v2/authorization/subjects/rolecounts | Get the count of roles granted to a list of subjects |
-| [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{subjectId}/roles | Returns a listing of roles and permissions for a user. |
-| [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
-| [**PatchAuthorizationSettings**](AuthorizationApi.html#patchauthorizationsettings) | **PATCH** /api/v2/authorization/settings | Change authorization settings |
-| [**PostAuthorizationDivisionObject**](AuthorizationApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
-| [**PostAuthorizationDivisionRestore**](AuthorizationApi.html#postauthorizationdivisionrestore) | **POST** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
-| [**PostAuthorizationDivisions**](AuthorizationApi.html#postauthorizationdivisions) | **POST** /api/v2/authorization/divisions | Create a division. |
-| [**PostAuthorizationRole**](AuthorizationApi.html#postauthorizationrole) | **POST** /api/v2/authorization/roles/{roleId} | Bulk-grant subjects and divisions with an organization role. |
-| [**PostAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#postauthorizationrolecomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an unsaved org role to default role comparison |
-| [**PostAuthorizationRoles**](AuthorizationApi.html#postauthorizationroles) | **POST** /api/v2/authorization/roles | Create an organization role. |
-| [**PostAuthorizationRolesDefault**](AuthorizationApi.html#postauthorizationrolesdefault) | **POST** /api/v2/authorization/roles/default | Restores all default roles |
-| [**PostAuthorizationSubjectBulkadd**](AuthorizationApi.html#postauthorizationsubjectbulkadd) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkadd | Bulk-grant roles and divisions to a subject. |
-| [**PostAuthorizationSubjectBulkremove**](AuthorizationApi.html#postauthorizationsubjectbulkremove) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkremove | Bulk-remove grants from a subject. |
-| [**PostAuthorizationSubjectBulkreplace**](AuthorizationApi.html#postauthorizationsubjectbulkreplace) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkreplace | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
-| [**PostAuthorizationSubjectDivisionRole**](AuthorizationApi.html#postauthorizationsubjectdivisionrole) | **POST** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
-| [**PutAuthorizationDivision**](AuthorizationApi.html#putauthorizationdivision) | **PUT** /api/v2/authorization/divisions/{divisionId} | Update a division. |
-| [**PutAuthorizationRole**](AuthorizationApi.html#putauthorizationrole) | **PUT** /api/v2/authorization/roles/{roleId} | Update an organization role. |
-| [**PutAuthorizationRoleUsersAdd**](AuthorizationApi.html#putauthorizationroleusersadd) | **PUT** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
-| [**PutAuthorizationRoleUsersRemove**](AuthorizationApi.html#putauthorizationroleusersremove) | **PUT** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
-| [**PutAuthorizationRolesDefault**](AuthorizationApi.html#putauthorizationrolesdefault) | **PUT** /api/v2/authorization/roles/default | Restore specified default roles |
-| [**PutUserRoles**](AuthorizationApi.html#putuserroles) | **PUT** /api/v2/users/{subjectId}/roles | Sets the user&#39;s roles |
+| [**DeleteAuthorizationDivision**](AuthorizationApi.html#deleteauthorizationdivision) | **Delete** /api/v2/authorization/divisions/{divisionId} | Delete a division. |
+| [**DeleteAuthorizationRole**](AuthorizationApi.html#deleteauthorizationrole) | **Delete** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
+| [**DeleteAuthorizationSubjectDivisionRole**](AuthorizationApi.html#deleteauthorizationsubjectdivisionrole) | **Delete** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
+| [**GetAuthorizationDivision**](AuthorizationApi.html#getauthorizationdivision) | **Get** /api/v2/authorization/divisions/{divisionId} | Returns an authorization division. |
+| [**GetAuthorizationDivisionGrants**](AuthorizationApi.html#getauthorizationdivisiongrants) | **Get** /api/v2/authorization/divisions/{divisionId}/grants | Gets all grants for a given division. |
+| [**GetAuthorizationDivisions**](AuthorizationApi.html#getauthorizationdivisions) | **Get** /api/v2/authorization/divisions | Retrieve a list of all divisions defined for the organization |
+| [**GetAuthorizationDivisionsHome**](AuthorizationApi.html#getauthorizationdivisionshome) | **Get** /api/v2/authorization/divisions/home | Retrieve the home division for the organization. |
+| [**GetAuthorizationDivisionsLimit**](AuthorizationApi.html#getauthorizationdivisionslimit) | **Get** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
+| [**GetAuthorizationDivisionspermittedMe**](AuthorizationApi.html#getauthorizationdivisionspermittedme) | **Get** /api/v2/authorization/divisionspermitted/me | Returns which divisions the current user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedPagedMe**](AuthorizationApi.html#getauthorizationdivisionspermittedpagedme) | **Get** /api/v2/authorization/divisionspermitted/paged/me | Returns which divisions the current user has the given permission in. |
+| [**GetAuthorizationDivisionspermittedPagedSubjectId**](AuthorizationApi.html#getauthorizationdivisionspermittedpagedsubjectid) | **Get** /api/v2/authorization/divisionspermitted/paged/{subjectId} | Returns which divisions the specified user has the given permission in. |
+| [**GetAuthorizationPermissions**](AuthorizationApi.html#getauthorizationpermissions) | **Get** /api/v2/authorization/permissions | Get all permissions. |
+| [**GetAuthorizationProducts**](AuthorizationApi.html#getauthorizationproducts) | **Get** /api/v2/authorization/products | Get the list of enabled products |
+| [**GetAuthorizationRole**](AuthorizationApi.html#getauthorizationrole) | **Get** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
+| [**GetAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#getauthorizationrolecomparedefaultrightroleid) | **Get** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison |
+| [**GetAuthorizationRoleSubjectgrants**](AuthorizationApi.html#getauthorizationrolesubjectgrants) | **Get** /api/v2/authorization/roles/{roleId}/subjectgrants | Get the subjects&#39; granted divisions in the specified role. |
+| [**GetAuthorizationRoleUsers**](AuthorizationApi.html#getauthorizationroleusers) | **Get** /api/v2/authorization/roles/{roleId}/users | Get a list of the users in a specified role. |
+| [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **Get** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
+| [**GetAuthorizationSettings**](AuthorizationApi.html#getauthorizationsettings) | **Get** /api/v2/authorization/settings | Get authorization settings |
+| [**GetAuthorizationSubject**](AuthorizationApi.html#getauthorizationsubject) | **Get** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
+| [**GetAuthorizationSubjectsMe**](AuthorizationApi.html#getauthorizationsubjectsme) | **Get** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
+| [**GetAuthorizationSubjectsRolecounts**](AuthorizationApi.html#getauthorizationsubjectsrolecounts) | **Get** /api/v2/authorization/subjects/rolecounts | Get the count of roles granted to a list of subjects |
+| [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **Get** /api/v2/users/{subjectId}/roles | Returns a listing of roles and permissions for a user. |
+| [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **Patch** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
+| [**PatchAuthorizationSettings**](AuthorizationApi.html#patchauthorizationsettings) | **Patch** /api/v2/authorization/settings | Change authorization settings |
+| [**PostAuthorizationDivisionObject**](AuthorizationApi.html#postauthorizationdivisionobject) | **Post** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
+| [**PostAuthorizationDivisionRestore**](AuthorizationApi.html#postauthorizationdivisionrestore) | **Post** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
+| [**PostAuthorizationDivisions**](AuthorizationApi.html#postauthorizationdivisions) | **Post** /api/v2/authorization/divisions | Create a division. |
+| [**PostAuthorizationRole**](AuthorizationApi.html#postauthorizationrole) | **Post** /api/v2/authorization/roles/{roleId} | Bulk-grant subjects and divisions with an organization role. |
+| [**PostAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#postauthorizationrolecomparedefaultrightroleid) | **Post** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an unsaved org role to default role comparison |
+| [**PostAuthorizationRoles**](AuthorizationApi.html#postauthorizationroles) | **Post** /api/v2/authorization/roles | Create an organization role. |
+| [**PostAuthorizationRolesDefault**](AuthorizationApi.html#postauthorizationrolesdefault) | **Post** /api/v2/authorization/roles/default | Restores all default roles |
+| [**PostAuthorizationSubjectBulkadd**](AuthorizationApi.html#postauthorizationsubjectbulkadd) | **Post** /api/v2/authorization/subjects/{subjectId}/bulkadd | Bulk-grant roles and divisions to a subject. |
+| [**PostAuthorizationSubjectBulkremove**](AuthorizationApi.html#postauthorizationsubjectbulkremove) | **Post** /api/v2/authorization/subjects/{subjectId}/bulkremove | Bulk-remove grants from a subject. |
+| [**PostAuthorizationSubjectBulkreplace**](AuthorizationApi.html#postauthorizationsubjectbulkreplace) | **Post** /api/v2/authorization/subjects/{subjectId}/bulkreplace | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
+| [**PostAuthorizationSubjectDivisionRole**](AuthorizationApi.html#postauthorizationsubjectdivisionrole) | **Post** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
+| [**PutAuthorizationDivision**](AuthorizationApi.html#putauthorizationdivision) | **Put** /api/v2/authorization/divisions/{divisionId} | Update a division. |
+| [**PutAuthorizationRole**](AuthorizationApi.html#putauthorizationrole) | **Put** /api/v2/authorization/roles/{roleId} | Update an organization role. |
+| [**PutAuthorizationRoleUsersAdd**](AuthorizationApi.html#putauthorizationroleusersadd) | **Put** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
+| [**PutAuthorizationRoleUsersRemove**](AuthorizationApi.html#putauthorizationroleusersremove) | **Put** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
+| [**PutAuthorizationRolesDefault**](AuthorizationApi.html#putauthorizationrolesdefault) | **Put** /api/v2/authorization/roles/default | Restore specified default roles |
+| [**PutUserRoles**](AuthorizationApi.html#putuserroles) | **Put** /api/v2/users/{subjectId}/roles | Sets the user&#39;s roles |
 {: class="table table-striped"}
 
 <a name="deleteauthorizationdivision"></a>

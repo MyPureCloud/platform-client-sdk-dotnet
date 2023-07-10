@@ -7,10 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetGeolocationsSettings**](GeolocationApi.html#getgeolocationssettings) | **GET** /api/v2/geolocations/settings | Get a organization&#39;s GeolocationSettings |
-| [**GetUserGeolocation**](GeolocationApi.html#getusergeolocation) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
-| [**PatchGeolocationsSettings**](GeolocationApi.html#patchgeolocationssettings) | **PATCH** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
-| [**PatchUserGeolocation**](GeolocationApi.html#patchusergeolocation) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
+| [**GetGeolocationsSettings**](GeolocationApi.html#getgeolocationssettings) | **Get** /api/v2/geolocations/settings | Get a organization&#39;s GeolocationSettings |
+| [**GetUserGeolocation**](GeolocationApi.html#getusergeolocation) | **Get** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
+| [**PatchGeolocationsSettings**](GeolocationApi.html#patchgeolocationssettings) | **Patch** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
+| [**PatchUserGeolocation**](GeolocationApi.html#patchusergeolocation) | **Patch** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
 {: class="table table-striped"}
 
 <a name="getgeolocationssettings"></a>

@@ -7,12 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteToken**](TokensApi.html#deletetoken) | **DELETE** /api/v2/tokens/{userId} | Delete all auth tokens for the specified user. |
-| [**DeleteTokensMe**](TokensApi.html#deletetokensme) | **DELETE** /api/v2/tokens/me | Delete auth token used to make the request. |
-| [**GetTokensMe**](TokensApi.html#gettokensme) | **GET** /api/v2/tokens/me | Fetch information about the current token |
-| [**GetTokensTimeout**](TokensApi.html#gettokenstimeout) | **GET** /api/v2/tokens/timeout | Get the current Idle Token Timeout Value |
-| [**HeadTokensMe**](TokensApi.html#headtokensme) | **HEAD** /api/v2/tokens/me | Verify user token |
-| [**PutTokensTimeout**](TokensApi.html#puttokenstimeout) | **PUT** /api/v2/tokens/timeout | Update or Enable/Disable the Idle Token Timeout |
+| [**DeleteToken**](TokensApi.html#deletetoken) | **Delete** /api/v2/tokens/{userId} | Delete all auth tokens for the specified user. |
+| [**DeleteTokensMe**](TokensApi.html#deletetokensme) | **Delete** /api/v2/tokens/me | Delete auth token used to make the request. |
+| [**GetTokensMe**](TokensApi.html#gettokensme) | **Get** /api/v2/tokens/me | Fetch information about the current token |
+| [**GetTokensTimeout**](TokensApi.html#gettokenstimeout) | **Get** /api/v2/tokens/timeout | Get the current Idle Token Timeout Value |
+| [**HeadTokensMe**](TokensApi.html#headtokensme) | **Head** /api/v2/tokens/me | Verify user token |
+| [**PutTokensTimeout**](TokensApi.html#puttokenstimeout) | **Put** /api/v2/tokens/timeout | Update or Enable/Disable the Idle Token Timeout |
 {: class="table table-striped"}
 
 <a name="deletetoken"></a>

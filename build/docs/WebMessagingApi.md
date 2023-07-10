@@ -7,7 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetWebmessagingMessages**](WebMessagingApi.html#getwebmessagingmessages) | **GET** /api/v2/webmessaging/messages | Get the messages for a web messaging session. |
+| [**GetWebmessagingMessages**](WebMessagingApi.html#getwebmessagingmessages) | **Get** /api/v2/webmessaging/messages | Get the messages for a web messaging session. |
 {: class="table table-striped"}
 
 <a name="getwebmessagingmessages"></a>

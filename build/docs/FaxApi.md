@@ -7,12 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteFaxDocument**](FaxApi.html#deletefaxdocument) | **DELETE** /api/v2/fax/documents/{documentId} | Delete a fax document. |
-| [**GetFaxDocument**](FaxApi.html#getfaxdocument) | **GET** /api/v2/fax/documents/{documentId} | Get a document. |
-| [**GetFaxDocumentContent**](FaxApi.html#getfaxdocumentcontent) | **GET** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
-| [**GetFaxDocuments**](FaxApi.html#getfaxdocuments) | **GET** /api/v2/fax/documents | Get a list of fax documents. |
-| [**GetFaxSummary**](FaxApi.html#getfaxsummary) | **GET** /api/v2/fax/summary | Get fax summary |
-| [**PutFaxDocument**](FaxApi.html#putfaxdocument) | **PUT** /api/v2/fax/documents/{documentId} | Update a fax document. |
+| [**DeleteFaxDocument**](FaxApi.html#deletefaxdocument) | **Delete** /api/v2/fax/documents/{documentId} | Delete a fax document. |
+| [**GetFaxDocument**](FaxApi.html#getfaxdocument) | **Get** /api/v2/fax/documents/{documentId} | Get a document. |
+| [**GetFaxDocumentContent**](FaxApi.html#getfaxdocumentcontent) | **Get** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
+| [**GetFaxDocuments**](FaxApi.html#getfaxdocuments) | **Get** /api/v2/fax/documents | Get a list of fax documents. |
+| [**GetFaxSummary**](FaxApi.html#getfaxsummary) | **Get** /api/v2/fax/summary | Get fax summary |
+| [**PutFaxDocument**](FaxApi.html#putfaxdocument) | **Put** /api/v2/fax/documents/{documentId} | Update a fax document. |
 {: class="table table-striped"}
 
 <a name="deletefaxdocument"></a>

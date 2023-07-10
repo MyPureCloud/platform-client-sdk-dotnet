@@ -7,36 +7,36 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteScimUser**](SCIMApi.html#deletescimuser) | **DELETE** /api/v2/scim/users/{userId} | Delete a user |
-| [**DeleteScimV2User**](SCIMApi.html#deletescimv2user) | **DELETE** /api/v2/scim/v2/users/{userId} | Delete a user |
-| [**GetScimGroup**](SCIMApi.html#getscimgroup) | **GET** /api/v2/scim/groups/{groupId} | Get a group |
-| [**GetScimGroups**](SCIMApi.html#getscimgroups) | **GET** /api/v2/scim/groups | Get a list of groups |
-| [**GetScimResourcetype**](SCIMApi.html#getscimresourcetype) | **GET** /api/v2/scim/resourcetypes/{resourceType} | Get a resource type |
-| [**GetScimResourcetypes**](SCIMApi.html#getscimresourcetypes) | **GET** /api/v2/scim/resourcetypes | Get a list of resource types |
-| [**GetScimSchema**](SCIMApi.html#getscimschema) | **GET** /api/v2/scim/schemas/{schemaId} | Get a SCIM schema |
-| [**GetScimSchemas**](SCIMApi.html#getscimschemas) | **GET** /api/v2/scim/schemas | Get a list of SCIM schemas |
-| [**GetScimServiceproviderconfig**](SCIMApi.html#getscimserviceproviderconfig) | **GET** /api/v2/scim/serviceproviderconfig | Get a service provider&#39;s configuration |
-| [**GetScimUser**](SCIMApi.html#getscimuser) | **GET** /api/v2/scim/users/{userId} | Get a user |
-| [**GetScimUsers**](SCIMApi.html#getscimusers) | **GET** /api/v2/scim/users | Get a list of users |
-| [**GetScimV2Group**](SCIMApi.html#getscimv2group) | **GET** /api/v2/scim/v2/groups/{groupId} | Get a group |
-| [**GetScimV2Groups**](SCIMApi.html#getscimv2groups) | **GET** /api/v2/scim/v2/groups | Get a list of groups |
-| [**GetScimV2Resourcetype**](SCIMApi.html#getscimv2resourcetype) | **GET** /api/v2/scim/v2/resourcetypes/{resourceType} | Get a resource type |
-| [**GetScimV2Resourcetypes**](SCIMApi.html#getscimv2resourcetypes) | **GET** /api/v2/scim/v2/resourcetypes | Get a list of resource types |
-| [**GetScimV2Schema**](SCIMApi.html#getscimv2schema) | **GET** /api/v2/scim/v2/schemas/{schemaId} | Get a SCIM schema |
-| [**GetScimV2Schemas**](SCIMApi.html#getscimv2schemas) | **GET** /api/v2/scim/v2/schemas | Get a list of SCIM schemas |
-| [**GetScimV2Serviceproviderconfig**](SCIMApi.html#getscimv2serviceproviderconfig) | **GET** /api/v2/scim/v2/serviceproviderconfig | Get a service provider&#39;s configuration |
-| [**GetScimV2User**](SCIMApi.html#getscimv2user) | **GET** /api/v2/scim/v2/users/{userId} | Get a user |
-| [**GetScimV2Users**](SCIMApi.html#getscimv2users) | **GET** /api/v2/scim/v2/users | Get a list of users |
-| [**PatchScimGroup**](SCIMApi.html#patchscimgroup) | **PATCH** /api/v2/scim/groups/{groupId} | Modify a group |
-| [**PatchScimUser**](SCIMApi.html#patchscimuser) | **PATCH** /api/v2/scim/users/{userId} | Modify a user |
-| [**PatchScimV2Group**](SCIMApi.html#patchscimv2group) | **PATCH** /api/v2/scim/v2/groups/{groupId} | Modify a group |
-| [**PatchScimV2User**](SCIMApi.html#patchscimv2user) | **PATCH** /api/v2/scim/v2/users/{userId} | Modify a user |
-| [**PostScimUsers**](SCIMApi.html#postscimusers) | **POST** /api/v2/scim/users | Create a user |
-| [**PostScimV2Users**](SCIMApi.html#postscimv2users) | **POST** /api/v2/scim/v2/users | Create a user |
-| [**PutScimGroup**](SCIMApi.html#putscimgroup) | **PUT** /api/v2/scim/groups/{groupId} | Replace a group |
-| [**PutScimUser**](SCIMApi.html#putscimuser) | **PUT** /api/v2/scim/users/{userId} | Replace a user |
-| [**PutScimV2Group**](SCIMApi.html#putscimv2group) | **PUT** /api/v2/scim/v2/groups/{groupId} | Replace a group |
-| [**PutScimV2User**](SCIMApi.html#putscimv2user) | **PUT** /api/v2/scim/v2/users/{userId} | Replace a user |
+| [**DeleteScimUser**](SCIMApi.html#deletescimuser) | **Delete** /api/v2/scim/users/{userId} | Delete a user |
+| [**DeleteScimV2User**](SCIMApi.html#deletescimv2user) | **Delete** /api/v2/scim/v2/users/{userId} | Delete a user |
+| [**GetScimGroup**](SCIMApi.html#getscimgroup) | **Get** /api/v2/scim/groups/{groupId} | Get a group |
+| [**GetScimGroups**](SCIMApi.html#getscimgroups) | **Get** /api/v2/scim/groups | Get a list of groups |
+| [**GetScimResourcetype**](SCIMApi.html#getscimresourcetype) | **Get** /api/v2/scim/resourcetypes/{resourceType} | Get a resource type |
+| [**GetScimResourcetypes**](SCIMApi.html#getscimresourcetypes) | **Get** /api/v2/scim/resourcetypes | Get a list of resource types |
+| [**GetScimSchema**](SCIMApi.html#getscimschema) | **Get** /api/v2/scim/schemas/{schemaId} | Get a SCIM schema |
+| [**GetScimSchemas**](SCIMApi.html#getscimschemas) | **Get** /api/v2/scim/schemas | Get a list of SCIM schemas |
+| [**GetScimServiceproviderconfig**](SCIMApi.html#getscimserviceproviderconfig) | **Get** /api/v2/scim/serviceproviderconfig | Get a service provider&#39;s configuration |
+| [**GetScimUser**](SCIMApi.html#getscimuser) | **Get** /api/v2/scim/users/{userId} | Get a user |
+| [**GetScimUsers**](SCIMApi.html#getscimusers) | **Get** /api/v2/scim/users | Get a list of users |
+| [**GetScimV2Group**](SCIMApi.html#getscimv2group) | **Get** /api/v2/scim/v2/groups/{groupId} | Get a group |
+| [**GetScimV2Groups**](SCIMApi.html#getscimv2groups) | **Get** /api/v2/scim/v2/groups | Get a list of groups |
+| [**GetScimV2Resourcetype**](SCIMApi.html#getscimv2resourcetype) | **Get** /api/v2/scim/v2/resourcetypes/{resourceType} | Get a resource type |
+| [**GetScimV2Resourcetypes**](SCIMApi.html#getscimv2resourcetypes) | **Get** /api/v2/scim/v2/resourcetypes | Get a list of resource types |
+| [**GetScimV2Schema**](SCIMApi.html#getscimv2schema) | **Get** /api/v2/scim/v2/schemas/{schemaId} | Get a SCIM schema |
+| [**GetScimV2Schemas**](SCIMApi.html#getscimv2schemas) | **Get** /api/v2/scim/v2/schemas | Get a list of SCIM schemas |
+| [**GetScimV2Serviceproviderconfig**](SCIMApi.html#getscimv2serviceproviderconfig) | **Get** /api/v2/scim/v2/serviceproviderconfig | Get a service provider&#39;s configuration |
+| [**GetScimV2User**](SCIMApi.html#getscimv2user) | **Get** /api/v2/scim/v2/users/{userId} | Get a user |
+| [**GetScimV2Users**](SCIMApi.html#getscimv2users) | **Get** /api/v2/scim/v2/users | Get a list of users |
+| [**PatchScimGroup**](SCIMApi.html#patchscimgroup) | **Patch** /api/v2/scim/groups/{groupId} | Modify a group |
+| [**PatchScimUser**](SCIMApi.html#patchscimuser) | **Patch** /api/v2/scim/users/{userId} | Modify a user |
+| [**PatchScimV2Group**](SCIMApi.html#patchscimv2group) | **Patch** /api/v2/scim/v2/groups/{groupId} | Modify a group |
+| [**PatchScimV2User**](SCIMApi.html#patchscimv2user) | **Patch** /api/v2/scim/v2/users/{userId} | Modify a user |
+| [**PostScimUsers**](SCIMApi.html#postscimusers) | **Post** /api/v2/scim/users | Create a user |
+| [**PostScimV2Users**](SCIMApi.html#postscimv2users) | **Post** /api/v2/scim/v2/users | Create a user |
+| [**PutScimGroup**](SCIMApi.html#putscimgroup) | **Put** /api/v2/scim/groups/{groupId} | Replace a group |
+| [**PutScimUser**](SCIMApi.html#putscimuser) | **Put** /api/v2/scim/users/{userId} | Replace a user |
+| [**PutScimV2Group**](SCIMApi.html#putscimv2group) | **Put** /api/v2/scim/v2/groups/{groupId} | Replace a group |
+| [**PutScimV2User**](SCIMApi.html#putscimv2user) | **Put** /api/v2/scim/v2/users/{userId} | Replace a user |
 {: class="table table-striped"}
 
 <a name="deletescimuser"></a>

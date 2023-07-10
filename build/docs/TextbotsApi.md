@@ -7,10 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetTextbotsBotsSearch**](TextbotsApi.html#gettextbotsbotssearch) | **GET** /api/v2/textbots/bots/search | Find bots using the currently configured friendly name or ID. |
-| [**PostTextbotsBotflowsSessionTurns**](TextbotsApi.html#posttextbotsbotflowssessionturns) | **POST** /api/v2/textbots/botflows/sessions/{sessionId}/turns | Issue a bot flow turn event |
-| [**PostTextbotsBotflowsSessions**](TextbotsApi.html#posttextbotsbotflowssessions) | **POST** /api/v2/textbots/botflows/sessions | Create an execution instance of a bot flow definition. |
-| [**PostTextbotsBotsExecute**](TextbotsApi.html#posttextbotsbotsexecute) | **POST** /api/v2/textbots/bots/execute | Send an intent to a bot to start a dialog/interact with it via text |
+| [**GetTextbotsBotsSearch**](TextbotsApi.html#gettextbotsbotssearch) | **Get** /api/v2/textbots/bots/search | Find bots using the currently configured friendly name or ID. |
+| [**PostTextbotsBotflowsSessionTurns**](TextbotsApi.html#posttextbotsbotflowssessionturns) | **Post** /api/v2/textbots/botflows/sessions/{sessionId}/turns | Issue a bot flow turn event |
+| [**PostTextbotsBotflowsSessions**](TextbotsApi.html#posttextbotsbotflowssessions) | **Post** /api/v2/textbots/botflows/sessions | Create an execution instance of a bot flow definition. |
+| [**PostTextbotsBotsExecute**](TextbotsApi.html#posttextbotsbotsexecute) | **Post** /api/v2/textbots/bots/execute | Send an intent to a bot to start a dialog/interact with it via text |
 {: class="table table-striped"}
 
 <a name="gettextbotsbotssearch"></a>

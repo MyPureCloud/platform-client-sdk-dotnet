@@ -13,6 +13,7 @@ using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
 using PureCloudPlatform.Client.V2.Extensions;
+using System.Net.Http;
 
 namespace PureCloudPlatform.Client.V2.Client
 {
@@ -37,7 +38,9 @@ namespace PureCloudPlatform.Client.V2.Client
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             Configuration = Configuration.Default;
-            RestClient = new RestClient("https://api.mypurecloud.com");
+            
+            ClientOptions = new ClientRestOptions();
+            ClientOptions.BaseUrl = new Uri("https://api.mypurecloud.com");
             RetryConfig = DEFAULT_RETRY_CONFIG;
             AddSerializerSettings();
         }
@@ -57,7 +60,9 @@ namespace PureCloudPlatform.Client.V2.Client
             else
                 Configuration = config;
 
-            RestClient = new RestClient("https://api.mypurecloud.com");
+            ClientOptions = new ClientRestOptions();
+            ClientOptions.BaseUrl = new Uri("https://api.mypurecloud.com");
+
             RetryConfig = DEFAULT_RETRY_CONFIG;
             AddSerializerSettings();
         }
@@ -75,7 +80,9 @@ namespace PureCloudPlatform.Client.V2.Client
             if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");
 
-            RestClient = new RestClient(basePath);
+            ClientOptions = new ClientRestOptions();
+            ClientOptions.BaseUrl = new Uri(basePath);
+
             RetryConfig = DEFAULT_RETRY_CONFIG;
             Configuration = Configuration.Default;
             AddSerializerSettings();
@@ -104,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Gets or sets the RestClient.
         /// </summary>
         /// <value>An instance of the RestClient</value>
-        public IRestClient RestClient { get; set; }
+        public RestClient RestClient { get; set; }
 
         private RetryConfiguration retryConfig;
         public RetryConfiguration RetryConfig { get; set; }
@@ -143,7 +150,7 @@ namespace PureCloudPlatform.Client.V2.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
-                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);
+                request.AddFile(param.Value.Name, param.Value.GetFile, param.Value.FileName, param.Value.ContentType);
             }
 
             if (postBody != null) // http body (model or byte[]) parameter
@@ -215,23 +222,44 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // set timeout
-            RestClient.Timeout = Configuration.Timeout;
-
-            // set user agent
-            RestClient.UserAgent = Configuration.UserAgent;
+           ClientOptions.MaxTimeout = Configuration.Timeout;
+           ClientOptions.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "179.0.0");
+            request.AddHeader("purecloud-sdk", "180.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
-            IRestResponse response;
+            RestResponse response;
+
+
+            var options = new RestClientOptions(ClientOptions.BaseUrl)
+            {
+                MaxTimeout = ClientOptions.MaxTimeout,
+                UserAgent = ClientOptions.UserAgent
+            };
+            
+            if (ClientOptions.HttpMessageHandler != null)
+            {
+                options = new RestClientOptions(ClientOptions.BaseUrl)
+                {
+                    MaxTimeout = ClientOptions.MaxTimeout,
+                    UserAgent = ClientOptions.UserAgent,
+                    ConfigureMessageHandler = _ => ClientOptions.HttpMessageHandler 
+                };
+               
+            }
+
+            RestClient = new RestClient(options);
+
             var fullUrl = RestClient.BuildUri(request);
             string url = fullUrl == null ? path : fullUrl.ToString();
             do
             {
                 response = RestClient.Execute(request);
                 Configuration.Logger.Debug(method.ToString(), url, postBody, (int)response.StatusCode, headerParams);
-                Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()));
+                Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()));
+
             }while(retry.ShouldRetry(response));
 
             if (UsingCodeAuth && Configuration.ShouldRefreshAccessToken)
@@ -246,7 +274,9 @@ namespace PureCloudPlatform.Client.V2.Client
             }
 
             if ((int)response.StatusCode < 200 || (int)response.StatusCode >= 300)
-                Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, (int)response.StatusCode, headerParams, response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()));
+                Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, (int)response.StatusCode, headerParams, response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()));
+
 
             return (Object) response;
         }
@@ -274,10 +304,29 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
              Retry retry = new Retry(this.RetryConfig);
-             IRestResponse response;
+             RestResponse response;
+
+             var options = new RestClientOptions(ClientOptions.BaseUrl)
+            {
+                MaxTimeout = ClientOptions.MaxTimeout,
+                UserAgent = ClientOptions.UserAgent
+            };
+            
+            if (ClientOptions.HttpMessageHandler != null)
+            {
+                options = new RestClientOptions(ClientOptions.BaseUrl)
+                {
+                    MaxTimeout = ClientOptions.MaxTimeout,
+                    UserAgent = ClientOptions.UserAgent,
+                    ConfigureMessageHandler = _ => ClientOptions.HttpMessageHandler 
+                };
+               
+            }
+
+            RestClient = new RestClient(options);
             do
             {
-                response = await RestClient.ExecuteTaskAsync(request);
+                response = await RestClient.ExecuteAsync(request);
             }while(retry.ShouldRetry(response));
 
             if (UsingCodeAuth && Configuration.ShouldRefreshAccessToken)
@@ -357,21 +406,23 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <summary>
         /// Creates a restclient with a base path string input
         /// </summary>
-        /// <returns>Returns a rest client</returns>
-        public IRestClient setBasePath(String basePath){
+        /// <returns>Return changed from RestClient to Void . Since no purpose to expose underlying RestClient to Consumer and 
+        ///  design changed to One Restclient per API</returns>
+        public void setBasePath(String basePath){
             if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");
-
-                 RestClient.BaseUrl = new Uri(basePath);
-                 return RestClient;
+                
+                ClientOptions.BaseUrl = new Uri(basePath);
+                
 
         }
         /// <summary>
         /// Creates a restclient with a PureCloudRegionHost string input
         /// </summary>
-        /// <returns>Returns a rest client</returns>
-        public IRestClient setBasePath(PureCloudRegionHosts region){
-         return setBasePath(region.GetDescription());
+        /// <returns>Return changed from RestClient to Void . Since no purpose to expose underlying RestClient to Consumer and 
+        ///  design changed to One Restclient per API</returns>
+        public void setBasePath(PureCloudRegionHosts region){
+             setBasePath(region.GetDescription());
         }
 
         /// <summary>
@@ -380,9 +431,9 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <param name="response">The HTTP response.</param>
         /// <param name="type">Object type.</param>
         /// <returns>Object representation of the JSON string.</returns>
-        public object Deserialize(IRestResponse response, Type type)
+        public object Deserialize(RestResponse response, Type type)
         {
-            IList<Parameter> headers = response.Headers;
+            IReadOnlyCollection<RestSharp.HeaderParameter> headers = response.Headers;
             if (type == typeof(byte[])) // return byte array
             {
                 return response.RawBytes;
@@ -654,6 +705,77 @@ namespace PureCloudPlatform.Client.V2.Client
             }
         }
 
+        public ClientRestOptions ClientOptions { get; set; }
+        public class ClientRestOptions
+        {
+            private Uri baseUrl;
+            private string userAgent;
+            private System.Net.IWebProxy proxy;
+            private int maxTimeout;
+            private HttpMessageHandler httpMessageHandler;
+
+            public HttpMessageHandler HttpMessageHandler
+            {
+                get
+                {
+                    return httpMessageHandler;
+                }
+                set
+                {
+                    this.httpMessageHandler = value;
+                }
+            }
+
+            public Uri BaseUrl
+            {
+                get
+                {
+                    return baseUrl;
+                }
+                set
+                {
+                    this.baseUrl = value;
+                }
+            }
+
+            public string UserAgent
+            {
+                get
+                {
+                    return userAgent;
+                }
+                set
+                {
+                    this.userAgent = value;
+                }
+            }
+
+            public System.Net.IWebProxy Proxy
+            {
+                get
+                {
+                    return proxy;
+                }
+                set
+                {
+                    this.proxy = value;
+                }
+            }
+
+            public int MaxTimeout
+            {
+                get
+                {
+                    return maxTimeout;
+                }
+                set
+                {
+                    this.maxTimeout = value;
+                }
+            }
+            
+        }
+
         private class Retry
         {
             private long backoffIntervalMs;
@@ -680,13 +802,19 @@ namespace PureCloudPlatform.Client.V2.Client
             /// <summary>
             /// Check if retryable
             /// </summary>
-            /// <param name="response">IRestResponse</param>
+            /// <param name="response">RestResponse</param>
             /// <returns>bool</returns>
-            public bool ShouldRetry(IRestResponse response)
+            public bool ShouldRetry(RestResponse response)
             {
                 if (stopwatch.ElapsedMilliseconds < maxRetryTimeSec * 1000L && statusCodes.Contains((int)response.StatusCode) && retryCount <= retryMax)
                 {
-                    var retryAfterHeader = response.Headers.FirstOrDefault(y => y.Name.Equals("Retry-After"));
+                   var retryAfterHeader = response.Headers
+    .Select(header => new 
+    { 
+        Name = header.GetType().GetProperty("Name").GetValue(header), 
+        Value = header.GetType().GetProperty("Value").GetValue(header) 
+    })
+    .FirstOrDefault(header => header.Name.ToString().Equals("Retry-After"));
 
                     if (retryAfterHeader != null && Int32.TryParse(retryAfterHeader.Value.ToString(), out int retryAfterSec))
                     {

@@ -7,16 +7,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteTeam**](TeamsApi.html#deleteteam) | **DELETE** /api/v2/teams/{teamId} | Delete team |
-| [**DeleteTeamMembers**](TeamsApi.html#deleteteammembers) | **DELETE** /api/v2/teams/{teamId}/members | Delete team members |
-| [**GetTeam**](TeamsApi.html#getteam) | **GET** /api/v2/teams/{teamId} | Get team |
-| [**GetTeamMembers**](TeamsApi.html#getteammembers) | **GET** /api/v2/teams/{teamId}/members | Get team membership |
-| [**GetTeams**](TeamsApi.html#getteams) | **GET** /api/v2/teams | Get Team listing |
-| [**PatchTeam**](TeamsApi.html#patchteam) | **PATCH** /api/v2/teams/{teamId} | Update team |
-| [**PostAnalyticsTeamsActivityQuery**](TeamsApi.html#postanalyticsteamsactivityquery) | **POST** /api/v2/analytics/teams/activity/query | Query for team activity observations |
-| [**PostTeamMembers**](TeamsApi.html#postteammembers) | **POST** /api/v2/teams/{teamId}/members | Add team members |
-| [**PostTeams**](TeamsApi.html#postteams) | **POST** /api/v2/teams | Create a team |
-| [**PostTeamsSearch**](TeamsApi.html#postteamssearch) | **POST** /api/v2/teams/search | Search resources. |
+| [**DeleteTeam**](TeamsApi.html#deleteteam) | **Delete** /api/v2/teams/{teamId} | Delete team |
+| [**DeleteTeamMembers**](TeamsApi.html#deleteteammembers) | **Delete** /api/v2/teams/{teamId}/members | Delete team members |
+| [**GetTeam**](TeamsApi.html#getteam) | **Get** /api/v2/teams/{teamId} | Get team |
+| [**GetTeamMembers**](TeamsApi.html#getteammembers) | **Get** /api/v2/teams/{teamId}/members | Get team membership |
+| [**GetTeams**](TeamsApi.html#getteams) | **Get** /api/v2/teams | Get Team listing |
+| [**PatchTeam**](TeamsApi.html#patchteam) | **Patch** /api/v2/teams/{teamId} | Update team |
+| [**PostAnalyticsTeamsActivityQuery**](TeamsApi.html#postanalyticsteamsactivityquery) | **Post** /api/v2/analytics/teams/activity/query | Query for team activity observations |
+| [**PostTeamMembers**](TeamsApi.html#postteammembers) | **Post** /api/v2/teams/{teamId}/members | Add team members |
+| [**PostTeams**](TeamsApi.html#postteams) | **Post** /api/v2/teams | Create a team |
+| [**PostTeamsSearch**](TeamsApi.html#postteamssearch) | **Post** /api/v2/teams/search | Search resources. |
 {: class="table table-striped"}
 
 <a name="deleteteam"></a>

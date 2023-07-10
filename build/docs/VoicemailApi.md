@@ -7,31 +7,31 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteVoicemailMessage**](VoicemailApi.html#deletevoicemailmessage) | **DELETE** /api/v2/voicemail/messages/{messageId} | Delete a voicemail message. |
-| [**DeleteVoicemailMessages**](VoicemailApi.html#deletevoicemailmessages) | **DELETE** /api/v2/voicemail/messages | Delete all voicemail messages |
-| [**GetVoicemailGroupMailbox**](VoicemailApi.html#getvoicemailgroupmailbox) | **GET** /api/v2/voicemail/groups/{groupId}/mailbox | Get the group&#39;s mailbox information |
-| [**GetVoicemailGroupMessages**](VoicemailApi.html#getvoicemailgroupmessages) | **GET** /api/v2/voicemail/groups/{groupId}/messages | List voicemail messages |
-| [**GetVoicemailGroupPolicy**](VoicemailApi.html#getvoicemailgrouppolicy) | **GET** /api/v2/voicemail/groups/{groupId}/policy | Get a group&#39;s voicemail policy |
-| [**GetVoicemailMailbox**](VoicemailApi.html#getvoicemailmailbox) | **GET** /api/v2/voicemail/mailbox | Get the current user&#39;s mailbox information |
-| [**GetVoicemailMeMailbox**](VoicemailApi.html#getvoicemailmemailbox) | **GET** /api/v2/voicemail/me/mailbox | Get the current user&#39;s mailbox information |
-| [**GetVoicemailMeMessages**](VoicemailApi.html#getvoicemailmemessages) | **GET** /api/v2/voicemail/me/messages | List voicemail messages |
-| [**GetVoicemailMePolicy**](VoicemailApi.html#getvoicemailmepolicy) | **GET** /api/v2/voicemail/me/policy | Get the current user&#39;s voicemail policy |
-| [**GetVoicemailMessage**](VoicemailApi.html#getvoicemailmessage) | **GET** /api/v2/voicemail/messages/{messageId} | Get a voicemail message |
-| [**GetVoicemailMessageMedia**](VoicemailApi.html#getvoicemailmessagemedia) | **GET** /api/v2/voicemail/messages/{messageId}/media | Get media playback URI for this voicemail message |
-| [**GetVoicemailMessages**](VoicemailApi.html#getvoicemailmessages) | **GET** /api/v2/voicemail/messages | List voicemail messages |
-| [**GetVoicemailPolicy**](VoicemailApi.html#getvoicemailpolicy) | **GET** /api/v2/voicemail/policy | Get a policy |
-| [**GetVoicemailQueueMessages**](VoicemailApi.html#getvoicemailqueuemessages) | **GET** /api/v2/voicemail/queues/{queueId}/messages | List voicemail messages |
-| [**GetVoicemailSearch**](VoicemailApi.html#getvoicemailsearch) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
-| [**GetVoicemailUserpolicy**](VoicemailApi.html#getvoicemailuserpolicy) | **GET** /api/v2/voicemail/userpolicies/{userId} | Get a user&#39;s voicemail policy |
-| [**PatchVoicemailGroupPolicy**](VoicemailApi.html#patchvoicemailgrouppolicy) | **PATCH** /api/v2/voicemail/groups/{groupId}/policy | Update a group&#39;s voicemail policy |
-| [**PatchVoicemailMePolicy**](VoicemailApi.html#patchvoicemailmepolicy) | **PATCH** /api/v2/voicemail/me/policy | Update the current user&#39;s voicemail policy |
-| [**PatchVoicemailMessage**](VoicemailApi.html#patchvoicemailmessage) | **PATCH** /api/v2/voicemail/messages/{messageId} | Update a voicemail message |
-| [**PatchVoicemailUserpolicy**](VoicemailApi.html#patchvoicemailuserpolicy) | **PATCH** /api/v2/voicemail/userpolicies/{userId} | Update a user&#39;s voicemail policy |
-| [**PostVoicemailMessages**](VoicemailApi.html#postvoicemailmessages) | **POST** /api/v2/voicemail/messages | Copy a voicemail message to a user or group |
-| [**PostVoicemailSearch**](VoicemailApi.html#postvoicemailsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
-| [**PutVoicemailMessage**](VoicemailApi.html#putvoicemailmessage) | **PUT** /api/v2/voicemail/messages/{messageId} | Update a voicemail message |
-| [**PutVoicemailPolicy**](VoicemailApi.html#putvoicemailpolicy) | **PUT** /api/v2/voicemail/policy | Update a policy |
-| [**PutVoicemailUserpolicy**](VoicemailApi.html#putvoicemailuserpolicy) | **PUT** /api/v2/voicemail/userpolicies/{userId} | Update a user&#39;s voicemail policy |
+| [**DeleteVoicemailMessage**](VoicemailApi.html#deletevoicemailmessage) | **Delete** /api/v2/voicemail/messages/{messageId} | Delete a voicemail message. |
+| [**DeleteVoicemailMessages**](VoicemailApi.html#deletevoicemailmessages) | **Delete** /api/v2/voicemail/messages | Delete all voicemail messages |
+| [**GetVoicemailGroupMailbox**](VoicemailApi.html#getvoicemailgroupmailbox) | **Get** /api/v2/voicemail/groups/{groupId}/mailbox | Get the group&#39;s mailbox information |
+| [**GetVoicemailGroupMessages**](VoicemailApi.html#getvoicemailgroupmessages) | **Get** /api/v2/voicemail/groups/{groupId}/messages | List voicemail messages |
+| [**GetVoicemailGroupPolicy**](VoicemailApi.html#getvoicemailgrouppolicy) | **Get** /api/v2/voicemail/groups/{groupId}/policy | Get a group&#39;s voicemail policy |
+| [**GetVoicemailMailbox**](VoicemailApi.html#getvoicemailmailbox) | **Get** /api/v2/voicemail/mailbox | Get the current user&#39;s mailbox information |
+| [**GetVoicemailMeMailbox**](VoicemailApi.html#getvoicemailmemailbox) | **Get** /api/v2/voicemail/me/mailbox | Get the current user&#39;s mailbox information |
+| [**GetVoicemailMeMessages**](VoicemailApi.html#getvoicemailmemessages) | **Get** /api/v2/voicemail/me/messages | List voicemail messages |
+| [**GetVoicemailMePolicy**](VoicemailApi.html#getvoicemailmepolicy) | **Get** /api/v2/voicemail/me/policy | Get the current user&#39;s voicemail policy |
+| [**GetVoicemailMessage**](VoicemailApi.html#getvoicemailmessage) | **Get** /api/v2/voicemail/messages/{messageId} | Get a voicemail message |
+| [**GetVoicemailMessageMedia**](VoicemailApi.html#getvoicemailmessagemedia) | **Get** /api/v2/voicemail/messages/{messageId}/media | Get media playback URI for this voicemail message |
+| [**GetVoicemailMessages**](VoicemailApi.html#getvoicemailmessages) | **Get** /api/v2/voicemail/messages | List voicemail messages |
+| [**GetVoicemailPolicy**](VoicemailApi.html#getvoicemailpolicy) | **Get** /api/v2/voicemail/policy | Get a policy |
+| [**GetVoicemailQueueMessages**](VoicemailApi.html#getvoicemailqueuemessages) | **Get** /api/v2/voicemail/queues/{queueId}/messages | List voicemail messages |
+| [**GetVoicemailSearch**](VoicemailApi.html#getvoicemailsearch) | **Get** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
+| [**GetVoicemailUserpolicy**](VoicemailApi.html#getvoicemailuserpolicy) | **Get** /api/v2/voicemail/userpolicies/{userId} | Get a user&#39;s voicemail policy |
+| [**PatchVoicemailGroupPolicy**](VoicemailApi.html#patchvoicemailgrouppolicy) | **Patch** /api/v2/voicemail/groups/{groupId}/policy | Update a group&#39;s voicemail policy |
+| [**PatchVoicemailMePolicy**](VoicemailApi.html#patchvoicemailmepolicy) | **Patch** /api/v2/voicemail/me/policy | Update the current user&#39;s voicemail policy |
+| [**PatchVoicemailMessage**](VoicemailApi.html#patchvoicemailmessage) | **Patch** /api/v2/voicemail/messages/{messageId} | Update a voicemail message |
+| [**PatchVoicemailUserpolicy**](VoicemailApi.html#patchvoicemailuserpolicy) | **Patch** /api/v2/voicemail/userpolicies/{userId} | Update a user&#39;s voicemail policy |
+| [**PostVoicemailMessages**](VoicemailApi.html#postvoicemailmessages) | **Post** /api/v2/voicemail/messages | Copy a voicemail message to a user or group |
+| [**PostVoicemailSearch**](VoicemailApi.html#postvoicemailsearch) | **Post** /api/v2/voicemail/search | Search voicemails |
+| [**PutVoicemailMessage**](VoicemailApi.html#putvoicemailmessage) | **Put** /api/v2/voicemail/messages/{messageId} | Update a voicemail message |
+| [**PutVoicemailPolicy**](VoicemailApi.html#putvoicemailpolicy) | **Put** /api/v2/voicemail/policy | Update a policy |
+| [**PutVoicemailUserpolicy**](VoicemailApi.html#putvoicemailuserpolicy) | **Put** /api/v2/voicemail/userpolicies/{userId} | Update a user&#39;s voicemail policy |
 {: class="table table-striped"}
 
 <a name="deletevoicemailmessage"></a>

@@ -7,44 +7,44 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteContentmanagementDocument**](ContentManagementApi.html#deletecontentmanagementdocument) | **DELETE** /api/v2/contentmanagement/documents/{documentId} | Delete a document. |
-| [**DeleteContentmanagementShare**](ContentManagementApi.html#deletecontentmanagementshare) | **DELETE** /api/v2/contentmanagement/shares/{shareId} | Deletes an existing share. |
-| [**DeleteContentmanagementStatusStatusId**](ContentManagementApi.html#deletecontentmanagementstatusstatusid) | **DELETE** /api/v2/contentmanagement/status/{statusId} | Cancel the command for this status |
-| [**DeleteContentmanagementWorkspace**](ContentManagementApi.html#deletecontentmanagementworkspace) | **DELETE** /api/v2/contentmanagement/workspaces/{workspaceId} | Delete a workspace |
-| [**DeleteContentmanagementWorkspaceMember**](ContentManagementApi.html#deletecontentmanagementworkspacemember) | **DELETE** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Delete a member from a workspace |
-| [**DeleteContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#deletecontentmanagementworkspacetagvalue) | **DELETE** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Delete workspace tag |
-| [**GetContentmanagementDocument**](ContentManagementApi.html#getcontentmanagementdocument) | **GET** /api/v2/contentmanagement/documents/{documentId} | Get a document. |
-| [**GetContentmanagementDocumentAudits**](ContentManagementApi.html#getcontentmanagementdocumentaudits) | **GET** /api/v2/contentmanagement/documents/{documentId}/audits | Get a list of audits for a document. |
-| [**GetContentmanagementDocumentContent**](ContentManagementApi.html#getcontentmanagementdocumentcontent) | **GET** /api/v2/contentmanagement/documents/{documentId}/content | Download a document. |
-| [**GetContentmanagementDocuments**](ContentManagementApi.html#getcontentmanagementdocuments) | **GET** /api/v2/contentmanagement/documents | Get a list of documents. |
-| [**GetContentmanagementQuery**](ContentManagementApi.html#getcontentmanagementquery) | **GET** /api/v2/contentmanagement/query | Query content |
-| [**GetContentmanagementSecurityprofile**](ContentManagementApi.html#getcontentmanagementsecurityprofile) | **GET** /api/v2/contentmanagement/securityprofiles/{securityProfileId} | Get a Security Profile |
-| [**GetContentmanagementSecurityprofiles**](ContentManagementApi.html#getcontentmanagementsecurityprofiles) | **GET** /api/v2/contentmanagement/securityprofiles | Get a List of Security Profiles |
-| [**GetContentmanagementShare**](ContentManagementApi.html#getcontentmanagementshare) | **GET** /api/v2/contentmanagement/shares/{shareId} | Retrieve details about an existing share. |
-| [**GetContentmanagementSharedSharedId**](ContentManagementApi.html#getcontentmanagementsharedsharedid) | **GET** /api/v2/contentmanagement/shared/{sharedId} | Get shared documents. Securely download a shared document. |
-| [**GetContentmanagementShares**](ContentManagementApi.html#getcontentmanagementshares) | **GET** /api/v2/contentmanagement/shares | Gets a list of shares.  You must specify at least one filter (e.g. entityId). |
-| [**GetContentmanagementStatus**](ContentManagementApi.html#getcontentmanagementstatus) | **GET** /api/v2/contentmanagement/status | Get a list of statuses for pending operations |
-| [**GetContentmanagementStatusStatusId**](ContentManagementApi.html#getcontentmanagementstatusstatusid) | **GET** /api/v2/contentmanagement/status/{statusId} | Get a status. |
-| [**GetContentmanagementUsage**](ContentManagementApi.html#getcontentmanagementusage) | **GET** /api/v2/contentmanagement/usage | Get usage details. |
-| [**GetContentmanagementWorkspace**](ContentManagementApi.html#getcontentmanagementworkspace) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId} | Get a workspace. |
-| [**GetContentmanagementWorkspaceDocuments**](ContentManagementApi.html#getcontentmanagementworkspacedocuments) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/documents | Get a list of documents. |
-| [**GetContentmanagementWorkspaceMember**](ContentManagementApi.html#getcontentmanagementworkspacemember) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Get a workspace member |
-| [**GetContentmanagementWorkspaceMembers**](ContentManagementApi.html#getcontentmanagementworkspacemembers) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/members | Get a list workspace members |
-| [**GetContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#getcontentmanagementworkspacetagvalue) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Get a workspace tag |
-| [**GetContentmanagementWorkspaceTagvalues**](ContentManagementApi.html#getcontentmanagementworkspacetagvalues) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Get a list of workspace tags |
-| [**GetContentmanagementWorkspaces**](ContentManagementApi.html#getcontentmanagementworkspaces) | **GET** /api/v2/contentmanagement/workspaces | Get a list of workspaces. |
-| [**PostContentmanagementAuditquery**](ContentManagementApi.html#postcontentmanagementauditquery) | **POST** /api/v2/contentmanagement/auditquery | Query audits |
-| [**PostContentmanagementDocument**](ContentManagementApi.html#postcontentmanagementdocument) | **POST** /api/v2/contentmanagement/documents/{documentId} | Update a document. |
-| [**PostContentmanagementDocumentContent**](ContentManagementApi.html#postcontentmanagementdocumentcontent) | **POST** /api/v2/contentmanagement/documents/{documentId}/content | Replace the contents of a document. |
-| [**PostContentmanagementDocuments**](ContentManagementApi.html#postcontentmanagementdocuments) | **POST** /api/v2/contentmanagement/documents | Add a document. |
-| [**PostContentmanagementQuery**](ContentManagementApi.html#postcontentmanagementquery) | **POST** /api/v2/contentmanagement/query | Query content |
-| [**PostContentmanagementShares**](ContentManagementApi.html#postcontentmanagementshares) | **POST** /api/v2/contentmanagement/shares | Creates a new share or updates an existing share if the entity has already been shared |
-| [**PostContentmanagementWorkspaceTagvalues**](ContentManagementApi.html#postcontentmanagementworkspacetagvalues) | **POST** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Create a workspace tag |
-| [**PostContentmanagementWorkspaceTagvaluesQuery**](ContentManagementApi.html#postcontentmanagementworkspacetagvaluesquery) | **POST** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query | Perform a prefix query on tags in the workspace |
-| [**PostContentmanagementWorkspaces**](ContentManagementApi.html#postcontentmanagementworkspaces) | **POST** /api/v2/contentmanagement/workspaces | Create a group workspace |
-| [**PutContentmanagementWorkspace**](ContentManagementApi.html#putcontentmanagementworkspace) | **PUT** /api/v2/contentmanagement/workspaces/{workspaceId} | Update a workspace |
-| [**PutContentmanagementWorkspaceMember**](ContentManagementApi.html#putcontentmanagementworkspacemember) | **PUT** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Add a member to a workspace |
-| [**PutContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#putcontentmanagementworkspacetagvalue) | **PUT** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Update a workspace tag. Will update all documents with the new tag value. |
+| [**DeleteContentmanagementDocument**](ContentManagementApi.html#deletecontentmanagementdocument) | **Delete** /api/v2/contentmanagement/documents/{documentId} | Delete a document. |
+| [**DeleteContentmanagementShare**](ContentManagementApi.html#deletecontentmanagementshare) | **Delete** /api/v2/contentmanagement/shares/{shareId} | Deletes an existing share. |
+| [**DeleteContentmanagementStatusStatusId**](ContentManagementApi.html#deletecontentmanagementstatusstatusid) | **Delete** /api/v2/contentmanagement/status/{statusId} | Cancel the command for this status |
+| [**DeleteContentmanagementWorkspace**](ContentManagementApi.html#deletecontentmanagementworkspace) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId} | Delete a workspace |
+| [**DeleteContentmanagementWorkspaceMember**](ContentManagementApi.html#deletecontentmanagementworkspacemember) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Delete a member from a workspace |
+| [**DeleteContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#deletecontentmanagementworkspacetagvalue) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Delete workspace tag |
+| [**GetContentmanagementDocument**](ContentManagementApi.html#getcontentmanagementdocument) | **Get** /api/v2/contentmanagement/documents/{documentId} | Get a document. |
+| [**GetContentmanagementDocumentAudits**](ContentManagementApi.html#getcontentmanagementdocumentaudits) | **Get** /api/v2/contentmanagement/documents/{documentId}/audits | Get a list of audits for a document. |
+| [**GetContentmanagementDocumentContent**](ContentManagementApi.html#getcontentmanagementdocumentcontent) | **Get** /api/v2/contentmanagement/documents/{documentId}/content | Download a document. |
+| [**GetContentmanagementDocuments**](ContentManagementApi.html#getcontentmanagementdocuments) | **Get** /api/v2/contentmanagement/documents | Get a list of documents. |
+| [**GetContentmanagementQuery**](ContentManagementApi.html#getcontentmanagementquery) | **Get** /api/v2/contentmanagement/query | Query content |
+| [**GetContentmanagementSecurityprofile**](ContentManagementApi.html#getcontentmanagementsecurityprofile) | **Get** /api/v2/contentmanagement/securityprofiles/{securityProfileId} | Get a Security Profile |
+| [**GetContentmanagementSecurityprofiles**](ContentManagementApi.html#getcontentmanagementsecurityprofiles) | **Get** /api/v2/contentmanagement/securityprofiles | Get a List of Security Profiles |
+| [**GetContentmanagementShare**](ContentManagementApi.html#getcontentmanagementshare) | **Get** /api/v2/contentmanagement/shares/{shareId} | Retrieve details about an existing share. |
+| [**GetContentmanagementSharedSharedId**](ContentManagementApi.html#getcontentmanagementsharedsharedid) | **Get** /api/v2/contentmanagement/shared/{sharedId} | Get shared documents. Securely download a shared document. |
+| [**GetContentmanagementShares**](ContentManagementApi.html#getcontentmanagementshares) | **Get** /api/v2/contentmanagement/shares | Gets a list of shares.  You must specify at least one filter (e.g. entityId). |
+| [**GetContentmanagementStatus**](ContentManagementApi.html#getcontentmanagementstatus) | **Get** /api/v2/contentmanagement/status | Get a list of statuses for pending operations |
+| [**GetContentmanagementStatusStatusId**](ContentManagementApi.html#getcontentmanagementstatusstatusid) | **Get** /api/v2/contentmanagement/status/{statusId} | Get a status. |
+| [**GetContentmanagementUsage**](ContentManagementApi.html#getcontentmanagementusage) | **Get** /api/v2/contentmanagement/usage | Get usage details. |
+| [**GetContentmanagementWorkspace**](ContentManagementApi.html#getcontentmanagementworkspace) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId} | Get a workspace. |
+| [**GetContentmanagementWorkspaceDocuments**](ContentManagementApi.html#getcontentmanagementworkspacedocuments) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/documents | Get a list of documents. |
+| [**GetContentmanagementWorkspaceMember**](ContentManagementApi.html#getcontentmanagementworkspacemember) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Get a workspace member |
+| [**GetContentmanagementWorkspaceMembers**](ContentManagementApi.html#getcontentmanagementworkspacemembers) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/members | Get a list workspace members |
+| [**GetContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#getcontentmanagementworkspacetagvalue) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Get a workspace tag |
+| [**GetContentmanagementWorkspaceTagvalues**](ContentManagementApi.html#getcontentmanagementworkspacetagvalues) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Get a list of workspace tags |
+| [**GetContentmanagementWorkspaces**](ContentManagementApi.html#getcontentmanagementworkspaces) | **Get** /api/v2/contentmanagement/workspaces | Get a list of workspaces. |
+| [**PostContentmanagementAuditquery**](ContentManagementApi.html#postcontentmanagementauditquery) | **Post** /api/v2/contentmanagement/auditquery | Query audits |
+| [**PostContentmanagementDocument**](ContentManagementApi.html#postcontentmanagementdocument) | **Post** /api/v2/contentmanagement/documents/{documentId} | Update a document. |
+| [**PostContentmanagementDocumentContent**](ContentManagementApi.html#postcontentmanagementdocumentcontent) | **Post** /api/v2/contentmanagement/documents/{documentId}/content | Replace the contents of a document. |
+| [**PostContentmanagementDocuments**](ContentManagementApi.html#postcontentmanagementdocuments) | **Post** /api/v2/contentmanagement/documents | Add a document. |
+| [**PostContentmanagementQuery**](ContentManagementApi.html#postcontentmanagementquery) | **Post** /api/v2/contentmanagement/query | Query content |
+| [**PostContentmanagementShares**](ContentManagementApi.html#postcontentmanagementshares) | **Post** /api/v2/contentmanagement/shares | Creates a new share or updates an existing share if the entity has already been shared |
+| [**PostContentmanagementWorkspaceTagvalues**](ContentManagementApi.html#postcontentmanagementworkspacetagvalues) | **Post** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Create a workspace tag |
+| [**PostContentmanagementWorkspaceTagvaluesQuery**](ContentManagementApi.html#postcontentmanagementworkspacetagvaluesquery) | **Post** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query | Perform a prefix query on tags in the workspace |
+| [**PostContentmanagementWorkspaces**](ContentManagementApi.html#postcontentmanagementworkspaces) | **Post** /api/v2/contentmanagement/workspaces | Create a group workspace |
+| [**PutContentmanagementWorkspace**](ContentManagementApi.html#putcontentmanagementworkspace) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId} | Update a workspace |
+| [**PutContentmanagementWorkspaceMember**](ContentManagementApi.html#putcontentmanagementworkspacemember) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Add a member to a workspace |
+| [**PutContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#putcontentmanagementworkspacetagvalue) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Update a workspace tag. Will update all documents with the new tag value. |
 {: class="table table-striped"}
 
 <a name="deletecontentmanagementdocument"></a>

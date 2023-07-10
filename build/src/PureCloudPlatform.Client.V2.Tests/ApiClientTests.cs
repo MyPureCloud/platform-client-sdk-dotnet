@@ -14,6 +14,8 @@ using System.Linq;
 using Parameter = RestSharp.Parameter;
 using System.Net;
 using Moq;
+using RichardSzalay.MockHttp;
+using System.Net.Http;
 
 namespace PureCloudPlatform.Client.V2.Tests
 {
@@ -27,7 +29,7 @@ public class ApiClientTests
 
     private Stopwatch stopwatch;
     private static String path = "/api/v2/users";
-    private static RestSharp.Method method = Method.GET;
+    private static RestSharp.Method method = Method.Get;
     private static Dictionary<String, String> pathParams = new Dictionary<String, String>();
     private static List<Tuple<String, String>> queryParams = new List<Tuple<String, String>>();
     private static Dictionary<String, String> headerParams = new Dictionary<String, String>();
@@ -60,14 +62,18 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = GetTestResponse(429, "3");
+        var mockHttp = new MockHttpMessageHandler();
 
-        mockRestClient.Setup(x => x.Execute(It.IsAny<RestRequest>())).Returns(response);
+        mockHttp.When("*").Respond((req) =>
+        {
+            var response = new HttpResponseMessage((System.Net.HttpStatusCode)429);
+            response.Headers.Add("Retry-After", "3");
+            return Task.FromResult(response);
+        });
 
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)apiClient.CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
@@ -86,17 +92,18 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = GetTestResponse(429, "3");
-
-        mockRestClient.Setup(x => x.Execute(It.IsAny<RestRequest>())).Returns(response);
-
+        var mockHttp = new MockHttpMessageHandler();
+        var response = new HttpResponseMessage((System.Net.HttpStatusCode)429);
+        response.Headers.Add("Retry-After", "3");
+        mockHttp.When("*").Respond(response);
+        
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)apiClient.CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
+       
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 0 && stopwatch.ElapsedMilliseconds < 100, "Since maxRetryTime is not provided it will not retry even if the status code is 429");
         Assert.AreEqual(429, (int)user.StatusCode);
         stopwatch.Stop();
@@ -113,18 +120,16 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)502;
+        var mockHttp = new MockHttpMessageHandler();
 
-        mockRestClient.Setup(x => x.Execute(It.IsAny<RestRequest>())).Returns(response);
-
+        mockHttp.When("*").Respond((System.Net.HttpStatusCode)502);
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)apiClient.CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
+       
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 13000 && stopwatch.ElapsedMilliseconds < 13100, "It will wait for every 2 Sec and retry for 5 times then it will backoff for 3 sec and retry then it exits.");
         Assert.AreEqual(502, (int)user.StatusCode);
         stopwatch.Stop();
@@ -141,18 +146,15 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)503;
-
-        mockRestClient.Setup(x => x.Execute(It.IsAny<RestRequest>())).Returns(response);
-
+        var mockHttp = new MockHttpMessageHandler();
+        mockHttp.When("*").Respond((System.Net.HttpStatusCode)503);
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)apiClient.CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
+        
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 40000 && stopwatch.ElapsedMilliseconds < 40100, "It will wait for every 200 Mills and retry for 5 times then it will backoff for 3 Sec once, 9 Sec once and 27 Sec before retrying");
         Assert.AreEqual(503, (int)user.StatusCode);
         stopwatch.Stop();
@@ -168,18 +170,16 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)504;
+        var mockHttp = new MockHttpMessageHandler();
 
-        mockRestClient.Setup(x => x.Execute(It.IsAny<RestRequest>())).Returns(response);
-
+        mockHttp.When("*").Respond((System.Net.HttpStatusCode)504);
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)apiClient.CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
+        
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 2000 && stopwatch.ElapsedMilliseconds < 2100, "It will wait for every 1 sec and retry for 2 times");
         Assert.AreEqual(504, (int)user.StatusCode);
         stopwatch.Stop();
@@ -194,18 +194,16 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)504;
-
-        mockRestClient.Setup(x => x.Execute(It.IsAny<RestRequest>())).Returns(response);
-
+        var mockHttp = new MockHttpMessageHandler();
+        mockHttp.When("*").Respond((System.Net.HttpStatusCode)504);
+        
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)apiClient.CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
+        
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 0 && stopwatch.ElapsedMilliseconds < 100, "Since maxRetryTime is not provided it will not retry even if the status code is 504");
         Assert.AreEqual(504, (int)user.StatusCode);
         stopwatch.Stop();
@@ -220,17 +218,21 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = GetTestResponse(429, "1");
-
-        mockRestClient.Setup(x => x.ExecuteTaskAsync(It.IsAny<RestRequest>())).Returns(Task.FromResult<IRestResponse>(response));
+        var mockHttp = new MockHttpMessageHandler();
+        mockHttp.When("*").Respond((req) =>
+        {
+            var response = new HttpResponseMessage((System.Net.HttpStatusCode)429);
+            response.Headers.Add("Retry-After", "1");
+            return Task.FromResult(response);
+        });
 
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)await apiClient.CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
+        
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 5000 && stopwatch.ElapsedMilliseconds < 5100, "It will wait for every 1 Sec provided by Retry-After header Sec and retry for 5 Sec");
         Assert.AreEqual(429, (int)user.StatusCode);
         stopwatch.Stop();
@@ -245,17 +247,19 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = GetTestResponse(429, "1");
+        var mockHttp = new MockHttpMessageHandler();
+        var response = new HttpResponseMessage((System.Net.HttpStatusCode)429);
+        response.Headers.Add("Retry-After", "1");
 
-        mockRestClient.Setup(x => x.ExecuteTaskAsync(It.IsAny<RestRequest>())).Returns(Task.FromResult<IRestResponse>(response));
+        mockHttp.When("*").Respond(response);
 
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)await apiClient.CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
+        
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 0 && stopwatch.ElapsedMilliseconds < 100, "Since maxWaitTime is 0 it will not retry even if status code is 429");
         Assert.AreEqual(429, (int)user.StatusCode);
         stopwatch.Stop();
@@ -272,18 +276,20 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)502;
+        var mockHttp = new MockHttpMessageHandler();
 
-        mockRestClient.Setup(x => x.ExecuteTaskAsync(It.IsAny<RestRequest>())).Returns(Task.FromResult<IRestResponse>(response));
-
+        mockHttp.When("*").Respond((req) =>
+        {
+            var response = new HttpResponseMessage((System.Net.HttpStatusCode)502);
+            return Task.FromResult(response);
+        });
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)await apiClient.CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
+        
         Assert.IsTrue(stopwatch.ElapsedMilliseconds >= 13000 && stopwatch.ElapsedMilliseconds < 13100, "It will wait for every 2 Sec and retry for 5 times then it will backoff for 3 sec and retry then it exits.");
         Assert.AreEqual(502, (int)user.StatusCode);
         stopwatch.Stop();
@@ -300,15 +306,16 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)503;
-
-        mockRestClient.Setup(x => x.ExecuteTaskAsync(It.IsAny<RestRequest>())).Returns(Task.FromResult<IRestResponse>(response));
-
+        var mockHttp = new MockHttpMessageHandler();
+        mockHttp.When("*").Respond((req) =>
+        {
+            var response = new HttpResponseMessage((System.Net.HttpStatusCode)503);
+            return Task.FromResult(response);
+        });
+        
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)await apiClient.CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
@@ -327,15 +334,16 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)504;
-
-        mockRestClient.Setup(x => x.ExecuteTaskAsync(It.IsAny<RestRequest>())).Returns(Task.FromResult<IRestResponse>(response));
-
+        var mockHttp = new MockHttpMessageHandler();
+        mockHttp.When("*").Respond((req) =>
+        {
+            var response = new HttpResponseMessage((System.Net.HttpStatusCode)504);
+            return Task.FromResult(response);
+        });
+        
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)await apiClient.CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
@@ -353,15 +361,16 @@ public class ApiClientTests
             RetryMax = 50
         };
 
-        var mockRestClient = new Mock<IRestClient>();
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)504;
-
-        mockRestClient.Setup(x => x.ExecuteTaskAsync(It.IsAny<RestRequest>())).Returns(Task.FromResult<IRestResponse>(response));
-
+        var mockHttp = new MockHttpMessageHandler();
+        mockHttp.When("*").Respond((req) =>
+        {
+            var response = new HttpResponseMessage((System.Net.HttpStatusCode)504);
+            return Task.FromResult(response);
+        });
+        
         var apiClient = new ApiClient(new PureCloudPlatform.Client.V2.Client.Configuration());
         apiClient.RetryConfig = retryConfig;
-        apiClient.RestClient = mockRestClient.Object;
+        apiClient.ClientOptions.HttpMessageHandler = mockHttp;
 
         stopwatch = Stopwatch.StartNew();
         RestResponse user = (RestResponse)await apiClient.CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams, contentType);
@@ -370,18 +379,7 @@ public class ApiClientTests
         stopwatch.Stop();
     }
 
-    private RestResponse GetTestResponse(int statusCode, String retryAfterHeader)
-    {
-        RestResponse response = new RestResponse();
-        response.StatusCode = (HttpStatusCode)statusCode;
-        response.Headers.Add(new Parameter
-        {
-            Name = "Retry-After",
-            Value = retryAfterHeader,
-            Type = ParameterType.HttpHeader
-        });
-        return response;
-    }
+   
 
     public Nullable<PureCloudRegionHosts> getRegion(String str = "http://api.mypurecloud.com")
     {

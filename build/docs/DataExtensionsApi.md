@@ -7,9 +7,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetDataextensionsCoretype**](DataExtensionsApi.html#getdataextensionscoretype) | **GET** /api/v2/dataextensions/coretypes/{coretypeName} | Get a specific named core type. |
-| [**GetDataextensionsCoretypes**](DataExtensionsApi.html#getdataextensionscoretypes) | **GET** /api/v2/dataextensions/coretypes | Get the core types from which all schemas are built. |
-| [**GetDataextensionsLimits**](DataExtensionsApi.html#getdataextensionslimits) | **GET** /api/v2/dataextensions/limits | Get quantitative limits on schemas |
+| [**GetDataextensionsCoretype**](DataExtensionsApi.html#getdataextensionscoretype) | **Get** /api/v2/dataextensions/coretypes/{coretypeName} | Get a specific named core type. |
+| [**GetDataextensionsCoretypes**](DataExtensionsApi.html#getdataextensionscoretypes) | **Get** /api/v2/dataextensions/coretypes | Get the core types from which all schemas are built. |
+| [**GetDataextensionsLimits**](DataExtensionsApi.html#getdataextensionslimits) | **Get** /api/v2/dataextensions/limits | Get quantitative limits on schemas |
 {: class="table table-striped"}
 
 <a name="getdataextensionscoretype"></a>

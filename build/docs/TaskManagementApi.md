@@ -7,49 +7,49 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteTaskmanagementWorkbin**](TaskManagementApi.html#deletetaskmanagementworkbin) | **DELETE** /api/v2/taskmanagement/workbins/{workbinId} | Delete a workbin |
-| [**DeleteTaskmanagementWorkitem**](TaskManagementApi.html#deletetaskmanagementworkitem) | **DELETE** /api/v2/taskmanagement/workitems/{workitemId} | Delete a workitem |
-| [**DeleteTaskmanagementWorkitemsSchema**](TaskManagementApi.html#deletetaskmanagementworkitemsschema) | **DELETE** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Delete a schema |
-| [**DeleteTaskmanagementWorktype**](TaskManagementApi.html#deletetaskmanagementworktype) | **DELETE** /api/v2/taskmanagement/worktypes/{worktypeId} | Delete a worktype |
-| [**DeleteTaskmanagementWorktypeStatus**](TaskManagementApi.html#deletetaskmanagementworktypestatus) | **DELETE** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Delete a status |
-| [**GetTaskmanagementWorkbin**](TaskManagementApi.html#gettaskmanagementworkbin) | **GET** /api/v2/taskmanagement/workbins/{workbinId} | Get a workbin |
-| [**GetTaskmanagementWorkbinHistory**](TaskManagementApi.html#gettaskmanagementworkbinhistory) | **GET** /api/v2/taskmanagement/workbins/{workbinId}/history | Get a listing of a workbin&#39;s attribute change history |
-| [**GetTaskmanagementWorkbinVersion**](TaskManagementApi.html#gettaskmanagementworkbinversion) | **GET** /api/v2/taskmanagement/workbins/{workbinId}/versions/{entityVersion} | Get a version of a workbin |
-| [**GetTaskmanagementWorkbinVersions**](TaskManagementApi.html#gettaskmanagementworkbinversions) | **GET** /api/v2/taskmanagement/workbins/{workbinId}/versions | Get all versions of a workbin |
-| [**GetTaskmanagementWorkitem**](TaskManagementApi.html#gettaskmanagementworkitem) | **GET** /api/v2/taskmanagement/workitems/{workitemId} | Get a workitem |
-| [**GetTaskmanagementWorkitemHistory**](TaskManagementApi.html#gettaskmanagementworkitemhistory) | **GET** /api/v2/taskmanagement/workitems/{workitemId}/history | Get a listing of a workitem&#39;s attribute change history |
-| [**GetTaskmanagementWorkitemUserWrapups**](TaskManagementApi.html#gettaskmanagementworkitemuserwrapups) | **GET** /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups | Get all wrapup codes added for the given user for a workitem. |
-| [**GetTaskmanagementWorkitemVersion**](TaskManagementApi.html#gettaskmanagementworkitemversion) | **GET** /api/v2/taskmanagement/workitems/{workitemId}/versions/{entityVersion} | Get a version of a workitem |
-| [**GetTaskmanagementWorkitemVersions**](TaskManagementApi.html#gettaskmanagementworkitemversions) | **GET** /api/v2/taskmanagement/workitems/{workitemId}/versions | Get all versions of a workitem |
-| [**GetTaskmanagementWorkitemWrapups**](TaskManagementApi.html#gettaskmanagementworkitemwrapups) | **GET** /api/v2/taskmanagement/workitems/{workitemId}/wrapups | Get all wrapup codes added for all users for a workitem. |
-| [**GetTaskmanagementWorkitemsSchema**](TaskManagementApi.html#gettaskmanagementworkitemsschema) | **GET** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Get a schema |
-| [**GetTaskmanagementWorkitemsSchemaVersion**](TaskManagementApi.html#gettaskmanagementworkitemsschemaversion) | **GET** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
-| [**GetTaskmanagementWorkitemsSchemaVersions**](TaskManagementApi.html#gettaskmanagementworkitemsschemaversions) | **GET** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions | Get all versions of a schema |
-| [**GetTaskmanagementWorkitemsSchemas**](TaskManagementApi.html#gettaskmanagementworkitemsschemas) | **GET** /api/v2/taskmanagement/workitems/schemas | Get a list of schemas. |
-| [**GetTaskmanagementWorktype**](TaskManagementApi.html#gettaskmanagementworktype) | **GET** /api/v2/taskmanagement/worktypes/{worktypeId} | Get a worktype |
-| [**GetTaskmanagementWorktypeHistory**](TaskManagementApi.html#gettaskmanagementworktypehistory) | **GET** /api/v2/taskmanagement/worktypes/{worktypeId}/history | Get a listing of a worktype&#39;s attribute change history |
-| [**GetTaskmanagementWorktypeStatus**](TaskManagementApi.html#gettaskmanagementworktypestatus) | **GET** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Get a status |
-| [**GetTaskmanagementWorktypeVersion**](TaskManagementApi.html#gettaskmanagementworktypeversion) | **GET** /api/v2/taskmanagement/worktypes/{worktypeId}/versions/{entityVersion} | Get a version of a worktype |
-| [**GetTaskmanagementWorktypeVersions**](TaskManagementApi.html#gettaskmanagementworktypeversions) | **GET** /api/v2/taskmanagement/worktypes/{worktypeId}/versions | Get all versions of a worktype |
-| [**PatchTaskmanagementWorkbin**](TaskManagementApi.html#patchtaskmanagementworkbin) | **PATCH** /api/v2/taskmanagement/workbins/{workbinId} | Update the attributes of a workbin |
-| [**PatchTaskmanagementWorkitem**](TaskManagementApi.html#patchtaskmanagementworkitem) | **PATCH** /api/v2/taskmanagement/workitems/{workitemId} | Update the attributes of a workitem |
-| [**PatchTaskmanagementWorkitemAssignment**](TaskManagementApi.html#patchtaskmanagementworkitemassignment) | **PATCH** /api/v2/taskmanagement/workitems/{workitemId}/assignment | Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
-| [**PatchTaskmanagementWorkitemUserWrapups**](TaskManagementApi.html#patchtaskmanagementworkitemuserwrapups) | **PATCH** /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups | Add/Remove a wrapup code for a given user in a workitem. |
-| [**PatchTaskmanagementWorkitemUsersMeWrapups**](TaskManagementApi.html#patchtaskmanagementworkitemusersmewrapups) | **PATCH** /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups | Add/Remove a wrapup code for the current user in a workitem. |
-| [**PatchTaskmanagementWorktype**](TaskManagementApi.html#patchtaskmanagementworktype) | **PATCH** /api/v2/taskmanagement/worktypes/{worktypeId} | Update the attributes of a worktype |
-| [**PatchTaskmanagementWorktypeStatus**](TaskManagementApi.html#patchtaskmanagementworktypestatus) | **PATCH** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Update the attributes of a status |
-| [**PostTaskmanagementWorkbins**](TaskManagementApi.html#posttaskmanagementworkbins) | **POST** /api/v2/taskmanagement/workbins | Create a workbin |
-| [**PostTaskmanagementWorkbinsQuery**](TaskManagementApi.html#posttaskmanagementworkbinsquery) | **POST** /api/v2/taskmanagement/workbins/query | Query for workbins |
-| [**PostTaskmanagementWorkitemAcdCancel**](TaskManagementApi.html#posttaskmanagementworkitemacdcancel) | **POST** /api/v2/taskmanagement/workitems/{workitemId}/acd/cancel | Cancel the assignment process for a workitem that is currently queued for assignment through ACD. |
-| [**PostTaskmanagementWorkitemDisconnect**](TaskManagementApi.html#posttaskmanagementworkitemdisconnect) | **POST** /api/v2/taskmanagement/workitems/{workitemId}/disconnect | Disconnect the assignee of the workitem |
-| [**PostTaskmanagementWorkitemTerminate**](TaskManagementApi.html#posttaskmanagementworkitemterminate) | **POST** /api/v2/taskmanagement/workitems/{workitemId}/terminate | Terminate a workitem |
-| [**PostTaskmanagementWorkitems**](TaskManagementApi.html#posttaskmanagementworkitems) | **POST** /api/v2/taskmanagement/workitems | Create a workitem |
-| [**PostTaskmanagementWorkitemsQuery**](TaskManagementApi.html#posttaskmanagementworkitemsquery) | **POST** /api/v2/taskmanagement/workitems/query | Query for workitems |
-| [**PostTaskmanagementWorkitemsSchemas**](TaskManagementApi.html#posttaskmanagementworkitemsschemas) | **POST** /api/v2/taskmanagement/workitems/schemas | Create a schema |
-| [**PostTaskmanagementWorktypeStatuses**](TaskManagementApi.html#posttaskmanagementworktypestatuses) | **POST** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses | Add a status to a worktype |
-| [**PostTaskmanagementWorktypes**](TaskManagementApi.html#posttaskmanagementworktypes) | **POST** /api/v2/taskmanagement/worktypes | Create a worktype |
-| [**PostTaskmanagementWorktypesQuery**](TaskManagementApi.html#posttaskmanagementworktypesquery) | **POST** /api/v2/taskmanagement/worktypes/query | Query for worktypes |
-| [**PutTaskmanagementWorkitemsSchema**](TaskManagementApi.html#puttaskmanagementworkitemsschema) | **PUT** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Update a schema |
+| [**DeleteTaskmanagementWorkbin**](TaskManagementApi.html#deletetaskmanagementworkbin) | **Delete** /api/v2/taskmanagement/workbins/{workbinId} | Delete a workbin |
+| [**DeleteTaskmanagementWorkitem**](TaskManagementApi.html#deletetaskmanagementworkitem) | **Delete** /api/v2/taskmanagement/workitems/{workitemId} | Delete a workitem |
+| [**DeleteTaskmanagementWorkitemsSchema**](TaskManagementApi.html#deletetaskmanagementworkitemsschema) | **Delete** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Delete a schema |
+| [**DeleteTaskmanagementWorktype**](TaskManagementApi.html#deletetaskmanagementworktype) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId} | Delete a worktype |
+| [**DeleteTaskmanagementWorktypeStatus**](TaskManagementApi.html#deletetaskmanagementworktypestatus) | **Delete** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Delete a status |
+| [**GetTaskmanagementWorkbin**](TaskManagementApi.html#gettaskmanagementworkbin) | **Get** /api/v2/taskmanagement/workbins/{workbinId} | Get a workbin |
+| [**GetTaskmanagementWorkbinHistory**](TaskManagementApi.html#gettaskmanagementworkbinhistory) | **Get** /api/v2/taskmanagement/workbins/{workbinId}/history | Get a listing of a workbin&#39;s attribute change history |
+| [**GetTaskmanagementWorkbinVersion**](TaskManagementApi.html#gettaskmanagementworkbinversion) | **Get** /api/v2/taskmanagement/workbins/{workbinId}/versions/{entityVersion} | Get a version of a workbin |
+| [**GetTaskmanagementWorkbinVersions**](TaskManagementApi.html#gettaskmanagementworkbinversions) | **Get** /api/v2/taskmanagement/workbins/{workbinId}/versions | Get all versions of a workbin |
+| [**GetTaskmanagementWorkitem**](TaskManagementApi.html#gettaskmanagementworkitem) | **Get** /api/v2/taskmanagement/workitems/{workitemId} | Get a workitem |
+| [**GetTaskmanagementWorkitemHistory**](TaskManagementApi.html#gettaskmanagementworkitemhistory) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/history | Get a listing of a workitem&#39;s attribute change history |
+| [**GetTaskmanagementWorkitemUserWrapups**](TaskManagementApi.html#gettaskmanagementworkitemuserwrapups) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups | Get all wrapup codes added for the given user for a workitem. |
+| [**GetTaskmanagementWorkitemVersion**](TaskManagementApi.html#gettaskmanagementworkitemversion) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/versions/{entityVersion} | Get a version of a workitem |
+| [**GetTaskmanagementWorkitemVersions**](TaskManagementApi.html#gettaskmanagementworkitemversions) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/versions | Get all versions of a workitem |
+| [**GetTaskmanagementWorkitemWrapups**](TaskManagementApi.html#gettaskmanagementworkitemwrapups) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/wrapups | Get all wrapup codes added for all users for a workitem. |
+| [**GetTaskmanagementWorkitemsSchema**](TaskManagementApi.html#gettaskmanagementworkitemsschema) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Get a schema |
+| [**GetTaskmanagementWorkitemsSchemaVersion**](TaskManagementApi.html#gettaskmanagementworkitemsschemaversion) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
+| [**GetTaskmanagementWorkitemsSchemaVersions**](TaskManagementApi.html#gettaskmanagementworkitemsschemaversions) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions | Get all versions of a schema |
+| [**GetTaskmanagementWorkitemsSchemas**](TaskManagementApi.html#gettaskmanagementworkitemsschemas) | **Get** /api/v2/taskmanagement/workitems/schemas | Get a list of schemas. |
+| [**GetTaskmanagementWorktype**](TaskManagementApi.html#gettaskmanagementworktype) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId} | Get a worktype |
+| [**GetTaskmanagementWorktypeHistory**](TaskManagementApi.html#gettaskmanagementworktypehistory) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/history | Get a listing of a worktype&#39;s attribute change history |
+| [**GetTaskmanagementWorktypeStatus**](TaskManagementApi.html#gettaskmanagementworktypestatus) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Get a status |
+| [**GetTaskmanagementWorktypeVersion**](TaskManagementApi.html#gettaskmanagementworktypeversion) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/versions/{entityVersion} | Get a version of a worktype |
+| [**GetTaskmanagementWorktypeVersions**](TaskManagementApi.html#gettaskmanagementworktypeversions) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/versions | Get all versions of a worktype |
+| [**PatchTaskmanagementWorkbin**](TaskManagementApi.html#patchtaskmanagementworkbin) | **Patch** /api/v2/taskmanagement/workbins/{workbinId} | Update the attributes of a workbin |
+| [**PatchTaskmanagementWorkitem**](TaskManagementApi.html#patchtaskmanagementworkitem) | **Patch** /api/v2/taskmanagement/workitems/{workitemId} | Update the attributes of a workitem |
+| [**PatchTaskmanagementWorkitemAssignment**](TaskManagementApi.html#patchtaskmanagementworkitemassignment) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/assignment | Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
+| [**PatchTaskmanagementWorkitemUserWrapups**](TaskManagementApi.html#patchtaskmanagementworkitemuserwrapups) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups | Add/Remove a wrapup code for a given user in a workitem. |
+| [**PatchTaskmanagementWorkitemUsersMeWrapups**](TaskManagementApi.html#patchtaskmanagementworkitemusersmewrapups) | **Patch** /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups | Add/Remove a wrapup code for the current user in a workitem. |
+| [**PatchTaskmanagementWorktype**](TaskManagementApi.html#patchtaskmanagementworktype) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId} | Update the attributes of a worktype |
+| [**PatchTaskmanagementWorktypeStatus**](TaskManagementApi.html#patchtaskmanagementworktypestatus) | **Patch** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Update the attributes of a status |
+| [**PostTaskmanagementWorkbins**](TaskManagementApi.html#posttaskmanagementworkbins) | **Post** /api/v2/taskmanagement/workbins | Create a workbin |
+| [**PostTaskmanagementWorkbinsQuery**](TaskManagementApi.html#posttaskmanagementworkbinsquery) | **Post** /api/v2/taskmanagement/workbins/query | Query for workbins |
+| [**PostTaskmanagementWorkitemAcdCancel**](TaskManagementApi.html#posttaskmanagementworkitemacdcancel) | **Post** /api/v2/taskmanagement/workitems/{workitemId}/acd/cancel | Cancel the assignment process for a workitem that is currently queued for assignment through ACD. |
+| [**PostTaskmanagementWorkitemDisconnect**](TaskManagementApi.html#posttaskmanagementworkitemdisconnect) | **Post** /api/v2/taskmanagement/workitems/{workitemId}/disconnect | Disconnect the assignee of the workitem |
+| [**PostTaskmanagementWorkitemTerminate**](TaskManagementApi.html#posttaskmanagementworkitemterminate) | **Post** /api/v2/taskmanagement/workitems/{workitemId}/terminate | Terminate a workitem |
+| [**PostTaskmanagementWorkitems**](TaskManagementApi.html#posttaskmanagementworkitems) | **Post** /api/v2/taskmanagement/workitems | Create a workitem |
+| [**PostTaskmanagementWorkitemsQuery**](TaskManagementApi.html#posttaskmanagementworkitemsquery) | **Post** /api/v2/taskmanagement/workitems/query | Query for workitems |
+| [**PostTaskmanagementWorkitemsSchemas**](TaskManagementApi.html#posttaskmanagementworkitemsschemas) | **Post** /api/v2/taskmanagement/workitems/schemas | Create a schema |
+| [**PostTaskmanagementWorktypeStatuses**](TaskManagementApi.html#posttaskmanagementworktypestatuses) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses | Add a status to a worktype |
+| [**PostTaskmanagementWorktypes**](TaskManagementApi.html#posttaskmanagementworktypes) | **Post** /api/v2/taskmanagement/worktypes | Create a worktype |
+| [**PostTaskmanagementWorktypesQuery**](TaskManagementApi.html#posttaskmanagementworktypesquery) | **Post** /api/v2/taskmanagement/worktypes/query | Query for worktypes |
+| [**PutTaskmanagementWorkitemsSchema**](TaskManagementApi.html#puttaskmanagementworkitemsschema) | **Put** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Update a schema |
 {: class="table table-striped"}
 
 <a name="deletetaskmanagementworkbin"></a>

@@ -7,10 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetDate**](UtilitiesApi.html#getdate) | **GET** /api/v2/date | Get the current system date/time |
-| [**GetIpranges**](UtilitiesApi.html#getipranges) | **GET** /api/v2/ipranges | Get public ip address ranges for Genesys Cloud |
-| [**GetTimezones**](UtilitiesApi.html#gettimezones) | **GET** /api/v2/timezones | Get time zones list |
-| [**PostCertificateDetails**](UtilitiesApi.html#postcertificatedetails) | **POST** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
+| [**GetDate**](UtilitiesApi.html#getdate) | **Get** /api/v2/date | Get the current system date/time |
+| [**GetIpranges**](UtilitiesApi.html#getipranges) | **Get** /api/v2/ipranges | Get public ip address ranges for Genesys Cloud |
+| [**GetTimezones**](UtilitiesApi.html#gettimezones) | **Get** /api/v2/timezones | Get time zones list |
+| [**PostCertificateDetails**](UtilitiesApi.html#postcertificatedetails) | **Post** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
 {: class="table table-striped"}
 
 <a name="getdate"></a>

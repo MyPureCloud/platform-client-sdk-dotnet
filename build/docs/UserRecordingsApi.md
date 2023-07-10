@@ -7,12 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteUserrecording**](UserRecordingsApi.html#deleteuserrecording) | **DELETE** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
-| [**GetUserrecording**](UserRecordingsApi.html#getuserrecording) | **GET** /api/v2/userrecordings/{recordingId} | Get a user recording. |
-| [**GetUserrecordingMedia**](UserRecordingsApi.html#getuserrecordingmedia) | **GET** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
-| [**GetUserrecordings**](UserRecordingsApi.html#getuserrecordings) | **GET** /api/v2/userrecordings | Get a list of user recordings. |
-| [**GetUserrecordingsSummary**](UserRecordingsApi.html#getuserrecordingssummary) | **GET** /api/v2/userrecordings/summary | Get user recording summary |
-| [**PutUserrecording**](UserRecordingsApi.html#putuserrecording) | **PUT** /api/v2/userrecordings/{recordingId} | Update a user recording. |
+| [**DeleteUserrecording**](UserRecordingsApi.html#deleteuserrecording) | **Delete** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
+| [**GetUserrecording**](UserRecordingsApi.html#getuserrecording) | **Get** /api/v2/userrecordings/{recordingId} | Get a user recording. |
+| [**GetUserrecordingMedia**](UserRecordingsApi.html#getuserrecordingmedia) | **Get** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
+| [**GetUserrecordings**](UserRecordingsApi.html#getuserrecordings) | **Get** /api/v2/userrecordings | Get a list of user recordings. |
+| [**GetUserrecordingsSummary**](UserRecordingsApi.html#getuserrecordingssummary) | **Get** /api/v2/userrecordings/summary | Get user recording summary |
+| [**PutUserrecording**](UserRecordingsApi.html#putuserrecording) | **Put** /api/v2/userrecordings/{recordingId} | Update a user recording. |
 {: class="table table-striped"}
 
 <a name="deleteuserrecording"></a>

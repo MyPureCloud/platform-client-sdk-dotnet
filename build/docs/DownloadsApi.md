@@ -7,7 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetDownload**](DownloadsApi.html#getdownload) | **GET** /api/v2/downloads/{downloadId} | Issues a redirect to a signed secure download URL for specified download |
+| [**GetDownload**](DownloadsApi.html#getdownload) | **Get** /api/v2/downloads/{downloadId} | Issues a redirect to a signed secure download URL for specified download |
 {: class="table table-striped"}
 
 <a name="getdownload"></a>

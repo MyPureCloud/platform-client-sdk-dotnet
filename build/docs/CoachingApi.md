@@ -7,25 +7,25 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteCoachingAppointment**](CoachingApi.html#deletecoachingappointment) | **DELETE** /api/v2/coaching/appointments/{appointmentId} | Delete an existing appointment |
-| [**DeleteCoachingAppointmentAnnotation**](CoachingApi.html#deletecoachingappointmentannotation) | **DELETE** /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId} | Delete an existing annotation |
-| [**GetCoachingAppointment**](CoachingApi.html#getcoachingappointment) | **GET** /api/v2/coaching/appointments/{appointmentId} | Retrieve an appointment |
-| [**GetCoachingAppointmentAnnotation**](CoachingApi.html#getcoachingappointmentannotation) | **GET** /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId} | Retrieve an annotation. |
-| [**GetCoachingAppointmentAnnotations**](CoachingApi.html#getcoachingappointmentannotations) | **GET** /api/v2/coaching/appointments/{appointmentId}/annotations | Get a list of annotations. |
-| [**GetCoachingAppointmentStatuses**](CoachingApi.html#getcoachingappointmentstatuses) | **GET** /api/v2/coaching/appointments/{appointmentId}/statuses | Get the list of status changes for a coaching appointment. |
-| [**GetCoachingAppointments**](CoachingApi.html#getcoachingappointments) | **GET** /api/v2/coaching/appointments | Get appointments for users and optional date range |
-| [**GetCoachingAppointmentsMe**](CoachingApi.html#getcoachingappointmentsme) | **GET** /api/v2/coaching/appointments/me | Get my appointments for a given date range |
-| [**GetCoachingNotification**](CoachingApi.html#getcoachingnotification) | **GET** /api/v2/coaching/notifications/{notificationId} | Get an existing notification |
-| [**GetCoachingNotifications**](CoachingApi.html#getcoachingnotifications) | **GET** /api/v2/coaching/notifications | Retrieve the list of your notifications. |
-| [**PatchCoachingAppointment**](CoachingApi.html#patchcoachingappointment) | **PATCH** /api/v2/coaching/appointments/{appointmentId} | Update an existing appointment |
-| [**PatchCoachingAppointmentAnnotation**](CoachingApi.html#patchcoachingappointmentannotation) | **PATCH** /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId} | Update an existing annotation. |
-| [**PatchCoachingAppointmentStatus**](CoachingApi.html#patchcoachingappointmentstatus) | **PATCH** /api/v2/coaching/appointments/{appointmentId}/status | Update the status of a coaching appointment |
-| [**PatchCoachingNotification**](CoachingApi.html#patchcoachingnotification) | **PATCH** /api/v2/coaching/notifications/{notificationId} | Update an existing notification. |
-| [**PostCoachingAppointmentAnnotations**](CoachingApi.html#postcoachingappointmentannotations) | **POST** /api/v2/coaching/appointments/{appointmentId}/annotations | Create a new annotation. |
-| [**PostCoachingAppointmentConversations**](CoachingApi.html#postcoachingappointmentconversations) | **POST** /api/v2/coaching/appointments/{appointmentId}/conversations | Add a conversation to an appointment |
-| [**PostCoachingAppointments**](CoachingApi.html#postcoachingappointments) | **POST** /api/v2/coaching/appointments | Create a new appointment |
-| [**PostCoachingAppointmentsAggregatesQuery**](CoachingApi.html#postcoachingappointmentsaggregatesquery) | **POST** /api/v2/coaching/appointments/aggregates/query | Retrieve aggregated appointment data |
-| [**PostCoachingScheduleslotsQuery**](CoachingApi.html#postcoachingscheduleslotsquery) | **POST** /api/v2/coaching/scheduleslots/query | Get list of possible slots where a coaching appointment can be scheduled. |
+| [**DeleteCoachingAppointment**](CoachingApi.html#deletecoachingappointment) | **Delete** /api/v2/coaching/appointments/{appointmentId} | Delete an existing appointment |
+| [**DeleteCoachingAppointmentAnnotation**](CoachingApi.html#deletecoachingappointmentannotation) | **Delete** /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId} | Delete an existing annotation |
+| [**GetCoachingAppointment**](CoachingApi.html#getcoachingappointment) | **Get** /api/v2/coaching/appointments/{appointmentId} | Retrieve an appointment |
+| [**GetCoachingAppointmentAnnotation**](CoachingApi.html#getcoachingappointmentannotation) | **Get** /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId} | Retrieve an annotation. |
+| [**GetCoachingAppointmentAnnotations**](CoachingApi.html#getcoachingappointmentannotations) | **Get** /api/v2/coaching/appointments/{appointmentId}/annotations | Get a list of annotations. |
+| [**GetCoachingAppointmentStatuses**](CoachingApi.html#getcoachingappointmentstatuses) | **Get** /api/v2/coaching/appointments/{appointmentId}/statuses | Get the list of status changes for a coaching appointment. |
+| [**GetCoachingAppointments**](CoachingApi.html#getcoachingappointments) | **Get** /api/v2/coaching/appointments | Get appointments for users and optional date range |
+| [**GetCoachingAppointmentsMe**](CoachingApi.html#getcoachingappointmentsme) | **Get** /api/v2/coaching/appointments/me | Get my appointments for a given date range |
+| [**GetCoachingNotification**](CoachingApi.html#getcoachingnotification) | **Get** /api/v2/coaching/notifications/{notificationId} | Get an existing notification |
+| [**GetCoachingNotifications**](CoachingApi.html#getcoachingnotifications) | **Get** /api/v2/coaching/notifications | Retrieve the list of your notifications. |
+| [**PatchCoachingAppointment**](CoachingApi.html#patchcoachingappointment) | **Patch** /api/v2/coaching/appointments/{appointmentId} | Update an existing appointment |
+| [**PatchCoachingAppointmentAnnotation**](CoachingApi.html#patchcoachingappointmentannotation) | **Patch** /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId} | Update an existing annotation. |
+| [**PatchCoachingAppointmentStatus**](CoachingApi.html#patchcoachingappointmentstatus) | **Patch** /api/v2/coaching/appointments/{appointmentId}/status | Update the status of a coaching appointment |
+| [**PatchCoachingNotification**](CoachingApi.html#patchcoachingnotification) | **Patch** /api/v2/coaching/notifications/{notificationId} | Update an existing notification. |
+| [**PostCoachingAppointmentAnnotations**](CoachingApi.html#postcoachingappointmentannotations) | **Post** /api/v2/coaching/appointments/{appointmentId}/annotations | Create a new annotation. |
+| [**PostCoachingAppointmentConversations**](CoachingApi.html#postcoachingappointmentconversations) | **Post** /api/v2/coaching/appointments/{appointmentId}/conversations | Add a conversation to an appointment |
+| [**PostCoachingAppointments**](CoachingApi.html#postcoachingappointments) | **Post** /api/v2/coaching/appointments | Create a new appointment |
+| [**PostCoachingAppointmentsAggregatesQuery**](CoachingApi.html#postcoachingappointmentsaggregatesquery) | **Post** /api/v2/coaching/appointments/aggregates/query | Retrieve aggregated appointment data |
+| [**PostCoachingScheduleslotsQuery**](CoachingApi.html#postcoachingscheduleslotsquery) | **Post** /api/v2/coaching/scheduleslots/query | Get list of possible slots where a coaching appointment can be scheduled. |
 {: class="table table-striped"}
 
 <a name="deletecoachingappointment"></a>

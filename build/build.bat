@@ -8,8 +8,14 @@ if not exist ".\nuget.exe" powershell -Command "(new-object System.Net.WebClient
 
 if not exist ".\bin" mkdir bin
 
-copy packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
-copy packages\RestSharp.105.2.3\lib\net45\RestSharp.dll bin\RestSharp.dll
+copy packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
+copy packages\RestSharp.110.2.0\lib\net45\RestSharp.dll bin\RestSharp.dll
 copy packages\ini-parser.2.5.2\lib\net20\net45\INIFileParser.dll bin\INIFileParser.dll;
+copy packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll bin\websocket-sharp.dll;
+copy packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll bin\System.Text.Json.dll;
+copy packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll bin\System.Text.Encodings.Web.dll;
+copy packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll bin\System.Threading.Tasks.Extensions.dll;
 
-%CSCPATH%\csc /reference:bin\Newtonsoft.Json.dll;bin\RestSharp.dll;bin\INIFileParser.dll /target:library /out:bin\PureCloudPlatform.Client.V2.dll /recurse:src\PureCloudPlatform.Client.V2\*.cs /doc:bin\PureCloudPlatform.Client.V2.xml
+
+
+%CSCPATH%\csc /reference:bin\Newtonsoft.Json.dll;bin\RestSharp.dll;bin\INIFileParser.dll;bin\websocket-sharp.dll;bin\System.Text.Json.dll;bin\System.Text.Encodings.Web.dll;bin\System.Threading.Tasks.Extensions.dll /target:library /out:bin\PureCloudPlatform.Client.V2.dll /recurse:src\PureCloudPlatform.Client.V2\*.cs /doc:bin\PureCloudPlatform.Client.V2.xml

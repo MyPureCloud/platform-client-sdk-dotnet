@@ -7,12 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetAuditsQueryRealtimeServicemapping**](AuditApi.html#getauditsqueryrealtimeservicemapping) | **GET** /api/v2/audits/query/realtime/servicemapping | Get service mapping information used in realtime audits. |
-| [**GetAuditsQueryServicemapping**](AuditApi.html#getauditsqueryservicemapping) | **GET** /api/v2/audits/query/servicemapping | Get service mapping information used in audits. |
-| [**GetAuditsQueryTransactionId**](AuditApi.html#getauditsquerytransactionid) | **GET** /api/v2/audits/query/{transactionId} | Get status of audit query execution |
-| [**GetAuditsQueryTransactionIdResults**](AuditApi.html#getauditsquerytransactionidresults) | **GET** /api/v2/audits/query/{transactionId}/results | Get results of audit query |
-| [**PostAuditsQuery**](AuditApi.html#postauditsquery) | **POST** /api/v2/audits/query | Create audit query execution |
-| [**PostAuditsQueryRealtime**](AuditApi.html#postauditsqueryrealtime) | **POST** /api/v2/audits/query/realtime | This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. |
+| [**GetAuditsQueryRealtimeServicemapping**](AuditApi.html#getauditsqueryrealtimeservicemapping) | **Get** /api/v2/audits/query/realtime/servicemapping | Get service mapping information used in realtime audits. |
+| [**GetAuditsQueryServicemapping**](AuditApi.html#getauditsqueryservicemapping) | **Get** /api/v2/audits/query/servicemapping | Get service mapping information used in audits. |
+| [**GetAuditsQueryTransactionId**](AuditApi.html#getauditsquerytransactionid) | **Get** /api/v2/audits/query/{transactionId} | Get status of audit query execution |
+| [**GetAuditsQueryTransactionIdResults**](AuditApi.html#getauditsquerytransactionidresults) | **Get** /api/v2/audits/query/{transactionId}/results | Get results of audit query |
+| [**PostAuditsQuery**](AuditApi.html#postauditsquery) | **Post** /api/v2/audits/query | Create audit query execution |
+| [**PostAuditsQueryRealtime**](AuditApi.html#postauditsqueryrealtime) | **Post** /api/v2/audits/query/realtime | This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. |
 {: class="table table-striped"}
 
 <a name="getauditsqueryrealtimeservicemapping"></a>

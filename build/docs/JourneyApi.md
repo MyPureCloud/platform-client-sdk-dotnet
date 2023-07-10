@@ -7,47 +7,47 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteJourneyActionmap**](JourneyApi.html#deletejourneyactionmap) | **DELETE** /api/v2/journey/actionmaps/{actionMapId} | Delete single action map. |
-| [**DeleteJourneyActiontemplate**](JourneyApi.html#deletejourneyactiontemplate) | **DELETE** /api/v2/journey/actiontemplates/{actionTemplateId} | Delete a single action template. |
-| [**DeleteJourneyOutcome**](JourneyApi.html#deletejourneyoutcome) | **DELETE** /api/v2/journey/outcomes/{outcomeId} | Delete an outcome. |
-| [**DeleteJourneyOutcomesPredictor**](JourneyApi.html#deletejourneyoutcomespredictor) | **DELETE** /api/v2/journey/outcomes/predictors/{predictorId} | Delete an outcome predictor. |
-| [**DeleteJourneySegment**](JourneyApi.html#deletejourneysegment) | **DELETE** /api/v2/journey/segments/{segmentId} | Delete a segment. |
-| [**GetAnalyticsJourneysAggregatesJob**](JourneyApi.html#getanalyticsjourneysaggregatesjob) | **GET** /api/v2/analytics/journeys/aggregates/jobs/{jobId} | Get status for async query for journey aggregates |
-| [**GetAnalyticsJourneysAggregatesJobResults**](JourneyApi.html#getanalyticsjourneysaggregatesjobresults) | **GET** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetJourneyActionmap**](JourneyApi.html#getjourneyactionmap) | **GET** /api/v2/journey/actionmaps/{actionMapId} | Retrieve a single action map. |
-| [**GetJourneyActionmaps**](JourneyApi.html#getjourneyactionmaps) | **GET** /api/v2/journey/actionmaps | Retrieve all action maps. |
-| [**GetJourneyActionmapsEstimatesJob**](JourneyApi.html#getjourneyactionmapsestimatesjob) | **GET** /api/v2/journey/actionmaps/estimates/jobs/{jobId} | Get status of job. |
-| [**GetJourneyActionmapsEstimatesJobResults**](JourneyApi.html#getjourneyactionmapsestimatesjobresults) | **GET** /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results | Get estimates from completed job. |
-| [**GetJourneyActiontarget**](JourneyApi.html#getjourneyactiontarget) | **GET** /api/v2/journey/actiontargets/{actionTargetId} | Retrieve a single action target. |
-| [**GetJourneyActiontargets**](JourneyApi.html#getjourneyactiontargets) | **GET** /api/v2/journey/actiontargets | Retrieve all action targets. |
-| [**GetJourneyActiontemplate**](JourneyApi.html#getjourneyactiontemplate) | **GET** /api/v2/journey/actiontemplates/{actionTemplateId} | Retrieve a single action template. |
-| [**GetJourneyActiontemplates**](JourneyApi.html#getjourneyactiontemplates) | **GET** /api/v2/journey/actiontemplates | Retrieve all action templates. |
-| [**GetJourneyOutcome**](JourneyApi.html#getjourneyoutcome) | **GET** /api/v2/journey/outcomes/{outcomeId} | Retrieve a single outcome. |
-| [**GetJourneyOutcomes**](JourneyApi.html#getjourneyoutcomes) | **GET** /api/v2/journey/outcomes | Retrieve all outcomes. |
-| [**GetJourneyOutcomesAttributionsJob**](JourneyApi.html#getjourneyoutcomesattributionsjob) | **GET** /api/v2/journey/outcomes/attributions/jobs/{jobId} | Get job status. |
-| [**GetJourneyOutcomesAttributionsJobResults**](JourneyApi.html#getjourneyoutcomesattributionsjobresults) | **GET** /api/v2/journey/outcomes/attributions/jobs/{jobId}/results | Get outcome attribution entities from completed job. |
-| [**GetJourneyOutcomesPredictor**](JourneyApi.html#getjourneyoutcomespredictor) | **GET** /api/v2/journey/outcomes/predictors/{predictorId} | Retrieve a single outcome predictor. |
-| [**GetJourneyOutcomesPredictors**](JourneyApi.html#getjourneyoutcomespredictors) | **GET** /api/v2/journey/outcomes/predictors | Retrieve all outcome predictors. |
-| [**GetJourneySegment**](JourneyApi.html#getjourneysegment) | **GET** /api/v2/journey/segments/{segmentId} | Retrieve a single segment. |
-| [**GetJourneySegments**](JourneyApi.html#getjourneysegments) | **GET** /api/v2/journey/segments | Retrieve all segments. |
-| [**GetJourneySession**](JourneyApi.html#getjourneysession) | **GET** /api/v2/journey/sessions/{sessionId} | Retrieve a single session. |
-| [**GetJourneySessionEvents**](JourneyApi.html#getjourneysessionevents) | **GET** /api/v2/journey/sessions/{sessionId}/events | Retrieve all events for a given session. |
-| [**GetJourneySessionOutcomescores**](JourneyApi.html#getjourneysessionoutcomescores) | **GET** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
-| [**GetJourneySessionSegments**](JourneyApi.html#getjourneysessionsegments) | **GET** /api/v2/journey/sessions/{sessionId}/segments | Retrieve segment assignments by session ID. |
-| [**PatchJourneyActionmap**](JourneyApi.html#patchjourneyactionmap) | **PATCH** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
-| [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **PATCH** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
-| [**PatchJourneyActiontemplate**](JourneyApi.html#patchjourneyactiontemplate) | **PATCH** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
-| [**PatchJourneyOutcome**](JourneyApi.html#patchjourneyoutcome) | **PATCH** /api/v2/journey/outcomes/{outcomeId} | Update an outcome. |
-| [**PatchJourneySegment**](JourneyApi.html#patchjourneysegment) | **PATCH** /api/v2/journey/segments/{segmentId} | Update a segment. |
-| [**PostAnalyticsJourneysAggregatesJobs**](JourneyApi.html#postanalyticsjourneysaggregatesjobs) | **POST** /api/v2/analytics/journeys/aggregates/jobs | Query for journey aggregates asynchronously |
-| [**PostAnalyticsJourneysAggregatesQuery**](JourneyApi.html#postanalyticsjourneysaggregatesquery) | **POST** /api/v2/analytics/journeys/aggregates/query | Query for journey aggregates |
-| [**PostJourneyActionmaps**](JourneyApi.html#postjourneyactionmaps) | **POST** /api/v2/journey/actionmaps | Create an action map. |
-| [**PostJourneyActionmapsEstimatesJobs**](JourneyApi.html#postjourneyactionmapsestimatesjobs) | **POST** /api/v2/journey/actionmaps/estimates/jobs | Query for estimates |
-| [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **POST** /api/v2/journey/actiontemplates | Create a single action template. |
-| [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **POST** /api/v2/journey/outcomes | Create an outcome. |
-| [**PostJourneyOutcomesAttributionsJobs**](JourneyApi.html#postjourneyoutcomesattributionsjobs) | **POST** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
-| [**PostJourneyOutcomesPredictors**](JourneyApi.html#postjourneyoutcomespredictors) | **POST** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
-| [**PostJourneySegments**](JourneyApi.html#postjourneysegments) | **POST** /api/v2/journey/segments | Create a segment. |
+| [**DeleteJourneyActionmap**](JourneyApi.html#deletejourneyactionmap) | **Delete** /api/v2/journey/actionmaps/{actionMapId} | Delete single action map. |
+| [**DeleteJourneyActiontemplate**](JourneyApi.html#deletejourneyactiontemplate) | **Delete** /api/v2/journey/actiontemplates/{actionTemplateId} | Delete a single action template. |
+| [**DeleteJourneyOutcome**](JourneyApi.html#deletejourneyoutcome) | **Delete** /api/v2/journey/outcomes/{outcomeId} | Delete an outcome. |
+| [**DeleteJourneyOutcomesPredictor**](JourneyApi.html#deletejourneyoutcomespredictor) | **Delete** /api/v2/journey/outcomes/predictors/{predictorId} | Delete an outcome predictor. |
+| [**DeleteJourneySegment**](JourneyApi.html#deletejourneysegment) | **Delete** /api/v2/journey/segments/{segmentId} | Delete a segment. |
+| [**GetAnalyticsJourneysAggregatesJob**](JourneyApi.html#getanalyticsjourneysaggregatesjob) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId} | Get status for async query for journey aggregates |
+| [**GetAnalyticsJourneysAggregatesJobResults**](JourneyApi.html#getanalyticsjourneysaggregatesjobresults) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetJourneyActionmap**](JourneyApi.html#getjourneyactionmap) | **Get** /api/v2/journey/actionmaps/{actionMapId} | Retrieve a single action map. |
+| [**GetJourneyActionmaps**](JourneyApi.html#getjourneyactionmaps) | **Get** /api/v2/journey/actionmaps | Retrieve all action maps. |
+| [**GetJourneyActionmapsEstimatesJob**](JourneyApi.html#getjourneyactionmapsestimatesjob) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId} | Get status of job. |
+| [**GetJourneyActionmapsEstimatesJobResults**](JourneyApi.html#getjourneyactionmapsestimatesjobresults) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results | Get estimates from completed job. |
+| [**GetJourneyActiontarget**](JourneyApi.html#getjourneyactiontarget) | **Get** /api/v2/journey/actiontargets/{actionTargetId} | Retrieve a single action target. |
+| [**GetJourneyActiontargets**](JourneyApi.html#getjourneyactiontargets) | **Get** /api/v2/journey/actiontargets | Retrieve all action targets. |
+| [**GetJourneyActiontemplate**](JourneyApi.html#getjourneyactiontemplate) | **Get** /api/v2/journey/actiontemplates/{actionTemplateId} | Retrieve a single action template. |
+| [**GetJourneyActiontemplates**](JourneyApi.html#getjourneyactiontemplates) | **Get** /api/v2/journey/actiontemplates | Retrieve all action templates. |
+| [**GetJourneyOutcome**](JourneyApi.html#getjourneyoutcome) | **Get** /api/v2/journey/outcomes/{outcomeId} | Retrieve a single outcome. |
+| [**GetJourneyOutcomes**](JourneyApi.html#getjourneyoutcomes) | **Get** /api/v2/journey/outcomes | Retrieve all outcomes. |
+| [**GetJourneyOutcomesAttributionsJob**](JourneyApi.html#getjourneyoutcomesattributionsjob) | **Get** /api/v2/journey/outcomes/attributions/jobs/{jobId} | Get job status. |
+| [**GetJourneyOutcomesAttributionsJobResults**](JourneyApi.html#getjourneyoutcomesattributionsjobresults) | **Get** /api/v2/journey/outcomes/attributions/jobs/{jobId}/results | Get outcome attribution entities from completed job. |
+| [**GetJourneyOutcomesPredictor**](JourneyApi.html#getjourneyoutcomespredictor) | **Get** /api/v2/journey/outcomes/predictors/{predictorId} | Retrieve a single outcome predictor. |
+| [**GetJourneyOutcomesPredictors**](JourneyApi.html#getjourneyoutcomespredictors) | **Get** /api/v2/journey/outcomes/predictors | Retrieve all outcome predictors. |
+| [**GetJourneySegment**](JourneyApi.html#getjourneysegment) | **Get** /api/v2/journey/segments/{segmentId} | Retrieve a single segment. |
+| [**GetJourneySegments**](JourneyApi.html#getjourneysegments) | **Get** /api/v2/journey/segments | Retrieve all segments. |
+| [**GetJourneySession**](JourneyApi.html#getjourneysession) | **Get** /api/v2/journey/sessions/{sessionId} | Retrieve a single session. |
+| [**GetJourneySessionEvents**](JourneyApi.html#getjourneysessionevents) | **Get** /api/v2/journey/sessions/{sessionId}/events | Retrieve all events for a given session. |
+| [**GetJourneySessionOutcomescores**](JourneyApi.html#getjourneysessionoutcomescores) | **Get** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
+| [**GetJourneySessionSegments**](JourneyApi.html#getjourneysessionsegments) | **Get** /api/v2/journey/sessions/{sessionId}/segments | Retrieve segment assignments by session ID. |
+| [**PatchJourneyActionmap**](JourneyApi.html#patchjourneyactionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
+| [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
+| [**PatchJourneyActiontemplate**](JourneyApi.html#patchjourneyactiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
+| [**PatchJourneyOutcome**](JourneyApi.html#patchjourneyoutcome) | **Patch** /api/v2/journey/outcomes/{outcomeId} | Update an outcome. |
+| [**PatchJourneySegment**](JourneyApi.html#patchjourneysegment) | **Patch** /api/v2/journey/segments/{segmentId} | Update a segment. |
+| [**PostAnalyticsJourneysAggregatesJobs**](JourneyApi.html#postanalyticsjourneysaggregatesjobs) | **Post** /api/v2/analytics/journeys/aggregates/jobs | Query for journey aggregates asynchronously |
+| [**PostAnalyticsJourneysAggregatesQuery**](JourneyApi.html#postanalyticsjourneysaggregatesquery) | **Post** /api/v2/analytics/journeys/aggregates/query | Query for journey aggregates |
+| [**PostJourneyActionmaps**](JourneyApi.html#postjourneyactionmaps) | **Post** /api/v2/journey/actionmaps | Create an action map. |
+| [**PostJourneyActionmapsEstimatesJobs**](JourneyApi.html#postjourneyactionmapsestimatesjobs) | **Post** /api/v2/journey/actionmaps/estimates/jobs | Query for estimates |
+| [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **Post** /api/v2/journey/actiontemplates | Create a single action template. |
+| [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **Post** /api/v2/journey/outcomes | Create an outcome. |
+| [**PostJourneyOutcomesAttributionsJobs**](JourneyApi.html#postjourneyoutcomesattributionsjobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
+| [**PostJourneyOutcomesPredictors**](JourneyApi.html#postjourneyoutcomespredictors) | **Post** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
+| [**PostJourneySegments**](JourneyApi.html#postjourneysegments) | **Post** /api/v2/journey/segments | Create a segment. |
 {: class="table table-striped"}
 
 <a name="deletejourneyactionmap"></a>

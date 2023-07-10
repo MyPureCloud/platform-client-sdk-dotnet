@@ -7,10 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetTelephonyMediaregions**](TelephonyApi.html#gettelephonymediaregions) | **GET** /api/v2/telephony/mediaregions | Retrieve the list of AWS regions media can stream through. |
-| [**GetTelephonySiptraces**](TelephonyApi.html#gettelephonysiptraces) | **GET** /api/v2/telephony/siptraces | Fetch SIP metadata |
-| [**GetTelephonySiptracesDownloadDownloadId**](TelephonyApi.html#gettelephonysiptracesdownloaddownloadid) | **GET** /api/v2/telephony/siptraces/download/{downloadId} | Get signed S3 URL for a pcap download |
-| [**PostTelephonySiptracesDownload**](TelephonyApi.html#posttelephonysiptracesdownload) | **POST** /api/v2/telephony/siptraces/download | Request a download of a pcap file to S3 |
+| [**GetTelephonyMediaregions**](TelephonyApi.html#gettelephonymediaregions) | **Get** /api/v2/telephony/mediaregions | Retrieve the list of AWS regions media can stream through. |
+| [**GetTelephonySiptraces**](TelephonyApi.html#gettelephonysiptraces) | **Get** /api/v2/telephony/siptraces | Fetch SIP metadata |
+| [**GetTelephonySiptracesDownloadDownloadId**](TelephonyApi.html#gettelephonysiptracesdownloaddownloadid) | **Get** /api/v2/telephony/siptraces/download/{downloadId} | Get signed S3 URL for a pcap download |
+| [**PostTelephonySiptracesDownload**](TelephonyApi.html#posttelephonysiptracesdownload) | **Post** /api/v2/telephony/siptraces/download | Request a download of a pcap file to S3 |
 {: class="table table-striped"}
 
 <a name="gettelephonymediaregions"></a>

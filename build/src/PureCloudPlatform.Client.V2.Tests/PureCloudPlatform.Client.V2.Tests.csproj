@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PureCloudPlatform.Client.V2.Tests</RootNamespace>
     <AssemblyName>PureCloudPlatform.Client.V2.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -48,6 +45,12 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Text.Json" />
+    <Reference Include="System.Text.Encodings.Web" />
+     <Reference Include="System.Threading.Tasks.Extensions" />
+     <Reference Include="RichardSzalay.MockHttp">
+      <HintPath>..\..\packages\RichardSzalay.MockHttp.6.0.0\lib\net45\RichardSzalay.MockHttp.dll</HintPath>
+      </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="Moq">
@@ -60,10 +63,10 @@
       <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
-      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
-      <HintPath Condition="Exists('..\packages')">..\packages\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
-      <HintPath Condition="Exists('..\..\packages')">..\..\packages\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('..\packages')">..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('..\..\packages')">..\..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
       <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>

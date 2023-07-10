@@ -7,8 +7,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetBillingReportsBillableusage**](BillingApi.html#getbillingreportsbillableusage) | **GET** /api/v2/billing/reports/billableusage | Get a report of the billable license usages |
-| [**GetBillingTrusteebillingoverviewTrustorOrgId**](BillingApi.html#getbillingtrusteebillingoverviewtrustororgid) | **GET** /api/v2/billing/trusteebillingoverview/{trustorOrgId} | Get the billing overview for an organization that is managed by a partner. |
+| [**GetBillingReportsBillableusage**](BillingApi.html#getbillingreportsbillableusage) | **Get** /api/v2/billing/reports/billableusage | Get a report of the billable license usages |
+| [**GetBillingTrusteebillingoverviewTrustorOrgId**](BillingApi.html#getbillingtrusteebillingoverviewtrustororgid) | **Get** /api/v2/billing/trusteebillingoverview/{trustorOrgId} | Get the billing overview for an organization that is managed by a partner. |
 {: class="table table-striped"}
 
 <a name="getbillingreportsbillableusage"></a>

@@ -7,14 +7,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLanguage**](LanguagesApi.html#deletelanguage) | **DELETE** /api/v2/languages/{languageId} | Delete Language (Deprecated) |
-| [**GetLanguage**](LanguagesApi.html#getlanguage) | **GET** /api/v2/languages/{languageId} | Get Language (Deprecated) |
-| [**GetLanguages**](LanguagesApi.html#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. (Deprecated) |
-| [**GetLanguagesTranslations**](LanguagesApi.html#getlanguagestranslations) | **GET** /api/v2/languages/translations | Get all available languages for translation |
-| [**GetLanguagesTranslationsBuiltin**](LanguagesApi.html#getlanguagestranslationsbuiltin) | **GET** /api/v2/languages/translations/builtin | Get the builtin translation for a language |
-| [**GetLanguagesTranslationsOrganization**](LanguagesApi.html#getlanguagestranslationsorganization) | **GET** /api/v2/languages/translations/organization | Get effective translation for an organization by language |
-| [**GetLanguagesTranslationsUser**](LanguagesApi.html#getlanguagestranslationsuser) | **GET** /api/v2/languages/translations/users/{userId} | Get effective language translation for a user |
-| [**PostLanguages**](LanguagesApi.html#postlanguages) | **POST** /api/v2/languages | Create Language (Deprecated) |
+| [**DeleteLanguage**](LanguagesApi.html#deletelanguage) | **Delete** /api/v2/languages/{languageId} | Delete Language (Deprecated) |
+| [**GetLanguage**](LanguagesApi.html#getlanguage) | **Get** /api/v2/languages/{languageId} | Get Language (Deprecated) |
+| [**GetLanguages**](LanguagesApi.html#getlanguages) | **Get** /api/v2/languages | Get the list of supported languages. (Deprecated) |
+| [**GetLanguagesTranslations**](LanguagesApi.html#getlanguagestranslations) | **Get** /api/v2/languages/translations | Get all available languages for translation |
+| [**GetLanguagesTranslationsBuiltin**](LanguagesApi.html#getlanguagestranslationsbuiltin) | **Get** /api/v2/languages/translations/builtin | Get the builtin translation for a language |
+| [**GetLanguagesTranslationsOrganization**](LanguagesApi.html#getlanguagestranslationsorganization) | **Get** /api/v2/languages/translations/organization | Get effective translation for an organization by language |
+| [**GetLanguagesTranslationsUser**](LanguagesApi.html#getlanguagestranslationsuser) | **Get** /api/v2/languages/translations/users/{userId} | Get effective language translation for a user |
+| [**PostLanguages**](LanguagesApi.html#postlanguages) | **Post** /api/v2/languages | Create Language (Deprecated) |
 {: class="table table-striped"}
 
 <a name="deletelanguage"></a>

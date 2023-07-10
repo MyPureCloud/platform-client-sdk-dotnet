@@ -7,98 +7,98 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAnalyticsConversationsDetailsJob**](AnalyticsApi.html#deleteanalyticsconversationsdetailsjob) | **DELETE** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async details job |
-| [**DeleteAnalyticsReportingSchedule**](AnalyticsApi.html#deleteanalyticsreportingschedule) | **DELETE** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
-| [**DeleteAnalyticsUsersDetailsJob**](AnalyticsApi.html#deleteanalyticsusersdetailsjob) | **DELETE** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
-| [**GetAnalyticsActionsAggregatesJob**](AnalyticsApi.html#getanalyticsactionsaggregatesjob) | **GET** /api/v2/analytics/actions/aggregates/jobs/{jobId} | Get status for async query for action aggregates |
-| [**GetAnalyticsActionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsactionsaggregatesjobresults) | **GET** /api/v2/analytics/actions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsBotflowReportingturns**](AnalyticsApi.html#getanalyticsbotflowreportingturns) | **GET** /api/v2/analytics/botflows/{botFlowId}/reportingturns | Get Reporting Turns. |
-| [**GetAnalyticsBotsAggregatesJob**](AnalyticsApi.html#getanalyticsbotsaggregatesjob) | **GET** /api/v2/analytics/bots/aggregates/jobs/{jobId} | Get status for async query for bot aggregates |
-| [**GetAnalyticsBotsAggregatesJobResults**](AnalyticsApi.html#getanalyticsbotsaggregatesjobresults) | **GET** /api/v2/analytics/bots/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsConversationDetails**](AnalyticsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
-| [**GetAnalyticsConversationsAggregatesJob**](AnalyticsApi.html#getanalyticsconversationsaggregatesjob) | **GET** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Get status for async query for conversation aggregates |
-| [**GetAnalyticsConversationsAggregatesJobResults**](AnalyticsApi.html#getanalyticsconversationsaggregatesjobresults) | **GET** /api/v2/analytics/conversations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsConversationsDetails**](AnalyticsApi.html#getanalyticsconversationsdetails) | **GET** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
-| [**GetAnalyticsConversationsDetailsJob**](AnalyticsApi.html#getanalyticsconversationsdetailsjob) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
-| [**GetAnalyticsConversationsDetailsJobResults**](AnalyticsApi.html#getanalyticsconversationsdetailsjobresults) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async details job |
-| [**GetAnalyticsConversationsDetailsJobsAvailability**](AnalyticsApi.html#getanalyticsconversationsdetailsjobsavailability) | **GET** /api/v2/analytics/conversations/details/jobs/availability | Lookup the datalake availability date and time |
-| [**GetAnalyticsDataretentionSettings**](AnalyticsApi.html#getanalyticsdataretentionsettings) | **GET** /api/v2/analytics/dataretention/settings | Get analytics data retention setting |
-| [**GetAnalyticsEvaluationsAggregatesJob**](AnalyticsApi.html#getanalyticsevaluationsaggregatesjob) | **GET** /api/v2/analytics/evaluations/aggregates/jobs/{jobId} | Get status for async query for evaluation aggregates |
-| [**GetAnalyticsEvaluationsAggregatesJobResults**](AnalyticsApi.html#getanalyticsevaluationsaggregatesjobresults) | **GET** /api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsFlowsAggregatesJob**](AnalyticsApi.html#getanalyticsflowsaggregatesjob) | **GET** /api/v2/analytics/flows/aggregates/jobs/{jobId} | Get status for async query for Flow aggregates |
-| [**GetAnalyticsFlowsAggregatesJobResults**](AnalyticsApi.html#getanalyticsflowsaggregatesjobresults) | **GET** /api/v2/analytics/flows/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsJourneysAggregatesJob**](AnalyticsApi.html#getanalyticsjourneysaggregatesjob) | **GET** /api/v2/analytics/journeys/aggregates/jobs/{jobId} | Get status for async query for journey aggregates |
-| [**GetAnalyticsJourneysAggregatesJobResults**](AnalyticsApi.html#getanalyticsjourneysaggregatesjobresults) | **GET** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsKnowledgeAggregatesJob**](AnalyticsApi.html#getanalyticsknowledgeaggregatesjob) | **GET** /api/v2/analytics/knowledge/aggregates/jobs/{jobId} | Get status for async query for knowledge aggregates |
-| [**GetAnalyticsKnowledgeAggregatesJobResults**](AnalyticsApi.html#getanalyticsknowledgeaggregatesjobresults) | **GET** /api/v2/analytics/knowledge/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsReportingExports**](AnalyticsApi.html#getanalyticsreportingexports) | **GET** /api/v2/analytics/reporting/exports | Get all view export requests for a user |
-| [**GetAnalyticsReportingExportsMetadata**](AnalyticsApi.html#getanalyticsreportingexportsmetadata) | **GET** /api/v2/analytics/reporting/exports/metadata | Get all export metadata |
-| [**GetAnalyticsReportingMetadata**](AnalyticsApi.html#getanalyticsreportingmetadata) | **GET** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
-| [**GetAnalyticsReportingReportIdMetadata**](AnalyticsApi.html#getanalyticsreportingreportidmetadata) | **GET** /api/v2/analytics/reporting/{reportId}/metadata | Get a reporting metadata. |
-| [**GetAnalyticsReportingReportformats**](AnalyticsApi.html#getanalyticsreportingreportformats) | **GET** /api/v2/analytics/reporting/reportformats | Get a list of report formats |
-| [**GetAnalyticsReportingSchedule**](AnalyticsApi.html#getanalyticsreportingschedule) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId} | Get a scheduled report job. |
-| [**GetAnalyticsReportingScheduleHistory**](AnalyticsApi.html#getanalyticsreportingschedulehistory) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history | Get list of completed scheduled report jobs. |
-| [**GetAnalyticsReportingScheduleHistoryLatest**](AnalyticsApi.html#getanalyticsreportingschedulehistorylatest) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest | Get most recently completed scheduled report job. |
-| [**GetAnalyticsReportingScheduleHistoryRunId**](AnalyticsApi.html#getanalyticsreportingschedulehistoryrunid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
-| [**GetAnalyticsReportingSchedules**](AnalyticsApi.html#getanalyticsreportingschedules) | **GET** /api/v2/analytics/reporting/schedules | Get a list of scheduled report jobs |
-| [**GetAnalyticsReportingSettings**](AnalyticsApi.html#getanalyticsreportingsettings) | **GET** /api/v2/analytics/reporting/settings | Get AnalyticsReportingSettings for an organization |
-| [**GetAnalyticsReportingTimeperiods**](AnalyticsApi.html#getanalyticsreportingtimeperiods) | **GET** /api/v2/analytics/reporting/timeperiods | Get a list of report time periods. |
-| [**GetAnalyticsResolutionsAggregatesJob**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjob) | **GET** /api/v2/analytics/resolutions/aggregates/jobs/{jobId} | Get status for async query for resolution aggregates |
-| [**GetAnalyticsResolutionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjobresults) | **GET** /api/v2/analytics/resolutions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsSurveysAggregatesJob**](AnalyticsApi.html#getanalyticssurveysaggregatesjob) | **GET** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
-| [**GetAnalyticsSurveysAggregatesJobResults**](AnalyticsApi.html#getanalyticssurveysaggregatesjobresults) | **GET** /api/v2/analytics/surveys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsTaskmanagementAggregatesJob**](AnalyticsApi.html#getanalyticstaskmanagementaggregatesjob) | **GET** /api/v2/analytics/taskmanagement/aggregates/jobs/{jobId} | Get status for async query for task management aggregates |
-| [**GetAnalyticsTaskmanagementAggregatesJobResults**](AnalyticsApi.html#getanalyticstaskmanagementaggregatesjobresults) | **GET** /api/v2/analytics/taskmanagement/aggregates/jobs/{jobId}/results | Fetch a page of results for an async task management query |
-| [**GetAnalyticsTranscriptsAggregatesJob**](AnalyticsApi.html#getanalyticstranscriptsaggregatesjob) | **GET** /api/v2/analytics/transcripts/aggregates/jobs/{jobId} | Get status for async query for transcript aggregates |
-| [**GetAnalyticsTranscriptsAggregatesJobResults**](AnalyticsApi.html#getanalyticstranscriptsaggregatesjobresults) | **GET** /api/v2/analytics/transcripts/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsUsersAggregatesJob**](AnalyticsApi.html#getanalyticsusersaggregatesjob) | **GET** /api/v2/analytics/users/aggregates/jobs/{jobId} | Get status for async query for user aggregates |
-| [**GetAnalyticsUsersAggregatesJobResults**](AnalyticsApi.html#getanalyticsusersaggregatesjobresults) | **GET** /api/v2/analytics/users/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
-| [**GetAnalyticsUsersDetailsJob**](AnalyticsApi.html#getanalyticsusersdetailsjob) | **GET** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
-| [**GetAnalyticsUsersDetailsJobResults**](AnalyticsApi.html#getanalyticsusersdetailsjobresults) | **GET** /api/v2/analytics/users/details/jobs/{jobId}/results | Fetch a page of results for an async query |
-| [**GetAnalyticsUsersDetailsJobsAvailability**](AnalyticsApi.html#getanalyticsusersdetailsjobsavailability) | **GET** /api/v2/analytics/users/details/jobs/availability | Lookup the datalake availability date and time |
-| [**PatchAnalyticsReportingSettings**](AnalyticsApi.html#patchanalyticsreportingsettings) | **PATCH** /api/v2/analytics/reporting/settings | Patch AnalyticsReportingSettings values for an organization |
-| [**PostAnalyticsActionsAggregatesJobs**](AnalyticsApi.html#postanalyticsactionsaggregatesjobs) | **POST** /api/v2/analytics/actions/aggregates/jobs | Query for action aggregates asynchronously |
-| [**PostAnalyticsActionsAggregatesQuery**](AnalyticsApi.html#postanalyticsactionsaggregatesquery) | **POST** /api/v2/analytics/actions/aggregates/query | Query for action aggregates |
-| [**PostAnalyticsBotsAggregatesJobs**](AnalyticsApi.html#postanalyticsbotsaggregatesjobs) | **POST** /api/v2/analytics/bots/aggregates/jobs | Query for bot aggregates asynchronously |
-| [**PostAnalyticsBotsAggregatesQuery**](AnalyticsApi.html#postanalyticsbotsaggregatesquery) | **POST** /api/v2/analytics/bots/aggregates/query | Query for bot aggregates |
-| [**PostAnalyticsConversationDetailsProperties**](AnalyticsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
-| [**PostAnalyticsConversationsActivityQuery**](AnalyticsApi.html#postanalyticsconversationsactivityquery) | **POST** /api/v2/analytics/conversations/activity/query | Query for conversation activity observations |
-| [**PostAnalyticsConversationsAggregatesJobs**](AnalyticsApi.html#postanalyticsconversationsaggregatesjobs) | **POST** /api/v2/analytics/conversations/aggregates/jobs | Query for conversation aggregates asynchronously |
-| [**PostAnalyticsConversationsAggregatesQuery**](AnalyticsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
-| [**PostAnalyticsConversationsDetailsJobs**](AnalyticsApi.html#postanalyticsconversationsdetailsjobs) | **POST** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
-| [**PostAnalyticsConversationsDetailsQuery**](AnalyticsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
-| [**PostAnalyticsConversationsTranscriptsQuery**](AnalyticsApi.html#postanalyticsconversationstranscriptsquery) | **POST** /api/v2/analytics/conversations/transcripts/query | Search resources. |
-| [**PostAnalyticsEvaluationsAggregatesJobs**](AnalyticsApi.html#postanalyticsevaluationsaggregatesjobs) | **POST** /api/v2/analytics/evaluations/aggregates/jobs | Query for evaluation aggregates asynchronously |
-| [**PostAnalyticsEvaluationsAggregatesQuery**](AnalyticsApi.html#postanalyticsevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
-| [**PostAnalyticsFlowsActivityQuery**](AnalyticsApi.html#postanalyticsflowsactivityquery) | **POST** /api/v2/analytics/flows/activity/query | Query for flow activity observations |
-| [**PostAnalyticsFlowsAggregatesJobs**](AnalyticsApi.html#postanalyticsflowsaggregatesjobs) | **POST** /api/v2/analytics/flows/aggregates/jobs | Query for flow aggregates asynchronously |
-| [**PostAnalyticsFlowsAggregatesQuery**](AnalyticsApi.html#postanalyticsflowsaggregatesquery) | **POST** /api/v2/analytics/flows/aggregates/query | Query for flow aggregates |
-| [**PostAnalyticsFlowsObservationsQuery**](AnalyticsApi.html#postanalyticsflowsobservationsquery) | **POST** /api/v2/analytics/flows/observations/query | Query for flow observations |
-| [**PostAnalyticsJourneysAggregatesJobs**](AnalyticsApi.html#postanalyticsjourneysaggregatesjobs) | **POST** /api/v2/analytics/journeys/aggregates/jobs | Query for journey aggregates asynchronously |
-| [**PostAnalyticsJourneysAggregatesQuery**](AnalyticsApi.html#postanalyticsjourneysaggregatesquery) | **POST** /api/v2/analytics/journeys/aggregates/query | Query for journey aggregates |
-| [**PostAnalyticsKnowledgeAggregatesJobs**](AnalyticsApi.html#postanalyticsknowledgeaggregatesjobs) | **POST** /api/v2/analytics/knowledge/aggregates/jobs | Query for knowledge aggregates asynchronously |
-| [**PostAnalyticsKnowledgeAggregatesQuery**](AnalyticsApi.html#postanalyticsknowledgeaggregatesquery) | **POST** /api/v2/analytics/knowledge/aggregates/query | Query for knowledge aggregates |
-| [**PostAnalyticsQueuesObservationsQuery**](AnalyticsApi.html#postanalyticsqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
-| [**PostAnalyticsReportingExports**](AnalyticsApi.html#postanalyticsreportingexports) | **POST** /api/v2/analytics/reporting/exports | Generate a view export request |
-| [**PostAnalyticsReportingScheduleRunreport**](AnalyticsApi.html#postanalyticsreportingschedulerunreport) | **POST** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
-| [**PostAnalyticsReportingSchedules**](AnalyticsApi.html#postanalyticsreportingschedules) | **POST** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
-| [**PostAnalyticsResolutionsAggregatesJobs**](AnalyticsApi.html#postanalyticsresolutionsaggregatesjobs) | **POST** /api/v2/analytics/resolutions/aggregates/jobs | Query for resolution aggregates asynchronously |
-| [**PostAnalyticsRoutingActivityQuery**](AnalyticsApi.html#postanalyticsroutingactivityquery) | **POST** /api/v2/analytics/routing/activity/query | Query for user activity observations |
-| [**PostAnalyticsSurveysAggregatesJobs**](AnalyticsApi.html#postanalyticssurveysaggregatesjobs) | **POST** /api/v2/analytics/surveys/aggregates/jobs | Query for survey aggregates asynchronously |
-| [**PostAnalyticsSurveysAggregatesQuery**](AnalyticsApi.html#postanalyticssurveysaggregatesquery) | **POST** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
-| [**PostAnalyticsTaskmanagementAggregatesJobs**](AnalyticsApi.html#postanalyticstaskmanagementaggregatesjobs) | **POST** /api/v2/analytics/taskmanagement/aggregates/jobs | Query for task management aggregates asynchronously |
-| [**PostAnalyticsTaskmanagementAggregatesQuery**](AnalyticsApi.html#postanalyticstaskmanagementaggregatesquery) | **POST** /api/v2/analytics/taskmanagement/aggregates/query | Query for task management aggregates |
-| [**PostAnalyticsTeamsActivityQuery**](AnalyticsApi.html#postanalyticsteamsactivityquery) | **POST** /api/v2/analytics/teams/activity/query | Query for team activity observations |
-| [**PostAnalyticsTranscriptsAggregatesJobs**](AnalyticsApi.html#postanalyticstranscriptsaggregatesjobs) | **POST** /api/v2/analytics/transcripts/aggregates/jobs | Query for transcript aggregates asynchronously |
-| [**PostAnalyticsTranscriptsAggregatesQuery**](AnalyticsApi.html#postanalyticstranscriptsaggregatesquery) | **POST** /api/v2/analytics/transcripts/aggregates/query | Query for transcript aggregates |
-| [**PostAnalyticsUsersActivityQuery**](AnalyticsApi.html#postanalyticsusersactivityquery) | **POST** /api/v2/analytics/users/activity/query | Query for user activity observations |
-| [**PostAnalyticsUsersAggregatesJobs**](AnalyticsApi.html#postanalyticsusersaggregatesjobs) | **POST** /api/v2/analytics/users/aggregates/jobs | Query for user aggregates asynchronously |
-| [**PostAnalyticsUsersAggregatesQuery**](AnalyticsApi.html#postanalyticsusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
-| [**PostAnalyticsUsersDetailsJobs**](AnalyticsApi.html#postanalyticsusersdetailsjobs) | **POST** /api/v2/analytics/users/details/jobs | Query for user details asynchronously |
-| [**PostAnalyticsUsersDetailsQuery**](AnalyticsApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
-| [**PostAnalyticsUsersObservationsQuery**](AnalyticsApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
-| [**PutAnalyticsDataretentionSettings**](AnalyticsApi.html#putanalyticsdataretentionsettings) | **PUT** /api/v2/analytics/dataretention/settings | Update analytics data retention setting |
-| [**PutAnalyticsReportingSchedule**](AnalyticsApi.html#putanalyticsreportingschedule) | **PUT** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
+| [**DeleteAnalyticsConversationsDetailsJob**](AnalyticsApi.html#deleteanalyticsconversationsdetailsjob) | **Delete** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async details job |
+| [**DeleteAnalyticsReportingSchedule**](AnalyticsApi.html#deleteanalyticsreportingschedule) | **Delete** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
+| [**DeleteAnalyticsUsersDetailsJob**](AnalyticsApi.html#deleteanalyticsusersdetailsjob) | **Delete** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
+| [**GetAnalyticsActionsAggregatesJob**](AnalyticsApi.html#getanalyticsactionsaggregatesjob) | **Get** /api/v2/analytics/actions/aggregates/jobs/{jobId} | Get status for async query for action aggregates |
+| [**GetAnalyticsActionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsactionsaggregatesjobresults) | **Get** /api/v2/analytics/actions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsBotflowReportingturns**](AnalyticsApi.html#getanalyticsbotflowreportingturns) | **Get** /api/v2/analytics/botflows/{botFlowId}/reportingturns | Get Reporting Turns. |
+| [**GetAnalyticsBotsAggregatesJob**](AnalyticsApi.html#getanalyticsbotsaggregatesjob) | **Get** /api/v2/analytics/bots/aggregates/jobs/{jobId} | Get status for async query for bot aggregates |
+| [**GetAnalyticsBotsAggregatesJobResults**](AnalyticsApi.html#getanalyticsbotsaggregatesjobresults) | **Get** /api/v2/analytics/bots/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsConversationDetails**](AnalyticsApi.html#getanalyticsconversationdetails) | **Get** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
+| [**GetAnalyticsConversationsAggregatesJob**](AnalyticsApi.html#getanalyticsconversationsaggregatesjob) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Get status for async query for conversation aggregates |
+| [**GetAnalyticsConversationsAggregatesJobResults**](AnalyticsApi.html#getanalyticsconversationsaggregatesjobresults) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsConversationsDetails**](AnalyticsApi.html#getanalyticsconversationsdetails) | **Get** /api/v2/analytics/conversations/details | Gets multiple conversations by id |
+| [**GetAnalyticsConversationsDetailsJob**](AnalyticsApi.html#getanalyticsconversationsdetailsjob) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
+| [**GetAnalyticsConversationsDetailsJobResults**](AnalyticsApi.html#getanalyticsconversationsdetailsjobresults) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async details job |
+| [**GetAnalyticsConversationsDetailsJobsAvailability**](AnalyticsApi.html#getanalyticsconversationsdetailsjobsavailability) | **Get** /api/v2/analytics/conversations/details/jobs/availability | Lookup the datalake availability date and time |
+| [**GetAnalyticsDataretentionSettings**](AnalyticsApi.html#getanalyticsdataretentionsettings) | **Get** /api/v2/analytics/dataretention/settings | Get analytics data retention setting |
+| [**GetAnalyticsEvaluationsAggregatesJob**](AnalyticsApi.html#getanalyticsevaluationsaggregatesjob) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId} | Get status for async query for evaluation aggregates |
+| [**GetAnalyticsEvaluationsAggregatesJobResults**](AnalyticsApi.html#getanalyticsevaluationsaggregatesjobresults) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsFlowsAggregatesJob**](AnalyticsApi.html#getanalyticsflowsaggregatesjob) | **Get** /api/v2/analytics/flows/aggregates/jobs/{jobId} | Get status for async query for Flow aggregates |
+| [**GetAnalyticsFlowsAggregatesJobResults**](AnalyticsApi.html#getanalyticsflowsaggregatesjobresults) | **Get** /api/v2/analytics/flows/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsJourneysAggregatesJob**](AnalyticsApi.html#getanalyticsjourneysaggregatesjob) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId} | Get status for async query for journey aggregates |
+| [**GetAnalyticsJourneysAggregatesJobResults**](AnalyticsApi.html#getanalyticsjourneysaggregatesjobresults) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsKnowledgeAggregatesJob**](AnalyticsApi.html#getanalyticsknowledgeaggregatesjob) | **Get** /api/v2/analytics/knowledge/aggregates/jobs/{jobId} | Get status for async query for knowledge aggregates |
+| [**GetAnalyticsKnowledgeAggregatesJobResults**](AnalyticsApi.html#getanalyticsknowledgeaggregatesjobresults) | **Get** /api/v2/analytics/knowledge/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsReportingExports**](AnalyticsApi.html#getanalyticsreportingexports) | **Get** /api/v2/analytics/reporting/exports | Get all view export requests for a user |
+| [**GetAnalyticsReportingExportsMetadata**](AnalyticsApi.html#getanalyticsreportingexportsmetadata) | **Get** /api/v2/analytics/reporting/exports/metadata | Get all export metadata |
+| [**GetAnalyticsReportingMetadata**](AnalyticsApi.html#getanalyticsreportingmetadata) | **Get** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
+| [**GetAnalyticsReportingReportIdMetadata**](AnalyticsApi.html#getanalyticsreportingreportidmetadata) | **Get** /api/v2/analytics/reporting/{reportId}/metadata | Get a reporting metadata. |
+| [**GetAnalyticsReportingReportformats**](AnalyticsApi.html#getanalyticsreportingreportformats) | **Get** /api/v2/analytics/reporting/reportformats | Get a list of report formats |
+| [**GetAnalyticsReportingSchedule**](AnalyticsApi.html#getanalyticsreportingschedule) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId} | Get a scheduled report job. |
+| [**GetAnalyticsReportingScheduleHistory**](AnalyticsApi.html#getanalyticsreportingschedulehistory) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId}/history | Get list of completed scheduled report jobs. |
+| [**GetAnalyticsReportingScheduleHistoryLatest**](AnalyticsApi.html#getanalyticsreportingschedulehistorylatest) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest | Get most recently completed scheduled report job. |
+| [**GetAnalyticsReportingScheduleHistoryRunId**](AnalyticsApi.html#getanalyticsreportingschedulehistoryrunid) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
+| [**GetAnalyticsReportingSchedules**](AnalyticsApi.html#getanalyticsreportingschedules) | **Get** /api/v2/analytics/reporting/schedules | Get a list of scheduled report jobs |
+| [**GetAnalyticsReportingSettings**](AnalyticsApi.html#getanalyticsreportingsettings) | **Get** /api/v2/analytics/reporting/settings | Get AnalyticsReportingSettings for an organization |
+| [**GetAnalyticsReportingTimeperiods**](AnalyticsApi.html#getanalyticsreportingtimeperiods) | **Get** /api/v2/analytics/reporting/timeperiods | Get a list of report time periods. |
+| [**GetAnalyticsResolutionsAggregatesJob**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjob) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId} | Get status for async query for resolution aggregates |
+| [**GetAnalyticsResolutionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjobresults) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsSurveysAggregatesJob**](AnalyticsApi.html#getanalyticssurveysaggregatesjob) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
+| [**GetAnalyticsSurveysAggregatesJobResults**](AnalyticsApi.html#getanalyticssurveysaggregatesjobresults) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsTaskmanagementAggregatesJob**](AnalyticsApi.html#getanalyticstaskmanagementaggregatesjob) | **Get** /api/v2/analytics/taskmanagement/aggregates/jobs/{jobId} | Get status for async query for task management aggregates |
+| [**GetAnalyticsTaskmanagementAggregatesJobResults**](AnalyticsApi.html#getanalyticstaskmanagementaggregatesjobresults) | **Get** /api/v2/analytics/taskmanagement/aggregates/jobs/{jobId}/results | Fetch a page of results for an async task management query |
+| [**GetAnalyticsTranscriptsAggregatesJob**](AnalyticsApi.html#getanalyticstranscriptsaggregatesjob) | **Get** /api/v2/analytics/transcripts/aggregates/jobs/{jobId} | Get status for async query for transcript aggregates |
+| [**GetAnalyticsTranscriptsAggregatesJobResults**](AnalyticsApi.html#getanalyticstranscriptsaggregatesjobresults) | **Get** /api/v2/analytics/transcripts/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsUsersAggregatesJob**](AnalyticsApi.html#getanalyticsusersaggregatesjob) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId} | Get status for async query for user aggregates |
+| [**GetAnalyticsUsersAggregatesJobResults**](AnalyticsApi.html#getanalyticsusersaggregatesjobresults) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsUsersDetailsJob**](AnalyticsApi.html#getanalyticsusersdetailsjob) | **Get** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
+| [**GetAnalyticsUsersDetailsJobResults**](AnalyticsApi.html#getanalyticsusersdetailsjobresults) | **Get** /api/v2/analytics/users/details/jobs/{jobId}/results | Fetch a page of results for an async query |
+| [**GetAnalyticsUsersDetailsJobsAvailability**](AnalyticsApi.html#getanalyticsusersdetailsjobsavailability) | **Get** /api/v2/analytics/users/details/jobs/availability | Lookup the datalake availability date and time |
+| [**PatchAnalyticsReportingSettings**](AnalyticsApi.html#patchanalyticsreportingsettings) | **Patch** /api/v2/analytics/reporting/settings | Patch AnalyticsReportingSettings values for an organization |
+| [**PostAnalyticsActionsAggregatesJobs**](AnalyticsApi.html#postanalyticsactionsaggregatesjobs) | **Post** /api/v2/analytics/actions/aggregates/jobs | Query for action aggregates asynchronously |
+| [**PostAnalyticsActionsAggregatesQuery**](AnalyticsApi.html#postanalyticsactionsaggregatesquery) | **Post** /api/v2/analytics/actions/aggregates/query | Query for action aggregates |
+| [**PostAnalyticsBotsAggregatesJobs**](AnalyticsApi.html#postanalyticsbotsaggregatesjobs) | **Post** /api/v2/analytics/bots/aggregates/jobs | Query for bot aggregates asynchronously |
+| [**PostAnalyticsBotsAggregatesQuery**](AnalyticsApi.html#postanalyticsbotsaggregatesquery) | **Post** /api/v2/analytics/bots/aggregates/query | Query for bot aggregates |
+| [**PostAnalyticsConversationDetailsProperties**](AnalyticsApi.html#postanalyticsconversationdetailsproperties) | **Post** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
+| [**PostAnalyticsConversationsActivityQuery**](AnalyticsApi.html#postanalyticsconversationsactivityquery) | **Post** /api/v2/analytics/conversations/activity/query | Query for conversation activity observations |
+| [**PostAnalyticsConversationsAggregatesJobs**](AnalyticsApi.html#postanalyticsconversationsaggregatesjobs) | **Post** /api/v2/analytics/conversations/aggregates/jobs | Query for conversation aggregates asynchronously |
+| [**PostAnalyticsConversationsAggregatesQuery**](AnalyticsApi.html#postanalyticsconversationsaggregatesquery) | **Post** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
+| [**PostAnalyticsConversationsDetailsJobs**](AnalyticsApi.html#postanalyticsconversationsdetailsjobs) | **Post** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
+| [**PostAnalyticsConversationsDetailsQuery**](AnalyticsApi.html#postanalyticsconversationsdetailsquery) | **Post** /api/v2/analytics/conversations/details/query | Query for conversation details |
+| [**PostAnalyticsConversationsTranscriptsQuery**](AnalyticsApi.html#postanalyticsconversationstranscriptsquery) | **Post** /api/v2/analytics/conversations/transcripts/query | Search resources. |
+| [**PostAnalyticsEvaluationsAggregatesJobs**](AnalyticsApi.html#postanalyticsevaluationsaggregatesjobs) | **Post** /api/v2/analytics/evaluations/aggregates/jobs | Query for evaluation aggregates asynchronously |
+| [**PostAnalyticsEvaluationsAggregatesQuery**](AnalyticsApi.html#postanalyticsevaluationsaggregatesquery) | **Post** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
+| [**PostAnalyticsFlowsActivityQuery**](AnalyticsApi.html#postanalyticsflowsactivityquery) | **Post** /api/v2/analytics/flows/activity/query | Query for flow activity observations |
+| [**PostAnalyticsFlowsAggregatesJobs**](AnalyticsApi.html#postanalyticsflowsaggregatesjobs) | **Post** /api/v2/analytics/flows/aggregates/jobs | Query for flow aggregates asynchronously |
+| [**PostAnalyticsFlowsAggregatesQuery**](AnalyticsApi.html#postanalyticsflowsaggregatesquery) | **Post** /api/v2/analytics/flows/aggregates/query | Query for flow aggregates |
+| [**PostAnalyticsFlowsObservationsQuery**](AnalyticsApi.html#postanalyticsflowsobservationsquery) | **Post** /api/v2/analytics/flows/observations/query | Query for flow observations |
+| [**PostAnalyticsJourneysAggregatesJobs**](AnalyticsApi.html#postanalyticsjourneysaggregatesjobs) | **Post** /api/v2/analytics/journeys/aggregates/jobs | Query for journey aggregates asynchronously |
+| [**PostAnalyticsJourneysAggregatesQuery**](AnalyticsApi.html#postanalyticsjourneysaggregatesquery) | **Post** /api/v2/analytics/journeys/aggregates/query | Query for journey aggregates |
+| [**PostAnalyticsKnowledgeAggregatesJobs**](AnalyticsApi.html#postanalyticsknowledgeaggregatesjobs) | **Post** /api/v2/analytics/knowledge/aggregates/jobs | Query for knowledge aggregates asynchronously |
+| [**PostAnalyticsKnowledgeAggregatesQuery**](AnalyticsApi.html#postanalyticsknowledgeaggregatesquery) | **Post** /api/v2/analytics/knowledge/aggregates/query | Query for knowledge aggregates |
+| [**PostAnalyticsQueuesObservationsQuery**](AnalyticsApi.html#postanalyticsqueuesobservationsquery) | **Post** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostAnalyticsReportingExports**](AnalyticsApi.html#postanalyticsreportingexports) | **Post** /api/v2/analytics/reporting/exports | Generate a view export request |
+| [**PostAnalyticsReportingScheduleRunreport**](AnalyticsApi.html#postanalyticsreportingschedulerunreport) | **Post** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
+| [**PostAnalyticsReportingSchedules**](AnalyticsApi.html#postanalyticsreportingschedules) | **Post** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
+| [**PostAnalyticsResolutionsAggregatesJobs**](AnalyticsApi.html#postanalyticsresolutionsaggregatesjobs) | **Post** /api/v2/analytics/resolutions/aggregates/jobs | Query for resolution aggregates asynchronously |
+| [**PostAnalyticsRoutingActivityQuery**](AnalyticsApi.html#postanalyticsroutingactivityquery) | **Post** /api/v2/analytics/routing/activity/query | Query for user activity observations |
+| [**PostAnalyticsSurveysAggregatesJobs**](AnalyticsApi.html#postanalyticssurveysaggregatesjobs) | **Post** /api/v2/analytics/surveys/aggregates/jobs | Query for survey aggregates asynchronously |
+| [**PostAnalyticsSurveysAggregatesQuery**](AnalyticsApi.html#postanalyticssurveysaggregatesquery) | **Post** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
+| [**PostAnalyticsTaskmanagementAggregatesJobs**](AnalyticsApi.html#postanalyticstaskmanagementaggregatesjobs) | **Post** /api/v2/analytics/taskmanagement/aggregates/jobs | Query for task management aggregates asynchronously |
+| [**PostAnalyticsTaskmanagementAggregatesQuery**](AnalyticsApi.html#postanalyticstaskmanagementaggregatesquery) | **Post** /api/v2/analytics/taskmanagement/aggregates/query | Query for task management aggregates |
+| [**PostAnalyticsTeamsActivityQuery**](AnalyticsApi.html#postanalyticsteamsactivityquery) | **Post** /api/v2/analytics/teams/activity/query | Query for team activity observations |
+| [**PostAnalyticsTranscriptsAggregatesJobs**](AnalyticsApi.html#postanalyticstranscriptsaggregatesjobs) | **Post** /api/v2/analytics/transcripts/aggregates/jobs | Query for transcript aggregates asynchronously |
+| [**PostAnalyticsTranscriptsAggregatesQuery**](AnalyticsApi.html#postanalyticstranscriptsaggregatesquery) | **Post** /api/v2/analytics/transcripts/aggregates/query | Query for transcript aggregates |
+| [**PostAnalyticsUsersActivityQuery**](AnalyticsApi.html#postanalyticsusersactivityquery) | **Post** /api/v2/analytics/users/activity/query | Query for user activity observations |
+| [**PostAnalyticsUsersAggregatesJobs**](AnalyticsApi.html#postanalyticsusersaggregatesjobs) | **Post** /api/v2/analytics/users/aggregates/jobs | Query for user aggregates asynchronously |
+| [**PostAnalyticsUsersAggregatesQuery**](AnalyticsApi.html#postanalyticsusersaggregatesquery) | **Post** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
+| [**PostAnalyticsUsersDetailsJobs**](AnalyticsApi.html#postanalyticsusersdetailsjobs) | **Post** /api/v2/analytics/users/details/jobs | Query for user details asynchronously |
+| [**PostAnalyticsUsersDetailsQuery**](AnalyticsApi.html#postanalyticsusersdetailsquery) | **Post** /api/v2/analytics/users/details/query | Query for user details |
+| [**PostAnalyticsUsersObservationsQuery**](AnalyticsApi.html#postanalyticsusersobservationsquery) | **Post** /api/v2/analytics/users/observations/query | Query for user observations |
+| [**PutAnalyticsDataretentionSettings**](AnalyticsApi.html#putanalyticsdataretentionsettings) | **Put** /api/v2/analytics/dataretention/settings | Update analytics data retention setting |
+| [**PutAnalyticsReportingSchedule**](AnalyticsApi.html#putanalyticsreportingschedule) | **Put** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
 {: class="table table-striped"}
 
 <a name="deleteanalyticsconversationsdetailsjob"></a>

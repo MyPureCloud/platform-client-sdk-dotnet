@@ -7,17 +7,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAlertingInteractionstatsAlert**](AlertingApi.html#deletealertinginteractionstatsalert) | **DELETE** /api/v2/alerting/interactionstats/alerts/{alertId} | Delete an interaction stats alert |
-| [**DeleteAlertingInteractionstatsRule**](AlertingApi.html#deletealertinginteractionstatsrule) | **DELETE** /api/v2/alerting/interactionstats/rules/{ruleId} | Delete an interaction stats rule. |
-| [**GetAlertingAlertsActive**](AlertingApi.html#getalertingalertsactive) | **GET** /api/v2/alerting/alerts/active | Gets active alert count for a user. |
-| [**GetAlertingInteractionstatsAlert**](AlertingApi.html#getalertinginteractionstatsalert) | **GET** /api/v2/alerting/interactionstats/alerts/{alertId} | Get an interaction stats alert |
-| [**GetAlertingInteractionstatsAlerts**](AlertingApi.html#getalertinginteractionstatsalerts) | **GET** /api/v2/alerting/interactionstats/alerts | Get interaction stats alert list. |
-| [**GetAlertingInteractionstatsAlertsUnread**](AlertingApi.html#getalertinginteractionstatsalertsunread) | **GET** /api/v2/alerting/interactionstats/alerts/unread | Gets user unread count of interaction stats alerts. |
-| [**GetAlertingInteractionstatsRule**](AlertingApi.html#getalertinginteractionstatsrule) | **GET** /api/v2/alerting/interactionstats/rules/{ruleId} | Get an interaction stats rule. |
-| [**GetAlertingInteractionstatsRules**](AlertingApi.html#getalertinginteractionstatsrules) | **GET** /api/v2/alerting/interactionstats/rules | Get an interaction stats rule list. |
-| [**PostAlertingInteractionstatsRules**](AlertingApi.html#postalertinginteractionstatsrules) | **POST** /api/v2/alerting/interactionstats/rules | Create an interaction stats rule. |
-| [**PutAlertingInteractionstatsAlert**](AlertingApi.html#putalertinginteractionstatsalert) | **PUT** /api/v2/alerting/interactionstats/alerts/{alertId} | Update an interaction stats alert read status |
-| [**PutAlertingInteractionstatsRule**](AlertingApi.html#putalertinginteractionstatsrule) | **PUT** /api/v2/alerting/interactionstats/rules/{ruleId} | Update an interaction stats rule |
+| [**DeleteAlertingInteractionstatsAlert**](AlertingApi.html#deletealertinginteractionstatsalert) | **Delete** /api/v2/alerting/interactionstats/alerts/{alertId} | Delete an interaction stats alert |
+| [**DeleteAlertingInteractionstatsRule**](AlertingApi.html#deletealertinginteractionstatsrule) | **Delete** /api/v2/alerting/interactionstats/rules/{ruleId} | Delete an interaction stats rule. |
+| [**GetAlertingAlertsActive**](AlertingApi.html#getalertingalertsactive) | **Get** /api/v2/alerting/alerts/active | Gets active alert count for a user. |
+| [**GetAlertingInteractionstatsAlert**](AlertingApi.html#getalertinginteractionstatsalert) | **Get** /api/v2/alerting/interactionstats/alerts/{alertId} | Get an interaction stats alert |
+| [**GetAlertingInteractionstatsAlerts**](AlertingApi.html#getalertinginteractionstatsalerts) | **Get** /api/v2/alerting/interactionstats/alerts | Get interaction stats alert list. |
+| [**GetAlertingInteractionstatsAlertsUnread**](AlertingApi.html#getalertinginteractionstatsalertsunread) | **Get** /api/v2/alerting/interactionstats/alerts/unread | Gets user unread count of interaction stats alerts. |
+| [**GetAlertingInteractionstatsRule**](AlertingApi.html#getalertinginteractionstatsrule) | **Get** /api/v2/alerting/interactionstats/rules/{ruleId} | Get an interaction stats rule. |
+| [**GetAlertingInteractionstatsRules**](AlertingApi.html#getalertinginteractionstatsrules) | **Get** /api/v2/alerting/interactionstats/rules | Get an interaction stats rule list. |
+| [**PostAlertingInteractionstatsRules**](AlertingApi.html#postalertinginteractionstatsrules) | **Post** /api/v2/alerting/interactionstats/rules | Create an interaction stats rule. |
+| [**PutAlertingInteractionstatsAlert**](AlertingApi.html#putalertinginteractionstatsalert) | **Put** /api/v2/alerting/interactionstats/alerts/{alertId} | Update an interaction stats alert read status |
+| [**PutAlertingInteractionstatsRule**](AlertingApi.html#putalertinginteractionstatsrule) | **Put** /api/v2/alerting/interactionstats/rules/{ruleId} | Update an interaction stats rule |
 {: class="table table-striped"}
 
 <a name="deletealertinginteractionstatsalert"></a>

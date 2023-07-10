@@ -7,8 +7,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesApi.html#getcarrierservicesintegrationsemergencylocationsme) | **GET** /api/v2/carrierservices/integrations/emergencylocations/me | Get location for the logged in user |
-| [**PostCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesApi.html#postcarrierservicesintegrationsemergencylocationsme) | **POST** /api/v2/carrierservices/integrations/emergencylocations/me | Set current location for the logged in user |
+| [**GetCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesApi.html#getcarrierservicesintegrationsemergencylocationsme) | **Get** /api/v2/carrierservices/integrations/emergencylocations/me | Get location for the logged in user |
+| [**PostCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesApi.html#postcarrierservicesintegrationsemergencylocationsme) | **Post** /api/v2/carrierservices/integrations/emergencylocations/me | Set current location for the logged in user |
 {: class="table table-striped"}
 
 <a name="getcarrierservicesintegrationsemergencylocationsme"></a>

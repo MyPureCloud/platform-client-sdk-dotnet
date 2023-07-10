@@ -7,12 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**PostKnowledgeDocumentuploads**](UploadsApi.html#postknowledgedocumentuploads) | **POST** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
-| [**PostLanguageunderstandingMinerUploads**](UploadsApi.html#postlanguageunderstandingmineruploads) | **POST** /api/v2/languageunderstanding/miners/{minerId}/uploads | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
-| [**PostUploadsLearningCoverart**](UploadsApi.html#postuploadslearningcoverart) | **POST** /api/v2/uploads/learning/coverart | Generates pre-signed URL to upload cover art for learning modules |
-| [**PostUploadsPublicassetsImages**](UploadsApi.html#postuploadspublicassetsimages) | **POST** /api/v2/uploads/publicassets/images | Creates presigned url for uploading a public asset image |
-| [**PostUploadsRecordings**](UploadsApi.html#postuploadsrecordings) | **POST** /api/v2/uploads/recordings | Creates presigned url for uploading a recording file |
-| [**PostUploadsWorkforcemanagementHistoricaldataCsv**](UploadsApi.html#postuploadsworkforcemanagementhistoricaldatacsv) | **POST** /api/v2/uploads/workforcemanagement/historicaldata/csv | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
+| [**PostKnowledgeDocumentuploads**](UploadsApi.html#postknowledgedocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
+| [**PostLanguageunderstandingMinerUploads**](UploadsApi.html#postlanguageunderstandingmineruploads) | **Post** /api/v2/languageunderstanding/miners/{minerId}/uploads | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
+| [**PostUploadsLearningCoverart**](UploadsApi.html#postuploadslearningcoverart) | **Post** /api/v2/uploads/learning/coverart | Generates pre-signed URL to upload cover art for learning modules |
+| [**PostUploadsPublicassetsImages**](UploadsApi.html#postuploadspublicassetsimages) | **Post** /api/v2/uploads/publicassets/images | Creates presigned url for uploading a public asset image |
+| [**PostUploadsRecordings**](UploadsApi.html#postuploadsrecordings) | **Post** /api/v2/uploads/recordings | Creates presigned url for uploading a recording file |
+| [**PostUploadsWorkforcemanagementHistoricaldataCsv**](UploadsApi.html#postuploadsworkforcemanagementhistoricaldatacsv) | **Post** /api/v2/uploads/workforcemanagement/historicaldata/csv | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
 {: class="table table-striped"}
 
 <a name="postknowledgedocumentuploads"></a>

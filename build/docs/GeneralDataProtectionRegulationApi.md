@@ -7,10 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetGdprRequest**](GeneralDataProtectionRegulationApi.html#getgdprrequest) | **GET** /api/v2/gdpr/requests/{requestId} | Get an existing GDPR request |
-| [**GetGdprRequests**](GeneralDataProtectionRegulationApi.html#getgdprrequests) | **GET** /api/v2/gdpr/requests | Get all GDPR requests |
-| [**GetGdprSubjects**](GeneralDataProtectionRegulationApi.html#getgdprsubjects) | **GET** /api/v2/gdpr/subjects | Get GDPR subjects |
-| [**PostGdprRequests**](GeneralDataProtectionRegulationApi.html#postgdprrequests) | **POST** /api/v2/gdpr/requests | Submit a new GDPR request |
+| [**GetGdprRequest**](GeneralDataProtectionRegulationApi.html#getgdprrequest) | **Get** /api/v2/gdpr/requests/{requestId} | Get an existing GDPR request |
+| [**GetGdprRequests**](GeneralDataProtectionRegulationApi.html#getgdprrequests) | **Get** /api/v2/gdpr/requests | Get all GDPR requests |
+| [**GetGdprSubjects**](GeneralDataProtectionRegulationApi.html#getgdprsubjects) | **Get** /api/v2/gdpr/subjects | Get GDPR subjects |
+| [**PostGdprRequests**](GeneralDataProtectionRegulationApi.html#postgdprrequests) | **Post** /api/v2/gdpr/requests | Submit a new GDPR request |
 {: class="table table-striped"}
 
 <a name="getgdprrequest"></a>
