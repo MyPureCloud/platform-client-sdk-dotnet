@@ -1005,6 +1005,7 @@ docs/CustomI18nLabels.md
 docs/CustomerEndDetailEventTopicCustomerEndEvent.md
 docs/CustomerInteractionCenter.md
 docs/CustomerStartDetailEventTopicCustomerStartEvent.md
+docs/CustomerStartDetailEventTopicJourneyContext.md
 docs/DID.md
 docs/DIDEntityListing.md
 docs/DIDNumber.md
@@ -7286,6 +7287,7 @@ src/PureCloudPlatform.Client.V2/Model/CustomI18nLabels.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerEndDetailEventTopicCustomerEndEvent.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerInteractionCenter.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerStartDetailEventTopicCustomerStartEvent.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerStartDetailEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/DID.cs
 src/PureCloudPlatform.Client.V2/Model/DIDEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DIDNumber.cs

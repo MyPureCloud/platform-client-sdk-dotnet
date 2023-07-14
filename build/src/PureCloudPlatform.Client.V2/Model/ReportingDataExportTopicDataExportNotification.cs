@@ -663,10 +663,34 @@ namespace PureCloudPlatform.Client.V2.Model
             TooManyRequestsFromAnOrganization,
             
             /// <summary>
+            /// Enum FailedAsExportFileSizeIsGreaterThan10mb for "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB"
+            /// </summary>
+            [EnumMember(Value = "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB")]
+            FailedAsExportFileSizeIsGreaterThan10mb,
+            
+            /// <summary>
             /// Enum NotAuthorizedToViewExport for "NOT_AUTHORIZED_TO_VIEW_EXPORT"
             /// </summary>
             [EnumMember(Value = "NOT_AUTHORIZED_TO_VIEW_EXPORT")]
-            NotAuthorizedToViewExport
+            NotAuthorizedToViewExport,
+            
+            /// <summary>
+            /// Enum StaticLinkExportFailed for "STATIC_LINK_EXPORT_FAILED"
+            /// </summary>
+            [EnumMember(Value = "STATIC_LINK_EXPORT_FAILED")]
+            StaticLinkExportFailed,
+            
+            /// <summary>
+            /// Enum TooManySearchCriteria for "TOO_MANY_SEARCH_CRITERIA"
+            /// </summary>
+            [EnumMember(Value = "TOO_MANY_SEARCH_CRITERIA")]
+            TooManySearchCriteria,
+            
+            /// <summary>
+            /// Enum SearchCriteriaValuesExceedLimit for "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT")]
+            SearchCriteriaValuesExceedLimit
         }
         /// <summary>
         /// Gets or Sets Inner

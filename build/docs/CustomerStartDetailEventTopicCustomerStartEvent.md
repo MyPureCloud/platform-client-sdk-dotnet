@@ -27,6 +27,7 @@ title: CustomerStartDetailEventTopicCustomerStartEvent
 | **MessageType** | **string** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
+| **JourneyContext** | [**CustomerStartDetailEventTopicJourneyContext**](CustomerStartDetailEventTopicJourneyContext.html) |  | [optional] |
 {: class="table table-striped"}
 
 
