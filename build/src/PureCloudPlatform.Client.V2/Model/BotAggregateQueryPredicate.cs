@@ -157,6 +157,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Externalcontactid,
             
             /// <summary>
+            /// Enum Intermediateintentname for "intermediateIntentName"
+            /// </summary>
+            [EnumMember(Value = "intermediateIntentName")]
+            Intermediateintentname,
+            
+            /// <summary>
             /// Enum Knowledgebaseid for "knowledgeBaseId"
             /// </summary>
             [EnumMember(Value = "knowledgeBaseId")]

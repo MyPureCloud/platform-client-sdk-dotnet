@@ -469,6 +469,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Routingring,
             
             /// <summary>
+            /// Enum Routingrule for "routingRule"
+            /// </summary>
+            [EnumMember(Value = "routingRule")]
+            Routingrule,
+            
+            /// <summary>
+            /// Enum Routingruletype for "routingRuleType"
+            /// </summary>
+            [EnumMember(Value = "routingRuleType")]
+            Routingruletype,
+            
+            /// <summary>
             /// Enum Scoredagentid for "scoredAgentId"
             /// </summary>
             [EnumMember(Value = "scoredAgentId")]

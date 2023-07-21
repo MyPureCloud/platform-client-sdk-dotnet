@@ -156,11 +156,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UploadKey">Upload key (required).</param>
         /// <param name="FileType">File type of the document (required).</param>
         /// <param name="Settings">Additional optional settings.</param>
-        public KnowledgeImportJobResponse(string UploadKey = null, FileTypeEnum? FileType = null, KnowledgeImportJobSettings Settings = null)
+        /// <param name="SkipConfirmationStep">If enabled pre-validation step will be skipped..</param>
+        public KnowledgeImportJobResponse(string UploadKey = null, FileTypeEnum? FileType = null, KnowledgeImportJobSettings Settings = null, bool? SkipConfirmationStep = null)
         {
             this.UploadKey = UploadKey;
             this.FileType = FileType;
             this.Settings = Settings;
+            this.SkipConfirmationStep = SkipConfirmationStep;
             
         }
         
@@ -234,6 +236,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// If enabled pre-validation step will be skipped.
+        /// </summary>
+        /// <value>If enabled pre-validation step will be skipped.</value>
+        [DataMember(Name="skipConfirmationStep", EmitDefaultValue=false)]
+        public bool? SkipConfirmationStep { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -259,6 +270,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  SkipConfirmationStep: ").Append(SkipConfirmationStep).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -346,6 +358,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
+                    this.SkipConfirmationStep == other.SkipConfirmationStep ||
+                    this.SkipConfirmationStep != null &&
+                    this.SkipConfirmationStep.Equals(other.SkipConfirmationStep)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -389,6 +406,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.SkipConfirmationStep != null)
+                    hash = hash * 59 + this.SkipConfirmationStep.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

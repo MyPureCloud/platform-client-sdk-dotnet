@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="DefaultProgramId">Setting to choose name for the default program for topic detection.</param>
         /// <param name="ExpectedDialects">Setting to choose expected dialects.</param>
-        public SpeechTextAnalyticsSettingsRequest(string DefaultProgramId = null, List<string> ExpectedDialects = null)
+        /// <param name="TextAnalyticsEnabled">Setting to enable/disable text analytics.</param>
+        public SpeechTextAnalyticsSettingsRequest(string DefaultProgramId = null, List<string> ExpectedDialects = null, bool? TextAnalyticsEnabled = null)
         {
             this.DefaultProgramId = DefaultProgramId;
             this.ExpectedDialects = ExpectedDialects;
+            this.TextAnalyticsEnabled = TextAnalyticsEnabled;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> ExpectedDialects { get; set; }
 
 
+
+        /// <summary>
+        /// Setting to enable/disable text analytics
+        /// </summary>
+        /// <value>Setting to enable/disable text analytics</value>
+        [DataMember(Name="textAnalyticsEnabled", EmitDefaultValue=false)]
+        public bool? TextAnalyticsEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  DefaultProgramId: ").Append(DefaultProgramId).Append("\n");
             sb.Append("  ExpectedDialects: ").Append(ExpectedDialects).Append("\n");
+            sb.Append("  TextAnalyticsEnabled: ").Append(TextAnalyticsEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExpectedDialects == other.ExpectedDialects ||
                     this.ExpectedDialects != null &&
                     this.ExpectedDialects.SequenceEqual(other.ExpectedDialects)
+                ) &&
+                (
+                    this.TextAnalyticsEnabled == other.TextAnalyticsEnabled ||
+                    this.TextAnalyticsEnabled != null &&
+                    this.TextAnalyticsEnabled.Equals(other.TextAnalyticsEnabled)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExpectedDialects != null)
                     hash = hash * 59 + this.ExpectedDialects.GetHashCode();
+
+                if (this.TextAnalyticsEnabled != null)
+                    hash = hash * 59 + this.TextAnalyticsEnabled.GetHashCode();
 
                 return hash;
             }

@@ -18,6 +18,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsopenintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/open/{integrationId} | Delete an Open messaging integration |
 | [**DeleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationstwitterintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Delete a Twitter messaging integration |
 | [**DeleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationswhatsappintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Delete a WhatsApp messaging integration |
+| [**DeleteConversationsMessagingSetting**](ConversationsApi.html#deleteconversationsmessagingsetting) | **Delete** /api/v2/conversations/messaging/settings/{messageSettingId} | Delete a messaging setting |
+| [**DeleteConversationsMessagingSettingsDefault**](ConversationsApi.html#deleteconversationsmessagingsettingsdefault) | **Delete** /api/v2/conversations/messaging/settings/default | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
 | [**DeleteConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#deleteconversationsmessagingsupportedcontentsupportedcontentid) | **Delete** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Delete a supported content profile |
 | [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **Get** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetAnalyticsConversationsAggregatesJob**](ConversationsApi.html#getanalyticsconversationsaggregatesjob) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Get status for async query for conversation aggregates |
@@ -90,6 +92,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationstwitterintegrationid) | **Get** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Get a Twitter messaging integration |
 | [**GetConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#getconversationsmessagingintegrationswhatsapp) | **Get** /api/v2/conversations/messaging/integrations/whatsapp | Get a list of WhatsApp Integrations |
 | [**GetConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationswhatsappintegrationid) | **Get** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Get a WhatsApp messaging integration |
+| [**GetConversationsMessagingSetting**](ConversationsApi.html#getconversationsmessagingsetting) | **Get** /api/v2/conversations/messaging/settings/{messageSettingId} | Get a messaging setting |
+| [**GetConversationsMessagingSettings**](ConversationsApi.html#getconversationsmessagingsettings) | **Get** /api/v2/conversations/messaging/settings | Get a list of messaging settings |
+| [**GetConversationsMessagingSettingsDefault**](ConversationsApi.html#getconversationsmessagingsettingsdefault) | **Get** /api/v2/conversations/messaging/settings/default | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
 | [**GetConversationsMessagingSticker**](ConversationsApi.html#getconversationsmessagingsticker) | **Get** /api/v2/conversations/messaging/stickers/{messengerType} | Get a list of Messaging Stickers |
 | [**GetConversationsMessagingSupportedcontent**](ConversationsApi.html#getconversationsmessagingsupportedcontent) | **Get** /api/v2/conversations/messaging/supportedcontent | Get a list of Supported Content profiles |
 | [**GetConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#getconversationsmessagingsupportedcontentdefault) | **Get** /api/v2/conversations/messaging/supportedcontent/default | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
@@ -136,6 +141,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationsopenintegrationid) | **Patch** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
 | [**PatchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationstwitterintegrationid) | **Patch** /api/v2/conversations/messaging/integrations/twitter/{integrationId} | Update Twitter messaging integration |
 | [**PatchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsApi.html#patchconversationsmessagingintegrationswhatsappintegrationid) | **Patch** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Update or activate a WhatsApp messaging integration |
+| [**PatchConversationsMessagingSetting**](ConversationsApi.html#patchconversationsmessagingsetting) | **Patch** /api/v2/conversations/messaging/settings/{messageSettingId} | Update a messaging setting |
 | [**PatchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#patchconversationsmessagingsupportedcontentsupportedcontentid) | **Patch** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Update a supported content profile |
 | [**PatchConversationsSettings**](ConversationsApi.html#patchconversationssettings) | **Patch** /api/v2/conversations/settings | Update Settings |
 | [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **Post** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
@@ -145,6 +151,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsConversationsDetailsJobs**](ConversationsApi.html#postanalyticsconversationsdetailsjobs) | **Post** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **Post** /api/v2/analytics/conversations/details/query | Query for conversation details |
 | [**PostConversationAssign**](ConversationsApi.html#postconversationassign) | **Post** /api/v2/conversations/{conversationId}/assign | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
+| [**PostConversationBarge**](ConversationsApi.html#postconversationbarge) | **Post** /api/v2/conversations/{conversationId}/barge | Barge a conversation creating a barged in conference of connected participants. |
 | [**PostConversationCobrowse**](ConversationsApi.html#postconversationcobrowse) | **Post** /api/v2/conversations/{conversationId}/cobrowse | Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission. |
 | [**PostConversationDisconnect**](ConversationsApi.html#postconversationdisconnect) | **Post** /api/v2/conversations/{conversationId}/disconnect | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
@@ -155,6 +162,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationParticipantReplaceQueue**](ConversationsApi.html#postconversationparticipantreplacequeue) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue | Replace this participant with the specified queue |
 | [**PostConversationParticipantSecureivrsessions**](ConversationsApi.html#postconversationparticipantsecureivrsessions) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **Post** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
+| [**PostConversationsCallParticipantBarge**](ConversationsApi.html#postconversationscallparticipantbarge) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
 | [**PostConversationsCallParticipantCoach**](ConversationsApi.html#postconversationscallparticipantcoach) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**PostConversationsCallParticipantCommunicationWrapup**](ConversationsApi.html#postconversationscallparticipantcommunicationwrapup) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsCallParticipantConsult**](ConversationsApi.html#postconversationscallparticipantconsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
@@ -203,6 +211,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessagingIntegrationsOpen**](ConversationsApi.html#postconversationsmessagingintegrationsopen) | **Post** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
 | [**PostConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#postconversationsmessagingintegrationstwitter) | **Post** /api/v2/conversations/messaging/integrations/twitter | Create a Twitter Integration |
 | [**PostConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#postconversationsmessagingintegrationswhatsapp) | **Post** /api/v2/conversations/messaging/integrations/whatsapp | Create a WhatsApp Integration |
+| [**PostConversationsMessagingSettings**](ConversationsApi.html#postconversationsmessagingsettings) | **Post** /api/v2/conversations/messaging/settings | Create a messaging setting |
 | [**PostConversationsMessagingSupportedcontent**](ConversationsApi.html#postconversationsmessagingsupportedcontent) | **Post** /api/v2/conversations/messaging/supportedcontent | Create a Supported Content profile |
 | [**PostConversationsParticipantsAttributesSearch**](ConversationsApi.html#postconversationsparticipantsattributessearch) | **Post** /api/v2/conversations/participants/attributes/search | Search conversations |
 | [**PostConversationsScreenshareParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsscreenshareparticipantcommunicationwrapup) | **Post** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
@@ -221,6 +230,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationsKeyconfiguration**](ConversationsApi.html#putconversationskeyconfiguration) | **Put** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Update the encryption key configurations |
 | [**PutConversationsMessageRecordingstate**](ConversationsApi.html#putconversationsmessagerecordingstate) | **Put** /api/v2/conversations/messages/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PutConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#putconversationsmessagingintegrationslineintegrationid) | **Put** /api/v2/conversations/messaging/integrations/line/{integrationId} | Update a LINE messenger integration |
+| [**PutConversationsMessagingSettingsDefault**](ConversationsApi.html#putconversationsmessagingsettingsdefault) | **Put** /api/v2/conversations/messaging/settings/default | Set the organization&#39;s default setting that may be applied to to integrations without settings |
 | [**PutConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#putconversationsmessagingsupportedcontentdefault) | **Put** /api/v2/conversations/messaging/supportedcontent/default | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**PutConversationsMessagingThreadingtimeline**](ConversationsApi.html#putconversationsmessagingthreadingtimeline) | **Put** /api/v2/conversations/messaging/threadingtimeline | Update conversation threading window timeline for each messaging type |
 | [**PutConversationsScreenshareRecordingstate**](ConversationsApi.html#putconversationsscreensharerecordingstate) | **Put** /api/v2/conversations/screenshares/{conversationId}/recordingstate | Update a conversation by setting its recording state |
@@ -919,6 +929,127 @@ namespace Example
 ### Return type
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
+
+<a name="deleteconversationsmessagingsetting"></a>
+
+## void DeleteConversationsMessagingSetting (string messageSettingId)
+
+
+
+Delete a messaging setting
+
+Requires ALL permissions: 
+
+* messaging:setting:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var messageSettingId = messageSettingId_example;  // string | Message Setting ID
+
+            try
+            { 
+                // Delete a messaging setting
+                apiInstance.DeleteConversationsMessagingSetting(messageSettingId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageSettingId** | **string**| Message Setting ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteconversationsmessagingsettingsdefault"></a>
+
+## void DeleteConversationsMessagingSettingsDefault ()
+
+
+
+Delete the organization's default setting, a global default will be applied to integrations without settings
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be assigned to it.
+
+Requires ALL permissions: 
+
+* messaging:setting:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingSettingsDefaultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            { 
+                // Delete the organization's default setting, a global default will be applied to integrations without settings
+                apiInstance.DeleteConversationsMessagingSettingsDefault();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingSettingsDefault: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+void (empty response body)
 
 <a name="deleteconversationsmessagingsupportedcontentsupportedcontentid"></a>
 
@@ -5569,6 +5700,194 @@ namespace Example
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
 
+<a name="getconversationsmessagingsetting"></a>
+
+## [**MessagingSetting**](MessagingSetting.html) GetConversationsMessagingSetting (string messageSettingId)
+
+
+
+Get a messaging setting
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var messageSettingId = messageSettingId_example;  // string | Message Setting ID
+
+            try
+            { 
+                // Get a messaging setting
+                MessagingSetting result = apiInstance.GetConversationsMessagingSetting(messageSettingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageSettingId** | **string**| Message Setting ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
+<a name="getconversationsmessagingsettings"></a>
+
+## [**MessagingConfigListing**](MessagingConfigListing.html) GetConversationsMessagingSettings (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of messaging settings
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of messaging settings
+                MessagingConfigListing result = apiInstance.GetConversationsMessagingSettings(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingConfigListing**](MessagingConfigListing.html)
+
+<a name="getconversationsmessagingsettingsdefault"></a>
+
+## [**MessagingSetting**](MessagingSetting.html) GetConversationsMessagingSettingsDefault ()
+
+
+
+Get the organization's default settings that will be used as the default when creating an integration.
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be assigned to it.
+
+Requires ALL permissions: 
+
+* messaging:setting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingSettingsDefaultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            { 
+                // Get the organization's default settings that will be used as the default when creating an integration.
+                MessagingSetting result = apiInstance.GetConversationsMessagingSettingsDefault();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingSettingsDefault: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
 <a name="getconversationsmessagingsticker"></a>
 
 ## [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html) GetConversationsMessagingSticker (string messengerType, int? pageSize = null, int? pageNumber = null)
@@ -8588,6 +8907,71 @@ namespace Example
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
 
+<a name="patchconversationsmessagingsetting"></a>
+
+## [**MessagingSetting**](MessagingSetting.html) PatchConversationsMessagingSetting (string messageSettingId, MessagingSettingPatchRequest body)
+
+
+
+Update a messaging setting
+
+Requires ALL permissions: 
+
+* messaging:setting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessagingSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var messageSettingId = messageSettingId_example;  // string | Message Setting ID
+            var body = new MessagingSettingPatchRequest(); // MessagingSettingPatchRequest | MessagingSetting
+
+            try
+            { 
+                // Update a messaging setting
+                MessagingSetting result = apiInstance.PatchConversationsMessagingSetting(messageSettingId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessagingSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageSettingId** | **string**| Message Setting ID |  |
+| **body** | [**MessagingSettingPatchRequest**](MessagingSettingPatchRequest.html)| MessagingSetting |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
+
 <a name="patchconversationsmessagingsupportedcontentsupportedcontentid"></a>
 
 ## [**SupportedContent**](SupportedContent.html) PatchConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
@@ -9179,6 +9563,70 @@ namespace Example
 
 **string**
 
+<a name="postconversationbarge"></a>
+
+## void PostConversationBarge (string conversationId)
+
+
+
+Barge a conversation creating a barged in conference of connected participants.
+
+PostConversationBarge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:call:barge
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationBargeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+
+            try
+            { 
+                // Barge a conversation creating a barged in conference of connected participants.
+                apiInstance.PostConversationBarge(conversationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationBarge: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postconversationcobrowse"></a>
 
 ## [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html) PostConversationCobrowse (string conversationId)
@@ -9441,7 +9889,7 @@ void (empty response body)
 
 ## void PostConversationParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 Replace this participant with the specified user and/or address
 
@@ -9511,6 +9959,8 @@ void (empty response body)
 
 Replace this participant with the specified agent
 
+PostConversationParticipantReplaceAgent is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
 Requires ANY permissions: 
 
 * conversation:communication:blindTransfer
@@ -9578,6 +10028,8 @@ void (empty response body)
 
 Replace this participant with the an external contact
 
+PostConversationParticipantReplaceExternal is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
 Requires ANY permissions: 
 
 * conversation:communication:blindTransfer
@@ -9644,6 +10096,8 @@ void (empty response body)
 
 
 Replace this participant with the specified queue
+
+PostConversationParticipantReplaceQueue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -9834,6 +10288,72 @@ namespace Example
 
 [**Conversation**](Conversation.html)
 
+<a name="postconversationscallparticipantbarge"></a>
+
+## void PostConversationsCallParticipantBarge (string conversationId, string participantId)
+
+
+
+Barge a given participant's call creating a barged in conference of connected participants.
+
+PostConversationsCallParticipantBarge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:call:barge
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantBargeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            { 
+                // Barge a given participant's call creating a barged in conference of connected participants.
+                apiInstance.PostConversationsCallParticipantBarge(conversationId, participantId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantBarge: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postconversationscallparticipantcoach"></a>
 
 ## void PostConversationsCallParticipantCoach (string conversationId, string participantId)
@@ -9970,7 +10490,7 @@ void (empty response body)
 
 ## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransfer body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 Initiate and update consult transfer
 
@@ -10041,6 +10561,8 @@ namespace Example
 
 Initiate a consult transfer to an agent
 
+PostConversationsCallParticipantConsultAgent is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
 Requires ANY permissions: 
 
 * conversation:communication:consultTransfer
@@ -10109,6 +10631,8 @@ namespace Example
 
 Initiate a consult transfer to an external contact
 
+PostConversationsCallParticipantConsultExternal is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
 Requires ANY permissions: 
 
 * conversation:communication:consultTransfer
@@ -10176,6 +10700,8 @@ namespace Example
 
 
 Initiate a consult transfer to a queue
+
+PostConversationsCallParticipantConsultQueue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -10305,7 +10831,7 @@ void (empty response body)
 
 ## void PostConversationsCallParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 Replace this participant with the specified user and/or address
 
@@ -10503,7 +11029,7 @@ void (empty response body)
 
 ## void PostConversationsCallbackParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 Replace this participant with the specified user and/or address
 
@@ -11018,7 +11544,7 @@ void (empty response body)
 
 ## void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 Replace this participant with the specified user and/or address
 
@@ -11215,7 +11741,7 @@ void (empty response body)
 
 ## void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 Replace this participant with the specified user and/or address
 
@@ -11541,7 +12067,7 @@ void (empty response body)
 
 ## void PostConversationsEmailParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 Replace this participant with the specified user and/or address
 
@@ -12337,7 +12863,7 @@ void (empty response body)
 
 ## void PostConversationsMessageParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 Replace this participant with the specified user and/or address
 
@@ -12975,6 +13501,69 @@ namespace Example
 ### Return type
 
 [**WhatsAppIntegration**](WhatsAppIntegration.html)
+
+<a name="postconversationsmessagingsettings"></a>
+
+## [**MessagingSetting**](MessagingSetting.html) PostConversationsMessagingSettings (MessagingSettingRequest body)
+
+
+
+Create a messaging setting
+
+Requires ALL permissions: 
+
+* messaging:setting:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new MessagingSettingRequest(); // MessagingSettingRequest | MessagingSetting
+
+            try
+            { 
+                // Create a messaging setting
+                MessagingSetting result = apiInstance.PostConversationsMessagingSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
 
 <a name="postconversationsmessagingsupportedcontent"></a>
 
@@ -14150,6 +14739,71 @@ namespace Example
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
+
+<a name="putconversationsmessagingsettingsdefault"></a>
+
+## [**MessagingSetting**](MessagingSetting.html) PutConversationsMessagingSettingsDefault (MessagingSettingDefaultRequest body)
+
+
+
+Set the organization's default setting that may be applied to to integrations without settings
+
+When an integration is created a settings ID may be assigned to it. If the settings ID is not supplied, the default settings will be assigned to it.
+
+Requires ALL permissions: 
+
+* messaging:setting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsMessagingSettingsDefaultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new MessagingSettingDefaultRequest(); // MessagingSettingDefaultRequest | MessagingSetting
+
+            try
+            { 
+                // Set the organization's default setting that may be applied to to integrations without settings
+                MessagingSetting result = apiInstance.PutConversationsMessagingSettingsDefault(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsMessagingSettingsDefault: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest.html)| MessagingSetting |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingSetting**](MessagingSetting.html)
 
 <a name="putconversationsmessagingsupportedcontentdefault"></a>
 

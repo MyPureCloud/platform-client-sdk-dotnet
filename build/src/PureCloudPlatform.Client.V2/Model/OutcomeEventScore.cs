@@ -24,15 +24,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Outcome">The outcome that the score was calculated for..</param>
         /// <param name="SessionMaxProbability">Represents the max probability reached in the session..</param>
         /// <param name="Probability">Represents the likelihood of a customer reaching or achieving a given outcome..</param>
-        /// <param name="Percentile">Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome..</param>
-        /// <param name="SessionMaxPercentile">Represents the maximum likelihood percentile score reached for a given outcome by the current session..</param>
-        public OutcomeEventScore(AddressableEntityRef Outcome = null, float? SessionMaxProbability = null, float? Probability = null, int? Percentile = null, int? SessionMaxPercentile = null)
+        /// <param name="Percentile">(Deprecated: use the 'quantile' field instead) Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome..</param>
+        /// <param name="SessionMaxPercentile">(Deprecated: use the 'quantile' field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session..</param>
+        /// <param name="Quantile">Represents the quantity of sessions that have a maximum probability less than the predicted probability..</param>
+        /// <param name="SessionMaxQuantile">Represents the quantity of sessions that have a maximum probability less than the predicted session max probability..</param>
+        public OutcomeEventScore(AddressableEntityRef Outcome = null, float? SessionMaxProbability = null, float? Probability = null, int? Percentile = null, int? SessionMaxPercentile = null, float? Quantile = null, float? SessionMaxQuantile = null)
         {
             this.Outcome = Outcome;
             this.SessionMaxProbability = SessionMaxProbability;
             this.Probability = Probability;
             this.Percentile = Percentile;
             this.SessionMaxPercentile = SessionMaxPercentile;
+            this.Quantile = Quantile;
+            this.SessionMaxQuantile = SessionMaxQuantile;
             
         }
         
@@ -66,20 +70,38 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome.
+        /// (Deprecated: use the 'quantile' field instead) Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome.
         /// </summary>
-        /// <value>Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome.</value>
+        /// <value>(Deprecated: use the 'quantile' field instead) Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome.</value>
         [DataMember(Name="percentile", EmitDefaultValue=false)]
         public int? Percentile { get; set; }
 
 
 
         /// <summary>
-        /// Represents the maximum likelihood percentile score reached for a given outcome by the current session.
+        /// (Deprecated: use the 'quantile' field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session.
         /// </summary>
-        /// <value>Represents the maximum likelihood percentile score reached for a given outcome by the current session.</value>
+        /// <value>(Deprecated: use the 'quantile' field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session.</value>
         [DataMember(Name="sessionMaxPercentile", EmitDefaultValue=false)]
         public int? SessionMaxPercentile { get; set; }
+
+
+
+        /// <summary>
+        /// Represents the quantity of sessions that have a maximum probability less than the predicted probability.
+        /// </summary>
+        /// <value>Represents the quantity of sessions that have a maximum probability less than the predicted probability.</value>
+        [DataMember(Name="quantile", EmitDefaultValue=false)]
+        public float? Quantile { get; set; }
+
+
+
+        /// <summary>
+        /// Represents the quantity of sessions that have a maximum probability less than the predicted session max probability.
+        /// </summary>
+        /// <value>Represents the quantity of sessions that have a maximum probability less than the predicted session max probability.</value>
+        [DataMember(Name="sessionMaxQuantile", EmitDefaultValue=false)]
+        public float? SessionMaxQuantile { get; set; }
 
 
         /// <summary>
@@ -96,6 +118,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Probability: ").Append(Probability).Append("\n");
             sb.Append("  Percentile: ").Append(Percentile).Append("\n");
             sb.Append("  SessionMaxPercentile: ").Append(SessionMaxPercentile).Append("\n");
+            sb.Append("  Quantile: ").Append(Quantile).Append("\n");
+            sb.Append("  SessionMaxQuantile: ").Append(SessionMaxQuantile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +184,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionMaxPercentile == other.SessionMaxPercentile ||
                     this.SessionMaxPercentile != null &&
                     this.SessionMaxPercentile.Equals(other.SessionMaxPercentile)
+                ) &&
+                (
+                    this.Quantile == other.Quantile ||
+                    this.Quantile != null &&
+                    this.Quantile.Equals(other.Quantile)
+                ) &&
+                (
+                    this.SessionMaxQuantile == other.SessionMaxQuantile ||
+                    this.SessionMaxQuantile != null &&
+                    this.SessionMaxQuantile.Equals(other.SessionMaxQuantile)
                 );
         }
 
@@ -188,6 +222,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SessionMaxPercentile != null)
                     hash = hash * 59 + this.SessionMaxPercentile.GetHashCode();
+
+                if (this.Quantile != null)
+                    hash = hash * 59 + this.Quantile.GetHashCode();
+
+                if (this.SessionMaxQuantile != null)
+                    hash = hash * 59 + this.SessionMaxQuantile.GetHashCode();
 
                 return hash;
             }

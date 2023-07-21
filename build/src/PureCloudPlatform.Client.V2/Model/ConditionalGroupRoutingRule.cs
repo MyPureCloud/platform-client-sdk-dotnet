@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Estimatedwaittime for "EstimatedWaitTime"
             /// </summary>
             [EnumMember(Value = "EstimatedWaitTime")]
-            Estimatedwaittime
+            Estimatedwaittime,
+            
+            /// <summary>
+            /// Enum Servicelevel for "ServiceLevel"
+            /// </summary>
+            [EnumMember(Value = "ServiceLevel")]
+            Servicelevel
         }
         /// <summary>
         /// The operator that compares the actual value against the condition value

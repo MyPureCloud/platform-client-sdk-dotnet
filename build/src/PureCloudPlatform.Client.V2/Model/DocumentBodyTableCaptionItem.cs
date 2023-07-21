@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Text,
             
             /// <summary>
+            /// Enum Paragraph for "Paragraph"
+            /// </summary>
+            [EnumMember(Value = "Paragraph")]
+            Paragraph,
+            
+            /// <summary>
             /// Enum Image for "Image"
             /// </summary>
             [EnumMember(Value = "Image")]
@@ -79,14 +85,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentBodyTableCaptionItem" /> class.
         /// </summary>
         /// <param name="Type">The type of the caption item. (required).</param>
-        /// <param name="Text">Text. It must contain a value if the type of the block is Text. (required).</param>
-        /// <param name="Image">Image. It must contain a value if the type of the block is Image. (required).</param>
-        /// <param name="Video">Video. It must contain a value if the type of the block is Video. (required).</param>
-        /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList. (required).</param>
-        public DocumentBodyTableCaptionItem(TypeEnum? Type = null, DocumentText Text = null, DocumentBodyImage Image = null, DocumentBodyVideo Video = null, DocumentBodyList List = null)
+        /// <param name="Text">Text. It must contain a value if the type of the block is Text..</param>
+        /// <param name="Paragraph">Paragraph. It must contain a value if the type of the block is Paragraph..</param>
+        /// <param name="Image">Image. It must contain a value if the type of the block is Image..</param>
+        /// <param name="Video">Video. It must contain a value if the type of the block is Video..</param>
+        /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList..</param>
+        public DocumentBodyTableCaptionItem(TypeEnum? Type = null, DocumentText Text = null, DocumentBodyParagraph Paragraph = null, DocumentBodyImage Image = null, DocumentBodyVideo Video = null, DocumentBodyList List = null)
         {
             this.Type = Type;
             this.Text = Text;
+            this.Paragraph = Paragraph;
             this.Image = Image;
             this.Video = Video;
             this.List = List;
@@ -103,6 +111,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Text. It must contain a value if the type of the block is Text.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public DocumentText Text { get; set; }
+
+
+
+        /// <summary>
+        /// Paragraph. It must contain a value if the type of the block is Paragraph.
+        /// </summary>
+        /// <value>Paragraph. It must contain a value if the type of the block is Paragraph.</value>
+        [DataMember(Name="paragraph", EmitDefaultValue=false)]
+        public DocumentBodyParagraph Paragraph { get; set; }
 
 
 
@@ -143,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Paragraph: ").Append(Paragraph).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  Video: ").Append(Video).Append("\n");
             sb.Append("  List: ").Append(List).Append("\n");
@@ -197,6 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Text.Equals(other.Text)
                 ) &&
                 (
+                    this.Paragraph == other.Paragraph ||
+                    this.Paragraph != null &&
+                    this.Paragraph.Equals(other.Paragraph)
+                ) &&
+                (
                     this.Image == other.Image ||
                     this.Image != null &&
                     this.Image.Equals(other.Image)
@@ -229,6 +252,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
+
+                if (this.Paragraph != null)
+                    hash = hash * 59 + this.Paragraph.GetHashCode();
 
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();

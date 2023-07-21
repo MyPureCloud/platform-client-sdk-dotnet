@@ -1,0 +1,15 @@
+---
+title: AlertRuleProperties
+---
+## ININ.PureCloudApi.Model.AlertRuleProperties
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Name** | **string** | The name of the object. | [optional] |
+| **Type** | **string** | The type of rule being alerted. | |
+{: class="table table-striped"}
+
+

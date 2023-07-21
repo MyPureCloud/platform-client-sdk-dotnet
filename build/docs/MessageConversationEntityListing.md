@@ -7,7 +7,7 @@ title: MessageConversationEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;EmailConversation&gt;**](EmailConversation.html) |  | [optional] |
+| **Entities** | [**List&lt;MessageConversation&gt;**](MessageConversation.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |

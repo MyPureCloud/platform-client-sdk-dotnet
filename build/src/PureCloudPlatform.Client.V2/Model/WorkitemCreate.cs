@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateDue">The due date of the Workitem. Can not be greater than 365 days from the current time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateExpires">The expiry date of the Workitem. Can not be greater than 365 days from the current time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DurationSeconds">The estimated duration in seconds to complete the Workitem. Maximum of 365 days..</param>
-        /// <param name="Ttl">A timestamp specifying the time to live for the Workitem. Can not be greater than 365 days from the current time..</param>
+        /// <param name="Ttl">The epoch timestamp in seconds specifying the time to live for the Workitem. Can not be greater than 365 days from the current time..</param>
         /// <param name="StatusId">The ID of the Status of the Workitem..</param>
         /// <param name="WorkbinId">The ID of Workbin that contains the Workitem..</param>
         /// <param name="AutoStatusTransition">Set it to false to disable auto status transition. By default, it is enabled..</param>
@@ -122,9 +122,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A timestamp specifying the time to live for the Workitem. Can not be greater than 365 days from the current time.
+        /// The epoch timestamp in seconds specifying the time to live for the Workitem. Can not be greater than 365 days from the current time.
         /// </summary>
-        /// <value>A timestamp specifying the time to live for the Workitem. Can not be greater than 365 days from the current time.</value>
+        /// <value>The epoch timestamp in seconds specifying the time to live for the Workitem. Can not be greater than 365 days from the current time.</value>
         [DataMember(Name="ttl", EmitDefaultValue=false)]
         public int? Ttl { get; set; }
 

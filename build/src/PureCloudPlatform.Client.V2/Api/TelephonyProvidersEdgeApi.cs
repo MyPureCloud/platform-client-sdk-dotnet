@@ -1447,7 +1447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed.</param>
         /// <returns>List&lt;EdgeMetrics&gt;</returns>
         
         List<EdgeMetrics> GetTelephonyProvidersEdgesMetrics (string edgeIds);
@@ -1459,7 +1459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed.</param>
         /// <returns>ApiResponse of List&lt;EdgeMetrics&gt;</returns>
         
         ApiResponse<List<EdgeMetrics>> GetTelephonyProvidersEdgesMetricsWithHttpInfo (string edgeIds);
@@ -4609,7 +4609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed.</param>
         /// <returns>Task of List&lt;EdgeMetrics&gt;</returns>
         
         System.Threading.Tasks.Task<List<EdgeMetrics>> GetTelephonyProvidersEdgesMetricsAsync (string edgeIds);
@@ -4621,7 +4621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed.</param>
         /// <returns>Task of ApiResponse (List&lt;EdgeMetrics&gt;)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<List<EdgeMetrics>>> GetTelephonyProvidersEdgesMetricsAsyncWithHttpInfo (string edgeIds);
@@ -17707,7 +17707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed.</param>
         /// <returns>List&lt;EdgeMetrics&gt;</returns>
         
         public List<EdgeMetrics> GetTelephonyProvidersEdgesMetrics (string edgeIds)
@@ -17721,7 +17721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed.</param>
         /// <returns>ApiResponse of List&lt;EdgeMetrics&gt;</returns>
         
         public ApiResponse< List<EdgeMetrics> > GetTelephonyProvidersEdgesMetricsWithHttpInfo (string edgeIds)
@@ -17807,7 +17807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed.</param>
         /// <returns>Task of List&lt;EdgeMetrics&gt;</returns>
         
         public async System.Threading.Tasks.Task<List<EdgeMetrics>> GetTelephonyProvidersEdgesMetricsAsync (string edgeIds)
@@ -17822,7 +17822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed.</param>
         /// <returns>Task of ApiResponse (List&lt;EdgeMetrics&gt;)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<List<EdgeMetrics>>> GetTelephonyProvidersEdgesMetricsAsyncWithHttpInfo (string edgeIds)

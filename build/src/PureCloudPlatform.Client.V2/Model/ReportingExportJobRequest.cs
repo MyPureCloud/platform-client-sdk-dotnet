@@ -652,7 +652,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ContactCenterPerformanceView for "CONTACT_CENTER_PERFORMANCE_VIEW"
             /// </summary>
             [EnumMember(Value = "CONTACT_CENTER_PERFORMANCE_VIEW")]
-            ContactCenterPerformanceView
+            ContactCenterPerformanceView,
+            
+            /// <summary>
+            /// Enum QueueRoutingPerformanceView for "QUEUE_ROUTING_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_ROUTING_PERFORMANCE_VIEW")]
+            QueueRoutingPerformanceView
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request

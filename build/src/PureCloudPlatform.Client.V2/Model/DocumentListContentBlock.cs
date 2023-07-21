@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unorderedlist for "UnorderedList"
             /// </summary>
             [EnumMember(Value = "UnorderedList")]
-            Unorderedlist
+            Unorderedlist,
+            
+            /// <summary>
+            /// Enum Video for "Video"
+            /// </summary>
+            [EnumMember(Value = "Video")]
+            Video
         }
         /// <summary>
         /// The type of the list block.
@@ -73,15 +79,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentListContentBlock" /> class.
         /// </summary>
         /// <param name="Type">The type of the list block. (required).</param>
-        /// <param name="Text">Text. It must contain a value if the type of the block is Text. (required).</param>
-        /// <param name="Image">Image. It must contain a value if the type of the block is Image. (required).</param>
-        /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList. (required).</param>
-        public DocumentListContentBlock(TypeEnum? Type = null, DocumentText Text = null, DocumentBodyImage Image = null, DocumentBodyList List = null)
+        /// <param name="Text">Text. It must contain a value if the type of the block is Text..</param>
+        /// <param name="Image">Image. It must contain a value if the type of the block is Image..</param>
+        /// <param name="List">List. It must contain a value if the type of the block is UnorderedList or OrderedList..</param>
+        /// <param name="Video">Video. It must contain a value if the type of the block is Video..</param>
+        public DocumentListContentBlock(TypeEnum? Type = null, DocumentText Text = null, DocumentBodyImage Image = null, DocumentBodyList List = null, DocumentBodyVideo Video = null)
         {
             this.Type = Type;
             this.Text = Text;
             this.Image = Image;
             this.List = List;
+            this.Video = Video;
             
         }
         
@@ -115,6 +123,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DocumentBodyList List { get; set; }
 
 
+
+        /// <summary>
+        /// Video. It must contain a value if the type of the block is Video.
+        /// </summary>
+        /// <value>Video. It must contain a value if the type of the block is Video.</value>
+        [DataMember(Name="video", EmitDefaultValue=false)]
+        public DocumentBodyVideo Video { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  List: ").Append(List).Append("\n");
+            sb.Append("  Video: ").Append(Video).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -187,6 +205,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.List == other.List ||
                     this.List != null &&
                     this.List.Equals(other.List)
+                ) &&
+                (
+                    this.Video == other.Video ||
+                    this.Video != null &&
+                    this.Video.Equals(other.Video)
                 );
         }
 
@@ -212,6 +235,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.List != null)
                     hash = hash * 59 + this.List.GetHashCode();
+
+                if (this.Video != null)
+                    hash = hash * 59 + this.Video.GetHashCode();
 
                 return hash;
             }

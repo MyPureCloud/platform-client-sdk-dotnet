@@ -33,7 +33,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TriggerWithSegments">Trigger action map if any segment in the list is assigned to a given customer. (required).</param>
         /// <param name="TriggerWithEventConditions">List of event conditions that must be satisfied to trigger the action map..</param>
         /// <param name="TriggerWithOutcomeProbabilityConditions">Probability conditions for outcomes that must be satisfied to trigger the action map..</param>
-        /// <param name="TriggerWithOutcomePercentileConditions">Percentile conditions for outcomes that must be satisfied to trigger the action map..</param>
+        /// <param name="TriggerWithOutcomePercentileConditions">(deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map..</param>
+        /// <param name="TriggerWithOutcomeQuantileConditions">Quantile conditions for outcomes that must be satisfied to trigger the action map..</param>
         /// <param name="PageUrlConditions">URL conditions that a page must match for web actions to be displayable. (required).</param>
         /// <param name="Activation">Type of activation..</param>
         /// <param name="Weight">Weight of the action map with higher number denoting higher weight..</param>
@@ -44,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedDate">Timestamp indicating when the action map was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="StartDate">Timestamp at which the action map is scheduled to start firing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndDate">Timestamp at which the action map is scheduled to stop firing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public ActionMap(int? Version = null, bool? IsActive = null, string DisplayName = null, List<string> TriggerWithSegments = null, List<EventCondition> TriggerWithEventConditions = null, List<OutcomeProbabilityCondition> TriggerWithOutcomeProbabilityConditions = null, List<OutcomePercentileCondition> TriggerWithOutcomePercentileConditions = null, List<UrlCondition> PageUrlConditions = null, Activation Activation = null, int? Weight = null, ActionMapAction Action = null, ActionMapScheduleGroups ActionMapScheduleGroups = null, bool? IgnoreFrequencyCap = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? StartDate = null, DateTime? EndDate = null)
+        public ActionMap(int? Version = null, bool? IsActive = null, string DisplayName = null, List<string> TriggerWithSegments = null, List<EventCondition> TriggerWithEventConditions = null, List<OutcomeProbabilityCondition> TriggerWithOutcomeProbabilityConditions = null, List<OutcomePercentileCondition> TriggerWithOutcomePercentileConditions = null, List<OutcomeQuantileCondition> TriggerWithOutcomeQuantileConditions = null, List<UrlCondition> PageUrlConditions = null, Activation Activation = null, int? Weight = null, ActionMapAction Action = null, ActionMapScheduleGroups ActionMapScheduleGroups = null, bool? IgnoreFrequencyCap = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
             this.Version = Version;
             this.IsActive = IsActive;
@@ -53,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TriggerWithEventConditions = TriggerWithEventConditions;
             this.TriggerWithOutcomeProbabilityConditions = TriggerWithOutcomeProbabilityConditions;
             this.TriggerWithOutcomePercentileConditions = TriggerWithOutcomePercentileConditions;
+            this.TriggerWithOutcomeQuantileConditions = TriggerWithOutcomeQuantileConditions;
             this.PageUrlConditions = PageUrlConditions;
             this.Activation = Activation;
             this.Weight = Weight;
@@ -132,11 +134,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Percentile conditions for outcomes that must be satisfied to trigger the action map.
+        /// (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map.
         /// </summary>
-        /// <value>Percentile conditions for outcomes that must be satisfied to trigger the action map.</value>
+        /// <value>(deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map.</value>
         [DataMember(Name="triggerWithOutcomePercentileConditions", EmitDefaultValue=false)]
         public List<OutcomePercentileCondition> TriggerWithOutcomePercentileConditions { get; set; }
+
+
+
+        /// <summary>
+        /// Quantile conditions for outcomes that must be satisfied to trigger the action map.
+        /// </summary>
+        /// <value>Quantile conditions for outcomes that must be satisfied to trigger the action map.</value>
+        [DataMember(Name="triggerWithOutcomeQuantileConditions", EmitDefaultValue=false)]
+        public List<OutcomeQuantileCondition> TriggerWithOutcomeQuantileConditions { get; set; }
 
 
 
@@ -255,6 +266,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TriggerWithEventConditions: ").Append(TriggerWithEventConditions).Append("\n");
             sb.Append("  TriggerWithOutcomeProbabilityConditions: ").Append(TriggerWithOutcomeProbabilityConditions).Append("\n");
             sb.Append("  TriggerWithOutcomePercentileConditions: ").Append(TriggerWithOutcomePercentileConditions).Append("\n");
+            sb.Append("  TriggerWithOutcomeQuantileConditions: ").Append(TriggerWithOutcomeQuantileConditions).Append("\n");
             sb.Append("  PageUrlConditions: ").Append(PageUrlConditions).Append("\n");
             sb.Append("  Activation: ").Append(Activation).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
@@ -347,6 +359,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TriggerWithOutcomePercentileConditions.SequenceEqual(other.TriggerWithOutcomePercentileConditions)
                 ) &&
                 (
+                    this.TriggerWithOutcomeQuantileConditions == other.TriggerWithOutcomeQuantileConditions ||
+                    this.TriggerWithOutcomeQuantileConditions != null &&
+                    this.TriggerWithOutcomeQuantileConditions.SequenceEqual(other.TriggerWithOutcomeQuantileConditions)
+                ) &&
+                (
                     this.PageUrlConditions == other.PageUrlConditions ||
                     this.PageUrlConditions != null &&
                     this.PageUrlConditions.SequenceEqual(other.PageUrlConditions)
@@ -437,6 +454,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TriggerWithOutcomePercentileConditions != null)
                     hash = hash * 59 + this.TriggerWithOutcomePercentileConditions.GetHashCode();
+
+                if (this.TriggerWithOutcomeQuantileConditions != null)
+                    hash = hash * 59 + this.TriggerWithOutcomeQuantileConditions.GetHashCode();
 
                 if (this.PageUrlConditions != null)
                     hash = hash * 59 + this.PageUrlConditions.GetHashCode();

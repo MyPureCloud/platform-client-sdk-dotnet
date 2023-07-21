@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">Beginning of the date range to query in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the date range to query in ISO-8601 format (required).</param>
         /// <param name="UserIds">The IDs of the users to query. If not included, will query every user in the management unit.</param>
-        /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results. If not included, will default to false.</param>
+        /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results. Defaults to false if not specified..</param>
         public WfmHistoricalAdherenceBulkItem(string ManagementUnitId = null, DateTime? StartDate = null, DateTime? EndDate = null, List<string> UserIds = null, bool? IncludeExceptions = null)
         {
             this.ManagementUnitId = ManagementUnitId;
@@ -81,9 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether user exceptions should be returned as part of the results. If not included, will default to false
+        /// Whether user exceptions should be returned as part of the results. Defaults to false if not specified.
         /// </summary>
-        /// <value>Whether user exceptions should be returned as part of the results. If not included, will default to false</value>
+        /// <value>Whether user exceptions should be returned as part of the results. Defaults to false if not specified.</value>
         [DataMember(Name="includeExceptions", EmitDefaultValue=false)]
         public bool? IncludeExceptions { get; set; }
 

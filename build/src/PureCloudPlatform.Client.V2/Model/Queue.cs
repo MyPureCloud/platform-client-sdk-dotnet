@@ -90,7 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="PeerId">The ID of an associated external queue..</param>
-        public Queue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null)
+        /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
+        public Queue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -122,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OutboundMessagingAddresses = OutboundMessagingAddresses;
             this.OutboundEmailAddress = OutboundEmailAddress;
             this.PeerId = PeerId;
+            this.SuppressInQueueCallRecording = SuppressInQueueCallRecording;
             
         }
         
@@ -425,6 +427,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates whether recording in-queue calls is suppressed for this queue.
+        /// </summary>
+        /// <value>Indicates whether recording in-queue calls is suppressed for this queue.</value>
+        [DataMember(Name="suppressInQueueCallRecording", EmitDefaultValue=false)]
+        public bool? SuppressInQueueCallRecording { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -475,6 +486,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutboundMessagingAddresses: ").Append(OutboundMessagingAddresses).Append("\n");
             sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            sb.Append("  SuppressInQueueCallRecording: ").Append(SuppressInQueueCallRecording).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -687,6 +699,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PeerId.Equals(other.PeerId)
                 ) &&
                 (
+                    this.SuppressInQueueCallRecording == other.SuppressInQueueCallRecording ||
+                    this.SuppressInQueueCallRecording != null &&
+                    this.SuppressInQueueCallRecording.Equals(other.SuppressInQueueCallRecording)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -805,6 +822,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+
+                if (this.SuppressInQueueCallRecording != null)
+                    hash = hash * 59 + this.SuppressInQueueCallRecording.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -21,15 +21,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebDeploymentsJourneyContext" /> class.
         /// </summary>
+        /// <param name="JourneyAction">A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context).</param>
         /// <param name="Customer">Journey customer information. Used for linking the authenticated customer with the journey. .</param>
         /// <param name="CustomerSession">Contains the Journey System's customer session details..</param>
-        public WebDeploymentsJourneyContext(JourneyCustomer Customer = null, JourneyCustomerSession CustomerSession = null)
+        public WebDeploymentsJourneyContext(JourneyAction JourneyAction = null, JourneyCustomer Customer = null, JourneyCustomerSession CustomerSession = null)
         {
+            this.JourneyAction = JourneyAction;
             this.Customer = Customer;
             this.CustomerSession = CustomerSession;
             
         }
         
+
+
+        /// <summary>
+        /// A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context)
+        /// </summary>
+        /// <value>A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context)</value>
+        [DataMember(Name="journeyAction", EmitDefaultValue=false)]
+        public JourneyAction JourneyAction { get; set; }
+
 
 
         /// <summary>
@@ -58,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class WebDeploymentsJourneyContext {\n");
 
+            sb.Append("  JourneyAction: ").Append(JourneyAction).Append("\n");
             sb.Append("  Customer: ").Append(Customer).Append("\n");
             sb.Append("  CustomerSession: ").Append(CustomerSession).Append("\n");
             sb.Append("}\n");
@@ -101,6 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.JourneyAction == other.JourneyAction ||
+                    this.JourneyAction != null &&
+                    this.JourneyAction.Equals(other.JourneyAction)
+                ) &&
+                (
                     this.Customer == other.Customer ||
                     this.Customer != null &&
                     this.Customer.Equals(other.Customer)
@@ -123,6 +140,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.JourneyAction != null)
+                    hash = hash * 59 + this.JourneyAction.GetHashCode();
+
                 if (this.Customer != null)
                     hash = hash * 59 + this.Customer.GetHashCode();
 

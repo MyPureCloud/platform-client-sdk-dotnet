@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Image for "Image"
             /// </summary>
             [EnumMember(Value = "Image")]
-            Image
+            Image,
+            
+            /// <summary>
+            /// Enum Video for "Video"
+            /// </summary>
+            [EnumMember(Value = "Video")]
+            Video
         }
         /// <summary>
         /// The type of the paragraph block.
@@ -61,13 +67,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentContentBlock" /> class.
         /// </summary>
         /// <param name="Type">The type of the paragraph block. (required).</param>
-        /// <param name="Text">Text. It must contain a value if the type of the block is Text. (required).</param>
-        /// <param name="Image">Image. It must contain a value if the type of the block is Image. (required).</param>
-        public DocumentContentBlock(TypeEnum? Type = null, DocumentText Text = null, DocumentBodyImage Image = null)
+        /// <param name="Text">Text. It must contain a value if the type of the block is Text..</param>
+        /// <param name="Image">Image. It must contain a value if the type of the block is Image..</param>
+        /// <param name="Video">Video. It must contain a value if the type of the block is Video..</param>
+        public DocumentContentBlock(TypeEnum? Type = null, DocumentText Text = null, DocumentBodyImage Image = null, DocumentBodyVideo Video = null)
         {
             this.Type = Type;
             this.Text = Text;
             this.Image = Image;
+            this.Video = Video;
             
         }
         
@@ -92,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DocumentBodyImage Image { get; set; }
 
 
+
+        /// <summary>
+        /// Video. It must contain a value if the type of the block is Video.
+        /// </summary>
+        /// <value>Video. It must contain a value if the type of the block is Video.</value>
+        [DataMember(Name="video", EmitDefaultValue=false)]
+        public DocumentBodyVideo Video { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  Video: ").Append(Video).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Image == other.Image ||
                     this.Image != null &&
                     this.Image.Equals(other.Image)
+                ) &&
+                (
+                    this.Video == other.Video ||
+                    this.Video != null &&
+                    this.Video.Equals(other.Video)
                 );
         }
 
@@ -180,6 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Image != null)
                     hash = hash * 59 + this.Image.GetHashCode();
+
+                if (this.Video != null)
+                    hash = hash * 59 + this.Video.GetHashCode();
 
                 return hash;
             }

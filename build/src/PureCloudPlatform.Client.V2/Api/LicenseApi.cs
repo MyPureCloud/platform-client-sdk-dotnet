@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<LicenseDefinition>> GetLicenseDefinitionsWithHttpInfo ();
 
         /// <summary>
-        /// Get PureCloud license feature toggle value.
+        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles
         /// </summary>
         /// <remarks>
         /// 
@@ -75,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LicenseOrgToggle GetLicenseToggle (string featureName);
 
         /// <summary>
-        /// Get PureCloud license feature toggle value.
+        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles
         /// </summary>
         /// <remarks>
         /// 
@@ -185,7 +185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<LicenseUpdateStatus>> PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
-        /// Switch PureCloud license feature toggle value.
+        /// Deprecated. No alternative required - this endpoint has no effect
         /// </summary>
         /// <remarks>
         /// 
@@ -197,7 +197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LicenseOrgToggle PostLicenseToggle (string featureName);
 
         /// <summary>
-        /// Switch PureCloud license feature toggle value.
+        /// Deprecated. No alternative required - this endpoint has no effect
         /// </summary>
         /// <remarks>
         /// 
@@ -283,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<LicenseDefinition>>> GetLicenseDefinitionsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get PureCloud license feature toggle value.
+        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles
         /// </summary>
         /// <remarks>
         /// 
@@ -295,7 +295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LicenseOrgToggle> GetLicenseToggleAsync (string featureName);
 
         /// <summary>
-        /// Get PureCloud license feature toggle value.
+        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles
         /// </summary>
         /// <remarks>
         /// 
@@ -405,7 +405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<LicenseUpdateStatus>>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
-        /// Switch PureCloud license feature toggle value.
+        /// Deprecated. No alternative required - this endpoint has no effect
         /// </summary>
         /// <remarks>
         /// 
@@ -417,7 +417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LicenseOrgToggle> PostLicenseToggleAsync (string featureName);
 
         /// <summary>
-        /// Switch PureCloud license feature toggle value.
+        /// Deprecated. No alternative required - this endpoint has no effect
         /// </summary>
         /// <remarks>
         /// 
@@ -938,7 +938,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get PureCloud license feature toggle value. 
+        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -952,7 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get PureCloud license feature toggle value. 
+        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1038,7 +1038,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get PureCloud license feature toggle value. 
+        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1053,7 +1053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get PureCloud license feature toggle value. 
+        /// Deprecated - no alternative required. This operation will always return 'true' for requested toggles 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1958,7 +1958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Switch PureCloud license feature toggle value. 
+        /// Deprecated. No alternative required - this endpoint has no effect 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1972,7 +1972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Switch PureCloud license feature toggle value. 
+        /// Deprecated. No alternative required - this endpoint has no effect 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2058,7 +2058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Switch PureCloud license feature toggle value. 
+        /// Deprecated. No alternative required - this endpoint has no effect 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2073,7 +2073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Switch PureCloud license feature toggle value. 
+        /// Deprecated. No alternative required - this endpoint has no effect 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

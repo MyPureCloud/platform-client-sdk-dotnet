@@ -86,10 +86,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">Screen module type.</param>
         /// <param name="Enabled">Whether or not support center screen module is enabled.</param>
-        public SupportCenterModuleSetting(TypeEnum? Type = null, bool? Enabled = null)
+        /// <param name="CompactCategoryModuleTemplate">Compact category module template.</param>
+        /// <param name="DetailedCategoryModuleTemplate">Detailed category module template.</param>
+        public SupportCenterModuleSetting(TypeEnum? Type = null, bool? Enabled = null, SupportCenterCompactCategoryModuleTemplate CompactCategoryModuleTemplate = null, SupportCenterDetailedCategoryModuleTemplate DetailedCategoryModuleTemplate = null)
         {
             this.Type = Type;
             this.Enabled = Enabled;
+            this.CompactCategoryModuleTemplate = CompactCategoryModuleTemplate;
+            this.DetailedCategoryModuleTemplate = DetailedCategoryModuleTemplate;
             
         }
         
@@ -105,6 +109,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Enabled { get; set; }
 
 
+
+        /// <summary>
+        /// Compact category module template
+        /// </summary>
+        /// <value>Compact category module template</value>
+        [DataMember(Name="compactCategoryModuleTemplate", EmitDefaultValue=false)]
+        public SupportCenterCompactCategoryModuleTemplate CompactCategoryModuleTemplate { get; set; }
+
+
+
+        /// <summary>
+        /// Detailed category module template
+        /// </summary>
+        /// <value>Detailed category module template</value>
+        [DataMember(Name="detailedCategoryModuleTemplate", EmitDefaultValue=false)]
+        public SupportCenterDetailedCategoryModuleTemplate DetailedCategoryModuleTemplate { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,6 +138,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  CompactCategoryModuleTemplate: ").Append(CompactCategoryModuleTemplate).Append("\n");
+            sb.Append("  DetailedCategoryModuleTemplate: ").Append(DetailedCategoryModuleTemplate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,6 +189,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.CompactCategoryModuleTemplate == other.CompactCategoryModuleTemplate ||
+                    this.CompactCategoryModuleTemplate != null &&
+                    this.CompactCategoryModuleTemplate.Equals(other.CompactCategoryModuleTemplate)
+                ) &&
+                (
+                    this.DetailedCategoryModuleTemplate == other.DetailedCategoryModuleTemplate ||
+                    this.DetailedCategoryModuleTemplate != null &&
+                    this.DetailedCategoryModuleTemplate.Equals(other.DetailedCategoryModuleTemplate)
                 );
         }
 
@@ -184,6 +218,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.CompactCategoryModuleTemplate != null)
+                    hash = hash * 59 + this.CompactCategoryModuleTemplate.GetHashCode();
+
+                if (this.DetailedCategoryModuleTemplate != null)
+                    hash = hash * 59 + this.DetailedCategoryModuleTemplate.GetHashCode();
 
                 return hash;
             }

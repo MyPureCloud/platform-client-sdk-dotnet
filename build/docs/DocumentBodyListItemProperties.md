@@ -13,6 +13,8 @@ title: DocumentBodyListItemProperties
 | **FontSize** | **string** | The font size for the list item. The valid values in &#39;em&#39;. | [optional] |
 | **FontType** | **string** | The font type for the list item. | [optional] |
 | **TextColor** | **string** | The text color for the list item. The valid values in hex color code representation. For example black color - #000000 | [optional] |
+| **UnorderedType** | **string** | The type of icon for the unordered list. | [optional] |
+| **OrderedType** | **string** | The type of icon for the ordered list. | [optional] |
 {: class="table table-striped"}
 
 

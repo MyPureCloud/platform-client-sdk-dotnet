@@ -41,6 +41,7 @@ title: QueueRequest
 | **OutboundMessagingAddresses** | [**QueueMessagingAddresses**](QueueMessagingAddresses.html) | The messaging addresses for the queue. | [optional] |
 | **OutboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) |  | [optional] |
 | **PeerId** | **string** | The ID of an associated external queue. | [optional] |
+| **SuppressInQueueCallRecording** | **bool?** | Indicates whether recording in-queue calls is suppressed for this queue. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

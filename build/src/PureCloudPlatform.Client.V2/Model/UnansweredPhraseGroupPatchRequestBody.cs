@@ -28,9 +28,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UnansweredPhraseGroupPatchRequestBody" /> class.
         /// </summary>
         /// <param name="PhraseAssociations">List of phrases and documents to be linked (required).</param>
-        public UnansweredPhraseGroupPatchRequestBody(List<PhraseAssociations> PhraseAssociations = null)
+        /// <param name="DateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        /// <param name="DateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        public UnansweredPhraseGroupPatchRequestBody(List<PhraseAssociations> PhraseAssociations = null, String DateStart = null, String DateEnd = null)
         {
             this.PhraseAssociations = PhraseAssociations;
+            this.DateStart = DateStart;
+            this.DateEnd = DateEnd;
             
         }
         
@@ -44,6 +48,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<PhraseAssociations> PhraseAssociations { get; set; }
 
 
+
+        /// <summary>
+        /// The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="dateStart", EmitDefaultValue=false)]
+        public String DateStart { get; set; }
+
+
+
+        /// <summary>
+        /// The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="dateEnd", EmitDefaultValue=false)]
+        public String DateEnd { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class UnansweredPhraseGroupPatchRequestBody {\n");
 
             sb.Append("  PhraseAssociations: ").Append(PhraseAssociations).Append("\n");
+            sb.Append("  DateStart: ").Append(DateStart).Append("\n");
+            sb.Append("  DateEnd: ").Append(DateEnd).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +122,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhraseAssociations == other.PhraseAssociations ||
                     this.PhraseAssociations != null &&
                     this.PhraseAssociations.SequenceEqual(other.PhraseAssociations)
+                ) &&
+                (
+                    this.DateStart == other.DateStart ||
+                    this.DateStart != null &&
+                    this.DateStart.Equals(other.DateStart)
+                ) &&
+                (
+                    this.DateEnd == other.DateEnd ||
+                    this.DateEnd != null &&
+                    this.DateEnd.Equals(other.DateEnd)
                 );
         }
 
@@ -114,6 +148,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.PhraseAssociations != null)
                     hash = hash * 59 + this.PhraseAssociations.GetHashCode();
+
+                if (this.DateStart != null)
+                    hash = hash * 59 + this.DateStart.GetHashCode();
+
+                if (this.DateEnd != null)
+                    hash = hash * 59 + this.DateEnd.GetHashCode();
 
                 return hash;
             }

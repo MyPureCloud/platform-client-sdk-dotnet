@@ -2561,7 +2561,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebaseunansweredgroup"></a>
 
-## [**UnansweredGroup**](UnansweredGroup.html) GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null)
+## [**UnansweredGroup**](UnansweredGroup.html) GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null)
 
 
 
@@ -2596,11 +2596,13 @@ namespace Example
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
             var groupId = groupId_example;  // string | The ID of the group to be retrieved.
             var app = app_example;  // string | The app value to be used for filtering phrases. (optional) 
+            var dateStart = 2013-10-20;  // String | The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var dateEnd = 2013-10-20;  // String | The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
 
             try
             { 
                 // Get knowledge base unanswered group for a particular groupId
-                UnansweredGroup result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId, groupId, app);
+                UnansweredGroup result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId, groupId, app, dateStart, dateEnd);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2620,6 +2622,8 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **groupId** | **string**| The ID of the group to be retrieved. |  |
 | **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
+| **dateStart** | **String**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **dateEnd** | **String**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2628,7 +2632,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebaseunansweredgroupphrasegroup"></a>
 
-## [**UnansweredPhraseGroup**](UnansweredPhraseGroup.html) GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null)
+## [**UnansweredPhraseGroup**](UnansweredPhraseGroup.html) GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null)
 
 
 
@@ -2664,11 +2668,13 @@ namespace Example
             var groupId = groupId_example;  // string | The ID of the group to be retrieved.
             var phraseGroupId = phraseGroupId_example;  // string | The ID of the phraseGroup to be retrieved.
             var app = app_example;  // string | The app value to be used for filtering phrases. (optional) 
+            var dateStart = 2013-10-20;  // String | The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var dateEnd = 2013-10-20;  // String | The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
 
             try
             { 
                 // Get knowledge base unanswered phrase group for a particular phraseGroupId
-                UnansweredPhraseGroup result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId, groupId, phraseGroupId, app);
+                UnansweredPhraseGroup result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId, groupId, phraseGroupId, app, dateStart, dateEnd);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2689,6 +2695,8 @@ namespace Example
 | **groupId** | **string**| The ID of the group to be retrieved. |  |
 | **phraseGroupId** | **string**| The ID of the phraseGroup to be retrieved. |  |
 | **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
+| **dateStart** | **String**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **dateEnd** | **String**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2697,7 +2705,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebaseunansweredgroups"></a>
 
-## [**UnansweredGroups**](UnansweredGroups.html) GetKnowledgeKnowledgebaseUnansweredGroups (string knowledgeBaseId, string app = null)
+## [**UnansweredGroups**](UnansweredGroups.html) GetKnowledgeKnowledgebaseUnansweredGroups (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null)
 
 
 
@@ -2731,11 +2739,13 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
             var app = app_example;  // string | The app value to be used for filtering phrases. (optional) 
+            var dateStart = 2013-10-20;  // String | The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var dateEnd = 2013-10-20;  // String | The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
 
             try
             { 
                 // Get knowledge base unanswered groups
-                UnansweredGroups result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId, app);
+                UnansweredGroups result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId, app, dateStart, dateEnd);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2754,6 +2764,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
+| **dateStart** | **String**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
+| **dateEnd** | **String**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

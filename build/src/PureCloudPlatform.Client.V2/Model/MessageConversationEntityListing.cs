@@ -16,7 +16,7 @@ namespace PureCloudPlatform.Client.V2.Model
     /// MessageConversationEntityListing
     /// </summary>
     [DataContract]
-    public partial class MessageConversationEntityListing :  IEquatable<MessageConversationEntityListing>, IPagedResource<EmailConversation>
+    public partial class MessageConversationEntityListing :  IEquatable<MessageConversationEntityListing>, IPagedResource<MessageConversation>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageConversationEntityListing" /> class.
@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastUri">LastUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public MessageConversationEntityListing(List<EmailConversation> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
+        public MessageConversationEntityListing(List<MessageConversation> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<EmailConversation> Entities { get; set; }
+        public List<MessageConversation> Entities { get; set; }
 
 
 

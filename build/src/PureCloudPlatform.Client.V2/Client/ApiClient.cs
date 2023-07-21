@@ -226,7 +226,7 @@ namespace PureCloudPlatform.Client.V2.Client
            ClientOptions.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "182.0.0");
+            request.AddHeader("purecloud-sdk", "183.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
@@ -492,7 +492,11 @@ namespace PureCloudPlatform.Client.V2.Client
         {
             try
             {
-                return obj != null ? JsonConvert.SerializeObject(obj, serializerSettings) : null;
+                if (obj != null){
+                    return obj is string str ? str : JsonConvert.SerializeObject(obj);
+                } else {
+                    return null;
+                }
             }
             catch (Exception e)
             {

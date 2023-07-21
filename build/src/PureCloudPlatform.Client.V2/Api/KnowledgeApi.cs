@@ -1120,9 +1120,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>UnansweredGroup</returns>
         
-        UnansweredGroup GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null);
+        UnansweredGroup GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered group for a particular groupId
@@ -1134,9 +1136,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of UnansweredGroup</returns>
         
-        ApiResponse<UnansweredGroup> GetKnowledgeKnowledgebaseUnansweredGroupWithHttpInfo (string knowledgeBaseId, string groupId, string app = null);
+        ApiResponse<UnansweredGroup> GetKnowledgeKnowledgebaseUnansweredGroupWithHttpInfo (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered phrase group for a particular phraseGroupId
@@ -1149,9 +1153,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="phraseGroupId">The ID of the phraseGroup to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>UnansweredPhraseGroup</returns>
         
-        UnansweredPhraseGroup GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null);
+        UnansweredPhraseGroup GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered phrase group for a particular phraseGroupId
@@ -1164,9 +1170,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="phraseGroupId">The ID of the phraseGroup to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of UnansweredPhraseGroup</returns>
         
-        ApiResponse<UnansweredPhraseGroup> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithHttpInfo (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null);
+        ApiResponse<UnansweredPhraseGroup> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithHttpInfo (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered groups
@@ -1177,9 +1185,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>UnansweredGroups</returns>
         
-        UnansweredGroups GetKnowledgeKnowledgebaseUnansweredGroups (string knowledgeBaseId, string app = null);
+        UnansweredGroups GetKnowledgeKnowledgebaseUnansweredGroups (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered groups
@@ -1190,9 +1200,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of UnansweredGroups</returns>
         
-        ApiResponse<UnansweredGroups> GetKnowledgeKnowledgebaseUnansweredGroupsWithHttpInfo (string knowledgeBaseId, string app = null);
+        ApiResponse<UnansweredGroups> GetKnowledgeKnowledgebaseUnansweredGroupsWithHttpInfo (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge bases
@@ -3360,9 +3372,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of UnansweredGroup</returns>
         
-        System.Threading.Tasks.Task<UnansweredGroup> GetKnowledgeKnowledgebaseUnansweredGroupAsync (string knowledgeBaseId, string groupId, string app = null);
+        System.Threading.Tasks.Task<UnansweredGroup> GetKnowledgeKnowledgebaseUnansweredGroupAsync (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered group for a particular groupId
@@ -3374,9 +3388,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (UnansweredGroup)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UnansweredGroup>> GetKnowledgeKnowledgebaseUnansweredGroupAsyncWithHttpInfo (string knowledgeBaseId, string groupId, string app = null);
+        System.Threading.Tasks.Task<ApiResponse<UnansweredGroup>> GetKnowledgeKnowledgebaseUnansweredGroupAsyncWithHttpInfo (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered phrase group for a particular phraseGroupId
@@ -3389,9 +3405,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="phraseGroupId">The ID of the phraseGroup to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of UnansweredPhraseGroup</returns>
         
-        System.Threading.Tasks.Task<UnansweredPhraseGroup> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsync (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null);
+        System.Threading.Tasks.Task<UnansweredPhraseGroup> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsync (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered phrase group for a particular phraseGroupId
@@ -3404,9 +3422,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="phraseGroupId">The ID of the phraseGroup to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (UnansweredPhraseGroup)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UnansweredPhraseGroup>> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsyncWithHttpInfo (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null);
+        System.Threading.Tasks.Task<ApiResponse<UnansweredPhraseGroup>> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsyncWithHttpInfo (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered groups
@@ -3417,9 +3437,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of UnansweredGroups</returns>
         
-        System.Threading.Tasks.Task<UnansweredGroups> GetKnowledgeKnowledgebaseUnansweredGroupsAsync (string knowledgeBaseId, string app = null);
+        System.Threading.Tasks.Task<UnansweredGroups> GetKnowledgeKnowledgebaseUnansweredGroupsAsync (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge base unanswered groups
@@ -3430,9 +3452,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (UnansweredGroups)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UnansweredGroups>> GetKnowledgeKnowledgebaseUnansweredGroupsAsyncWithHttpInfo (string knowledgeBaseId, string app = null);
+        System.Threading.Tasks.Task<ApiResponse<UnansweredGroups>> GetKnowledgeKnowledgebaseUnansweredGroupsAsyncWithHttpInfo (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null);
 
         /// <summary>
         /// Get knowledge bases
@@ -12844,11 +12868,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>UnansweredGroup</returns>
         
-        public UnansweredGroup GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null)
+        public UnansweredGroup GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null)
         {
-             ApiResponse<UnansweredGroup> localVarResponse = GetKnowledgeKnowledgebaseUnansweredGroupWithHttpInfo(knowledgeBaseId, groupId, app);
+             ApiResponse<UnansweredGroup> localVarResponse = GetKnowledgeKnowledgebaseUnansweredGroupWithHttpInfo(knowledgeBaseId, groupId, app, dateStart, dateEnd);
              return localVarResponse.Data;
         }
 
@@ -12860,9 +12886,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of UnansweredGroup</returns>
         
-        public ApiResponse< UnansweredGroup > GetKnowledgeKnowledgebaseUnansweredGroupWithHttpInfo (string knowledgeBaseId, string groupId, string app = null)
+        public ApiResponse< UnansweredGroup > GetKnowledgeKnowledgebaseUnansweredGroupWithHttpInfo (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -12906,6 +12934,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (app != null) localVarQueryParams.Add(new Tuple<string, string>("app", this.Configuration.ApiClient.ParameterToString(app)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
 
             // Header params
 
@@ -12953,11 +12983,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of UnansweredGroup</returns>
         
-        public async System.Threading.Tasks.Task<UnansweredGroup> GetKnowledgeKnowledgebaseUnansweredGroupAsync (string knowledgeBaseId, string groupId, string app = null)
+        public async System.Threading.Tasks.Task<UnansweredGroup> GetKnowledgeKnowledgebaseUnansweredGroupAsync (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null)
         {
-             ApiResponse<UnansweredGroup> localVarResponse = await GetKnowledgeKnowledgebaseUnansweredGroupAsyncWithHttpInfo(knowledgeBaseId, groupId, app);
+             ApiResponse<UnansweredGroup> localVarResponse = await GetKnowledgeKnowledgebaseUnansweredGroupAsyncWithHttpInfo(knowledgeBaseId, groupId, app, dateStart, dateEnd);
              return localVarResponse.Data;
 
         }
@@ -12970,9 +13002,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (UnansweredGroup)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UnansweredGroup>> GetKnowledgeKnowledgebaseUnansweredGroupAsyncWithHttpInfo (string knowledgeBaseId, string groupId, string app = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UnansweredGroup>> GetKnowledgeKnowledgebaseUnansweredGroupAsyncWithHttpInfo (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -13018,6 +13052,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (app != null) localVarQueryParams.Add(new Tuple<string, string>("app", this.Configuration.ApiClient.ParameterToString(app)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
 
             // Header params
 
@@ -13067,11 +13103,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="phraseGroupId">The ID of the phraseGroup to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>UnansweredPhraseGroup</returns>
         
-        public UnansweredPhraseGroup GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null)
+        public UnansweredPhraseGroup GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null)
         {
-             ApiResponse<UnansweredPhraseGroup> localVarResponse = GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithHttpInfo(knowledgeBaseId, groupId, phraseGroupId, app);
+             ApiResponse<UnansweredPhraseGroup> localVarResponse = GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithHttpInfo(knowledgeBaseId, groupId, phraseGroupId, app, dateStart, dateEnd);
              return localVarResponse.Data;
         }
 
@@ -13084,9 +13122,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="phraseGroupId">The ID of the phraseGroup to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of UnansweredPhraseGroup</returns>
         
-        public ApiResponse< UnansweredPhraseGroup > GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithHttpInfo (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null)
+        public ApiResponse< UnansweredPhraseGroup > GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithHttpInfo (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -13134,6 +13174,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (app != null) localVarQueryParams.Add(new Tuple<string, string>("app", this.Configuration.ApiClient.ParameterToString(app)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
 
             // Header params
 
@@ -13182,11 +13224,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="phraseGroupId">The ID of the phraseGroup to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of UnansweredPhraseGroup</returns>
         
-        public async System.Threading.Tasks.Task<UnansweredPhraseGroup> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsync (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null)
+        public async System.Threading.Tasks.Task<UnansweredPhraseGroup> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsync (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null)
         {
-             ApiResponse<UnansweredPhraseGroup> localVarResponse = await GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsyncWithHttpInfo(knowledgeBaseId, groupId, phraseGroupId, app);
+             ApiResponse<UnansweredPhraseGroup> localVarResponse = await GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsyncWithHttpInfo(knowledgeBaseId, groupId, phraseGroupId, app, dateStart, dateEnd);
              return localVarResponse.Data;
 
         }
@@ -13200,9 +13244,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of the group to be retrieved.</param>
         /// <param name="phraseGroupId">The ID of the phraseGroup to be retrieved.</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (UnansweredPhraseGroup)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UnansweredPhraseGroup>> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsyncWithHttpInfo (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UnansweredPhraseGroup>> GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupAsyncWithHttpInfo (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -13253,6 +13299,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (app != null) localVarQueryParams.Add(new Tuple<string, string>("app", this.Configuration.ApiClient.ParameterToString(app)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
 
             // Header params
 
@@ -13300,11 +13348,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>UnansweredGroups</returns>
         
-        public UnansweredGroups GetKnowledgeKnowledgebaseUnansweredGroups (string knowledgeBaseId, string app = null)
+        public UnansweredGroups GetKnowledgeKnowledgebaseUnansweredGroups (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null)
         {
-             ApiResponse<UnansweredGroups> localVarResponse = GetKnowledgeKnowledgebaseUnansweredGroupsWithHttpInfo(knowledgeBaseId, app);
+             ApiResponse<UnansweredGroups> localVarResponse = GetKnowledgeKnowledgebaseUnansweredGroupsWithHttpInfo(knowledgeBaseId, app, dateStart, dateEnd);
              return localVarResponse.Data;
         }
 
@@ -13315,9 +13365,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of UnansweredGroups</returns>
         
-        public ApiResponse< UnansweredGroups > GetKnowledgeKnowledgebaseUnansweredGroupsWithHttpInfo (string knowledgeBaseId, string app = null)
+        public ApiResponse< UnansweredGroups > GetKnowledgeKnowledgebaseUnansweredGroupsWithHttpInfo (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -13357,6 +13409,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (app != null) localVarQueryParams.Add(new Tuple<string, string>("app", this.Configuration.ApiClient.ParameterToString(app)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
 
             // Header params
 
@@ -13403,11 +13457,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of UnansweredGroups</returns>
         
-        public async System.Threading.Tasks.Task<UnansweredGroups> GetKnowledgeKnowledgebaseUnansweredGroupsAsync (string knowledgeBaseId, string app = null)
+        public async System.Threading.Tasks.Task<UnansweredGroups> GetKnowledgeKnowledgebaseUnansweredGroupsAsync (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null)
         {
-             ApiResponse<UnansweredGroups> localVarResponse = await GetKnowledgeKnowledgebaseUnansweredGroupsAsyncWithHttpInfo(knowledgeBaseId, app);
+             ApiResponse<UnansweredGroups> localVarResponse = await GetKnowledgeKnowledgebaseUnansweredGroupsAsyncWithHttpInfo(knowledgeBaseId, app, dateStart, dateEnd);
              return localVarResponse.Data;
 
         }
@@ -13419,9 +13475,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="app">The app value to be used for filtering phrases. (optional)</param>
+        /// <param name="dateStart">The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="dateEnd">The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (UnansweredGroups)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UnansweredGroups>> GetKnowledgeKnowledgebaseUnansweredGroupsAsyncWithHttpInfo (string knowledgeBaseId, string app = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UnansweredGroups>> GetKnowledgeKnowledgebaseUnansweredGroupsAsyncWithHttpInfo (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -13462,6 +13520,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (app != null) localVarQueryParams.Add(new Tuple<string, string>("app", this.Configuration.ApiClient.ParameterToString(app)));
+            if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
+            if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
 
             // Header params
 

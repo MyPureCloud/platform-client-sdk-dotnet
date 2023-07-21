@@ -3676,7 +3676,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeIds = edgeIds_example;  // string | Comma separated list of Edge Id's
+            var edgeIds = edgeIds_example;  // string | Comma separated list of Edge Id's. Maximum of 100 edge ids allowed.
 
             try
             { 
@@ -3698,7 +3698,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **edgeIds** | **string**| Comma separated list of Edge Id&#39;s |  |
+| **edgeIds** | **string**| Comma separated list of Edge Id&#39;s. Maximum of 100 edge ids allowed. |  |
 {: class="table table-striped"}
 
 ### Return type

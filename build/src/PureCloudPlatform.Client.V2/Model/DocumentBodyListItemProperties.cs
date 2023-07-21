@@ -184,6 +184,102 @@ namespace PureCloudPlatform.Client.V2.Model
             Preformatted
         }
         /// <summary>
+        /// The type of icon for the unordered list.
+        /// </summary>
+        /// <value>The type of icon for the unordered list.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum UnorderedTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Normal for "Normal"
+            /// </summary>
+            [EnumMember(Value = "Normal")]
+            Normal,
+            
+            /// <summary>
+            /// Enum Square for "Square"
+            /// </summary>
+            [EnumMember(Value = "Square")]
+            Square,
+            
+            /// <summary>
+            /// Enum Circle for "Circle"
+            /// </summary>
+            [EnumMember(Value = "Circle")]
+            Circle,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None
+        }
+        /// <summary>
+        /// The type of icon for the ordered list.
+        /// </summary>
+        /// <value>The type of icon for the ordered list.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OrderedTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Number for "Number"
+            /// </summary>
+            [EnumMember(Value = "Number")]
+            Number,
+            
+            /// <summary>
+            /// Enum Loweralpha for "LowerAlpha"
+            /// </summary>
+            [EnumMember(Value = "LowerAlpha")]
+            Loweralpha,
+            
+            /// <summary>
+            /// Enum Lowergreek for "LowerGreek"
+            /// </summary>
+            [EnumMember(Value = "LowerGreek")]
+            Lowergreek,
+            
+            /// <summary>
+            /// Enum Lowerroman for "LowerRoman"
+            /// </summary>
+            [EnumMember(Value = "LowerRoman")]
+            Lowerroman,
+            
+            /// <summary>
+            /// Enum Upperalpha for "UpperAlpha"
+            /// </summary>
+            [EnumMember(Value = "UpperAlpha")]
+            Upperalpha,
+            
+            /// <summary>
+            /// Enum Upperroman for "UpperRoman"
+            /// </summary>
+            [EnumMember(Value = "UpperRoman")]
+            Upperroman,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None
+        }
+        /// <summary>
         /// The align type for the list item.
         /// </summary>
         /// <value>The align type for the list item.</value>
@@ -202,6 +298,18 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="fontType", EmitDefaultValue=false)]
         public FontTypeEnum? FontType { get; set; }
         /// <summary>
+        /// The type of icon for the unordered list.
+        /// </summary>
+        /// <value>The type of icon for the unordered list.</value>
+        [DataMember(Name="unorderedType", EmitDefaultValue=false)]
+        public UnorderedTypeEnum? UnorderedType { get; set; }
+        /// <summary>
+        /// The type of icon for the ordered list.
+        /// </summary>
+        /// <value>The type of icon for the ordered list.</value>
+        [DataMember(Name="orderedType", EmitDefaultValue=false)]
+        public OrderedTypeEnum? OrderedType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DocumentBodyListItemProperties" /> class.
         /// </summary>
         /// <param name="BackgroundColor">The background color for the list item. The valid values in hex color code representation. For example black color - #000000.</param>
@@ -210,7 +318,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FontSize">The font size for the list item. The valid values in 'em'..</param>
         /// <param name="FontType">The font type for the list item..</param>
         /// <param name="TextColor">The text color for the list item. The valid values in hex color code representation. For example black color - #000000.</param>
-        public DocumentBodyListItemProperties(string BackgroundColor = null, AlignEnum? Align = null, float? Indentation = null, FontSizeEnum? FontSize = null, FontTypeEnum? FontType = null, string TextColor = null)
+        /// <param name="UnorderedType">The type of icon for the unordered list..</param>
+        /// <param name="OrderedType">The type of icon for the ordered list..</param>
+        public DocumentBodyListItemProperties(string BackgroundColor = null, AlignEnum? Align = null, float? Indentation = null, FontSizeEnum? FontSize = null, FontTypeEnum? FontType = null, string TextColor = null, UnorderedTypeEnum? UnorderedType = null, OrderedTypeEnum? OrderedType = null)
         {
             this.BackgroundColor = BackgroundColor;
             this.Align = Align;
@@ -218,6 +328,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FontSize = FontSize;
             this.FontType = FontType;
             this.TextColor = TextColor;
+            this.UnorderedType = UnorderedType;
+            this.OrderedType = OrderedType;
             
         }
         
@@ -255,6 +367,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TextColor { get; set; }
 
 
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -270,6 +386,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FontSize: ").Append(FontSize).Append("\n");
             sb.Append("  FontType: ").Append(FontType).Append("\n");
             sb.Append("  TextColor: ").Append(TextColor).Append("\n");
+            sb.Append("  UnorderedType: ").Append(UnorderedType).Append("\n");
+            sb.Append("  OrderedType: ").Append(OrderedType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -339,6 +457,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TextColor == other.TextColor ||
                     this.TextColor != null &&
                     this.TextColor.Equals(other.TextColor)
+                ) &&
+                (
+                    this.UnorderedType == other.UnorderedType ||
+                    this.UnorderedType != null &&
+                    this.UnorderedType.Equals(other.UnorderedType)
+                ) &&
+                (
+                    this.OrderedType == other.OrderedType ||
+                    this.OrderedType != null &&
+                    this.OrderedType.Equals(other.OrderedType)
                 );
         }
 
@@ -370,6 +498,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TextColor != null)
                     hash = hash * 59 + this.TextColor.GetHashCode();
+
+                if (this.UnorderedType != null)
+                    hash = hash * 59 + this.UnorderedType.GetHashCode();
+
+                if (this.OrderedType != null)
+                    hash = hash * 59 + this.OrderedType.GetHashCode();
 
                 return hash;
             }

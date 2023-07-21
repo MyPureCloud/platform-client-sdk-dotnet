@@ -9,12 +9,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetLicenseDefinition**](LicenseApi.html#getlicensedefinition) | **Get** /api/v2/license/definitions/{licenseId} | Get PureCloud license definition. |
 | [**GetLicenseDefinitions**](LicenseApi.html#getlicensedefinitions) | **Get** /api/v2/license/definitions | Get all PureCloud license definitions available for the organization. |
-| [**GetLicenseToggle**](LicenseApi.html#getlicensetoggle) | **Get** /api/v2/license/toggles/{featureName} | Get PureCloud license feature toggle value. |
+| [**GetLicenseToggle**](LicenseApi.html#getlicensetoggle) | **Get** /api/v2/license/toggles/{featureName} | Deprecated - no alternative required. This operation will always return &#39;true&#39; for requested toggles |
 | [**GetLicenseUser**](LicenseApi.html#getlicenseuser) | **Get** /api/v2/license/users/{userId} | Get licenses for specified user. |
 | [**GetLicenseUsers**](LicenseApi.html#getlicenseusers) | **Get** /api/v2/license/users | Get a page of users and their licenses |
 | [**PostLicenseInfer**](LicenseApi.html#postlicenseinfer) | **Post** /api/v2/license/infer | Get a list of licenses inferred based on a list of roleIds |
 | [**PostLicenseOrganization**](LicenseApi.html#postlicenseorganization) | **Post** /api/v2/license/organization | Update the organization&#39;s license assignments in a batch. |
-| [**PostLicenseToggle**](LicenseApi.html#postlicensetoggle) | **Post** /api/v2/license/toggles/{featureName} | Switch PureCloud license feature toggle value. |
+| [**PostLicenseToggle**](LicenseApi.html#postlicensetoggle) | **Post** /api/v2/license/toggles/{featureName} | Deprecated. No alternative required - this endpoint has no effect |
 | [**PostLicenseUsers**](LicenseApi.html#postlicenseusers) | **Post** /api/v2/license/users | Fetch user licenses in a batch. |
 {: class="table table-striped"}
 
@@ -147,11 +147,10 @@ This endpoint does require any parameters.
 
 
 
-Get PureCloud license feature toggle value.
+Deprecated - no alternative required. This operation will always return 'true' for requested toggles
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* authorization:grant:add
 
 ### Example
 ```{"language":"csharp"}
@@ -179,7 +178,7 @@ namespace Example
 
             try
             { 
-                // Get PureCloud license feature toggle value.
+                // Deprecated - no alternative required. This operation will always return 'true' for requested toggles
                 LicenseOrgToggle result = apiInstance.GetLicenseToggle(featureName);
                 Debug.WriteLine(result);
             }
@@ -465,11 +464,10 @@ namespace Example
 
 
 
-Switch PureCloud license feature toggle value.
+Deprecated. No alternative required - this endpoint has no effect
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* authorization:grant:add
 
 ### Example
 ```{"language":"csharp"}
@@ -497,7 +495,7 @@ namespace Example
 
             try
             { 
-                // Switch PureCloud license feature toggle value.
+                // Deprecated. No alternative required - this endpoint has no effect
                 LicenseOrgToggle result = apiInstance.PostLicenseToggle(featureName);
                 Debug.WriteLine(result);
             }

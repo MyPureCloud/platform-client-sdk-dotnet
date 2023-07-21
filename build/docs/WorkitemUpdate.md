@@ -12,7 +12,7 @@ title: WorkitemUpdate
 | **DateDue** | **DateTime?** | The due date of the Workitem. Can not be greater than 365 days from the current time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateExpires** | **DateTime?** | The expiry date of the Workitem. Can not be greater than 365 days from the current time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DurationSeconds** | **int?** | The estimated duration in seconds to complete the Workitem. Maximum of 365 days. | [optional] |
-| **Ttl** | **int?** | A timestamp specifying the time to live for the Workitem. Can not be greater than 365 days from the current time. | [optional] |
+| **Ttl** | **int?** | The epoch timestamp in seconds specifying the time to live for the Workitem. Can not be greater than 365 days from the current time. | [optional] |
 | **StatusId** | **string** | The ID of the Status of the Workitem. | [optional] |
 | **WorkbinId** | **string** | The ID of Workbin that contains the Workitem. | [optional] |
 | **AutoStatusTransition** | **bool?** | Set it to false to disable auto status transition. By default, it is enabled. | [optional] |
