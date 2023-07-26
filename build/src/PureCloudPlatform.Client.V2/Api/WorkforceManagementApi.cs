@@ -676,8 +676,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
         ManagementUnitListing GetWorkforcemanagementBusinessunitManagementunits (string businessUnitId, string feature = null, string divisionId = null);
@@ -690,8 +690,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementBusinessunitManagementunitsWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null);
@@ -1205,8 +1205,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of business units belonging to the specified division will be returned (optional)</param>
         /// <returns>BusinessUnitListing</returns>
         
         BusinessUnitListing GetWorkforcemanagementBusinessunits (string feature = null, string divisionId = null);
@@ -1218,8 +1218,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of business units belonging to the specified division will be returned (optional)</param>
         /// <returns>ApiResponse of BusinessUnitListing</returns>
         
         ApiResponse<BusinessUnitListing> GetWorkforcemanagementBusinessunitsWithHttpInfo (string feature = null, string divisionId = null);
@@ -1932,8 +1932,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
         /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
         /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
         ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
@@ -1948,8 +1948,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
         /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
         /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
@@ -4848,8 +4848,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
         System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementBusinessunitManagementunitsAsync (string businessUnitId, string feature = null, string divisionId = null);
@@ -4862,8 +4862,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementBusinessunitManagementunitsAsyncWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null);
@@ -5377,8 +5377,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of business units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of BusinessUnitListing</returns>
         
         System.Threading.Tasks.Task<BusinessUnitListing> GetWorkforcemanagementBusinessunitsAsync (string feature = null, string divisionId = null);
@@ -5390,8 +5390,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of business units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsAsyncWithHttpInfo (string feature = null, string divisionId = null);
@@ -6104,8 +6104,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
         /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
         /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
         System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
@@ -6120,8 +6120,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
         /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
         /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null);
@@ -13883,8 +13883,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
         public ManagementUnitListing GetWorkforcemanagementBusinessunitManagementunits (string businessUnitId, string feature = null, string divisionId = null)
@@ -13899,8 +13899,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         
         public ApiResponse< ManagementUnitListing > GetWorkforcemanagementBusinessunitManagementunitsWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null)
@@ -13989,8 +13989,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
         public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementBusinessunitManagementunitsAsync (string businessUnitId, string feature = null, string divisionId = null)
@@ -14006,8 +14006,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementBusinessunitManagementunitsAsyncWithHttpInfo (string businessUnitId, string feature = null, string divisionId = null)
@@ -18150,8 +18150,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of business units belonging to the specified division will be returned (optional)</param>
         /// <returns>BusinessUnitListing</returns>
         
         public BusinessUnitListing GetWorkforcemanagementBusinessunits (string feature = null, string divisionId = null)
@@ -18165,8 +18165,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of business units belonging to the specified division will be returned (optional)</param>
         /// <returns>ApiResponse of BusinessUnitListing</returns>
         
         public ApiResponse< BusinessUnitListing > GetWorkforcemanagementBusinessunitsWithHttpInfo (string feature = null, string divisionId = null)
@@ -18250,8 +18250,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of business units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of BusinessUnitListing</returns>
         
         public async System.Threading.Tasks.Task<BusinessUnitListing> GetWorkforcemanagementBusinessunitsAsync (string feature = null, string divisionId = null)
@@ -18266,8 +18266,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of business units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsAsyncWithHttpInfo (string feature = null, string divisionId = null)
@@ -24049,8 +24049,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
         /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
         /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         
         public ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
@@ -24067,8 +24067,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
         /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
         /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         
         public ApiResponse< ManagementUnitListing > GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
@@ -24158,8 +24158,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
         /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
         /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         
         public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
@@ -24177,8 +24177,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Deprecated, paging is not supported (optional)</param>
         /// <param name="pageNumber">Deprecated, paging is not supported (optional)</param>
         /// <param name="expand">Deprecated, expand settings on the single MU route (optional)</param>
-        /// <param name="feature"> (optional)</param>
-        /// <param name="divisionId"> (optional)</param>
+        /// <param name="feature">If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional)</param>
+        /// <param name="divisionId">If specified, the list of management units belonging to the specified division will be returned (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)

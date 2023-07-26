@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">The identifier of the conversation. (required).</param>
         /// <param name="SenderType">The identifier of the external participant of the given conversation. (required).</param>
         /// <param name="FromAddress">The sender of the message. (required).</param>
-        /// <param name="ToAddresses">The recipient of the message. So far, only one recipient is allowed. This is a list, only for future usage. (required).</param>
+        /// <param name="ToAddresses">The recipient of the message. We currently support one recipient only. (required).</param>
         /// <param name="ReplyToAddress">The address to use for reply..</param>
         /// <param name="Subject">The subject of the message..</param>
         /// <param name="DateCreated">The message creation timestamp. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
@@ -117,9 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The recipient of the message. So far, only one recipient is allowed. This is a list, only for future usage.
+        /// The recipient of the message. We currently support one recipient only.
         /// </summary>
-        /// <value>The recipient of the message. So far, only one recipient is allowed. This is a list, only for future usage.</value>
+        /// <value>The recipient of the message. We currently support one recipient only.</value>
         [DataMember(Name="toAddresses", EmitDefaultValue=false)]
         public List<EmailAddress> ToAddresses { get; set; }
 

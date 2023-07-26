@@ -13,29 +13,36 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SupportedContentProfile
+    /// LearningAssignmentStepSignedCookie
     /// </summary>
     [DataContract]
-    public partial class SupportedContentProfile :  IEquatable<SupportedContentProfile>
+    public partial class LearningAssignmentStepSignedCookie :  IEquatable<LearningAssignmentStepSignedCookie>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SupportedContentProfile" /> class.
+        /// Initializes a new instance of the <see cref="LearningAssignmentStepSignedCookie" /> class.
         /// </summary>
-        /// <param name="Id">The supported content profile ID.</param>
-        public SupportedContentProfile(string Id = null)
+        public LearningAssignmentStepSignedCookie()
         {
-            this.Id = Id;
             
         }
         
 
 
         /// <summary>
-        /// The supported content profile ID
+        /// The base URL for the signed cookie
         /// </summary>
-        /// <value>The supported content profile ID</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        /// <value>The base URL for the signed cookie</value>
+        [DataMember(Name="url", EmitDefaultValue=false)]
+        public string Url { get; private set; }
+
+
+
+        /// <summary>
+        /// The cookie values required to access content from the base URL
+        /// </summary>
+        /// <value>The cookie values required to access content from the base URL</value>
+        [DataMember(Name="cookieValues", EmitDefaultValue=false)]
+        public Dictionary<string, string> CookieValues { get; private set; }
 
 
         /// <summary>
@@ -45,9 +52,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SupportedContentProfile {\n");
+            sb.Append("class LearningAssignmentStepSignedCookie {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  CookieValues: ").Append(CookieValues).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,15 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SupportedContentProfile);
+            return this.Equals(obj as LearningAssignmentStepSignedCookie);
         }
 
         /// <summary>
-        /// Returns true if SupportedContentProfile instances are equal
+        /// Returns true if LearningAssignmentStepSignedCookie instances are equal
         /// </summary>
-        /// <param name="other">Instance of SupportedContentProfile to be compared</param>
+        /// <param name="other">Instance of LearningAssignmentStepSignedCookie to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SupportedContentProfile other)
+        public bool Equals(LearningAssignmentStepSignedCookie other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,9 +97,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Url == other.Url ||
+                    this.Url != null &&
+                    this.Url.Equals(other.Url)
+                ) &&
+                (
+                    this.CookieValues == other.CookieValues ||
+                    this.CookieValues != null &&
+                    this.CookieValues.SequenceEqual(other.CookieValues)
                 );
         }
 
@@ -106,8 +119,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Url != null)
+                    hash = hash * 59 + this.Url.GetHashCode();
+
+                if (this.CookieValues != null)
+                    hash = hash * 59 + this.CookieValues.GetHashCode();
 
                 return hash;
             }

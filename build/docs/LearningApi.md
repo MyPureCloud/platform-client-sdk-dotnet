@@ -223,7 +223,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assignmentId** | **string**| The ID of Learning Assignment |  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in response | [optional] <br />**Values**: module, assessment, assessmentForm, module.coverArt |
+| **expand** | [**List<string>**](string.html)| Fields to expand in response | [optional] <br />**Values**: module, assessment, assessmentForm, module.coverArt, step, step.moduleStep |
 {: class="table table-striped"}
 
 ### Return type

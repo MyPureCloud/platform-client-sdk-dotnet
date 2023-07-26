@@ -2043,8 +2043,8 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-            var feature = feature_example;  // string |  (optional) 
-            var divisionId = divisionId_example;  // string |  (optional) 
+            var feature = feature_example;  // string | If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional) 
+            var divisionId = divisionId_example;  // string | If specified, the list of management units belonging to the specified division will be returned (optional) 
 
             try
             { 
@@ -2067,8 +2067,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, Learning, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanRotations, WorkPlans |
-| **divisionId** | **string**|  | [optional]  |
+| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, Learning, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanRotations, WorkPlans |
+| **divisionId** | **string**| If specified, the list of management units belonging to the specified division will be returned | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3338,8 +3338,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WorkforceManagementApi();
-            var feature = feature_example;  // string |  (optional) 
-            var divisionId = divisionId_example;  // string |  (optional) 
+            var feature = feature_example;  // string | If specified, the list of business units for which the user is authorized to use the requested feature will be returned (optional) 
+            var divisionId = divisionId_example;  // string | If specified, the list of business units belonging to the specified division will be returned (optional) 
 
             try
             { 
@@ -3361,8 +3361,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, Learning, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanRotations, WorkPlans |
-| **divisionId** | **string**|  | [optional]  |
+| **feature** | **string**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, Learning, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanRotations, WorkPlans |
+| **divisionId** | **string**| If specified, the list of business units belonging to the specified division will be returned | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5269,8 +5269,8 @@ namespace Example
             var pageSize = 56;  // int? | Deprecated, paging is not supported (optional) 
             var pageNumber = 56;  // int? | Deprecated, paging is not supported (optional) 
             var expand = expand_example;  // string | Deprecated, expand settings on the single MU route (optional) 
-            var feature = feature_example;  // string |  (optional) 
-            var divisionId = divisionId_example;  // string |  (optional) 
+            var feature = feature_example;  // string | If specified, the list of management units for which the user is authorized to use the requested feature will be returned (optional) 
+            var divisionId = divisionId_example;  // string | If specified, the list of management units belonging to the specified division will be returned (optional) 
 
             try
             { 
@@ -5295,8 +5295,8 @@ namespace Example
 | **pageSize** | **int?**| Deprecated, paging is not supported | [optional]  |
 | **pageNumber** | **int?**| Deprecated, paging is not supported | [optional]  |
 | **expand** | **string**| Deprecated, expand settings on the single MU route | [optional] <br />**Values**: details |
-| **feature** | **string**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, Learning, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanRotations, WorkPlans |
-| **divisionId** | **string**|  | [optional]  |
+| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, Learning, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanRotations, WorkPlans |
+| **divisionId** | **string**| If specified, the list of management units belonging to the specified division will be returned | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

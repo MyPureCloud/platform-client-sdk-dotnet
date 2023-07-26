@@ -19,6 +19,105 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class RecordingMessagingMessage :  IEquatable<RecordingMessagingMessage>
     {
         /// <summary>
+        /// Indicates the content type for this message
+        /// </summary>
+        /// <value>Indicates the content type for this message</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ContentTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Quickreply for "QuickReply"
+            /// </summary>
+            [EnumMember(Value = "QuickReply")]
+            Quickreply,
+            
+            /// <summary>
+            /// Enum Story for "Story"
+            /// </summary>
+            [EnumMember(Value = "Story")]
+            Story,
+            
+            /// <summary>
+            /// Enum Card for "Card"
+            /// </summary>
+            [EnumMember(Value = "Card")]
+            Card,
+            
+            /// <summary>
+            /// Enum Carousel for "Carousel"
+            /// </summary>
+            [EnumMember(Value = "Carousel")]
+            Carousel,
+            
+            /// <summary>
+            /// Enum Attachment for "Attachment"
+            /// </summary>
+            [EnumMember(Value = "Attachment")]
+            Attachment,
+            
+            /// <summary>
+            /// Enum Location for "Location"
+            /// </summary>
+            [EnumMember(Value = "Location")]
+            Location,
+            
+            /// <summary>
+            /// Enum Notification for "Notification"
+            /// </summary>
+            [EnumMember(Value = "Notification")]
+            Notification,
+            
+            /// <summary>
+            /// Enum Generictemplate for "GenericTemplate"
+            /// </summary>
+            [EnumMember(Value = "GenericTemplate")]
+            Generictemplate,
+            
+            /// <summary>
+            /// Enum Listtemplate for "ListTemplate"
+            /// </summary>
+            [EnumMember(Value = "ListTemplate")]
+            Listtemplate,
+            
+            /// <summary>
+            /// Enum Postback for "Postback"
+            /// </summary>
+            [EnumMember(Value = "Postback")]
+            Postback,
+            
+            /// <summary>
+            /// Enum Reactions for "Reactions"
+            /// </summary>
+            [EnumMember(Value = "Reactions")]
+            Reactions,
+            
+            /// <summary>
+            /// Enum Mention for "Mention"
+            /// </summary>
+            [EnumMember(Value = "Mention")]
+            Mention,
+            
+            /// <summary>
+            /// Enum Buttonresponse for "ButtonResponse"
+            /// </summary>
+            [EnumMember(Value = "ButtonResponse")]
+            Buttonresponse
+        }
+        /// <summary>
+        /// Indicates the content type for this message
+        /// </summary>
+        /// <value>Indicates the content type for this message</value>
+        [DataMember(Name="contentType", EmitDefaultValue=false)]
+        public ContentTypeEnum? ContentType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="RecordingMessagingMessage" /> class.
         /// </summary>
         /// <param name="From">The message sender session id..</param>
@@ -33,7 +132,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuickReplies">List of quick reply options offered with this message..</param>
         /// <param name="ButtonResponse">Button Response selected by user for this message..</param>
         /// <param name="Story">Ephemeral story content..</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null)
+        /// <param name="Cards">List of cards offered for this message.</param>
+        /// <param name="ContentType">Indicates the content type for this message.</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, ContentTypeEnum? ContentType = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -47,6 +148,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QuickReplies = QuickReplies;
             this.ButtonResponse = ButtonResponse;
             this.Story = Story;
+            this.Cards = Cards;
+            this.ContentType = ContentType;
             
         }
         
@@ -159,6 +262,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public RecordingContentStory Story { get; set; }
 
 
+
+        /// <summary>
+        /// List of cards offered for this message
+        /// </summary>
+        /// <value>List of cards offered for this message</value>
+        [DataMember(Name="cards", EmitDefaultValue=false)]
+        public List<Card> Cards { get; set; }
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -180,6 +294,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QuickReplies: ").Append(QuickReplies).Append("\n");
             sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
             sb.Append("  Story: ").Append(Story).Append("\n");
+            sb.Append("  Cards: ").Append(Cards).Append("\n");
+            sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -279,6 +395,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Story == other.Story ||
                     this.Story != null &&
                     this.Story.Equals(other.Story)
+                ) &&
+                (
+                    this.Cards == other.Cards ||
+                    this.Cards != null &&
+                    this.Cards.SequenceEqual(other.Cards)
+                ) &&
+                (
+                    this.ContentType == other.ContentType ||
+                    this.ContentType != null &&
+                    this.ContentType.Equals(other.ContentType)
                 );
         }
 
@@ -328,6 +454,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Story != null)
                     hash = hash * 59 + this.Story.GetHashCode();
+
+                if (this.Cards != null)
+                    hash = hash * 59 + this.Cards.GetHashCode();
+
+                if (this.ContentType != null)
+                    hash = hash * 59 + this.ContentType.GetHashCode();
 
                 return hash;
             }

@@ -73,6 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Assigneeid,
             
             /// <summary>
+            /// Enum Assigneeapplicable for "assigneeApplicable"
+            /// </summary>
+            [EnumMember(Value = "assigneeApplicable")]
+            Assigneeapplicable,
+            
+            /// <summary>
             /// Enum Calibrationid for "calibrationId"
             /// </summary>
             [EnumMember(Value = "calibrationId")]

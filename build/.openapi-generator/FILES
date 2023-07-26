@@ -3310,6 +3310,9 @@ docs/LearningAssignmentReschedule.md
 docs/LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification.md
 docs/LearningAssignmentRuleRunTopicLearningAssignmentsCreated.md
 docs/LearningAssignmentRuleRunTopicLearningModuleReference.md
+docs/LearningAssignmentStep.md
+docs/LearningAssignmentStepScoStructure.md
+docs/LearningAssignmentStepSignedCookie.md
 docs/LearningAssignmentTopicLearningAssignmentNotification.md
 docs/LearningAssignmentTopicLearningModuleReference.md
 docs/LearningAssignmentTopicUserReference.md
@@ -3336,6 +3339,7 @@ docs/LearningModuleSummary.md
 docs/LearningModulesDomainEntityListing.md
 docs/LearningScheduleSlotsQueryRequest.md
 docs/LearningScheduleSlotsQueryResponse.md
+docs/LearningShareableContentObject.md
 docs/LearningSlot.md
 docs/LearningSlotFullDayTimeOffMarker.md
 docs/LearningSlotScheduleActivity.md
@@ -5441,7 +5445,6 @@ docs/SupportCenterSettings.md
 docs/SupportCenterStyleSetting.md
 docs/SupportedContent.md
 docs/SupportedContentListing.md
-docs/SupportedContentProfile.md
 docs/SupportedContentReference.md
 docs/SupportedDialectsEntityListing.md
 docs/SupportedLanguage.md
@@ -8309,6 +8312,9 @@ src/PureCloudPlatform.Client.V2/Model/LearningAssignmentReschedule.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentRuleRunTopicLearningAssignmentsCreated.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentRuleRunTopicLearningModuleReference.cs
+src/PureCloudPlatform.Client.V2/Model/LearningAssignmentStep.cs
+src/PureCloudPlatform.Client.V2/Model/LearningAssignmentStepScoStructure.cs
+src/PureCloudPlatform.Client.V2/Model/LearningAssignmentStepSignedCookie.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentTopicLearningAssignmentNotification.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentTopicLearningModuleReference.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentTopicUserReference.cs
@@ -8335,6 +8341,7 @@ src/PureCloudPlatform.Client.V2/Model/LearningModuleSummary.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModulesDomainEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsQueryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/LearningShareableContentObject.cs
 src/PureCloudPlatform.Client.V2/Model/LearningSlot.cs
 src/PureCloudPlatform.Client.V2/Model/LearningSlotFullDayTimeOffMarker.cs
 src/PureCloudPlatform.Client.V2/Model/LearningSlotScheduleActivity.cs
@@ -9447,7 +9454,6 @@ src/PureCloudPlatform.Client.V2/Model/SupportCenterSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterStyleSetting.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedContent.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedContentListing.cs
-src/PureCloudPlatform.Client.V2/Model/SupportedContentProfile.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedContentReference.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedDialectsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedLanguage.cs

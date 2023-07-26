@@ -1616,8 +1616,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WorkitemIds">The list of Workitem IDs.</param>
         /// <param name="WorkitemAssigneeIds">The list of Workitem Assignee IDs.</param>
         /// <param name="WorkitemStatuses">The list of Workitem Statuses IDs.</param>
-        /// <param name="IsAnalyzedForSensitiveData">Filter to indicate the transcript has been analyzed for sensitive data..</param>
-        /// <param name="HasSensitiveData">Filter to indicate the transcript contains sensitive data..</param>
+        /// <param name="IsAnalyzedForSensitiveData">Deprecated - Use hasPciData or hasPiiData instead..</param>
+        /// <param name="HasSensitiveData">Deprecated. Use hasPciData or hasPiiData instead..</param>
+        /// <param name="HasPciData">Filter to indicate the transcript contains Pci data..</param>
+        /// <param name="HasPiiData">Filter to indicate the transcript contains Pii data..</param>
         /// <param name="SubPath">Filter for Sub Path.</param>
         /// <param name="UserState">The user supplied state value in the view.</param>
         /// <param name="IsClearedByCustomer">Filter to indicate if the customer cleared the conversation..</param>
@@ -1626,7 +1628,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssistantIds">The assistant ids that are used to filter the view..</param>
         /// <param name="KnowledgeBaseIds">The knowledge base ids that are used to filter the view..</param>
         /// <param name="IsParked">Filter to indicate if the interactions are parked..</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> ManagementUnitIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null, List<TranscriptTopics> TranscriptTopics = null, List<string> JourneyFrequencyCapReasons = null, List<string> JourneyBlockingActionMapIds = null, List<string> JourneyActionTargetIds = null, List<string> JourneyBlockingScheduleGroupIds = null, List<string> JourneyBlockingEmergencyScheduleGroupIds = null, List<string> JourneyUrlEqualConditions = null, List<string> JourneyUrlNotEqualConditions = null, List<string> JourneyUrlStartsWithConditions = null, List<string> JourneyUrlEndsWithConditions = null, List<string> JourneyUrlContainsAnyConditions = null, List<string> JourneyUrlNotContainsAnyConditions = null, List<string> JourneyUrlContainsAllConditions = null, List<string> JourneyUrlNotContainsAllConditions = null, List<string> FlowMilestoneIds = null, bool? IsAssessmentPassed = null, List<string> ConversationInitiators = null, bool? HasCustomerParticipated = null, bool? IsAcdInteraction = null, bool? HasFax = null, List<string> DataActionIds = null, string ActionCategoryName = null, List<string> IntegrationIds = null, List<string> ResponseStatuses = null, AvailableDashboardEnum? AvailableDashboard = null, bool? FavouriteDashboard = null, bool? MyDashboard = null, List<string> StationErrors = null, List<string> CanonicalContactIds = null, List<string> AlertRuleIds = null, List<string> EvaluationFormContextIds = null, List<EvaluationStatusesEnum> EvaluationStatuses = null, List<string> WorkbinIds = null, List<string> WorktypeIds = null, List<string> WorkitemIds = null, List<string> WorkitemAssigneeIds = null, List<string> WorkitemStatuses = null, bool? IsAnalyzedForSensitiveData = null, bool? HasSensitiveData = null, string SubPath = null, UserStateEnum? UserState = null, bool? IsClearedByCustomer = null, List<string> EvaluationAssigneeIds = null, bool? EvaluationAssigned = null, List<string> AssistantIds = null, List<string> KnowledgeBaseIds = null, bool? IsParked = null)
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> ManagementUnitIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null, List<TranscriptTopics> TranscriptTopics = null, List<string> JourneyFrequencyCapReasons = null, List<string> JourneyBlockingActionMapIds = null, List<string> JourneyActionTargetIds = null, List<string> JourneyBlockingScheduleGroupIds = null, List<string> JourneyBlockingEmergencyScheduleGroupIds = null, List<string> JourneyUrlEqualConditions = null, List<string> JourneyUrlNotEqualConditions = null, List<string> JourneyUrlStartsWithConditions = null, List<string> JourneyUrlEndsWithConditions = null, List<string> JourneyUrlContainsAnyConditions = null, List<string> JourneyUrlNotContainsAnyConditions = null, List<string> JourneyUrlContainsAllConditions = null, List<string> JourneyUrlNotContainsAllConditions = null, List<string> FlowMilestoneIds = null, bool? IsAssessmentPassed = null, List<string> ConversationInitiators = null, bool? HasCustomerParticipated = null, bool? IsAcdInteraction = null, bool? HasFax = null, List<string> DataActionIds = null, string ActionCategoryName = null, List<string> IntegrationIds = null, List<string> ResponseStatuses = null, AvailableDashboardEnum? AvailableDashboard = null, bool? FavouriteDashboard = null, bool? MyDashboard = null, List<string> StationErrors = null, List<string> CanonicalContactIds = null, List<string> AlertRuleIds = null, List<string> EvaluationFormContextIds = null, List<EvaluationStatusesEnum> EvaluationStatuses = null, List<string> WorkbinIds = null, List<string> WorktypeIds = null, List<string> WorkitemIds = null, List<string> WorkitemAssigneeIds = null, List<string> WorkitemStatuses = null, bool? IsAnalyzedForSensitiveData = null, bool? HasSensitiveData = null, bool? HasPciData = null, bool? HasPiiData = null, string SubPath = null, UserStateEnum? UserState = null, bool? IsClearedByCustomer = null, List<string> EvaluationAssigneeIds = null, bool? EvaluationAssigned = null, List<string> AssistantIds = null, List<string> KnowledgeBaseIds = null, bool? IsParked = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1791,6 +1793,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WorkitemStatuses = WorkitemStatuses;
             this.IsAnalyzedForSensitiveData = IsAnalyzedForSensitiveData;
             this.HasSensitiveData = HasSensitiveData;
+            this.HasPciData = HasPciData;
+            this.HasPiiData = HasPiiData;
             this.SubPath = SubPath;
             this.UserState = UserState;
             this.IsClearedByCustomer = IsClearedByCustomer;
@@ -3247,20 +3251,38 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Filter to indicate the transcript has been analyzed for sensitive data.
+        /// Deprecated - Use hasPciData or hasPiiData instead.
         /// </summary>
-        /// <value>Filter to indicate the transcript has been analyzed for sensitive data.</value>
+        /// <value>Deprecated - Use hasPciData or hasPiiData instead.</value>
         [DataMember(Name="isAnalyzedForSensitiveData", EmitDefaultValue=false)]
         public bool? IsAnalyzedForSensitiveData { get; set; }
 
 
 
         /// <summary>
-        /// Filter to indicate the transcript contains sensitive data.
+        /// Deprecated. Use hasPciData or hasPiiData instead.
         /// </summary>
-        /// <value>Filter to indicate the transcript contains sensitive data.</value>
+        /// <value>Deprecated. Use hasPciData or hasPiiData instead.</value>
         [DataMember(Name="hasSensitiveData", EmitDefaultValue=false)]
         public bool? HasSensitiveData { get; set; }
+
+
+
+        /// <summary>
+        /// Filter to indicate the transcript contains Pci data.
+        /// </summary>
+        /// <value>Filter to indicate the transcript contains Pci data.</value>
+        [DataMember(Name="hasPciData", EmitDefaultValue=false)]
+        public bool? HasPciData { get; set; }
+
+
+
+        /// <summary>
+        /// Filter to indicate the transcript contains Pii data.
+        /// </summary>
+        /// <value>Filter to indicate the transcript contains Pii data.</value>
+        [DataMember(Name="hasPiiData", EmitDefaultValue=false)]
+        public bool? HasPiiData { get; set; }
 
 
 
@@ -3500,6 +3522,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WorkitemStatuses: ").Append(WorkitemStatuses).Append("\n");
             sb.Append("  IsAnalyzedForSensitiveData: ").Append(IsAnalyzedForSensitiveData).Append("\n");
             sb.Append("  HasSensitiveData: ").Append(HasSensitiveData).Append("\n");
+            sb.Append("  HasPciData: ").Append(HasPciData).Append("\n");
+            sb.Append("  HasPiiData: ").Append(HasPiiData).Append("\n");
             sb.Append("  SubPath: ").Append(SubPath).Append("\n");
             sb.Append("  UserState: ").Append(UserState).Append("\n");
             sb.Append("  IsClearedByCustomer: ").Append(IsClearedByCustomer).Append("\n");
@@ -4364,6 +4388,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasSensitiveData.Equals(other.HasSensitiveData)
                 ) &&
                 (
+                    this.HasPciData == other.HasPciData ||
+                    this.HasPciData != null &&
+                    this.HasPciData.Equals(other.HasPciData)
+                ) &&
+                (
+                    this.HasPiiData == other.HasPiiData ||
+                    this.HasPiiData != null &&
+                    this.HasPiiData.Equals(other.HasPiiData)
+                ) &&
+                (
                     this.SubPath == other.SubPath ||
                     this.SubPath != null &&
                     this.SubPath.Equals(other.SubPath)
@@ -4904,6 +4938,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.HasSensitiveData != null)
                     hash = hash * 59 + this.HasSensitiveData.GetHashCode();
+
+                if (this.HasPciData != null)
+                    hash = hash * 59 + this.HasPciData.GetHashCode();
+
+                if (this.HasPiiData != null)
+                    hash = hash * 59 + this.HasPiiData.GetHashCode();
 
                 if (this.SubPath != null)
                     hash = hash * 59 + this.SubPath.GetHashCode();
