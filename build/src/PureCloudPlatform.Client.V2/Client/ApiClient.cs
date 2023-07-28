@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Gets or sets the RestClient.
         /// </summary>
         /// <value>An instance of the RestClient</value>
-        public RestClient RestClient { get; set; }
+        private RestClient RestClient { get; set; }
 
         private RetryConfiguration retryConfig;
         public RetryConfiguration RetryConfig { get; set; }
@@ -221,32 +221,37 @@ namespace PureCloudPlatform.Client.V2.Client
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, contentType);
 
-            // set timeout
-           ClientOptions.MaxTimeout = Configuration.Timeout;
-           ClientOptions.UserAgent = Configuration.UserAgent;
-
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "184.0.0");
+            request.AddHeader("purecloud-sdk", "184.1.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
 
 
-            var options = new RestClientOptions(ClientOptions.BaseUrl)
-            {
-                MaxTimeout = ClientOptions.MaxTimeout,
-                UserAgent = ClientOptions.UserAgent
-            };
+            var options = new RestClientOptions(ClientOptions.BaseUrl){};
             
             if (ClientOptions.HttpMessageHandler != null)
             {
                 options = new RestClientOptions(ClientOptions.BaseUrl)
                 {
-                    MaxTimeout = ClientOptions.MaxTimeout,
-                    UserAgent = ClientOptions.UserAgent,
                     ConfigureMessageHandler = _ => ClientOptions.HttpMessageHandler 
                 };
                
+            }
+
+            if (Configuration.UserAgent != null)
+            {
+               options.UserAgent = Configuration.UserAgent;   
+            }
+
+            if (Configuration.Timeout > 0)
+            {
+                options.MaxTimeout = Configuration.Timeout;   
+            }
+
+            if (ClientOptions.Proxy != null)
+            {
+                options.Proxy = ClientOptions.Proxy;   
             }
 
             RestClient = new RestClient(options);
@@ -306,21 +311,30 @@ namespace PureCloudPlatform.Client.V2.Client
              Retry retry = new Retry(this.RetryConfig);
              RestResponse response;
 
-             var options = new RestClientOptions(ClientOptions.BaseUrl)
-            {
-                MaxTimeout = ClientOptions.MaxTimeout,
-                UserAgent = ClientOptions.UserAgent
-            };
+             var options = new RestClientOptions(ClientOptions.BaseUrl){};
             
             if (ClientOptions.HttpMessageHandler != null)
             {
                 options = new RestClientOptions(ClientOptions.BaseUrl)
                 {
-                    MaxTimeout = ClientOptions.MaxTimeout,
-                    UserAgent = ClientOptions.UserAgent,
                     ConfigureMessageHandler = _ => ClientOptions.HttpMessageHandler 
                 };
                
+            }
+
+            if (Configuration.UserAgent != null)
+            {
+               options.UserAgent = Configuration.UserAgent;   
+            }
+
+            if (ClientOptions.Proxy != null)
+            {
+                options.Proxy = ClientOptions.Proxy;   
+            }
+
+            if (Configuration.Timeout > 0)
+            {
+                options.MaxTimeout = Configuration.Timeout;   
             }
 
             RestClient = new RestClient(options);
@@ -712,10 +726,8 @@ namespace PureCloudPlatform.Client.V2.Client
         public ClientRestOptions ClientOptions { get; set; }
         public class ClientRestOptions
         {
-            private Uri baseUrl;
-            private string userAgent;
+            public Uri BaseUrl { get; set; }
             private System.Net.IWebProxy proxy;
-            private int maxTimeout;
             private HttpMessageHandler httpMessageHandler;
 
             public HttpMessageHandler HttpMessageHandler
@@ -730,30 +742,6 @@ namespace PureCloudPlatform.Client.V2.Client
                 }
             }
 
-            public Uri BaseUrl
-            {
-                get
-                {
-                    return baseUrl;
-                }
-                set
-                {
-                    this.baseUrl = value;
-                }
-            }
-
-            public string UserAgent
-            {
-                get
-                {
-                    return userAgent;
-                }
-                set
-                {
-                    this.userAgent = value;
-                }
-            }
-
             public System.Net.IWebProxy Proxy
             {
                 get
@@ -763,18 +751,6 @@ namespace PureCloudPlatform.Client.V2.Client
                 set
                 {
                     this.proxy = value;
-                }
-            }
-
-            public int MaxTimeout
-            {
-                get
-                {
-                    return maxTimeout;
-                }
-                set
-                {
-                    this.maxTimeout = value;
                 }
             }
             

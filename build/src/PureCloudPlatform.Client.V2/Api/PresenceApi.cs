@@ -1434,7 +1434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <value>The base path</value>
         public String GetBasePath()
         {
-            return this.Configuration.ApiClient.RestClient.Options.BaseUrl.ToString();
+             return this.Configuration.ApiClient.ClientOptions.BaseUrl.ToString();
         }
 
         /// <summary>
