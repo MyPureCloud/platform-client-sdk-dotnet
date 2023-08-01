@@ -76,6 +76,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Artn,
             
             /// <summary>
+            /// Enum Dech for "de-CH"
+            /// </summary>
+            [EnumMember(Value = "de-CH")]
+            Dech,
+            
+            /// <summary>
             /// Enum Dede for "de-DE"
             /// </summary>
             [EnumMember(Value = "de-DE")]
@@ -94,10 +100,34 @@ namespace PureCloudPlatform.Client.V2.Model
             Engb,
             
             /// <summary>
+            /// Enum Enhk for "en-HK"
+            /// </summary>
+            [EnumMember(Value = "en-HK")]
+            Enhk,
+            
+            /// <summary>
+            /// Enum Enie for "en-IE"
+            /// </summary>
+            [EnumMember(Value = "en-IE")]
+            Enie,
+            
+            /// <summary>
             /// Enum Enin for "en-IN"
             /// </summary>
             [EnumMember(Value = "en-IN")]
             Enin,
+            
+            /// <summary>
+            /// Enum Ennz for "en-NZ"
+            /// </summary>
+            [EnumMember(Value = "en-NZ")]
+            Ennz,
+            
+            /// <summary>
+            /// Enum Ensg for "en-SG"
+            /// </summary>
+            [EnumMember(Value = "en-SG")]
+            Ensg,
             
             /// <summary>
             /// Enum Enus for "en-US"

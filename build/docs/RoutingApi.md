@@ -3305,10 +3305,10 @@ namespace Example
             var pageSize = 56;  // int? | Max value is 100 (optional)  (default to 25)
             var sortOrder = sortOrder_example;  // string | Note: results are sorted by name. (optional)  (default to asc)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
-            var name = name_example;  // string | Filter by queue member name (optional) 
-            var profileSkills = new List<string>(); // List<string> | Filter by profile skill (optional) 
-            var skills = new List<string>(); // List<string> | Filter by skill (optional) 
-            var languages = new List<string>(); // List<string> | Filter by language (optional) 
+            var name = name_example;  // string | Filter by queue member name (contains-style search) (optional) 
+            var profileSkills = new List<string>(); // List<string> | Filter by profile skill (contains-style search) (optional) 
+            var skills = new List<string>(); // List<string> | Filter by skill (contains-style search) (optional) 
+            var languages = new List<string>(); // List<string> | Filter by language (contains-style search) (optional) 
             var routingStatus = new List<string>(); // List<string> | Filter by routing status (optional) 
             var presence = new List<string>(); // List<string> | Filter by presence (optional) 
             var memberBy = memberBy_example;  // string | Filter by member type (optional) 
@@ -3339,10 +3339,10 @@ namespace Example
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
-| **name** | **string**| Filter by queue member name | [optional]  |
-| **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
-| **skills** | [**List<string>**](string.html)| Filter by skill | [optional]  |
-| **languages** | [**List<string>**](string.html)| Filter by language | [optional]  |
+| **name** | **string**| Filter by queue member name (contains-style search) | [optional]  |
+| **profileSkills** | [**List<string>**](string.html)| Filter by profile skill (contains-style search) | [optional]  |
+| **skills** | [**List<string>**](string.html)| Filter by skill (contains-style search) | [optional]  |
+| **languages** | [**List<string>**](string.html)| Filter by language (contains-style search) | [optional]  |
 | **routingStatus** | [**List<string>**](string.html)| Filter by routing status | [optional]  |
 | **presence** | [**List<string>**](string.html)| Filter by presence | [optional]  |
 | **memberBy** | **string**| Filter by member type | [optional] <br />**Values**: user, group |

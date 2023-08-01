@@ -430,6 +430,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Marketplace,
             
             /// <summary>
+            /// Enum Mediacommunications for "media.communications"
+            /// </summary>
+            [EnumMember(Value = "media.communications")]
+            Mediacommunications,
+            
+            /// <summary>
             /// Enum Messaging for "messaging"
             /// </summary>
             [EnumMember(Value = "messaging")]

@@ -1365,7 +1365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ManagementUnit> GetWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, List<string> expand = null);
 
         /// <summary>
-        /// Get activity codes
+        /// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
         /// </summary>
         /// <remarks>
         /// 
@@ -1377,7 +1377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ActivityCodeContainer GetWorkforcemanagementManagementunitActivitycodes (string managementUnitId);
 
         /// <summary>
-        /// Get activity codes
+        /// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
         /// </summary>
         /// <remarks>
         /// 
@@ -5537,7 +5537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
 
         /// <summary>
-        /// Get activity codes
+        /// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
         /// </summary>
         /// <remarks>
         /// 
@@ -5549,7 +5549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesAsync (string managementUnitId);
 
         /// <summary>
-        /// Get activity codes
+        /// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
         /// </summary>
         /// <remarks>
         /// 
@@ -19512,7 +19512,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get activity codes 
+        /// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19526,7 +19526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get activity codes 
+        /// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19612,7 +19612,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get activity codes 
+        /// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19627,7 +19627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get activity codes 
+        /// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

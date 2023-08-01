@@ -175,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Answers">Answers.</param>
         /// <param name="AgentHasRead">AgentHasRead.</param>
         /// <param name="Assignee">Assignee.</param>
+        /// <param name="AssigneeApplicable">Indicates whether an assignee is applicable for the evaluation. Set to false when assignee is not applicable..</param>
         /// <param name="ReleaseDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -192,7 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn't execute successfully.</param>
-        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -204,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Answers = Answers;
             this.AgentHasRead = AgentHasRead;
             this.Assignee = Assignee;
+            this.AssigneeApplicable = AssigneeApplicable;
             this.ReleaseDate = ReleaseDate;
             this.AssignedDate = AssignedDate;
             this.ChangedDate = ChangedDate;
@@ -307,6 +309,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="assignee", EmitDefaultValue=false)]
         public User Assignee { get; set; }
+
+
+
+        /// <summary>
+        /// Indicates whether an assignee is applicable for the evaluation. Set to false when assignee is not applicable.
+        /// </summary>
+        /// <value>Indicates whether an assignee is applicable for the evaluation. Set to false when assignee is not applicable.</value>
+        [DataMember(Name="assigneeApplicable", EmitDefaultValue=false)]
+        public bool? AssigneeApplicable { get; set; }
 
 
 
@@ -491,6 +502,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Answers: ").Append(Answers).Append("\n");
             sb.Append("  AgentHasRead: ").Append(AgentHasRead).Append("\n");
             sb.Append("  Assignee: ").Append(Assignee).Append("\n");
+            sb.Append("  AssigneeApplicable: ").Append(AssigneeApplicable).Append("\n");
             sb.Append("  ReleaseDate: ").Append(ReleaseDate).Append("\n");
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
@@ -604,6 +616,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Assignee == other.Assignee ||
                     this.Assignee != null &&
                     this.Assignee.Equals(other.Assignee)
+                ) &&
+                (
+                    this.AssigneeApplicable == other.AssigneeApplicable ||
+                    this.AssigneeApplicable != null &&
+                    this.AssigneeApplicable.Equals(other.AssigneeApplicable)
                 ) &&
                 (
                     this.ReleaseDate == other.ReleaseDate ||
@@ -745,6 +762,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Assignee != null)
                     hash = hash * 59 + this.Assignee.GetHashCode();
+
+                if (this.AssigneeApplicable != null)
+                    hash = hash * 59 + this.AssigneeApplicable.GetHashCode();
 
                 if (this.ReleaseDate != null)
                     hash = hash * 59 + this.ReleaseDate.GetHashCode();
