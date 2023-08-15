@@ -4663,7 +4663,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ConversationsApi();
-            var conversationId = conversationId_example;  // string |  conversationId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
 
             try
@@ -4686,7 +4686,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**|  conversationId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -6930,7 +6930,7 @@ void (empty response body)
 
 <a name="patchconversationscallparticipantattributes"></a>
 
-## void PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 
@@ -6968,7 +6968,8 @@ namespace Example
             try
             { 
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsCallParticipantAttributes(conversationId, participantId, body);
+                ParticipantAttributes result = apiInstance.PatchConversationsCallParticipantAttributes(conversationId, participantId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -6991,7 +6992,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchconversationscallparticipantcommunication"></a>
 
@@ -7260,7 +7261,7 @@ void (empty response body)
 
 <a name="patchconversationscallbackparticipantattributes"></a>
 
-## void PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 
@@ -7298,7 +7299,8 @@ namespace Example
             try
             { 
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsCallbackParticipantAttributes(conversationId, participantId, body);
+                ParticipantAttributes result = apiInstance.PatchConversationsCallbackParticipantAttributes(conversationId, participantId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -7321,7 +7323,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchconversationscallbackparticipantcommunication"></a>
 
@@ -7587,7 +7589,7 @@ void (empty response body)
 
 <a name="patchconversationschatparticipantattributes"></a>
 
-## void PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 
@@ -7625,7 +7627,8 @@ namespace Example
             try
             { 
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsChatParticipantAttributes(conversationId, participantId, body);
+                ParticipantAttributes result = apiInstance.PatchConversationsChatParticipantAttributes(conversationId, participantId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -7648,7 +7651,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchconversationschatparticipantcommunication"></a>
 
@@ -7851,7 +7854,7 @@ void (empty response body)
 
 <a name="patchconversationscobrowsesessionparticipantattributes"></a>
 
-## void PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
 
 
 
@@ -7889,7 +7892,8 @@ namespace Example
             try
             { 
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsCobrowsesessionParticipantAttributes(conversationId, participantId, body);
+                ParticipantAttributes result = apiInstance.PatchConversationsCobrowsesessionParticipantAttributes(conversationId, participantId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -7912,7 +7916,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchconversationscobrowsesessionparticipantcommunication"></a>
 
@@ -8183,7 +8187,7 @@ void (empty response body)
 
 <a name="patchconversationsemailparticipantattributes"></a>
 
-## void PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 
 
@@ -8221,7 +8225,8 @@ namespace Example
             try
             { 
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsEmailParticipantAttributes(conversationId, participantId, body);
+                ParticipantAttributes result = apiInstance.PatchConversationsEmailParticipantAttributes(conversationId, participantId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -8244,7 +8249,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchconversationsemailparticipantcommunication"></a>
 
@@ -8413,7 +8418,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ConversationsApi();
-            var conversationId = conversationId_example;  // string |  conversationId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
 
@@ -8436,7 +8441,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**|  conversationId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
 {: class="table table-striped"}
@@ -8447,7 +8452,7 @@ void (empty response body)
 
 <a name="patchconversationsmessageparticipantattributes"></a>
 
-## void PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+## [**ParticipantAttributes**](ParticipantAttributes.html) PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
 
 
 
@@ -8478,14 +8483,15 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ConversationsApi();
-            var conversationId = conversationId_example;  // string |  conversationId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
 
             try
             { 
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsMessageParticipantAttributes(conversationId, participantId, body);
+                ParticipantAttributes result = apiInstance.PatchConversationsMessageParticipantAttributes(conversationId, participantId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -8501,14 +8507,14 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**|  conversationId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-void (empty response body)
+[**ParticipantAttributes**](ParticipantAttributes.html)
 
 <a name="patchconversationsmessageparticipantcommunication"></a>
 
@@ -8543,7 +8549,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ConversationsApi();
-            var conversationId = conversationId_example;  // string |  conversationId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
@@ -8568,7 +8574,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**|  conversationId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |

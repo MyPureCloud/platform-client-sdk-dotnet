@@ -146,14 +146,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
-        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ReportingTurnsResponse</returns>
@@ -164,14 +164,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
-        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
@@ -2514,14 +2514,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
-        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ReportingTurnsResponse</returns>
@@ -2532,14 +2532,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
-        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
@@ -5865,14 +5865,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
-        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ReportingTurnsResponse</returns>
@@ -5885,14 +5885,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
-        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
@@ -5983,14 +5983,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
-        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ReportingTurnsResponse</returns>
@@ -6004,14 +6004,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
-        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>

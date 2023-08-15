@@ -481,9 +481,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -496,8 +496,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
-        /// <param name="maximum">maximum (optional)</param>
-        /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)</param>
+        /// <param name="maximum">the maximum number of results to return (optional)</param>
+        /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
         
         EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
@@ -511,9 +511,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -526,8 +526,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
-        /// <param name="maximum">maximum (optional)</param>
-        /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)</param>
+        /// <param name="maximum">the maximum number of results to return (optional)</param>
+        /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
         
         ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
@@ -1588,7 +1588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee, evaluator (optional)</param>
         /// <returns>EvaluationResponse</returns>
         
         EvaluationResponse PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null);
@@ -1603,7 +1603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee, evaluator (optional)</param>
         /// <returns>ApiResponse of EvaluationResponse</returns>
         
         ApiResponse<EvaluationResponse> PutQualityConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
@@ -2181,9 +2181,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -2196,8 +2196,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
-        /// <param name="maximum">maximum (optional)</param>
-        /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)</param>
+        /// <param name="maximum">the maximum number of results to return (optional)</param>
+        /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
         
         System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
@@ -2211,9 +2211,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -2226,8 +2226,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
-        /// <param name="maximum">maximum (optional)</param>
-        /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)</param>
+        /// <param name="maximum">the maximum number of results to return (optional)</param>
+        /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
@@ -3288,7 +3288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee, evaluator (optional)</param>
         /// <returns>Task of EvaluationResponse</returns>
         
         System.Threading.Tasks.Task<EvaluationResponse> PutQualityConversationEvaluationAsync (string conversationId, string evaluationId, Evaluation body, string expand = null);
@@ -3303,7 +3303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee, evaluator (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<EvaluationResponse>> PutQualityConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
@@ -6975,9 +6975,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -6990,8 +6990,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
-        /// <param name="maximum">maximum (optional)</param>
-        /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)</param>
+        /// <param name="maximum">the maximum number of results to return (optional)</param>
+        /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
         
         public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
@@ -7007,9 +7007,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -7022,8 +7022,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
-        /// <param name="maximum">maximum (optional)</param>
-        /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)</param>
+        /// <param name="maximum">the maximum number of results to return (optional)</param>
+        /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
         
         public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
@@ -7126,9 +7126,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -7141,8 +7141,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
-        /// <param name="maximum">maximum (optional)</param>
-        /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)</param>
+        /// <param name="maximum">the maximum number of results to return (optional)</param>
+        /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
         
         public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
@@ -7159,9 +7159,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -7174,8 +7174,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
-        /// <param name="maximum">maximum (optional)</param>
-        /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)</param>
+        /// <param name="maximum">the maximum number of results to return (optional)</param>
+        /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
@@ -15661,7 +15661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee, evaluator (optional)</param>
         /// <returns>EvaluationResponse</returns>
         
         public EvaluationResponse PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
@@ -15678,7 +15678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee, evaluator (optional)</param>
         /// <returns>ApiResponse of EvaluationResponse</returns>
         
         public ApiResponse< EvaluationResponse > PutQualityConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
@@ -15781,7 +15781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee, evaluator (optional)</param>
         /// <returns>Task of EvaluationResponse</returns>
         
         public async System.Threading.Tasks.Task<EvaluationResponse> PutQualityConversationEvaluationAsync (string conversationId, string evaluationId, Evaluation body, string expand = null)
@@ -15799,7 +15799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee, evaluator (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationResponse)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<EvaluationResponse>> PutQualityConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)

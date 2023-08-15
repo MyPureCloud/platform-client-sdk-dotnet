@@ -164,7 +164,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Uncallable for "Uncallable"
             /// </summary>
             [EnumMember(Value = "Uncallable")]
-            Uncallable
+            Uncallable,
+            
+            /// <summary>
+            /// Enum Didnotdeliverendpoint for "DidNotDeliverEndpoint"
+            /// </summary>
+            [EnumMember(Value = "DidNotDeliverEndpoint")]
+            Didnotdeliverendpoint,
+            
+            /// <summary>
+            /// Enum Didnotdelivertransfer for "DidNotDeliverTransfer"
+            /// </summary>
+            [EnumMember(Value = "DidNotDeliverTransfer")]
+            Didnotdelivertransfer
         }
         /// <summary>
         /// Gets or Sets LastAcdOutcome
@@ -259,7 +271,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastUserDisconnectType">LastUserDisconnectType.</param>
         /// <param name="LastAcdOutcome">LastAcdOutcome.</param>
         /// <param name="Authenticated">Authenticated.</param>
-        public JourneySessionEventsNotificationSessionEvent(string Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null)
+        /// <param name="App">App.</param>
+        /// <param name="SdkLibrary">SdkLibrary.</param>
+        /// <param name="NetworkConnectivity">NetworkConnectivity.</param>
+        public JourneySessionEventsNotificationSessionEvent(string Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, JourneySessionEventsNotificationApp App = null, JourneySessionEventsNotificationSdkLibrary SdkLibrary = null, JourneySessionEventsNotificationNetworkConnectivity NetworkConnectivity = null)
         {
             this.Id = Id;
             this.SelfUri = SelfUri;
@@ -298,6 +313,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LastUserDisconnectType = LastUserDisconnectType;
             this.LastAcdOutcome = LastAcdOutcome;
             this.Authenticated = Authenticated;
+            this.App = App;
+            this.SdkLibrary = SdkLibrary;
+            this.NetworkConnectivity = NetworkConnectivity;
             
         }
         
@@ -580,6 +598,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Authenticated { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets App
+        /// </summary>
+        [DataMember(Name="app", EmitDefaultValue=false)]
+        public JourneySessionEventsNotificationApp App { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets SdkLibrary
+        /// </summary>
+        [DataMember(Name="sdkLibrary", EmitDefaultValue=false)]
+        public JourneySessionEventsNotificationSdkLibrary SdkLibrary { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets NetworkConnectivity
+        /// </summary>
+        [DataMember(Name="networkConnectivity", EmitDefaultValue=false)]
+        public JourneySessionEventsNotificationNetworkConnectivity NetworkConnectivity { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -626,6 +668,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastUserDisconnectType: ").Append(LastUserDisconnectType).Append("\n");
             sb.Append("  LastAcdOutcome: ").Append(LastAcdOutcome).Append("\n");
             sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
+            sb.Append("  App: ").Append(App).Append("\n");
+            sb.Append("  SdkLibrary: ").Append(SdkLibrary).Append("\n");
+            sb.Append("  NetworkConnectivity: ").Append(NetworkConnectivity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -850,6 +895,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Authenticated == other.Authenticated ||
                     this.Authenticated != null &&
                     this.Authenticated.Equals(other.Authenticated)
+                ) &&
+                (
+                    this.App == other.App ||
+                    this.App != null &&
+                    this.App.Equals(other.App)
+                ) &&
+                (
+                    this.SdkLibrary == other.SdkLibrary ||
+                    this.SdkLibrary != null &&
+                    this.SdkLibrary.Equals(other.SdkLibrary)
+                ) &&
+                (
+                    this.NetworkConnectivity == other.NetworkConnectivity ||
+                    this.NetworkConnectivity != null &&
+                    this.NetworkConnectivity.Equals(other.NetworkConnectivity)
                 );
         }
 
@@ -974,6 +1034,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Authenticated != null)
                     hash = hash * 59 + this.Authenticated.GetHashCode();
+
+                if (this.App != null)
+                    hash = hash * 59 + this.App.GetHashCode();
+
+                if (this.SdkLibrary != null)
+                    hash = hash * 59 + this.SdkLibrary.GetHashCode();
+
+                if (this.NetworkConnectivity != null)
+                    hash = hash * 59 + this.NetworkConnectivity.GetHashCode();
 
                 return hash;
             }

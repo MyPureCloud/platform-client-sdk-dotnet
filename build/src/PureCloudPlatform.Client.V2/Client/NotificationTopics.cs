@@ -53,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.gamification.scorecards.users.{id}", typeof(GamificationScorecardChangeTopicScorecardChange)},
               {"v2.groups.{id}.greetings", typeof(GroupGreetingEventGreeting)},
               {"v2.journey.sessions.{id}.action.events", typeof(JourneyWebActionEventsNotificationWebActionEventsNotification)},
+              {"v2.journey.sessions.{id}.app.events", typeof(JourneyAppEventsNotificationAppEventsNotification)},
               {"v2.journey.sessions.{id}.outcome.events", typeof(JourneyOutcomeEventsNotificationOutcomeEventsNotification)},
               {"v2.journey.sessions.{id}.web.events", typeof(JourneyWebEventsNotificationWebEventsNotification)},
               {"v2.managementunits.{id}.workforcemanagement.intraday", typeof(WfmIntradayDataUpdateTopicIntradayDataUpdate)},

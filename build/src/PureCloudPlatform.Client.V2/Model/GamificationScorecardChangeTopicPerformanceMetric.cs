@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Points">Points.</param>
         /// <param name="Value">Value.</param>
         /// <param name="PunctualityEvents">PunctualityEvents.</param>
-        public GamificationScorecardChangeTopicPerformanceMetric(GamificationScorecardChangeTopicMetric Metric = null, int? Points = null, double? Value = null, List<GamificationScorecardChangeTopicPunctualityEvent> PunctualityEvents = null)
+        /// <param name="EvaluationDetails">EvaluationDetails.</param>
+        public GamificationScorecardChangeTopicPerformanceMetric(GamificationScorecardChangeTopicMetric Metric = null, int? Points = null, double? Value = null, List<GamificationScorecardChangeTopicPunctualityEvent> PunctualityEvents = null, List<GamificationScorecardChangeTopicEvaluationDetail> EvaluationDetails = null)
         {
             this.Metric = Metric;
             this.Points = Points;
             this.Value = Value;
             this.PunctualityEvents = PunctualityEvents;
+            this.EvaluationDetails = EvaluationDetails;
             
         }
         
@@ -67,6 +69,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<GamificationScorecardChangeTopicPunctualityEvent> PunctualityEvents { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets EvaluationDetails
+        /// </summary>
+        [DataMember(Name="evaluationDetails", EmitDefaultValue=false)]
+        public List<GamificationScorecardChangeTopicEvaluationDetail> EvaluationDetails { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  PunctualityEvents: ").Append(PunctualityEvents).Append("\n");
+            sb.Append("  EvaluationDetails: ").Append(EvaluationDetails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PunctualityEvents == other.PunctualityEvents ||
                     this.PunctualityEvents != null &&
                     this.PunctualityEvents.SequenceEqual(other.PunctualityEvents)
+                ) &&
+                (
+                    this.EvaluationDetails == other.EvaluationDetails ||
+                    this.EvaluationDetails != null &&
+                    this.EvaluationDetails.SequenceEqual(other.EvaluationDetails)
                 );
         }
 
@@ -164,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PunctualityEvents != null)
                     hash = hash * 59 + this.PunctualityEvents.GetHashCode();
+
+                if (this.EvaluationDetails != null)
+                    hash = hash * 59 + this.EvaluationDetails.GetHashCode();
 
                 return hash;
             }

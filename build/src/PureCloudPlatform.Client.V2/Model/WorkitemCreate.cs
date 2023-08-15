@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoStatusTransition">Set it to false to disable auto status transition. By default, it is enabled..</param>
         /// <param name="Description">The description of the Workitem. Maximum length of 4096 characters..</param>
         /// <param name="TypeId">The ID of the Worktype of the Workitem. (required).</param>
-        /// <param name="CustomFields">Custom fields defined in the schema referenced by the Workitems Worktype..</param>
+        /// <param name="CustomFields">Custom fields defined in the schema referenced by the worktype of the workitem..</param>
         /// <param name="QueueId">The ID of the Workitems queue. Must be a valid UUID..</param>
         /// <param name="AssigneeId">The ID of the assignee of the Workitem. Must be a valid UUID..</param>
         /// <param name="WrapupCode">The ID of the wrapup. Must be a valid UUID..</param>
@@ -176,9 +176,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Custom fields defined in the schema referenced by the Workitems Worktype.
+        /// Custom fields defined in the schema referenced by the worktype of the workitem.
         /// </summary>
-        /// <value>Custom fields defined in the schema referenced by the Workitems Worktype.</value>
+        /// <value>Custom fields defined in the schema referenced by the worktype of the workitem.</value>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public Dictionary<string, Object> CustomFields { get; set; }
 

@@ -91,7 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateMutedUntil">DateMutedUntil.</param>
         /// <param name="DateSnoozedUntil">DateSnoozedUntil.</param>
         /// <param name="Action">Action.</param>
-        public V2MobiusAlertsTopicAlert(V2MobiusAlertsTopicAlertRuleProperties Rule = null, Guid? Id = null, Guid? UserId = null, List<V2MobiusAlertsTopicAlertNotification> Notifications = null, DateTime? DateStart = null, DateTime? DateEnd = null, V2MobiusAlertsTopicCondition Conditions = null, Dictionary<string, string> AdditionalProperties = null, bool? Active = null, bool? Unread = null, bool? Muted = null, bool? Snoozed = null, DateTime? DateMutedUntil = null, DateTime? DateSnoozedUntil = null, ActionEnum? Action = null)
+        /// <param name="AlertSummary">AlertSummary.</param>
+        public V2MobiusAlertsTopicAlert(V2MobiusAlertsTopicAlertRuleProperties Rule = null, Guid? Id = null, Guid? UserId = null, List<V2MobiusAlertsTopicAlertNotification> Notifications = null, DateTime? DateStart = null, DateTime? DateEnd = null, V2MobiusAlertsTopicCondition Conditions = null, Dictionary<string, string> AdditionalProperties = null, bool? Active = null, bool? Unread = null, bool? Muted = null, bool? Snoozed = null, DateTime? DateMutedUntil = null, DateTime? DateSnoozedUntil = null, ActionEnum? Action = null, V2MobiusAlertsTopicAlertSummary AlertSummary = null)
         {
             this.Rule = Rule;
             this.Id = Id;
@@ -108,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateMutedUntil = DateMutedUntil;
             this.DateSnoozedUntil = DateSnoozedUntil;
             this.Action = Action;
+            this.AlertSummary = AlertSummary;
             
         }
         
@@ -226,6 +228,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets AlertSummary
+        /// </summary>
+        [DataMember(Name="alertSummary", EmitDefaultValue=false)]
+        public V2MobiusAlertsTopicAlertSummary AlertSummary { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -250,6 +260,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateMutedUntil: ").Append(DateMutedUntil).Append("\n");
             sb.Append("  DateSnoozedUntil: ").Append(DateSnoozedUntil).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  AlertSummary: ").Append(AlertSummary).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -364,6 +375,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
+                ) &&
+                (
+                    this.AlertSummary == other.AlertSummary ||
+                    this.AlertSummary != null &&
+                    this.AlertSummary.Equals(other.AlertSummary)
                 );
         }
 
@@ -422,6 +438,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
+
+                if (this.AlertSummary != null)
+                    hash = hash * 59 + this.AlertSummary.GetHashCode();
 
                 return hash;
             }

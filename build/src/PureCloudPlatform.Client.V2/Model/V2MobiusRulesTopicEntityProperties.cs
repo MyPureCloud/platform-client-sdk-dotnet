@@ -60,7 +60,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Edge for "Edge"
             /// </summary>
             [EnumMember(Value = "Edge")]
-            Edge
+            Edge,
+            
+            /// <summary>
+            /// Enum Team for "Team"
+            /// </summary>
+            [EnumMember(Value = "Team")]
+            Team,
+            
+            /// <summary>
+            /// Enum Teammembers for "TeamMembers"
+            /// </summary>
+            [EnumMember(Value = "TeamMembers")]
+            Teammembers
         }
         /// <summary>
         /// Gets or Sets EntityType
@@ -74,12 +86,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserDisplayName">UserDisplayName.</param>
         /// <param name="GroupDisplayName">GroupDisplayName.</param>
         /// <param name="QueueDisplayName">QueueDisplayName.</param>
-        public V2MobiusRulesTopicEntityProperties(EntityTypeEnum? EntityType = null, string UserDisplayName = null, string GroupDisplayName = null, string QueueDisplayName = null)
+        /// <param name="TeamDisplayName">TeamDisplayName.</param>
+        public V2MobiusRulesTopicEntityProperties(EntityTypeEnum? EntityType = null, string UserDisplayName = null, string GroupDisplayName = null, string QueueDisplayName = null, string TeamDisplayName = null)
         {
             this.EntityType = EntityType;
             this.UserDisplayName = UserDisplayName;
             this.GroupDisplayName = GroupDisplayName;
             this.QueueDisplayName = QueueDisplayName;
+            this.TeamDisplayName = TeamDisplayName;
             
         }
         
@@ -110,6 +124,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string QueueDisplayName { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets TeamDisplayName
+        /// </summary>
+        [DataMember(Name="teamDisplayName", EmitDefaultValue=false)]
+        public string TeamDisplayName { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -123,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserDisplayName: ").Append(UserDisplayName).Append("\n");
             sb.Append("  GroupDisplayName: ").Append(GroupDisplayName).Append("\n");
             sb.Append("  QueueDisplayName: ").Append(QueueDisplayName).Append("\n");
+            sb.Append("  TeamDisplayName: ").Append(TeamDisplayName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -182,6 +205,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueDisplayName == other.QueueDisplayName ||
                     this.QueueDisplayName != null &&
                     this.QueueDisplayName.Equals(other.QueueDisplayName)
+                ) &&
+                (
+                    this.TeamDisplayName == other.TeamDisplayName ||
+                    this.TeamDisplayName != null &&
+                    this.TeamDisplayName.Equals(other.TeamDisplayName)
                 );
         }
 
@@ -207,6 +235,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueueDisplayName != null)
                     hash = hash * 59 + this.QueueDisplayName.GetHashCode();
+
+                if (this.TeamDisplayName != null)
+                    hash = hash * 59 + this.TeamDisplayName.GetHashCode();
 
                 return hash;
             }

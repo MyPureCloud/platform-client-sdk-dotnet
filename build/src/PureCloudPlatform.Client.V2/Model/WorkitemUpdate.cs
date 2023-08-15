@@ -166,7 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateClosed">The closed date of the Workitem. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AssignmentState">The assignment state of the Workitem..</param>
         /// <param name="AssignmentOperation">Set this value to AgentAssignmentAlerting and supply an 'assigneeId' to assign the workitem to an agent and alert the agent of the assignment. Set this value to QueueAssignmentAlerting and supply a 'queueId' to route the workitem to an agent who is a member of the queue and alert the agent..</param>
-        /// <param name="CustomFields">Custom fields defined in the schema referenced by the Workitem. If set to {}, the existing keys and values will be removed..</param>
+        /// <param name="CustomFields">Custom fields defined in the schema referenced by the worktype of the workitem. If set to {}, the existing keys and values will be removed..</param>
         /// <param name="QueueId">The ID of the Workitems queue. Must be a valid UUID..</param>
         /// <param name="AssigneeId">The ID of the assignee of the Workitem. If supplied it must be a valid UUID..</param>
         /// <param name="ScoredAgents">A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents..</param>
@@ -308,9 +308,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Custom fields defined in the schema referenced by the Workitem. If set to {}, the existing keys and values will be removed.
+        /// Custom fields defined in the schema referenced by the worktype of the workitem. If set to {}, the existing keys and values will be removed.
         /// </summary>
-        /// <value>Custom fields defined in the schema referenced by the Workitem. If set to {}, the existing keys and values will be removed.</value>
+        /// <value>Custom fields defined in the schema referenced by the worktype of the workitem. If set to {}, the existing keys and values will be removed.</value>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public Dictionary<string, Object> CustomFields { get; set; }
 

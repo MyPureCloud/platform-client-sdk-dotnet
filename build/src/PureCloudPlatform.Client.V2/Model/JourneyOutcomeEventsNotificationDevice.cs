@@ -68,20 +68,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsMobile">IsMobile.</param>
         /// <param name="ScreenHeight">ScreenHeight.</param>
         /// <param name="ScreenWidth">ScreenWidth.</param>
+        /// <param name="ScreenDensity">ScreenDensity.</param>
         /// <param name="Fingerprint">Fingerprint.</param>
         /// <param name="OsFamily">OsFamily.</param>
         /// <param name="OsVersion">OsVersion.</param>
         /// <param name="Category">Category.</param>
-        public JourneyOutcomeEventsNotificationDevice(string Type = null, bool? IsMobile = null, int? ScreenHeight = null, int? ScreenWidth = null, string Fingerprint = null, string OsFamily = null, string OsVersion = null, CategoryEnum? Category = null)
+        /// <param name="Manufacturer">Manufacturer.</param>
+        public JourneyOutcomeEventsNotificationDevice(string Type = null, bool? IsMobile = null, int? ScreenHeight = null, int? ScreenWidth = null, int? ScreenDensity = null, string Fingerprint = null, string OsFamily = null, string OsVersion = null, CategoryEnum? Category = null, string Manufacturer = null)
         {
             this.Type = Type;
             this.IsMobile = IsMobile;
             this.ScreenHeight = ScreenHeight;
             this.ScreenWidth = ScreenWidth;
+            this.ScreenDensity = ScreenDensity;
             this.Fingerprint = Fingerprint;
             this.OsFamily = OsFamily;
             this.OsVersion = OsVersion;
             this.Category = Category;
+            this.Manufacturer = Manufacturer;
             
         }
         
@@ -120,6 +124,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ScreenDensity
+        /// </summary>
+        [DataMember(Name="screenDensity", EmitDefaultValue=false)]
+        public int? ScreenDensity { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Fingerprint
         /// </summary>
         [DataMember(Name="fingerprint", EmitDefaultValue=false)]
@@ -144,6 +156,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets Manufacturer
+        /// </summary>
+        [DataMember(Name="manufacturer", EmitDefaultValue=false)]
+        public string Manufacturer { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -157,10 +177,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsMobile: ").Append(IsMobile).Append("\n");
             sb.Append("  ScreenHeight: ").Append(ScreenHeight).Append("\n");
             sb.Append("  ScreenWidth: ").Append(ScreenWidth).Append("\n");
+            sb.Append("  ScreenDensity: ").Append(ScreenDensity).Append("\n");
             sb.Append("  Fingerprint: ").Append(Fingerprint).Append("\n");
             sb.Append("  OsFamily: ").Append(OsFamily).Append("\n");
             sb.Append("  OsVersion: ").Append(OsVersion).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
+            sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,6 +244,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScreenWidth.Equals(other.ScreenWidth)
                 ) &&
                 (
+                    this.ScreenDensity == other.ScreenDensity ||
+                    this.ScreenDensity != null &&
+                    this.ScreenDensity.Equals(other.ScreenDensity)
+                ) &&
+                (
                     this.Fingerprint == other.Fingerprint ||
                     this.Fingerprint != null &&
                     this.Fingerprint.Equals(other.Fingerprint)
@@ -240,6 +267,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Category == other.Category ||
                     this.Category != null &&
                     this.Category.Equals(other.Category)
+                ) &&
+                (
+                    this.Manufacturer == other.Manufacturer ||
+                    this.Manufacturer != null &&
+                    this.Manufacturer.Equals(other.Manufacturer)
                 );
         }
 
@@ -266,6 +298,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ScreenWidth != null)
                     hash = hash * 59 + this.ScreenWidth.GetHashCode();
 
+                if (this.ScreenDensity != null)
+                    hash = hash * 59 + this.ScreenDensity.GetHashCode();
+
                 if (this.Fingerprint != null)
                     hash = hash * 59 + this.Fingerprint.GetHashCode();
 
@@ -277,6 +312,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
+
+                if (this.Manufacturer != null)
+                    hash = hash * 59 + this.Manufacturer.GetHashCode();
 
                 return hash;
             }

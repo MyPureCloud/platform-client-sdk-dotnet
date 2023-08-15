@@ -117,6 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, ContactableStatus> ContactableStatus { get; set; }
 
 
+
+        /// <summary>
+        /// Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,6 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
             sb.Append("  ContactableStatus: ").Append(ContactableStatus).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -213,6 +223,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactableStatus == other.ContactableStatus ||
                     this.ContactableStatus != null &&
                     this.ContactableStatus.SequenceEqual(other.ContactableStatus)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
                 );
         }
 
@@ -250,6 +265,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ContactableStatus != null)
                     hash = hash * 59 + this.ContactableStatus.GetHashCode();
+
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
 
                 return hash;
             }

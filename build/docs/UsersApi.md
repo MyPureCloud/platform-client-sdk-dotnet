@@ -3152,6 +3152,7 @@ Update user
 Requires ANY permissions: 
 
 * directory:user:edit
+* directory:organization:admin
 
 ### Example
 ```{"language":"csharp"}

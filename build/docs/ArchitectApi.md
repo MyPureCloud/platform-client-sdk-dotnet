@@ -8,6 +8,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteArchitectEmergencygroup**](ArchitectApi.html#deletearchitectemergencygroup) | **Delete** /api/v2/architect/emergencygroups/{emergencyGroupId} | Deletes a emergency group by ID |
+| [**DeleteArchitectGrammar**](ArchitectApi.html#deletearchitectgrammar) | **Delete** /api/v2/architect/grammars/{grammarId} | Delete a grammar. |
+| [**DeleteArchitectGrammarLanguage**](ArchitectApi.html#deletearchitectgrammarlanguage) | **Delete** /api/v2/architect/grammars/{grammarId}/languages/{languageCode} | Delete specified grammar language |
+| [**DeleteArchitectGrammarLanguageFilesDtmf**](ArchitectApi.html#deletearchitectgrammarlanguagefilesdtmf) | **Delete** /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf | Clear the DTMF mode file for the grammar language if there is one |
+| [**DeleteArchitectGrammarLanguageFilesVoice**](ArchitectApi.html#deletearchitectgrammarlanguagefilesvoice) | **Delete** /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice | Clear the voice mode file for the grammar language if there is one |
 | [**DeleteArchitectIvr**](ArchitectApi.html#deletearchitectivr) | **Delete** /api/v2/architect/ivrs/{ivrId} | Delete an IVR Config. |
 | [**DeleteArchitectPrompt**](ArchitectApi.html#deletearchitectprompt) | **Delete** /api/v2/architect/prompts/{promptId} | Delete specified user prompt |
 | [**DeleteArchitectPromptResource**](ArchitectApi.html#deletearchitectpromptresource) | **Delete** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Delete specified user prompt resource |
@@ -32,6 +36,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingupdatedresourceconsumers) | **Get** /api/v2/architect/dependencytracking/updatedresourceconsumers | Get Dependency Tracking objects that depend on updated resources |
 | [**GetArchitectEmergencygroup**](ArchitectApi.html#getarchitectemergencygroup) | **Get** /api/v2/architect/emergencygroups/{emergencyGroupId} | Gets a emergency group by ID |
 | [**GetArchitectEmergencygroups**](ArchitectApi.html#getarchitectemergencygroups) | **Get** /api/v2/architect/emergencygroups | Get a list of emergency groups. |
+| [**GetArchitectGrammar**](ArchitectApi.html#getarchitectgrammar) | **Get** /api/v2/architect/grammars/{grammarId} | Get a grammar |
+| [**GetArchitectGrammarLanguage**](ArchitectApi.html#getarchitectgrammarlanguage) | **Get** /api/v2/architect/grammars/{grammarId}/languages/{languageCode} | Get a grammar language. |
+| [**GetArchitectGrammars**](ArchitectApi.html#getarchitectgrammars) | **Get** /api/v2/architect/grammars | Get a pageable list of grammars, filtered by query parameters |
 | [**GetArchitectIvr**](ArchitectApi.html#getarchitectivr) | **Get** /api/v2/architect/ivrs/{ivrId} | Get an IVR config. |
 | [**GetArchitectIvrs**](ArchitectApi.html#getarchitectivrs) | **Get** /api/v2/architect/ivrs | Get IVR configs. |
 | [**GetArchitectPrompt**](ArchitectApi.html#getarchitectprompt) | **Get** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
@@ -76,8 +83,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsOutcome**](ArchitectApi.html#getflowsoutcome) | **Get** /api/v2/flows/outcomes/{flowOutcomeId} | Get a flow outcome |
 | [**GetFlowsOutcomes**](ArchitectApi.html#getflowsoutcomes) | **Get** /api/v2/flows/outcomes | Get a pageable list of flow outcomes, filtered by query parameters |
 | [**GetFlowsOutcomesDivisionviews**](ArchitectApi.html#getflowsoutcomesdivisionviews) | **Get** /api/v2/flows/outcomes/divisionviews | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
+| [**PatchArchitectGrammar**](ArchitectApi.html#patcharchitectgrammar) | **Patch** /api/v2/architect/grammars/{grammarId} | Updates a grammar |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **Post** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
 | [**PostArchitectEmergencygroups**](ArchitectApi.html#postarchitectemergencygroups) | **Post** /api/v2/architect/emergencygroups | Creates a new emergency group |
+| [**PostArchitectGrammarLanguageFilesDtmf**](ArchitectApi.html#postarchitectgrammarlanguagefilesdtmf) | **Post** /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf | Creates a presigned URL for uploading a grammar DTMF mode file |
+| [**PostArchitectGrammarLanguageFilesVoice**](ArchitectApi.html#postarchitectgrammarlanguagefilesvoice) | **Post** /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice | Creates a presigned URL for uploading a grammar voice mode file |
+| [**PostArchitectGrammarLanguages**](ArchitectApi.html#postarchitectgrammarlanguages) | **Post** /api/v2/architect/grammars/{grammarId}/languages | Create a new language for a given grammar |
+| [**PostArchitectGrammars**](ArchitectApi.html#postarchitectgrammars) | **Post** /api/v2/architect/grammars | Create a new grammar |
 | [**PostArchitectIvrs**](ArchitectApi.html#postarchitectivrs) | **Post** /api/v2/architect/ivrs | Create IVR config. |
 | [**PostArchitectPromptHistory**](ArchitectApi.html#postarchitectprompthistory) | **Post** /api/v2/architect/prompts/{promptId}/history | Generate prompt history |
 | [**PostArchitectPromptResources**](ArchitectApi.html#postarchitectpromptresources) | **Post** /api/v2/architect/prompts/{promptId}/resources | Create a new user prompt resource |
@@ -175,6 +187,269 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emergencyGroupId** | **string**| Emergency group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletearchitectgrammar"></a>
+
+## **Object** DeleteArchitectGrammar (string grammarId)
+
+
+
+Delete a grammar.
+
+DeleteArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectGrammarExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | grammar ID
+
+            try
+            { 
+                // Delete a grammar.
+                Object result = apiInstance.DeleteArchitectGrammar(grammarId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectGrammar: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| grammar ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**Object**
+
+<a name="deletearchitectgrammarlanguage"></a>
+
+## void DeleteArchitectGrammarLanguage (string grammarId, string languageCode)
+
+
+
+Delete specified grammar language
+
+DeleteArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectGrammarLanguageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | Grammar ID
+            var languageCode = languageCode_example;  // string | Language
+
+            try
+            { 
+                // Delete specified grammar language
+                apiInstance.DeleteArchitectGrammarLanguage(grammarId, languageCode);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectGrammarLanguage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| Grammar ID |  |
+| **languageCode** | **string**| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletearchitectgrammarlanguagefilesdtmf"></a>
+
+## void DeleteArchitectGrammarLanguageFilesDtmf (string grammarId, string languageCode)
+
+
+
+Clear the DTMF mode file for the grammar language if there is one
+
+DeleteArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectGrammarLanguageFilesDtmfExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | Grammar ID
+            var languageCode = languageCode_example;  // string | Language
+
+            try
+            { 
+                // Clear the DTMF mode file for the grammar language if there is one
+                apiInstance.DeleteArchitectGrammarLanguageFilesDtmf(grammarId, languageCode);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectGrammarLanguageFilesDtmf: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| Grammar ID |  |
+| **languageCode** | **string**| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletearchitectgrammarlanguagefilesvoice"></a>
+
+## void DeleteArchitectGrammarLanguageFilesVoice (string grammarId, string languageCode)
+
+
+
+Clear the voice mode file for the grammar language if there is one
+
+DeleteArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectGrammarLanguageFilesVoiceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | Grammar ID
+            var languageCode = languageCode_example;  // string | Language
+
+            try
+            { 
+                // Clear the voice mode file for the grammar language if there is one
+                apiInstance.DeleteArchitectGrammarLanguageFilesVoice(grammarId, languageCode);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectGrammarLanguageFilesVoice: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| Grammar ID |  |
+| **languageCode** | **string**| Language |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1780,6 +2055,225 @@ namespace Example
 ### Return type
 
 [**EmergencyGroupListing**](EmergencyGroupListing.html)
+
+<a name="getarchitectgrammar"></a>
+
+## [**Grammar**](Grammar.html) GetArchitectGrammar (string grammarId, bool? includeFileUrls = null)
+
+
+
+Get a grammar
+
+Returns a specified grammar
+
+GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectGrammarExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | grammar ID
+            var includeFileUrls = true;  // bool? | Include grammar language file URLs (optional) 
+
+            try
+            { 
+                // Get a grammar
+                Grammar result = apiInstance.GetArchitectGrammar(grammarId, includeFileUrls);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectGrammar: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| grammar ID |  |
+| **includeFileUrls** | **bool?**| Include grammar language file URLs | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Grammar**](Grammar.html)
+
+<a name="getarchitectgrammarlanguage"></a>
+
+## [**GrammarLanguage**](GrammarLanguage.html) GetArchitectGrammarLanguage (string grammarId, string languageCode)
+
+
+
+Get a grammar language.
+
+GetArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectGrammarLanguageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | Grammar ID
+            var languageCode = languageCode_example;  // string | Language
+
+            try
+            { 
+                // Get a grammar language.
+                GrammarLanguage result = apiInstance.GetArchitectGrammarLanguage(grammarId, languageCode);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectGrammarLanguage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| Grammar ID |  |
+| **languageCode** | **string**| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage.html)
+
+<a name="getarchitectgrammars"></a>
+
+## [**GrammarListing**](GrammarListing.html) GetArchitectGrammars (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, bool? includeFileUrls = null)
+
+
+
+Get a pageable list of grammars, filtered by query parameters
+
+Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
+
+GetArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectGrammarsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var id = new List<string>(); // List<string> | ID (optional) 
+            var name = name_example;  // string | Name (optional) 
+            var description = description_example;  // string | Description (optional) 
+            var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            var includeFileUrls = true;  // bool? | Include grammar language file URLs (optional) 
+
+            try
+            { 
+                // Get a pageable list of grammars, filtered by query parameters
+                GrammarListing result = apiInstance.GetArchitectGrammars(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, includeFileUrls);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectGrammars: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: description, id, name |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc |
+| **id** | [**List<string>**](string.html)| ID | [optional]  |
+| **name** | **string**| Name | [optional]  |
+| **description** | **string**| Description | [optional]  |
+| **nameOrDescription** | **string**| Name or description | [optional]  |
+| **includeFileUrls** | **bool?**| Include grammar language file URLs | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GrammarListing**](GrammarListing.html)
 
 <a name="getarchitectivr"></a>
 
@@ -4900,6 +5394,73 @@ namespace Example
 
 [**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing.html)
 
+<a name="patcharchitectgrammar"></a>
+
+## [**Grammar**](Grammar.html) PatchArchitectGrammar (string grammarId, Grammar body = null)
+
+
+
+Updates a grammar
+
+PatchArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchArchitectGrammarExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | grammar ID
+            var body = new Grammar(); // Grammar |  (optional) 
+
+            try
+            { 
+                // Updates a grammar
+                Grammar result = apiInstance.PatchArchitectGrammar(grammarId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PatchArchitectGrammar: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| grammar ID |  |
+| **body** | [**Grammar**](Grammar.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Grammar**](Grammar.html)
+
 <a name="postarchitectdependencytrackingbuild"></a>
 
 ## void PostArchitectDependencytrackingBuild ()
@@ -5021,6 +5582,276 @@ namespace Example
 ### Return type
 
 [**EmergencyGroup**](EmergencyGroup.html)
+
+<a name="postarchitectgrammarlanguagefilesdtmf"></a>
+
+## [**UploadUrlResponse**](UploadUrlResponse.html) PostArchitectGrammarLanguageFilesDtmf (string grammarId, string languageCode, GrammarFileUploadRequest body)
+
+
+
+Creates a presigned URL for uploading a grammar DTMF mode file
+
+PostArchitectGrammarLanguageFilesDtmf is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectGrammarLanguageFilesDtmfExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | Grammar ID
+            var languageCode = languageCode_example;  // string | Language
+            var body = new GrammarFileUploadRequest(); // GrammarFileUploadRequest | query
+
+            try
+            { 
+                // Creates a presigned URL for uploading a grammar DTMF mode file
+                UploadUrlResponse result = apiInstance.PostArchitectGrammarLanguageFilesDtmf(grammarId, languageCode, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectGrammarLanguageFilesDtmf: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| Grammar ID |  |
+| **languageCode** | **string**| Language |  |
+| **body** | [**GrammarFileUploadRequest**](GrammarFileUploadRequest.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse.html)
+
+<a name="postarchitectgrammarlanguagefilesvoice"></a>
+
+## [**UploadUrlResponse**](UploadUrlResponse.html) PostArchitectGrammarLanguageFilesVoice (string grammarId, string languageCode, GrammarFileUploadRequest body)
+
+
+
+Creates a presigned URL for uploading a grammar voice mode file
+
+PostArchitectGrammarLanguageFilesVoice is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectGrammarLanguageFilesVoiceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | Grammar ID
+            var languageCode = languageCode_example;  // string | Language
+            var body = new GrammarFileUploadRequest(); // GrammarFileUploadRequest | query
+
+            try
+            { 
+                // Creates a presigned URL for uploading a grammar voice mode file
+                UploadUrlResponse result = apiInstance.PostArchitectGrammarLanguageFilesVoice(grammarId, languageCode, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectGrammarLanguageFilesVoice: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| Grammar ID |  |
+| **languageCode** | **string**| Language |  |
+| **body** | [**GrammarFileUploadRequest**](GrammarFileUploadRequest.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse.html)
+
+<a name="postarchitectgrammarlanguages"></a>
+
+## [**GrammarLanguage**](GrammarLanguage.html) PostArchitectGrammarLanguages (string grammarId, GrammarLanguage body)
+
+
+
+Create a new language for a given grammar
+
+PostArchitectGrammarLanguages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectGrammarLanguagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | Grammar ID
+            var body = new GrammarLanguage(); // GrammarLanguage | 
+
+            try
+            { 
+                // Create a new language for a given grammar
+                GrammarLanguage result = apiInstance.PostArchitectGrammarLanguages(grammarId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectGrammarLanguages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| Grammar ID |  |
+| **body** | [**GrammarLanguage**](GrammarLanguage.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage.html)
+
+<a name="postarchitectgrammars"></a>
+
+## [**Grammar**](Grammar.html) PostArchitectGrammars (Grammar body)
+
+
+
+Create a new grammar
+
+PostArchitectGrammars is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectGrammarsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var body = new Grammar(); // Grammar | 
+
+            try
+            { 
+                // Create a new grammar
+                Grammar result = apiInstance.PostArchitectGrammars(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectGrammars: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Grammar**](Grammar.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Grammar**](Grammar.html)
 
 <a name="postarchitectivrs"></a>
 

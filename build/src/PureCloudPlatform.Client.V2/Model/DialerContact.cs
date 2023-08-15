@@ -154,6 +154,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -182,6 +191,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactableStatus: ").Append(ContactableStatus).Append("\n");
             sb.Append("  ContactColumnTimeZones: ").Append(ContactColumnTimeZones).Append("\n");
             sb.Append("  ConfigurationOverrides: ").Append(ConfigurationOverrides).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -284,6 +294,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConfigurationOverrides.Equals(other.ConfigurationOverrides)
                 ) &&
                 (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -336,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConfigurationOverrides != null)
                     hash = hash * 59 + this.ConfigurationOverrides.GetHashCode();
+
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -1189,9 +1189,9 @@ namespace Example
             var apiInstance = new QualityApi();
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            var sortBy = sortBy_example;  // string | NOTE: Does not work when querying evaluations (optional) 
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            var nextPage = nextPage_example;  // string | next page token (optional) 
+            var nextPage = nextPage_example;  // string | NOTE: Does not work when querying evaluations (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var conversationId = conversationId_example;  // string | conversationId specified (optional) 
             var agentUserId = agentUserId_example;  // string | user id of the agent (optional) 
@@ -1204,8 +1204,8 @@ namespace Example
             var isReleased = true;  // bool? | the evaluation has been released (optional) 
             var agentHasRead = true;  // bool? | agent has the evaluation (optional) 
             var expandAnswerTotalScores = true;  // bool? | get the total scores for evaluations (optional) 
-            var maximum = 56;  // int? | maximum (optional) 
-            var sortOrder = sortOrder_example;  // string | sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending'. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional) 
+            var maximum = 56;  // int? | the maximum number of results to return (optional) 
+            var sortOrder = sortOrder_example;  // string | NOTE: Does not work when conversationId is supplied. (optional) 
 
             try
             { 
@@ -1229,9 +1229,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **sortBy** | **string**| NOTE: Does not work when querying evaluations | [optional]  |
 | **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
-| **nextPage** | **string**| next page token | [optional]  |
+| **nextPage** | **string**| NOTE: Does not work when querying evaluations | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **conversationId** | **string**| conversationId specified | [optional]  |
 | **agentUserId** | **string**| user id of the agent | [optional]  |
@@ -1244,8 +1244,8 @@ namespace Example
 | **isReleased** | **bool?**| the evaluation has been released | [optional]  |
 | **agentHasRead** | **bool?**| agent has the evaluation | [optional]  |
 | **expandAnswerTotalScores** | **bool?**| get the total scores for evaluations | [optional]  |
-| **maximum** | **int?**| maximum | [optional]  |
-| **sortOrder** | **string**| sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId | [optional]  |
+| **maximum** | **int?**| the maximum number of results to return | [optional]  |
+| **sortOrder** | **string**| NOTE: Does not work when conversationId is supplied. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3850,7 +3850,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var evaluationId = evaluationId_example;  // string | evaluationId
             var body = new Evaluation(); // Evaluation | evaluation
-            var expand = expand_example;  // string | evaluatorId, evaluationForm, assignee (optional) 
+            var expand = expand_example;  // string | evaluatorId, evaluationForm, assignee, evaluator (optional) 
 
             try
             { 
@@ -3875,7 +3875,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **evaluationId** | **string**| evaluationId |  |
 | **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
-| **expand** | **string**| evaluatorId, evaluationForm, assignee | [optional]  |
+| **expand** | **string**| evaluatorId, evaluationForm, assignee, evaluator | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

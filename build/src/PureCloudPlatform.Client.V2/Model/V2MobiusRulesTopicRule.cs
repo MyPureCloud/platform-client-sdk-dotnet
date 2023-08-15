@@ -45,6 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Userpresence,
             
             /// <summary>
+            /// Enum Workforcemanagement for "WorkforceManagement"
+            /// </summary>
+            [EnumMember(Value = "WorkforceManagement")]
+            Workforcemanagement,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
@@ -110,7 +116,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Enabled.</param>
         /// <param name="InAlarm">InAlarm.</param>
         /// <param name="Action">Action.</param>
-        public V2MobiusRulesTopicRule(Guid? Id = null, Guid? UserId = null, string Name = null, TypeEnum? Type = null, List<V2MobiusRulesTopicAlertNotification> Notifications = null, V2MobiusRulesTopicCondition Conditions = null, bool? Enabled = null, bool? InAlarm = null, ActionEnum? Action = null)
+        /// <param name="DateCreated">DateCreated.</param>
+        public V2MobiusRulesTopicRule(Guid? Id = null, Guid? UserId = null, string Name = null, TypeEnum? Type = null, List<V2MobiusRulesTopicAlertNotification> Notifications = null, V2MobiusRulesTopicCondition Conditions = null, bool? Enabled = null, bool? InAlarm = null, ActionEnum? Action = null, DateTime? DateCreated = null)
         {
             this.Id = Id;
             this.UserId = UserId;
@@ -121,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Enabled = Enabled;
             this.InAlarm = InAlarm;
             this.Action = Action;
+            this.DateCreated = DateCreated;
             
         }
         
@@ -185,6 +193,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets DateCreated
+        /// </summary>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -203,6 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -287,6 +304,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
                 );
         }
 
@@ -327,6 +349,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
+
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
 
                 return hash;
             }

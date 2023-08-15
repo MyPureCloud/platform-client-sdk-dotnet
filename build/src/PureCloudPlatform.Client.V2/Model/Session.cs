@@ -246,6 +246,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastPage">The webpage where the customer's last web interaction occurred..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="Referrer">Identifies the page URL that originally generated the request for the current page being viewed..</param>
+        /// <param name="App">Application that the customer is interacting with (for app sessions)..</param>
+        /// <param name="SdkLibrary">SDK library used to generate the events for the session (for app and web sessions)..</param>
+        /// <param name="NetworkConnectivity">Information relating to the device's network connectivity (for app sessions)..</param>
         /// <param name="SearchTerms">Search terms associated with the session..</param>
         /// <param name="UserAgentString">String identifying the user agent..</param>
         /// <param name="DurationInSeconds">Indicates how long the session has been active (valid for an individual device)..</param>
@@ -266,7 +269,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndedDate">Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AwayDate">Timestamp indicating when the visitor should be considered as away. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="IdleDate">Timestamp indicating when the visitor should be considered as idle. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Session(string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
+        public Session(string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, JourneyApp App = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
         {
             this.CustomerId = CustomerId;
             this.CustomerIdType = CustomerIdType;
@@ -286,6 +289,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LastPage = LastPage;
             this.MktCampaign = MktCampaign;
             this.Referrer = Referrer;
+            this.App = App;
+            this.SdkLibrary = SdkLibrary;
+            this.NetworkConnectivity = NetworkConnectivity;
             this.SearchTerms = SearchTerms;
             this.UserAgentString = UserAgentString;
             this.DurationInSeconds = DurationInSeconds;
@@ -479,6 +485,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Identifies the page URL that originally generated the request for the current page being viewed.</value>
         [DataMember(Name="referrer", EmitDefaultValue=false)]
         public Referrer Referrer { get; set; }
+
+
+
+        /// <summary>
+        /// Application that the customer is interacting with (for app sessions).
+        /// </summary>
+        /// <value>Application that the customer is interacting with (for app sessions).</value>
+        [DataMember(Name="app", EmitDefaultValue=false)]
+        public JourneyApp App { get; set; }
+
+
+
+        /// <summary>
+        /// SDK library used to generate the events for the session (for app and web sessions).
+        /// </summary>
+        /// <value>SDK library used to generate the events for the session (for app and web sessions).</value>
+        [DataMember(Name="sdkLibrary", EmitDefaultValue=false)]
+        public SdkLibrary SdkLibrary { get; set; }
+
+
+
+        /// <summary>
+        /// Information relating to the device's network connectivity (for app sessions).
+        /// </summary>
+        /// <value>Information relating to the device's network connectivity (for app sessions).</value>
+        [DataMember(Name="networkConnectivity", EmitDefaultValue=false)]
+        public NetworkConnectivity NetworkConnectivity { get; set; }
 
 
 
@@ -695,6 +728,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastPage: ").Append(LastPage).Append("\n");
             sb.Append("  MktCampaign: ").Append(MktCampaign).Append("\n");
             sb.Append("  Referrer: ").Append(Referrer).Append("\n");
+            sb.Append("  App: ").Append(App).Append("\n");
+            sb.Append("  SdkLibrary: ").Append(SdkLibrary).Append("\n");
+            sb.Append("  NetworkConnectivity: ").Append(NetworkConnectivity).Append("\n");
             sb.Append("  SearchTerms: ").Append(SearchTerms).Append("\n");
             sb.Append("  UserAgentString: ").Append(UserAgentString).Append("\n");
             sb.Append("  DurationInSeconds: ").Append(DurationInSeconds).Append("\n");
@@ -852,6 +888,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Referrer == other.Referrer ||
                     this.Referrer != null &&
                     this.Referrer.Equals(other.Referrer)
+                ) &&
+                (
+                    this.App == other.App ||
+                    this.App != null &&
+                    this.App.Equals(other.App)
+                ) &&
+                (
+                    this.SdkLibrary == other.SdkLibrary ||
+                    this.SdkLibrary != null &&
+                    this.SdkLibrary.Equals(other.SdkLibrary)
+                ) &&
+                (
+                    this.NetworkConnectivity == other.NetworkConnectivity ||
+                    this.NetworkConnectivity != null &&
+                    this.NetworkConnectivity.Equals(other.NetworkConnectivity)
                 ) &&
                 (
                     this.SearchTerms == other.SearchTerms ||
@@ -1037,6 +1088,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Referrer != null)
                     hash = hash * 59 + this.Referrer.GetHashCode();
+
+                if (this.App != null)
+                    hash = hash * 59 + this.App.GetHashCode();
+
+                if (this.SdkLibrary != null)
+                    hash = hash * 59 + this.SdkLibrary.GetHashCode();
+
+                if (this.NetworkConnectivity != null)
+                    hash = hash * 59 + this.NetworkConnectivity.GetHashCode();
 
                 if (this.SearchTerms != null)
                     hash = hash * 59 + this.SearchTerms.GetHashCode();

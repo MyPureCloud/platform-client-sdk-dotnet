@@ -993,6 +993,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionTemplate> PostJourneyActiontemplatesWithHttpInfo (ActionTemplate body = null);
 
         /// <summary>
+        /// Send a journey app event, used for tracking customer activity on an application.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">The ID of the deployment sending the app event.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>AppEventResponse</returns>
+        
+        AppEventResponse PostJourneyDeploymentAppevents (string deploymentId, AppEventRequest body = null);
+
+        /// <summary>
+        /// Send a journey app event, used for tracking customer activity on an application.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">The ID of the deployment sending the app event.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of AppEventResponse</returns>
+        
+        ApiResponse<AppEventResponse> PostJourneyDeploymentAppeventsWithHttpInfo (string deploymentId, AppEventRequest body = null);
+
+        /// <summary>
         /// Create an outcome.
         /// </summary>
         /// <remarks>
@@ -2069,6 +2097,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActionTemplate)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> PostJourneyActiontemplatesAsyncWithHttpInfo (ActionTemplate body = null);
+
+        /// <summary>
+        /// Send a journey app event, used for tracking customer activity on an application.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">The ID of the deployment sending the app event.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of AppEventResponse</returns>
+        
+        System.Threading.Tasks.Task<AppEventResponse> PostJourneyDeploymentAppeventsAsync (string deploymentId, AppEventRequest body = null);
+
+        /// <summary>
+        /// Send a journey app event, used for tracking customer activity on an application.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">The ID of the deployment sending the app event.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (AppEventResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AppEventResponse>> PostJourneyDeploymentAppeventsAsyncWithHttpInfo (string deploymentId, AppEventRequest body = null);
 
         /// <summary>
         /// Create an outcome.
@@ -10049,6 +10105,215 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActionTemplate>(localVarStatusCode,
                 localVarHeaders,
                 (ActionTemplate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActionTemplate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Send a journey app event, used for tracking customer activity on an application. 
+        /// 
+        /// PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">The ID of the deployment sending the app event.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>AppEventResponse</returns>
+        
+        public AppEventResponse PostJourneyDeploymentAppevents (string deploymentId, AppEventRequest body = null)
+        {
+             ApiResponse<AppEventResponse> localVarResponse = PostJourneyDeploymentAppeventsWithHttpInfo(deploymentId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send a journey app event, used for tracking customer activity on an application. 
+        /// 
+        /// PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">The ID of the deployment sending the app event.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of AppEventResponse</returns>
+        
+        public ApiResponse< AppEventResponse > PostJourneyDeploymentAppeventsWithHttpInfo (string deploymentId, AppEventRequest body = null)
+        { 
+            // verify the required parameter 'deploymentId' is set
+            if (deploymentId == null)
+                throw new ApiException(400, "Missing required parameter 'deploymentId' when calling JourneyApi->PostJourneyDeploymentAppevents");
+
+            var localVarPath = "/api/v2/journey/deployments/{deploymentId}/appevents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (deploymentId != null) localVarPathParams.Add("deploymentId", this.Configuration.ApiClient.ParameterToString(deploymentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyDeploymentAppevents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyDeploymentAppevents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppEventResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AppEventResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppEventResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Send a journey app event, used for tracking customer activity on an application. 
+        /// 
+        /// PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">The ID of the deployment sending the app event.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of AppEventResponse</returns>
+        
+        public async System.Threading.Tasks.Task<AppEventResponse> PostJourneyDeploymentAppeventsAsync (string deploymentId, AppEventRequest body = null)
+        {
+             ApiResponse<AppEventResponse> localVarResponse = await PostJourneyDeploymentAppeventsAsyncWithHttpInfo(deploymentId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send a journey app event, used for tracking customer activity on an application. 
+        /// 
+        /// PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">The ID of the deployment sending the app event.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (AppEventResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AppEventResponse>> PostJourneyDeploymentAppeventsAsyncWithHttpInfo (string deploymentId, AppEventRequest body = null)
+        { 
+            // verify the required parameter 'deploymentId' is set
+            if (deploymentId == null)
+                throw new ApiException(400, "Missing required parameter 'deploymentId' when calling JourneyApi->PostJourneyDeploymentAppevents");
+            
+
+            var localVarPath = "/api/v2/journey/deployments/{deploymentId}/appevents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (deploymentId != null) localVarPathParams.Add("deploymentId", this.Configuration.ApiClient.ParameterToString(deploymentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyDeploymentAppevents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyDeploymentAppevents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppEventResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AppEventResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppEventResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

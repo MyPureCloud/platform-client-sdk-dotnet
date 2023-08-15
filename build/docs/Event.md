@@ -19,6 +19,7 @@ title: Event
 | **SegmentAssignmentEvent** | [**SegmentAssignmentEvent**](SegmentAssignmentEvent.html) | Event that represents a segment being assigned. | [optional] |
 | **WebActionEvent** | [**WebActionEvent**](WebActionEvent.html) | Event triggered by web actions. | [optional] |
 | **WebEvent** | [**WebEvent**](WebEvent.html) | Event that tracks user interactions with content in a browser such as pageviews, downloads, mobile ad clicks, etc. | [optional] |
+| **AppEvent** | [**AppEvent**](AppEvent.html) | Event that tracks user interactions with content in an application such as screen views, searches, etc. | [optional] |
 | **CreatedDate** | **DateTime?** | Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table table-striped"}
 

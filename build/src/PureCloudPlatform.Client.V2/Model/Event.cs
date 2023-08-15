@@ -38,8 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SegmentAssignmentEvent">Event that represents a segment being assigned..</param>
         /// <param name="WebActionEvent">Event triggered by web actions..</param>
         /// <param name="WebEvent">Event that tracks user interactions with content in a browser such as pageviews, downloads, mobile ad clicks, etc..</param>
+        /// <param name="AppEvent">Event that tracks user interactions with content in an application such as screen views, searches, etc..</param>
         /// <param name="CreatedDate">Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Event(string Id = null, string CustomerId = null, string CustomerIdType = null, EventSession Session = null, string EventType = null, GenericActionEvent GenericActionEvent = null, OutcomeAchievedEvent OutcomeAchievedEvent = null, SegmentAssignedEvent SegmentAssignedEvent = null, SegmentAssignmentEvent SegmentAssignmentEvent = null, WebActionEvent WebActionEvent = null, WebEvent WebEvent = null, DateTime? CreatedDate = null)
+        public Event(string Id = null, string CustomerId = null, string CustomerIdType = null, EventSession Session = null, string EventType = null, GenericActionEvent GenericActionEvent = null, OutcomeAchievedEvent OutcomeAchievedEvent = null, SegmentAssignedEvent SegmentAssignedEvent = null, SegmentAssignmentEvent SegmentAssignmentEvent = null, WebActionEvent WebActionEvent = null, WebEvent WebEvent = null, AppEvent AppEvent = null, DateTime? CreatedDate = null)
         {
             this.Id = Id;
             this.CustomerId = CustomerId;
@@ -52,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SegmentAssignmentEvent = SegmentAssignmentEvent;
             this.WebActionEvent = WebActionEvent;
             this.WebEvent = WebEvent;
+            this.AppEvent = AppEvent;
             this.CreatedDate = CreatedDate;
             
         }
@@ -167,6 +169,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Event that tracks user interactions with content in an application such as screen views, searches, etc.
+        /// </summary>
+        /// <value>Event that tracks user interactions with content in an application such as screen views, searches, etc.</value>
+        [DataMember(Name="appEvent", EmitDefaultValue=false)]
+        public AppEvent AppEvent { get; set; }
+
+
+
+        /// <summary>
         /// Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -195,6 +206,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SegmentAssignmentEvent: ").Append(SegmentAssignmentEvent).Append("\n");
             sb.Append("  WebActionEvent: ").Append(WebActionEvent).Append("\n");
             sb.Append("  WebEvent: ").Append(WebEvent).Append("\n");
+            sb.Append("  AppEvent: ").Append(AppEvent).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -297,6 +309,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WebEvent.Equals(other.WebEvent)
                 ) &&
                 (
+                    this.AppEvent == other.AppEvent ||
+                    this.AppEvent != null &&
+                    this.AppEvent.Equals(other.AppEvent)
+                ) &&
+                (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
@@ -349,6 +366,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WebEvent != null)
                     hash = hash * 59 + this.WebEvent.GetHashCode();
+
+                if (this.AppEvent != null)
+                    hash = hash * 59 + this.AppEvent.GetHashCode();
 
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();

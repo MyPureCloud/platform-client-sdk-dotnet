@@ -144,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationSource">EvaluationSource.</param>
         /// <param name="AssigneeUserId">AssigneeUserId.</param>
         /// <param name="PreviousAssigneeUserId">PreviousAssigneeUserId.</param>
+        /// <param name="AssigneeApplicable">AssigneeApplicable.</param>
         /// <param name="EvaluationContextId">EvaluationContextId.</param>
         /// <param name="DisputeCount">DisputeCount.</param>
         /// <param name="Version">Version.</param>
@@ -154,7 +155,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluatorCommentHasUpdated">EvaluatorCommentHasUpdated.</param>
         /// <param name="AgentCommentHasUpdated">AgentCommentHasUpdated.</param>
         /// <param name="PreviousRescoreCount">PreviousRescoreCount.</param>
-        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null, EvaluationQualityV2TopicEvaluationSource EvaluationSource = null, string AssigneeUserId = null, string PreviousAssigneeUserId = null, string EvaluationContextId = null, int? DisputeCount = null, int? Version = null, PreviousStatusEnum? PreviousStatus = null, bool? DeclinedReview = null, EvaluationQualityV2TopicEvaluationReference RetractedEvaluation = null, int? RescoreCount = null, bool? EvaluatorCommentHasUpdated = null, bool? AgentCommentHasUpdated = null, int? PreviousRescoreCount = null)
+        /// <param name="PreviousEvaluatorUserId">PreviousEvaluatorUserId.</param>
+        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null, EvaluationQualityV2TopicEvaluationSource EvaluationSource = null, string AssigneeUserId = null, string PreviousAssigneeUserId = null, bool? AssigneeApplicable = null, string EvaluationContextId = null, int? DisputeCount = null, int? Version = null, PreviousStatusEnum? PreviousStatus = null, bool? DeclinedReview = null, EvaluationQualityV2TopicEvaluationReference RetractedEvaluation = null, int? RescoreCount = null, bool? EvaluatorCommentHasUpdated = null, bool? AgentCommentHasUpdated = null, int? PreviousRescoreCount = null, string PreviousEvaluatorUserId = null)
         {
             this.Id = Id;
             this.ConversationId = ConversationId;
@@ -181,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EvaluationSource = EvaluationSource;
             this.AssigneeUserId = AssigneeUserId;
             this.PreviousAssigneeUserId = PreviousAssigneeUserId;
+            this.AssigneeApplicable = AssigneeApplicable;
             this.EvaluationContextId = EvaluationContextId;
             this.DisputeCount = DisputeCount;
             this.Version = Version;
@@ -191,6 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EvaluatorCommentHasUpdated = EvaluatorCommentHasUpdated;
             this.AgentCommentHasUpdated = AgentCommentHasUpdated;
             this.PreviousRescoreCount = PreviousRescoreCount;
+            this.PreviousEvaluatorUserId = PreviousEvaluatorUserId;
             
         }
         
@@ -391,6 +395,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets AssigneeApplicable
+        /// </summary>
+        [DataMember(Name="assigneeApplicable", EmitDefaultValue=false)]
+        public bool? AssigneeApplicable { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets EvaluationContextId
         /// </summary>
         [DataMember(Name="evaluationContextId", EmitDefaultValue=false)]
@@ -463,6 +475,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? PreviousRescoreCount { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets PreviousEvaluatorUserId
+        /// </summary>
+        [DataMember(Name="previousEvaluatorUserId", EmitDefaultValue=false)]
+        public string PreviousEvaluatorUserId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -497,6 +517,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluationSource: ").Append(EvaluationSource).Append("\n");
             sb.Append("  AssigneeUserId: ").Append(AssigneeUserId).Append("\n");
             sb.Append("  PreviousAssigneeUserId: ").Append(PreviousAssigneeUserId).Append("\n");
+            sb.Append("  AssigneeApplicable: ").Append(AssigneeApplicable).Append("\n");
             sb.Append("  EvaluationContextId: ").Append(EvaluationContextId).Append("\n");
             sb.Append("  DisputeCount: ").Append(DisputeCount).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
@@ -507,6 +528,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluatorCommentHasUpdated: ").Append(EvaluatorCommentHasUpdated).Append("\n");
             sb.Append("  AgentCommentHasUpdated: ").Append(AgentCommentHasUpdated).Append("\n");
             sb.Append("  PreviousRescoreCount: ").Append(PreviousRescoreCount).Append("\n");
+            sb.Append("  PreviousEvaluatorUserId: ").Append(PreviousEvaluatorUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -673,6 +695,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PreviousAssigneeUserId.Equals(other.PreviousAssigneeUserId)
                 ) &&
                 (
+                    this.AssigneeApplicable == other.AssigneeApplicable ||
+                    this.AssigneeApplicable != null &&
+                    this.AssigneeApplicable.Equals(other.AssigneeApplicable)
+                ) &&
+                (
                     this.EvaluationContextId == other.EvaluationContextId ||
                     this.EvaluationContextId != null &&
                     this.EvaluationContextId.Equals(other.EvaluationContextId)
@@ -721,6 +748,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PreviousRescoreCount == other.PreviousRescoreCount ||
                     this.PreviousRescoreCount != null &&
                     this.PreviousRescoreCount.Equals(other.PreviousRescoreCount)
+                ) &&
+                (
+                    this.PreviousEvaluatorUserId == other.PreviousEvaluatorUserId ||
+                    this.PreviousEvaluatorUserId != null &&
+                    this.PreviousEvaluatorUserId.Equals(other.PreviousEvaluatorUserId)
                 );
         }
 
@@ -810,6 +842,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PreviousAssigneeUserId != null)
                     hash = hash * 59 + this.PreviousAssigneeUserId.GetHashCode();
 
+                if (this.AssigneeApplicable != null)
+                    hash = hash * 59 + this.AssigneeApplicable.GetHashCode();
+
                 if (this.EvaluationContextId != null)
                     hash = hash * 59 + this.EvaluationContextId.GetHashCode();
 
@@ -839,6 +874,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PreviousRescoreCount != null)
                     hash = hash * 59 + this.PreviousRescoreCount.GetHashCode();
+
+                if (this.PreviousEvaluatorUserId != null)
+                    hash = hash * 59 + this.PreviousEvaluatorUserId.GetHashCode();
 
                 return hash;
             }

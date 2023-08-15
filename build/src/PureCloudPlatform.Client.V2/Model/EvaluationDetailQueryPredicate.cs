@@ -67,16 +67,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Assigneeid for "assigneeId"
-            /// </summary>
-            [EnumMember(Value = "assigneeId")]
-            Assigneeid,
-            
-            /// <summary>
             /// Enum Assigneeapplicable for "assigneeApplicable"
             /// </summary>
             [EnumMember(Value = "assigneeApplicable")]
             Assigneeapplicable,
+            
+            /// <summary>
+            /// Enum Assigneeid for "assigneeId"
+            /// </summary>
+            [EnumMember(Value = "assigneeId")]
+            Assigneeid,
             
             /// <summary>
             /// Enum Calibrationid for "calibrationId"

@@ -11,6 +11,7 @@ title: GamificationScorecardChangeTopicPerformanceMetric
 | **Points** | **int?** |  | [optional] |
 | **Value** | **double?** |  | [optional] |
 | **PunctualityEvents** | [**List&lt;GamificationScorecardChangeTopicPunctualityEvent&gt;**](GamificationScorecardChangeTopicPunctualityEvent.html) |  | [optional] |
+| **EvaluationDetails** | [**List&lt;GamificationScorecardChangeTopicEvaluationDetail&gt;**](GamificationScorecardChangeTopicEvaluationDetail.html) |  | [optional] |
 {: class="table table-striped"}
 
 

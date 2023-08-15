@@ -13,6 +13,7 @@ title: CampaignProgress
 | **NumberOfContactsMessaged** | **long?** | Number of contacts messaged during the campaign | [optional] |
 | **TotalNumberOfContacts** | **long?** | Total number of contacts in the campaign | [optional] |
 | **Percentage** | **long?** | Percentage of contacts processed during the campaign | [optional] |
+| **NumberOfContactsSkipped** | **Dictionary&lt;string, int?&gt;** | Number of contacts skipped during the campaign | [optional] |
 {: class="table table-striped"}
 
 

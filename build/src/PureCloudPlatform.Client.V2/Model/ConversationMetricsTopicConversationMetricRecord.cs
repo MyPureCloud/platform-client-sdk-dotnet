@@ -142,6 +142,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tacd,
             
             /// <summary>
+            /// Enum Tactivecallback for "tActiveCallback"
+            /// </summary>
+            [EnumMember(Value = "tActiveCallback")]
+            Tactivecallback,
+            
+            /// <summary>
+            /// Enum Tactivecallbackcomplete for "tActiveCallbackComplete"
+            /// </summary>
+            [EnumMember(Value = "tActiveCallbackComplete")]
+            Tactivecallbackcomplete,
+            
+            /// <summary>
             /// Enum Tacw for "tAcw"
             /// </summary>
             [EnumMember(Value = "tAcw")]
@@ -544,6 +556,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Endpoint,
             
             /// <summary>
+            /// Enum Endpointdnd for "endpointDnd"
+            /// </summary>
+            [EnumMember(Value = "endpointDnd")]
+            Endpointdnd,
+            
+            /// <summary>
             /// Enum Error for "error"
             /// </summary>
             [EnumMember(Value = "error")]
@@ -602,6 +620,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "transfer")]
             Transfer,
+            
+            /// <summary>
+            /// Enum Transferdnd for "transferDnd"
+            /// </summary>
+            [EnumMember(Value = "transferDnd")]
+            Transferdnd,
             
             /// <summary>
             /// Enum Transportfailure for "transportFailure"
@@ -882,6 +906,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conditional,
             
             /// <summary>
+            /// Enum Direct for "Direct"
+            /// </summary>
+            [EnumMember(Value = "Direct")]
+            Direct,
+            
+            /// <summary>
             /// Enum Last for "Last"
             /// </summary>
             [EnumMember(Value = "Last")]
@@ -918,6 +948,45 @@ namespace PureCloudPlatform.Client.V2.Model
             Vip
         }
         /// <summary>
+        /// Routing rule type
+        /// </summary>
+        /// <value>Routing rule type</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RoutingRuleTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Conditional for "Conditional"
+            /// </summary>
+            [EnumMember(Value = "Conditional")]
+            Conditional,
+            
+            /// <summary>
+            /// Enum Predictive for "Predictive"
+            /// </summary>
+            [EnumMember(Value = "Predictive")]
+            Predictive,
+            
+            /// <summary>
+            /// Enum Preferred for "Preferred"
+            /// </summary>
+            [EnumMember(Value = "Preferred")]
+            Preferred
+        }
+        /// <summary>
         /// Complete routing method
         /// </summary>
         /// <value>Complete routing method</value>
@@ -943,6 +1012,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Conditional")]
             Conditional,
+            
+            /// <summary>
+            /// Enum Direct for "Direct"
+            /// </summary>
+            [EnumMember(Value = "Direct")]
+            Direct,
             
             /// <summary>
             /// Enum Last for "Last"
@@ -1035,6 +1110,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public PurposeEnum? Purpose { get; set; }
         /// <summary>
+        /// Routing rule type
+        /// </summary>
+        /// <value>Routing rule type</value>
+        [DataMember(Name="routingRuleType", EmitDefaultValue=false)]
+        public RoutingRuleTypeEnum? RoutingRuleType { get; set; }
+        /// <summary>
         /// Complete routing method
         /// </summary>
         /// <value>Complete routing method</value>
@@ -1110,6 +1191,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoomId">Unique identifier for the room.</param>
         /// <param name="RoutingPriority">Routing priority for the current interaction.</param>
         /// <param name="RoutingRing">Routing ring for bullseye or preferred agent routing.</param>
+        /// <param name="RoutingRule">Routing rule for preferred, conditional and predictive routing type.</param>
+        /// <param name="RoutingRuleType">Routing rule type.</param>
         /// <param name="SelectedAgentId">Selected agent ID.</param>
         /// <param name="SelectedAgentRank">Selected agent GPR rank.</param>
         /// <param name="SelfServed">Indicates whether all flow sessions were self serviced.</param>
@@ -1123,7 +1206,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapUpCode">Wrap up code.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public ConversationMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ErrorCode = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, bool? Reoffered = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<ConversationMetricsTopicConversationProposedAgent> ProposedAgents = null, List<ConversationMetricsTopicConversationScoredAgent> ScoredAgents = null)
+        public ConversationMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ErrorCode = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, bool? Reoffered = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<ConversationMetricsTopicConversationProposedAgent> ProposedAgents = null, List<ConversationMetricsTopicConversationScoredAgent> ScoredAgents = null)
         {
             this.Metric = Metric;
             this.MetricDate = MetricDate;
@@ -1192,6 +1275,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoomId = RoomId;
             this.RoutingPriority = RoutingPriority;
             this.RoutingRing = RoutingRing;
+            this.RoutingRule = RoutingRule;
+            this.RoutingRuleType = RoutingRuleType;
             this.SelectedAgentId = SelectedAgentId;
             this.SelectedAgentRank = SelectedAgentRank;
             this.SelfServed = SelfServed;
@@ -1751,6 +1836,17 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Routing rule for preferred, conditional and predictive routing type
+        /// </summary>
+        /// <value>Routing rule for preferred, conditional and predictive routing type</value>
+        [DataMember(Name="routingRule", EmitDefaultValue=false)]
+        public string RoutingRule { get; set; }
+
+
+
+
+
+        /// <summary>
         /// Selected agent ID
         /// </summary>
         /// <value>Selected agent ID</value>
@@ -1935,6 +2031,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  RoutingPriority: ").Append(RoutingPriority).Append("\n");
             sb.Append("  RoutingRing: ").Append(RoutingRing).Append("\n");
+            sb.Append("  RoutingRule: ").Append(RoutingRule).Append("\n");
+            sb.Append("  RoutingRuleType: ").Append(RoutingRuleType).Append("\n");
             sb.Append("  SelectedAgentId: ").Append(SelectedAgentId).Append("\n");
             sb.Append("  SelectedAgentRank: ").Append(SelectedAgentRank).Append("\n");
             sb.Append("  SelfServed: ").Append(SelfServed).Append("\n");
@@ -2324,6 +2422,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoutingRing.Equals(other.RoutingRing)
                 ) &&
                 (
+                    this.RoutingRule == other.RoutingRule ||
+                    this.RoutingRule != null &&
+                    this.RoutingRule.Equals(other.RoutingRule)
+                ) &&
+                (
+                    this.RoutingRuleType == other.RoutingRuleType ||
+                    this.RoutingRuleType != null &&
+                    this.RoutingRuleType.Equals(other.RoutingRuleType)
+                ) &&
+                (
                     this.SelectedAgentId == other.SelectedAgentId ||
                     this.SelectedAgentId != null &&
                     this.SelectedAgentId.Equals(other.SelectedAgentId)
@@ -2601,6 +2709,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RoutingRing != null)
                     hash = hash * 59 + this.RoutingRing.GetHashCode();
+
+                if (this.RoutingRule != null)
+                    hash = hash * 59 + this.RoutingRule.GetHashCode();
+
+                if (this.RoutingRuleType != null)
+                    hash = hash * 59 + this.RoutingRuleType.GetHashCode();
 
                 if (this.SelectedAgentId != null)
                     hash = hash * 59 + this.SelectedAgentId.GetHashCode();

@@ -11,6 +11,7 @@ title: V2MobiusRulesTopicEntityProperties
 | **UserDisplayName** | **string** |  | [optional] |
 | **GroupDisplayName** | **string** |  | [optional] |
 | **QueueDisplayName** | **string** |  | [optional] |
+| **TeamDisplayName** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

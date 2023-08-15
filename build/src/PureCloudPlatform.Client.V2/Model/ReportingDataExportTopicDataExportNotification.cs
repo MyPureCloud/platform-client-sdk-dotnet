@@ -580,7 +580,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum WorkitemPerformanceSummaryView for "WORKITEM_PERFORMANCE_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "WORKITEM_PERFORMANCE_SUMMARY_VIEW")]
-            WorkitemPerformanceSummaryView
+            WorkitemPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum QueueRoutingPerformanceView for "QUEUE_ROUTING_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_ROUTING_PERFORMANCE_VIEW")]
+            QueueRoutingPerformanceView
         }
         /// <summary>
         /// Gets or Sets ExportErrorMessagesType

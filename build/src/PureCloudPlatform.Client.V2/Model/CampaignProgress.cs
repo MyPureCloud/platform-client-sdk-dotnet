@@ -91,6 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public long? Percentage { get; private set; }
 
 
+
+        /// <summary>
+        /// Number of contacts skipped during the campaign
+        /// </summary>
+        /// <value>Number of contacts skipped during the campaign</value>
+        [DataMember(Name="numberOfContactsSkipped", EmitDefaultValue=false)]
+        public Dictionary<string, int?> NumberOfContactsSkipped { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -106,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NumberOfContactsMessaged: ").Append(NumberOfContactsMessaged).Append("\n");
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
+            sb.Append("  NumberOfContactsSkipped: ").Append(NumberOfContactsSkipped).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Percentage == other.Percentage ||
                     this.Percentage != null &&
                     this.Percentage.Equals(other.Percentage)
+                ) &&
+                (
+                    this.NumberOfContactsSkipped == other.NumberOfContactsSkipped ||
+                    this.NumberOfContactsSkipped != null &&
+                    this.NumberOfContactsSkipped.SequenceEqual(other.NumberOfContactsSkipped)
                 );
         }
 
@@ -206,6 +221,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
+
+                if (this.NumberOfContactsSkipped != null)
+                    hash = hash * 59 + this.NumberOfContactsSkipped.GetHashCode();
 
                 return hash;
             }

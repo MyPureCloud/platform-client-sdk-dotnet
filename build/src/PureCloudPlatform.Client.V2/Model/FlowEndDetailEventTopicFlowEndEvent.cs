@@ -132,7 +132,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Uncallable for "UNCALLABLE"
             /// </summary>
             [EnumMember(Value = "UNCALLABLE")]
-            Uncallable
+            Uncallable,
+            
+            /// <summary>
+            /// Enum DndEndpoint for "DND_ENDPOINT"
+            /// </summary>
+            [EnumMember(Value = "DND_ENDPOINT")]
+            DndEndpoint,
+            
+            /// <summary>
+            /// Enum DndTransfer for "DND_TRANSFER"
+            /// </summary>
+            [EnumMember(Value = "DND_TRANSFER")]
+            DndTransfer
         }
         /// <summary>
         /// Gets or Sets MediaType

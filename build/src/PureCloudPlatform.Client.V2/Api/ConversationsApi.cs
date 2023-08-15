@@ -1791,7 +1791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
         
@@ -1804,7 +1804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
         
@@ -2742,9 +2742,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        void PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
+        ParticipantAttributes PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -2756,9 +2756,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        ApiResponse<Object> PatchConversationsCallParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+        ApiResponse<ParticipantAttributes> PatchConversationsCallParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -2882,9 +2882,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        void PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
+        ParticipantAttributes PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -2896,9 +2896,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        ApiResponse<Object> PatchConversationsCallbackParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+        ApiResponse<ParticipantAttributes> PatchConversationsCallbackParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -3018,9 +3018,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        void PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
+        ParticipantAttributes PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -3032,9 +3032,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        ApiResponse<Object> PatchConversationsChatParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+        ApiResponse<ParticipantAttributes> PatchConversationsChatParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -3130,9 +3130,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        void PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null);
+        ParticipantAttributes PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -3144,9 +3144,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        ApiResponse<Object> PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        ApiResponse<ParticipantAttributes> PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -3272,9 +3272,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        void PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
+        ParticipantAttributes PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -3286,9 +3286,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        ApiResponse<Object> PatchConversationsEmailParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+        ApiResponse<ParticipantAttributes> PatchConversationsEmailParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -3353,7 +3353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
@@ -3367,7 +3367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -3381,12 +3381,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        void PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null);
+        ParticipantAttributes PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -3395,12 +3395,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        ApiResponse<Object> PatchConversationsMessageParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        ApiResponse<ParticipantAttributes> PatchConversationsMessageParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -3409,7 +3409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
@@ -3424,7 +3424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
@@ -7853,7 +7853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
         
@@ -7866,7 +7866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
         
@@ -8804,9 +8804,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        System.Threading.Tasks.Task PatchConversationsCallParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
+        System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsCallParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -8818,9 +8818,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCallParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+        System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsCallParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -8944,9 +8944,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        System.Threading.Tasks.Task PatchConversationsCallbackParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
+        System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsCallbackParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -8958,9 +8958,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCallbackParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+        System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsCallbackParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -9080,9 +9080,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        System.Threading.Tasks.Task PatchConversationsChatParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
+        System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsChatParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -9094,9 +9094,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsChatParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+        System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsChatParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -9192,9 +9192,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        System.Threading.Tasks.Task PatchConversationsCobrowsesessionParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null);
+        System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsCobrowsesessionParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -9206,9 +9206,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -9334,9 +9334,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        System.Threading.Tasks.Task PatchConversationsEmailParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
+        System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsEmailParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -9348,9 +9348,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsEmailParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+        System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsEmailParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -9415,7 +9415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -9429,7 +9429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -9443,12 +9443,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        System.Threading.Tasks.Task PatchConversationsMessageParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null);
+        System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsMessageParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -9457,12 +9457,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsMessageParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsMessageParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
@@ -9471,7 +9471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
@@ -9486,7 +9486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
@@ -26728,7 +26728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
         
@@ -26743,7 +26743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
         
@@ -26834,7 +26834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
         
@@ -26850,7 +26850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
         
@@ -34233,11 +34233,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        public void PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+        public ParticipantAttributes PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
         {
-             PatchConversationsCallParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = PatchConversationsCallParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -34248,9 +34249,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        public ApiResponse<Object> PatchConversationsCallParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
+        public ApiResponse< ParticipantAttributes > PatchConversationsCallParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -34333,9 +34334,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -34349,11 +34350,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        public async System.Threading.Tasks.Task PatchConversationsCallParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
+        public async System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsCallParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
         {
-             await PatchConversationsCallParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = await PatchConversationsCallParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -34365,9 +34367,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCallParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
+        public async System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsCallParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -34453,9 +34455,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -35424,11 +35426,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        public void PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+        public ParticipantAttributes PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
         {
-             PatchConversationsCallbackParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = PatchConversationsCallbackParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -35439,9 +35442,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        public ApiResponse<Object> PatchConversationsCallbackParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
+        public ApiResponse< ParticipantAttributes > PatchConversationsCallbackParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -35524,9 +35527,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbackParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -35540,11 +35543,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        public async System.Threading.Tasks.Task PatchConversationsCallbackParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
+        public async System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsCallbackParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
         {
-             await PatchConversationsCallbackParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = await PatchConversationsCallbackParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -35556,9 +35560,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCallbackParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
+        public async System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsCallbackParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -35644,9 +35648,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallbackParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -36589,11 +36593,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        public void PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+        public ParticipantAttributes PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
         {
-             PatchConversationsChatParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = PatchConversationsChatParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -36604,9 +36609,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        public ApiResponse<Object> PatchConversationsChatParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
+        public ApiResponse< ParticipantAttributes > PatchConversationsChatParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -36689,9 +36694,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChatParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -36705,11 +36710,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        public async System.Threading.Tasks.Task PatchConversationsChatParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
+        public async System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsChatParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
         {
-             await PatchConversationsChatParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = await PatchConversationsChatParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -36721,9 +36727,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsChatParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
+        public async System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsChatParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -36809,9 +36815,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsChatParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -37534,11 +37540,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        public void PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+        public ParticipantAttributes PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
         {
-             PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -37549,9 +37556,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        public ApiResponse<Object> PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
+        public ApiResponse< ParticipantAttributes > PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -37631,9 +37638,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesessionParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -37647,11 +37654,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        public async System.Threading.Tasks.Task PatchConversationsCobrowsesessionParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null)
+        public async System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsCobrowsesessionParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null)
         {
-             await PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = await PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -37663,9 +37671,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -37747,9 +37755,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCobrowsesessionParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -38710,11 +38718,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        public void PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+        public ParticipantAttributes PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
         {
-             PatchConversationsEmailParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = PatchConversationsEmailParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -38725,9 +38734,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        public ApiResponse<Object> PatchConversationsEmailParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
+        public ApiResponse< ParticipantAttributes > PatchConversationsEmailParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -38810,9 +38819,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -38826,11 +38835,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        public async System.Threading.Tasks.Task PatchConversationsEmailParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
+        public async System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsEmailParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body)
         {
-             await PatchConversationsEmailParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = await PatchConversationsEmailParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -38842,9 +38852,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsEmailParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
+        public async System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsEmailParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -38930,9 +38940,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsEmailParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -39422,7 +39432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
@@ -39437,7 +39447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -39535,7 +39545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -39551,7 +39561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -39652,14 +39662,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns></returns>
+        /// <returns>ParticipantAttributes</returns>
         
-        public void PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+        public ParticipantAttributes PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
         {
-             PatchConversationsMessageParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = PatchConversationsMessageParticipantAttributesWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -39667,12 +39678,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ParticipantAttributes</returns>
         
-        public ApiResponse<Object> PatchConversationsMessageParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
+        public ApiResponse< ParticipantAttributes > PatchConversationsMessageParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -39752,9 +39763,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessageParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -39765,14 +39776,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ParticipantAttributes</returns>
         
-        public async System.Threading.Tasks.Task PatchConversationsMessageParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null)
+        public async System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsMessageParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null)
         {
-             await PatchConversationsMessageParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ParticipantAttributes> localVarResponse = await PatchConversationsMessageParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -39781,12 +39793,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsMessageParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsMessageParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -39868,9 +39880,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessageParticipantAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ParticipantAttributes>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ParticipantAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParticipantAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -39882,7 +39894,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
@@ -39899,7 +39911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
@@ -40005,7 +40017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
@@ -40023,7 +40035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"> conversationId</param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>

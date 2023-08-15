@@ -22,6 +22,7 @@ title: V2MobiusAlertsTopicAlert
 | **DateMutedUntil** | **DateTime?** |  | [optional] |
 | **DateSnoozedUntil** | **DateTime?** |  | [optional] |
 | **Action** | **string** |  | [optional] |
+| **AlertSummary** | [**V2MobiusAlertsTopicAlertSummary**](V2MobiusAlertsTopicAlertSummary.html) |  | [optional] |
 {: class="table table-striped"}
 
 

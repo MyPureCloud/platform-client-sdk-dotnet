@@ -24,6 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseCategories**](KnowledgeApi.html#getknowledgeknowledgebasecategories) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories | Get categories |
 | [**GetKnowledgeKnowledgebaseCategory**](KnowledgeApi.html#getknowledgeknowledgebasecategory) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Get category |
 | [**GetKnowledgeKnowledgebaseDocument**](KnowledgeApi.html#getknowledgeknowledgebasedocument) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId} | Get document. |
+| [**GetKnowledgeKnowledgebaseDocumentFeedback**](KnowledgeApi.html#getknowledgeknowledgebasedocumentfeedback) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback | Get a list of feedback records given on a document |
+| [**GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackId**](KnowledgeApi.html#getknowledgeknowledgebasedocumentfeedbackfeedbackid) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId} | Get a single feedback record given on a document |
 | [**GetKnowledgeKnowledgebaseDocumentVariation**](KnowledgeApi.html#getknowledgeknowledgebasedocumentvariation) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId} | Get a variation for a document. |
 | [**GetKnowledgeKnowledgebaseDocumentVariations**](KnowledgeApi.html#getknowledgeknowledgebasedocumentvariations) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations | Get variations for a document. |
 | [**GetKnowledgeKnowledgebaseDocumentVersion**](KnowledgeApi.html#getknowledgeknowledgebasedocumentversion) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId} | Get document version. |
@@ -61,12 +63,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocumentsimport) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Start import operation |
 | [**PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeApi.html#patchknowledgeknowledgebaseunansweredgroupphrasegroup) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Update a Knowledge base unanswered phrase group |
 | [**PostKnowledgeDocumentuploads**](KnowledgeApi.html#postknowledgedocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
+| [**PostKnowledgeGuestSessionDocumentFeedback**](KnowledgeApi.html#postknowledgeguestsessiondocumentfeedback) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback | Give feedback on a document |
 | [**PostKnowledgeGuestSessionDocumentsSearch**](KnowledgeApi.html#postknowledgeguestsessiondocumentssearch) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search | Search the documents in a guest session. |
 | [**PostKnowledgeGuestSessionDocumentsSearchSuggestions**](KnowledgeApi.html#postknowledgeguestsessiondocumentssearchsuggestions) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions | Query the knowledge documents to provide suggestions for auto completion. |
 | [**PostKnowledgeGuestSessions**](KnowledgeApi.html#postknowledgeguestsessions) | **Post** /api/v2/knowledge/guest/sessions | Create guest session |
 | [**PostKnowledgeKnowledgebaseCategories**](KnowledgeApi.html#postknowledgeknowledgebasecategories) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories | Create new category |
+| [**PostKnowledgeKnowledgebaseDocumentFeedback**](KnowledgeApi.html#postknowledgeknowledgebasedocumentfeedback) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback | Give feedback on a document |
 | [**PostKnowledgeKnowledgebaseDocumentVariations**](KnowledgeApi.html#postknowledgeknowledgebasedocumentvariations) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations | Create a variation for a document. |
 | [**PostKnowledgeKnowledgebaseDocumentVersions**](KnowledgeApi.html#postknowledgeknowledgebasedocumentversions) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions | Creates or restores a document version. |
+| [**PostKnowledgeKnowledgebaseDocumentViews**](KnowledgeApi.html#postknowledgeknowledgebasedocumentviews) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views | Create view for a document. |
 | [**PostKnowledgeKnowledgebaseDocuments**](KnowledgeApi.html#postknowledgeknowledgebasedocuments) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents | Create document. |
 | [**PostKnowledgeKnowledgebaseDocumentsBulkRemove**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsbulkremove) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove | Bulk remove documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsBulkUpdate**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsbulkupdate) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update | Bulk update documents. |
@@ -1207,6 +1212,160 @@ namespace Example
 ### Return type
 
 [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html)
+
+<a name="getknowledgeknowledgebasedocumentfeedback"></a>
+
+## [**KnowledgeDocumentFeedbackResponseListing**](KnowledgeDocumentFeedbackResponseListing.html) GetKnowledgeKnowledgebaseDocumentFeedback (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null)
+
+
+
+Get a list of feedback records given on a document
+
+Requires ANY permissions: 
+
+* knowledge:feedback:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentFeedbackExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var onlyCommented = true;  // bool? | If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional) 
+            var documentVersionId = documentVersionId_example;  // string | Document version ID to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var documentVariationId = documentVariationId_example;  // string | Document variation ID to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var appType = appType_example;  // string | Application type to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var queryType = queryType_example;  // string | Query type to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var userId = userId_example;  // string | The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var queueId = queueId_example;  // string | Queue ID to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var state = state_example;  // string | State to filter by. Supported only if onlyCommented=true is set. Default: Final (optional) 
+
+            try
+            { 
+                // Get a list of feedback records given on a document
+                KnowledgeDocumentFeedbackResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId, documentId, before, after, pageSize, onlyCommented, documentVersionId, documentVariationId, appType, queryType, userId, queueId, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentFeedback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **onlyCommented** | **bool?**| If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. | [optional]  |
+| **documentVersionId** | **string**| Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
+| **documentVariationId** | **string**| Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
+| **appType** | **string**| Application type to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional] <br />**Values**: Assistant, BotFlow, MessengerKnowledgeApp, SmartAdvisor, SupportCenter |
+| **queryType** | **string**| Query type to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional] <br />**Values**: Unknown, Article, AutoSearch, Category, ManualSearch, Recommendation, Suggestion |
+| **userId** | **string**| The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
+| **queueId** | **string**| Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
+| **state** | **string**| State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final | [optional] <br />**Values**: All, Draft, Final |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponseListing**](KnowledgeDocumentFeedbackResponseListing.html)
+
+<a name="getknowledgeknowledgebasedocumentfeedbackfeedbackid"></a>
+
+## [**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse.html) GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackId (string knowledgeBaseId, string documentId, string feedbackId)
+
+
+
+Get a single feedback record given on a document
+
+Requires ANY permissions: 
+
+* knowledge:feedback:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var feedbackId = feedbackId_example;  // string | Feedback ID.
+
+            try
+            { 
+                // Get a single feedback record given on a document
+                KnowledgeDocumentFeedbackResponse result = apiInstance.GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId, documentId, feedbackId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **feedbackId** | **string**| Feedback ID. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse.html)
 
 <a name="getknowledgeknowledgebasedocumentvariation"></a>
 
@@ -3786,6 +3945,66 @@ namespace Example
 
 [**UploadUrlResponse**](UploadUrlResponse.html)
 
+<a name="postknowledgeguestsessiondocumentfeedback"></a>
+
+## [**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback.html) PostKnowledgeGuestSessionDocumentFeedback (string sessionId, string documentId, KnowledgeGuestDocumentFeedback body = null)
+
+
+
+Give feedback on a document
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionDocumentFeedbackExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var body = new KnowledgeGuestDocumentFeedback(); // KnowledgeGuestDocumentFeedback |  (optional) 
+
+            try
+            { 
+                // Give feedback on a document
+                KnowledgeGuestDocumentFeedback result = apiInstance.PostKnowledgeGuestSessionDocumentFeedback(sessionId, documentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeGuestSessionDocumentFeedback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **body** | [**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback.html)
+
 <a name="postknowledgeguestsessiondocumentssearch"></a>
 
 ## [**KnowledgeDocumentGuestSearch**](KnowledgeDocumentGuestSearch.html) PostKnowledgeGuestSessionDocumentsSearch (string sessionId, List<string> expand = null, KnowledgeDocumentGuestSearchRequest body = null)
@@ -4025,6 +4244,73 @@ namespace Example
 
 [**CategoryResponse**](CategoryResponse.html)
 
+<a name="postknowledgeknowledgebasedocumentfeedback"></a>
+
+## [**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse.html) PostKnowledgeKnowledgebaseDocumentFeedback (string knowledgeBaseId, string documentId, KnowledgeDocumentFeedback body = null)
+
+
+
+Give feedback on a document
+
+Requires ANY permissions: 
+
+* knowledge:feedback:create
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentFeedbackExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var body = new KnowledgeDocumentFeedback(); // KnowledgeDocumentFeedback |  (optional) 
+
+            try
+            { 
+                // Give feedback on a document
+                KnowledgeDocumentFeedbackResponse result = apiInstance.PostKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId, documentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentFeedback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **body** | [**KnowledgeDocumentFeedback**](KnowledgeDocumentFeedback.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse.html)
+
 <a name="postknowledgeknowledgebasedocumentvariations"></a>
 
 ## [**DocumentVariation**](DocumentVariation.html) PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariation body)
@@ -4159,6 +4445,72 @@ namespace Example
 ### Return type
 
 [**KnowledgeDocumentVersion**](KnowledgeDocumentVersion.html)
+
+<a name="postknowledgeknowledgebasedocumentviews"></a>
+
+## void PostKnowledgeKnowledgebaseDocumentViews (string knowledgeBaseId, string documentId, KnowledgeDocumentView body = null)
+
+
+
+Create view for a document.
+
+Requires ALL permissions: 
+
+* knowledge:documentView:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentViewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var body = new KnowledgeDocumentView(); // KnowledgeDocumentView |  (optional) 
+
+            try
+            { 
+                // Create view for a document.
+                apiInstance.PostKnowledgeKnowledgebaseDocumentViews(knowledgeBaseId, documentId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentViews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **body** | [**KnowledgeDocumentView**](KnowledgeDocumentView.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postknowledgeknowledgebasedocuments"></a>
 

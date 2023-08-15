@@ -44,6 +44,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyActionmaps**](JourneyApi.html#postjourneyactionmaps) | **Post** /api/v2/journey/actionmaps | Create an action map. |
 | [**PostJourneyActionmapsEstimatesJobs**](JourneyApi.html#postjourneyactionmapsestimatesjobs) | **Post** /api/v2/journey/actionmaps/estimates/jobs | Query for estimates |
 | [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **Post** /api/v2/journey/actiontemplates | Create a single action template. |
+| [**PostJourneyDeploymentAppevents**](JourneyApi.html#postjourneydeploymentappevents) | **Post** /api/v2/journey/deployments/{deploymentId}/appevents | Send a journey app event, used for tracking customer activity on an application. |
 | [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **Post** /api/v2/journey/outcomes | Create an outcome. |
 | [**PostJourneyOutcomesAttributionsJobs**](JourneyApi.html#postjourneyoutcomesattributionsjobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
 | [**PostJourneyOutcomesPredictors**](JourneyApi.html#postjourneyoutcomespredictors) | **Post** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
@@ -2461,6 +2462,66 @@ namespace Example
 ### Return type
 
 [**ActionTemplate**](ActionTemplate.html)
+
+<a name="postjourneydeploymentappevents"></a>
+
+## [**AppEventResponse**](AppEventResponse.html) PostJourneyDeploymentAppevents (string deploymentId, AppEventRequest body = null)
+
+
+
+Send a journey app event, used for tracking customer activity on an application.
+
+PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyDeploymentAppeventsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new JourneyApi();
+            var deploymentId = deploymentId_example;  // string | The ID of the deployment sending the app event.
+            var body = new AppEventRequest(); // AppEventRequest |  (optional) 
+
+            try
+            { 
+                // Send a journey app event, used for tracking customer activity on an application.
+                AppEventResponse result = apiInstance.PostJourneyDeploymentAppevents(deploymentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyDeploymentAppevents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| The ID of the deployment sending the app event. |  |
+| **body** | [**AppEventRequest**](AppEventRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AppEventResponse**](AppEventResponse.html)
 
 <a name="postjourneyoutcomes"></a>
 

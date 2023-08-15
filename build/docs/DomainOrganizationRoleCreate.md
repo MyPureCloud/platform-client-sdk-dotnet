@@ -16,8 +16,8 @@ title: DomainOrganizationRoleCreate
 | **PermissionPolicies** | [**List&lt;DomainPermissionPolicy&gt;**](DomainPermissionPolicy.html) |  | [optional] |
 | **UserCount** | **int?** |  | [optional] |
 | **RoleNeedsUpdate** | **bool?** | Optional unless patch operation. | [optional] |
-| **Base** | **bool?** |  | [optional] |
 | **Default** | **bool?** |  | [optional] |
+| **Base** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -19,6 +19,7 @@ title: DialerContact
 | **ContactableStatus** | [**Dictionary&lt;string, ContactableStatus&gt;**](ContactableStatus.html) | A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. | [optional] |
 | **ContactColumnTimeZones** | [**Dictionary&lt;string, ContactColumnTimeZone&gt;**](ContactColumnTimeZone.html) | Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip | [optional] |
 | **ConfigurationOverrides** | [**ConfigurationOverrides**](ConfigurationOverrides.html) | the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue | [optional] |
+| **DateCreated** | **DateTime?** | Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

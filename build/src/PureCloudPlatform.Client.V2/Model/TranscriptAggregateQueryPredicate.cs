@@ -166,7 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]
-            Userid
+            Userid,
+            
+            /// <summary>
+            /// Enum Wrapupcode for "wrapUpCode"
+            /// </summary>
+            [EnumMember(Value = "wrapUpCode")]
+            Wrapupcode
         }
         /// <summary>
         /// Optional operator, default is matches

@@ -126,7 +126,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]
-            Userid
+            Userid,
+            
+            /// <summary>
+            /// Enum Wrapupcode for "wrapUpCode"
+            /// </summary>
+            [EnumMember(Value = "wrapUpCode")]
+            Wrapupcode
         }
         /// <summary>
         /// Gets or Sets Metrics
@@ -155,10 +161,46 @@ namespace PureCloudPlatform.Client.V2.Model
             Ocustomersentiment,
             
             /// <summary>
+            /// Enum Oovertalkspeechinstances for "oOverTalkSpeechInstances"
+            /// </summary>
+            [EnumMember(Value = "oOverTalkSpeechInstances")]
+            Oovertalkspeechinstances,
+            
+            /// <summary>
             /// Enum Osentimentscore for "oSentimentScore"
             /// </summary>
             [EnumMember(Value = "oSentimentScore")]
-            Osentimentscore
+            Osentimentscore,
+            
+            /// <summary>
+            /// Enum Tagentspeech for "tAgentSpeech"
+            /// </summary>
+            [EnumMember(Value = "tAgentSpeech")]
+            Tagentspeech,
+            
+            /// <summary>
+            /// Enum Tcustomerspeech for "tCustomerSpeech"
+            /// </summary>
+            [EnumMember(Value = "tCustomerSpeech")]
+            Tcustomerspeech,
+            
+            /// <summary>
+            /// Enum Tovertalkspeech for "tOverTalkSpeech"
+            /// </summary>
+            [EnumMember(Value = "tOverTalkSpeech")]
+            Tovertalkspeech,
+            
+            /// <summary>
+            /// Enum Tsilence for "tSilence"
+            /// </summary>
+            [EnumMember(Value = "tSilence")]
+            Tsilence,
+            
+            /// <summary>
+            /// Enum Ttotalspeechandsilence for "tTotalSpeechAndSilence"
+            /// </summary>
+            [EnumMember(Value = "tTotalSpeechAndSilence")]
+            Ttotalspeechandsilence
         }
         /// <summary>
         /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.

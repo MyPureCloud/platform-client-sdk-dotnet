@@ -22,11 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LabelUtilization" /> class.
         /// </summary>
         /// <param name="MaximumCapacity">Defines the maximum number of interactions with this label that an agent can handle at one time..</param>
-        /// <param name="InterruptingLabels">Defines the list of other labels that can interrupt an interaction with this label..</param>
-        public LabelUtilization(int? MaximumCapacity = null, List<string> InterruptingLabels = null)
+        /// <param name="InterruptingLabelIds">Defines other labels that can interrupt an interaction with this label..</param>
+        public LabelUtilization(int? MaximumCapacity = null, List<string> InterruptingLabelIds = null)
         {
             this.MaximumCapacity = MaximumCapacity;
-            this.InterruptingLabels = InterruptingLabels;
+            this.InterruptingLabelIds = InterruptingLabelIds;
             
         }
         
@@ -42,11 +42,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Defines the list of other labels that can interrupt an interaction with this label.
+        /// Defines other labels that can interrupt an interaction with this label.
         /// </summary>
-        /// <value>Defines the list of other labels that can interrupt an interaction with this label.</value>
-        [DataMember(Name="interruptingLabels", EmitDefaultValue=false)]
-        public List<string> InterruptingLabels { get; set; }
+        /// <value>Defines other labels that can interrupt an interaction with this label.</value>
+        [DataMember(Name="interruptingLabelIds", EmitDefaultValue=false)]
+        public List<string> InterruptingLabelIds { get; set; }
 
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class LabelUtilization {\n");
 
             sb.Append("  MaximumCapacity: ").Append(MaximumCapacity).Append("\n");
-            sb.Append("  InterruptingLabels: ").Append(InterruptingLabels).Append("\n");
+            sb.Append("  InterruptingLabelIds: ").Append(InterruptingLabelIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,9 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaximumCapacity.Equals(other.MaximumCapacity)
                 ) &&
                 (
-                    this.InterruptingLabels == other.InterruptingLabels ||
-                    this.InterruptingLabels != null &&
-                    this.InterruptingLabels.SequenceEqual(other.InterruptingLabels)
+                    this.InterruptingLabelIds == other.InterruptingLabelIds ||
+                    this.InterruptingLabelIds != null &&
+                    this.InterruptingLabelIds.SequenceEqual(other.InterruptingLabelIds)
                 );
         }
 
@@ -126,8 +126,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.MaximumCapacity != null)
                     hash = hash * 59 + this.MaximumCapacity.GetHashCode();
 
-                if (this.InterruptingLabels != null)
-                    hash = hash * 59 + this.InterruptingLabels.GetHashCode();
+                if (this.InterruptingLabelIds != null)
+                    hash = hash * 59 + this.InterruptingLabelIds.GetHashCode();
 
                 return hash;
             }
