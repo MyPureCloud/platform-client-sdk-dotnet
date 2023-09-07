@@ -23,10 +23,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="GrammarId">GrammarId.</param>
         /// <param name="Language">Language.</param>
-        public GrammarLanguage(string GrammarId = null, string Language = null)
+        /// <param name="VoiceFileMetadata">Additional information about the associated voice file.</param>
+        /// <param name="DtmfFileMetadata">Additional information about the associated dtmf file.</param>
+        public GrammarLanguage(string GrammarId = null, string Language = null, GrammarLanguageFileMetadata VoiceFileMetadata = null, GrammarLanguageFileMetadata DtmfFileMetadata = null)
         {
             this.GrammarId = GrammarId;
             this.Language = Language;
+            this.VoiceFileMetadata = VoiceFileMetadata;
+            this.DtmfFileMetadata = DtmfFileMetadata;
             
         }
         
@@ -76,6 +80,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Additional information about the associated voice file
+        /// </summary>
+        /// <value>Additional information about the associated voice file</value>
+        [DataMember(Name="voiceFileMetadata", EmitDefaultValue=false)]
+        public GrammarLanguageFileMetadata VoiceFileMetadata { get; set; }
+
+
+
+        /// <summary>
+        /// Additional information about the associated dtmf file
+        /// </summary>
+        /// <value>Additional information about the associated dtmf file</value>
+        [DataMember(Name="dtmfFileMetadata", EmitDefaultValue=false)]
+        public GrammarLanguageFileMetadata DtmfFileMetadata { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -97,6 +119,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  VoiceFileUrl: ").Append(VoiceFileUrl).Append("\n");
             sb.Append("  DtmfFileUrl: ").Append(DtmfFileUrl).Append("\n");
+            sb.Append("  VoiceFileMetadata: ").Append(VoiceFileMetadata).Append("\n");
+            sb.Append("  DtmfFileMetadata: ").Append(DtmfFileMetadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -164,6 +188,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DtmfFileUrl.Equals(other.DtmfFileUrl)
                 ) &&
                 (
+                    this.VoiceFileMetadata == other.VoiceFileMetadata ||
+                    this.VoiceFileMetadata != null &&
+                    this.VoiceFileMetadata.Equals(other.VoiceFileMetadata)
+                ) &&
+                (
+                    this.DtmfFileMetadata == other.DtmfFileMetadata ||
+                    this.DtmfFileMetadata != null &&
+                    this.DtmfFileMetadata.Equals(other.DtmfFileMetadata)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -195,6 +229,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DtmfFileUrl != null)
                     hash = hash * 59 + this.DtmfFileUrl.GetHashCode();
+
+                if (this.VoiceFileMetadata != null)
+                    hash = hash * 59 + this.VoiceFileMetadata.GetHashCode();
+
+                if (this.DtmfFileMetadata != null)
+                    hash = hash * 59 + this.DtmfFileMetadata.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

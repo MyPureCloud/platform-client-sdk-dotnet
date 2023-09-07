@@ -31,12 +31,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ServiceLevel">Service level targets for this service goal template.</param>
         /// <param name="AverageSpeedOfAnswer">Average speed of answer targets for this service goal template.</param>
         /// <param name="AbandonRate">Abandon rate targets for this service goal template.</param>
-        public CreateServiceGoalTemplate(string Name = null, BuServiceLevel ServiceLevel = null, BuAverageSpeedOfAnswer AverageSpeedOfAnswer = null, BuAbandonRate AbandonRate = null)
+        /// <param name="ImpactOverride">Settings controlling max percent increase and decrease of service goals for this service goal template.</param>
+        public CreateServiceGoalTemplate(string Name = null, BuServiceLevel ServiceLevel = null, BuAverageSpeedOfAnswer AverageSpeedOfAnswer = null, BuAbandonRate AbandonRate = null, ServiceGoalTemplateImpactOverride ImpactOverride = null)
         {
             this.Name = Name;
             this.ServiceLevel = ServiceLevel;
             this.AverageSpeedOfAnswer = AverageSpeedOfAnswer;
             this.AbandonRate = AbandonRate;
+            this.ImpactOverride = ImpactOverride;
             
         }
         
@@ -77,6 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public BuAbandonRate AbandonRate { get; set; }
 
 
+
+        /// <summary>
+        /// Settings controlling max percent increase and decrease of service goals for this service goal template
+        /// </summary>
+        /// <value>Settings controlling max percent increase and decrease of service goals for this service goal template</value>
+        [DataMember(Name="impactOverride", EmitDefaultValue=false)]
+        public ServiceGoalTemplateImpactOverride ImpactOverride { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
             sb.Append("  AverageSpeedOfAnswer: ").Append(AverageSpeedOfAnswer).Append("\n");
             sb.Append("  AbandonRate: ").Append(AbandonRate).Append("\n");
+            sb.Append("  ImpactOverride: ").Append(ImpactOverride).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,6 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AbandonRate == other.AbandonRate ||
                     this.AbandonRate != null &&
                     this.AbandonRate.Equals(other.AbandonRate)
+                ) &&
+                (
+                    this.ImpactOverride == other.ImpactOverride ||
+                    this.ImpactOverride != null &&
+                    this.ImpactOverride.Equals(other.ImpactOverride)
                 );
         }
 
@@ -174,6 +191,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AbandonRate != null)
                     hash = hash * 59 + this.AbandonRate.GetHashCode();
+
+                if (this.ImpactOverride != null)
+                    hash = hash * 59 + this.ImpactOverride.GetHashCode();
 
                 return hash;
             }

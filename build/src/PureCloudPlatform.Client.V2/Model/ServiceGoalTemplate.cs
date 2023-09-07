@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AverageSpeedOfAnswer">Average speed of answer targets for this service goal template.</param>
         /// <param name="AbandonRate">Abandon rate targets for this service goal template.</param>
         /// <param name="Metadata">Version metadata for the service goal template.</param>
-        public ServiceGoalTemplate(string Name = null, BuServiceLevel ServiceLevel = null, BuAverageSpeedOfAnswer AverageSpeedOfAnswer = null, BuAbandonRate AbandonRate = null, WfmVersionedEntityMetadata Metadata = null)
+        /// <param name="ImpactOverride">Settings controlling max percent increase and decrease of service goals for this service goal template.</param>
+        public ServiceGoalTemplate(string Name = null, BuServiceLevel ServiceLevel = null, BuAverageSpeedOfAnswer AverageSpeedOfAnswer = null, BuAbandonRate AbandonRate = null, WfmVersionedEntityMetadata Metadata = null, ServiceGoalTemplateImpactOverride ImpactOverride = null)
         {
             this.Name = Name;
             this.ServiceLevel = ServiceLevel;
             this.AverageSpeedOfAnswer = AverageSpeedOfAnswer;
             this.AbandonRate = AbandonRate;
             this.Metadata = Metadata;
+            this.ImpactOverride = ImpactOverride;
             
         }
         
@@ -92,6 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Settings controlling max percent increase and decrease of service goals for this service goal template
+        /// </summary>
+        /// <value>Settings controlling max percent increase and decrease of service goals for this service goal template</value>
+        [DataMember(Name="impactOverride", EmitDefaultValue=false)]
+        public ServiceGoalTemplateImpactOverride ImpactOverride { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -114,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AverageSpeedOfAnswer: ").Append(AverageSpeedOfAnswer).Append("\n");
             sb.Append("  AbandonRate: ").Append(AbandonRate).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  ImpactOverride: ").Append(ImpactOverride).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -186,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metadata.Equals(other.Metadata)
                 ) &&
                 (
+                    this.ImpactOverride == other.ImpactOverride ||
+                    this.ImpactOverride != null &&
+                    this.ImpactOverride.Equals(other.ImpactOverride)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -220,6 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+
+                if (this.ImpactOverride != null)
+                    hash = hash * 59 + this.ImpactOverride.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

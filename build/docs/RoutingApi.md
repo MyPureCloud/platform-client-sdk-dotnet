@@ -2547,7 +2547,7 @@ namespace Example
 
 <a name="getroutingmessagerecipients"></a>
 
-## [**RecipientListing**](RecipientListing.html) GetRoutingMessageRecipients (string messengerType = null, int? pageSize = null, int? pageNumber = null)
+## [**RecipientListing**](RecipientListing.html) GetRoutingMessageRecipients (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null)
 
 
 
@@ -2580,13 +2580,14 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var messengerType = messengerType_example;  // string | Messenger Type (optional) 
+            var name = name_example;  // string | Recipient Name (optional) 
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
 
             try
             { 
                 // Get recipients
-                RecipientListing result = apiInstance.GetRoutingMessageRecipients(messengerType, pageSize, pageNumber);
+                RecipientListing result = apiInstance.GetRoutingMessageRecipients(messengerType, name, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2604,6 +2605,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messengerType** | **string**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, line, whatsapp, open, instagram |
+| **name** | **string**| Recipient Name | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
@@ -7480,13 +7482,13 @@ void (empty response body)
 
 <a name="postroutingskillgroups"></a>
 
-## [**SkillGroup**](SkillGroup.html) PostRoutingSkillgroups (SkillGroup body)
+## [**SkillGroupWithMemberDivisions**](SkillGroupWithMemberDivisions.html) PostRoutingSkillgroups (SkillGroupWithMemberDivisions body)
 
 
 
 Create a skill group
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skillGroup:add
 
@@ -7512,12 +7514,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var body = new SkillGroup(); // SkillGroup | Create skill group
+            var body = new SkillGroupWithMemberDivisions(); // SkillGroupWithMemberDivisions | Create skill group
 
             try
             { 
                 // Create a skill group
-                SkillGroup result = apiInstance.PostRoutingSkillgroups(body);
+                SkillGroupWithMemberDivisions result = apiInstance.PostRoutingSkillgroups(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7534,12 +7536,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SkillGroup**](SkillGroup.html)| Create skill group |  |
+| **body** | [**SkillGroupWithMemberDivisions**](SkillGroupWithMemberDivisions.html)| Create skill group |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**SkillGroup**](SkillGroup.html)
+[**SkillGroupWithMemberDivisions**](SkillGroupWithMemberDivisions.html)
 
 <a name="postroutingskills"></a>
 
@@ -8186,7 +8188,7 @@ namespace Example
 
 <a name="putroutingmessagerecipient"></a>
 
-## [**Recipient**](Recipient.html) PutRoutingMessageRecipient (string recipientId, Recipient body)
+## [**Recipient**](Recipient.html) PutRoutingMessageRecipient (string recipientId, RecipientRequest body)
 
 
 
@@ -8219,7 +8221,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var recipientId = recipientId_example;  // string | Recipient ID
-            var body = new Recipient(); // Recipient | Recipient
+            var body = new RecipientRequest(); // RecipientRequest | Recipient
 
             try
             { 
@@ -8242,7 +8244,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recipientId** | **string**| Recipient ID |  |
-| **body** | [**Recipient**](Recipient.html)| Recipient |  |
+| **body** | [**RecipientRequest**](RecipientRequest.html)| Recipient |  |
 {: class="table table-striped"}
 
 ### Return type

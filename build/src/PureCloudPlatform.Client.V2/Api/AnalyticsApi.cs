@@ -152,13 +152,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ReportingTurnsResponse</returns>
         
-        ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+        ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
         /// Get Reporting Turns.
@@ -170,13 +171,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
         
-        ApiResponse<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+        ApiResponse<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
         /// Get status for async query for bot aggregates
@@ -2520,13 +2522,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ReportingTurnsResponse</returns>
         
-        System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+        System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
         /// Get Reporting Turns.
@@ -2538,13 +2541,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+        System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
         /// Get status for async query for bot aggregates
@@ -5871,15 +5875,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ReportingTurnsResponse</returns>
         
-        public ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        public ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         {
-             ApiResponse<ReportingTurnsResponse> localVarResponse = GetAnalyticsBotflowReportingturnsWithHttpInfo(botFlowId, after, pageSize, actionId, sessionId, language, askActionResults);
+             ApiResponse<ReportingTurnsResponse> localVarResponse = GetAnalyticsBotflowReportingturnsWithHttpInfo(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
              return localVarResponse.Data;
         }
 
@@ -5891,13 +5896,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
         
-        public ApiResponse< ReportingTurnsResponse > GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        public ApiResponse< ReportingTurnsResponse > GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         { 
             // verify the required parameter 'botFlowId' is set
             if (botFlowId == null)
@@ -5938,6 +5944,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
             if (actionId != null) localVarQueryParams.Add(new Tuple<string, string>("actionId", this.Configuration.ApiClient.ParameterToString(actionId)));
             if (sessionId != null) localVarQueryParams.Add(new Tuple<string, string>("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId)));
             if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
@@ -5989,15 +5996,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ReportingTurnsResponse</returns>
         
-        public async System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        public async System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         {
-             ApiResponse<ReportingTurnsResponse> localVarResponse = await GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo(botFlowId, after, pageSize, actionId, sessionId, language, askActionResults);
+             ApiResponse<ReportingTurnsResponse> localVarResponse = await GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
              return localVarResponse.Data;
 
         }
@@ -6010,13 +6018,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="botFlowId">ID of the bot flow.</param>
         /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         { 
             // verify the required parameter 'botFlowId' is set
             if (botFlowId == null)
@@ -6058,6 +6067,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
             if (actionId != null) localVarQueryParams.Add(new Tuple<string, string>("actionId", this.Configuration.ApiClient.ParameterToString(actionId)));
             if (sessionId != null) localVarQueryParams.Add(new Tuple<string, string>("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId)));
             if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));

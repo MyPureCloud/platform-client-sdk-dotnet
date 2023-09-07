@@ -64,11 +64,44 @@ namespace PureCloudPlatform.Client.V2.Model
             Noschedule
         }
         /// <summary>
+        /// the quality evaluation score status
+        /// </summary>
+        /// <value>the quality evaluation score status</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum HasEvaluationEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Hasqualityevaluation for "HasQualityEvaluation"
+            /// </summary>
+            [EnumMember(Value = "HasQualityEvaluation")]
+            Hasqualityevaluation,
+            
+            /// <summary>
+            /// Enum Noqualityevaluation for "NoQualityEvaluation"
+            /// </summary>
+            [EnumMember(Value = "NoQualityEvaluation")]
+            Noqualityevaluation
+        }
+        /// <summary>
         /// the attendance status
         /// </summary>
         /// <value>the attendance status</value>
         [DataMember(Name="attendanceStatusType", EmitDefaultValue=false)]
         public AttendanceStatusTypeEnum? AttendanceStatusType { get; private set; }
+        /// <summary>
+        /// the quality evaluation score status
+        /// </summary>
+        /// <value>the quality evaluation score status</value>
+        [DataMember(Name="hasEvaluation", EmitDefaultValue=false)]
+        public HasEvaluationEnum? HasEvaluation { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AttendanceStatus" /> class.
         /// </summary>
@@ -89,6 +122,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  DateWorkday: ").Append(DateWorkday).Append("\n");
             sb.Append("  AttendanceStatusType: ").Append(AttendanceStatusType).Append("\n");
+            sb.Append("  HasEvaluation: ").Append(HasEvaluation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AttendanceStatusType == other.AttendanceStatusType ||
                     this.AttendanceStatusType != null &&
                     this.AttendanceStatusType.Equals(other.AttendanceStatusType)
+                ) &&
+                (
+                    this.HasEvaluation == other.HasEvaluation ||
+                    this.HasEvaluation != null &&
+                    this.HasEvaluation.Equals(other.HasEvaluation)
                 );
         }
 
@@ -168,6 +209,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AttendanceStatusType != null)
                     hash = hash * 59 + this.AttendanceStatusType.GetHashCode();
+
+                if (this.HasEvaluation != null)
+                    hash = hash * 59 + this.HasEvaluation.GetHashCode();
 
                 return hash;
             }

@@ -819,6 +819,42 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EmergencyGroupListing> GetArchitectEmergencygroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
+        /// Get a pageable list of basic emergency group objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Emergency Groups to filter by. (optional)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>EmergencyGroupDivisionViewEntityListing</returns>
+        
+        EmergencyGroupDivisionViewEntityListing GetArchitectEmergencygroupsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic emergency group objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Emergency Groups to filter by. (optional)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of EmergencyGroupDivisionViewEntityListing</returns>
+        
+        ApiResponse<EmergencyGroupDivisionViewEntityListing> GetArchitectEmergencygroupsDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
         /// Get a grammar
         /// </summary>
         /// <remarks>
@@ -975,6 +1011,42 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of IVREntityListing</returns>
         
         ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
+
+        /// <summary>
+        /// Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the IVR to filter by. (optional)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>IVRDivisionViewEntityListing</returns>
+        
+        IVRDivisionViewEntityListing GetArchitectIvrsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the IVR to filter by. (optional)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of IVRDivisionViewEntityListing</returns>
+        
+        ApiResponse<IVRDivisionViewEntityListing> GetArchitectIvrsDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get specified user prompt
@@ -1211,6 +1283,42 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
 
         /// <summary>
+        /// Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ScheduleGroupDivisionViewEntityListing</returns>
+        
+        ScheduleGroupDivisionViewEntityListing GetArchitectSchedulegroupsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of ScheduleGroupDivisionViewEntityListing</returns>
+        
+        ApiResponse<ScheduleGroupDivisionViewEntityListing> GetArchitectSchedulegroupsDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
         /// Get a list of schedules.
         /// </summary>
         /// <remarks>
@@ -1243,6 +1351,42 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
         
         ApiResponse<ScheduleEntityListing> GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ScheduleDivisionViewEntityListing</returns>
+        
+        ScheduleDivisionViewEntityListing GetArchitectSchedulesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of ScheduleDivisionViewEntityListing</returns>
+        
+        ApiResponse<ScheduleDivisionViewEntityListing> GetArchitectSchedulesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a system prompt
@@ -4255,6 +4399,42 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroupListing>> GetArchitectEmergencygroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
+        /// Get a pageable list of basic emergency group objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Emergency Groups to filter by. (optional)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of EmergencyGroupDivisionViewEntityListing</returns>
+        
+        System.Threading.Tasks.Task<EmergencyGroupDivisionViewEntityListing> GetArchitectEmergencygroupsDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic emergency group objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Emergency Groups to filter by. (optional)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (EmergencyGroupDivisionViewEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EmergencyGroupDivisionViewEntityListing>> GetArchitectEmergencygroupsDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
         /// Get a grammar
         /// </summary>
         /// <remarks>
@@ -4411,6 +4591,42 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
+
+        /// <summary>
+        /// Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the IVR to filter by. (optional)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of IVRDivisionViewEntityListing</returns>
+        
+        System.Threading.Tasks.Task<IVRDivisionViewEntityListing> GetArchitectIvrsDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the IVR to filter by. (optional)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (IVRDivisionViewEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IVRDivisionViewEntityListing>> GetArchitectIvrsDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get specified user prompt
@@ -4647,6 +4863,42 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
 
         /// <summary>
+        /// Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ScheduleGroupDivisionViewEntityListing</returns>
+        
+        System.Threading.Tasks.Task<ScheduleGroupDivisionViewEntityListing> GetArchitectSchedulegroupsDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (ScheduleGroupDivisionViewEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGroupDivisionViewEntityListing>> GetArchitectSchedulegroupsDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
         /// Get a list of schedules.
         /// </summary>
         /// <remarks>
@@ -4679,6 +4931,42 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ScheduleDivisionViewEntityListing</returns>
+        
+        System.Threading.Tasks.Task<ScheduleDivisionViewEntityListing> GetArchitectSchedulesDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (ScheduleDivisionViewEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScheduleDivisionViewEntityListing>> GetArchitectSchedulesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get a system prompt
@@ -13181,6 +13469,238 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a pageable list of basic emergency group objects filterable by query parameters. 
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Emergency Groups to filter by. (optional)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>EmergencyGroupDivisionViewEntityListing</returns>
+        
+        public EmergencyGroupDivisionViewEntityListing GetArchitectEmergencygroupsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<EmergencyGroupDivisionViewEntityListing> localVarResponse = GetArchitectEmergencygroupsDivisionviewsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic emergency group objects filterable by query parameters. 
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Emergency Groups to filter by. (optional)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of EmergencyGroupDivisionViewEntityListing</returns>
+        
+        public ApiResponse< EmergencyGroupDivisionViewEntityListing > GetArchitectEmergencygroupsDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/emergencygroups/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroupsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroupsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroupDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroupDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroupDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a pageable list of basic emergency group objects filterable by query parameters. 
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Emergency Groups to filter by. (optional)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of EmergencyGroupDivisionViewEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<EmergencyGroupDivisionViewEntityListing> GetArchitectEmergencygroupsDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<EmergencyGroupDivisionViewEntityListing> localVarResponse = await GetArchitectEmergencygroupsDivisionviewsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic emergency group objects filterable by query parameters. 
+        /// This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the Emergency Groups to filter by. (optional)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (EmergencyGroupDivisionViewEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroupDivisionViewEntityListing>> GetArchitectEmergencygroupsDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/emergencygroups/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroupsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroupsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroupDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroupDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroupDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a grammar 
         /// Returns a specified grammar
         /// GetArchitectGrammar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
@@ -14290,6 +14810,238 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<IVREntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (IVREntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVREntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a pageable list of basic ivr configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the IVR to filter by. (optional)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>IVRDivisionViewEntityListing</returns>
+        
+        public IVRDivisionViewEntityListing GetArchitectIvrsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<IVRDivisionViewEntityListing> localVarResponse = GetArchitectIvrsDivisionviewsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic ivr configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the IVR to filter by. (optional)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of IVRDivisionViewEntityListing</returns>
+        
+        public ApiResponse< IVRDivisionViewEntityListing > GetArchitectIvrsDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/ivrs/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IVRDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (IVRDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVRDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a pageable list of basic ivr configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the IVR to filter by. (optional)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of IVRDivisionViewEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<IVRDivisionViewEntityListing> GetArchitectIvrsDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<IVRDivisionViewEntityListing> localVarResponse = await GetArchitectIvrsDivisionviewsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic ivr configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the IVR to filter by. (optional)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (IVRDivisionViewEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IVRDivisionViewEntityListing>> GetArchitectIvrsDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/ivrs/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IVRDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (IVRDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVRDivisionViewEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16047,6 +16799,238 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a pageable list of basic schedule group configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ScheduleGroupDivisionViewEntityListing</returns>
+        
+        public ScheduleGroupDivisionViewEntityListing GetArchitectSchedulegroupsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<ScheduleGroupDivisionViewEntityListing> localVarResponse = GetArchitectSchedulegroupsDivisionviewsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic schedule group configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of ScheduleGroupDivisionViewEntityListing</returns>
+        
+        public ApiResponse< ScheduleGroupDivisionViewEntityListing > GetArchitectSchedulegroupsDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/schedulegroups/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSchedulegroupsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSchedulegroupsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduleGroupDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduleGroupDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroupDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a pageable list of basic schedule group configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ScheduleGroupDivisionViewEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<ScheduleGroupDivisionViewEntityListing> GetArchitectSchedulegroupsDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<ScheduleGroupDivisionViewEntityListing> localVarResponse = await GetArchitectSchedulegroupsDivisionviewsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic schedule group configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (ScheduleGroupDivisionViewEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupDivisionViewEntityListing>> GetArchitectSchedulegroupsDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/schedulegroups/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSchedulegroupsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSchedulegroupsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduleGroupDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduleGroupDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroupDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a list of schedules. 
         /// 
         /// </summary>
@@ -16266,6 +17250,238 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ScheduleEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a pageable list of basic schedule configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ScheduleDivisionViewEntityListing</returns>
+        
+        public ScheduleDivisionViewEntityListing GetArchitectSchedulesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<ScheduleDivisionViewEntityListing> localVarResponse = GetArchitectSchedulesDivisionviewsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic schedule configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>ApiResponse of ScheduleDivisionViewEntityListing</returns>
+        
+        public ApiResponse< ScheduleDivisionViewEntityListing > GetArchitectSchedulesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/schedules/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSchedulesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSchedulesDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduleDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduleDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a pageable list of basic schedule configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ScheduleDivisionViewEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<ScheduleDivisionViewEntityListing> GetArchitectSchedulesDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        {
+             ApiResponse<ScheduleDivisionViewEntityListing> localVarResponse = await GetArchitectSchedulesDivisionviewsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic schedule configuration information objects filterable by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <param name="id">ID of the schedule group to filter by. (optional)</param>
+        /// <param name="name">Name of the schedule group to filter by. (optional)</param>
+        /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
+        /// <returns>Task of ApiResponse (ScheduleDivisionViewEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleDivisionViewEntityListing>> GetArchitectSchedulesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/schedules/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSchedulesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSchedulesDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduleDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduleDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleDivisionViewEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

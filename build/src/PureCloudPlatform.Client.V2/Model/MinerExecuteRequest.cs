@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Message for "Message"
             /// </summary>
             [EnumMember(Value = "Message")]
-            Message
+            Message,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email
         }
         /// <summary>
         /// Type of the participant, either agent, customer or both.

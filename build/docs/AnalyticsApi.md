@@ -423,7 +423,7 @@ namespace Example
 
 <a name="getanalyticsbotflowreportingturns"></a>
 
-## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
 
 
 
@@ -460,6 +460,7 @@ namespace Example
             var botFlowId = botFlowId_example;  // string | ID of the bot flow.
             var after = after_example;  // string | The cursor that points to the ID of the last item in the list of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Max number of entities to return. Maximum of 250 (optional)  (default to "50")
+            var interval = 2023-07-17T08:15:44.586Z/2023-07-26T09:22:33.111Z;  // string | Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: '2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07'. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
             var actionId = actionId_example;  // string | Optional action ID to get the reporting turns associated to a particular flow action (optional) 
             var sessionId = sessionId_example;  // string | Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional) 
             var language = en-us;  // string | Optional language code to get the reporting turns for a particular language (optional) 
@@ -468,7 +469,7 @@ namespace Example
             try
             { 
                 // Get Reporting Turns.
-                ReportingTurnsResponse result = apiInstance.GetAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId, language, askActionResults);
+                ReportingTurnsResponse result = apiInstance.GetAnalyticsBotflowReportingturns(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -488,6 +489,7 @@ namespace Example
 | **botFlowId** | **string**| ID of the bot flow. |  |
 | **after** | **string**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Max number of entities to return. Maximum of 250 | [optional] [default to "50"] |
+| **interval** | **string**| Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **actionId** | **string**| Optional action ID to get the reporting turns associated to a particular flow action | [optional]  |
 | **sessionId** | **string**| Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. | [optional]  |
 | **language** | **string**| Optional language code to get the reporting turns for a particular language | [optional]  |

@@ -22,9 +22,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuSchedulingSettingsRequest" /> class.
         /// </summary>
         /// <param name="MessageSeverities">Schedule generation message severity configuration.</param>
-        public BuSchedulingSettingsRequest(List<SchedulerMessageTypeSeverity> MessageSeverities = null)
+        /// <param name="SyncTimeOffProperties">Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published..</param>
+        /// <param name="ServiceGoalImpact">Configures the max percent increase and decrease of service goals for this business unit.</param>
+        public BuSchedulingSettingsRequest(List<SchedulerMessageTypeSeverity> MessageSeverities = null, SetWrapperSyncTimeOffProperty SyncTimeOffProperties = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null)
         {
             this.MessageSeverities = MessageSeverities;
+            this.SyncTimeOffProperties = SyncTimeOffProperties;
+            this.ServiceGoalImpact = ServiceGoalImpact;
             
         }
         
@@ -38,6 +42,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<SchedulerMessageTypeSeverity> MessageSeverities { get; set; }
 
 
+
+        /// <summary>
+        /// Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published.
+        /// </summary>
+        /// <value>Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published.</value>
+        [DataMember(Name="syncTimeOffProperties", EmitDefaultValue=false)]
+        public SetWrapperSyncTimeOffProperty SyncTimeOffProperties { get; set; }
+
+
+
+        /// <summary>
+        /// Configures the max percent increase and decrease of service goals for this business unit
+        /// </summary>
+        /// <value>Configures the max percent increase and decrease of service goals for this business unit</value>
+        [DataMember(Name="serviceGoalImpact", EmitDefaultValue=false)]
+        public WfmServiceGoalImpactSettings ServiceGoalImpact { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +70,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class BuSchedulingSettingsRequest {\n");
 
             sb.Append("  MessageSeverities: ").Append(MessageSeverities).Append("\n");
+            sb.Append("  SyncTimeOffProperties: ").Append(SyncTimeOffProperties).Append("\n");
+            sb.Append("  ServiceGoalImpact: ").Append(ServiceGoalImpact).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +116,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageSeverities == other.MessageSeverities ||
                     this.MessageSeverities != null &&
                     this.MessageSeverities.SequenceEqual(other.MessageSeverities)
+                ) &&
+                (
+                    this.SyncTimeOffProperties == other.SyncTimeOffProperties ||
+                    this.SyncTimeOffProperties != null &&
+                    this.SyncTimeOffProperties.Equals(other.SyncTimeOffProperties)
+                ) &&
+                (
+                    this.ServiceGoalImpact == other.ServiceGoalImpact ||
+                    this.ServiceGoalImpact != null &&
+                    this.ServiceGoalImpact.Equals(other.ServiceGoalImpact)
                 );
         }
 
@@ -108,6 +142,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.MessageSeverities != null)
                     hash = hash * 59 + this.MessageSeverities.GetHashCode();
+
+                if (this.SyncTimeOffProperties != null)
+                    hash = hash * 59 + this.SyncTimeOffProperties.GetHashCode();
+
+                if (this.ServiceGoalImpact != null)
+                    hash = hash * 59 + this.ServiceGoalImpact.GetHashCode();
 
                 return hash;
             }

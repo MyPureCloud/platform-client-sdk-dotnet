@@ -222,9 +222,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>WebDeployment</returns>
         
-        WebDeployment GetWebdeploymentsDeployment (string deploymentId);
+        WebDeployment GetWebdeploymentsDeployment (string deploymentId, List<string> expand = null);
 
         /// <summary>
         /// Get a deployment
@@ -234,9 +235,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ApiResponse of WebDeployment</returns>
         
-        ApiResponse<WebDeployment> GetWebdeploymentsDeploymentWithHttpInfo (string deploymentId);
+        ApiResponse<WebDeployment> GetWebdeploymentsDeploymentWithHttpInfo (string deploymentId, List<string> expand = null);
 
         /// <summary>
         /// Retrieves a cobrowse session
@@ -273,9 +275,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
+        /// <param name="expand">Expand instructions for the return value (optional)</param>
         /// <returns>WebDeploymentActiveConfigurationOnDeployment</returns>
         
-        WebDeploymentActiveConfigurationOnDeployment GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null);
+        WebDeploymentActiveConfigurationOnDeployment GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null, List<string> expand = null);
 
         /// <summary>
         /// Get active configuration for a given deployment
@@ -286,9 +289,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
+        /// <param name="expand">Expand instructions for the return value (optional)</param>
         /// <returns>ApiResponse of WebDeploymentActiveConfigurationOnDeployment</returns>
         
-        ApiResponse<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsWithHttpInfo (string deploymentId, string type = null);
+        ApiResponse<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsWithHttpInfo (string deploymentId, string type = null, List<string> expand = null);
 
         /// <summary>
         /// Get deployments
@@ -297,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ExpandableWebDeploymentEntityListing</returns>
         
         ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (List<string> expand = null);
@@ -309,7 +313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of ExpandableWebDeploymentEntityListing</returns>
         
         ApiResponse<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsWithHttpInfo (List<string> expand = null);
@@ -696,9 +700,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of WebDeployment</returns>
         
-        System.Threading.Tasks.Task<WebDeployment> GetWebdeploymentsDeploymentAsync (string deploymentId);
+        System.Threading.Tasks.Task<WebDeployment> GetWebdeploymentsDeploymentAsync (string deploymentId, List<string> expand = null);
 
         /// <summary>
         /// Get a deployment
@@ -708,9 +713,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WebDeployment>> GetWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId);
+        System.Threading.Tasks.Task<ApiResponse<WebDeployment>> GetWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId, List<string> expand = null);
 
         /// <summary>
         /// Retrieves a cobrowse session
@@ -747,9 +753,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
+        /// <param name="expand">Expand instructions for the return value (optional)</param>
         /// <returns>Task of WebDeploymentActiveConfigurationOnDeployment</returns>
         
-        System.Threading.Tasks.Task<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsAsync (string deploymentId, string type = null);
+        System.Threading.Tasks.Task<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsAsync (string deploymentId, string type = null, List<string> expand = null);
 
         /// <summary>
         /// Get active configuration for a given deployment
@@ -760,9 +767,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
+        /// <param name="expand">Expand instructions for the return value (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentActiveConfigurationOnDeployment)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WebDeploymentActiveConfigurationOnDeployment>> GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo (string deploymentId, string type = null);
+        System.Threading.Tasks.Task<ApiResponse<WebDeploymentActiveConfigurationOnDeployment>> GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo (string deploymentId, string type = null, List<string> expand = null);
 
         /// <summary>
         /// Get deployments
@@ -771,7 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ExpandableWebDeploymentEntityListing</returns>
         
         System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (List<string> expand = null);
@@ -783,7 +791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (ExpandableWebDeploymentEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (List<string> expand = null);
@@ -2666,11 +2674,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>WebDeployment</returns>
         
-        public WebDeployment GetWebdeploymentsDeployment (string deploymentId)
+        public WebDeployment GetWebdeploymentsDeployment (string deploymentId, List<string> expand = null)
         {
-             ApiResponse<WebDeployment> localVarResponse = GetWebdeploymentsDeploymentWithHttpInfo(deploymentId);
+             ApiResponse<WebDeployment> localVarResponse = GetWebdeploymentsDeploymentWithHttpInfo(deploymentId, expand);
              return localVarResponse.Data;
         }
 
@@ -2680,9 +2689,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ApiResponse of WebDeployment</returns>
         
-        public ApiResponse< WebDeployment > GetWebdeploymentsDeploymentWithHttpInfo (string deploymentId)
+        public ApiResponse< WebDeployment > GetWebdeploymentsDeploymentWithHttpInfo (string deploymentId, List<string> expand = null)
         { 
             // verify the required parameter 'deploymentId' is set
             if (deploymentId == null)
@@ -2721,6 +2731,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (deploymentId != null) localVarPathParams.Add("deploymentId", this.Configuration.ApiClient.ParameterToString(deploymentId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -2766,11 +2777,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of WebDeployment</returns>
         
-        public async System.Threading.Tasks.Task<WebDeployment> GetWebdeploymentsDeploymentAsync (string deploymentId)
+        public async System.Threading.Tasks.Task<WebDeployment> GetWebdeploymentsDeploymentAsync (string deploymentId, List<string> expand = null)
         {
-             ApiResponse<WebDeployment> localVarResponse = await GetWebdeploymentsDeploymentAsyncWithHttpInfo(deploymentId);
+             ApiResponse<WebDeployment> localVarResponse = await GetWebdeploymentsDeploymentAsyncWithHttpInfo(deploymentId, expand);
              return localVarResponse.Data;
 
         }
@@ -2781,9 +2793,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WebDeployment>> GetWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId)
+        public async System.Threading.Tasks.Task<ApiResponse<WebDeployment>> GetWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId, List<string> expand = null)
         { 
             // verify the required parameter 'deploymentId' is set
             if (deploymentId == null)
@@ -2823,6 +2836,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (deploymentId != null) localVarPathParams.Add("deploymentId", this.Configuration.ApiClient.ParameterToString(deploymentId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -3072,11 +3086,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
+        /// <param name="expand">Expand instructions for the return value (optional)</param>
         /// <returns>WebDeploymentActiveConfigurationOnDeployment</returns>
         
-        public WebDeploymentActiveConfigurationOnDeployment GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null)
+        public WebDeploymentActiveConfigurationOnDeployment GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null, List<string> expand = null)
         {
-             ApiResponse<WebDeploymentActiveConfigurationOnDeployment> localVarResponse = GetWebdeploymentsDeploymentConfigurationsWithHttpInfo(deploymentId, type);
+             ApiResponse<WebDeploymentActiveConfigurationOnDeployment> localVarResponse = GetWebdeploymentsDeploymentConfigurationsWithHttpInfo(deploymentId, type, expand);
              return localVarResponse.Data;
         }
 
@@ -3087,9 +3102,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
+        /// <param name="expand">Expand instructions for the return value (optional)</param>
         /// <returns>ApiResponse of WebDeploymentActiveConfigurationOnDeployment</returns>
         
-        public ApiResponse< WebDeploymentActiveConfigurationOnDeployment > GetWebdeploymentsDeploymentConfigurationsWithHttpInfo (string deploymentId, string type = null)
+        public ApiResponse< WebDeploymentActiveConfigurationOnDeployment > GetWebdeploymentsDeploymentConfigurationsWithHttpInfo (string deploymentId, string type = null, List<string> expand = null)
         { 
             // verify the required parameter 'deploymentId' is set
             if (deploymentId == null)
@@ -3129,6 +3145,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -3175,11 +3192,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
+        /// <param name="expand">Expand instructions for the return value (optional)</param>
         /// <returns>Task of WebDeploymentActiveConfigurationOnDeployment</returns>
         
-        public async System.Threading.Tasks.Task<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsAsync (string deploymentId, string type = null)
+        public async System.Threading.Tasks.Task<WebDeploymentActiveConfigurationOnDeployment> GetWebdeploymentsDeploymentConfigurationsAsync (string deploymentId, string type = null, List<string> expand = null)
         {
-             ApiResponse<WebDeploymentActiveConfigurationOnDeployment> localVarResponse = await GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo(deploymentId, type);
+             ApiResponse<WebDeploymentActiveConfigurationOnDeployment> localVarResponse = await GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo(deploymentId, type, expand);
              return localVarResponse.Data;
 
         }
@@ -3191,9 +3209,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The deployment ID</param>
         /// <param name="type">Get active configuration on a deployment (optional)</param>
+        /// <param name="expand">Expand instructions for the return value (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentActiveConfigurationOnDeployment)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentActiveConfigurationOnDeployment>> GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo (string deploymentId, string type = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentActiveConfigurationOnDeployment>> GetWebdeploymentsDeploymentConfigurationsAsyncWithHttpInfo (string deploymentId, string type = null, List<string> expand = null)
         { 
             // verify the required parameter 'deploymentId' is set
             if (deploymentId == null)
@@ -3234,6 +3253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -3279,7 +3299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ExpandableWebDeploymentEntityListing</returns>
         
         public ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (List<string> expand = null)
@@ -3293,7 +3313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of ExpandableWebDeploymentEntityListing</returns>
         
         public ApiResponse< ExpandableWebDeploymentEntityListing > GetWebdeploymentsDeploymentsWithHttpInfo (List<string> expand = null)
@@ -3376,7 +3396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ExpandableWebDeploymentEntityListing</returns>
         
         public async System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (List<string> expand = null)
@@ -3391,7 +3411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)</param>
+        /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (ExpandableWebDeploymentEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (List<string> expand = null)

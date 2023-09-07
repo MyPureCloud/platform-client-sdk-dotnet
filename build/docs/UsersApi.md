@@ -3685,8 +3685,8 @@ Update bulk acd autoanswer on users
 
 Requires ANY permissions: 
 
-* directory:user:add
 * directory:user:edit
+* directory:organization:admin
 
 ### Example
 ```{"language":"csharp"}

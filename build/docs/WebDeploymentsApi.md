@@ -525,7 +525,7 @@ namespace Example
 
 <a name="getwebdeploymentsdeployment"></a>
 
-## [**WebDeployment**](WebDeployment.html) GetWebdeploymentsDeployment (string deploymentId)
+## [**WebDeployment**](WebDeployment.html) GetWebdeploymentsDeployment (string deploymentId, List<string> expand = null)
 
 
 
@@ -558,11 +558,12 @@ namespace Example
 
             var apiInstance = new WebDeploymentsApi();
             var deploymentId = deploymentId_example;  // string | The deployment ID
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected.  (optional) 
 
             try
             { 
                 // Get a deployment
-                WebDeployment result = apiInstance.GetWebdeploymentsDeployment(deploymentId);
+                WebDeployment result = apiInstance.GetWebdeploymentsDeployment(deploymentId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -580,6 +581,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The deployment ID |  |
+| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: supportedContent |
 {: class="table table-striped"}
 
 ### Return type
@@ -646,7 +648,7 @@ namespace Example
 
 <a name="getwebdeploymentsdeploymentconfigurations"></a>
 
-## [**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment.html) GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null)
+## [**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment.html) GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null, List<string> expand = null)
 
 
 
@@ -679,11 +681,12 @@ namespace Example
             var apiInstance = new WebDeploymentsApi();
             var deploymentId = deploymentId_example;  // string | The deployment ID
             var type = type_example;  // string | Get active configuration on a deployment (optional) 
+            var expand = new List<string>(); // List<string> | Expand instructions for the return value (optional) 
 
             try
             { 
                 // Get active configuration for a given deployment
-                WebDeploymentActiveConfigurationOnDeployment result = apiInstance.GetWebdeploymentsDeploymentConfigurations(deploymentId, type);
+                WebDeploymentActiveConfigurationOnDeployment result = apiInstance.GetWebdeploymentsDeploymentConfigurations(deploymentId, type, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -702,6 +705,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The deployment ID |  |
 | **type** | **string**| Get active configuration on a deployment | [optional]  |
+| **expand** | [**List<string>**](string.html)| Expand instructions for the return value | [optional] <br />**Values**: supportedContent |
 {: class="table table-striped"}
 
 ### Return type
@@ -742,7 +746,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WebDeploymentsApi();
-            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional) 
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
 
             try
             { 
@@ -764,7 +768,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. Valid values: | [optional] <br />**Values**: Configuration |
+| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: Configuration, SupportedContent |
 {: class="table table-striped"}
 
 ### Return type

@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateStartWorkday">Start workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="DateEndWorkday">End workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="PercentOfGoal">Percent of goal.</param>
-        public TrendData(String DateStartWorkday = null, String DateEndWorkday = null, double? PercentOfGoal = null)
+        /// <param name="AverageValue">Average metric value.</param>
+        public TrendData(String DateStartWorkday = null, String DateEndWorkday = null, double? PercentOfGoal = null, double? AverageValue = null)
         {
             this.DateStartWorkday = DateStartWorkday;
             this.DateEndWorkday = DateEndWorkday;
             this.PercentOfGoal = PercentOfGoal;
+            this.AverageValue = AverageValue;
             
         }
         
@@ -60,6 +62,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? PercentOfGoal { get; set; }
 
 
+
+        /// <summary>
+        /// Average metric value
+        /// </summary>
+        /// <value>Average metric value</value>
+        [DataMember(Name="averageValue", EmitDefaultValue=false)]
+        public double? AverageValue { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateStartWorkday: ").Append(DateStartWorkday).Append("\n");
             sb.Append("  DateEndWorkday: ").Append(DateEndWorkday).Append("\n");
             sb.Append("  PercentOfGoal: ").Append(PercentOfGoal).Append("\n");
+            sb.Append("  AverageValue: ").Append(AverageValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +138,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PercentOfGoal == other.PercentOfGoal ||
                     this.PercentOfGoal != null &&
                     this.PercentOfGoal.Equals(other.PercentOfGoal)
+                ) &&
+                (
+                    this.AverageValue == other.AverageValue ||
+                    this.AverageValue != null &&
+                    this.AverageValue.Equals(other.AverageValue)
                 );
         }
 
@@ -148,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PercentOfGoal != null)
                     hash = hash * 59 + this.PercentOfGoal.GetHashCode();
+
+                if (this.AverageValue != null)
+                    hash = hash * 59 + this.AverageValue.GetHashCode();
 
                 return hash;
             }

@@ -19,6 +19,33 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class QueueRequest :  IEquatable<QueueRequest>
     {
         /// <summary>
+        /// The Scoring Method for the queue
+        /// </summary>
+        /// <value>The Scoring Method for the queue</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ScoringMethodEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Timestampandpriority for "TimestampAndPriority"
+            /// </summary>
+            [EnumMember(Value = "TimestampAndPriority")]
+            Timestampandpriority,
+            
+            /// <summary>
+            /// Enum Priorityonly for "PriorityOnly"
+            /// </summary>
+            [EnumMember(Value = "PriorityOnly")]
+            Priorityonly
+        }
+        /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
         /// <value>The skill evaluation method to use when routing conversations.</value>
@@ -52,6 +79,12 @@ namespace PureCloudPlatform.Client.V2.Model
             All
         }
         /// <summary>
+        /// The Scoring Method for the queue
+        /// </summary>
+        /// <value>The Scoring Method for the queue</value>
+        [DataMember(Name="scoringMethod", EmitDefaultValue=false)]
+        public ScoringMethodEnum? ScoringMethod { get; set; }
+        /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
         /// <value>The skill evaluation method to use when routing conversations.</value>
@@ -77,6 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingRules">The routing rules for the queue, used for Preferred Agent Routing..</param>
         /// <param name="ConditionalGroupRouting">The Conditional Group Routing settings for the queue..</param>
         /// <param name="Bullseye">The bullseye settings for the queue..</param>
+        /// <param name="ScoringMethod">The Scoring Method for the queue.</param>
         /// <param name="AcwSettings">The ACW settings for the queue..</param>
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
         /// <param name="MemberGroups">The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes..</param>
@@ -97,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
-        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null)
+        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -110,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoutingRules = RoutingRules;
             this.ConditionalGroupRouting = ConditionalGroupRouting;
             this.Bullseye = Bullseye;
+            this.ScoringMethod = ScoringMethod;
             this.AcwSettings = AcwSettings;
             this.SkillEvaluationMethod = SkillEvaluationMethod;
             this.MemberGroups = MemberGroups;
@@ -267,6 +302,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The bullseye settings for the queue.</value>
         [DataMember(Name="bullseye", EmitDefaultValue=false)]
         public Bullseye Bullseye { get; set; }
+
+
 
 
 
@@ -474,6 +511,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RoutingRules: ").Append(RoutingRules).Append("\n");
             sb.Append("  ConditionalGroupRouting: ").Append(ConditionalGroupRouting).Append("\n");
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
+            sb.Append("  ScoringMethod: ").Append(ScoringMethod).Append("\n");
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
             sb.Append("  MemberGroups: ").Append(MemberGroups).Append("\n");
@@ -609,6 +647,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Bullseye == other.Bullseye ||
                     this.Bullseye != null &&
                     this.Bullseye.Equals(other.Bullseye)
+                ) &&
+                (
+                    this.ScoringMethod == other.ScoringMethod ||
+                    this.ScoringMethod != null &&
+                    this.ScoringMethod.Equals(other.ScoringMethod)
                 ) &&
                 (
                     this.AcwSettings == other.AcwSettings ||
@@ -772,6 +815,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Bullseye != null)
                     hash = hash * 59 + this.Bullseye.GetHashCode();
+
+                if (this.ScoringMethod != null)
+                    hash = hash * 59 + this.ScoringMethod.GetHashCode();
 
                 if (this.AcwSettings != null)
                     hash = hash * 59 + this.AcwSettings.GetHashCode();

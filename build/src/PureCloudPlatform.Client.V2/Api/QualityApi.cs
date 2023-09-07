@@ -269,9 +269,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <returns>AgentActivityEntityListing</returns>
         
-        AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -292,9 +293,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
         
-        ApiResponse<AgentActivityEntityListing> GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        ApiResponse<AgentActivityEntityListing> GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null);
 
         /// <summary>
         /// Get a calibration by id.  Requires either calibrator id or conversation id
@@ -492,6 +494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
@@ -500,7 +503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
         
-        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -522,6 +525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
@@ -530,7 +534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
         
-        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1969,9 +1973,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
         
-        System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -1992,9 +1997,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null);
 
         /// <summary>
         /// Get a calibration by id.  Requires either calibrator id or conversation id
@@ -2192,6 +2198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
@@ -2200,7 +2207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
         
-        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -2222,6 +2229,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
@@ -2230,7 +2238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -5402,11 +5410,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <returns>AgentActivityEntityListing</returns>
         
-        public AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null)
         {
-             ApiResponse<AgentActivityEntityListing> localVarResponse = GetQualityAgentsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
+             ApiResponse<AgentActivityEntityListing> localVarResponse = GetQualityAgentsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, formContextId);
              return localVarResponse.Data;
         }
 
@@ -5427,9 +5436,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
         
-        public ApiResponse< AgentActivityEntityListing > GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public ApiResponse< AgentActivityEntityListing > GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null)
         { 
 
             var localVarPath = "/api/v2/quality/agents/activity";
@@ -5476,6 +5486,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (evaluatorUserId != null) localVarQueryParams.Add(new Tuple<string, string>("evaluatorUserId", this.Configuration.ApiClient.ParameterToString(evaluatorUserId)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (group != null) localVarQueryParams.Add(new Tuple<string, string>("group", this.Configuration.ApiClient.ParameterToString(group)));
+            if (formContextId != null) localVarQueryParams.Add(new Tuple<string, string>("formContextId", this.Configuration.ApiClient.ParameterToString(formContextId)));
 
             // Header params
 
@@ -5532,11 +5543,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null)
         {
-             ApiResponse<AgentActivityEntityListing> localVarResponse = await GetQualityAgentsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
+             ApiResponse<AgentActivityEntityListing> localVarResponse = await GetQualityAgentsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, formContextId);
              return localVarResponse.Data;
 
         }
@@ -5558,9 +5570,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluatorUserId">user id of the evaluator (optional)</param>
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null)
         { 
 
             var localVarPath = "/api/v2/quality/agents/activity";
@@ -5607,6 +5620,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (evaluatorUserId != null) localVarQueryParams.Add(new Tuple<string, string>("evaluatorUserId", this.Configuration.ApiClient.ParameterToString(evaluatorUserId)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (group != null) localVarQueryParams.Add(new Tuple<string, string>("group", this.Configuration.ApiClient.ParameterToString(group)));
+            if (formContextId != null) localVarQueryParams.Add(new Tuple<string, string>("formContextId", this.Configuration.ApiClient.ParameterToString(formContextId)));
 
             // Header params
 
@@ -6986,6 +7000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
@@ -6994,9 +7009,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
         
-        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+             ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -7018,6 +7033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
@@ -7026,7 +7042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
         
-        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -7074,6 +7090,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (queueId != null) localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(queueId)));
             if (startTime != null) localVarQueryParams.Add(new Tuple<string, string>("startTime", this.Configuration.ApiClient.ParameterToString(startTime)));
             if (endTime != null) localVarQueryParams.Add(new Tuple<string, string>("endTime", this.Configuration.ApiClient.ParameterToString(endTime)));
+            if (formContextId != null) localVarQueryParams.Add(new Tuple<string, string>("formContextId", this.Configuration.ApiClient.ParameterToString(formContextId)));
             if (evaluationState != null) evaluationState.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("evaluationState", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (isReleased != null) localVarQueryParams.Add(new Tuple<string, string>("isReleased", this.Configuration.ApiClient.ParameterToString(isReleased)));
             if (agentHasRead != null) localVarQueryParams.Add(new Tuple<string, string>("agentHasRead", this.Configuration.ApiClient.ParameterToString(agentHasRead)));
@@ -7137,6 +7154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
@@ -7145,9 +7163,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+             ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -7170,6 +7188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
+        /// <param name="formContextId">shared id between form versions (optional)</param>
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
@@ -7178,7 +7197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -7226,6 +7245,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (queueId != null) localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(queueId)));
             if (startTime != null) localVarQueryParams.Add(new Tuple<string, string>("startTime", this.Configuration.ApiClient.ParameterToString(startTime)));
             if (endTime != null) localVarQueryParams.Add(new Tuple<string, string>("endTime", this.Configuration.ApiClient.ParameterToString(endTime)));
+            if (formContextId != null) localVarQueryParams.Add(new Tuple<string, string>("formContextId", this.Configuration.ApiClient.ParameterToString(formContextId)));
             if (evaluationState != null) evaluationState.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("evaluationState", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (isReleased != null) localVarQueryParams.Add(new Tuple<string, string>("isReleased", this.Configuration.ApiClient.ParameterToString(isReleased)));
             if (agentHasRead != null) localVarQueryParams.Add(new Tuple<string, string>("agentHasRead", this.Configuration.ApiClient.ParameterToString(agentHasRead)));

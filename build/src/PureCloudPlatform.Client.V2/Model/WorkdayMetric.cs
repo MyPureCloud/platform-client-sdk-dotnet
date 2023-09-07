@@ -81,6 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<PunctualityEvent> PunctualityEvents { get; private set; }
 
 
+
+        /// <summary>
+        /// List of evaluations for quality evaluation score metrics
+        /// </summary>
+        /// <value>List of evaluations for quality evaluation score metrics</value>
+        [DataMember(Name="evaluationDetails", EmitDefaultValue=false)]
+        public List<QualityEvaluationScoreItem> EvaluationDetails { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxPoints: ").Append(MaxPoints).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  PunctualityEvents: ").Append(PunctualityEvents).Append("\n");
+            sb.Append("  EvaluationDetails: ").Append(EvaluationDetails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PunctualityEvents == other.PunctualityEvents ||
                     this.PunctualityEvents != null &&
                     this.PunctualityEvents.SequenceEqual(other.PunctualityEvents)
+                ) &&
+                (
+                    this.EvaluationDetails == other.EvaluationDetails ||
+                    this.EvaluationDetails != null &&
+                    this.EvaluationDetails.SequenceEqual(other.EvaluationDetails)
                 );
         }
 
@@ -196,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PunctualityEvents != null)
                     hash = hash * 59 + this.PunctualityEvents.GetHashCode();
+
+                if (this.EvaluationDetails != null)
+                    hash = hash * 59 + this.EvaluationDetails.GetHashCode();
 
                 return hash;
             }

@@ -129,8 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Queues">A list of queues for the metric.</param>
         /// <param name="Topics">A list of topic ids for detected topic metrics.</param>
         /// <param name="TopicIdsFilterType">A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\"..</param>
+        /// <param name="EvaluationFormContextIds">The ids of associated evaluation form context, for Quality Evaluation Score metrics.</param>
         /// <param name="DateStart">start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        public Objective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<MediaTypesEnum> MediaTypes = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Topics = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, String DateStart = null)
+        public Objective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<MediaTypesEnum> MediaTypes = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Topics = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, List<string> EvaluationFormContextIds = null, String DateStart = null)
         {
             this.TemplateId = TemplateId;
             this.Zones = Zones;
@@ -139,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Queues = Queues;
             this.Topics = Topics;
             this.TopicIdsFilterType = TopicIdsFilterType;
+            this.EvaluationFormContextIds = EvaluationFormContextIds;
             this.DateStart = DateStart;
             
         }
@@ -211,6 +213,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The ids of associated evaluation form context, for Quality Evaluation Score metrics
+        /// </summary>
+        /// <value>The ids of associated evaluation form context, for Quality Evaluation Score metrics</value>
+        [DataMember(Name="evaluationFormContextIds", EmitDefaultValue=false)]
+        public List<string> EvaluationFormContextIds { get; set; }
+
+
+
+        /// <summary>
         /// start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
@@ -235,6 +246,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Queues: ").Append(Queues).Append("\n");
             sb.Append("  Topics: ").Append(Topics).Append("\n");
             sb.Append("  TopicIdsFilterType: ").Append(TopicIdsFilterType).Append("\n");
+            sb.Append("  EvaluationFormContextIds: ").Append(EvaluationFormContextIds).Append("\n");
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -317,6 +329,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TopicIdsFilterType.Equals(other.TopicIdsFilterType)
                 ) &&
                 (
+                    this.EvaluationFormContextIds == other.EvaluationFormContextIds ||
+                    this.EvaluationFormContextIds != null &&
+                    this.EvaluationFormContextIds.SequenceEqual(other.EvaluationFormContextIds)
+                ) &&
+                (
                     this.DateStart == other.DateStart ||
                     this.DateStart != null &&
                     this.DateStart.Equals(other.DateStart)
@@ -357,6 +374,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TopicIdsFilterType != null)
                     hash = hash * 59 + this.TopicIdsFilterType.GetHashCode();
+
+                if (this.EvaluationFormContextIds != null)
+                    hash = hash * 59 + this.EvaluationFormContextIds.GetHashCode();
 
                 if (this.DateStart != null)
                     hash = hash * 59 + this.DateStart.GetHashCode();

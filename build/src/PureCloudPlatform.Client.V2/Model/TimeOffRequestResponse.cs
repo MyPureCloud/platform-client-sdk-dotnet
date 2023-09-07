@@ -139,6 +139,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest == false.</param>
         /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone. Will be not empty if isFullDayRequest == true.</param>
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
+        /// <param name="DurationMinutes">Daily durations for each day of this time off request in minutes.</param>
+        /// <param name="PayableMinutes">Payable minutes for each day of this time off request.</param>
         /// <param name="Notes">Notes about the time off request.</param>
         /// <param name="SubmittedBy">The user who submitted this time off request.</param>
         /// <param name="SubmittedDate">The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -146,8 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReviewedDate">The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedBy">The user who last modified this TimeOffRequestResponse.</param>
         /// <param name="ModifiedDate">The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="SyncVersion">The sync version of this time off request for which the scheduled activity is associated.</param>
         /// <param name="Metadata">The version metadata of the time off request.</param>
-        public TimeOffRequestResponse(UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, WfmVersionedEntityMetadata Metadata = null)
+        public TimeOffRequestResponse(UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, int? SyncVersion = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.User = User;
             this.IsFullDayRequest = IsFullDayRequest;
@@ -159,6 +162,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             this.DailyDurationMinutes = DailyDurationMinutes;
+            this.DurationMinutes = DurationMinutes;
+            this.PayableMinutes = PayableMinutes;
             this.Notes = Notes;
             this.SubmittedBy = SubmittedBy;
             this.SubmittedDate = SubmittedDate;
@@ -166,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ReviewedDate = ReviewedDate;
             this.ModifiedBy = ModifiedBy;
             this.ModifiedDate = ModifiedDate;
+            this.SyncVersion = SyncVersion;
             this.Metadata = Metadata;
             
         }
@@ -258,6 +264,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Daily durations for each day of this time off request in minutes
+        /// </summary>
+        /// <value>Daily durations for each day of this time off request in minutes</value>
+        [DataMember(Name="durationMinutes", EmitDefaultValue=false)]
+        public List<int?> DurationMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// Payable minutes for each day of this time off request
+        /// </summary>
+        /// <value>Payable minutes for each day of this time off request</value>
+        [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
+        public List<int?> PayableMinutes { get; set; }
+
+
+
+        /// <summary>
         /// Notes about the time off request
         /// </summary>
         /// <value>Notes about the time off request</value>
@@ -321,6 +345,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The sync version of this time off request for which the scheduled activity is associated
+        /// </summary>
+        /// <value>The sync version of this time off request for which the scheduled activity is associated</value>
+        [DataMember(Name="syncVersion", EmitDefaultValue=false)]
+        public int? SyncVersion { get; set; }
+
+
+
+        /// <summary>
         /// The version metadata of the time off request
         /// </summary>
         /// <value>The version metadata of the time off request</value>
@@ -357,6 +390,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
+            sb.Append("  DurationMinutes: ").Append(DurationMinutes).Append("\n");
+            sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  SubmittedBy: ").Append(SubmittedBy).Append("\n");
             sb.Append("  SubmittedDate: ").Append(SubmittedDate).Append("\n");
@@ -364,6 +399,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ReviewedDate: ").Append(ReviewedDate).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            sb.Append("  SyncVersion: ").Append(SyncVersion).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -462,6 +498,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DailyDurationMinutes.Equals(other.DailyDurationMinutes)
                 ) &&
                 (
+                    this.DurationMinutes == other.DurationMinutes ||
+                    this.DurationMinutes != null &&
+                    this.DurationMinutes.SequenceEqual(other.DurationMinutes)
+                ) &&
+                (
+                    this.PayableMinutes == other.PayableMinutes ||
+                    this.PayableMinutes != null &&
+                    this.PayableMinutes.SequenceEqual(other.PayableMinutes)
+                ) &&
+                (
                     this.Notes == other.Notes ||
                     this.Notes != null &&
                     this.Notes.Equals(other.Notes)
@@ -495,6 +541,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
+                ) &&
+                (
+                    this.SyncVersion == other.SyncVersion ||
+                    this.SyncVersion != null &&
+                    this.SyncVersion.Equals(other.SyncVersion)
                 ) &&
                 (
                     this.Metadata == other.Metadata ||
@@ -552,6 +603,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DailyDurationMinutes != null)
                     hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();
 
+                if (this.DurationMinutes != null)
+                    hash = hash * 59 + this.DurationMinutes.GetHashCode();
+
+                if (this.PayableMinutes != null)
+                    hash = hash * 59 + this.PayableMinutes.GetHashCode();
+
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
 
@@ -572,6 +629,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
+
+                if (this.SyncVersion != null)
+                    hash = hash * 59 + this.SyncVersion.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

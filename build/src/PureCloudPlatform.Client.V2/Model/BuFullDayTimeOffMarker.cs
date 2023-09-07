@@ -26,15 +26,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of the time off marker.</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with the time off marker.</param>
         /// <param name="Paid">Whether the time off marker is paid.</param>
+        /// <param name="PayableMinutes">Payable minutes for the time off marker.</param>
         /// <param name="TimeOffRequestId">The ID of the time off request.</param>
-        public BuFullDayTimeOffMarker(String BusinessUnitDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, string TimeOffRequestId = null)
+        /// <param name="TimeOffRequestSyncVersion">The sync version of the full day time off request for which the scheduled activity is associated.</param>
+        public BuFullDayTimeOffMarker(String BusinessUnitDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, int? PayableMinutes = null, string TimeOffRequestId = null, int? TimeOffRequestSyncVersion = null)
         {
             this.BusinessUnitDate = BusinessUnitDate;
             this.LengthMinutes = LengthMinutes;
             this.Description = Description;
             this.ActivityCodeId = ActivityCodeId;
             this.Paid = Paid;
+            this.PayableMinutes = PayableMinutes;
             this.TimeOffRequestId = TimeOffRequestId;
+            this.TimeOffRequestSyncVersion = TimeOffRequestSyncVersion;
             
         }
         
@@ -86,11 +90,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Payable minutes for the time off marker
+        /// </summary>
+        /// <value>Payable minutes for the time off marker</value>
+        [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
+        public int? PayableMinutes { get; set; }
+
+
+
+        /// <summary>
         /// The ID of the time off request
         /// </summary>
         /// <value>The ID of the time off request</value>
         [DataMember(Name="timeOffRequestId", EmitDefaultValue=false)]
         public string TimeOffRequestId { get; set; }
+
+
+
+        /// <summary>
+        /// The sync version of the full day time off request for which the scheduled activity is associated
+        /// </summary>
+        /// <value>The sync version of the full day time off request for which the scheduled activity is associated</value>
+        [DataMember(Name="timeOffRequestSyncVersion", EmitDefaultValue=false)]
+        public int? TimeOffRequestSyncVersion { get; set; }
 
 
         /// <summary>
@@ -107,7 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  Paid: ").Append(Paid).Append("\n");
+            sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
             sb.Append("  TimeOffRequestId: ").Append(TimeOffRequestId).Append("\n");
+            sb.Append("  TimeOffRequestSyncVersion: ").Append(TimeOffRequestSyncVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,9 +198,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Paid.Equals(other.Paid)
                 ) &&
                 (
+                    this.PayableMinutes == other.PayableMinutes ||
+                    this.PayableMinutes != null &&
+                    this.PayableMinutes.Equals(other.PayableMinutes)
+                ) &&
+                (
                     this.TimeOffRequestId == other.TimeOffRequestId ||
                     this.TimeOffRequestId != null &&
                     this.TimeOffRequestId.Equals(other.TimeOffRequestId)
+                ) &&
+                (
+                    this.TimeOffRequestSyncVersion == other.TimeOffRequestSyncVersion ||
+                    this.TimeOffRequestSyncVersion != null &&
+                    this.TimeOffRequestSyncVersion.Equals(other.TimeOffRequestSyncVersion)
                 );
         }
 
@@ -206,8 +240,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Paid != null)
                     hash = hash * 59 + this.Paid.GetHashCode();
 
+                if (this.PayableMinutes != null)
+                    hash = hash * 59 + this.PayableMinutes.GetHashCode();
+
                 if (this.TimeOffRequestId != null)
                     hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
+
+                if (this.TimeOffRequestSyncVersion != null)
+                    hash = hash * 59 + this.TimeOffRequestSyncVersion.GetHashCode();
 
                 return hash;
             }

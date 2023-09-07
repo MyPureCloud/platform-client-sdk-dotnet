@@ -832,7 +832,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum SearchCriteriaValuesExceedLimit for "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT"
             /// </summary>
             [EnumMember(Value = "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT")]
-            SearchCriteriaValuesExceedLimit
+            SearchCriteriaValuesExceedLimit,
+            
+            /// <summary>
+            /// Enum ExportEmailFileSizeExceededLimit for "EXPORT_EMAIL_FILE_SIZE_EXCEEDED_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "EXPORT_EMAIL_FILE_SIZE_EXCEEDED_LIMIT")]
+            ExportEmailFileSizeExceededLimit
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request

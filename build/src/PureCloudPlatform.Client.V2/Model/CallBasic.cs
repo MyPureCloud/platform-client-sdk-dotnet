@@ -262,6 +262,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Endpoint,
             
             /// <summary>
+            /// Enum Endpointdonotdisturb for "endpoint.donotdisturb"
+            /// </summary>
+            [EnumMember(Value = "endpoint.donotdisturb")]
+            Endpointdonotdisturb,
+            
+            /// <summary>
             /// Enum Client for "client"
             /// </summary>
             [EnumMember(Value = "client")]
@@ -296,6 +302,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "transfer.consult")]
             Transferconsult,
+            
+            /// <summary>
+            /// Enum Transferdonotdisturb for "transfer.donotdisturb"
+            /// </summary>
+            [EnumMember(Value = "transfer.donotdisturb")]
+            Transferdonotdisturb,
             
             /// <summary>
             /// Enum Transferforward for "transfer.forward"

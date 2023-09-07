@@ -153,12 +153,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeImportJobResponse" /> class.
         /// </summary>
+        /// <param name="DownloadURL">The URL of the location at which the caller can download the imported file..</param>
+        /// <param name="FailedEntitiesURL">The URL of the location at which the caller can download the entities in json format that failed during the import..</param>
         /// <param name="UploadKey">Upload key (required).</param>
         /// <param name="FileType">File type of the document (required).</param>
         /// <param name="Settings">Additional optional settings.</param>
         /// <param name="SkipConfirmationStep">If enabled pre-validation step will be skipped..</param>
-        public KnowledgeImportJobResponse(string UploadKey = null, FileTypeEnum? FileType = null, KnowledgeImportJobSettings Settings = null, bool? SkipConfirmationStep = null)
+        public KnowledgeImportJobResponse(string DownloadURL = null, string FailedEntitiesURL = null, string UploadKey = null, FileTypeEnum? FileType = null, KnowledgeImportJobSettings Settings = null, bool? SkipConfirmationStep = null)
         {
+            this.DownloadURL = DownloadURL;
+            this.FailedEntitiesURL = FailedEntitiesURL;
             this.UploadKey = UploadKey;
             this.FileType = FileType;
             this.Settings = Settings;
@@ -174,6 +178,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Id of the import job</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+
+
+
+        /// <summary>
+        /// The URL of the location at which the caller can download the imported file.
+        /// </summary>
+        /// <value>The URL of the location at which the caller can download the imported file.</value>
+        [DataMember(Name="downloadURL", EmitDefaultValue=false)]
+        public string DownloadURL { get; set; }
+
+
+
+        /// <summary>
+        /// The URL of the location at which the caller can download the entities in json format that failed during the import.
+        /// </summary>
+        /// <value>The URL of the location at which the caller can download the entities in json format that failed during the import.</value>
+        [DataMember(Name="failedEntitiesURL", EmitDefaultValue=false)]
+        public string FailedEntitiesURL { get; set; }
 
 
 
@@ -214,6 +236,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Knowledge base which document import does belong to</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public KnowledgeBase KnowledgeBase { get; private set; }
+
+
+
+        /// <summary>
+        /// The user who created the operation
+        /// </summary>
+        /// <value>The user who created the operation</value>
+        [DataMember(Name="createdBy", EmitDefaultValue=false)]
+        public UserReference CreatedBy { get; private set; }
 
 
 
@@ -262,12 +293,15 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class KnowledgeImportJobResponse {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  DownloadURL: ").Append(DownloadURL).Append("\n");
+            sb.Append("  FailedEntitiesURL: ").Append(FailedEntitiesURL).Append("\n");
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("  FileType: ").Append(FileType).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Report: ").Append(Report).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
+            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  SkipConfirmationStep: ").Append(SkipConfirmationStep).Append("\n");
@@ -318,6 +352,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.DownloadURL == other.DownloadURL ||
+                    this.DownloadURL != null &&
+                    this.DownloadURL.Equals(other.DownloadURL)
+                ) &&
+                (
+                    this.FailedEntitiesURL == other.FailedEntitiesURL ||
+                    this.FailedEntitiesURL != null &&
+                    this.FailedEntitiesURL.Equals(other.FailedEntitiesURL)
+                ) &&
+                (
                     this.UploadKey == other.UploadKey ||
                     this.UploadKey != null &&
                     this.UploadKey.Equals(other.UploadKey)
@@ -346,6 +390,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.KnowledgeBase == other.KnowledgeBase ||
                     this.KnowledgeBase != null &&
                     this.KnowledgeBase.Equals(other.KnowledgeBase)
+                ) &&
+                (
+                    this.CreatedBy == other.CreatedBy ||
+                    this.CreatedBy != null &&
+                    this.CreatedBy.Equals(other.CreatedBy)
                 ) &&
                 (
                     this.DateCreated == other.DateCreated ||
@@ -383,6 +432,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
+                if (this.DownloadURL != null)
+                    hash = hash * 59 + this.DownloadURL.GetHashCode();
+
+                if (this.FailedEntitiesURL != null)
+                    hash = hash * 59 + this.FailedEntitiesURL.GetHashCode();
+
                 if (this.UploadKey != null)
                     hash = hash * 59 + this.UploadKey.GetHashCode();
 
@@ -400,6 +455,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.KnowledgeBase != null)
                     hash = hash * 59 + this.KnowledgeBase.GetHashCode();
+
+                if (this.CreatedBy != null)
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

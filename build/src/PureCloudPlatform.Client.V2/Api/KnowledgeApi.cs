@@ -849,9 +849,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="importJobId">Import job ID</param>
+        /// <param name="expand">If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)</param>
         /// <returns>KnowledgeImportJobResponse</returns>
         
-        KnowledgeImportJobResponse GetKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId);
+        KnowledgeImportJobResponse GetKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId, List<string> expand = null);
 
         /// <summary>
         /// Get import job report
@@ -862,9 +863,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="importJobId">Import job ID</param>
+        /// <param name="expand">If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)</param>
         /// <returns>ApiResponse of KnowledgeImportJobResponse</returns>
         
-        ApiResponse<KnowledgeImportJobResponse> GetKnowledgeKnowledgebaseImportJobWithHttpInfo (string knowledgeBaseId, string importJobId);
+        ApiResponse<KnowledgeImportJobResponse> GetKnowledgeKnowledgebaseImportJobWithHttpInfo (string knowledgeBaseId, string importJobId, List<string> expand = null);
 
         /// <summary>
         /// Get label
@@ -1361,7 +1363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>KnowledgeBase</returns>
         
-        KnowledgeBase PatchKnowledgeKnowledgebase (string knowledgeBaseId, KnowledgeBase body);
+        KnowledgeBase PatchKnowledgeKnowledgebase (string knowledgeBaseId, KnowledgeBaseUpdateRequest body);
 
         /// <summary>
         /// Update knowledge base
@@ -1374,7 +1376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeBase</returns>
         
-        ApiResponse<KnowledgeBase> PatchKnowledgeKnowledgebaseWithHttpInfo (string knowledgeBaseId, KnowledgeBase body);
+        ApiResponse<KnowledgeBase> PatchKnowledgeKnowledgebaseWithHttpInfo (string knowledgeBaseId, KnowledgeBaseUpdateRequest body);
 
         /// <summary>
         /// Update category
@@ -2410,7 +2412,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>KnowledgeBase</returns>
         
-        KnowledgeBase PostKnowledgeKnowledgebases (KnowledgeBase body);
+        KnowledgeBase PostKnowledgeKnowledgebases (KnowledgeBaseCreateRequest body);
 
         /// <summary>
         /// Create new knowledge base
@@ -2422,7 +2424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeBase</returns>
         
-        ApiResponse<KnowledgeBase> PostKnowledgeKnowledgebasesWithHttpInfo (KnowledgeBase body);
+        ApiResponse<KnowledgeBase> PostKnowledgeKnowledgebasesWithHttpInfo (KnowledgeBaseCreateRequest body);
 
         #endregion Synchronous Operations
 
@@ -3261,9 +3263,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="importJobId">Import job ID</param>
+        /// <param name="expand">If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)</param>
         /// <returns>Task of KnowledgeImportJobResponse</returns>
         
-        System.Threading.Tasks.Task<KnowledgeImportJobResponse> GetKnowledgeKnowledgebaseImportJobAsync (string knowledgeBaseId, string importJobId);
+        System.Threading.Tasks.Task<KnowledgeImportJobResponse> GetKnowledgeKnowledgebaseImportJobAsync (string knowledgeBaseId, string importJobId, List<string> expand = null);
 
         /// <summary>
         /// Get import job report
@@ -3274,9 +3277,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="importJobId">Import job ID</param>
+        /// <param name="expand">If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeImportJobResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeImportJobResponse>> GetKnowledgeKnowledgebaseImportJobAsyncWithHttpInfo (string knowledgeBaseId, string importJobId);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeImportJobResponse>> GetKnowledgeKnowledgebaseImportJobAsyncWithHttpInfo (string knowledgeBaseId, string importJobId, List<string> expand = null);
 
         /// <summary>
         /// Get label
@@ -3773,7 +3777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeBase</returns>
         
-        System.Threading.Tasks.Task<KnowledgeBase> PatchKnowledgeKnowledgebaseAsync (string knowledgeBaseId, KnowledgeBase body);
+        System.Threading.Tasks.Task<KnowledgeBase> PatchKnowledgeKnowledgebaseAsync (string knowledgeBaseId, KnowledgeBaseUpdateRequest body);
 
         /// <summary>
         /// Update knowledge base
@@ -3786,7 +3790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeBase)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PatchKnowledgeKnowledgebaseAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeBase body);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PatchKnowledgeKnowledgebaseAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeBaseUpdateRequest body);
 
         /// <summary>
         /// Update category
@@ -4822,7 +4826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeBase</returns>
         
-        System.Threading.Tasks.Task<KnowledgeBase> PostKnowledgeKnowledgebasesAsync (KnowledgeBase body);
+        System.Threading.Tasks.Task<KnowledgeBase> PostKnowledgeKnowledgebasesAsync (KnowledgeBaseCreateRequest body);
 
         /// <summary>
         /// Create new knowledge base
@@ -4834,7 +4838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeBase)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PostKnowledgeKnowledgebasesAsyncWithHttpInfo (KnowledgeBase body);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PostKnowledgeKnowledgebasesAsyncWithHttpInfo (KnowledgeBaseCreateRequest body);
 
         #endregion Asynchronous Operations
 
@@ -11109,11 +11113,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="importJobId">Import job ID</param>
+        /// <param name="expand">If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)</param>
         /// <returns>KnowledgeImportJobResponse</returns>
         
-        public KnowledgeImportJobResponse GetKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId)
+        public KnowledgeImportJobResponse GetKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId, List<string> expand = null)
         {
-             ApiResponse<KnowledgeImportJobResponse> localVarResponse = GetKnowledgeKnowledgebaseImportJobWithHttpInfo(knowledgeBaseId, importJobId);
+             ApiResponse<KnowledgeImportJobResponse> localVarResponse = GetKnowledgeKnowledgebaseImportJobWithHttpInfo(knowledgeBaseId, importJobId, expand);
              return localVarResponse.Data;
         }
 
@@ -11124,9 +11129,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="importJobId">Import job ID</param>
+        /// <param name="expand">If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)</param>
         /// <returns>ApiResponse of KnowledgeImportJobResponse</returns>
         
-        public ApiResponse< KnowledgeImportJobResponse > GetKnowledgeKnowledgebaseImportJobWithHttpInfo (string knowledgeBaseId, string importJobId)
+        public ApiResponse< KnowledgeImportJobResponse > GetKnowledgeKnowledgebaseImportJobWithHttpInfo (string knowledgeBaseId, string importJobId, List<string> expand = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -11169,6 +11175,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -11215,11 +11222,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="importJobId">Import job ID</param>
+        /// <param name="expand">If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)</param>
         /// <returns>Task of KnowledgeImportJobResponse</returns>
         
-        public async System.Threading.Tasks.Task<KnowledgeImportJobResponse> GetKnowledgeKnowledgebaseImportJobAsync (string knowledgeBaseId, string importJobId)
+        public async System.Threading.Tasks.Task<KnowledgeImportJobResponse> GetKnowledgeKnowledgebaseImportJobAsync (string knowledgeBaseId, string importJobId, List<string> expand = null)
         {
-             ApiResponse<KnowledgeImportJobResponse> localVarResponse = await GetKnowledgeKnowledgebaseImportJobAsyncWithHttpInfo(knowledgeBaseId, importJobId);
+             ApiResponse<KnowledgeImportJobResponse> localVarResponse = await GetKnowledgeKnowledgebaseImportJobAsyncWithHttpInfo(knowledgeBaseId, importJobId, expand);
              return localVarResponse.Data;
 
         }
@@ -11231,9 +11239,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="importJobId">Import job ID</param>
+        /// <param name="expand">If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeImportJobResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeImportJobResponse>> GetKnowledgeKnowledgebaseImportJobAsyncWithHttpInfo (string knowledgeBaseId, string importJobId)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeImportJobResponse>> GetKnowledgeKnowledgebaseImportJobAsyncWithHttpInfo (string knowledgeBaseId, string importJobId, List<string> expand = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -11278,6 +11287,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -14869,7 +14879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>KnowledgeBase</returns>
         
-        public KnowledgeBase PatchKnowledgeKnowledgebase (string knowledgeBaseId, KnowledgeBase body)
+        public KnowledgeBase PatchKnowledgeKnowledgebase (string knowledgeBaseId, KnowledgeBaseUpdateRequest body)
         {
              ApiResponse<KnowledgeBase> localVarResponse = PatchKnowledgeKnowledgebaseWithHttpInfo(knowledgeBaseId, body);
              return localVarResponse.Data;
@@ -14884,7 +14894,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeBase</returns>
         
-        public ApiResponse< KnowledgeBase > PatchKnowledgeKnowledgebaseWithHttpInfo (string knowledgeBaseId, KnowledgeBase body)
+        public ApiResponse< KnowledgeBase > PatchKnowledgeKnowledgebaseWithHttpInfo (string knowledgeBaseId, KnowledgeBaseUpdateRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -14980,7 +14990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeBase</returns>
         
-        public async System.Threading.Tasks.Task<KnowledgeBase> PatchKnowledgeKnowledgebaseAsync (string knowledgeBaseId, KnowledgeBase body)
+        public async System.Threading.Tasks.Task<KnowledgeBase> PatchKnowledgeKnowledgebaseAsync (string knowledgeBaseId, KnowledgeBaseUpdateRequest body)
         {
              ApiResponse<KnowledgeBase> localVarResponse = await PatchKnowledgeKnowledgebaseAsyncWithHttpInfo(knowledgeBaseId, body);
              return localVarResponse.Data;
@@ -14996,7 +15006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeBase)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PatchKnowledgeKnowledgebaseAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeBase body)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PatchKnowledgeKnowledgebaseAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeBaseUpdateRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -23666,7 +23676,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>KnowledgeBase</returns>
         
-        public KnowledgeBase PostKnowledgeKnowledgebases (KnowledgeBase body)
+        public KnowledgeBase PostKnowledgeKnowledgebases (KnowledgeBaseCreateRequest body)
         {
              ApiResponse<KnowledgeBase> localVarResponse = PostKnowledgeKnowledgebasesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -23680,7 +23690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeBase</returns>
         
-        public ApiResponse< KnowledgeBase > PostKnowledgeKnowledgebasesWithHttpInfo (KnowledgeBase body)
+        public ApiResponse< KnowledgeBase > PostKnowledgeKnowledgebasesWithHttpInfo (KnowledgeBaseCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -23771,7 +23781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeBase</returns>
         
-        public async System.Threading.Tasks.Task<KnowledgeBase> PostKnowledgeKnowledgebasesAsync (KnowledgeBase body)
+        public async System.Threading.Tasks.Task<KnowledgeBase> PostKnowledgeKnowledgebasesAsync (KnowledgeBaseCreateRequest body)
         {
              ApiResponse<KnowledgeBase> localVarResponse = await PostKnowledgeKnowledgebasesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -23786,7 +23796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeBase)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PostKnowledgeKnowledgebasesAsyncWithHttpInfo (KnowledgeBase body)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PostKnowledgeKnowledgebasesAsyncWithHttpInfo (KnowledgeBaseCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)

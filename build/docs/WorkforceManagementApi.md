@@ -58,6 +58,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementCalendarUrlIcs**](WorkforceManagementApi.html#getworkforcemanagementcalendarurlics) | **Get** /api/v2/workforcemanagement/calendar/url/ics | Get existing calendar link for the current user |
 | [**GetWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementApi.html#getworkforcemanagementhistoricaldatadeletejob) | **Get** /api/v2/workforcemanagement/historicaldata/deletejob | Retrieves delete job status for historical data imports of the organization |
 | [**GetWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementApi.html#getworkforcemanagementhistoricaldataimportstatus) | **Get** /api/v2/workforcemanagement/historicaldata/importstatus | Retrieves status of the historical data imports of the organization |
+| [**GetWorkforcemanagementIntegrationsHris**](WorkforceManagementApi.html#getworkforcemanagementintegrationshris) | **Get** /api/v2/workforcemanagement/integrations/hris | Get integrations |
+| [**GetWorkforcemanagementIntegrationsHrisTimeofftypesJob**](WorkforceManagementApi.html#getworkforcemanagementintegrationshristimeofftypesjob) | **Get** /api/v2/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId} | Query the results of time off types job |
 | [**GetWorkforcemanagementManagementunit**](WorkforceManagementApi.html#getworkforcemanagementmanagementunit) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Get management unit |
 | [**GetWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitactivitycodes) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes | Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes |
 | [**GetWorkforcemanagementManagementunitAdherence**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitadherence) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence | Get a list of user schedule adherence records for the requested management unit |
@@ -86,6 +88,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementSchedulingjob**](WorkforceManagementApi.html#getworkforcemanagementschedulingjob) | **Get** /api/v2/workforcemanagement/schedulingjobs/{jobId} | Get status of the scheduling job |
 | [**GetWorkforcemanagementShifttrades**](WorkforceManagementApi.html#getworkforcemanagementshifttrades) | **Get** /api/v2/workforcemanagement/shifttrades | Gets all of my shift trades |
 | [**GetWorkforcemanagementShrinkageJob**](WorkforceManagementApi.html#getworkforcemanagementshrinkagejob) | **Get** /api/v2/workforcemanagement/shrinkage/jobs/{jobId} | Request to fetch the status of the historical shrinkage query |
+| [**GetWorkforcemanagementTimeoffbalanceJob**](WorkforceManagementApi.html#getworkforcemanagementtimeoffbalancejob) | **Get** /api/v2/workforcemanagement/timeoffbalance/jobs/{jobId} | Query the results of time off types job |
 | [**GetWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequest) | **Get** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequestWaitlistpositions**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequestwaitlistpositions) | **Get** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions | Get the daily waitlist positions of a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequests) | **Get** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
@@ -98,6 +101,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementManagementunit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Update the requested management unit |
 | [**PatchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunittimeofflimit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId} | Updates a time off limit object. |
 | [**PatchWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunittimeoffplan) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId} | Updates a time off plan |
+| [**PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunittimeoffrequestuserintegrationstatus) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus | Set integration status for a time off request. |
 | [**PatchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitusertimeoffrequest) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Update a time off request |
 | [**PatchWorkforcemanagementManagementunitWeekShifttrade**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitweekshifttrade) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId} | Updates a shift trade. This route can only be called by the initiating agent |
 | [**PatchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitworkplan) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Update a work plan |
@@ -109,6 +113,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementApi.html#postworkforcemanagementadherencehistoricalbulk) | **Post** /api/v2/workforcemanagement/adherence/historical/bulk | Request a historical adherence report in bulk |
 | [**PostWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementApi.html#postworkforcemanagementagentadherenceexplanations) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations | Add an adherence explanation for the requested user |
 | [**PostWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementApi.html#postworkforcemanagementagentadherenceexplanationsquery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query | Query adherence explanations for the given agent across a specified range |
+| [**PostWorkforcemanagementAgents**](WorkforceManagementApi.html#postworkforcemanagementagents) | **Post** /api/v2/workforcemanagement/agents | Move agents in and out of management unit |
+| [**PostWorkforcemanagementAgentsIntegrationsHrisQuery**](WorkforceManagementApi.html#postworkforcemanagementagentsintegrationshrisquery) | **Post** /api/v2/workforcemanagement/agents/integrations/hris/query | Query integrations for agents |
 | [**PostWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementApi.html#postworkforcemanagementagentsmepossibleworkshifts) | **Post** /api/v2/workforcemanagement/agents/me/possibleworkshifts | Get agent possible work shifts for requested time frame |
 | [**PostWorkforcemanagementAgentschedulesMine**](WorkforceManagementApi.html#postworkforcemanagementagentschedulesmine) | **Post** /api/v2/workforcemanagement/agentschedules/mine | Get published schedule for the current user |
 | [**PostWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitactivitycodes) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Create a new activity code |
@@ -134,6 +140,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementCalendarUrlIcs**](WorkforceManagementApi.html#postworkforcemanagementcalendarurlics) | **Post** /api/v2/workforcemanagement/calendar/url/ics | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
 | [**PostWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementApi.html#postworkforcemanagementhistoricaldatadeletejob) | **Post** /api/v2/workforcemanagement/historicaldata/deletejob | Delete the entries of the historical data imports in the organization |
 | [**PostWorkforcemanagementHistoricaldataValidate**](WorkforceManagementApi.html#postworkforcemanagementhistoricaldatavalidate) | **Post** /api/v2/workforcemanagement/historicaldata/validate | Trigger validation process for historical import |
+| [**PostWorkforcemanagementIntegrationsHriTimeofftypesJobs**](WorkforceManagementApi.html#postworkforcemanagementintegrationshritimeofftypesjobs) | **Post** /api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs | Get list of time off types configured in integration |
 | [**PostWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitagentschedulessearch) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search | Query published schedules for given given time range for set of users |
 | [**PostWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunithistoricaladherencequery) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery | Request a historical adherence report |
 | [**PostWorkforcemanagementManagementunitMove**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitmove) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/move | Move the requested management unit to a new business unit |
@@ -143,10 +150,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeofflimitsvaluesquery) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query | Retrieves time off limit related values based on a given set of filters. |
 | [**PostWorkforcemanagementManagementunitTimeoffplans**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffplans) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans | Creates a new time off plan |
 | [**PostWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequests) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests | Create a new time off request |
+| [**PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestsintegrationstatusquery) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query | Retrieves integration statuses for a list of time off requests |
 | [**PostWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestsquery) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query | Fetches time off requests matching the conditions specified in the request body |
 | [**PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestswaitlistpositionsquery) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query | Retrieves daily waitlist position for a list of time off requests |
 | [**PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitusertimeoffbalancejobs) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs | Query time off balances for a given user for specified activity code and dates |
 | [**PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitusertimeoffrequesttimeoffbalancejobs) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs | Query time off balances for dates spanned by a given time off request |
+| [**PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitusertimeoffrequestsestimate) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate | Estimates available time off for an agent |
 | [**PostWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradematch) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match | Matches a shift trade. This route can only be called by the receiving agent |
 | [**PostWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttrades) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades | Adds a shift trade |
 | [**PostWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradessearch) | **Post** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search | Searches for potential shift trade matches for the current agent |
@@ -161,8 +170,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementSchedules**](WorkforceManagementApi.html#postworkforcemanagementschedules) | **Post** /api/v2/workforcemanagement/schedules | Get published schedule for the current user |
 | [**PostWorkforcemanagementTeamAdherenceHistorical**](WorkforceManagementApi.html#postworkforcemanagementteamadherencehistorical) | **Post** /api/v2/workforcemanagement/teams/{teamId}/adherence/historical | Request a teams historical adherence report |
 | [**PostWorkforcemanagementTeamShrinkageJobs**](WorkforceManagementApi.html#postworkforcemanagementteamshrinkagejobs) | **Post** /api/v2/workforcemanagement/teams/{teamId}/shrinkage/jobs | Request a historical shrinkage report |
+| [**PostWorkforcemanagementTimeoffbalanceJobs**](WorkforceManagementApi.html#postworkforcemanagementtimeoffbalancejobs) | **Post** /api/v2/workforcemanagement/timeoffbalance/jobs | Query time off balances for the current user for specified activity code and dates |
 | [**PostWorkforcemanagementTimeofflimitsAvailableQuery**](WorkforceManagementApi.html#postworkforcemanagementtimeofflimitsavailablequery) | **Post** /api/v2/workforcemanagement/timeofflimits/available/query | Queries available time off for the current user |
 | [**PostWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#postworkforcemanagementtimeoffrequests) | **Post** /api/v2/workforcemanagement/timeoffrequests | Create a time off request for the current user |
+| [**PostWorkforcemanagementTimeoffrequestsEstimate**](WorkforceManagementApi.html#postworkforcemanagementtimeoffrequestsestimate) | **Post** /api/v2/workforcemanagement/timeoffrequests/estimate | Estimates available time off for current user |
+| [**PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementApi.html#postworkforcemanagementtimeoffrequestsintegrationstatusquery) | **Post** /api/v2/workforcemanagement/timeoffrequests/integrationstatus/query | Retrieves integration statuses for a list of current user time off requests |
+| [**PutWorkforcemanagementAgentIntegrationsHris**](WorkforceManagementApi.html#putworkforcemanagementagentintegrationshris) | **Put** /api/v2/workforcemanagement/agents/{agentId}/integrations/hris | Update integrations for agent |
 | [**PutWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementApi.html#putworkforcemanagementmanagementunittimeofflimitvalues) | **Put** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time off limit object |
 {: class="table table-striped"}
 
@@ -2414,7 +2427,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitservicegoaltemplate"></a>
 
-## [**ServiceGoalTemplate**](ServiceGoalTemplate.html) GetWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId)
+## [**ServiceGoalTemplate**](ServiceGoalTemplate.html) GetWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId, List<string> expand = null)
 
 
 
@@ -2448,11 +2461,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit.
             var serviceGoalTemplateId = serviceGoalTemplateId_example;  // string | The ID of a service goal template to fetch
+            var expand = new List<string>(); // List<string> | Include to access additional data on the service goal template (optional) 
 
             try
             { 
                 // Get a service goal template
-                ServiceGoalTemplate result = apiInstance.GetWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId, serviceGoalTemplateId);
+                ServiceGoalTemplate result = apiInstance.GetWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId, serviceGoalTemplateId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2471,6 +2485,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit. |  |
 | **serviceGoalTemplateId** | **string**| The ID of a service goal template to fetch |  |
+| **expand** | [**List<string>**](string.html)| Include to access additional data on the service goal template | [optional] <br />**Values**: impactOverride |
 {: class="table table-striped"}
 
 ### Return type
@@ -2479,7 +2494,7 @@ namespace Example
 
 <a name="getworkforcemanagementbusinessunitservicegoaltemplates"></a>
 
-## [**ServiceGoalTemplateList**](ServiceGoalTemplateList.html) GetWorkforcemanagementBusinessunitServicegoaltemplates (string businessUnitId)
+## [**ServiceGoalTemplateList**](ServiceGoalTemplateList.html) GetWorkforcemanagementBusinessunitServicegoaltemplates (string businessUnitId, List<string> expand = null)
 
 
 
@@ -2514,11 +2529,12 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit.
+            var expand = new List<string>(); // List<string> | Include to access additional data on the service goal template (optional) 
 
             try
             { 
                 // Gets list of service goal templates
-                ServiceGoalTemplateList result = apiInstance.GetWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId);
+                ServiceGoalTemplateList result = apiInstance.GetWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2536,6 +2552,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit. |  |
+| **expand** | [**List<string>**](string.html)| Include to access additional data on the service goal template | [optional] <br />**Values**: impactOverride |
 {: class="table table-striped"}
 
 ### Return type
@@ -3666,6 +3683,126 @@ This endpoint does require any parameters.
 ### Return type
 
 [**HistoricalImportStatusListing**](HistoricalImportStatusListing.html)
+
+<a name="getworkforcemanagementintegrationshris"></a>
+
+## [**WfmIntegrationListing**](WfmIntegrationListing.html) GetWorkforcemanagementIntegrationsHris ()
+
+
+
+Get integrations
+
+Requires ANY permissions: 
+
+* wfm:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementIntegrationsHrisExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Get integrations
+                WfmIntegrationListing result = apiInstance.GetWorkforcemanagementIntegrationsHris();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementIntegrationsHris: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**WfmIntegrationListing**](WfmIntegrationListing.html)
+
+<a name="getworkforcemanagementintegrationshristimeofftypesjob"></a>
+
+## [**HrisTimeOffTypesJobResponse**](HrisTimeOffTypesJobResponse.html) GetWorkforcemanagementIntegrationsHrisTimeofftypesJob (string jobId)
+
+
+
+Query the results of time off types job
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementIntegrationsHrisTimeofftypesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The ID of the job.
+
+            try
+            { 
+                // Query the results of time off types job
+                HrisTimeOffTypesJobResponse result = apiInstance.GetWorkforcemanagementIntegrationsHrisTimeofftypesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementIntegrationsHrisTimeofftypesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The ID of the job. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**HrisTimeOffTypesJobResponse**](HrisTimeOffTypesJobResponse.html)
 
 <a name="getworkforcemanagementmanagementunit"></a>
 
@@ -5619,6 +5756,68 @@ namespace Example
 
 [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
 
+<a name="getworkforcemanagementtimeoffbalancejob"></a>
+
+## [**TimeOffBalanceJobResponse**](TimeOffBalanceJobResponse.html) GetWorkforcemanagementTimeoffbalanceJob (string jobId)
+
+
+
+Query the results of time off types job
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementTimeoffbalanceJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The ID of the job.
+
+            try
+            { 
+                // Query the results of time off types job
+                TimeOffBalanceJobResponse result = apiInstance.GetWorkforcemanagementTimeoffbalanceJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementTimeoffbalanceJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The ID of the job. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TimeOffBalanceJobResponse**](TimeOffBalanceJobResponse.html)
+
 <a name="getworkforcemanagementtimeoffrequest"></a>
 
 ## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) GetWorkforcemanagementTimeoffrequest (string timeOffRequestId)
@@ -6410,6 +6609,75 @@ namespace Example
 
 [**TimeOffPlan**](TimeOffPlan.html)
 
+<a name="patchworkforcemanagementmanagementunittimeoffrequestuserintegrationstatus"></a>
+
+## [**UserTimeOffIntegrationStatusResponse**](UserTimeOffIntegrationStatusResponse.html) PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus (string managementUnitId, string timeOffRequestId, string userId, SetTimeOffIntegrationStatusRequest body = null)
+
+
+
+Set integration status for a time off request.
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatusExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            var timeOffRequestId = timeOffRequestId_example;  // string | The ID of the time off request.
+            var userId = userId_example;  // string | The ID of user to whom the time off request belongs.
+            var body = new SetTimeOffIntegrationStatusRequest(); // SetTimeOffIntegrationStatusRequest | body (optional) 
+
+            try
+            { 
+                // Set integration status for a time off request.
+                UserTimeOffIntegrationStatusResponse result = apiInstance.PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus(managementUnitId, timeOffRequestId, userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **timeOffRequestId** | **string**| The ID of the time off request. |  |
+| **userId** | **string**| The ID of user to whom the time off request belongs. |  |
+| **body** | [**SetTimeOffIntegrationStatusRequest**](SetTimeOffIntegrationStatusRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserTimeOffIntegrationStatusResponse**](UserTimeOffIntegrationStatusResponse.html)
+
 <a name="patchworkforcemanagementmanagementunitusertimeoffrequest"></a>
 
 ## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
@@ -6883,7 +7151,7 @@ namespace Example
 
 ## [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html) PostWorkforcemanagementAdherenceHistorical (WfmHistoricalAdherenceQueryForUsers body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Deprecated. Use bulk routes instead (/adherence/historical/bulk)
 
@@ -7138,6 +7406,132 @@ namespace Example
 ### Return type
 
 [**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse.html)
+
+<a name="postworkforcemanagementagents"></a>
+
+## [**MoveAgentsResponse**](MoveAgentsResponse.html) PostWorkforcemanagementAgents (MoveAgentsRequest body = null)
+
+
+
+Move agents in and out of management unit
+
+Requires ANY permissions: 
+
+* wfm:agent:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new MoveAgentsRequest(); // MoveAgentsRequest | body (optional) 
+
+            try
+            { 
+                // Move agents in and out of management unit
+                MoveAgentsResponse result = apiInstance.PostWorkforcemanagementAgents(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**MoveAgentsRequest**](MoveAgentsRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MoveAgentsResponse**](MoveAgentsResponse.html)
+
+<a name="postworkforcemanagementagentsintegrationshrisquery"></a>
+
+## [**AgentsIntegrationsListing**](AgentsIntegrationsListing.html) PostWorkforcemanagementAgentsIntegrationsHrisQuery (QueryAgentsIntegrationsRequest body = null)
+
+
+
+Query integrations for agents
+
+Requires ANY permissions: 
+
+* wfm:agent:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsIntegrationsHrisQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new QueryAgentsIntegrationsRequest(); // QueryAgentsIntegrationsRequest | body (optional) 
+
+            try
+            { 
+                // Query integrations for agents
+                AgentsIntegrationsListing result = apiInstance.PostWorkforcemanagementAgentsIntegrationsHrisQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentsIntegrationsHrisQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**QueryAgentsIntegrationsRequest**](QueryAgentsIntegrationsRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentsIntegrationsListing**](AgentsIntegrationsListing.html)
 
 <a name="postworkforcemanagementagentsmepossibleworkshifts"></a>
 
@@ -8819,6 +9213,69 @@ namespace Example
 
 void (empty response body)
 
+<a name="postworkforcemanagementintegrationshritimeofftypesjobs"></a>
+
+## [**HrisTimeOffTypesResponse**](HrisTimeOffTypesResponse.html) PostWorkforcemanagementIntegrationsHriTimeofftypesJobs (string hrisIntegrationId)
+
+
+
+Get list of time off types configured in integration
+
+Requires ANY permissions: 
+
+* wfm:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementIntegrationsHriTimeofftypesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var hrisIntegrationId = hrisIntegrationId_example;  // string | The ID of the HRIS integration for which time off types are queried.
+
+            try
+            { 
+                // Get list of time off types configured in integration
+                HrisTimeOffTypesResponse result = apiInstance.PostWorkforcemanagementIntegrationsHriTimeofftypesJobs(hrisIntegrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementIntegrationsHriTimeofftypesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **hrisIntegrationId** | **string**| The ID of the HRIS integration for which time off types are queried. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**HrisTimeOffTypesResponse**](HrisTimeOffTypesResponse.html)
+
 <a name="postworkforcemanagementmanagementunitagentschedulessearch"></a>
 
 ## [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html) PostWorkforcemanagementManagementunitAgentschedulesSearch (string managementUnitId, bool? forceAsync = null, bool? forceDownloadService = null, BuSearchAgentSchedulesRequest body = null)
@@ -9418,6 +9875,71 @@ namespace Example
 
 [**TimeOffRequestList**](TimeOffRequestList.html)
 
+<a name="postworkforcemanagementmanagementunittimeoffrequestsintegrationstatusquery"></a>
+
+## [**UserTimeOffIntegrationStatusResponseListing**](UserTimeOffIntegrationStatusResponseListing.html) PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery (string managementUnitId, QueryTimeOffIntegrationStatusRequest body = null)
+
+
+
+Retrieves integration statuses for a list of time off requests
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            var body = new QueryTimeOffIntegrationStatusRequest(); // QueryTimeOffIntegrationStatusRequest | body (optional) 
+
+            try
+            { 
+                // Retrieves integration statuses for a list of time off requests
+                UserTimeOffIntegrationStatusResponseListing result = apiInstance.PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **body** | [**QueryTimeOffIntegrationStatusRequest**](QueryTimeOffIntegrationStatusRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserTimeOffIntegrationStatusResponseListing**](UserTimeOffIntegrationStatusResponseListing.html)
+
 <a name="postworkforcemanagementmanagementunittimeoffrequestsquery"></a>
 
 ## [**TimeOffRequestListing**](TimeOffRequestListing.html) PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null)
@@ -9683,6 +10205,73 @@ namespace Example
 ### Return type
 
 [**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
+
+<a name="postworkforcemanagementmanagementunitusertimeoffrequestsestimate"></a>
+
+## [**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse.html) PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate (string managementUnitId, string userId, EstimateAvailableTimeOffRequest body = null)
+
+
+
+Estimates available time off for an agent
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
+            var userId = userId_example;  // string | The id of the user for whom the time off request estimate is requested
+            var body = new EstimateAvailableTimeOffRequest(); // EstimateAvailableTimeOffRequest | body (optional) 
+
+            try
+            { 
+                // Estimates available time off for an agent
+                EstimateAvailableTimeOffResponse result = apiInstance.PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId, userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit |  |
+| **userId** | **string**| The id of the user for whom the time off request estimate is requested |  |
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse.html)
 
 <a name="postworkforcemanagementmanagementunitweekshifttradematch"></a>
 
@@ -10619,6 +11208,69 @@ namespace Example
 
 [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
 
+<a name="postworkforcemanagementtimeoffbalancejobs"></a>
+
+## [**TimeOffBalancesResponse**](TimeOffBalancesResponse.html) PostWorkforcemanagementTimeoffbalanceJobs (TimeOffBalanceRequest body)
+
+
+
+Query time off balances for the current user for specified activity code and dates
+
+Requires ANY permissions: 
+
+* wfm:agentTimeOffRequest:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementTimeoffbalanceJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new TimeOffBalanceRequest(); // TimeOffBalanceRequest | The request body
+
+            try
+            { 
+                // Query time off balances for the current user for specified activity code and dates
+                TimeOffBalancesResponse result = apiInstance.PostWorkforcemanagementTimeoffbalanceJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementTimeoffbalanceJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TimeOffBalanceRequest**](TimeOffBalanceRequest.html)| The request body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
+
 <a name="postworkforcemanagementtimeofflimitsavailablequery"></a>
 
 ## [**AvailableTimeOffResponse**](AvailableTimeOffResponse.html) PostWorkforcemanagementTimeofflimitsAvailableQuery (AvailableTimeOffRequest body = null)
@@ -10744,6 +11396,197 @@ namespace Example
 ### Return type
 
 [**TimeOffRequestResponse**](TimeOffRequestResponse.html)
+
+<a name="postworkforcemanagementtimeoffrequestsestimate"></a>
+
+## [**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse.html) PostWorkforcemanagementTimeoffrequestsEstimate (EstimateAvailableTimeOffRequest body = null)
+
+
+
+Estimates available time off for current user
+
+Requires ANY permissions: 
+
+* wfm:agentTimeOffRequest:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementTimeoffrequestsEstimateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new EstimateAvailableTimeOffRequest(); // EstimateAvailableTimeOffRequest | body (optional) 
+
+            try
+            { 
+                // Estimates available time off for current user
+                EstimateAvailableTimeOffResponse result = apiInstance.PostWorkforcemanagementTimeoffrequestsEstimate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementTimeoffrequestsEstimate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse.html)
+
+<a name="postworkforcemanagementtimeoffrequestsintegrationstatusquery"></a>
+
+## [**TimeOffIntegrationStatusResponseListing**](TimeOffIntegrationStatusResponseListing.html) PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery (CurrentUserTimeOffIntegrationStatusRequest body = null)
+
+
+
+Retrieves integration statuses for a list of current user time off requests
+
+Requires ANY permissions: 
+
+* wfm:agentTimeOffRequest:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementTimeoffrequestsIntegrationstatusQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new CurrentUserTimeOffIntegrationStatusRequest(); // CurrentUserTimeOffIntegrationStatusRequest | body (optional) 
+
+            try
+            { 
+                // Retrieves integration statuses for a list of current user time off requests
+                TimeOffIntegrationStatusResponseListing result = apiInstance.PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CurrentUserTimeOffIntegrationStatusRequest**](CurrentUserTimeOffIntegrationStatusRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TimeOffIntegrationStatusResponseListing**](TimeOffIntegrationStatusResponseListing.html)
+
+<a name="putworkforcemanagementagentintegrationshris"></a>
+
+## [**AgentIntegrationsResponse**](AgentIntegrationsResponse.html) PutWorkforcemanagementAgentIntegrationsHris (string agentId, AgentIntegrationsRequest body)
+
+
+
+Update integrations for agent
+
+Requires ANY permissions: 
+
+* wfm:agent:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutWorkforcemanagementAgentIntegrationsHrisExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var agentId = agentId_example;  // string | The ID of the agent
+            var body = new AgentIntegrationsRequest(); // AgentIntegrationsRequest | body
+
+            try
+            { 
+                // Update integrations for agent
+                AgentIntegrationsResponse result = apiInstance.PutWorkforcemanagementAgentIntegrationsHris(agentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PutWorkforcemanagementAgentIntegrationsHris: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The ID of the agent |  |
+| **body** | [**AgentIntegrationsRequest**](AgentIntegrationsRequest.html)| body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentIntegrationsResponse**](AgentIntegrationsResponse.html)
 
 <a name="putworkforcemanagementmanagementunittimeofflimitvalues"></a>
 

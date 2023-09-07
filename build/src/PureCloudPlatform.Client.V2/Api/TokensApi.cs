@@ -69,9 +69,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preserveIdleTTL">preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)</param>
         /// <returns>TokenInfo</returns>
         
-        TokenInfo GetTokensMe ();
+        TokenInfo GetTokensMe (bool? preserveIdleTTL = null);
 
         /// <summary>
         /// Fetch information about the current token
@@ -80,9 +81,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preserveIdleTTL">preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)</param>
         /// <returns>ApiResponse of TokenInfo</returns>
         
-        ApiResponse<TokenInfo> GetTokensMeWithHttpInfo ();
+        ApiResponse<TokenInfo> GetTokensMeWithHttpInfo (bool? preserveIdleTTL = null);
 
         /// <summary>
         /// Get the current Idle Token Timeout Value
@@ -213,9 +215,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preserveIdleTTL">preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)</param>
         /// <returns>Task of TokenInfo</returns>
         
-        System.Threading.Tasks.Task<TokenInfo> GetTokensMeAsync ();
+        System.Threading.Tasks.Task<TokenInfo> GetTokensMeAsync (bool? preserveIdleTTL = null);
 
         /// <summary>
         /// Fetch information about the current token
@@ -224,9 +227,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preserveIdleTTL">preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)</param>
         /// <returns>Task of ApiResponse (TokenInfo)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<TokenInfo>> GetTokensMeAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<TokenInfo>> GetTokensMeAsyncWithHttpInfo (bool? preserveIdleTTL = null);
 
         /// <summary>
         /// Get the current Idle Token Timeout Value
@@ -786,11 +790,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preserveIdleTTL">preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)</param>
         /// <returns>TokenInfo</returns>
         
-        public TokenInfo GetTokensMe ()
+        public TokenInfo GetTokensMe (bool? preserveIdleTTL = null)
         {
-             ApiResponse<TokenInfo> localVarResponse = GetTokensMeWithHttpInfo();
+             ApiResponse<TokenInfo> localVarResponse = GetTokensMeWithHttpInfo(preserveIdleTTL);
              return localVarResponse.Data;
         }
 
@@ -799,9 +804,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preserveIdleTTL">preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)</param>
         /// <returns>ApiResponse of TokenInfo</returns>
         
-        public ApiResponse< TokenInfo > GetTokensMeWithHttpInfo ()
+        public ApiResponse< TokenInfo > GetTokensMeWithHttpInfo (bool? preserveIdleTTL = null)
         { 
 
             var localVarPath = "/api/v2/tokens/me";
@@ -836,6 +842,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (preserveIdleTTL != null) localVarQueryParams.Add(new Tuple<string, string>("preserveIdleTTL", this.Configuration.ApiClient.ParameterToString(preserveIdleTTL)));
 
             // Header params
 
@@ -880,11 +887,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preserveIdleTTL">preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)</param>
         /// <returns>Task of TokenInfo</returns>
         
-        public async System.Threading.Tasks.Task<TokenInfo> GetTokensMeAsync ()
+        public async System.Threading.Tasks.Task<TokenInfo> GetTokensMeAsync (bool? preserveIdleTTL = null)
         {
-             ApiResponse<TokenInfo> localVarResponse = await GetTokensMeAsyncWithHttpInfo();
+             ApiResponse<TokenInfo> localVarResponse = await GetTokensMeAsyncWithHttpInfo(preserveIdleTTL);
              return localVarResponse.Data;
 
         }
@@ -894,9 +902,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="preserveIdleTTL">preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional)</param>
         /// <returns>Task of ApiResponse (TokenInfo)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<TokenInfo>> GetTokensMeAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<TokenInfo>> GetTokensMeAsyncWithHttpInfo (bool? preserveIdleTTL = null)
         { 
 
             var localVarPath = "/api/v2/tokens/me";
@@ -931,6 +940,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (preserveIdleTTL != null) localVarQueryParams.Add(new Tuple<string, string>("preserveIdleTTL", this.Configuration.ApiClient.ParameterToString(preserveIdleTTL)));
 
             // Header params
 

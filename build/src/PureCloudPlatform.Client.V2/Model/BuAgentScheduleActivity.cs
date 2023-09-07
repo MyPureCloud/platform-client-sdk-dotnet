@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Activityplan for "ActivityPlan"
+            /// </summary>
+            [EnumMember(Value = "ActivityPlan")]
+            Activityplan,
+            
+            /// <summary>
             /// Enum Coaching for "Coaching"
             /// </summary>
             [EnumMember(Value = "Coaching")]
@@ -59,17 +65,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of this activity.</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with this activity.</param>
         /// <param name="Paid">Whether this activity is paid.</param>
+        /// <param name="PayableMinutes">Payable minutes for this activity.</param>
         /// <param name="TimeOffRequestId">The ID of the time off request associated with this activity, if applicable.</param>
+        /// <param name="TimeOffRequestSyncVersion">The sync version of the partial day time off request for which the scheduled activity is associated, if applicable.</param>
         /// <param name="ExternalActivityId">The ID of the external activity associated with this activity, if applicable.</param>
         /// <param name="ExternalActivityType">The type of the external activity associated with this activity, if applicable.</param>
-        public BuAgentScheduleActivity(DateTime? StartDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, string TimeOffRequestId = null, string ExternalActivityId = null, ExternalActivityTypeEnum? ExternalActivityType = null)
+        public BuAgentScheduleActivity(DateTime? StartDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, int? PayableMinutes = null, string TimeOffRequestId = null, int? TimeOffRequestSyncVersion = null, string ExternalActivityId = null, ExternalActivityTypeEnum? ExternalActivityType = null)
         {
             this.StartDate = StartDate;
             this.LengthMinutes = LengthMinutes;
             this.Description = Description;
             this.ActivityCodeId = ActivityCodeId;
             this.Paid = Paid;
+            this.PayableMinutes = PayableMinutes;
             this.TimeOffRequestId = TimeOffRequestId;
+            this.TimeOffRequestSyncVersion = TimeOffRequestSyncVersion;
             this.ExternalActivityId = ExternalActivityId;
             this.ExternalActivityType = ExternalActivityType;
             
@@ -123,11 +133,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Payable minutes for this activity
+        /// </summary>
+        /// <value>Payable minutes for this activity</value>
+        [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
+        public int? PayableMinutes { get; set; }
+
+
+
+        /// <summary>
         /// The ID of the time off request associated with this activity, if applicable
         /// </summary>
         /// <value>The ID of the time off request associated with this activity, if applicable</value>
         [DataMember(Name="timeOffRequestId", EmitDefaultValue=false)]
         public string TimeOffRequestId { get; set; }
+
+
+
+        /// <summary>
+        /// The sync version of the partial day time off request for which the scheduled activity is associated, if applicable
+        /// </summary>
+        /// <value>The sync version of the partial day time off request for which the scheduled activity is associated, if applicable</value>
+        [DataMember(Name="timeOffRequestSyncVersion", EmitDefaultValue=false)]
+        public int? TimeOffRequestSyncVersion { get; set; }
 
 
 
@@ -155,7 +183,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  Paid: ").Append(Paid).Append("\n");
+            sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
             sb.Append("  TimeOffRequestId: ").Append(TimeOffRequestId).Append("\n");
+            sb.Append("  TimeOffRequestSyncVersion: ").Append(TimeOffRequestSyncVersion).Append("\n");
             sb.Append("  ExternalActivityId: ").Append(ExternalActivityId).Append("\n");
             sb.Append("  ExternalActivityType: ").Append(ExternalActivityType).Append("\n");
             sb.Append("}\n");
@@ -224,9 +254,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Paid.Equals(other.Paid)
                 ) &&
                 (
+                    this.PayableMinutes == other.PayableMinutes ||
+                    this.PayableMinutes != null &&
+                    this.PayableMinutes.Equals(other.PayableMinutes)
+                ) &&
+                (
                     this.TimeOffRequestId == other.TimeOffRequestId ||
                     this.TimeOffRequestId != null &&
                     this.TimeOffRequestId.Equals(other.TimeOffRequestId)
+                ) &&
+                (
+                    this.TimeOffRequestSyncVersion == other.TimeOffRequestSyncVersion ||
+                    this.TimeOffRequestSyncVersion != null &&
+                    this.TimeOffRequestSyncVersion.Equals(other.TimeOffRequestSyncVersion)
                 ) &&
                 (
                     this.ExternalActivityId == other.ExternalActivityId ||
@@ -266,8 +306,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Paid != null)
                     hash = hash * 59 + this.Paid.GetHashCode();
 
+                if (this.PayableMinutes != null)
+                    hash = hash * 59 + this.PayableMinutes.GetHashCode();
+
                 if (this.TimeOffRequestId != null)
                     hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
+
+                if (this.TimeOffRequestSyncVersion != null)
+                    hash = hash * 59 + this.TimeOffRequestSyncVersion.GetHashCode();
 
                 if (this.ExternalActivityId != null)
                     hash = hash * 59 + this.ExternalActivityId.GetHashCode();

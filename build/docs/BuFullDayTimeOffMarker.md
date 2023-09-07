@@ -12,7 +12,9 @@ title: BuFullDayTimeOffMarker
 | **Description** | **string** | The description of the time off marker | [optional] |
 | **ActivityCodeId** | **string** | The ID of the activity code associated with the time off marker | [optional] |
 | **Paid** | **bool?** | Whether the time off marker is paid | [optional] |
+| **PayableMinutes** | **int?** | Payable minutes for the time off marker | [optional] |
 | **TimeOffRequestId** | **string** | The ID of the time off request | [optional] |
+| **TimeOffRequestSyncVersion** | **int?** | The sync version of the full day time off request for which the scheduled activity is associated | [optional] |
 {: class="table table-striped"}
 
 

@@ -71,14 +71,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeOffLimitIds">The set of time off limit IDs to associate with this time off plan..</param>
         /// <param name="AutoApprovalRule">Auto approval rule for the time off plan. (required).</param>
         /// <param name="DaysBeforeStartToExpireFromWaitlist">The number of days before the time off request start date for when the request will be expired from the waitlist..</param>
+        /// <param name="HrisTimeOffType">Time off type, if this time off plan is associated with the integration..</param>
         /// <param name="Active">Whether this time off plan should be used by agents. (required).</param>
-        public CreateTimeOffPlanRequest(string Name = null, List<string> ActivityCodeIds = null, List<string> TimeOffLimitIds = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, bool? Active = null)
+        public CreateTimeOffPlanRequest(string Name = null, List<string> ActivityCodeIds = null, List<string> TimeOffLimitIds = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, HrisTimeOffType HrisTimeOffType = null, bool? Active = null)
         {
             this.Name = Name;
             this.ActivityCodeIds = ActivityCodeIds;
             this.TimeOffLimitIds = TimeOffLimitIds;
             this.AutoApprovalRule = AutoApprovalRule;
             this.DaysBeforeStartToExpireFromWaitlist = DaysBeforeStartToExpireFromWaitlist;
+            this.HrisTimeOffType = HrisTimeOffType;
             this.Active = Active;
             
         }
@@ -124,6 +126,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Time off type, if this time off plan is associated with the integration.
+        /// </summary>
+        /// <value>Time off type, if this time off plan is associated with the integration.</value>
+        [DataMember(Name="hrisTimeOffType", EmitDefaultValue=false)]
+        public HrisTimeOffType HrisTimeOffType { get; set; }
+
+
+
+        /// <summary>
         /// Whether this time off plan should be used by agents.
         /// </summary>
         /// <value>Whether this time off plan should be used by agents.</value>
@@ -145,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TimeOffLimitIds: ").Append(TimeOffLimitIds).Append("\n");
             sb.Append("  AutoApprovalRule: ").Append(AutoApprovalRule).Append("\n");
             sb.Append("  DaysBeforeStartToExpireFromWaitlist: ").Append(DaysBeforeStartToExpireFromWaitlist).Append("\n");
+            sb.Append("  HrisTimeOffType: ").Append(HrisTimeOffType).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -212,6 +224,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DaysBeforeStartToExpireFromWaitlist.Equals(other.DaysBeforeStartToExpireFromWaitlist)
                 ) &&
                 (
+                    this.HrisTimeOffType == other.HrisTimeOffType ||
+                    this.HrisTimeOffType != null &&
+                    this.HrisTimeOffType.Equals(other.HrisTimeOffType)
+                ) &&
+                (
                     this.Active == other.Active ||
                     this.Active != null &&
                     this.Active.Equals(other.Active)
@@ -243,6 +260,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DaysBeforeStartToExpireFromWaitlist != null)
                     hash = hash * 59 + this.DaysBeforeStartToExpireFromWaitlist.GetHashCode();
+
+                if (this.HrisTimeOffType != null)
+                    hash = hash * 59 + this.HrisTimeOffType.GetHashCode();
 
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();

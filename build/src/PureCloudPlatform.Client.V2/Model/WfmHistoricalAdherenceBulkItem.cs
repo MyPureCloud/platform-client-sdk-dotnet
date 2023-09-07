@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndDate">End of the date range to query in ISO-8601 format (required).</param>
         /// <param name="UserIds">The IDs of the users to query. If not included, will query every user in the management unit.</param>
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results. Defaults to false if not specified..</param>
-        public WfmHistoricalAdherenceBulkItem(string ManagementUnitId = null, DateTime? StartDate = null, DateTime? EndDate = null, List<string> UserIds = null, bool? IncludeExceptions = null)
+        /// <param name="IncludeActuals">Whether user actual activities should be returned as part of the results. Defaults to false if not specified..</param>
+        public WfmHistoricalAdherenceBulkItem(string ManagementUnitId = null, DateTime? StartDate = null, DateTime? EndDate = null, List<string> UserIds = null, bool? IncludeExceptions = null, bool? IncludeActuals = null)
         {
             this.ManagementUnitId = ManagementUnitId;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.UserIds = UserIds;
             this.IncludeExceptions = IncludeExceptions;
+            this.IncludeActuals = IncludeActuals;
             
         }
         
@@ -88,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IncludeExceptions { get; set; }
 
 
+
+        /// <summary>
+        /// Whether user actual activities should be returned as part of the results. Defaults to false if not specified.
+        /// </summary>
+        /// <value>Whether user actual activities should be returned as part of the results. Defaults to false if not specified.</value>
+        [DataMember(Name="includeActuals", EmitDefaultValue=false)]
+        public bool? IncludeActuals { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("  IncludeExceptions: ").Append(IncludeExceptions).Append("\n");
+            sb.Append("  IncludeActuals: ").Append(IncludeActuals).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +178,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeExceptions == other.IncludeExceptions ||
                     this.IncludeExceptions != null &&
                     this.IncludeExceptions.Equals(other.IncludeExceptions)
+                ) &&
+                (
+                    this.IncludeActuals == other.IncludeActuals ||
+                    this.IncludeActuals != null &&
+                    this.IncludeActuals.Equals(other.IncludeActuals)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeExceptions != null)
                     hash = hash * 59 + this.IncludeExceptions.GetHashCode();
+
+                if (this.IncludeActuals != null)
+                    hash = hash * 59 + this.IncludeActuals.GetHashCode();
 
                 return hash;
             }

@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmForecastModificationIntervalOffsetValue" /> class.
         /// </summary>
-        /// <param name="IntervalIndex">The number of 15 minute intervals past referenceStartDate to which to apply this modification (required).</param>
+        /// <param name="IntervalIndex">The number of intervals past referenceStartDate to which to apply this modification (required).</param>
         /// <param name="Value">The value to set for the given interval (required).</param>
         public WfmForecastModificationIntervalOffsetValue(int? IntervalIndex = null, double? Value = null)
         {
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of 15 minute intervals past referenceStartDate to which to apply this modification
+        /// The number of intervals past referenceStartDate to which to apply this modification
         /// </summary>
-        /// <value>The number of 15 minute intervals past referenceStartDate to which to apply this modification</value>
+        /// <value>The number of intervals past referenceStartDate to which to apply this modification</value>
         [DataMember(Name="intervalIndex", EmitDefaultValue=false)]
         public int? IntervalIndex { get; set; }
 

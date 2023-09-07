@@ -72,8 +72,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone..</param>
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests..</param>
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
+        /// <param name="DurationMinutes">Daily durations for each day of this time off request in minutes.</param>
+        /// <param name="PayableMinutes">Payable minutes for each day of this time off request.</param>
         /// <param name="Metadata">Version metadata for the time off request (required).</param>
-        public AdminTimeOffRequestPatch(StatusEnum? Status = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, WfmVersionedEntityMetadata Metadata = null)
+        public AdminTimeOffRequestPatch(StatusEnum? Status = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Status = Status;
             this.ActivityCodeId = ActivityCodeId;
@@ -81,6 +83,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.DailyDurationMinutes = DailyDurationMinutes;
+            this.DurationMinutes = DurationMinutes;
+            this.PayableMinutes = PayableMinutes;
             this.Metadata = Metadata;
             
         }
@@ -135,6 +139,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Daily durations for each day of this time off request in minutes
+        /// </summary>
+        /// <value>Daily durations for each day of this time off request in minutes</value>
+        [DataMember(Name="durationMinutes", EmitDefaultValue=false)]
+        public List<int?> DurationMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// Payable minutes for each day of this time off request
+        /// </summary>
+        /// <value>Payable minutes for each day of this time off request</value>
+        [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
+        public List<int?> PayableMinutes { get; set; }
+
+
+
+        /// <summary>
         /// Version metadata for the time off request
         /// </summary>
         /// <value>Version metadata for the time off request</value>
@@ -157,6 +179,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
+            sb.Append("  DurationMinutes: ").Append(DurationMinutes).Append("\n");
+            sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -229,6 +253,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DailyDurationMinutes.Equals(other.DailyDurationMinutes)
                 ) &&
                 (
+                    this.DurationMinutes == other.DurationMinutes ||
+                    this.DurationMinutes != null &&
+                    this.DurationMinutes.SequenceEqual(other.DurationMinutes)
+                ) &&
+                (
+                    this.PayableMinutes == other.PayableMinutes ||
+                    this.PayableMinutes != null &&
+                    this.PayableMinutes.SequenceEqual(other.PayableMinutes)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -263,6 +297,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DailyDurationMinutes != null)
                     hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();
+
+                if (this.DurationMinutes != null)
+                    hash = hash * 59 + this.DurationMinutes.GetHashCode();
+
+                if (this.PayableMinutes != null)
+                    hash = hash * 59 + this.PayableMinutes.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

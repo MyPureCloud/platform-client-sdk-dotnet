@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LengthMinutes">The length in minutes of this activity.</param>
         /// <param name="ActivityCodeId">The ID of the activity code for this activity.</param>
         /// <param name="CountsAsPaidTime">Whether this activity counts as paid time.</param>
-        public ShiftTradeActivityPreviewResponse(DateTime? StartDate = null, int? LengthMinutes = null, string ActivityCodeId = null, bool? CountsAsPaidTime = null)
+        /// <param name="PayableMinutes">Payable minutes for this activity.</param>
+        public ShiftTradeActivityPreviewResponse(DateTime? StartDate = null, int? LengthMinutes = null, string ActivityCodeId = null, bool? CountsAsPaidTime = null, int? PayableMinutes = null)
         {
             this.StartDate = StartDate;
             this.LengthMinutes = LengthMinutes;
             this.ActivityCodeId = ActivityCodeId;
             this.CountsAsPaidTime = CountsAsPaidTime;
+            this.PayableMinutes = PayableMinutes;
             
         }
         
@@ -71,6 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? CountsAsPaidTime { get; set; }
 
 
+
+        /// <summary>
+        /// Payable minutes for this activity
+        /// </summary>
+        /// <value>Payable minutes for this activity</value>
+        [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
+        public int? PayableMinutes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
+            sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +155,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountsAsPaidTime == other.CountsAsPaidTime ||
                     this.CountsAsPaidTime != null &&
                     this.CountsAsPaidTime.Equals(other.CountsAsPaidTime)
+                ) &&
+                (
+                    this.PayableMinutes == other.PayableMinutes ||
+                    this.PayableMinutes != null &&
+                    this.PayableMinutes.Equals(other.PayableMinutes)
                 );
         }
 
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CountsAsPaidTime != null)
                     hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
+
+                if (this.PayableMinutes != null)
+                    hash = hash * 59 + this.PayableMinutes.GetHashCode();
 
                 return hash;
             }

@@ -13,6 +13,7 @@ title: WorkdayMetric
 | **MaxPoints** | **int?** | The maximum Gamification points a user may earn for this metric | [optional] |
 | **Value** | **double?** | Value of this metric | [optional] |
 | **PunctualityEvents** | [**List&lt;PunctualityEvent&gt;**](PunctualityEvent.html) | List of schedule activity events for punctuality metrics | [optional] |
+| **EvaluationDetails** | [**List&lt;QualityEvaluationScoreItem&gt;**](QualityEvaluationScoreItem.html) | List of evaluations for quality evaluation score metrics | [optional] |
 {: class="table table-striped"}
 
 

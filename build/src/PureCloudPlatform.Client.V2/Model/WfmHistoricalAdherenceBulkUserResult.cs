@@ -71,14 +71,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConformancePercentage">Conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period..</param>
         /// <param name="Impact">The impact of the current adherence state for this user.</param>
         /// <param name="ExceptionInfo">List of adherence exceptions for this user.</param>
+        /// <param name="Actuals">List of adherence actuals for this user.</param>
         /// <param name="DayMetrics">Adherence and conformance metrics for days in query range.</param>
-        public WfmHistoricalAdherenceBulkUserResult(string UserId = null, double? AdherencePercentage = null, double? ConformancePercentage = null, ImpactEnum? Impact = null, List<HistoricalAdherenceExceptionInfo> ExceptionInfo = null, List<WfmHistoricalAdherenceBulkUserDayMetrics> DayMetrics = null)
+        public WfmHistoricalAdherenceBulkUserResult(string UserId = null, double? AdherencePercentage = null, double? ConformancePercentage = null, ImpactEnum? Impact = null, List<HistoricalAdherenceExceptionInfo> ExceptionInfo = null, List<HistoricalAdherenceActuals> Actuals = null, List<WfmHistoricalAdherenceBulkUserDayMetrics> DayMetrics = null)
         {
             this.UserId = UserId;
             this.AdherencePercentage = AdherencePercentage;
             this.ConformancePercentage = ConformancePercentage;
             this.Impact = Impact;
             this.ExceptionInfo = ExceptionInfo;
+            this.Actuals = Actuals;
             this.DayMetrics = DayMetrics;
             
         }
@@ -124,6 +126,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// List of adherence actuals for this user
+        /// </summary>
+        /// <value>List of adherence actuals for this user</value>
+        [DataMember(Name="actuals", EmitDefaultValue=false)]
+        public List<HistoricalAdherenceActuals> Actuals { get; set; }
+
+
+
+        /// <summary>
         /// Adherence and conformance metrics for days in query range
         /// </summary>
         /// <value>Adherence and conformance metrics for days in query range</value>
@@ -145,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConformancePercentage: ").Append(ConformancePercentage).Append("\n");
             sb.Append("  Impact: ").Append(Impact).Append("\n");
             sb.Append("  ExceptionInfo: ").Append(ExceptionInfo).Append("\n");
+            sb.Append("  Actuals: ").Append(Actuals).Append("\n");
             sb.Append("  DayMetrics: ").Append(DayMetrics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -212,6 +224,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExceptionInfo.SequenceEqual(other.ExceptionInfo)
                 ) &&
                 (
+                    this.Actuals == other.Actuals ||
+                    this.Actuals != null &&
+                    this.Actuals.SequenceEqual(other.Actuals)
+                ) &&
+                (
                     this.DayMetrics == other.DayMetrics ||
                     this.DayMetrics != null &&
                     this.DayMetrics.SequenceEqual(other.DayMetrics)
@@ -243,6 +260,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExceptionInfo != null)
                     hash = hash * 59 + this.ExceptionInfo.GetHashCode();
+
+                if (this.Actuals != null)
+                    hash = hash * 59 + this.Actuals.GetHashCode();
 
                 if (this.DayMetrics != null)
                     hash = hash * 59 + this.DayMetrics.GetHashCode();

@@ -166,7 +166,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Uncallable for "Uncallable"
             /// </summary>
             [EnumMember(Value = "Uncallable")]
-            Uncallable
+            Uncallable,
+            
+            /// <summary>
+            /// Enum Donotdisturbendpoint for "DoNotDisturbEndpoint"
+            /// </summary>
+            [EnumMember(Value = "DoNotDisturbEndpoint")]
+            Donotdisturbendpoint,
+            
+            /// <summary>
+            /// Enum Donotdisturbtransfer for "DoNotDisturbTransfer"
+            /// </summary>
+            [EnumMember(Value = "DoNotDisturbTransfer")]
+            Donotdisturbtransfer
         }
         /// <summary>
         /// Last ACD outcome for the conversation.

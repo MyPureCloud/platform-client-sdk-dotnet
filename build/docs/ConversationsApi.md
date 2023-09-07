@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationParticipantFlaggedreason**](ConversationsApi.html#deleteconversationparticipantflaggedreason) | **Delete** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Remove flagged reason from conversation participant. |
 | [**DeleteConversationsCallParticipantConsult**](ConversationsApi.html#deleteconversationscallparticipantconsult) | **Delete** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
 | [**DeleteConversationsEmailMessagesDraftAttachment**](ConversationsApi.html#deleteconversationsemailmessagesdraftattachment) | **Delete** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
+| [**DeleteConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsApi.html#deleteconversationsmessagescachedmediacachedmediaitemid) | **Delete** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Remove a cached media item asychronously |
 | [**DeleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsfacebookintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Delete a Facebook messaging integration |
 | [**DeleteConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationsinstagramintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Delete Instagram messaging integration |
 | [**DeleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#deleteconversationsmessagingintegrationslineintegrationid) | **Delete** /api/v2/conversations/messaging/integrations/line/{integrationId} | Delete a LINE messenger integration |
@@ -78,6 +79,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessageParticipantWrapup**](ConversationsApi.html#getconversationsmessageparticipantwrapup) | **Get** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsMessageParticipantWrapupcodes**](ConversationsApi.html#getconversationsmessageparticipantwrapupcodes) | **Get** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsMessages**](ConversationsApi.html#getconversationsmessages) | **Get** /api/v2/conversations/messages | Get active message conversations for the logged in user |
+| [**GetConversationsMessagesCachedmedia**](ConversationsApi.html#getconversationsmessagescachedmedia) | **Get** /api/v2/conversations/messages/cachedmedia | Get a list of cached media items |
+| [**GetConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsApi.html#getconversationsmessagescachedmediacachedmediaitemid) | **Get** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Get a cached media item |
 | [**GetConversationsMessagingFacebookApp**](ConversationsApi.html#getconversationsmessagingfacebookapp) | **Get** /api/v2/conversations/messaging/facebook/app | Get Genesys Facebook App Id |
 | [**GetConversationsMessagingIntegrations**](ConversationsApi.html#getconversationsmessagingintegrations) | **Get** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
 | [**GetConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#getconversationsmessagingintegrationsfacebook) | **Get** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
@@ -105,6 +108,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsSocialParticipantCommunicationWrapup**](ConversationsApi.html#getconversationssocialparticipantcommunicationwrapup) | **Get** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
 | [**GetConversationsVideoDetails**](ConversationsApi.html#getconversationsvideodetails) | **Get** /api/v2/conversations/videos/{conferenceId}/details | Get video conference details (e.g. the current number of active participants). |
 | [**GetConversationsVideoParticipantCommunicationWrapup**](ConversationsApi.html#getconversationsvideoparticipantcommunicationwrapup) | **Get** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
+| [**GetConversationsVideosMeeting**](ConversationsApi.html#getconversationsvideosmeeting) | **Get** /api/v2/conversations/videos/meetings/{meetingId} | Gets a record for a given meetingId |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationSecureattributes**](ConversationsApi.html#patchconversationsecureattributes) | **Patch** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
@@ -198,6 +202,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessageCommunicationMessages**](ConversationsApi.html#postconversationsmessagecommunicationmessages) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
 | [**PostConversationsMessageCommunicationMessagesMedia**](ConversationsApi.html#postconversationsmessagecommunicationmessagesmedia) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
 | [**PostConversationsMessageCommunicationTyping**](ConversationsApi.html#postconversationsmessagecommunicationtyping) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing | Send message typing event |
+| [**PostConversationsMessageInboundOpenEvent**](ConversationsApi.html#postconversationsmessageinboundopenevent) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/event | Send an inbound Open Event Message |
+| [**PostConversationsMessageInboundOpenMessage**](ConversationsApi.html#postconversationsmessageinboundopenmessage) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/message | Send inbound Open Message |
+| [**PostConversationsMessageInboundOpenReceipt**](ConversationsApi.html#postconversationsmessageinboundopenreceipt) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/receipt | Send an inbound Open Receipt Message |
 | [**PostConversationsMessageMessagesBulk**](ConversationsApi.html#postconversationsmessagemessagesbulk) | **Post** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
 | [**PostConversationsMessageParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsmessageparticipantcommunicationwrapup) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsMessageParticipantMonitor**](ConversationsApi.html#postconversationsmessageparticipantmonitor) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
@@ -217,6 +224,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsScreenshareParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsscreenshareparticipantcommunicationwrapup) | **Post** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsSocialParticipantCommunicationWrapup**](ConversationsApi.html#postconversationssocialparticipantcommunicationwrapup) | **Post** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsVideoParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsvideoparticipantcommunicationwrapup) | **Post** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
+| [**PostConversationsVideosMeetings**](ConversationsApi.html#postconversationsvideosmeetings) | **Post** /api/v2/conversations/videos/meetings | Generate a meetingId for a given conferenceId |
 | [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **Put** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**PutConversationSecureattributes**](ConversationsApi.html#putconversationsecureattributes) | **Put** /api/v2/conversations/{conversationId}/secureattributes | Set the secure attributes on a conversation. |
 | [**PutConversationTags**](ConversationsApi.html#putconversationtags) | **Put** /api/v2/conversations/{conversationId}/tags | Update the tags on a conversation. |
@@ -549,6 +557,68 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **attachmentId** | **string**| attachmentId |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteconversationsmessagescachedmediacachedmediaitemid"></a>
+
+## void DeleteConversationsMessagesCachedmediaCachedMediaItemId (string cachedMediaItemId)
+
+
+
+Remove a cached media item asychronously
+
+Requires ANY permissions: 
+
+* conversation:cachedMedia:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagesCachedmediaCachedMediaItemIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var cachedMediaItemId = cachedMediaItemId_example;  // string | cachedMediaItemId
+
+            try
+            { 
+                // Remove a cached media item asychronously
+                apiInstance.DeleteConversationsMessagesCachedmediaCachedMediaItemId(cachedMediaItemId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagesCachedmediaCachedMediaItemId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cachedMediaItemId** | **string**| cachedMediaItemId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4751,6 +4821,136 @@ This endpoint does require any parameters.
 
 [**MessageConversationEntityListing**](MessageConversationEntityListing.html)
 
+<a name="getconversationsmessagescachedmedia"></a>
+
+## [**CachedMediaItemEntityListing**](CachedMediaItemEntityListing.html) GetConversationsMessagesCachedmedia (int? pageSize = null, int? pageNumber = null, string url = null)
+
+
+
+Get a list of cached media items
+
+Requires ANY permissions: 
+
+* conversation:cachedMedia:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagesCachedmediaExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var url = url_example;  // string | URL to search for (optional) 
+
+            try
+            { 
+                // Get a list of cached media items
+                CachedMediaItemEntityListing result = apiInstance.GetConversationsMessagesCachedmedia(pageSize, pageNumber, url);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagesCachedmedia: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **url** | **string**| URL to search for | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CachedMediaItemEntityListing**](CachedMediaItemEntityListing.html)
+
+<a name="getconversationsmessagescachedmediacachedmediaitemid"></a>
+
+## [**CachedMediaItem**](CachedMediaItem.html) GetConversationsMessagesCachedmediaCachedMediaItemId (string cachedMediaItemId)
+
+
+
+Get a cached media item
+
+Requires ANY permissions: 
+
+* conversation:cachedMedia:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagesCachedmediaCachedMediaItemIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var cachedMediaItemId = cachedMediaItemId_example;  // string | cachedMediaItemId
+
+            try
+            { 
+                // Get a cached media item
+                CachedMediaItem result = apiInstance.GetConversationsMessagesCachedmediaCachedMediaItemId(cachedMediaItemId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagesCachedmediaCachedMediaItemId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cachedMediaItemId** | **string**| cachedMediaItemId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CachedMediaItem**](CachedMediaItem.html)
+
 <a name="getconversationsmessagingfacebookapp"></a>
 
 ## [**FacebookAppCredentials**](FacebookAppCredentials.html) GetConversationsMessagingFacebookApp ()
@@ -6529,6 +6729,71 @@ namespace Example
 ### Return type
 
 [**AssignedWrapupCode**](AssignedWrapupCode.html)
+
+<a name="getconversationsvideosmeeting"></a>
+
+## [**MeetingIdRecord**](MeetingIdRecord.html) GetConversationsVideosMeeting (string meetingId)
+
+
+
+Gets a record for a given meetingId
+
+GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* video:video:access
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsVideosMeetingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var meetingId = meetingId_example;  // string | meetingId
+
+            try
+            { 
+                // Gets a record for a given meetingId
+                MeetingIdRecord result = apiInstance.GetConversationsVideosMeeting(meetingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsVideosMeeting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **meetingId** | **string**| meetingId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MeetingIdRecord**](MeetingIdRecord.html)
 
 <a name="patchconversationparticipant"></a>
 
@@ -12661,6 +12926,207 @@ namespace Example
 
 void (empty response body)
 
+<a name="postconversationsmessageinboundopenevent"></a>
+
+## [**OpenEventNormalizedMessage**](OpenEventNormalizedMessage.html) PostConversationsMessageInboundOpenEvent (string integrationId, OpenInboundNormalizedEvent body)
+
+
+
+Send an inbound Open Event Message
+
+Send an inbound event message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageInboundOpenEventExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | integrationId
+            var body = new OpenInboundNormalizedEvent(); // OpenInboundNormalizedEvent | NormalizedMessage
+
+            try
+            { 
+                // Send an inbound Open Event Message
+                OpenEventNormalizedMessage result = apiInstance.PostConversationsMessageInboundOpenEvent(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageInboundOpenEvent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| integrationId |  |
+| **body** | [**OpenInboundNormalizedEvent**](OpenInboundNormalizedEvent.html)| NormalizedMessage |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OpenEventNormalizedMessage**](OpenEventNormalizedMessage.html)
+
+<a name="postconversationsmessageinboundopenmessage"></a>
+
+## [**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage.html) PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body)
+
+
+
+Send inbound Open Message
+
+Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageInboundOpenMessageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | integrationId
+            var body = new OpenInboundNormalizedMessage(); // OpenInboundNormalizedMessage | NormalizedMessage
+
+            try
+            { 
+                // Send inbound Open Message
+                OpenMessageNormalizedMessage result = apiInstance.PostConversationsMessageInboundOpenMessage(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageInboundOpenMessage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| integrationId |  |
+| **body** | [**OpenInboundNormalizedMessage**](OpenInboundNormalizedMessage.html)| NormalizedMessage |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage.html)
+
+<a name="postconversationsmessageinboundopenreceipt"></a>
+
+## [**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage.html) PostConversationsMessageInboundOpenReceipt (string integrationId, OpenInboundNormalizedReceipt body)
+
+
+
+Send an inbound Open Receipt Message
+
+Send an inbound open Receipt to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageInboundOpenReceiptExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | integrationId
+            var body = new OpenInboundNormalizedReceipt(); // OpenInboundNormalizedReceipt | NormalizedMessage
+
+            try
+            { 
+                // Send an inbound Open Receipt Message
+                OpenReceiptNormalizedMessage result = apiInstance.PostConversationsMessageInboundOpenReceipt(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageInboundOpenReceipt: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| integrationId |  |
+| **body** | [**OpenInboundNormalizedReceipt**](OpenInboundNormalizedReceipt.html)| NormalizedMessage |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage.html)
+
 <a name="postconversationsmessagemessagesbulk"></a>
 
 ## [**TextMessageListing**](TextMessageListing.html) PostConversationsMessageMessagesBulk (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
@@ -13900,6 +14366,71 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postconversationsvideosmeetings"></a>
+
+## [**MeetingIdRecord**](MeetingIdRecord.html) PostConversationsVideosMeetings (GenerateMeetingIdRequest body)
+
+
+
+Generate a meetingId for a given conferenceId
+
+PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* video:video:access
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsVideosMeetingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new GenerateMeetingIdRequest(); // GenerateMeetingIdRequest | MeetingIdRequest
+
+            try
+            { 
+                // Generate a meetingId for a given conferenceId
+                MeetingIdRecord result = apiInstance.PostConversationsVideosMeetings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsVideosMeetings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**GenerateMeetingIdRequest**](GenerateMeetingIdRequest.html)| MeetingIdRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MeetingIdRecord**](MeetingIdRecord.html)
 
 <a name="putconversationparticipantflaggedreason"></a>
 

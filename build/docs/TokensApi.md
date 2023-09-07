@@ -135,7 +135,7 @@ void (empty response body)
 
 <a name="gettokensme"></a>
 
-## [**TokenInfo**](TokenInfo.html) GetTokensMe ()
+## [**TokenInfo**](TokenInfo.html) GetTokensMe (bool? preserveIdleTTL = null)
 
 
 
@@ -166,11 +166,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new TokensApi();
+            var preserveIdleTTL = true;  // bool? | preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. (optional) 
 
             try
             { 
                 // Fetch information about the current token
-                TokenInfo result = apiInstance.GetTokensMe();
+                TokenInfo result = apiInstance.GetTokensMe(preserveIdleTTL);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -183,8 +184,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **preserveIdleTTL** | **bool?**| preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. | [optional]  |
+{: class="table table-striped"}
 
 ### Return type
 

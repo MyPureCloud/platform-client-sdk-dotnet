@@ -66,7 +66,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Renotify for "RENOTIFY"
             /// </summary>
             [EnumMember(Value = "RENOTIFY")]
-            Renotify
+            Renotify,
+            
+            /// <summary>
+            /// Enum BulkDelete for "BULK_DELETE"
+            /// </summary>
+            [EnumMember(Value = "BULK_DELETE")]
+            BulkDelete,
+            
+            /// <summary>
+            /// Enum BulkUpdate for "BULK_UPDATE"
+            /// </summary>
+            [EnumMember(Value = "BULK_UPDATE")]
+            BulkUpdate
         }
         /// <summary>
         /// Gets or Sets Action

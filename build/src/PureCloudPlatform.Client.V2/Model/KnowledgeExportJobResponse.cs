@@ -160,10 +160,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExportFilter">Filters to narrow down what to export..</param>
         /// <param name="Status">The status of the export job..</param>
         /// <param name="KnowledgeBase">Knowledge base which document export belongs to..</param>
+        /// <param name="CreatedBy">The user who created the operation.</param>
         /// <param name="DateCreated">The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The timestamp of when the export stopped. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ErrorInformation">Any error information, or null of the processing is not in failed state..</param>
-        public KnowledgeExportJobResponse(string Id = null, string DownloadURL = null, FileTypeEnum? FileType = null, int? CountDocumentProcessed = null, KnowledgeExportJobFilter ExportFilter = null, StatusEnum? Status = null, KnowledgeBase KnowledgeBase = null, DateTime? DateCreated = null, DateTime? DateModified = null, ErrorBody ErrorInformation = null)
+        public KnowledgeExportJobResponse(string Id = null, string DownloadURL = null, FileTypeEnum? FileType = null, int? CountDocumentProcessed = null, KnowledgeExportJobFilter ExportFilter = null, StatusEnum? Status = null, KnowledgeBase KnowledgeBase = null, UserReference CreatedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, ErrorBody ErrorInformation = null)
         {
             this.Id = Id;
             this.DownloadURL = DownloadURL;
@@ -172,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExportFilter = ExportFilter;
             this.Status = Status;
             this.KnowledgeBase = KnowledgeBase;
+            this.CreatedBy = CreatedBy;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.ErrorInformation = ErrorInformation;
@@ -230,6 +232,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The user who created the operation
+        /// </summary>
+        /// <value>The user who created the operation</value>
+        [DataMember(Name="createdBy", EmitDefaultValue=false)]
+        public UserReference CreatedBy { get; set; }
+
+
+
+        /// <summary>
         /// The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -280,6 +291,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExportFilter: ").Append(ExportFilter).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
+            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ErrorInformation: ").Append(ErrorInformation).Append("\n");
@@ -360,6 +372,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.KnowledgeBase.Equals(other.KnowledgeBase)
                 ) &&
                 (
+                    this.CreatedBy == other.CreatedBy ||
+                    this.CreatedBy != null &&
+                    this.CreatedBy.Equals(other.CreatedBy)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -412,6 +429,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.KnowledgeBase != null)
                     hash = hash * 59 + this.KnowledgeBase.GetHashCode();
+
+                if (this.CreatedBy != null)
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

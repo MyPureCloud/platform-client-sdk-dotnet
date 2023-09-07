@@ -654,7 +654,7 @@ namespace Example
 
 <a name="getqualityagentsactivity"></a>
 
-## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null)
 
 
 
@@ -700,11 +700,12 @@ namespace Example
             var evaluatorUserId = evaluatorUserId_example;  // string | user id of the evaluator (optional) 
             var name = name_example;  // string | name (optional) 
             var group = group_example;  // string | group id (optional) 
+            var formContextId = formContextId_example;  // string | shared id between form versions (optional) 
 
             try
             { 
                 // Gets a list of Agent Activities
-                AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
+                AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, formContextId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -733,6 +734,7 @@ namespace Example
 | **evaluatorUserId** | **string**| user id of the evaluator | [optional]  |
 | **name** | **string**| name | [optional]  |
 | **group** | **string**| group id | [optional]  |
+| **formContextId** | **string**| shared id between form versions | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1153,7 +1155,7 @@ namespace Example
 
 <a name="getqualityevaluationsquery"></a>
 
-## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
 
 
 
@@ -1200,6 +1202,7 @@ namespace Example
             var queueId = queueId_example;  // string | queue id (optional) 
             var startTime = startTime_example;  // string | start time of the evaluation query (optional) 
             var endTime = endTime_example;  // string | end time of the evaluation query (optional) 
+            var formContextId = formContextId_example;  // string | shared id between form versions (optional) 
             var evaluationState = new List<string>(); // List<string> |  (optional) 
             var isReleased = true;  // bool? | the evaluation has been released (optional) 
             var agentHasRead = true;  // bool? | agent has the evaluation (optional) 
@@ -1210,7 +1213,7 @@ namespace Example
             try
             { 
                 // Queries Evaluations and returns a paged list
-                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1240,6 +1243,7 @@ namespace Example
 | **queueId** | **string**| queue id | [optional]  |
 | **startTime** | **string**| start time of the evaluation query | [optional]  |
 | **endTime** | **string**| end time of the evaluation query | [optional]  |
+| **formContextId** | **string**| shared id between form versions | [optional]  |
 | **evaluationState** | [**List<string>**](string.html)|  | [optional]  |
 | **isReleased** | **bool?**| the evaluation has been released | [optional]  |
 | **agentHasRead** | **bool?**| agent has the evaluation | [optional]  |

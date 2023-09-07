@@ -129,7 +129,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Queues">A list of queues for the metric.</param>
         /// <param name="Topics">A list of topic ids for detected topic metrics.</param>
         /// <param name="TopicIdsFilterType">A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\"..</param>
-        public DefaultObjective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<MediaTypesEnum> MediaTypes = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Topics = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null)
+        /// <param name="EvaluationFormContextIds">The ids of associated evaluation form context, for Quality Evaluation Score metrics.</param>
+        public DefaultObjective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<MediaTypesEnum> MediaTypes = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Topics = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, List<string> EvaluationFormContextIds = null)
         {
             this.TemplateId = TemplateId;
             this.Zones = Zones;
@@ -138,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Queues = Queues;
             this.Topics = Topics;
             this.TopicIdsFilterType = TopicIdsFilterType;
+            this.EvaluationFormContextIds = EvaluationFormContextIds;
             
         }
         
@@ -207,6 +209,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// The ids of associated evaluation form context, for Quality Evaluation Score metrics
+        /// </summary>
+        /// <value>The ids of associated evaluation form context, for Quality Evaluation Score metrics</value>
+        [DataMember(Name="evaluationFormContextIds", EmitDefaultValue=false)]
+        public List<string> EvaluationFormContextIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -224,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Queues: ").Append(Queues).Append("\n");
             sb.Append("  Topics: ").Append(Topics).Append("\n");
             sb.Append("  TopicIdsFilterType: ").Append(TopicIdsFilterType).Append("\n");
+            sb.Append("  EvaluationFormContextIds: ").Append(EvaluationFormContextIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -303,6 +315,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TopicIdsFilterType == other.TopicIdsFilterType ||
                     this.TopicIdsFilterType != null &&
                     this.TopicIdsFilterType.Equals(other.TopicIdsFilterType)
+                ) &&
+                (
+                    this.EvaluationFormContextIds == other.EvaluationFormContextIds ||
+                    this.EvaluationFormContextIds != null &&
+                    this.EvaluationFormContextIds.SequenceEqual(other.EvaluationFormContextIds)
                 );
         }
 
@@ -340,6 +357,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TopicIdsFilterType != null)
                     hash = hash * 59 + this.TopicIdsFilterType.GetHashCode();
+
+                if (this.EvaluationFormContextIds != null)
+                    hash = hash * 59 + this.EvaluationFormContextIds.GetHashCode();
 
                 return hash;
             }

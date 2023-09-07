@@ -976,11 +976,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type (optional)</param>
+        /// <param name="name">Recipient Name (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>RecipientListing</returns>
         
-        RecipientListing GetRoutingMessageRecipients (string messengerType = null, int? pageSize = null, int? pageNumber = null);
+        RecipientListing GetRoutingMessageRecipients (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get recipients
@@ -990,11 +991,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type (optional)</param>
+        /// <param name="name">Recipient Name (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of RecipientListing</returns>
         
-        ApiResponse<RecipientListing> GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<RecipientListing> GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieve a single predictor.
@@ -3018,9 +3020,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
-        /// <returns>SkillGroup</returns>
+        /// <returns>SkillGroupWithMemberDivisions</returns>
         
-        SkillGroup PostRoutingSkillgroups (SkillGroup body);
+        SkillGroupWithMemberDivisions PostRoutingSkillgroups (SkillGroupWithMemberDivisions body);
 
         /// <summary>
         /// Create a skill group
@@ -3030,9 +3032,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
-        /// <returns>ApiResponse of SkillGroup</returns>
+        /// <returns>ApiResponse of SkillGroupWithMemberDivisions</returns>
         
-        ApiResponse<SkillGroup> PostRoutingSkillgroupsWithHttpInfo (SkillGroup body);
+        ApiResponse<SkillGroupWithMemberDivisions> PostRoutingSkillgroupsWithHttpInfo (SkillGroupWithMemberDivisions body);
 
         /// <summary>
         /// Create Skill
@@ -3297,7 +3299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Recipient</returns>
         
-        Recipient PutRoutingMessageRecipient (string recipientId, Recipient body);
+        Recipient PutRoutingMessageRecipient (string recipientId, RecipientRequest body);
 
         /// <summary>
         /// Update a recipient
@@ -3310,7 +3312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>ApiResponse of Recipient</returns>
         
-        ApiResponse<Recipient> PutRoutingMessageRecipientWithHttpInfo (string recipientId, Recipient body);
+        ApiResponse<Recipient> PutRoutingMessageRecipientWithHttpInfo (string recipientId, RecipientRequest body);
 
         /// <summary>
         /// Update a queue
@@ -4506,11 +4508,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type (optional)</param>
+        /// <param name="name">Recipient Name (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of RecipientListing</returns>
         
-        System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (string messengerType = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get recipients
@@ -4520,11 +4523,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type (optional)</param>
+        /// <param name="name">Recipient Name (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (RecipientListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieve a single predictor.
@@ -6548,9 +6552,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
-        /// <returns>Task of SkillGroup</returns>
+        /// <returns>Task of SkillGroupWithMemberDivisions</returns>
         
-        System.Threading.Tasks.Task<SkillGroup> PostRoutingSkillgroupsAsync (SkillGroup body);
+        System.Threading.Tasks.Task<SkillGroupWithMemberDivisions> PostRoutingSkillgroupsAsync (SkillGroupWithMemberDivisions body);
 
         /// <summary>
         /// Create a skill group
@@ -6560,9 +6564,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
-        /// <returns>Task of ApiResponse (SkillGroup)</returns>
+        /// <returns>Task of ApiResponse (SkillGroupWithMemberDivisions)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SkillGroup>> PostRoutingSkillgroupsAsyncWithHttpInfo (SkillGroup body);
+        System.Threading.Tasks.Task<ApiResponse<SkillGroupWithMemberDivisions>> PostRoutingSkillgroupsAsyncWithHttpInfo (SkillGroupWithMemberDivisions body);
 
         /// <summary>
         /// Create Skill
@@ -6827,7 +6831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Task of Recipient</returns>
         
-        System.Threading.Tasks.Task<Recipient> PutRoutingMessageRecipientAsync (string recipientId, Recipient body);
+        System.Threading.Tasks.Task<Recipient> PutRoutingMessageRecipientAsync (string recipientId, RecipientRequest body);
 
         /// <summary>
         /// Update a recipient
@@ -6840,7 +6844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Task of ApiResponse (Recipient)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Recipient>> PutRoutingMessageRecipientAsyncWithHttpInfo (string recipientId, Recipient body);
+        System.Threading.Tasks.Task<ApiResponse<Recipient>> PutRoutingMessageRecipientAsyncWithHttpInfo (string recipientId, RecipientRequest body);
 
         /// <summary>
         /// Update a queue
@@ -14946,13 +14950,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type (optional)</param>
+        /// <param name="name">Recipient Name (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>RecipientListing</returns>
         
-        public RecipientListing GetRoutingMessageRecipients (string messengerType = null, int? pageSize = null, int? pageNumber = null)
+        public RecipientListing GetRoutingMessageRecipients (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<RecipientListing> localVarResponse = GetRoutingMessageRecipientsWithHttpInfo(messengerType, pageSize, pageNumber);
+             ApiResponse<RecipientListing> localVarResponse = GetRoutingMessageRecipientsWithHttpInfo(messengerType, name, pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
@@ -14962,11 +14967,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type (optional)</param>
+        /// <param name="name">Recipient Name (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of RecipientListing</returns>
         
-        public ApiResponse< RecipientListing > GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< RecipientListing > GetRoutingMessageRecipientsWithHttpInfo (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null)
         { 
 
             var localVarPath = "/api/v2/routing/message/recipients";
@@ -15002,6 +15008,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (messengerType != null) localVarQueryParams.Add(new Tuple<string, string>("messengerType", this.Configuration.ApiClient.ParameterToString(messengerType)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
 
@@ -15049,13 +15056,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type (optional)</param>
+        /// <param name="name">Recipient Name (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of RecipientListing</returns>
         
-        public async System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (string messengerType = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<RecipientListing> GetRoutingMessageRecipientsAsync (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<RecipientListing> localVarResponse = await GetRoutingMessageRecipientsAsyncWithHttpInfo(messengerType, pageSize, pageNumber);
+             ApiResponse<RecipientListing> localVarResponse = await GetRoutingMessageRecipientsAsyncWithHttpInfo(messengerType, name, pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -15066,11 +15074,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type (optional)</param>
+        /// <param name="name">Recipient Name (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (RecipientListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RecipientListing>> GetRoutingMessageRecipientsAsyncWithHttpInfo (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null)
         { 
 
             var localVarPath = "/api/v2/routing/message/recipients";
@@ -15106,6 +15115,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (messengerType != null) localVarQueryParams.Add(new Tuple<string, string>("messengerType", this.Configuration.ApiClient.ParameterToString(messengerType)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
 
@@ -31091,11 +31101,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
-        /// <returns>SkillGroup</returns>
+        /// <returns>SkillGroupWithMemberDivisions</returns>
         
-        public SkillGroup PostRoutingSkillgroups (SkillGroup body)
+        public SkillGroupWithMemberDivisions PostRoutingSkillgroups (SkillGroupWithMemberDivisions body)
         {
-             ApiResponse<SkillGroup> localVarResponse = PostRoutingSkillgroupsWithHttpInfo(body);
+             ApiResponse<SkillGroupWithMemberDivisions> localVarResponse = PostRoutingSkillgroupsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -31105,9 +31115,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
-        /// <returns>ApiResponse of SkillGroup</returns>
+        /// <returns>ApiResponse of SkillGroupWithMemberDivisions</returns>
         
-        public ApiResponse< SkillGroup > PostRoutingSkillgroupsWithHttpInfo (SkillGroup body)
+        public ApiResponse< SkillGroupWithMemberDivisions > PostRoutingSkillgroupsWithHttpInfo (SkillGroupWithMemberDivisions body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -31182,9 +31192,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostRoutingSkillgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SkillGroup>(localVarStatusCode,
+            return new ApiResponse<SkillGroupWithMemberDivisions>(localVarStatusCode,
                 localVarHeaders,
-                (SkillGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillGroup)),
+                (SkillGroupWithMemberDivisions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillGroupWithMemberDivisions)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -31196,11 +31206,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
-        /// <returns>Task of SkillGroup</returns>
+        /// <returns>Task of SkillGroupWithMemberDivisions</returns>
         
-        public async System.Threading.Tasks.Task<SkillGroup> PostRoutingSkillgroupsAsync (SkillGroup body)
+        public async System.Threading.Tasks.Task<SkillGroupWithMemberDivisions> PostRoutingSkillgroupsAsync (SkillGroupWithMemberDivisions body)
         {
-             ApiResponse<SkillGroup> localVarResponse = await PostRoutingSkillgroupsAsyncWithHttpInfo(body);
+             ApiResponse<SkillGroupWithMemberDivisions> localVarResponse = await PostRoutingSkillgroupsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -31211,9 +31221,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Create skill group</param>
-        /// <returns>Task of ApiResponse (SkillGroup)</returns>
+        /// <returns>Task of ApiResponse (SkillGroupWithMemberDivisions)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SkillGroup>> PostRoutingSkillgroupsAsyncWithHttpInfo (SkillGroup body)
+        public async System.Threading.Tasks.Task<ApiResponse<SkillGroupWithMemberDivisions>> PostRoutingSkillgroupsAsyncWithHttpInfo (SkillGroupWithMemberDivisions body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -31289,9 +31299,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostRoutingSkillgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SkillGroup>(localVarStatusCode,
+            return new ApiResponse<SkillGroupWithMemberDivisions>(localVarStatusCode,
                 localVarHeaders,
-                (SkillGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillGroup)),
+                (SkillGroupWithMemberDivisions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillGroupWithMemberDivisions)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33487,7 +33497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Recipient</returns>
         
-        public Recipient PutRoutingMessageRecipient (string recipientId, Recipient body)
+        public Recipient PutRoutingMessageRecipient (string recipientId, RecipientRequest body)
         {
              ApiResponse<Recipient> localVarResponse = PutRoutingMessageRecipientWithHttpInfo(recipientId, body);
              return localVarResponse.Data;
@@ -33502,7 +33512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>ApiResponse of Recipient</returns>
         
-        public ApiResponse< Recipient > PutRoutingMessageRecipientWithHttpInfo (string recipientId, Recipient body)
+        public ApiResponse< Recipient > PutRoutingMessageRecipientWithHttpInfo (string recipientId, RecipientRequest body)
         { 
             // verify the required parameter 'recipientId' is set
             if (recipientId == null)
@@ -33598,7 +33608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Task of Recipient</returns>
         
-        public async System.Threading.Tasks.Task<Recipient> PutRoutingMessageRecipientAsync (string recipientId, Recipient body)
+        public async System.Threading.Tasks.Task<Recipient> PutRoutingMessageRecipientAsync (string recipientId, RecipientRequest body)
         {
              ApiResponse<Recipient> localVarResponse = await PutRoutingMessageRecipientAsyncWithHttpInfo(recipientId, body);
              return localVarResponse.Data;
@@ -33614,7 +33624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recipient</param>
         /// <returns>Task of ApiResponse (Recipient)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Recipient>> PutRoutingMessageRecipientAsyncWithHttpInfo (string recipientId, Recipient body)
+        public async System.Threading.Tasks.Task<ApiResponse<Recipient>> PutRoutingMessageRecipientAsyncWithHttpInfo (string recipientId, RecipientRequest body)
         { 
             // verify the required parameter 'recipientId' is set
             if (recipientId == null)

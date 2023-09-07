@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Activityplan for "ActivityPlan"
+            /// </summary>
+            [EnumMember(Value = "ActivityPlan")]
+            Activityplan,
+            
+            /// <summary>
             /// Enum Coaching for "Coaching"
             /// </summary>
             [EnumMember(Value = "Coaching")]

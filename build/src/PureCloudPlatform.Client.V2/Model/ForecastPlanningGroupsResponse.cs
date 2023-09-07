@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ForecastPlanningGroupsResponse" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        public ForecastPlanningGroupsResponse(List<ForecastPlanningGroupResponse> Entities = null)
+        /// <param name="BusinessUnitServiceGoalImpact">A snapshot of a business unit’s service goal impact settings taken at forecast generation time..</param>
+        public ForecastPlanningGroupsResponse(List<ForecastPlanningGroupResponse> Entities = null, WfmServiceGoalImpactSettings BusinessUnitServiceGoalImpact = null)
         {
             this.Entities = Entities;
+            this.BusinessUnitServiceGoalImpact = BusinessUnitServiceGoalImpact;
             
         }
         
@@ -37,6 +39,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ForecastPlanningGroupResponse> Entities { get; set; }
 
 
+
+        /// <summary>
+        /// A snapshot of a business unit’s service goal impact settings taken at forecast generation time.
+        /// </summary>
+        /// <value>A snapshot of a business unit’s service goal impact settings taken at forecast generation time.</value>
+        [DataMember(Name="businessUnitServiceGoalImpact", EmitDefaultValue=false)]
+        public WfmServiceGoalImpactSettings BusinessUnitServiceGoalImpact { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ForecastPlanningGroupsResponse {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  BusinessUnitServiceGoalImpact: ").Append(BusinessUnitServiceGoalImpact).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +103,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
+                ) &&
+                (
+                    this.BusinessUnitServiceGoalImpact == other.BusinessUnitServiceGoalImpact ||
+                    this.BusinessUnitServiceGoalImpact != null &&
+                    this.BusinessUnitServiceGoalImpact.Equals(other.BusinessUnitServiceGoalImpact)
                 );
         }
 
@@ -107,6 +124,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+
+                if (this.BusinessUnitServiceGoalImpact != null)
+                    hash = hash * 59 + this.BusinessUnitServiceGoalImpact.GetHashCode();
 
                 return hash;
             }

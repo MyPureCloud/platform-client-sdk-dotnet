@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Net;
 
 namespace PureCloudPlatform.Client.V2.Tests
 {
@@ -195,8 +196,10 @@ namespace PureCloudPlatform.Client.V2.Tests
         }
 
         [Test, Order(7)]
-        public void DeleteUser()
+        public void DeleteUserWithProxy()
         {
+            PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.ClientOptions.Proxy = new WebProxy("http://localhost:4001", true);
+        
             usersApi.DeleteUser(userId);
         }
 

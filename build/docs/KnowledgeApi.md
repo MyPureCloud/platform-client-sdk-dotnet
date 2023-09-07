@@ -1945,7 +1945,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebaseimportjob"></a>
 
-## [**KnowledgeImportJobResponse**](KnowledgeImportJobResponse.html) GetKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId)
+## [**KnowledgeImportJobResponse**](KnowledgeImportJobResponse.html) GetKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId, List<string> expand = null)
 
 
 
@@ -1979,11 +1979,12 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
             var importJobId = importJobId_example;  // string | Import job ID
+            var expand = new List<string>(); // List<string> | If expand contains 'urls' downloadURL and failedEntitiesURL will be filled. (optional) 
 
             try
             { 
                 // Get import job report
-                KnowledgeImportJobResponse result = apiInstance.GetKnowledgeKnowledgebaseImportJob(knowledgeBaseId, importJobId);
+                KnowledgeImportJobResponse result = apiInstance.GetKnowledgeKnowledgebaseImportJob(knowledgeBaseId, importJobId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2002,6 +2003,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **importJobId** | **string**| Import job ID |  |
+| **expand** | [**List<string>**](string.html)| If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. | [optional] <br />**Values**: urls |
 {: class="table table-striped"}
 
 ### Return type
@@ -3071,7 +3073,7 @@ void (empty response body)
 
 <a name="patchknowledgeknowledgebase"></a>
 
-## [**KnowledgeBase**](KnowledgeBase.html) PatchKnowledgeKnowledgebase (string knowledgeBaseId, KnowledgeBase body)
+## [**KnowledgeBase**](KnowledgeBase.html) PatchKnowledgeKnowledgebase (string knowledgeBaseId, KnowledgeBaseUpdateRequest body)
 
 
 
@@ -3104,7 +3106,7 @@ namespace Example
 
             var apiInstance = new KnowledgeApi();
             var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
-            var body = new KnowledgeBase(); // KnowledgeBase | 
+            var body = new KnowledgeBaseUpdateRequest(); // KnowledgeBaseUpdateRequest | 
 
             try
             { 
@@ -3127,7 +3129,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **body** | [**KnowledgeBase**](KnowledgeBase.html)|  |  |
+| **body** | [**KnowledgeBaseUpdateRequest**](KnowledgeBaseUpdateRequest.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5576,7 +5578,7 @@ namespace Example
 
 <a name="postknowledgeknowledgebases"></a>
 
-## [**KnowledgeBase**](KnowledgeBase.html) PostKnowledgeKnowledgebases (KnowledgeBase body)
+## [**KnowledgeBase**](KnowledgeBase.html) PostKnowledgeKnowledgebases (KnowledgeBaseCreateRequest body)
 
 
 
@@ -5608,7 +5610,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new KnowledgeApi();
-            var body = new KnowledgeBase(); // KnowledgeBase | 
+            var body = new KnowledgeBaseCreateRequest(); // KnowledgeBaseCreateRequest | 
 
             try
             { 
@@ -5630,7 +5632,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**KnowledgeBase**](KnowledgeBase.html)|  |  |
+| **body** | [**KnowledgeBaseCreateRequest**](KnowledgeBaseCreateRequest.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type

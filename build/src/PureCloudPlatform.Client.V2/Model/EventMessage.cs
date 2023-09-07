@@ -105,6 +105,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignInvalidated,
             
             /// <summary>
+            /// Enum CampaignForceStopped for "CAMPAIGN_FORCE_STOPPED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_FORCE_STOPPED")]
+            CampaignForceStopped,
+            
+            /// <summary>
             /// Enum CampaignMessageCharacterLimitExceeded for "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED")]

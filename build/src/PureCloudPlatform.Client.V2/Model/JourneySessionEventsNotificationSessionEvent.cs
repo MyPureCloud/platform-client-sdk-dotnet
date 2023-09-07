@@ -167,16 +167,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Uncallable,
             
             /// <summary>
-            /// Enum Didnotdeliverendpoint for "DidNotDeliverEndpoint"
+            /// Enum Donotdisturbendpoint for "DoNotDisturbEndpoint"
             /// </summary>
-            [EnumMember(Value = "DidNotDeliverEndpoint")]
-            Didnotdeliverendpoint,
+            [EnumMember(Value = "DoNotDisturbEndpoint")]
+            Donotdisturbendpoint,
             
             /// <summary>
-            /// Enum Didnotdelivertransfer for "DidNotDeliverTransfer"
+            /// Enum Donotdisturbtransfer for "DoNotDisturbTransfer"
             /// </summary>
-            [EnumMember(Value = "DidNotDeliverTransfer")]
-            Didnotdelivertransfer
+            [EnumMember(Value = "DoNotDisturbTransfer")]
+            Donotdisturbtransfer
         }
         /// <summary>
         /// Gets or Sets LastAcdOutcome

@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Queues">List of queues to which this agent is capable of handling.</param>
         /// <param name="Languages">The list of languages this agent is capable of handling.</param>
         /// <param name="Skills">The list of skills this agent is capable of handling.</param>
-        /// <param name="Schedulable">Whether the agent has the permission to be included in schedule generation.</param>
+        /// <param name="Schedulable">Whether the agent can be included in schedule generation.</param>
         /// <param name="Metadata">Metadata for this agent.</param>
         public WfmAgent(UserReference User = null, WorkPlanReference WorkPlan = null, WorkPlanRotationReference WorkPlanRotation = null, bool? AcceptDirectShiftTrades = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, bool? Schedulable = null, WfmVersionedEntityMetadata Metadata = null)
         {
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether the agent has the permission to be included in schedule generation
+        /// Whether the agent can be included in schedule generation
         /// </summary>
-        /// <value>Whether the agent has the permission to be included in schedule generation</value>
+        /// <value>Whether the agent can be included in schedule generation</value>
         [DataMember(Name="schedulable", EmitDefaultValue=false)]
         public bool? Schedulable { get; set; }
 

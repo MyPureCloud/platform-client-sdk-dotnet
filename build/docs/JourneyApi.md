@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteJourneySegment**](JourneyApi.html#deletejourneysegment) | **Delete** /api/v2/journey/segments/{segmentId} | Delete a segment. |
 | [**GetAnalyticsJourneysAggregatesJob**](JourneyApi.html#getanalyticsjourneysaggregatesjob) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId} | Get status for async query for journey aggregates |
 | [**GetAnalyticsJourneysAggregatesJobResults**](JourneyApi.html#getanalyticsjourneysaggregatesjobresults) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetExternalcontactsContactJourneySessions**](JourneyApi.html#getexternalcontactscontactjourneysessions) | **Get** /api/v2/externalcontacts/contacts/{contactId}/journey/sessions | Retrieve all sessions for a given external contact. |
 | [**GetJourneyActionmap**](JourneyApi.html#getjourneyactionmap) | **Get** /api/v2/journey/actionmaps/{actionMapId} | Retrieve a single action map. |
 | [**GetJourneyActionmaps**](JourneyApi.html#getjourneyactionmaps) | **Get** /api/v2/journey/actionmaps | Retrieve all action maps. |
 | [**GetJourneyActionmapsEstimatesJob**](JourneyApi.html#getjourneyactionmapsestimatesjob) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId} | Get status of job. |
@@ -494,6 +495,75 @@ namespace Example
 ### Return type
 
 [**JourneyAsyncAggregateQueryResponse**](JourneyAsyncAggregateQueryResponse.html)
+
+<a name="getexternalcontactscontactjourneysessions"></a>
+
+## [**SessionListing**](SessionListing.html) GetExternalcontactsContactJourneySessions (string contactId, string pageSize = null, string after = null, bool? includeMerged = null)
+
+
+
+Retrieve all sessions for a given external contact.
+
+Requires ANY permissions: 
+
+* externalContacts:session:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsContactJourneySessionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var includeMerged = true;  // bool? | Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional) 
+
+            try
+            { 
+                // Retrieve all sessions for a given external contact.
+                SessionListing result = apiInstance.GetExternalcontactsContactJourneySessions(contactId, pageSize, after, includeMerged);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetExternalcontactsContactJourneySessions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **includeMerged** | **bool?**| Indicates whether to return sessions from all external contacts in the merge-set of the given one. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SessionListing**](SessionListing.html)
 
 <a name="getjourneyactionmap"></a>
 

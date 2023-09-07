@@ -36,11 +36,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingupdatedresourceconsumers) | **Get** /api/v2/architect/dependencytracking/updatedresourceconsumers | Get Dependency Tracking objects that depend on updated resources |
 | [**GetArchitectEmergencygroup**](ArchitectApi.html#getarchitectemergencygroup) | **Get** /api/v2/architect/emergencygroups/{emergencyGroupId} | Gets a emergency group by ID |
 | [**GetArchitectEmergencygroups**](ArchitectApi.html#getarchitectemergencygroups) | **Get** /api/v2/architect/emergencygroups | Get a list of emergency groups. |
+| [**GetArchitectEmergencygroupsDivisionviews**](ArchitectApi.html#getarchitectemergencygroupsdivisionviews) | **Get** /api/v2/architect/emergencygroups/divisionviews | Get a pageable list of basic emergency group objects filterable by query parameters. |
 | [**GetArchitectGrammar**](ArchitectApi.html#getarchitectgrammar) | **Get** /api/v2/architect/grammars/{grammarId} | Get a grammar |
 | [**GetArchitectGrammarLanguage**](ArchitectApi.html#getarchitectgrammarlanguage) | **Get** /api/v2/architect/grammars/{grammarId}/languages/{languageCode} | Get a grammar language. |
 | [**GetArchitectGrammars**](ArchitectApi.html#getarchitectgrammars) | **Get** /api/v2/architect/grammars | Get a pageable list of grammars, filtered by query parameters |
 | [**GetArchitectIvr**](ArchitectApi.html#getarchitectivr) | **Get** /api/v2/architect/ivrs/{ivrId} | Get an IVR config. |
 | [**GetArchitectIvrs**](ArchitectApi.html#getarchitectivrs) | **Get** /api/v2/architect/ivrs | Get IVR configs. |
+| [**GetArchitectIvrsDivisionviews**](ArchitectApi.html#getarchitectivrsdivisionviews) | **Get** /api/v2/architect/ivrs/divisionviews | Get a pageable list of basic ivr configuration information objects filterable by query parameters. |
 | [**GetArchitectPrompt**](ArchitectApi.html#getarchitectprompt) | **Get** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
 | [**GetArchitectPromptHistoryHistoryId**](ArchitectApi.html#getarchitectprompthistoryhistoryid) | **Get** /api/v2/architect/prompts/{promptId}/history/{historyId} | Get generated prompt history |
 | [**GetArchitectPromptResource**](ArchitectApi.html#getarchitectpromptresource) | **Get** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Get specified user prompt resource |
@@ -49,7 +51,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectSchedule**](ArchitectApi.html#getarchitectschedule) | **Get** /api/v2/architect/schedules/{scheduleId} | Get a schedule by ID |
 | [**GetArchitectSchedulegroup**](ArchitectApi.html#getarchitectschedulegroup) | **Get** /api/v2/architect/schedulegroups/{scheduleGroupId} | Gets a schedule group by ID |
 | [**GetArchitectSchedulegroups**](ArchitectApi.html#getarchitectschedulegroups) | **Get** /api/v2/architect/schedulegroups | Get a list of schedule groups. |
+| [**GetArchitectSchedulegroupsDivisionviews**](ArchitectApi.html#getarchitectschedulegroupsdivisionviews) | **Get** /api/v2/architect/schedulegroups/divisionviews | Get a pageable list of basic schedule group configuration information objects filterable by query parameters. |
 | [**GetArchitectSchedules**](ArchitectApi.html#getarchitectschedules) | **Get** /api/v2/architect/schedules | Get a list of schedules. |
+| [**GetArchitectSchedulesDivisionviews**](ArchitectApi.html#getarchitectschedulesdivisionviews) | **Get** /api/v2/architect/schedules/divisionviews | Get a pageable list of basic schedule configuration information objects filterable by query parameters. |
 | [**GetArchitectSystemprompt**](ArchitectApi.html#getarchitectsystemprompt) | **Get** /api/v2/architect/systemprompts/{promptId} | Get a system prompt |
 | [**GetArchitectSystempromptHistoryHistoryId**](ArchitectApi.html#getarchitectsystemprompthistoryhistoryid) | **Get** /api/v2/architect/systemprompts/{promptId}/history/{historyId} | Get generated prompt history |
 | [**GetArchitectSystempromptResource**](ArchitectApi.html#getarchitectsystempromptresource) | **Get** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Get a system prompt resource. |
@@ -2056,6 +2060,83 @@ namespace Example
 
 [**EmergencyGroupListing**](EmergencyGroupListing.html)
 
+<a name="getarchitectemergencygroupsdivisionviews"></a>
+
+## [**EmergencyGroupDivisionViewEntityListing**](EmergencyGroupDivisionViewEntityListing.html) GetArchitectEmergencygroupsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+
+
+
+Get a pageable list of basic emergency group objects filterable by query parameters.
+
+This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+Requires ALL permissions: 
+
+* routing:emergencyGroup:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectEmergencygroupsDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
+            var id = new List<string>(); // List<string> | ID of the Emergency Groups to filter by. (optional) 
+            var name = name_example;  // string | Name of the Emergency Group to filter by. (optional) 
+            var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
+
+            try
+            { 
+                // Get a pageable list of basic emergency group objects filterable by query parameters.
+                EmergencyGroupDivisionViewEntityListing result = apiInstance.GetArchitectEmergencygroupsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectEmergencygroupsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
+| **id** | [**List<string>**](string.html)| ID of the Emergency Groups to filter by. | [optional]  |
+| **name** | **string**| Name of the Emergency Group to filter by. | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| List of divisionIds on which to filter. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmergencyGroupDivisionViewEntityListing**](EmergencyGroupDivisionViewEntityListing.html)
+
 <a name="getarchitectgrammar"></a>
 
 ## [**Grammar**](Grammar.html) GetArchitectGrammar (string grammarId, bool? includeFileUrls = null)
@@ -2412,6 +2493,81 @@ namespace Example
 ### Return type
 
 [**IVREntityListing**](IVREntityListing.html)
+
+<a name="getarchitectivrsdivisionviews"></a>
+
+## [**IVRDivisionViewEntityListing**](IVRDivisionViewEntityListing.html) GetArchitectIvrsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+
+
+
+Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+
+Requires ALL permissions: 
+
+* routing:callRoute:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectIvrsDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
+            var id = new List<string>(); // List<string> | ID of the IVR to filter by. (optional) 
+            var name = name_example;  // string | Name of the IVR to filter by. (optional) 
+            var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
+
+            try
+            { 
+                // Get a pageable list of basic ivr configuration information objects filterable by query parameters.
+                IVRDivisionViewEntityListing result = apiInstance.GetArchitectIvrsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectIvrsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
+| **id** | [**List<string>**](string.html)| ID of the IVR to filter by. | [optional]  |
+| **name** | **string**| Name of the IVR to filter by. | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| List of divisionIds on which to filter. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IVRDivisionViewEntityListing**](IVRDivisionViewEntityListing.html)
 
 <a name="getarchitectprompt"></a>
 
@@ -2963,6 +3119,81 @@ namespace Example
 
 [**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html)
 
+<a name="getarchitectschedulegroupsdivisionviews"></a>
+
+## [**ScheduleGroupDivisionViewEntityListing**](ScheduleGroupDivisionViewEntityListing.html) GetArchitectSchedulegroupsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+
+
+
+Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+
+Requires ALL permissions: 
+
+* routing:scheduleGroup:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectSchedulegroupsDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
+            var id = new List<string>(); // List<string> | ID of the schedule group to filter by. (optional) 
+            var name = name_example;  // string | Name of the schedule group to filter by. (optional) 
+            var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
+
+            try
+            { 
+                // Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
+                ScheduleGroupDivisionViewEntityListing result = apiInstance.GetArchitectSchedulegroupsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectSchedulegroupsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
+| **id** | [**List<string>**](string.html)| ID of the schedule group to filter by. | [optional]  |
+| **name** | **string**| Name of the schedule group to filter by. | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| List of divisionIds on which to filter. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScheduleGroupDivisionViewEntityListing**](ScheduleGroupDivisionViewEntityListing.html)
+
 <a name="getarchitectschedules"></a>
 
 ## [**ScheduleEntityListing**](ScheduleEntityListing.html) GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
@@ -3035,6 +3266,81 @@ namespace Example
 ### Return type
 
 [**ScheduleEntityListing**](ScheduleEntityListing.html)
+
+<a name="getarchitectschedulesdivisionviews"></a>
+
+## [**ScheduleDivisionViewEntityListing**](ScheduleDivisionViewEntityListing.html) GetArchitectSchedulesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+
+
+
+Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+
+Requires ALL permissions: 
+
+* routing:schedule:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectSchedulesDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
+            var id = new List<string>(); // List<string> | ID of the schedule group to filter by. (optional) 
+            var name = name_example;  // string | Name of the schedule group to filter by. (optional) 
+            var divisionId = new List<string>(); // List<string> | List of divisionIds on which to filter. (optional) 
+
+            try
+            { 
+                // Get a pageable list of basic schedule configuration information objects filterable by query parameters.
+                ScheduleDivisionViewEntityListing result = apiInstance.GetArchitectSchedulesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectSchedulesDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
+| **id** | [**List<string>**](string.html)| ID of the schedule group to filter by. | [optional]  |
+| **name** | **string**| Name of the schedule group to filter by. | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| List of divisionIds on which to filter. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScheduleDivisionViewEntityListing**](ScheduleDivisionViewEntityListing.html)
 
 <a name="getarchitectsystemprompt"></a>
 
