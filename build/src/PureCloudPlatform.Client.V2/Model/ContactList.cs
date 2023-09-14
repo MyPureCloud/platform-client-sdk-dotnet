@@ -39,7 +39,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutomaticTimeZoneMapping">Indicates if automatic time zone mapping is to be used for this ContactList..</param>
         /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true..</param>
         /// <param name="ColumnDataTypeSpecifications">The settings of the columns selected for dynamic queueing.</param>
-        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications = null)
+        /// <param name="TrimWhitespace">Whether to trim white space when importing a contactlist csv file, default value = true.</param>
+        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications = null, bool? TrimWhitespace = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -53,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
             this.ZipCodeColumnName = ZipCodeColumnName;
             this.ColumnDataTypeSpecifications = ColumnDataTypeSpecifications;
+            this.TrimWhitespace = TrimWhitespace;
             
         }
         
@@ -211,6 +213,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether to trim white space when importing a contactlist csv file, default value = true
+        /// </summary>
+        /// <value>Whether to trim white space when importing a contactlist csv file, default value = true</value>
+        [DataMember(Name="trimWhitespace", EmitDefaultValue=false)]
+        public bool? TrimWhitespace { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -244,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
             sb.Append("  ZipCodeColumnName: ").Append(ZipCodeColumnName).Append("\n");
             sb.Append("  ColumnDataTypeSpecifications: ").Append(ColumnDataTypeSpecifications).Append("\n");
+            sb.Append("  TrimWhitespace: ").Append(TrimWhitespace).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -371,6 +383,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ColumnDataTypeSpecifications.SequenceEqual(other.ColumnDataTypeSpecifications)
                 ) &&
                 (
+                    this.TrimWhitespace == other.TrimWhitespace ||
+                    this.TrimWhitespace != null &&
+                    this.TrimWhitespace.Equals(other.TrimWhitespace)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -438,6 +455,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ColumnDataTypeSpecifications != null)
                     hash = hash * 59 + this.ColumnDataTypeSpecifications.GetHashCode();
+
+                if (this.TrimWhitespace != null)
+                    hash = hash * 59 + this.TrimWhitespace.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

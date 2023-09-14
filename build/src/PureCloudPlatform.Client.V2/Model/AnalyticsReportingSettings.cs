@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="PiiMaskingEnabled">Indication of whether or not personal data is masked in data export and the Analytics/Reporting UI.</param>
         /// <param name="QueueAgentAccessObfuscation">Indication of whether or not to obfuscate export data from the Queue Agent Details view based on User ACL.</param>
-        public AnalyticsReportingSettings(bool? PiiMaskingEnabled = null, bool? QueueAgentAccessObfuscation = null)
+        /// <param name="MyInteractionsPiiMaskingEnabled">Indicates whether PII data is masked in My Interaction export and the Analytics/Reporting UI.</param>
+        public AnalyticsReportingSettings(bool? PiiMaskingEnabled = null, bool? QueueAgentAccessObfuscation = null, bool? MyInteractionsPiiMaskingEnabled = null)
         {
             this.PiiMaskingEnabled = PiiMaskingEnabled;
             this.QueueAgentAccessObfuscation = QueueAgentAccessObfuscation;
+            this.MyInteractionsPiiMaskingEnabled = MyInteractionsPiiMaskingEnabled;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? QueueAgentAccessObfuscation { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates whether PII data is masked in My Interaction export and the Analytics/Reporting UI
+        /// </summary>
+        /// <value>Indicates whether PII data is masked in My Interaction export and the Analytics/Reporting UI</value>
+        [DataMember(Name="myInteractionsPiiMaskingEnabled", EmitDefaultValue=false)]
+        public bool? MyInteractionsPiiMaskingEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  PiiMaskingEnabled: ").Append(PiiMaskingEnabled).Append("\n");
             sb.Append("  QueueAgentAccessObfuscation: ").Append(QueueAgentAccessObfuscation).Append("\n");
+            sb.Append("  MyInteractionsPiiMaskingEnabled: ").Append(MyInteractionsPiiMaskingEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueAgentAccessObfuscation == other.QueueAgentAccessObfuscation ||
                     this.QueueAgentAccessObfuscation != null &&
                     this.QueueAgentAccessObfuscation.Equals(other.QueueAgentAccessObfuscation)
+                ) &&
+                (
+                    this.MyInteractionsPiiMaskingEnabled == other.MyInteractionsPiiMaskingEnabled ||
+                    this.MyInteractionsPiiMaskingEnabled != null &&
+                    this.MyInteractionsPiiMaskingEnabled.Equals(other.MyInteractionsPiiMaskingEnabled)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueueAgentAccessObfuscation != null)
                     hash = hash * 59 + this.QueueAgentAccessObfuscation.GetHashCode();
+
+                if (this.MyInteractionsPiiMaskingEnabled != null)
+                    hash = hash * 59 + this.MyInteractionsPiiMaskingEnabled.GetHashCode();
 
                 return hash;
             }

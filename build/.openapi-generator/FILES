@@ -402,6 +402,7 @@ docs/BuShortTermForecastListItem.md
 docs/BuShortTermForecastListing.md
 docs/BuShortTermForecastReference.md
 docs/BuShortTermForecastingSettings.md
+docs/BuUpdateAgentScheduleShift.md
 docs/BuUpdateAgentScheduleUploadSchema.md
 docs/BulkCallbackDisconnectRequest.md
 docs/BulkCallbackPatchRequest.md
@@ -608,6 +609,11 @@ docs/Condition.md
 docs/ConditionalGroupRouting.md
 docs/ConditionalGroupRoutingRule.md
 docs/ConfigurationOverrides.md
+docs/ConfusionDetails.md
+docs/ConfusionInfo.md
+docs/ConfusionIntentDetails.md
+docs/ConfusionIntentInfo.md
+docs/ConfusionUtterance.md
 docs/ConnectRate.md
 docs/ConnectedEdge.md
 docs/ConnectedQueue.md
@@ -1811,6 +1817,14 @@ docs/FlowEntityListing.md
 docs/FlowExecutionDataQueryResult.md
 docs/FlowExecutionLaunchRequest.md
 docs/FlowExecutionLaunchResponse.md
+docs/FlowHealth.md
+docs/FlowHealthErrorInfo.md
+docs/FlowHealthIntent.md
+docs/FlowHealthIntentInfo.md
+docs/FlowHealthIntentUtterance.md
+docs/FlowHealthIntentVersionInfo.md
+docs/FlowHealthUtterance.md
+docs/FlowHealthVersionInfo.md
 docs/FlowMetricsTopicFlowMetricRecord.md
 docs/FlowMetricsTopicFlowOutcome.md
 docs/FlowMetricsTopicFlowProposedAgent.md
@@ -2199,6 +2213,9 @@ docs/GetFlowHistoryHistoryId-example.txt
 docs/GetFlowLatestconfiguration-example.txt
 docs/GetFlowVersion-example.txt
 docs/GetFlowVersionConfiguration-example.txt
+docs/GetFlowVersionHealth-example.txt
+docs/GetFlowVersionIntentHealth-example.txt
+docs/GetFlowVersionIntentUtteranceHealth-example.txt
 docs/GetFlowVersions-example.txt
 docs/GetFlows-example.txt
 docs/GetFlowsDatatable-example.txt
@@ -3022,6 +3039,7 @@ docs/HeadNotificationsChannel-example.txt
 docs/HeadTokensMe-example.txt
 docs/HeadcountForecast.md
 docs/HeadcountInterval.md
+docs/HealthInfo.md
 docs/HelpLink.md
 docs/HelpSettings.md
 docs/HistoricalAdherenceActuals.md
@@ -3417,6 +3435,7 @@ docs/LearningModuleInformStep.md
 docs/LearningModuleInformStepRequest.md
 docs/LearningModuleJobRequest.md
 docs/LearningModuleJobResponse.md
+docs/LearningModulePublishRequest.md
 docs/LearningModulePublishResponse.md
 docs/LearningModuleReassignSummary.md
 docs/LearningModuleRequest.md
@@ -3472,6 +3491,9 @@ docs/LocalDateRange.md
 docs/LocalEncryptionConfiguration.md
 docs/LocalEncryptionKeyRequest.md
 docs/LocalTime.md
+docs/LocaleFlowVersionInfo.md
+docs/LocaleHealth.md
+docs/LocaleInfo.md
 docs/LocalizedLabels.md
 docs/Location.md
 docs/LocationAddress.md
@@ -3787,6 +3809,7 @@ docs/OutcomeQuantileCondition.md
 docs/OutcomeRef.md
 docs/OutcomeRefRequest.md
 docs/OutcomeScoresResult.md
+docs/OutlierInfo.md
 docs/OverallBestPoints.md
 docs/OverallBestPointsItem.md
 docs/PINConfiguration.md
@@ -6919,6 +6942,7 @@ src/PureCloudPlatform.Client.V2/Model/BuShortTermForecastListItem.cs
 src/PureCloudPlatform.Client.V2/Model/BuShortTermForecastListing.cs
 src/PureCloudPlatform.Client.V2/Model/BuShortTermForecastReference.cs
 src/PureCloudPlatform.Client.V2/Model/BuShortTermForecastingSettings.cs
+src/PureCloudPlatform.Client.V2/Model/BuUpdateAgentScheduleShift.cs
 src/PureCloudPlatform.Client.V2/Model/BuUpdateAgentScheduleUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/BulkCallbackDisconnectRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkCallbackPatchRequest.cs
@@ -7119,6 +7143,11 @@ src/PureCloudPlatform.Client.V2/Model/Condition.cs
 src/PureCloudPlatform.Client.V2/Model/ConditionalGroupRouting.cs
 src/PureCloudPlatform.Client.V2/Model/ConditionalGroupRoutingRule.cs
 src/PureCloudPlatform.Client.V2/Model/ConfigurationOverrides.cs
+src/PureCloudPlatform.Client.V2/Model/ConfusionDetails.cs
+src/PureCloudPlatform.Client.V2/Model/ConfusionInfo.cs
+src/PureCloudPlatform.Client.V2/Model/ConfusionIntentDetails.cs
+src/PureCloudPlatform.Client.V2/Model/ConfusionIntentInfo.cs
+src/PureCloudPlatform.Client.V2/Model/ConfusionUtterance.cs
 src/PureCloudPlatform.Client.V2/Model/ConnectRate.cs
 src/PureCloudPlatform.Client.V2/Model/ConnectedEdge.cs
 src/PureCloudPlatform.Client.V2/Model/ConnectedQueue.cs
@@ -8060,6 +8089,14 @@ src/PureCloudPlatform.Client.V2/Model/FlowEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionDataQueryResult.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionLaunchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionLaunchResponse.cs
+src/PureCloudPlatform.Client.V2/Model/FlowHealth.cs
+src/PureCloudPlatform.Client.V2/Model/FlowHealthErrorInfo.cs
+src/PureCloudPlatform.Client.V2/Model/FlowHealthIntent.cs
+src/PureCloudPlatform.Client.V2/Model/FlowHealthIntentInfo.cs
+src/PureCloudPlatform.Client.V2/Model/FlowHealthIntentUtterance.cs
+src/PureCloudPlatform.Client.V2/Model/FlowHealthIntentVersionInfo.cs
+src/PureCloudPlatform.Client.V2/Model/FlowHealthUtterance.cs
+src/PureCloudPlatform.Client.V2/Model/FlowHealthVersionInfo.cs
 src/PureCloudPlatform.Client.V2/Model/FlowMetricsTopicFlowMetricRecord.cs
 src/PureCloudPlatform.Client.V2/Model/FlowMetricsTopicFlowOutcome.cs
 src/PureCloudPlatform.Client.V2/Model/FlowMetricsTopicFlowProposedAgent.cs
@@ -8167,6 +8204,7 @@ src/PureCloudPlatform.Client.V2/Model/GuestMemberInfo.cs
 src/PureCloudPlatform.Client.V2/Model/GuestResponseCategory.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountForecast.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountInterval.cs
+src/PureCloudPlatform.Client.V2/Model/HealthInfo.cs
 src/PureCloudPlatform.Client.V2/Model/HelpLink.cs
 src/PureCloudPlatform.Client.V2/Model/HelpSettings.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalAdherenceActuals.cs
@@ -8546,6 +8584,7 @@ src/PureCloudPlatform.Client.V2/Model/LearningModuleInformStep.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleInformStepRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleJobResponse.cs
+src/PureCloudPlatform.Client.V2/Model/LearningModulePublishRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModulePublishResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleReassignSummary.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleRequest.cs
@@ -8599,6 +8638,9 @@ src/PureCloudPlatform.Client.V2/Model/LocalDateRange.cs
 src/PureCloudPlatform.Client.V2/Model/LocalEncryptionConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/LocalEncryptionKeyRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LocalTime.cs
+src/PureCloudPlatform.Client.V2/Model/LocaleFlowVersionInfo.cs
+src/PureCloudPlatform.Client.V2/Model/LocaleHealth.cs
+src/PureCloudPlatform.Client.V2/Model/LocaleInfo.cs
 src/PureCloudPlatform.Client.V2/Model/LocalizedLabels.cs
 src/PureCloudPlatform.Client.V2/Model/Location.cs
 src/PureCloudPlatform.Client.V2/Model/LocationAddress.cs
@@ -8896,6 +8938,7 @@ src/PureCloudPlatform.Client.V2/Model/OutcomeQuantileCondition.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeRef.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeRefRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeScoresResult.cs
+src/PureCloudPlatform.Client.V2/Model/OutlierInfo.cs
 src/PureCloudPlatform.Client.V2/Model/OverallBestPoints.cs
 src/PureCloudPlatform.Client.V2/Model/OverallBestPointsItem.cs
 src/PureCloudPlatform.Client.V2/Model/PINConfiguration.cs

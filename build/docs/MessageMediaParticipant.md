@@ -49,6 +49,7 @@ title: MessageMediaParticipant
 | **RecipientType** | **string** | The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type. | [optional] |
 | **Authenticated** | **bool?** | If true, the participant member is authenticated. | [optional] |
 | **MonitoredParticipantId** | **string** | The ID of the participant being monitored when performing a message monitor. | [optional] |
+| **MonitoredParticipant** | [**AddressableEntityRef**](AddressableEntityRef.html) | The participant being monitored when performing a message monitor. | [optional] |
 {: class="table table-striped"}
 
 

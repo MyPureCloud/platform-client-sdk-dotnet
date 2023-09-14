@@ -1687,6 +1687,96 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> GetFlowVersionConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
+        /// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="language">Language to filter for (optional)</param>
+        /// <returns>FlowHealth</returns>
+        
+        FlowHealth GetFlowVersionHealth (string flowId, string versionId, string language = null);
+
+        /// <summary>
+        /// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="language">Language to filter for (optional)</param>
+        /// <returns>ApiResponse of FlowHealth</returns>
+        
+        ApiResponse<FlowHealth> GetFlowVersionHealthWithHttpInfo (string flowId, string versionId, string language = null);
+
+        /// <summary>
+        /// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>FlowHealthIntent</returns>
+        
+        FlowHealthIntent GetFlowVersionIntentHealth (string flowId, string versionId, string intentId, string language);
+
+        /// <summary>
+        /// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>ApiResponse of FlowHealthIntent</returns>
+        
+        ApiResponse<FlowHealthIntent> GetFlowVersionIntentHealthWithHttpInfo (string flowId, string versionId, string intentId, string language);
+
+        /// <summary>
+        /// Get health metrics associated with a specific utterance of an intent.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="utteranceId">Utterance ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>FlowHealthUtterance</returns>
+        
+        FlowHealthUtterance GetFlowVersionIntentUtteranceHealth (string flowId, string versionId, string intentId, string utteranceId, string language);
+
+        /// <summary>
+        /// Get health metrics associated with a specific utterance of an intent.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="utteranceId">Utterance ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>ApiResponse of FlowHealthUtterance</returns>
+        
+        ApiResponse<FlowHealthUtterance> GetFlowVersionIntentUtteranceHealthWithHttpInfo (string flowId, string versionId, string intentId, string utteranceId, string language);
+
+        /// <summary>
         /// Get flow version list
         /// </summary>
         /// <remarks>
@@ -5265,6 +5355,96 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowVersionConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
+
+        /// <summary>
+        /// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="language">Language to filter for (optional)</param>
+        /// <returns>Task of FlowHealth</returns>
+        
+        System.Threading.Tasks.Task<FlowHealth> GetFlowVersionHealthAsync (string flowId, string versionId, string language = null);
+
+        /// <summary>
+        /// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="language">Language to filter for (optional)</param>
+        /// <returns>Task of ApiResponse (FlowHealth)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowHealth>> GetFlowVersionHealthAsyncWithHttpInfo (string flowId, string versionId, string language = null);
+
+        /// <summary>
+        /// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>Task of FlowHealthIntent</returns>
+        
+        System.Threading.Tasks.Task<FlowHealthIntent> GetFlowVersionIntentHealthAsync (string flowId, string versionId, string intentId, string language);
+
+        /// <summary>
+        /// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>Task of ApiResponse (FlowHealthIntent)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowHealthIntent>> GetFlowVersionIntentHealthAsyncWithHttpInfo (string flowId, string versionId, string intentId, string language);
+
+        /// <summary>
+        /// Get health metrics associated with a specific utterance of an intent.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="utteranceId">Utterance ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>Task of FlowHealthUtterance</returns>
+        
+        System.Threading.Tasks.Task<FlowHealthUtterance> GetFlowVersionIntentUtteranceHealthAsync (string flowId, string versionId, string intentId, string utteranceId, string language);
+
+        /// <summary>
+        /// Get health metrics associated with a specific utterance of an intent.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="utteranceId">Utterance ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>Task of ApiResponse (FlowHealthUtterance)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowHealthUtterance>> GetFlowVersionIntentUtteranceHealthAsyncWithHttpInfo (string flowId, string versionId, string intentId, string utteranceId, string language);
 
         /// <summary>
         /// Get flow version list
@@ -19714,6 +19894,725 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="language">Language to filter for (optional)</param>
+        /// <returns>FlowHealth</returns>
+        
+        public FlowHealth GetFlowVersionHealth (string flowId, string versionId, string language = null)
+        {
+             ApiResponse<FlowHealth> localVarResponse = GetFlowVersionHealthWithHttpInfo(flowId, versionId, language);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="language">Language to filter for (optional)</param>
+        /// <returns>ApiResponse of FlowHealth</returns>
+        
+        public ApiResponse< FlowHealth > GetFlowVersionHealthWithHttpInfo (string flowId, string versionId, string language = null)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionHealth");
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionHealth");
+
+            var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/health";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionHealth: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionHealth: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowHealth>(localVarStatusCode,
+                localVarHeaders,
+                (FlowHealth) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowHealth)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="language">Language to filter for (optional)</param>
+        /// <returns>Task of FlowHealth</returns>
+        
+        public async System.Threading.Tasks.Task<FlowHealth> GetFlowVersionHealthAsync (string flowId, string versionId, string language = null)
+        {
+             ApiResponse<FlowHealth> localVarResponse = await GetFlowVersionHealthAsyncWithHttpInfo(flowId, versionId, language);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="language">Language to filter for (optional)</param>
+        /// <returns>Task of ApiResponse (FlowHealth)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowHealth>> GetFlowVersionHealthAsyncWithHttpInfo (string flowId, string versionId, string language = null)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionHealth");
+            
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionHealth");
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/health";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionHealth: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionHealth: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowHealth>(localVarStatusCode,
+                localVarHeaders,
+                (FlowHealth) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowHealth)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>FlowHealthIntent</returns>
+        
+        public FlowHealthIntent GetFlowVersionIntentHealth (string flowId, string versionId, string intentId, string language)
+        {
+             ApiResponse<FlowHealthIntent> localVarResponse = GetFlowVersionIntentHealthWithHttpInfo(flowId, versionId, intentId, language);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>ApiResponse of FlowHealthIntent</returns>
+        
+        public ApiResponse< FlowHealthIntent > GetFlowVersionIntentHealthWithHttpInfo (string flowId, string versionId, string intentId, string language)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionIntentHealth");
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionIntentHealth");
+            // verify the required parameter 'intentId' is set
+            if (intentId == null)
+                throw new ApiException(400, "Missing required parameter 'intentId' when calling ArchitectApi->GetFlowVersionIntentHealth");
+            // verify the required parameter 'language' is set
+            if (language == null)
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetFlowVersionIntentHealth");
+
+            var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+            if (intentId != null) localVarPathParams.Add("intentId", this.Configuration.ApiClient.ParameterToString(intentId));
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionIntentHealth: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionIntentHealth: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowHealthIntent>(localVarStatusCode,
+                localVarHeaders,
+                (FlowHealthIntent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowHealthIntent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>Task of FlowHealthIntent</returns>
+        
+        public async System.Threading.Tasks.Task<FlowHealthIntent> GetFlowVersionIntentHealthAsync (string flowId, string versionId, string intentId, string language)
+        {
+             ApiResponse<FlowHealthIntent> localVarResponse = await GetFlowVersionIntentHealthAsyncWithHttpInfo(flowId, versionId, intentId, language);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>Task of ApiResponse (FlowHealthIntent)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowHealthIntent>> GetFlowVersionIntentHealthAsyncWithHttpInfo (string flowId, string versionId, string intentId, string language)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionIntentHealth");
+            
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionIntentHealth");
+            
+            // verify the required parameter 'intentId' is set
+            if (intentId == null)
+                throw new ApiException(400, "Missing required parameter 'intentId' when calling ArchitectApi->GetFlowVersionIntentHealth");
+            
+            // verify the required parameter 'language' is set
+            if (language == null)
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetFlowVersionIntentHealth");
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+            if (intentId != null) localVarPathParams.Add("intentId", this.Configuration.ApiClient.ParameterToString(intentId));
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionIntentHealth: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionIntentHealth: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowHealthIntent>(localVarStatusCode,
+                localVarHeaders,
+                (FlowHealthIntent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowHealthIntent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get health metrics associated with a specific utterance of an intent. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="utteranceId">Utterance ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>FlowHealthUtterance</returns>
+        
+        public FlowHealthUtterance GetFlowVersionIntentUtteranceHealth (string flowId, string versionId, string intentId, string utteranceId, string language)
+        {
+             ApiResponse<FlowHealthUtterance> localVarResponse = GetFlowVersionIntentUtteranceHealthWithHttpInfo(flowId, versionId, intentId, utteranceId, language);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get health metrics associated with a specific utterance of an intent. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="utteranceId">Utterance ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>ApiResponse of FlowHealthUtterance</returns>
+        
+        public ApiResponse< FlowHealthUtterance > GetFlowVersionIntentUtteranceHealthWithHttpInfo (string flowId, string versionId, string intentId, string utteranceId, string language)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            // verify the required parameter 'intentId' is set
+            if (intentId == null)
+                throw new ApiException(400, "Missing required parameter 'intentId' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            // verify the required parameter 'utteranceId' is set
+            if (utteranceId == null)
+                throw new ApiException(400, "Missing required parameter 'utteranceId' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            // verify the required parameter 'language' is set
+            if (language == null)
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+
+            var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+            if (intentId != null) localVarPathParams.Add("intentId", this.Configuration.ApiClient.ParameterToString(intentId));
+            if (utteranceId != null) localVarPathParams.Add("utteranceId", this.Configuration.ApiClient.ParameterToString(utteranceId));
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionIntentUtteranceHealth: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionIntentUtteranceHealth: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowHealthUtterance>(localVarStatusCode,
+                localVarHeaders,
+                (FlowHealthUtterance) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowHealthUtterance)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get health metrics associated with a specific utterance of an intent. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="utteranceId">Utterance ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>Task of FlowHealthUtterance</returns>
+        
+        public async System.Threading.Tasks.Task<FlowHealthUtterance> GetFlowVersionIntentUtteranceHealthAsync (string flowId, string versionId, string intentId, string utteranceId, string language)
+        {
+             ApiResponse<FlowHealthUtterance> localVarResponse = await GetFlowVersionIntentUtteranceHealthAsyncWithHttpInfo(flowId, versionId, intentId, utteranceId, language);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get health metrics associated with a specific utterance of an intent. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID.</param>
+        /// <param name="versionId">Version ID.</param>
+        /// <param name="intentId">Intent ID.</param>
+        /// <param name="utteranceId">Utterance ID.</param>
+        /// <param name="language">Language to filter for</param>
+        /// <returns>Task of ApiResponse (FlowHealthUtterance)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowHealthUtterance>> GetFlowVersionIntentUtteranceHealthAsyncWithHttpInfo (string flowId, string versionId, string intentId, string utteranceId, string language)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            
+            // verify the required parameter 'intentId' is set
+            if (intentId == null)
+                throw new ApiException(400, "Missing required parameter 'intentId' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            
+            // verify the required parameter 'utteranceId' is set
+            if (utteranceId == null)
+                throw new ApiException(400, "Missing required parameter 'utteranceId' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            
+            // verify the required parameter 'language' is set
+            if (language == null)
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+            if (intentId != null) localVarPathParams.Add("intentId", this.Configuration.ApiClient.ParameterToString(intentId));
+            if (utteranceId != null) localVarPathParams.Add("utteranceId", this.Configuration.ApiClient.ParameterToString(utteranceId));
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionIntentUtteranceHealth: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowVersionIntentUtteranceHealth: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowHealthUtterance>(localVarStatusCode,
+                localVarHeaders,
+                (FlowHealthUtterance) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowHealthUtterance)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

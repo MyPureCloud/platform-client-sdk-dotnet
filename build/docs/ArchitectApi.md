@@ -64,6 +64,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowLatestconfiguration**](ArchitectApi.html#getflowlatestconfiguration) | **Get** /api/v2/flows/{flowId}/latestconfiguration | Get the latest configuration for flow |
 | [**GetFlowVersion**](ArchitectApi.html#getflowversion) | **Get** /api/v2/flows/{flowId}/versions/{versionId} | Get flow version |
 | [**GetFlowVersionConfiguration**](ArchitectApi.html#getflowversionconfiguration) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Create flow version configuration |
+| [**GetFlowVersionHealth**](ArchitectApi.html#getflowversionhealth) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/health | Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. |
+| [**GetFlowVersionIntentHealth**](ArchitectApi.html#getflowversionintenthealth) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health | Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. |
+| [**GetFlowVersionIntentUtteranceHealth**](ArchitectApi.html#getflowversionintentutterancehealth) | **Get** /api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health | Get health metrics associated with a specific utterance of an intent. |
 | [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **Get** /api/v2/flows/{flowId}/versions | Get flow version list |
 | [**GetFlows**](ArchitectApi.html#getflows) | **Get** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
 | [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **Get** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by id |
@@ -4029,6 +4032,213 @@ namespace Example
 ### Return type
 
 **Object**
+
+<a name="getflowversionhealth"></a>
+
+## [**FlowHealth**](FlowHealth.html) GetFlowVersionHealth (string flowId, string versionId, string language = null)
+
+
+
+Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+
+Requires ANY permissions: 
+
+* architect:flow:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowVersionHealthExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID.
+            var versionId = versionId_example;  // string | Version ID.
+            var language = language_example;  // string | Language to filter for (optional) 
+
+            try
+            { 
+                // Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
+                FlowHealth result = apiInstance.GetFlowVersionHealth(flowId, versionId, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowVersionHealth: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID. |  |
+| **versionId** | **string**| Version ID. |  |
+| **language** | **string**| Language to filter for | [optional] <br />**Values**: en-us, en-gb, en-au, en-za, en-nz, en-ie, fr-ca, fr-fr, es-us, es-es, es-mx, de-de, it-it, pt-br, pt-pt, nl-nl |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowHealth**](FlowHealth.html)
+
+<a name="getflowversionintenthealth"></a>
+
+## [**FlowHealthIntent**](FlowHealthIntent.html) GetFlowVersionIntentHealth (string flowId, string versionId, string intentId, string language)
+
+
+
+Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+
+Requires ANY permissions: 
+
+* architect:flow:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowVersionIntentHealthExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID.
+            var versionId = versionId_example;  // string | Version ID.
+            var intentId = intentId_example;  // string | Intent ID.
+            var language = language_example;  // string | Language to filter for
+
+            try
+            { 
+                // Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
+                FlowHealthIntent result = apiInstance.GetFlowVersionIntentHealth(flowId, versionId, intentId, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowVersionIntentHealth: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID. |  |
+| **versionId** | **string**| Version ID. |  |
+| **intentId** | **string**| Intent ID. |  |
+| **language** | **string**| Language to filter for | <br />**Values**: en-us, en-gb, en-au, en-za, en-nz, en-ie, fr-ca, fr-fr, es-us, es-es, es-mx, de-de, it-it, pt-br, pt-pt, nl-nl |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowHealthIntent**](FlowHealthIntent.html)
+
+<a name="getflowversionintentutterancehealth"></a>
+
+## [**FlowHealthUtterance**](FlowHealthUtterance.html) GetFlowVersionIntentUtteranceHealth (string flowId, string versionId, string intentId, string utteranceId, string language)
+
+
+
+Get health metrics associated with a specific utterance of an intent.
+
+Requires ANY permissions: 
+
+* architect:flow:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowVersionIntentUtteranceHealthExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID.
+            var versionId = versionId_example;  // string | Version ID.
+            var intentId = intentId_example;  // string | Intent ID.
+            var utteranceId = utteranceId_example;  // string | Utterance ID.
+            var language = language_example;  // string | Language to filter for
+
+            try
+            { 
+                // Get health metrics associated with a specific utterance of an intent.
+                FlowHealthUtterance result = apiInstance.GetFlowVersionIntentUtteranceHealth(flowId, versionId, intentId, utteranceId, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowVersionIntentUtteranceHealth: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID. |  |
+| **versionId** | **string**| Version ID. |  |
+| **intentId** | **string**| Intent ID. |  |
+| **utteranceId** | **string**| Utterance ID. |  |
+| **language** | **string**| Language to filter for | <br />**Values**: en-us, en-gb, en-au, en-za, en-nz, en-ie, fr-ca, fr-fr, es-us, es-es, es-mx, de-de, it-it, pt-br, pt-pt, nl-nl |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowHealthUtterance**](FlowHealthUtterance.html)
 
 <a name="getflowversions"></a>
 

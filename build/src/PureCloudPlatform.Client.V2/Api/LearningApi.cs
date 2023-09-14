@@ -652,9 +652,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The request body (optional)</param>
         /// <returns>LearningModulePublishResponse</returns>
         
-        LearningModulePublishResponse PostLearningModulePublish (string moduleId);
+        LearningModulePublishResponse PostLearningModulePublish (string moduleId, LearningModulePublishRequest body = null);
 
         /// <summary>
         /// Publish a Learning module
@@ -664,9 +665,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The request body (optional)</param>
         /// <returns>ApiResponse of LearningModulePublishResponse</returns>
         
-        ApiResponse<LearningModulePublishResponse> PostLearningModulePublishWithHttpInfo (string moduleId);
+        ApiResponse<LearningModulePublishResponse> PostLearningModulePublishWithHttpInfo (string moduleId, LearningModulePublishRequest body = null);
 
         /// <summary>
         /// Create a new learning module
@@ -1436,9 +1438,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The request body (optional)</param>
         /// <returns>Task of LearningModulePublishResponse</returns>
         
-        System.Threading.Tasks.Task<LearningModulePublishResponse> PostLearningModulePublishAsync (string moduleId);
+        System.Threading.Tasks.Task<LearningModulePublishResponse> PostLearningModulePublishAsync (string moduleId, LearningModulePublishRequest body = null);
 
         /// <summary>
         /// Publish a Learning module
@@ -1448,9 +1451,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The request body (optional)</param>
         /// <returns>Task of ApiResponse (LearningModulePublishResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<LearningModulePublishResponse>> PostLearningModulePublishAsyncWithHttpInfo (string moduleId);
+        System.Threading.Tasks.Task<ApiResponse<LearningModulePublishResponse>> PostLearningModulePublishAsyncWithHttpInfo (string moduleId, LearningModulePublishRequest body = null);
 
         /// <summary>
         /// Create a new learning module
@@ -6499,11 +6503,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The request body (optional)</param>
         /// <returns>LearningModulePublishResponse</returns>
         
-        public LearningModulePublishResponse PostLearningModulePublish (string moduleId)
+        public LearningModulePublishResponse PostLearningModulePublish (string moduleId, LearningModulePublishRequest body = null)
         {
-             ApiResponse<LearningModulePublishResponse> localVarResponse = PostLearningModulePublishWithHttpInfo(moduleId);
+             ApiResponse<LearningModulePublishResponse> localVarResponse = PostLearningModulePublishWithHttpInfo(moduleId, body);
              return localVarResponse.Data;
         }
 
@@ -6513,9 +6518,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The request body (optional)</param>
         /// <returns>ApiResponse of LearningModulePublishResponse</returns>
         
-        public ApiResponse< LearningModulePublishResponse > PostLearningModulePublishWithHttpInfo (string moduleId)
+        public ApiResponse< LearningModulePublishResponse > PostLearningModulePublishWithHttpInfo (string moduleId, LearningModulePublishRequest body = null)
         { 
             // verify the required parameter 'moduleId' is set
             if (moduleId == null)
@@ -6532,6 +6538,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6560,6 +6567,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required
@@ -6599,11 +6611,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The request body (optional)</param>
         /// <returns>Task of LearningModulePublishResponse</returns>
         
-        public async System.Threading.Tasks.Task<LearningModulePublishResponse> PostLearningModulePublishAsync (string moduleId)
+        public async System.Threading.Tasks.Task<LearningModulePublishResponse> PostLearningModulePublishAsync (string moduleId, LearningModulePublishRequest body = null)
         {
-             ApiResponse<LearningModulePublishResponse> localVarResponse = await PostLearningModulePublishAsyncWithHttpInfo(moduleId);
+             ApiResponse<LearningModulePublishResponse> localVarResponse = await PostLearningModulePublishAsyncWithHttpInfo(moduleId, body);
              return localVarResponse.Data;
 
         }
@@ -6614,9 +6627,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The request body (optional)</param>
         /// <returns>Task of ApiResponse (LearningModulePublishResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<LearningModulePublishResponse>> PostLearningModulePublishAsyncWithHttpInfo (string moduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModulePublishResponse>> PostLearningModulePublishAsyncWithHttpInfo (string moduleId, LearningModulePublishRequest body = null)
         { 
             // verify the required parameter 'moduleId' is set
             if (moduleId == null)
@@ -6634,6 +6648,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6662,6 +6677,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required

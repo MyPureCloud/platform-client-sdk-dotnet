@@ -1536,7 +1536,7 @@ namespace Example
 
 <a name="postlearningmodulepublish"></a>
 
-## [**LearningModulePublishResponse**](LearningModulePublishResponse.html) PostLearningModulePublish (string moduleId)
+## [**LearningModulePublishResponse**](LearningModulePublishResponse.html) PostLearningModulePublish (string moduleId, LearningModulePublishRequest body = null)
 
 
 
@@ -1569,11 +1569,12 @@ namespace Example
 
             var apiInstance = new LearningApi();
             var moduleId = moduleId_example;  // string | The ID of the learning module
+            var body = new LearningModulePublishRequest(); // LearningModulePublishRequest | The request body (optional) 
 
             try
             { 
                 // Publish a Learning module
-                LearningModulePublishResponse result = apiInstance.PostLearningModulePublish(moduleId);
+                LearningModulePublishResponse result = apiInstance.PostLearningModulePublish(moduleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1591,6 +1592,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **moduleId** | **string**| The ID of the learning module |  |
+| **body** | [**LearningModulePublishRequest**](LearningModulePublishRequest.html)| The request body | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
