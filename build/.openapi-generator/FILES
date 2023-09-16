@@ -121,6 +121,8 @@ docs/AlertListing.md
 docs/AlertNotification.md
 docs/AlertRequest.md
 docs/AlertRuleProperties.md
+docs/AlertSummary.md
+docs/AlertSummaryEntity.md
 docs/AlertingApi.json
 docs/AlertingApi.md
 docs/AlertingUnreadStatus.md
@@ -512,6 +514,7 @@ docs/CampaignRuleParameters.md
 docs/CampaignSchedule.md
 docs/CampaignSequence.md
 docs/CampaignSequenceEntityListing.md
+docs/CampaignSkillStatistics.md
 docs/CampaignStats.md
 docs/CampaignTimeSlot.md
 docs/Card.md
@@ -547,7 +550,10 @@ docs/ChatMediaParticipant.md
 docs/ChatMediaPolicy.md
 docs/ChatMediaPolicyConditions.md
 docs/ChatMessage.md
+docs/ChatMessageEntityListing.md
+docs/ChatMessageResponse.md
 docs/ChatMessageUser.md
+docs/ChatSendMessageResponse.md
 docs/ChatSettings.md
 docs/Check.md
 docs/ClientApp.md
@@ -986,6 +992,8 @@ docs/CreatePredictorRequest.md
 docs/CreateQueueRequest.md
 docs/CreateResponseAssetRequest.md
 docs/CreateResponseAssetResponse.md
+docs/CreateRoomRequest.md
+docs/CreateRoomResponse.md
 docs/CreateSecureSession.md
 docs/CreateServiceGoalTemplate.md
 docs/CreateShareRequest.md
@@ -1091,6 +1099,10 @@ docs/DeleteAuthorizationDivision-example.txt
 docs/DeleteAuthorizationRole-example.txt
 docs/DeleteAuthorizationSubjectDivisionRole-example.txt
 docs/DeleteAuthorizationSubjectDivisionRole-example.txt
+docs/DeleteChatsRoomMessage-example.txt
+docs/DeleteChatsRoomParticipant-example.txt
+docs/DeleteChatsRoomPinnedmessage-example.txt
+docs/DeleteChatsUserMessage-example.txt
 docs/DeleteCoachingAppointment-example.txt
 docs/DeleteCoachingAppointmentAnnotation-example.txt
 docs/DeleteContentmanagementDocument-example.txt
@@ -2046,7 +2058,14 @@ docs/GetBillingReportsBillableusage-example.txt
 docs/GetBillingTrusteebillingoverviewTrustorOrgId-example.txt
 docs/GetCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/GetChatSettings-example.txt
+docs/GetChatsMessage-example.txt
+docs/GetChatsRoom-example.txt
+docs/GetChatsRoomMessage-example.txt
+docs/GetChatsRoomMessages-example.txt
 docs/GetChatsSettings-example.txt
+docs/GetChatsThreadMessages-example.txt
+docs/GetChatsUserMessage-example.txt
+docs/GetChatsUserMessages-example.txt
 docs/GetCoachingAppointment-example.txt
 docs/GetCoachingAppointmentAnnotation-example.txt
 docs/GetCoachingAppointmentAnnotations-example.txt
@@ -3846,7 +3865,10 @@ docs/PatchCallToAction.md
 docs/PatchCallbackRequest.md
 docs/PatchCallbackResponse.md
 docs/PatchChatSettings-example.txt
+docs/PatchChatsRoom-example.txt
+docs/PatchChatsRoomMessage-example.txt
 docs/PatchChatsSettings-example.txt
+docs/PatchChatsUserMessage-example.txt
 docs/PatchCloseButtonStyleProperties.md
 docs/PatchCoachingAppointment-example.txt
 docs/PatchCoachingAppointmentAnnotation-example.txt
@@ -4039,6 +4061,7 @@ docs/Phrase.md
 docs/PhraseAssociations.md
 docs/PhysicalInterfaceEntityListing.md
 docs/PingIdentity.md
+docs/PinnedMessageRequest.md
 docs/PlanningGroup.md
 docs/PlanningGroupList.md
 docs/PlanningGroupReference.md
@@ -4161,6 +4184,11 @@ docs/PostAuthorizationSubjectDivisionRole-example.txt
 docs/PostAuthorizationSubjectDivisionRole-example.txt
 docs/PostCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/PostCertificateDetails-example.txt
+docs/PostChatsRoomMessages-example.txt
+docs/PostChatsRoomParticipant-example.txt
+docs/PostChatsRoomPinnedmessages-example.txt
+docs/PostChatsRooms-example.txt
+docs/PostChatsUserMessages-example.txt
 docs/PostCoachingAppointmentAnnotations-example.txt
 docs/PostCoachingAppointmentConversations-example.txt
 docs/PostCoachingAppointments-example.txt
@@ -5316,6 +5344,8 @@ docs/Ring.md
 docs/RoleDivision.md
 docs/RoleDivisionGrants.md
 docs/RoleDivisionPair.md
+docs/Room.md
+docs/RoomUpdateRequest.md
 docs/RoutePathRequest.md
 docs/RoutePathResponse.md
 docs/RoutingActivityData.md
@@ -5457,6 +5487,7 @@ docs/SelectedColumns.md
 docs/SelectorEventTrigger.md
 docs/SendAgentlessOutboundMessageRequest.md
 docs/SendAgentlessOutboundMessageResponse.md
+docs/SendMessageBody.md
 docs/SentimentFeedback.md
 docs/SentimentFeedbackEntityListing.md
 docs/SequenceSchedule.md
@@ -6106,6 +6137,7 @@ docs/Video.md
 docs/VideoConferenceDetails.md
 docs/VideoConferenceUpdateTopicParticipantInfo.md
 docs/VideoConferenceUpdateTopicVideoConference.md
+docs/VideoMetadata.md
 docs/ViewFilter.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
@@ -6673,6 +6705,8 @@ src/PureCloudPlatform.Client.V2/Model/AlertListing.cs
 src/PureCloudPlatform.Client.V2/Model/AlertNotification.cs
 src/PureCloudPlatform.Client.V2/Model/AlertRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AlertRuleProperties.cs
+src/PureCloudPlatform.Client.V2/Model/AlertSummary.cs
+src/PureCloudPlatform.Client.V2/Model/AlertSummaryEntity.cs
 src/PureCloudPlatform.Client.V2/Model/AlertingUnreadStatus.cs
 src/PureCloudPlatform.Client.V2/Model/AllTimePoints.cs
 src/PureCloudPlatform.Client.V2/Model/AmazonLexRequest.cs
@@ -7052,6 +7086,7 @@ src/PureCloudPlatform.Client.V2/Model/CampaignRuleParameters.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignSequence.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignSequenceEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignSkillStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignStats.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignTimeSlot.cs
 src/PureCloudPlatform.Client.V2/Model/Card.cs
@@ -7083,7 +7118,10 @@ src/PureCloudPlatform.Client.V2/Model/ChatMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMediaPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMediaPolicyConditions.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMessage.cs
+src/PureCloudPlatform.Client.V2/Model/ChatMessageEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/ChatMessageResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMessageUser.cs
+src/PureCloudPlatform.Client.V2/Model/ChatSendMessageResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChatSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Check.cs
 src/PureCloudPlatform.Client.V2/Model/ClientApp.cs
@@ -7516,6 +7554,8 @@ src/PureCloudPlatform.Client.V2/Model/CreatePredictorRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateQueueRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateResponseAssetRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateResponseAssetResponse.cs
+src/PureCloudPlatform.Client.V2/Model/CreateRoomRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CreateRoomResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateSecureSession.cs
 src/PureCloudPlatform.Client.V2/Model/CreateServiceGoalTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/CreateShareRequest.cs
@@ -9013,6 +9053,7 @@ src/PureCloudPlatform.Client.V2/Model/Phrase.cs
 src/PureCloudPlatform.Client.V2/Model/PhraseAssociations.cs
 src/PureCloudPlatform.Client.V2/Model/PhysicalInterfaceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/PingIdentity.cs
+src/PureCloudPlatform.Client.V2/Model/PinnedMessageRequest.cs
 src/PureCloudPlatform.Client.V2/Model/PlanningGroup.cs
 src/PureCloudPlatform.Client.V2/Model/PlanningGroupList.cs
 src/PureCloudPlatform.Client.V2/Model/PlanningGroupReference.cs
@@ -9465,6 +9506,8 @@ src/PureCloudPlatform.Client.V2/Model/Ring.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivision.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivisionGrants.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivisionPair.cs
+src/PureCloudPlatform.Client.V2/Model/Room.cs
+src/PureCloudPlatform.Client.V2/Model/RoomUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/RoutePathRequest.cs
 src/PureCloudPlatform.Client.V2/Model/RoutePathResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RoutingActivityData.cs
@@ -9598,6 +9641,7 @@ src/PureCloudPlatform.Client.V2/Model/SelectedColumns.cs
 src/PureCloudPlatform.Client.V2/Model/SelectorEventTrigger.cs
 src/PureCloudPlatform.Client.V2/Model/SendAgentlessOutboundMessageRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SendAgentlessOutboundMessageResponse.cs
+src/PureCloudPlatform.Client.V2/Model/SendMessageBody.cs
 src/PureCloudPlatform.Client.V2/Model/SentimentFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/SentimentFeedbackEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SequenceSchedule.cs
@@ -10217,6 +10261,7 @@ src/PureCloudPlatform.Client.V2/Model/Video.cs
 src/PureCloudPlatform.Client.V2/Model/VideoConferenceDetails.cs
 src/PureCloudPlatform.Client.V2/Model/VideoConferenceUpdateTopicParticipantInfo.cs
 src/PureCloudPlatform.Client.V2/Model/VideoConferenceUpdateTopicVideoConference.cs
+src/PureCloudPlatform.Client.V2/Model/VideoMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/ViewFilter.cs
 src/PureCloudPlatform.Client.V2/Model/VisibilityCondition.cs
 src/PureCloudPlatform.Client.V2/Model/VmPairingInfo.cs

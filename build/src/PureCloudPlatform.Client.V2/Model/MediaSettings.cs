@@ -24,12 +24,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EnableAutoAnswer">Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings..</param>
         /// <param name="AlertingTimeoutSeconds">AlertingTimeoutSeconds.</param>
         /// <param name="ServiceLevel">ServiceLevel.</param>
+        /// <param name="AutoAnswerAlertToneSeconds">AutoAnswerAlertToneSeconds.</param>
+        /// <param name="ManualAnswerAlertToneSeconds">ManualAnswerAlertToneSeconds.</param>
         /// <param name="SubTypeSettings">Map of media subtype to media subtype specific settings..</param>
-        public MediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, Dictionary<string, BaseMediaSettings> SubTypeSettings = null)
+        public MediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, BaseMediaSettings> SubTypeSettings = null)
         {
             this.EnableAutoAnswer = EnableAutoAnswer;
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
             this.ServiceLevel = ServiceLevel;
+            this.AutoAnswerAlertToneSeconds = AutoAnswerAlertToneSeconds;
+            this.ManualAnswerAlertToneSeconds = ManualAnswerAlertToneSeconds;
             this.SubTypeSettings = SubTypeSettings;
             
         }
@@ -62,6 +66,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets AutoAnswerAlertToneSeconds
+        /// </summary>
+        [DataMember(Name="autoAnswerAlertToneSeconds", EmitDefaultValue=false)]
+        public double? AutoAnswerAlertToneSeconds { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ManualAnswerAlertToneSeconds
+        /// </summary>
+        [DataMember(Name="manualAnswerAlertToneSeconds", EmitDefaultValue=false)]
+        public double? ManualAnswerAlertToneSeconds { get; set; }
+
+
+
+        /// <summary>
         /// Map of media subtype to media subtype specific settings.
         /// </summary>
         /// <value>Map of media subtype to media subtype specific settings.</value>
@@ -81,6 +101,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EnableAutoAnswer: ").Append(EnableAutoAnswer).Append("\n");
             sb.Append("  AlertingTimeoutSeconds: ").Append(AlertingTimeoutSeconds).Append("\n");
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
+            sb.Append("  AutoAnswerAlertToneSeconds: ").Append(AutoAnswerAlertToneSeconds).Append("\n");
+            sb.Append("  ManualAnswerAlertToneSeconds: ").Append(ManualAnswerAlertToneSeconds).Append("\n");
             sb.Append("  SubTypeSettings: ").Append(SubTypeSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -138,6 +160,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceLevel.Equals(other.ServiceLevel)
                 ) &&
                 (
+                    this.AutoAnswerAlertToneSeconds == other.AutoAnswerAlertToneSeconds ||
+                    this.AutoAnswerAlertToneSeconds != null &&
+                    this.AutoAnswerAlertToneSeconds.Equals(other.AutoAnswerAlertToneSeconds)
+                ) &&
+                (
+                    this.ManualAnswerAlertToneSeconds == other.ManualAnswerAlertToneSeconds ||
+                    this.ManualAnswerAlertToneSeconds != null &&
+                    this.ManualAnswerAlertToneSeconds.Equals(other.ManualAnswerAlertToneSeconds)
+                ) &&
+                (
                     this.SubTypeSettings == other.SubTypeSettings ||
                     this.SubTypeSettings != null &&
                     this.SubTypeSettings.SequenceEqual(other.SubTypeSettings)
@@ -163,6 +195,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
+
+                if (this.AutoAnswerAlertToneSeconds != null)
+                    hash = hash * 59 + this.AutoAnswerAlertToneSeconds.GetHashCode();
+
+                if (this.ManualAnswerAlertToneSeconds != null)
+                    hash = hash * 59 + this.ManualAnswerAlertToneSeconds.GetHashCode();
 
                 if (this.SubTypeSettings != null)
                     hash = hash * 59 + this.SubTypeSettings.GetHashCode();

@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">Queried user.</param>
         /// <param name="MetricData">The list of insights data for each metric of the user.</param>
         /// <param name="OverallData">Overall insights data of the user.</param>
-        public InsightsSummaryUserItem(UserReference User = null, List<InsightsSummaryMetricItem> MetricData = null, InsightsSummaryOverallItem OverallData = null)
+        /// <param name="Ranking">Ranking of the user.</param>
+        public InsightsSummaryUserItem(UserReference User = null, List<InsightsSummaryMetricItem> MetricData = null, InsightsSummaryOverallItem OverallData = null, int? Ranking = null)
         {
             this.User = User;
             this.MetricData = MetricData;
             this.OverallData = OverallData;
+            this.Ranking = Ranking;
             
         }
         
@@ -60,6 +62,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public InsightsSummaryOverallItem OverallData { get; set; }
 
 
+
+        /// <summary>
+        /// Ranking of the user
+        /// </summary>
+        /// <value>Ranking of the user</value>
+        [DataMember(Name="ranking", EmitDefaultValue=false)]
+        public int? Ranking { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  MetricData: ").Append(MetricData).Append("\n");
             sb.Append("  OverallData: ").Append(OverallData).Append("\n");
+            sb.Append("  Ranking: ").Append(Ranking).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +138,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OverallData == other.OverallData ||
                     this.OverallData != null &&
                     this.OverallData.Equals(other.OverallData)
+                ) &&
+                (
+                    this.Ranking == other.Ranking ||
+                    this.Ranking != null &&
+                    this.Ranking.Equals(other.Ranking)
                 );
         }
 
@@ -148,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OverallData != null)
                     hash = hash * 59 + this.OverallData.GetHashCode();
+
+                if (this.Ranking != null)
+                    hash = hash * 59 + this.Ranking.GetHashCode();
 
                 return hash;
             }

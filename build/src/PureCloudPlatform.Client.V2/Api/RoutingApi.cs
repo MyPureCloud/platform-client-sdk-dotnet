@@ -2061,12 +2061,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
-        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
+        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>WrapupCodeEntityListing</returns>
         
-        WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+        WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get list of wrapup codes.
@@ -2079,12 +2079,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
-        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
+        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
         
-        ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+        ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get queues for user
@@ -5593,12 +5593,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
-        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
+        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
         
-        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get list of wrapup codes.
@@ -5611,12 +5611,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
-        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
+        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get queues for user
@@ -23087,14 +23087,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
-        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
+        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>WrapupCodeEntityListing</returns>
         
-        public WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        public WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingWrapupcodesWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, id, name, divisionId);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingWrapupcodesWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
              return localVarResponse.Data;
         }
 
@@ -23107,12 +23107,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
-        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
+        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
         
-        public ApiResponse< WrapupCodeEntityListing > GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        public ApiResponse< WrapupCodeEntityListing > GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/routing/wrapupcodes";
@@ -23151,8 +23151,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
@@ -23202,14 +23202,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
-        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
+        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingWrapupcodesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, id, name, divisionId);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingWrapupcodesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
              return localVarResponse.Data;
 
         }
@@ -23223,12 +23223,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
-        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="name">Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)</param>
+        /// <param name="id">Filter by wrapup code ID(s) (optional)</param>
         /// <param name="divisionId">Filter by division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
         { 
 
             var localVarPath = "/api/v2/routing/wrapupcodes";
@@ -23267,8 +23267,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params

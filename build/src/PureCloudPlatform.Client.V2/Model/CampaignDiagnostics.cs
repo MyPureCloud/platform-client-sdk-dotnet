@@ -81,6 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? TimeZoneRescheduledCallsCount { get; private set; }
 
 
+
+        /// <summary>
+        /// Information regarding the campaign's skills
+        /// </summary>
+        /// <value>Information regarding the campaign's skills</value>
+        [DataMember(Name="campaignSkillStatistics", EmitDefaultValue=false)]
+        public CampaignSkillStatistics CampaignSkillStatistics { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
             sb.Append("  ScheduledInteractionsCount: ").Append(ScheduledInteractionsCount).Append("\n");
             sb.Append("  TimeZoneRescheduledCallsCount: ").Append(TimeZoneRescheduledCallsCount).Append("\n");
+            sb.Append("  CampaignSkillStatistics: ").Append(CampaignSkillStatistics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeZoneRescheduledCallsCount == other.TimeZoneRescheduledCallsCount ||
                     this.TimeZoneRescheduledCallsCount != null &&
                     this.TimeZoneRescheduledCallsCount.Equals(other.TimeZoneRescheduledCallsCount)
+                ) &&
+                (
+                    this.CampaignSkillStatistics == other.CampaignSkillStatistics ||
+                    this.CampaignSkillStatistics != null &&
+                    this.CampaignSkillStatistics.Equals(other.CampaignSkillStatistics)
                 );
         }
 
@@ -196,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeZoneRescheduledCallsCount != null)
                     hash = hash * 59 + this.TimeZoneRescheduledCallsCount.GetHashCode();
+
+                if (this.CampaignSkillStatistics != null)
+                    hash = hash * 59 + this.CampaignSkillStatistics.GetHashCode();
 
                 return hash;
             }

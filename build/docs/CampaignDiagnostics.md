@@ -13,6 +13,7 @@ title: CampaignDiagnostics
 | **OutstandingInteractionsCount** | **int?** | Current number of outstanding interactions on the campaign | [optional] |
 | **ScheduledInteractionsCount** | **int?** | Current number of scheduled interactions on the campaign | [optional] |
 | **TimeZoneRescheduledCallsCount** | **int?** | Current number of time zone rescheduled calls on the campaign | [optional] |
+| **CampaignSkillStatistics** | [**CampaignSkillStatistics**](CampaignSkillStatistics.html) | Information regarding the campaign&#39;s skills | [optional] |
 {: class="table table-striped"}
 
 

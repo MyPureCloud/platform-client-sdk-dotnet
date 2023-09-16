@@ -5105,7 +5105,7 @@ namespace Example
 
 <a name="getroutingwrapupcodes"></a>
 
-## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
 
 
 
@@ -5141,14 +5141,14 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
-            var id = new List<string>(); // List<string> | Filter by wrapup code ID(s) (optional) 
             var name = name_example;  // string | Wrapup code's name ('Sort by' param is ignored unless this field is provided) (optional) 
+            var id = new List<string>(); // List<string> | Filter by wrapup code ID(s) (optional) 
             var divisionId = new List<string>(); // List<string> | Filter by division ID(s) (optional) 
 
             try
             { 
                 // Get list of wrapup codes.
-                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, sortBy, sortOrder, id, name, divisionId);
+                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5169,8 +5169,8 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, id |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
-| **id** | [**List<string>**](string.html)| Filter by wrapup code ID(s) | [optional]  |
 | **name** | **string**| Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) | [optional]  |
+| **id** | [**List<string>**](string.html)| Filter by wrapup code ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Filter by division ID(s) | [optional]  |
 {: class="table table-striped"}
 

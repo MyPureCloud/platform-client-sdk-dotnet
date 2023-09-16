@@ -42,8 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateSnoozedUntil">Timestamp of when the snooze status of the alert should end. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Conditions">The conditions that make up the rule. (required).</param>
         /// <param name="ConversationId">The id of the conversation instance that caused the alert to trigger..</param>
+        /// <param name="AlertSummary">Summary of the alert status of the entities defined in the conditions.  Is set when rule has instance-based or team member based rule predicates.</param>
         /// <param name="RuleUri">RuleUri.</param>
-        public CommonAlert(string Name = null, UserReference User = null, AlertRuleProperties Rule = null, List<AlertNotification> Notifications = null, DateTime? DateStart = null, DateTime? DateEnd = null, bool? Active = null, bool? Unread = null, long? WaitBetweenNotificationMs = null, bool? Muted = null, bool? Snoozed = null, DateTime? DateMutedUntil = null, DateTime? DateSnoozedUntil = null, CommonRuleConditions Conditions = null, string ConversationId = null, string RuleUri = null)
+        public CommonAlert(string Name = null, UserReference User = null, AlertRuleProperties Rule = null, List<AlertNotification> Notifications = null, DateTime? DateStart = null, DateTime? DateEnd = null, bool? Active = null, bool? Unread = null, long? WaitBetweenNotificationMs = null, bool? Muted = null, bool? Snoozed = null, DateTime? DateMutedUntil = null, DateTime? DateSnoozedUntil = null, CommonRuleConditions Conditions = null, string ConversationId = null, AlertSummary AlertSummary = null, string RuleUri = null)
         {
             this.Name = Name;
             this.User = User;
@@ -60,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateSnoozedUntil = DateSnoozedUntil;
             this.Conditions = Conditions;
             this.ConversationId = ConversationId;
+            this.AlertSummary = AlertSummary;
             this.RuleUri = RuleUri;
             
         }
@@ -210,6 +212,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Summary of the alert status of the entities defined in the conditions.  Is set when rule has instance-based or team member based rule predicates
+        /// </summary>
+        /// <value>Summary of the alert status of the entities defined in the conditions.  Is set when rule has instance-based or team member based rule predicates</value>
+        [DataMember(Name="alertSummary", EmitDefaultValue=false)]
+        public AlertSummary AlertSummary { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets RuleUri
         /// </summary>
         [DataMember(Name="ruleUri", EmitDefaultValue=false)]
@@ -250,6 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateSnoozedUntil: ").Append(DateSnoozedUntil).Append("\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            sb.Append("  AlertSummary: ").Append(AlertSummary).Append("\n");
             sb.Append("  RuleUri: ").Append(RuleUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -373,6 +385,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationId.Equals(other.ConversationId)
                 ) &&
                 (
+                    this.AlertSummary == other.AlertSummary ||
+                    this.AlertSummary != null &&
+                    this.AlertSummary.Equals(other.AlertSummary)
+                ) &&
+                (
                     this.RuleUri == other.RuleUri ||
                     this.RuleUri != null &&
                     this.RuleUri.Equals(other.RuleUri)
@@ -442,6 +459,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
+
+                if (this.AlertSummary != null)
+                    hash = hash * 59 + this.AlertSummary.GetHashCode();
 
                 if (this.RuleUri != null)
                     hash = hash * 59 + this.RuleUri.GetHashCode();

@@ -23,6 +23,7 @@ title: CommonAlert
 | **DateSnoozedUntil** | **DateTime?** | Timestamp of when the snooze status of the alert should end. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **Conditions** | [**CommonRuleConditions**](CommonRuleConditions.html) | The conditions that make up the rule. | |
 | **ConversationId** | **string** | The id of the conversation instance that caused the alert to trigger. | [optional] |
+| **AlertSummary** | [**AlertSummary**](AlertSummary.html) | Summary of the alert status of the entities defined in the conditions.  Is set when rule has instance-based or team member based rule predicates | [optional] |
 | **RuleUri** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

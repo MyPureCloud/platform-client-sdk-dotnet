@@ -45,6 +45,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Resolved { get; private set; }
 
 
+
+        /// <summary>
+        /// The unit of the detected amount of money entity, e.g. EUR, USD.
+        /// </summary>
+        /// <value>The unit of the detected amount of money entity, e.g. EUR, USD.</value>
+        [DataMember(Name="unit", EmitDefaultValue=false)]
+        public string Unit { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Raw: ").Append(Raw).Append("\n");
             sb.Append("  Resolved: ").Append(Resolved).Append("\n");
+            sb.Append("  Unit: ").Append(Unit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,6 +115,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Resolved == other.Resolved ||
                     this.Resolved != null &&
                     this.Resolved.Equals(other.Resolved)
+                ) &&
+                (
+                    this.Unit == other.Unit ||
+                    this.Unit != null &&
+                    this.Unit.Equals(other.Unit)
                 );
         }
 
@@ -124,6 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Resolved != null)
                     hash = hash * 59 + this.Resolved.GetHashCode();
+
+                if (this.Unit != null)
+                    hash = hash * 59 + this.Unit.GetHashCode();
 
                 return hash;
             }

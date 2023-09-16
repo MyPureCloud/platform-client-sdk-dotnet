@@ -1557,7 +1557,7 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to userId]<br />**Values**: userId, dateCreated |
 | **state** | **string**| Filter by state | [optional] <br />**Values**: FULFILLED, PENDING, READY, PROCESSING, CANCELLED, FAILED |
 | **showOnlyMyJobs** | **bool?**| Show only my jobs | [optional]  |
-| **jobType** | **string**| Job Type (Can be left empty for both) | [optional] <br />**Values**: DELETE, EXPORT |
+| **jobType** | **string**| Job Type (Can be left empty for both) | [optional] <br />**Values**: ARCHIVE, DELETE, EXPORT |
 | **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 {: class="table table-striped"}
