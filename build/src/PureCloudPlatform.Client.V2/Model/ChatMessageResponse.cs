@@ -38,7 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AttachmentDeleted">If message's attachment was deleted.</param>
         /// <param name="FileUri">URI of file attachment.</param>
         /// <param name="Thread">The id for a thread this message corresponds to (required).</param>
-        public ChatMessageResponse(string Id = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ToJid = null, string Jid = null, string Body = null, Dictionary<string, string> Mentions = null, bool? Edited = null, bool? AttachmentDeleted = null, string FileUri = null, Entity Thread = null)
+        /// <param name="User">The user who sent the message.</param>
+        /// <param name="ToUser">The receiving user of the message.</param>
+        public ChatMessageResponse(string Id = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ToJid = null, string Jid = null, string Body = null, Dictionary<string, string> Mentions = null, bool? Edited = null, bool? AttachmentDeleted = null, string FileUri = null, Entity Thread = null, AddressableEntityRef User = null, AddressableEntityRef ToUser = null)
         {
             this.Id = Id;
             this.DateCreated = DateCreated;
@@ -51,6 +53,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AttachmentDeleted = AttachmentDeleted;
             this.FileUri = FileUri;
             this.Thread = Thread;
+            this.User = User;
+            this.ToUser = ToUser;
             
         }
         
@@ -154,6 +158,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public Entity Thread { get; set; }
 
 
+
+        /// <summary>
+        /// The user who sent the message
+        /// </summary>
+        /// <value>The user who sent the message</value>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public AddressableEntityRef User { get; set; }
+
+
+
+        /// <summary>
+        /// The receiving user of the message
+        /// </summary>
+        /// <value>The receiving user of the message</value>
+        [DataMember(Name="toUser", EmitDefaultValue=false)]
+        public AddressableEntityRef ToUser { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -174,6 +196,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AttachmentDeleted: ").Append(AttachmentDeleted).Append("\n");
             sb.Append("  FileUri: ").Append(FileUri).Append("\n");
             sb.Append("  Thread: ").Append(Thread).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  ToUser: ").Append(ToUser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -268,6 +292,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Thread == other.Thread ||
                     this.Thread != null &&
                     this.Thread.Equals(other.Thread)
+                ) &&
+                (
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
+                ) &&
+                (
+                    this.ToUser == other.ToUser ||
+                    this.ToUser != null &&
+                    this.ToUser.Equals(other.ToUser)
                 );
         }
 
@@ -314,6 +348,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Thread != null)
                     hash = hash * 59 + this.Thread.GetHashCode();
+
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
+
+                if (this.ToUser != null)
+                    hash = hash * 59 + this.ToUser.GetHashCode();
 
                 return hash;
             }

@@ -76,15 +76,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Room's created time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="RoomType">The type of room.</param>
         /// <param name="Description">Room's description.</param>
+        /// <param name="Subject">Room's subject.</param>
         /// <param name="ParticipantLimit">Room's size limit.</param>
         /// <param name="Owners">Room's owners.</param>
         /// <param name="PinnedMessages">Room's pinned messages.</param>
-        public Room(string Name = null, DateTime? DateCreated = null, RoomTypeEnum? RoomType = null, string Description = null, int? ParticipantLimit = null, List<UserReference> Owners = null, List<AddressableEntityRef> PinnedMessages = null)
+        public Room(string Name = null, DateTime? DateCreated = null, RoomTypeEnum? RoomType = null, string Description = null, string Subject = null, int? ParticipantLimit = null, List<UserReference> Owners = null, List<AddressableEntityRef> PinnedMessages = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.RoomType = RoomType;
             this.Description = Description;
+            this.Subject = Subject;
             this.ParticipantLimit = ParticipantLimit;
             this.Owners = Owners;
             this.PinnedMessages = PinnedMessages;
@@ -127,6 +129,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Room's description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+
+
+
+        /// <summary>
+        /// Room's subject
+        /// </summary>
+        /// <value>Room's subject</value>
+        [DataMember(Name="subject", EmitDefaultValue=false)]
+        public string Subject { get; set; }
 
 
 
@@ -179,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  RoomType: ").Append(RoomType).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  ParticipantLimit: ").Append(ParticipantLimit).Append("\n");
             sb.Append("  Owners: ").Append(Owners).Append("\n");
             sb.Append("  PinnedMessages: ").Append(PinnedMessages).Append("\n");
@@ -249,6 +261,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.Subject == other.Subject ||
+                    this.Subject != null &&
+                    this.Subject.Equals(other.Subject)
+                ) &&
+                (
                     this.ParticipantLimit == other.ParticipantLimit ||
                     this.ParticipantLimit != null &&
                     this.ParticipantLimit.Equals(other.ParticipantLimit)
@@ -295,6 +312,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.Subject != null)
+                    hash = hash * 59 + this.Subject.GetHashCode();
 
                 if (this.ParticipantLimit != null)
                     hash = hash * 59 + this.ParticipantLimit.GetHashCode();

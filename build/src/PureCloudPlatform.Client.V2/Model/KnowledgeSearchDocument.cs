@@ -199,7 +199,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Itit for "it-IT"
             /// </summary>
             [EnumMember(Value = "it-IT")]
-            Itit
+            Itit,
+            
+            /// <summary>
+            /// Enum Caes for "ca-ES"
+            /// </summary>
+            [EnumMember(Value = "ca-ES")]
+            Caes,
+            
+            /// <summary>
+            /// Enum Trtr for "tr-TR"
+            /// </summary>
+            [EnumMember(Value = "tr-TR")]
+            Trtr,
+            
+            /// <summary>
+            /// Enum Svse for "sv-SE"
+            /// </summary>
+            [EnumMember(Value = "sv-SE")]
+            Svse,
+            
+            /// <summary>
+            /// Enum Fifi for "fi-FI"
+            /// </summary>
+            [EnumMember(Value = "fi-FI")]
+            Fifi,
+            
+            /// <summary>
+            /// Enum Nbno for "nb-NO"
+            /// </summary>
+            [EnumMember(Value = "nb-NO")]
+            Nbno,
+            
+            /// <summary>
+            /// Enum Dadk for "da-DK"
+            /// </summary>
+            [EnumMember(Value = "da-DK")]
+            Dadk
         }
         /// <summary>
         /// Document type

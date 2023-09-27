@@ -3026,6 +3026,7 @@ docs/Grammar.md
 docs/GrammarFileUploadRequest.md
 docs/GrammarLanguage.md
 docs/GrammarLanguageFileMetadata.md
+docs/GrammarLanguageUpdate.md
 docs/GrammarListing.md
 docs/Greeting.md
 docs/GreetingAudioFile.md
@@ -3856,6 +3857,7 @@ docs/PatchAlertingAlertsBulk-example.txt
 docs/PatchAlertingRulesBulk-example.txt
 docs/PatchAnalyticsReportingSettings-example.txt
 docs/PatchArchitectGrammar-example.txt
+docs/PatchArchitectGrammarLanguage-example.txt
 docs/PatchAuthorizationRole-example.txt
 docs/PatchAuthorizationSettings-example.txt
 docs/PatchBuReschedulingOptionsManagementUnitRequest.md
@@ -6055,6 +6057,7 @@ docs/UsersSearchResponse.md
 docs/UtilitiesApi.json
 docs/UtilitiesApi.md
 docs/Utilization.md
+docs/UtilizationLabel.md
 docs/UtilizationTag.md
 docs/UtilizationTagEntityListing.md
 docs/Utterance.md
@@ -8218,6 +8221,7 @@ src/PureCloudPlatform.Client.V2/Model/Grammar.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarFileUploadRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarLanguage.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarLanguageFileMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/GrammarLanguageUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarListing.cs
 src/PureCloudPlatform.Client.V2/Model/Greeting.cs
 src/PureCloudPlatform.Client.V2/Model/GreetingAudioFile.cs
@@ -10179,6 +10183,7 @@ src/PureCloudPlatform.Client.V2/Model/UserTokensTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/UserTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/UsersSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Utilization.cs
+src/PureCloudPlatform.Client.V2/Model/UtilizationLabel.cs
 src/PureCloudPlatform.Client.V2/Model/UtilizationTag.cs
 src/PureCloudPlatform.Client.V2/Model/UtilizationTagEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Utterance.cs

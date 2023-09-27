@@ -21,13 +21,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationQueryResponse" /> class.
         /// </summary>
-        /// <param name="Aggregations">Aggregations.</param>
         /// <param name="Conversations">Conversations.</param>
+        /// <param name="Aggregations">Aggregations.</param>
         /// <param name="TotalHits">TotalHits.</param>
-        public AnalyticsConversationQueryResponse(List<AggregationResult> Aggregations = null, List<AnalyticsConversationWithoutAttributes> Conversations = null, int? TotalHits = null)
+        public AnalyticsConversationQueryResponse(List<AnalyticsConversationWithoutAttributes> Conversations = null, List<AggregationResult> Aggregations = null, int? TotalHits = null)
         {
-            this.Aggregations = Aggregations;
             this.Conversations = Conversations;
+            this.Aggregations = Aggregations;
             this.TotalHits = TotalHits;
             
         }
@@ -35,18 +35,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Aggregations
-        /// </summary>
-        [DataMember(Name="aggregations", EmitDefaultValue=false)]
-        public List<AggregationResult> Aggregations { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets Conversations
         /// </summary>
         [DataMember(Name="conversations", EmitDefaultValue=false)]
         public List<AnalyticsConversationWithoutAttributes> Conversations { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Aggregations
+        /// </summary>
+        [DataMember(Name="aggregations", EmitDefaultValue=false)]
+        public List<AggregationResult> Aggregations { get; set; }
 
 
 
@@ -66,8 +66,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationQueryResponse {\n");
 
-            sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
+            sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
             sb.Append("  TotalHits: ").Append(TotalHits).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -110,14 +110,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Aggregations == other.Aggregations ||
-                    this.Aggregations != null &&
-                    this.Aggregations.SequenceEqual(other.Aggregations)
-                ) &&
-                (
                     this.Conversations == other.Conversations ||
                     this.Conversations != null &&
                     this.Conversations.SequenceEqual(other.Conversations)
+                ) &&
+                (
+                    this.Aggregations == other.Aggregations ||
+                    this.Aggregations != null &&
+                    this.Aggregations.SequenceEqual(other.Aggregations)
                 ) &&
                 (
                     this.TotalHits == other.TotalHits ||
@@ -137,11 +137,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Aggregations != null)
-                    hash = hash * 59 + this.Aggregations.GetHashCode();
-
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
+
+                if (this.Aggregations != null)
+                    hash = hash * 59 + this.Aggregations.GetHashCode();
 
                 if (this.TotalHits != null)
                     hash = hash * 59 + this.TotalHits.GetHashCode();

@@ -7,7 +7,8 @@ title: CreateRoomRequest
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Description** | **string** | Room&#39;s description | |
+| **Description** | **string** | Room&#39;s description | [optional] |
+| **Subject** | **string** | Room&#39;s subject | |
 {: class="table table-striped"}
 
 

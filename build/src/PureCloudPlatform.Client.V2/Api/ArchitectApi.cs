@@ -2535,6 +2535,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Grammar> PatchArchitectGrammarWithHttpInfo (string grammarId, Grammar body = null);
 
         /// <summary>
+        /// Updates a grammar language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grammarId">Grammar ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>GrammarLanguage</returns>
+        
+        GrammarLanguage PatchArchitectGrammarLanguage (string grammarId, string languageCode, GrammarLanguageUpdate body = null);
+
+        /// <summary>
+        /// Updates a grammar language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grammarId">Grammar ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of GrammarLanguage</returns>
+        
+        ApiResponse<GrammarLanguage> PatchArchitectGrammarLanguageWithHttpInfo (string grammarId, string languageCode, GrammarLanguageUpdate body = null);
+
+        /// <summary>
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
         /// <remarks>
@@ -6203,6 +6233,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Grammar)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Grammar>> PatchArchitectGrammarAsyncWithHttpInfo (string grammarId, Grammar body = null);
+
+        /// <summary>
+        /// Updates a grammar language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grammarId">Grammar ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of GrammarLanguage</returns>
+        
+        System.Threading.Tasks.Task<GrammarLanguage> PatchArchitectGrammarLanguageAsync (string grammarId, string languageCode, GrammarLanguageUpdate body = null);
+
+        /// <summary>
+        /// Updates a grammar language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grammarId">Grammar ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (GrammarLanguage)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GrammarLanguage>> PatchArchitectGrammarLanguageAsyncWithHttpInfo (string grammarId, string languageCode, GrammarLanguageUpdate body = null);
 
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
@@ -25991,6 +26051,242 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Grammar>(localVarStatusCode,
                 localVarHeaders,
                 (Grammar) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Grammar)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Updates a grammar language 
+        /// 
+        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grammarId">Grammar ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>GrammarLanguage</returns>
+        
+        public GrammarLanguage PatchArchitectGrammarLanguage (string grammarId, string languageCode, GrammarLanguageUpdate body = null)
+        {
+             ApiResponse<GrammarLanguage> localVarResponse = PatchArchitectGrammarLanguageWithHttpInfo(grammarId, languageCode, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a grammar language 
+        /// 
+        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grammarId">Grammar ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of GrammarLanguage</returns>
+        
+        public ApiResponse< GrammarLanguage > PatchArchitectGrammarLanguageWithHttpInfo (string grammarId, string languageCode, GrammarLanguageUpdate body = null)
+        { 
+            // verify the required parameter 'grammarId' is set
+            if (grammarId == null)
+                throw new ApiException(400, "Missing required parameter 'grammarId' when calling ArchitectApi->PatchArchitectGrammarLanguage");
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PatchArchitectGrammarLanguage");
+
+            var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (grammarId != null) localVarPathParams.Add("grammarId", this.Configuration.ApiClient.ParameterToString(grammarId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                                        .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                                        .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchArchitectGrammarLanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchArchitectGrammarLanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GrammarLanguage>(localVarStatusCode,
+                localVarHeaders,
+                (GrammarLanguage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrammarLanguage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Updates a grammar language 
+        /// 
+        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grammarId">Grammar ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of GrammarLanguage</returns>
+        
+        public async System.Threading.Tasks.Task<GrammarLanguage> PatchArchitectGrammarLanguageAsync (string grammarId, string languageCode, GrammarLanguageUpdate body = null)
+        {
+             ApiResponse<GrammarLanguage> localVarResponse = await PatchArchitectGrammarLanguageAsyncWithHttpInfo(grammarId, languageCode, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a grammar language 
+        /// 
+        /// PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grammarId">Grammar ID</param>
+        /// <param name="languageCode">Language</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (GrammarLanguage)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GrammarLanguage>> PatchArchitectGrammarLanguageAsyncWithHttpInfo (string grammarId, string languageCode, GrammarLanguageUpdate body = null)
+        { 
+            // verify the required parameter 'grammarId' is set
+            if (grammarId == null)
+                throw new ApiException(400, "Missing required parameter 'grammarId' when calling ArchitectApi->PatchArchitectGrammarLanguage");
+            
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PatchArchitectGrammarLanguage");
+            
+
+            var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (grammarId != null) localVarPathParams.Add("grammarId", this.Configuration.ApiClient.ParameterToString(grammarId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers
+                                    .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchArchitectGrammarLanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchArchitectGrammarLanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GrammarLanguage>(localVarStatusCode,
+                localVarHeaders,
+                (GrammarLanguage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrammarLanguage)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

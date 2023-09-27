@@ -76,6 +76,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Artn,
             
             /// <summary>
+            /// Enum Dadk for "da-DK"
+            /// </summary>
+            [EnumMember(Value = "da-DK")]
+            Dadk,
+            
+            /// <summary>
             /// Enum Dech for "de-CH"
             /// </summary>
             [EnumMember(Value = "de-CH")]
@@ -154,6 +160,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Esus,
             
             /// <summary>
+            /// Enum Fifi for "fi-FI"
+            /// </summary>
+            [EnumMember(Value = "fi-FI")]
+            Fifi,
+            
+            /// <summary>
             /// Enum Frca for "fr-CA"
             /// </summary>
             [EnumMember(Value = "fr-CA")]
@@ -164,6 +176,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "fr-FR")]
             Frfr,
+            
+            /// <summary>
+            /// Enum Heil for "he-IL"
+            /// </summary>
+            [EnumMember(Value = "he-IL")]
+            Heil,
             
             /// <summary>
             /// Enum Itit for "it-IT"
@@ -182,6 +200,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ko-KR")]
             Kokr,
+            
+            /// <summary>
+            /// Enum Nbno for "nb-NO"
+            /// </summary>
+            [EnumMember(Value = "nb-NO")]
+            Nbno,
             
             /// <summary>
             /// Enum Nlnl for "nl-NL"
@@ -205,7 +229,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ptpt for "pt-PT"
             /// </summary>
             [EnumMember(Value = "pt-PT")]
-            Ptpt
+            Ptpt,
+            
+            /// <summary>
+            /// Enum Svse for "sv-SE"
+            /// </summary>
+            [EnumMember(Value = "sv-SE")]
+            Svse
         }
         /// <summary>
         /// The mode to use for the general program job, default value is Skip

@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class KnowledgeBaseCreateRequest :  IEquatable<KnowledgeBaseCreateRequest>
     {
         /// <summary>
-        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes
+        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK] which might have a lower accuracy.
         /// </summary>
-        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes</value>
+        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK] which might have a lower accuracy.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum CoreLanguageEnum
         {
@@ -199,12 +199,48 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Itit for "it-IT"
             /// </summary>
             [EnumMember(Value = "it-IT")]
-            Itit
+            Itit,
+            
+            /// <summary>
+            /// Enum Caes for "ca-ES"
+            /// </summary>
+            [EnumMember(Value = "ca-ES")]
+            Caes,
+            
+            /// <summary>
+            /// Enum Trtr for "tr-TR"
+            /// </summary>
+            [EnumMember(Value = "tr-TR")]
+            Trtr,
+            
+            /// <summary>
+            /// Enum Svse for "sv-SE"
+            /// </summary>
+            [EnumMember(Value = "sv-SE")]
+            Svse,
+            
+            /// <summary>
+            /// Enum Fifi for "fi-FI"
+            /// </summary>
+            [EnumMember(Value = "fi-FI")]
+            Fifi,
+            
+            /// <summary>
+            /// Enum Nbno for "nb-NO"
+            /// </summary>
+            [EnumMember(Value = "nb-NO")]
+            Nbno,
+            
+            /// <summary>
+            /// Enum Dadk for "da-DK"
+            /// </summary>
+            [EnumMember(Value = "da-DK")]
+            Dadk
         }
         /// <summary>
-        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes
+        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK] which might have a lower accuracy.
         /// </summary>
-        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes</value>
+        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK] which might have a lower accuracy.</value>
         [DataMember(Name="coreLanguage", EmitDefaultValue=false)]
         public CoreLanguageEnum? CoreLanguage { get; set; }
 
@@ -218,7 +254,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Knowledge base name (required).</param>
         /// <param name="Description">Knowledge base description.</param>
-        /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes (required).</param>
+        /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK] which might have a lower accuracy. (required).</param>
         public KnowledgeBaseCreateRequest(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null)
         {
             this.Name = Name;

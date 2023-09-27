@@ -27,10 +27,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateRoomRequest" /> class.
         /// </summary>
-        /// <param name="Description">Room's description (required).</param>
-        public CreateRoomRequest(string Description = null)
+        /// <param name="Description">Room's description.</param>
+        /// <param name="Subject">Room's subject (required).</param>
+        public CreateRoomRequest(string Description = null, string Subject = null)
         {
             this.Description = Description;
+            this.Subject = Subject;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Description { get; set; }
 
 
+
+        /// <summary>
+        /// Room's subject
+        /// </summary>
+        /// <value>Room's subject</value>
+        [DataMember(Name="subject", EmitDefaultValue=false)]
+        public string Subject { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CreateRoomRequest {\n");
 
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
+                ) &&
+                (
+                    this.Subject == other.Subject ||
+                    this.Subject != null &&
+                    this.Subject.Equals(other.Subject)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.Subject != null)
+                    hash = hash * 59 + this.Subject.GetHashCode();
 
                 return hash;
             }

@@ -91,6 +91,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsOutcomes**](ArchitectApi.html#getflowsoutcomes) | **Get** /api/v2/flows/outcomes | Get a pageable list of flow outcomes, filtered by query parameters |
 | [**GetFlowsOutcomesDivisionviews**](ArchitectApi.html#getflowsoutcomesdivisionviews) | **Get** /api/v2/flows/outcomes/divisionviews | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
 | [**PatchArchitectGrammar**](ArchitectApi.html#patcharchitectgrammar) | **Patch** /api/v2/architect/grammars/{grammarId} | Updates a grammar |
+| [**PatchArchitectGrammarLanguage**](ArchitectApi.html#patcharchitectgrammarlanguage) | **Patch** /api/v2/architect/grammars/{grammarId}/languages/{languageCode} | Updates a grammar language |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **Post** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
 | [**PostArchitectEmergencygroups**](ArchitectApi.html#postarchitectemergencygroups) | **Post** /api/v2/architect/emergencygroups | Creates a new emergency group |
 | [**PostArchitectGrammarLanguageFilesDtmf**](ArchitectApi.html#postarchitectgrammarlanguagefilesdtmf) | **Post** /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf | Creates a presigned URL for uploading a grammar DTMF mode file |
@@ -5976,6 +5977,75 @@ namespace Example
 ### Return type
 
 [**Grammar**](Grammar.html)
+
+<a name="patcharchitectgrammarlanguage"></a>
+
+## [**GrammarLanguage**](GrammarLanguage.html) PatchArchitectGrammarLanguage (string grammarId, string languageCode, GrammarLanguageUpdate body = null)
+
+
+
+Updates a grammar language
+
+PatchArchitectGrammarLanguage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchArchitectGrammarLanguageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var grammarId = grammarId_example;  // string | Grammar ID
+            var languageCode = languageCode_example;  // string | Language
+            var body = new GrammarLanguageUpdate(); // GrammarLanguageUpdate |  (optional) 
+
+            try
+            { 
+                // Updates a grammar language
+                GrammarLanguage result = apiInstance.PatchArchitectGrammarLanguage(grammarId, languageCode, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PatchArchitectGrammarLanguage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **grammarId** | **string**| Grammar ID |  |
+| **languageCode** | **string**| Language |  |
+| **body** | [**GrammarLanguageUpdate**](GrammarLanguageUpdate.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage.html)
 
 <a name="postarchitectdependencytrackingbuild"></a>
 

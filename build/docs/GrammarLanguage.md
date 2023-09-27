@@ -8,7 +8,7 @@ title: GrammarLanguage
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **GrammarId** | **string** |  | [optional] |
+| **GrammarId** | **string** | The ID of the grammar associated with this grammar language | [optional] |
 | **Language** | **string** |  | [optional] |
 | **VoiceFileUrl** | **string** | The URL to the voice mode file associated with this grammar language | [optional] |
 | **DtmfFileUrl** | **string** | The URL to the DTMF mode file associated with this grammar language | [optional] |

@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GrammarLanguage" /> class.
         /// </summary>
-        /// <param name="GrammarId">GrammarId.</param>
+        /// <param name="GrammarId">The ID of the grammar associated with this grammar language.</param>
         /// <param name="Language">Language.</param>
         /// <param name="VoiceFileMetadata">Additional information about the associated voice file.</param>
         /// <param name="DtmfFileMetadata">Additional information about the associated dtmf file.</param>
@@ -46,8 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets GrammarId
+        /// The ID of the grammar associated with this grammar language
         /// </summary>
+        /// <value>The ID of the grammar associated with this grammar language</value>
         [DataMember(Name="grammarId", EmitDefaultValue=false)]
         public string GrammarId { get; set; }
 

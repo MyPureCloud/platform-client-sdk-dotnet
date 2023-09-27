@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="InsightsAgentItem" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        public InsightsAgentItem(string Name = null)
+        /// <param name="Manager">This user's manager..</param>
+        public InsightsAgentItem(string Name = null, DomainEntityRef Manager = null)
         {
             this.Name = Name;
+            this.Manager = Manager;
             
         }
         
@@ -48,6 +50,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// This user's manager.
+        /// </summary>
+        /// <value>This user's manager.</value>
+        [DataMember(Name="manager", EmitDefaultValue=false)]
+        public DomainEntityRef Manager { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Manager: ").Append(Manager).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -118,6 +130,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Manager == other.Manager ||
+                    this.Manager != null &&
+                    this.Manager.Equals(other.Manager)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -140,6 +157,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Manager != null)
+                    hash = hash * 59 + this.Manager.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

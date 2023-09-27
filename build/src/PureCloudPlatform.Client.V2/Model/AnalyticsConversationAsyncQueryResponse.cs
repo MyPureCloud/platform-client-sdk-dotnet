@@ -21,17 +21,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationAsyncQueryResponse" /> class.
         /// </summary>
+        /// <param name="Conversations">Conversations.</param>
         /// <param name="Cursor">Optional cursor to indicate where to resume the results.</param>
         /// <param name="DataAvailabilityDate">Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="Conversations">Conversations.</param>
-        public AnalyticsConversationAsyncQueryResponse(string Cursor = null, DateTime? DataAvailabilityDate = null, List<AnalyticsConversation> Conversations = null)
+        public AnalyticsConversationAsyncQueryResponse(List<AnalyticsConversation> Conversations = null, string Cursor = null, DateTime? DataAvailabilityDate = null)
         {
+            this.Conversations = Conversations;
             this.Cursor = Cursor;
             this.DataAvailabilityDate = DataAvailabilityDate;
-            this.Conversations = Conversations;
             
         }
         
+
+
+        /// <summary>
+        /// Gets or Sets Conversations
+        /// </summary>
+        [DataMember(Name="conversations", EmitDefaultValue=false)]
+        public List<AnalyticsConversation> Conversations { get; set; }
+
 
 
         /// <summary>
@@ -51,14 +59,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DataAvailabilityDate { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets Conversations
-        /// </summary>
-        [DataMember(Name="conversations", EmitDefaultValue=false)]
-        public List<AnalyticsConversation> Conversations { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,9 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationAsyncQueryResponse {\n");
 
+            sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("  Cursor: ").Append(Cursor).Append("\n");
             sb.Append("  DataAvailabilityDate: ").Append(DataAvailabilityDate).Append("\n");
-            sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -112,6 +112,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Conversations == other.Conversations ||
+                    this.Conversations != null &&
+                    this.Conversations.SequenceEqual(other.Conversations)
+                ) &&
+                (
                     this.Cursor == other.Cursor ||
                     this.Cursor != null &&
                     this.Cursor.Equals(other.Cursor)
@@ -120,11 +125,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DataAvailabilityDate == other.DataAvailabilityDate ||
                     this.DataAvailabilityDate != null &&
                     this.DataAvailabilityDate.Equals(other.DataAvailabilityDate)
-                ) &&
-                (
-                    this.Conversations == other.Conversations ||
-                    this.Conversations != null &&
-                    this.Conversations.SequenceEqual(other.Conversations)
                 );
         }
 
@@ -139,14 +139,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Conversations != null)
+                    hash = hash * 59 + this.Conversations.GetHashCode();
+
                 if (this.Cursor != null)
                     hash = hash * 59 + this.Cursor.GetHashCode();
 
                 if (this.DataAvailabilityDate != null)
                     hash = hash * 59 + this.DataAvailabilityDate.GetHashCode();
-
-                if (this.Conversations != null)
-                    hash = hash * 59 + this.Conversations.GetHashCode();
 
                 return hash;
             }
