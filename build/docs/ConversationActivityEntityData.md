@@ -9,6 +9,7 @@ title: ConversationActivityEntityData
 |------------ | ------------- | ------------- | -------------|
 | **ActivityDate** | **DateTime?** | The time at which the activity was observed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **Metric** | **string** | Activity metric | [optional] |
+| **ActiveRouting** | **string** | Active routing method | [optional] |
 | **AddressFrom** | **string** | The address that initiated an action | [optional] |
 | **AddressTo** | **string** | The address receiving an action | [optional] |
 | **Ani** | **string** | Automatic Number Identification (caller&#39;s number) | [optional] |

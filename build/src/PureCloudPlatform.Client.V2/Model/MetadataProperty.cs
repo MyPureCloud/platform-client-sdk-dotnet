@@ -47,6 +47,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// whether the property's value should be hidden from display
+        /// </summary>
+        /// <value>whether the property's value should be hidden from display</value>
+        [DataMember(Name="sensitive", EmitDefaultValue=false)]
+        public string Sensitive { get; private set; }
+
+
+
+        /// <summary>
         /// optional URL with addition information about the input property
         /// </summary>
         /// <value>optional URL with addition information about the input property</value>
@@ -83,6 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Sensitive: ").Append(Sensitive).Append("\n");
             sb.Append("  Help: ").Append(Help).Append("\n");
             sb.Append("  Default: ").Append(Default).Append("\n");
             sb.Append("  Enum: ").Append(Enum).Append("\n");
@@ -137,6 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.Sensitive == other.Sensitive ||
+                    this.Sensitive != null &&
+                    this.Sensitive.Equals(other.Sensitive)
+                ) &&
+                (
                     this.Help == other.Help ||
                     this.Help != null &&
                     this.Help.Equals(other.Help)
@@ -169,6 +184,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.Sensitive != null)
+                    hash = hash * 59 + this.Sensitive.GetHashCode();
 
                 if (this.Help != null)
                     hash = hash * 59 + this.Help.GetHashCode();

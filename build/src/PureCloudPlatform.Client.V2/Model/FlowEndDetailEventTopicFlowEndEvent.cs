@@ -437,6 +437,166 @@ namespace PureCloudPlatform.Client.V2.Model
             Workitem
         }
         /// <summary>
+        /// Gets or Sets ExitReason
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ExitReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Disconnect for "DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "DISCONNECT")]
+            Disconnect,
+            
+            /// <summary>
+            /// Enum FlowDisconnect for "FLOW_DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "FLOW_DISCONNECT")]
+            FlowDisconnect,
+            
+            /// <summary>
+            /// Enum FlowErrorDisconnect for "FLOW_ERROR_DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "FLOW_ERROR_DISCONNECT")]
+            FlowErrorDisconnect,
+            
+            /// <summary>
+            /// Enum Transfer for "TRANSFER"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER")]
+            Transfer,
+            
+            /// <summary>
+            /// Enum SessionExpireDisconnect for "SESSION_EXPIRE_DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "SESSION_EXPIRE_DISCONNECT")]
+            SessionExpireDisconnect,
+            
+            /// <summary>
+            /// Enum RecognitionFailureDisconnect for "RECOGNITION_FAILURE_DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "RECOGNITION_FAILURE_DISCONNECT")]
+            RecognitionFailureDisconnect,
+            
+            /// <summary>
+            /// Enum RecognitionFailureExit for "RECOGNITION_FAILURE_EXIT"
+            /// </summary>
+            [EnumMember(Value = "RECOGNITION_FAILURE_EXIT")]
+            RecognitionFailureExit,
+            
+            /// <summary>
+            /// Enum UserExit for "USER_EXIT"
+            /// </summary>
+            [EnumMember(Value = "USER_EXIT")]
+            UserExit,
+            
+            /// <summary>
+            /// Enum FlowExit for "FLOW_EXIT"
+            /// </summary>
+            [EnumMember(Value = "FLOW_EXIT")]
+            FlowExit,
+            
+            /// <summary>
+            /// Enum FlowErrorExit for "FLOW_ERROR_EXIT"
+            /// </summary>
+            [EnumMember(Value = "FLOW_ERROR_EXIT")]
+            FlowErrorExit
+        }
+        /// <summary>
+        /// Gets or Sets TransferType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TransferTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Acd for "ACD"
+            /// </summary>
+            [EnumMember(Value = "ACD")]
+            Acd,
+            
+            /// <summary>
+            /// Enum User for "USER"
+            /// </summary>
+            [EnumMember(Value = "USER")]
+            User,
+            
+            /// <summary>
+            /// Enum Number for "NUMBER"
+            /// </summary>
+            [EnumMember(Value = "NUMBER")]
+            Number,
+            
+            /// <summary>
+            /// Enum AcdVoicemail for "ACD_VOICEMAIL"
+            /// </summary>
+            [EnumMember(Value = "ACD_VOICEMAIL")]
+            AcdVoicemail,
+            
+            /// <summary>
+            /// Enum UserVoicemail for "USER_VOICEMAIL"
+            /// </summary>
+            [EnumMember(Value = "USER_VOICEMAIL")]
+            UserVoicemail,
+            
+            /// <summary>
+            /// Enum GroupVoicemail for "GROUP_VOICEMAIL"
+            /// </summary>
+            [EnumMember(Value = "GROUP_VOICEMAIL")]
+            GroupVoicemail,
+            
+            /// <summary>
+            /// Enum Group for "GROUP"
+            /// </summary>
+            [EnumMember(Value = "GROUP")]
+            Group,
+            
+            /// <summary>
+            /// Enum Flow for "FLOW"
+            /// </summary>
+            [EnumMember(Value = "FLOW")]
+            Flow,
+            
+            /// <summary>
+            /// Enum SecureFlow for "SECURE_FLOW"
+            /// </summary>
+            [EnumMember(Value = "SECURE_FLOW")]
+            SecureFlow,
+            
+            /// <summary>
+            /// Enum ReturnToAgent for "RETURN_TO_AGENT"
+            /// </summary>
+            [EnumMember(Value = "RETURN_TO_AGENT")]
+            ReturnToAgent
+        }
+        /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
@@ -462,6 +622,16 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="flowType", EmitDefaultValue=false)]
         public FlowTypeEnum? FlowType { get; set; }
         /// <summary>
+        /// Gets or Sets ExitReason
+        /// </summary>
+        [DataMember(Name="exitReason", EmitDefaultValue=false)]
+        public ExitReasonEnum? ExitReason { get; set; }
+        /// <summary>
+        /// Gets or Sets TransferType
+        /// </summary>
+        [DataMember(Name="transferType", EmitDefaultValue=false)]
+        public TransferTypeEnum? TransferType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="FlowEndDetailEventTopicFlowEndEvent" /> class.
         /// </summary>
         /// <param name="EventTime">EventTime.</param>
@@ -485,7 +655,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedDurationMs">ConnectedDurationMs.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public FlowEndDetailEventTopicFlowEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, int? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        /// <param name="ExitReason">ExitReason.</param>
+        /// <param name="TransferType">TransferType.</param>
+        public FlowEndDetailEventTopicFlowEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, int? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, ExitReasonEnum? ExitReason = null, TransferTypeEnum? TransferType = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -508,6 +680,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConnectedDurationMs = ConnectedDurationMs;
             this.ConversationExternalContactIds = ConversationExternalContactIds;
             this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
+            this.ExitReason = ExitReason;
+            this.TransferType = TransferType;
             
         }
         
@@ -650,6 +824,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> ConversationExternalOrganizationIds { get; set; }
 
 
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -680,6 +858,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConnectedDurationMs: ").Append(ConnectedDurationMs).Append("\n");
             sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
             sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
+            sb.Append("  ExitReason: ").Append(ExitReason).Append("\n");
+            sb.Append("  TransferType: ").Append(TransferType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -824,6 +1004,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationExternalOrganizationIds == other.ConversationExternalOrganizationIds ||
                     this.ConversationExternalOrganizationIds != null &&
                     this.ConversationExternalOrganizationIds.SequenceEqual(other.ConversationExternalOrganizationIds)
+                ) &&
+                (
+                    this.ExitReason == other.ExitReason ||
+                    this.ExitReason != null &&
+                    this.ExitReason.Equals(other.ExitReason)
+                ) &&
+                (
+                    this.TransferType == other.TransferType ||
+                    this.TransferType != null &&
+                    this.TransferType.Equals(other.TransferType)
                 );
         }
 
@@ -900,6 +1090,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationExternalOrganizationIds != null)
                     hash = hash * 59 + this.ConversationExternalOrganizationIds.GetHashCode();
+
+                if (this.ExitReason != null)
+                    hash = hash * 59 + this.ExitReason.GetHashCode();
+
+                if (this.TransferType != null)
+                    hash = hash * 59 + this.TransferType.GetHashCode();
 
                 return hash;
             }

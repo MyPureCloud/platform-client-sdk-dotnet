@@ -185,6 +185,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tcustomerspeech,
             
             /// <summary>
+            /// Enum Totheraudio for "tOtherAudio"
+            /// </summary>
+            [EnumMember(Value = "tOtherAudio")]
+            Totheraudio,
+            
+            /// <summary>
             /// Enum Tovertalkspeech for "tOverTalkSpeech"
             /// </summary>
             [EnumMember(Value = "tOverTalkSpeech")]

@@ -59,6 +59,28 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         }
 
         /// <summary>
+        /// Creates a new instance of NotificationHandler with custom NotificationsApi
+        /// </summary>
+        public NotificationHandler(NotificationsApi notificationsApi)
+        {
+            _notificationsApi = notificationsApi;
+            Channel = _notificationsApi.PostNotificationsChannels();
+            ConnectSocket(Channel.ConnectUri);
+            SubscribeToSystemEvents();
+        }
+
+        /// <summary>
+        /// Creates a new instance of NotificationHandler with proxy and custom NotificationsApi
+        /// </summary>
+        public NotificationHandler(NotificationsApi notificationsApi, string proxyURI, string proxyUsername = null, string proxyPassword = null)
+        {
+            _notificationsApi = notificationsApi;
+            Channel = _notificationsApi.PostNotificationsChannels();
+            ConnectSocket(Channel.ConnectUri, proxyURI, proxyUsername, proxyPassword);
+            SubscribeToSystemEvents();
+        }
+
+        /// <summary>
         /// Creates a new instance of NotificationHandler from an existing <see cref="Channel"/>
         /// </summary>
         public NotificationHandler(Channel channel)
@@ -73,6 +95,28 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         /// </summary>
         public NotificationHandler(Channel channel, string proxyURI, string proxyUsername = null, string proxyPassword = null)
         {
+            Channel = channel;
+            ConnectSocket(Channel.ConnectUri, proxyURI, proxyUsername, proxyPassword);
+            SubscribeToSystemEvents();
+        }
+
+        /// <summary>
+        /// Creates a new instance of NotificationHandler with an existing Channel object and custom NotificationsApi
+        /// </summary>
+        public NotificationHandler(Channel channel, NotificationsApi notificationsApi)
+        {
+            _notificationsApi = notificationsApi;
+            Channel = channel;
+            ConnectSocket(Channel.ConnectUri);
+            SubscribeToSystemEvents();
+        }
+
+        /// <summary>
+        /// Creates a new instance of NotificationHandler with an existing Channel object, proxy, and custom NotificationsApi
+        /// </summary>
+        public NotificationHandler(Channel channel, NotificationsApi notificationsApi, string proxyURI, string proxyUsername = null, string proxyPassword = null)
+        {
+            _notificationsApi = notificationsApi;
             Channel = channel;
             ConnectSocket(Channel.ConnectUri, proxyURI, proxyUsername, proxyPassword);
             SubscribeToSystemEvents();

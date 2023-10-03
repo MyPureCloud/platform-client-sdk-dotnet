@@ -59,14 +59,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CompletedRecords">number of records finished importing.</param>
         /// <param name="PercentageComplete">percentage of records finished importing.</param>
         /// <param name="FailureReason">if the import has failed, the reason for the failure.</param>
+        /// <param name="TargetContactListIds">The ids for target contact lists.</param>
+        /// <param name="ListNamePrefix">The prefix used for target contact list names.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerDnclistConfigChangeImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null, Dictionary<string, Object> AdditionalProperties = null)
+        public DialerDnclistConfigChangeImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null, List<string> TargetContactListIds = null, string ListNamePrefix = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.ImportState = ImportState;
             this.TotalRecords = TotalRecords;
             this.CompletedRecords = CompletedRecords;
             this.PercentageComplete = PercentageComplete;
             this.FailureReason = FailureReason;
+            this.TargetContactListIds = TargetContactListIds;
+            this.ListNamePrefix = ListNamePrefix;
             this.AdditionalProperties = AdditionalProperties;
             
         }
@@ -112,6 +116,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The ids for target contact lists
+        /// </summary>
+        /// <value>The ids for target contact lists</value>
+        [DataMember(Name="targetContactListIds", EmitDefaultValue=false)]
+        public List<string> TargetContactListIds { get; set; }
+
+
+
+        /// <summary>
+        /// The prefix used for target contact list names
+        /// </summary>
+        /// <value>The prefix used for target contact list names</value>
+        [DataMember(Name="listNamePrefix", EmitDefaultValue=false)]
+        public string ListNamePrefix { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -132,6 +154,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
             sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
+            sb.Append("  TargetContactListIds: ").Append(TargetContactListIds).Append("\n");
+            sb.Append("  ListNamePrefix: ").Append(ListNamePrefix).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -199,6 +223,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FailureReason.Equals(other.FailureReason)
                 ) &&
                 (
+                    this.TargetContactListIds == other.TargetContactListIds ||
+                    this.TargetContactListIds != null &&
+                    this.TargetContactListIds.SequenceEqual(other.TargetContactListIds)
+                ) &&
+                (
+                    this.ListNamePrefix == other.ListNamePrefix ||
+                    this.ListNamePrefix != null &&
+                    this.ListNamePrefix.Equals(other.ListNamePrefix)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
@@ -230,6 +264,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
+
+                if (this.TargetContactListIds != null)
+                    hash = hash * 59 + this.TargetContactListIds.GetHashCode();
+
+                if (this.ListNamePrefix != null)
+                    hash = hash * 59 + this.ListNamePrefix.GetHashCode();
 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

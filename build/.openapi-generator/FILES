@@ -1266,6 +1266,7 @@ docs/DeleteRoutingUtilizationTag-example.txt
 docs/DeleteRoutingWrapupcode-example.txt
 docs/DeleteScimUser-example.txt
 docs/DeleteScimV2User-example.txt
+docs/DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/DeleteSpeechandtextanalyticsProgram-example.txt
 docs/DeleteSpeechandtextanalyticsSentimentfeedback-example.txt
 docs/DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId-example.txt
@@ -1427,6 +1428,9 @@ docs/DialogflowAgentSummaryEntityListing.md
 docs/DialogflowIntent.md
 docs/DialogflowParameter.md
 docs/DialogflowProject.md
+docs/DictionaryFeedback.md
+docs/DictionaryFeedbackEntityListing.md
+docs/DictionaryFeedbackExamplePhrase.md
 docs/DigitLength.md
 docs/DigitalAction.md
 docs/DigitalCondition.md
@@ -2749,6 +2753,8 @@ docs/GetSearchSuggest-example.txt
 docs/GetSpeechandtextanalyticsConversation-example.txt
 docs/GetSpeechandtextanalyticsConversationCommunicationTranscripturl-example.txt
 docs/GetSpeechandtextanalyticsConversationCommunicationTranscripturls-example.txt
+docs/GetSpeechandtextanalyticsDictionaryfeedback-example.txt
+docs/GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/GetSpeechandtextanalyticsProgram-example.txt
 docs/GetSpeechandtextanalyticsProgramMappings-example.txt
 docs/GetSpeechandtextanalyticsProgramTranscriptionengines-example.txt
@@ -3505,6 +3511,7 @@ docs/ListWrapperInterval.md
 docs/ListWrapperSecondaryPresence.md
 docs/ListWrapperShiftStartVariance.md
 docs/ListWrapperString.md
+docs/ListedDictionaryFeedback.md
 docs/ListedProgram.md
 docs/ListedTopic.md
 docs/LocalDateRange.md
@@ -3818,7 +3825,6 @@ docs/OutcomeAttributionRequest.md
 docs/OutcomeAttributionResponseListing.md
 docs/OutcomeAttributionResultsResponse.md
 docs/OutcomeConfig.md
-docs/OutcomeEventScore.md
 docs/OutcomeListing.md
 docs/OutcomePercentileCondition.md
 docs/OutcomePredictor.md
@@ -3828,6 +3834,7 @@ docs/OutcomeProbabilityCondition.md
 docs/OutcomeQuantileCondition.md
 docs/OutcomeRef.md
 docs/OutcomeRefRequest.md
+docs/OutcomeScore.md
 docs/OutcomeScoresResult.md
 docs/OutlierInfo.md
 docs/OverallBestPoints.md
@@ -4537,6 +4544,7 @@ docs/PostSearch-example.txt
 docs/PostSearch-example.txt
 docs/PostSearchSuggest-example.txt
 docs/PostSearchSuggest-example.txt
+docs/PostSpeechandtextanalyticsDictionaryfeedback-example.txt
 docs/PostSpeechandtextanalyticsPrograms-example.txt
 docs/PostSpeechandtextanalyticsProgramsGeneralJobs-example.txt
 docs/PostSpeechandtextanalyticsProgramsPublishjobs-example.txt
@@ -4911,6 +4919,7 @@ docs/PutScimGroup-example.txt
 docs/PutScimUser-example.txt
 docs/PutScimV2Group-example.txt
 docs/PutScimV2User-example.txt
+docs/PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/PutSpeechandtextanalyticsProgram-example.txt
 docs/PutSpeechandtextanalyticsProgramMappings-example.txt
 docs/PutSpeechandtextanalyticsProgramTranscriptionengines-example.txt
@@ -6140,7 +6149,6 @@ docs/Video.md
 docs/VideoConferenceDetails.md
 docs/VideoConferenceUpdateTopicParticipantInfo.md
 docs/VideoConferenceUpdateTopicVideoConference.md
-docs/VideoMetadata.md
 docs/ViewFilter.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
@@ -7740,6 +7748,9 @@ src/PureCloudPlatform.Client.V2/Model/DialogflowAgentSummaryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DialogflowIntent.cs
 src/PureCloudPlatform.Client.V2/Model/DialogflowParameter.cs
 src/PureCloudPlatform.Client.V2/Model/DialogflowProject.cs
+src/PureCloudPlatform.Client.V2/Model/DictionaryFeedback.cs
+src/PureCloudPlatform.Client.V2/Model/DictionaryFeedbackEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/DictionaryFeedbackExamplePhrase.cs
 src/PureCloudPlatform.Client.V2/Model/DigitLength.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalAction.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalCondition.cs
@@ -8676,6 +8687,7 @@ src/PureCloudPlatform.Client.V2/Model/ListWrapperInterval.cs
 src/PureCloudPlatform.Client.V2/Model/ListWrapperSecondaryPresence.cs
 src/PureCloudPlatform.Client.V2/Model/ListWrapperShiftStartVariance.cs
 src/PureCloudPlatform.Client.V2/Model/ListWrapperString.cs
+src/PureCloudPlatform.Client.V2/Model/ListedDictionaryFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/ListedProgram.cs
 src/PureCloudPlatform.Client.V2/Model/ListedTopic.cs
 src/PureCloudPlatform.Client.V2/Model/LocalDateRange.cs
@@ -8971,7 +8983,6 @@ src/PureCloudPlatform.Client.V2/Model/OutcomeAttributionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeAttributionResponseListing.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeAttributionResultsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeConfig.cs
-src/PureCloudPlatform.Client.V2/Model/OutcomeEventScore.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeListing.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomePercentileCondition.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomePredictor.cs
@@ -8981,6 +8992,7 @@ src/PureCloudPlatform.Client.V2/Model/OutcomeProbabilityCondition.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeQuantileCondition.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeRef.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeRefRequest.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomeScore.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeScoresResult.cs
 src/PureCloudPlatform.Client.V2/Model/OutlierInfo.cs
 src/PureCloudPlatform.Client.V2/Model/OverallBestPoints.cs
@@ -10266,7 +10278,6 @@ src/PureCloudPlatform.Client.V2/Model/Video.cs
 src/PureCloudPlatform.Client.V2/Model/VideoConferenceDetails.cs
 src/PureCloudPlatform.Client.V2/Model/VideoConferenceUpdateTopicParticipantInfo.cs
 src/PureCloudPlatform.Client.V2/Model/VideoConferenceUpdateTopicVideoConference.cs
-src/PureCloudPlatform.Client.V2/Model/VideoMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/ViewFilter.cs
 src/PureCloudPlatform.Client.V2/Model/VisibilityCondition.cs
 src/PureCloudPlatform.Client.V2/Model/VmPairingInfo.cs

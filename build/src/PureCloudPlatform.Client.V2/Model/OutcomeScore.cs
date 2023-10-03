@@ -13,13 +13,13 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OutcomeEventScore
+    /// OutcomeScore
     /// </summary>
     [DataContract]
-    public partial class OutcomeEventScore :  IEquatable<OutcomeEventScore>
+    public partial class OutcomeScore :  IEquatable<OutcomeScore>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OutcomeEventScore" /> class.
+        /// Initializes a new instance of the <see cref="OutcomeScore" /> class.
         /// </summary>
         /// <param name="Outcome">The outcome that the score was calculated for..</param>
         /// <param name="SessionMaxProbability">Represents the max probability reached in the session..</param>
@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SessionMaxPercentile">(Deprecated: use the 'quantile' field instead) Represents the maximum likelihood percentile score reached for a given outcome by the current session..</param>
         /// <param name="Quantile">Represents the quantity of sessions that have a maximum probability less than the predicted probability..</param>
         /// <param name="SessionMaxQuantile">Represents the quantity of sessions that have a maximum probability less than the predicted session max probability..</param>
-        public OutcomeEventScore(AddressableEntityRef Outcome = null, float? SessionMaxProbability = null, float? Probability = null, int? Percentile = null, int? SessionMaxPercentile = null, float? Quantile = null, float? SessionMaxQuantile = null)
+        public OutcomeScore(AddressableEntityRef Outcome = null, float? SessionMaxProbability = null, float? Probability = null, int? Percentile = null, int? SessionMaxPercentile = null, float? Quantile = null, float? SessionMaxQuantile = null)
         {
             this.Outcome = Outcome;
             this.SessionMaxProbability = SessionMaxProbability;
@@ -111,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OutcomeEventScore {\n");
+            sb.Append("class OutcomeScore {\n");
 
             sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("  SessionMaxProbability: ").Append(SessionMaxProbability).Append("\n");
@@ -145,15 +145,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OutcomeEventScore);
+            return this.Equals(obj as OutcomeScore);
         }
 
         /// <summary>
-        /// Returns true if OutcomeEventScore instances are equal
+        /// Returns true if OutcomeScore instances are equal
         /// </summary>
-        /// <param name="other">Instance of OutcomeEventScore to be compared</param>
+        /// <param name="other">Instance of OutcomeScore to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OutcomeEventScore other)
+        public bool Equals(OutcomeScore other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

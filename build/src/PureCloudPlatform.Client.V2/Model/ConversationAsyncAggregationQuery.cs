@@ -33,6 +33,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Activerouting for "activeRouting"
+            /// </summary>
+            [EnumMember(Value = "activeRouting")]
+            Activerouting,
+            
+            /// <summary>
             /// Enum Activeskillid for "activeSkillId"
             /// </summary>
             [EnumMember(Value = "activeSkillId")]

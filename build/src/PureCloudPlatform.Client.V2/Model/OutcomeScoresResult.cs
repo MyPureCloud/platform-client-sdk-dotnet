@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="OutcomeScoresResult" /> class.
         /// </summary>
         /// <param name="OutcomeScores">List of scored outcomes in the session..</param>
-        public OutcomeScoresResult(List<OutcomeEventScore> OutcomeScores = null)
+        public OutcomeScoresResult(List<OutcomeScore> OutcomeScores = null)
         {
             this.OutcomeScores = OutcomeScores;
             
@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of scored outcomes in the session.</value>
         [DataMember(Name="outcomeScores", EmitDefaultValue=false)]
-        public List<OutcomeEventScore> OutcomeScores { get; set; }
+        public List<OutcomeScore> OutcomeScores { get; set; }
 
 
 

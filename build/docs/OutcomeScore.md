@@ -1,7 +1,7 @@
 ---
-title: OutcomeEventScore
+title: OutcomeScore
 ---
-## ININ.PureCloudApi.Model.OutcomeEventScore
+## ININ.PureCloudApi.Model.OutcomeScore
 
 ## Properties
 

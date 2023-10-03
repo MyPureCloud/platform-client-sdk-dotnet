@@ -52,6 +52,75 @@ namespace PureCloudPlatform.Client.V2.Model
             Owaiting
         }
         /// <summary>
+        /// Active routing method
+        /// </summary>
+        /// <value>Active routing method</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ActiveRoutingEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Bullseye for "Bullseye"
+            /// </summary>
+            [EnumMember(Value = "Bullseye")]
+            Bullseye,
+            
+            /// <summary>
+            /// Enum Conditional for "Conditional"
+            /// </summary>
+            [EnumMember(Value = "Conditional")]
+            Conditional,
+            
+            /// <summary>
+            /// Enum Direct for "Direct"
+            /// </summary>
+            [EnumMember(Value = "Direct")]
+            Direct,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Manual for "Manual"
+            /// </summary>
+            [EnumMember(Value = "Manual")]
+            Manual,
+            
+            /// <summary>
+            /// Enum Predictive for "Predictive"
+            /// </summary>
+            [EnumMember(Value = "Predictive")]
+            Predictive,
+            
+            /// <summary>
+            /// Enum Preferred for "Preferred"
+            /// </summary>
+            [EnumMember(Value = "Preferred")]
+            Preferred,
+            
+            /// <summary>
+            /// Enum Standard for "Standard"
+            /// </summary>
+            [EnumMember(Value = "Standard")]
+            Standard,
+            
+            /// <summary>
+            /// Enum Vip for "Vip"
+            /// </summary>
+            [EnumMember(Value = "Vip")]
+            Vip
+        }
+        /// <summary>
         /// The direction of the communication
         /// </summary>
         /// <value>The direction of the communication</value>
@@ -291,6 +360,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
         /// <summary>
+        /// Active routing method
+        /// </summary>
+        /// <value>Active routing method</value>
+        [DataMember(Name="activeRouting", EmitDefaultValue=false)]
+        public ActiveRoutingEnum? ActiveRouting { get; set; }
+        /// <summary>
         /// The direction of the communication
         /// </summary>
         /// <value>The direction of the communication</value>
@@ -319,6 +394,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActivityDate">The time at which the activity was observed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Metric">Activity metric.</param>
+        /// <param name="ActiveRouting">Active routing method.</param>
         /// <param name="AddressFrom">The address that initiated an action.</param>
         /// <param name="AddressTo">The address receiving an action.</param>
         /// <param name="Ani">Automatic Number Identification (caller's number).</param>
@@ -339,10 +415,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UsedRouting">Complete routing method.</param>
         /// <param name="UserId">Unique identifier for the user.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public ConversationActivityEntityData(DateTime? ActivityDate = null, MetricEnum? Metric = null, string AddressFrom = null, string AddressTo = null, string Ani = null, string ConversationId = null, string ConvertedFrom = null, string ConvertedTo = null, DirectionEnum? Direction = null, string Dnis = null, MediaTypeEnum? MediaType = null, string ParticipantName = null, string QueueId = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, long? RoutingPriority = null, string SessionId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<ConversationActivityScoredAgent> ScoredAgents = null)
+        public ConversationActivityEntityData(DateTime? ActivityDate = null, MetricEnum? Metric = null, ActiveRoutingEnum? ActiveRouting = null, string AddressFrom = null, string AddressTo = null, string Ani = null, string ConversationId = null, string ConvertedFrom = null, string ConvertedTo = null, DirectionEnum? Direction = null, string Dnis = null, MediaTypeEnum? MediaType = null, string ParticipantName = null, string QueueId = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, long? RoutingPriority = null, string SessionId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<ConversationActivityScoredAgent> ScoredAgents = null)
         {
             this.ActivityDate = ActivityDate;
             this.Metric = Metric;
+            this.ActiveRouting = ActiveRouting;
             this.AddressFrom = AddressFrom;
             this.AddressTo = AddressTo;
             this.Ani = Ani;
@@ -374,6 +451,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The time at which the activity was observed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="activityDate", EmitDefaultValue=false)]
         public DateTime? ActivityDate { get; set; }
+
+
 
 
 
@@ -548,6 +627,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ActivityDate: ").Append(ActivityDate).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
+            sb.Append("  ActiveRouting: ").Append(ActiveRouting).Append("\n");
             sb.Append("  AddressFrom: ").Append(AddressFrom).Append("\n");
             sb.Append("  AddressTo: ").Append(AddressTo).Append("\n");
             sb.Append("  Ani: ").Append(Ani).Append("\n");
@@ -617,6 +697,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
+                ) &&
+                (
+                    this.ActiveRouting == other.ActiveRouting ||
+                    this.ActiveRouting != null &&
+                    this.ActiveRouting.Equals(other.ActiveRouting)
                 ) &&
                 (
                     this.AddressFrom == other.AddressFrom ||
@@ -736,6 +821,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
+
+                if (this.ActiveRouting != null)
+                    hash = hash * 59 + this.ActiveRouting.GetHashCode();
 
                 if (this.AddressFrom != null)
                     hash = hash * 59 + this.AddressFrom.GetHashCode();

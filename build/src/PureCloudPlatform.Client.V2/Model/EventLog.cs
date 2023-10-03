@@ -143,6 +143,12 @@ namespace PureCloudPlatform.Client.V2.Model
             MessagingCampaign,
             
             /// <summary>
+            /// Enum ImportTemplate for "IMPORT_TEMPLATE"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_TEMPLATE")]
+            ImportTemplate,
+            
+            /// <summary>
             /// Enum OrganizationConfiguration for "ORGANIZATION_CONFIGURATION"
             /// </summary>
             [EnumMember(Value = "ORGANIZATION_CONFIGURATION")]

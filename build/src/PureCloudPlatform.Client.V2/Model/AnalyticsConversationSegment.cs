@@ -52,6 +52,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Consulttransfer,
             
             /// <summary>
+            /// Enum Dndendpoint for "dndEndpoint"
+            /// </summary>
+            [EnumMember(Value = "dndEndpoint")]
+            Dndendpoint,
+            
+            /// <summary>
+            /// Enum Dndtransfer for "dndTransfer"
+            /// </summary>
+            [EnumMember(Value = "dndTransfer")]
+            Dndtransfer,
+            
+            /// <summary>
             /// Enum Endpoint for "endpoint"
             /// </summary>
             [EnumMember(Value = "endpoint")]

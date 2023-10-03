@@ -4469,7 +4469,8 @@ Send an activation email to the user
 
 Requires ANY permissions: 
 
-* directory:user:add
+* directory:organization:admin
+* directory:userPassword:edit
 
 ### Example
 ```{"language":"csharp"}

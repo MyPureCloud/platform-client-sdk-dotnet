@@ -13,6 +13,7 @@ title: ExternalContactsContactChangedTopicPhoneNumber
 | **UserInput** | **string** |  | [optional] |
 | **E164** | **string** |  | [optional] |
 | **CountryCode** | **string** |  | [optional] |
+| **NormalizationCountryCode** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

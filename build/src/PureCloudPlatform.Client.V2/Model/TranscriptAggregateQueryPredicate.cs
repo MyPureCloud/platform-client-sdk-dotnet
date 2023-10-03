@@ -91,6 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Channel,
             
             /// <summary>
+            /// Enum Conversationduration for "conversationDuration"
+            /// </summary>
+            [EnumMember(Value = "conversationDuration")]
+            Conversationduration,
+            
+            /// <summary>
             /// Enum Conversationid for "conversationId"
             /// </summary>
             [EnumMember(Value = "conversationId")]
@@ -125,6 +131,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "flowVersion")]
             Flowversion,
+            
+            /// <summary>
+            /// Enum Handletime for "handleTime"
+            /// </summary>
+            [EnumMember(Value = "handleTime")]
+            Handletime,
             
             /// <summary>
             /// Enum Mediatype for "mediaType"

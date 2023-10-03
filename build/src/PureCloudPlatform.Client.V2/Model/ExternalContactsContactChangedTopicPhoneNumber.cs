@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserInput">UserInput.</param>
         /// <param name="E164">E164.</param>
         /// <param name="CountryCode">CountryCode.</param>
-        public ExternalContactsContactChangedTopicPhoneNumber(string Display = null, int? Extension = null, bool? AcceptsSMS = null, string UserInput = null, string E164 = null, string CountryCode = null)
+        /// <param name="NormalizationCountryCode">NormalizationCountryCode.</param>
+        public ExternalContactsContactChangedTopicPhoneNumber(string Display = null, int? Extension = null, bool? AcceptsSMS = null, string UserInput = null, string E164 = null, string CountryCode = null, string NormalizationCountryCode = null)
         {
             this.Display = Display;
             this.Extension = Extension;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UserInput = UserInput;
             this.E164 = E164;
             this.CountryCode = CountryCode;
+            this.NormalizationCountryCode = NormalizationCountryCode;
             
         }
         
@@ -87,6 +89,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string CountryCode { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets NormalizationCountryCode
+        /// </summary>
+        [DataMember(Name="normalizationCountryCode", EmitDefaultValue=false)]
+        public string NormalizationCountryCode { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserInput: ").Append(UserInput).Append("\n");
             sb.Append("  E164: ").Append(E164).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  NormalizationCountryCode: ").Append(NormalizationCountryCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -171,6 +182,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountryCode == other.CountryCode ||
                     this.CountryCode != null &&
                     this.CountryCode.Equals(other.CountryCode)
+                ) &&
+                (
+                    this.NormalizationCountryCode == other.NormalizationCountryCode ||
+                    this.NormalizationCountryCode != null &&
+                    this.NormalizationCountryCode.Equals(other.NormalizationCountryCode)
                 );
         }
 
@@ -202,6 +218,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
+
+                if (this.NormalizationCountryCode != null)
+                    hash = hash * 59 + this.NormalizationCountryCode.GetHashCode();
 
                 return hash;
             }

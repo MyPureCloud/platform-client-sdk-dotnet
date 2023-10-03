@@ -12,6 +12,8 @@ title: DnclistImportStatusImportStatus
 | **CompletedRecords** | **int?** | number of records finished importing | [optional] |
 | **PercentageComplete** | **int?** | percentage of records finished importing | [optional] |
 | **FailureReason** | **string** | if the import has failed, the reason for the failure | [optional] |
+| **TargetContactListIds** | **List&lt;string&gt;** | The ids for target contact lists | [optional] |
+| **ListNamePrefix** | **string** | The prefix used for target contact list names | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
