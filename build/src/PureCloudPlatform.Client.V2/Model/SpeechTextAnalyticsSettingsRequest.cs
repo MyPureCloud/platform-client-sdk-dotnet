@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultProgramId">Setting to choose name for the default program for topic detection.</param>
         /// <param name="ExpectedDialects">Setting to choose expected dialects.</param>
         /// <param name="TextAnalyticsEnabled">Setting to enable/disable text analytics.</param>
-        public SpeechTextAnalyticsSettingsRequest(string DefaultProgramId = null, List<string> ExpectedDialects = null, bool? TextAnalyticsEnabled = null)
+        /// <param name="AgentEmpathyEnabled">Setting to enable/disable Agent Empathy setting.</param>
+        public SpeechTextAnalyticsSettingsRequest(string DefaultProgramId = null, List<string> ExpectedDialects = null, bool? TextAnalyticsEnabled = null, bool? AgentEmpathyEnabled = null)
         {
             this.DefaultProgramId = DefaultProgramId;
             this.ExpectedDialects = ExpectedDialects;
             this.TextAnalyticsEnabled = TextAnalyticsEnabled;
+            this.AgentEmpathyEnabled = AgentEmpathyEnabled;
             
         }
         
@@ -60,6 +62,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? TextAnalyticsEnabled { get; set; }
 
 
+
+        /// <summary>
+        /// Setting to enable/disable Agent Empathy setting
+        /// </summary>
+        /// <value>Setting to enable/disable Agent Empathy setting</value>
+        [DataMember(Name="agentEmpathyEnabled", EmitDefaultValue=false)]
+        public bool? AgentEmpathyEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultProgramId: ").Append(DefaultProgramId).Append("\n");
             sb.Append("  ExpectedDialects: ").Append(ExpectedDialects).Append("\n");
             sb.Append("  TextAnalyticsEnabled: ").Append(TextAnalyticsEnabled).Append("\n");
+            sb.Append("  AgentEmpathyEnabled: ").Append(AgentEmpathyEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +138,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TextAnalyticsEnabled == other.TextAnalyticsEnabled ||
                     this.TextAnalyticsEnabled != null &&
                     this.TextAnalyticsEnabled.Equals(other.TextAnalyticsEnabled)
+                ) &&
+                (
+                    this.AgentEmpathyEnabled == other.AgentEmpathyEnabled ||
+                    this.AgentEmpathyEnabled != null &&
+                    this.AgentEmpathyEnabled.Equals(other.AgentEmpathyEnabled)
                 );
         }
 
@@ -148,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TextAnalyticsEnabled != null)
                     hash = hash * 59 + this.TextAnalyticsEnabled.GetHashCode();
+
+                if (this.AgentEmpathyEnabled != null)
+                    hash = hash * 59 + this.AgentEmpathyEnabled.GetHashCode();
 
                 return hash;
             }

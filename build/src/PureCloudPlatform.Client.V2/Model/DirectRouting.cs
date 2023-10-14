@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BackupQueueId">ID of queue to be used as the default backup if an agent does not have their Backup Settings configured..</param>
         /// <param name="WaitForAgent">Flag indicating if Direct Routing interactions should wait for Direct Routing agent or go immediately to selected backup..</param>
         /// <param name="AgentWaitSeconds">Time (in seconds) that a Direct Routing interaction will wait for Direct Routing agent before going to selected backup. Valid range [60, 864000]..</param>
-        public DirectRouting(DirectRoutingCallMediaSettings CallMediaSettings = null, DirectRoutingMediaSettings EmailMediaSettings = null, DirectRoutingMediaSettings MessageMediaSettings = null, string BackupQueueId = null, bool? WaitForAgent = null, int? AgentWaitSeconds = null)
+        public DirectRouting(DirectRoutingMediaSettings CallMediaSettings = null, DirectRoutingMediaSettings EmailMediaSettings = null, DirectRoutingMediaSettings MessageMediaSettings = null, string BackupQueueId = null, bool? WaitForAgent = null, int? AgentWaitSeconds = null)
         {
             this.CallMediaSettings = CallMediaSettings;
             this.EmailMediaSettings = EmailMediaSettings;
@@ -45,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Direct Routing Settings specific to Call media.</value>
         [DataMember(Name="callMediaSettings", EmitDefaultValue=false)]
-        public DirectRoutingCallMediaSettings CallMediaSettings { get; set; }
+        public DirectRoutingMediaSettings CallMediaSettings { get; set; }
 
 
 

@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AuditRealtimeQueryRequest" /> class.
         /// </summary>
         /// <param name="Interval">Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (required).</param>
-        /// <param name="ServiceName">Name of the service to query audits for. (required).</param>
+        /// <param name="ServiceName">Name of the service to query audits for..</param>
         /// <param name="Filters">Additional filters for the query..</param>
         /// <param name="Sort">Sort parameter for the query..</param>
         /// <param name="PageNumber">Page number.</param>

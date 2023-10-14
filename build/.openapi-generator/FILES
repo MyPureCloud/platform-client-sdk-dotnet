@@ -496,6 +496,8 @@ docs/CallbackDisconnectIdentifier.md
 docs/CallbackIdentifier.md
 docs/CallbackMediaParticipant.md
 docs/CallbackMediaSettings.md
+docs/Callheader.md
+docs/Callmessage.md
 docs/Campaign.md
 docs/CampaignDiagnostics.md
 docs/CampaignDivisionView.md
@@ -1440,7 +1442,6 @@ docs/DigitalRuleSet.md
 docs/DigitalRuleSetEntityListing.md
 docs/Digits.md
 docs/DirectRouting.md
-docs/DirectRoutingCallMediaSettings.md
 docs/DirectRoutingMediaSettings.md
 docs/DirectoryUserDevicesListing.md
 docs/DisallowedEntityLearningAssignmentItem.md
@@ -2869,6 +2870,8 @@ docs/GetTelephonyProvidersEdgesTrunkbasesettingsTemplate-example.txt
 docs/GetTelephonyProvidersEdgesTrunks-example.txt
 docs/GetTelephonyProvidersEdgesTrunksMetrics-example.txt
 docs/GetTelephonyProvidersEdgesTrunkswithrecording-example.txt
+docs/GetTelephonySipmessagesConversation-example.txt
+docs/GetTelephonySipmessagesConversationHeaders-example.txt
 docs/GetTelephonySiptraces-example.txt
 docs/GetTelephonySiptracesDownloadDownloadId-example.txt
 docs/GetTemplatesResponse.md
@@ -3571,6 +3574,7 @@ docs/MediaRtpStatistics.md
 docs/MediaSettings.md
 docs/MediaStatistics.md
 docs/MediaStatisticsListing.md
+docs/MediaStatisticsTrunkInfo.md
 docs/MediaSummary.md
 docs/MediaSummaryDetail.md
 docs/MediaTranscription.md
@@ -7079,6 +7083,8 @@ src/PureCloudPlatform.Client.V2/Model/CallbackDisconnectIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/CallbackIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/CallbackMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/CallbackMediaSettings.cs
+src/PureCloudPlatform.Client.V2/Model/Callheader.cs
+src/PureCloudPlatform.Client.V2/Model/Callmessage.cs
 src/PureCloudPlatform.Client.V2/Model/Campaign.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignDiagnostics.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignDivisionView.cs
@@ -7760,7 +7766,6 @@ src/PureCloudPlatform.Client.V2/Model/DigitalRuleSet.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalRuleSetEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Digits.cs
 src/PureCloudPlatform.Client.V2/Model/DirectRouting.cs
-src/PureCloudPlatform.Client.V2/Model/DirectRoutingCallMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/DirectRoutingMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/DirectoryUserDevicesListing.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentItem.cs
@@ -8745,6 +8750,7 @@ src/PureCloudPlatform.Client.V2/Model/MediaRtpStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/MediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/MediaStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/MediaStatisticsListing.cs
+src/PureCloudPlatform.Client.V2/Model/MediaStatisticsTrunkInfo.cs
 src/PureCloudPlatform.Client.V2/Model/MediaSummary.cs
 src/PureCloudPlatform.Client.V2/Model/MediaSummaryDetail.cs
 src/PureCloudPlatform.Client.V2/Model/MediaTranscription.cs

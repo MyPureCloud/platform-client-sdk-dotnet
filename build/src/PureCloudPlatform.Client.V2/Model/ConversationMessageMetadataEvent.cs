@@ -121,6 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Clear,
             
             /// <summary>
+            /// Enum Signin for "SignIn"
+            /// </summary>
+            [EnumMember(Value = "SignIn")]
+            Signin,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Userpresence,
             
             /// <summary>
+            /// Enum Workforcemanagement for "WorkforceManagement"
+            /// </summary>
+            [EnumMember(Value = "WorkforceManagement")]
+            Workforcemanagement,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

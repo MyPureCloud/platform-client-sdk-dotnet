@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SkillGroup :  IEquatable<SkillGroup>
     {
+        /// <summary>
+        /// Group's filling status
+        /// </summary>
+        /// <value>Group's filling status</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Complete for "Complete"
+            /// </summary>
+            [EnumMember(Value = "Complete")]
+            Complete
+        }
+        /// <summary>
+        /// Group's filling status
+        /// </summary>
+        /// <value>Group's filling status</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SkillGroup" /> class.
@@ -105,6 +138,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Conditions for this group
         /// </summary>
@@ -138,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SkillConditions: ").Append(SkillConditions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -216,6 +252,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
                     this.SkillConditions == other.SkillConditions ||
                     this.SkillConditions != null &&
                     this.SkillConditions.SequenceEqual(other.SkillConditions)
@@ -258,6 +299,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
 
                 if (this.SkillConditions != null)
                     hash = hash * 59 + this.SkillConditions.GetHashCode();

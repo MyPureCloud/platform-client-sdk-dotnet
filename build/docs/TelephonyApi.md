@@ -8,6 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetTelephonyMediaregions**](TelephonyApi.html#gettelephonymediaregions) | **Get** /api/v2/telephony/mediaregions | Retrieve the list of AWS regions media can stream through. |
+| [**GetTelephonySipmessagesConversation**](TelephonyApi.html#gettelephonysipmessagesconversation) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId} | Get a SIP message. |
+| [**GetTelephonySipmessagesConversationHeaders**](TelephonyApi.html#gettelephonysipmessagesconversationheaders) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId}/headers | Get SIP headers. |
 | [**GetTelephonySiptraces**](TelephonyApi.html#gettelephonysiptraces) | **Get** /api/v2/telephony/siptraces | Fetch SIP metadata |
 | [**GetTelephonySiptracesDownloadDownloadId**](TelephonyApi.html#gettelephonysiptracesdownloaddownloadid) | **Get** /api/v2/telephony/siptraces/download/{downloadId} | Get signed S3 URL for a pcap download |
 | [**PostTelephonySiptracesDownload**](TelephonyApi.html#posttelephonysiptracesdownload) | **Post** /api/v2/telephony/siptraces/download | Request a download of a pcap file to S3 |
@@ -70,6 +72,142 @@ This endpoint does require any parameters.
 ### Return type
 
 [**MediaRegions**](MediaRegions.html)
+
+<a name="gettelephonysipmessagesconversation"></a>
+
+## [**Callmessage**](Callmessage.html) GetTelephonySipmessagesConversation (string conversationId)
+
+
+
+Get a SIP message.
+
+Get the raw form of the SIP message
+
+GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* telephony:pcap:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonySipmessagesConversationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var conversationId = conversationId_example;  // string | Conversation id
+
+            try
+            { 
+                // Get a SIP message.
+                Callmessage result = apiInstance.GetTelephonySipmessagesConversation(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonySipmessagesConversation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Callmessage**](Callmessage.html)
+
+<a name="gettelephonysipmessagesconversationheaders"></a>
+
+## [**Callheader**](Callheader.html) GetTelephonySipmessagesConversationHeaders (string conversationId, List<string> keys = null)
+
+
+
+Get SIP headers.
+
+Get parsed SIP headers. Returns specific headers if key query parameters are added.
+
+GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* telephony:pcap:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonySipmessagesConversationHeadersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var conversationId = conversationId_example;  // string | Conversation id
+            var keys = new List<string>(); // List<string> | comma-separated list of header identifiers to query. e.g. ruri,to,from (optional) 
+
+            try
+            { 
+                // Get SIP headers.
+                Callheader result = apiInstance.GetTelephonySipmessagesConversationHeaders(conversationId, keys);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonySipmessagesConversationHeaders: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation id |  |
+| **keys** | [**List<string>**](string.html)| comma-separated list of header identifiers to query. e.g. ruri,to,from | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Callheader**](Callheader.html)
 
 <a name="gettelephonysiptraces"></a>
 

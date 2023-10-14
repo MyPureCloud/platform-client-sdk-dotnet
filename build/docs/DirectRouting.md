@@ -7,7 +7,7 @@ title: DirectRouting
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **CallMediaSettings** | [**DirectRoutingCallMediaSettings**](DirectRoutingCallMediaSettings.html) | Direct Routing Settings specific to Call media. | [optional] |
+| **CallMediaSettings** | [**DirectRoutingMediaSettings**](DirectRoutingMediaSettings.html) | Direct Routing Settings specific to Call media. | [optional] |
 | **EmailMediaSettings** | [**DirectRoutingMediaSettings**](DirectRoutingMediaSettings.html) | Direct Routing Settings specific to Email media. | [optional] |
 | **MessageMediaSettings** | [**DirectRoutingMediaSettings**](DirectRoutingMediaSettings.html) | Direct Routing Settings specific to Message media. | [optional] |
 | **BackupQueueId** | **string** | ID of queue to be used as the default backup if an agent does not have their Backup Settings configured. | [optional] |

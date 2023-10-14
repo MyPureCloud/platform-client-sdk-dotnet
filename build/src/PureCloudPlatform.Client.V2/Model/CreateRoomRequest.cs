@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Description">Room's description.</param>
         /// <param name="Subject">Room's subject (required).</param>
-        public CreateRoomRequest(string Description = null, string Subject = null)
+        /// <param name="UserIds">Users to add to the room.</param>
+        public CreateRoomRequest(string Description = null, string Subject = null, List<string> UserIds = null)
         {
             this.Description = Description;
             this.Subject = Subject;
+            this.UserIds = UserIds;
             
         }
         
@@ -55,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Subject { get; set; }
 
 
+
+        /// <summary>
+        /// Users to add to the room
+        /// </summary>
+        /// <value>Users to add to the room</value>
+        [DataMember(Name="userIds", EmitDefaultValue=false)]
+        public List<string> UserIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
+            sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
+                ) &&
+                (
+                    this.UserIds == other.UserIds ||
+                    this.UserIds != null &&
+                    this.UserIds.SequenceEqual(other.UserIds)
                 );
         }
 
@@ -134,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
+
+                if (this.UserIds != null)
+                    hash = hash * 59 + this.UserIds.GetHashCode();
 
                 return hash;
             }

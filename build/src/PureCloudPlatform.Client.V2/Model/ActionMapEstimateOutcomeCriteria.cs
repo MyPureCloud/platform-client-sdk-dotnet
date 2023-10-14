@@ -28,13 +28,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ActionMapEstimateOutcomeCriteria" /> class.
         /// </summary>
         /// <param name="OutcomeId">ID of outcome. (required).</param>
-        /// <param name="MaxProbability">Probability value for the selected outcome at or above which the action map will trigger. (required).</param>
+        /// <param name="MaxProbability">Probability value for the selected outcome at or above which the action map will trigger..</param>
         /// <param name="Probability">Additional probability condition, where if set, the action map will trigger if the current outcome probability is lower or equal to the value..</param>
-        public ActionMapEstimateOutcomeCriteria(string OutcomeId = null, float? MaxProbability = null, float? Probability = null)
+        /// <param name="Quantile">Represents the quantity of sessions that have a maximum probability less than the predicted probability..</param>
+        /// <param name="MaxQuantile">Represents the quantity of sessions that have a maximum probability less than the predicted session max probability..</param>
+        public ActionMapEstimateOutcomeCriteria(string OutcomeId = null, float? MaxProbability = null, float? Probability = null, float? Quantile = null, float? MaxQuantile = null)
         {
             this.OutcomeId = OutcomeId;
             this.MaxProbability = MaxProbability;
             this.Probability = Probability;
+            this.Quantile = Quantile;
+            this.MaxQuantile = MaxQuantile;
             
         }
         
@@ -66,6 +70,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public float? Probability { get; set; }
 
 
+
+        /// <summary>
+        /// Represents the quantity of sessions that have a maximum probability less than the predicted probability.
+        /// </summary>
+        /// <value>Represents the quantity of sessions that have a maximum probability less than the predicted probability.</value>
+        [DataMember(Name="quantile", EmitDefaultValue=false)]
+        public float? Quantile { get; set; }
+
+
+
+        /// <summary>
+        /// Represents the quantity of sessions that have a maximum probability less than the predicted session max probability.
+        /// </summary>
+        /// <value>Represents the quantity of sessions that have a maximum probability less than the predicted session max probability.</value>
+        [DataMember(Name="maxQuantile", EmitDefaultValue=false)]
+        public float? MaxQuantile { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,6 +100,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutcomeId: ").Append(OutcomeId).Append("\n");
             sb.Append("  MaxProbability: ").Append(MaxProbability).Append("\n");
             sb.Append("  Probability: ").Append(Probability).Append("\n");
+            sb.Append("  Quantile: ").Append(Quantile).Append("\n");
+            sb.Append("  MaxQuantile: ").Append(MaxQuantile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +156,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Probability == other.Probability ||
                     this.Probability != null &&
                     this.Probability.Equals(other.Probability)
+                ) &&
+                (
+                    this.Quantile == other.Quantile ||
+                    this.Quantile != null &&
+                    this.Quantile.Equals(other.Quantile)
+                ) &&
+                (
+                    this.MaxQuantile == other.MaxQuantile ||
+                    this.MaxQuantile != null &&
+                    this.MaxQuantile.Equals(other.MaxQuantile)
                 );
         }
 
@@ -154,6 +188,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Probability != null)
                     hash = hash * 59 + this.Probability.GetHashCode();
+
+                if (this.Quantile != null)
+                    hash = hash * 59 + this.Quantile.GetHashCode();
+
+                if (this.MaxQuantile != null)
+                    hash = hash * 59 + this.MaxQuantile.GetHashCode();
 
                 return hash;
             }

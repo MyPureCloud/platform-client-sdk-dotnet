@@ -367,7 +367,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Tflowout for "tFlowOut"
             /// </summary>
             [EnumMember(Value = "tFlowOut")]
-            Tflowout
+            Tflowout,
+            
+            /// <summary>
+            /// Enum Tadherencestatus for "tAdherenceStatus"
+            /// </summary>
+            [EnumMember(Value = "tAdherenceStatus")]
+            Tadherencestatus
         }
         /// <summary>
         /// The type of metric being evaluated.

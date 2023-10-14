@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">User information associated media endpoint.</param>
         /// <param name="Ice">The ICE protocol statistics and details. Reference: https://www.rfc-editor.org/rfc/rfc5245.</param>
         /// <param name="Rtp">Statistics of sent and received RTP. Reference: https://www.rfc-editor.org/rfc/rfc3550.</param>
-        public MediaEndpointStatistics(NamedEntity Trunk = null, NamedEntity Station = null, NamedEntity User = null, MediaIceStatistics Ice = null, MediaRtpStatistics Rtp = null)
+        public MediaEndpointStatistics(MediaStatisticsTrunkInfo Trunk = null, NamedEntity Station = null, NamedEntity User = null, MediaIceStatistics Ice = null, MediaRtpStatistics Rtp = null)
         {
             this.Trunk = Trunk;
             this.Station = Station;
@@ -43,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Trunk information utilized when creating the media endpoint</value>
         [DataMember(Name="trunk", EmitDefaultValue=false)]
-        public NamedEntity Trunk { get; set; }
+        public MediaStatisticsTrunkInfo Trunk { get; set; }
 
 
 

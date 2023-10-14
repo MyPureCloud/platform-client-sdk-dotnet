@@ -82,13 +82,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SentimentScore">The Sentiment Score.</param>
         /// <param name="SentimentTrend">The Sentiment Trend.</param>
         /// <param name="SentimentTrendClass">The Sentiment Trend Class.</param>
+        /// <param name="EmpathyScores">The Empathy Scores.</param>
         /// <param name="ParticipantMetrics">The Participant Metrics.</param>
-        public ConversationMetrics(AddressableEntityRef Conversation = null, double? SentimentScore = null, double? SentimentTrend = null, SentimentTrendClassEnum? SentimentTrendClass = null, ParticipantMetrics ParticipantMetrics = null)
+        public ConversationMetrics(AddressableEntityRef Conversation = null, double? SentimentScore = null, double? SentimentTrend = null, SentimentTrendClassEnum? SentimentTrendClass = null, List<EmpathyScore> EmpathyScores = null, ParticipantMetrics ParticipantMetrics = null)
         {
             this.Conversation = Conversation;
             this.SentimentScore = SentimentScore;
             this.SentimentTrend = SentimentTrend;
             this.SentimentTrendClass = SentimentTrendClass;
+            this.EmpathyScores = EmpathyScores;
             this.ParticipantMetrics = ParticipantMetrics;
             
         }
@@ -125,6 +127,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The Empathy Scores
+        /// </summary>
+        /// <value>The Empathy Scores</value>
+        [DataMember(Name="empathyScores", EmitDefaultValue=false)]
+        public List<EmpathyScore> EmpathyScores { get; set; }
+
+
+
+        /// <summary>
         /// The Participant Metrics
         /// </summary>
         /// <value>The Participant Metrics</value>
@@ -145,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SentimentScore: ").Append(SentimentScore).Append("\n");
             sb.Append("  SentimentTrend: ").Append(SentimentTrend).Append("\n");
             sb.Append("  SentimentTrendClass: ").Append(SentimentTrendClass).Append("\n");
+            sb.Append("  EmpathyScores: ").Append(EmpathyScores).Append("\n");
             sb.Append("  ParticipantMetrics: ").Append(ParticipantMetrics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -207,6 +219,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SentimentTrendClass.Equals(other.SentimentTrendClass)
                 ) &&
                 (
+                    this.EmpathyScores == other.EmpathyScores ||
+                    this.EmpathyScores != null &&
+                    this.EmpathyScores.SequenceEqual(other.EmpathyScores)
+                ) &&
+                (
                     this.ParticipantMetrics == other.ParticipantMetrics ||
                     this.ParticipantMetrics != null &&
                     this.ParticipantMetrics.Equals(other.ParticipantMetrics)
@@ -235,6 +252,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SentimentTrendClass != null)
                     hash = hash * 59 + this.SentimentTrendClass.GetHashCode();
+
+                if (this.EmpathyScores != null)
+                    hash = hash * 59 + this.EmpathyScores.GetHashCode();
 
                 if (this.ParticipantMetrics != null)
                     hash = hash * 59 + this.ParticipantMetrics.GetHashCode();

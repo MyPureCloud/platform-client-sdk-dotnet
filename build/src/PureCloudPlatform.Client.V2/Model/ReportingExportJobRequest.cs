@@ -337,6 +337,12 @@ namespace PureCloudPlatform.Client.V2.Model
             DashboardUsers,
             
             /// <summary>
+            /// Enum DashboardUsersDetail for "DASHBOARD_USERS_DETAIL"
+            /// </summary>
+            [EnumMember(Value = "DASHBOARD_USERS_DETAIL")]
+            DashboardUsersDetail,
+            
+            /// <summary>
             /// Enum JourneyActionMapSummaryView for "JOURNEY_ACTION_MAP_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "JOURNEY_ACTION_MAP_SUMMARY_VIEW")]

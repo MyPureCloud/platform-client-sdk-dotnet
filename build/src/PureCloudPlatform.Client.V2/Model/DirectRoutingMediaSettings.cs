@@ -21,32 +21,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DirectRoutingMediaSettings" /> class.
         /// </summary>
-        /// <param name="Enabled">Toggle that enables Direct Routing for this media type..</param>
-        /// <param name="InboundFlow">The Direct Routing inbound flow id for this media type..</param>
-        public DirectRoutingMediaSettings(bool? Enabled = null, AddressableEntityRef InboundFlow = null)
+        /// <param name="UseAgentAddressOutbound">Toggle that enables using an agent's Direct Routing address outbound on behalf of queue for this media type..</param>
+        public DirectRoutingMediaSettings(bool? UseAgentAddressOutbound = null)
         {
-            this.Enabled = Enabled;
-            this.InboundFlow = InboundFlow;
+            this.UseAgentAddressOutbound = UseAgentAddressOutbound;
             
         }
         
 
 
         /// <summary>
-        /// Toggle that enables Direct Routing for this media type.
+        /// Toggle that enables using an agent's Direct Routing address outbound on behalf of queue for this media type.
         /// </summary>
-        /// <value>Toggle that enables Direct Routing for this media type.</value>
-        [DataMember(Name="enabled", EmitDefaultValue=false)]
-        public bool? Enabled { get; set; }
-
-
-
-        /// <summary>
-        /// The Direct Routing inbound flow id for this media type.
-        /// </summary>
-        /// <value>The Direct Routing inbound flow id for this media type.</value>
-        [DataMember(Name="inboundFlow", EmitDefaultValue=false)]
-        public AddressableEntityRef InboundFlow { get; set; }
+        /// <value>Toggle that enables using an agent's Direct Routing address outbound on behalf of queue for this media type.</value>
+        [DataMember(Name="useAgentAddressOutbound", EmitDefaultValue=false)]
+        public bool? UseAgentAddressOutbound { get; set; }
 
 
         /// <summary>
@@ -58,8 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DirectRoutingMediaSettings {\n");
 
-            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            sb.Append("  InboundFlow: ").Append(InboundFlow).Append("\n");
+            sb.Append("  UseAgentAddressOutbound: ").Append(UseAgentAddressOutbound).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -101,14 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Enabled == other.Enabled ||
-                    this.Enabled != null &&
-                    this.Enabled.Equals(other.Enabled)
-                ) &&
-                (
-                    this.InboundFlow == other.InboundFlow ||
-                    this.InboundFlow != null &&
-                    this.InboundFlow.Equals(other.InboundFlow)
+                    this.UseAgentAddressOutbound == other.UseAgentAddressOutbound ||
+                    this.UseAgentAddressOutbound != null &&
+                    this.UseAgentAddressOutbound.Equals(other.UseAgentAddressOutbound)
                 );
         }
 
@@ -123,11 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Enabled != null)
-                    hash = hash * 59 + this.Enabled.GetHashCode();
-
-                if (this.InboundFlow != null)
-                    hash = hash * 59 + this.InboundFlow.GetHashCode();
+                if (this.UseAgentAddressOutbound != null)
+                    hash = hash * 59 + this.UseAgentAddressOutbound.GetHashCode();
 
                 return hash;
             }

@@ -1482,7 +1482,7 @@ void (empty response body)
 
 <a name="postchatsrooms"></a>
 
-## [**CreateRoomResponse**](CreateRoomResponse.html) PostChatsRooms (CreateRoomRequest body = null)
+## [**CreateRoomResponse**](CreateRoomResponse.html) PostChatsRooms (CreateRoomRequest body)
 
 
 
@@ -1517,7 +1517,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ChatApi();
-            var body = new CreateRoomRequest(); // CreateRoomRequest | Room properties (optional) 
+            var body = new CreateRoomRequest(); // CreateRoomRequest | Room properties
 
             try
             { 
@@ -1539,7 +1539,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateRoomRequest**](CreateRoomRequest.html)| Room properties | [optional]  |
+| **body** | [**CreateRoomRequest**](CreateRoomRequest.html)| Room properties |  |
 {: class="table table-striped"}
 
 ### Return type

@@ -640,10 +640,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Room properties (optional)</param>
+        /// <param name="body">Room properties</param>
         /// <returns>CreateRoomResponse</returns>
         
-        CreateRoomResponse PostChatsRooms (CreateRoomRequest body = null);
+        CreateRoomResponse PostChatsRooms (CreateRoomRequest body);
 
         /// <summary>
         /// Create an adhoc room
@@ -653,10 +653,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Room properties (optional)</param>
+        /// <param name="body">Room properties</param>
         /// <returns>ApiResponse of CreateRoomResponse</returns>
         
-        ApiResponse<CreateRoomResponse> PostChatsRoomsWithHttpInfo (CreateRoomRequest body = null);
+        ApiResponse<CreateRoomResponse> PostChatsRoomsWithHttpInfo (CreateRoomRequest body);
 
         /// <summary>
         /// Send a message to a user
@@ -1362,10 +1362,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Room properties (optional)</param>
+        /// <param name="body">Room properties</param>
         /// <returns>Task of CreateRoomResponse</returns>
         
-        System.Threading.Tasks.Task<CreateRoomResponse> PostChatsRoomsAsync (CreateRoomRequest body = null);
+        System.Threading.Tasks.Task<CreateRoomResponse> PostChatsRoomsAsync (CreateRoomRequest body);
 
         /// <summary>
         /// Create an adhoc room
@@ -1375,10 +1375,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Room properties (optional)</param>
+        /// <param name="body">Room properties</param>
         /// <returns>Task of ApiResponse (CreateRoomResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CreateRoomResponse>> PostChatsRoomsAsyncWithHttpInfo (CreateRoomRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateRoomResponse>> PostChatsRoomsAsyncWithHttpInfo (CreateRoomRequest body);
 
         /// <summary>
         /// Send a message to a user
@@ -6427,10 +6427,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Room properties (optional)</param>
+        /// <param name="body">Room properties</param>
         /// <returns>CreateRoomResponse</returns>
         
-        public CreateRoomResponse PostChatsRooms (CreateRoomRequest body = null)
+        public CreateRoomResponse PostChatsRooms (CreateRoomRequest body)
         {
              ApiResponse<CreateRoomResponse> localVarResponse = PostChatsRoomsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6442,11 +6442,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Room properties (optional)</param>
+        /// <param name="body">Room properties</param>
         /// <returns>ApiResponse of CreateRoomResponse</returns>
         
-        public ApiResponse< CreateRoomResponse > PostChatsRoomsWithHttpInfo (CreateRoomRequest body = null)
+        public ApiResponse< CreateRoomResponse > PostChatsRoomsWithHttpInfo (CreateRoomRequest body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRooms");
 
             var localVarPath = "/api/v2/chats/rooms";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6535,10 +6538,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Room properties (optional)</param>
+        /// <param name="body">Room properties</param>
         /// <returns>Task of CreateRoomResponse</returns>
         
-        public async System.Threading.Tasks.Task<CreateRoomResponse> PostChatsRoomsAsync (CreateRoomRequest body = null)
+        public async System.Threading.Tasks.Task<CreateRoomResponse> PostChatsRoomsAsync (CreateRoomRequest body)
         {
              ApiResponse<CreateRoomResponse> localVarResponse = await PostChatsRoomsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6551,11 +6554,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Room properties (optional)</param>
+        /// <param name="body">Room properties</param>
         /// <returns>Task of ApiResponse (CreateRoomResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CreateRoomResponse>> PostChatsRoomsAsyncWithHttpInfo (CreateRoomRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateRoomResponse>> PostChatsRoomsAsyncWithHttpInfo (CreateRoomRequest body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRooms");
+            
 
             var localVarPath = "/api/v2/chats/rooms";
             var localVarPathParams = new Dictionary<String, String>();

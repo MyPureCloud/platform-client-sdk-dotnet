@@ -39,6 +39,60 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MediaRegions> GetTelephonyMediaregionsWithHttpInfo ();
 
         /// <summary>
+        /// Get a SIP message.
+        /// </summary>
+        /// <remarks>
+        /// Get the raw form of the SIP message
+        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <returns>Callmessage</returns>
+        
+        Callmessage GetTelephonySipmessagesConversation (string conversationId);
+
+        /// <summary>
+        /// Get a SIP message.
+        /// </summary>
+        /// <remarks>
+        /// Get the raw form of the SIP message
+        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <returns>ApiResponse of Callmessage</returns>
+        
+        ApiResponse<Callmessage> GetTelephonySipmessagesConversationWithHttpInfo (string conversationId);
+
+        /// <summary>
+        /// Get SIP headers.
+        /// </summary>
+        /// <remarks>
+        /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
+        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="keys">comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)</param>
+        /// <returns>Callheader</returns>
+        
+        Callheader GetTelephonySipmessagesConversationHeaders (string conversationId, List<string> keys = null);
+
+        /// <summary>
+        /// Get SIP headers.
+        /// </summary>
+        /// <remarks>
+        /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
+        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="keys">comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)</param>
+        /// <returns>ApiResponse of Callheader</returns>
+        
+        ApiResponse<Callheader> GetTelephonySipmessagesConversationHeadersWithHttpInfo (string conversationId, List<string> keys = null);
+
+        /// <summary>
         /// Fetch SIP metadata
         /// </summary>
         /// <remarks>
@@ -145,6 +199,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (MediaRegions)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<MediaRegions>> GetTelephonyMediaregionsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get a SIP message.
+        /// </summary>
+        /// <remarks>
+        /// Get the raw form of the SIP message
+        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <returns>Task of Callmessage</returns>
+        
+        System.Threading.Tasks.Task<Callmessage> GetTelephonySipmessagesConversationAsync (string conversationId);
+
+        /// <summary>
+        /// Get a SIP message.
+        /// </summary>
+        /// <remarks>
+        /// Get the raw form of the SIP message
+        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <returns>Task of ApiResponse (Callmessage)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Callmessage>> GetTelephonySipmessagesConversationAsyncWithHttpInfo (string conversationId);
+
+        /// <summary>
+        /// Get SIP headers.
+        /// </summary>
+        /// <remarks>
+        /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
+        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="keys">comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)</param>
+        /// <returns>Task of Callheader</returns>
+        
+        System.Threading.Tasks.Task<Callheader> GetTelephonySipmessagesConversationHeadersAsync (string conversationId, List<string> keys = null);
+
+        /// <summary>
+        /// Get SIP headers.
+        /// </summary>
+        /// <remarks>
+        /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
+        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="keys">comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)</param>
+        /// <returns>Task of ApiResponse (Callheader)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Callheader>> GetTelephonySipmessagesConversationHeadersAsyncWithHttpInfo (string conversationId, List<string> keys = null);
 
         /// <summary>
         /// Fetch SIP metadata
@@ -512,6 +620,442 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<MediaRegions>(localVarStatusCode,
                 localVarHeaders,
                 (MediaRegions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaRegions)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a SIP message. 
+        /// Get the raw form of the SIP message
+        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <returns>Callmessage</returns>
+        
+        public Callmessage GetTelephonySipmessagesConversation (string conversationId)
+        {
+             ApiResponse<Callmessage> localVarResponse = GetTelephonySipmessagesConversationWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a SIP message. 
+        /// Get the raw form of the SIP message
+        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <returns>ApiResponse of Callmessage</returns>
+        
+        public ApiResponse< Callmessage > GetTelephonySipmessagesConversationWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyApi->GetTelephonySipmessagesConversation");
+
+            var localVarPath = "/api/v2/telephony/sipmessages/conversations/{conversationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonySipmessagesConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonySipmessagesConversation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Callmessage>(localVarStatusCode,
+                localVarHeaders,
+                (Callmessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Callmessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a SIP message. 
+        /// Get the raw form of the SIP message
+        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <returns>Task of Callmessage</returns>
+        
+        public async System.Threading.Tasks.Task<Callmessage> GetTelephonySipmessagesConversationAsync (string conversationId)
+        {
+             ApiResponse<Callmessage> localVarResponse = await GetTelephonySipmessagesConversationAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a SIP message. 
+        /// Get the raw form of the SIP message
+        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <returns>Task of ApiResponse (Callmessage)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Callmessage>> GetTelephonySipmessagesConversationAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyApi->GetTelephonySipmessagesConversation");
+            
+
+            var localVarPath = "/api/v2/telephony/sipmessages/conversations/{conversationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonySipmessagesConversation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonySipmessagesConversation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Callmessage>(localVarStatusCode,
+                localVarHeaders,
+                (Callmessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Callmessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get SIP headers. 
+        /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
+        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="keys">comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)</param>
+        /// <returns>Callheader</returns>
+        
+        public Callheader GetTelephonySipmessagesConversationHeaders (string conversationId, List<string> keys = null)
+        {
+             ApiResponse<Callheader> localVarResponse = GetTelephonySipmessagesConversationHeadersWithHttpInfo(conversationId, keys);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get SIP headers. 
+        /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
+        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="keys">comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)</param>
+        /// <returns>ApiResponse of Callheader</returns>
+        
+        public ApiResponse< Callheader > GetTelephonySipmessagesConversationHeadersWithHttpInfo (string conversationId, List<string> keys = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyApi->GetTelephonySipmessagesConversationHeaders");
+
+            var localVarPath = "/api/v2/telephony/sipmessages/conversations/{conversationId}/headers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+            if (keys != null) keys.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("keys", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonySipmessagesConversationHeaders: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonySipmessagesConversationHeaders: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Callheader>(localVarStatusCode,
+                localVarHeaders,
+                (Callheader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Callheader)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get SIP headers. 
+        /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
+        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="keys">comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)</param>
+        /// <returns>Task of Callheader</returns>
+        
+        public async System.Threading.Tasks.Task<Callheader> GetTelephonySipmessagesConversationHeadersAsync (string conversationId, List<string> keys = null)
+        {
+             ApiResponse<Callheader> localVarResponse = await GetTelephonySipmessagesConversationHeadersAsyncWithHttpInfo(conversationId, keys);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get SIP headers. 
+        /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
+        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation id</param>
+        /// <param name="keys">comma-separated list of header identifiers to query. e.g. ruri,to,from (optional)</param>
+        /// <returns>Task of ApiResponse (Callheader)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Callheader>> GetTelephonySipmessagesConversationHeadersAsyncWithHttpInfo (string conversationId, List<string> keys = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyApi->GetTelephonySipmessagesConversationHeaders");
+            
+
+            var localVarPath = "/api/v2/telephony/sipmessages/conversations/{conversationId}/headers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+            if (keys != null) keys.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("keys", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonySipmessagesConversationHeaders: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonySipmessagesConversationHeaders: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Callheader>(localVarStatusCode,
+                localVarHeaders,
+                (Callheader) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Callheader)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
