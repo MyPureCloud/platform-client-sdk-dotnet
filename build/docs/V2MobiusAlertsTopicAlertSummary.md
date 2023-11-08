@@ -8,7 +8,7 @@ title: V2MobiusAlertsTopicAlertSummary
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Entities** | [**List&lt;V2MobiusAlertsTopicAlertSummaryEntity&gt;**](V2MobiusAlertsTopicAlertSummaryEntity.html) |  | [optional] |
-| **ConversationId** | **Guid?** |  | [optional] |
+| **Conversation** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
 | **MetricType** | **string** |  | [optional] |
 | **IsTeamMemberRuleSummary** | **bool?** |  | [optional] |
 | **TeamMemberRuleSummary** | **bool?** |  | [optional] |

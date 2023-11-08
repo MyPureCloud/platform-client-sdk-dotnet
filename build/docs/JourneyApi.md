@@ -23,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyActiontargets**](JourneyApi.html#getjourneyactiontargets) | **Get** /api/v2/journey/actiontargets | Retrieve all action targets. |
 | [**GetJourneyActiontemplate**](JourneyApi.html#getjourneyactiontemplate) | **Get** /api/v2/journey/actiontemplates/{actionTemplateId} | Retrieve a single action template. |
 | [**GetJourneyActiontemplates**](JourneyApi.html#getjourneyactiontemplates) | **Get** /api/v2/journey/actiontemplates | Retrieve all action templates. |
+| [**GetJourneyDeploymentCustomerPing**](JourneyApi.html#getjourneydeploymentcustomerping) | **Get** /api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping | Send a ping. |
 | [**GetJourneyOutcome**](JourneyApi.html#getjourneyoutcome) | **Get** /api/v2/journey/outcomes/{outcomeId} | Retrieve a single outcome. |
 | [**GetJourneyOutcomes**](JourneyApi.html#getjourneyoutcomes) | **Get** /api/v2/journey/outcomes | Retrieve all outcomes. |
 | [**GetJourneyOutcomesAttributionsJob**](JourneyApi.html#getjourneyoutcomesattributionsjob) | **Get** /api/v2/journey/outcomes/attributions/jobs/{jobId} | Get job status. |
@@ -45,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyActionmaps**](JourneyApi.html#postjourneyactionmaps) | **Post** /api/v2/journey/actionmaps | Create an action map. |
 | [**PostJourneyActionmapsEstimatesJobs**](JourneyApi.html#postjourneyactionmapsestimatesjobs) | **Post** /api/v2/journey/actionmaps/estimates/jobs | Query for estimates |
 | [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **Post** /api/v2/journey/actiontemplates | Create a single action template. |
+| [**PostJourneyDeploymentActionevent**](JourneyApi.html#postjourneydeploymentactionevent) | **Post** /api/v2/journey/deployments/{deploymentId}/actionevent | Sends an action event, which is used for changing the state of actions that have been offered to the user. |
 | [**PostJourneyDeploymentAppevents**](JourneyApi.html#postjourneydeploymentappevents) | **Post** /api/v2/journey/deployments/{deploymentId}/appevents | Send a journey app event, used for tracking customer activity on an application. |
 | [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **Post** /api/v2/journey/outcomes | Create an outcome. |
 | [**PostJourneyOutcomesAttributionsJobs**](JourneyApi.html#postjourneyoutcomesattributionsjobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
@@ -1096,6 +1098,74 @@ namespace Example
 ### Return type
 
 [**ActionTemplateListing**](ActionTemplateListing.html)
+
+<a name="getjourneydeploymentcustomerping"></a>
+
+## [**DeploymentPing**](DeploymentPing.html) GetJourneyDeploymentCustomerPing (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null)
+
+
+
+Send a ping.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyDeploymentCustomerPingExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new JourneyApi();
+            var deploymentId = deploymentId_example;  // string | The ID of the deployment sending the ping.
+            var customerCookieId = customerCookieId_example;  // string | ID of the customer associated with the ping.
+            var sessionId = sessionId_example;  // string | UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session
+            var dl = dl_example;  // string | Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. 'home' or 'help. Pings without this parameter will not return actions. (optional) 
+            var dt = dt_example;  // string | Document Title.  A human readable name for the page or screen (optional) 
+            var appNamespace = appNamespace_example;  // string | Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional) 
+            var sinceLastBeaconMilliseconds = 789;  // long? | How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional) 
+
+            try
+            { 
+                // Send a ping.
+                DeploymentPing result = apiInstance.GetJourneyDeploymentCustomerPing(deploymentId, customerCookieId, sessionId, dl, dt, appNamespace, sinceLastBeaconMilliseconds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyDeploymentCustomerPing: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| The ID of the deployment sending the ping. |  |
+| **customerCookieId** | **string**| ID of the customer associated with the ping. |  |
+| **sessionId** | **string**| UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session |  |
+| **dl** | **string**| Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. | [optional]  |
+| **dt** | **string**| Document Title.  A human readable name for the page or screen | [optional]  |
+| **appNamespace** | **string**| Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions | [optional]  |
+| **sinceLastBeaconMilliseconds** | **long?**| How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DeploymentPing**](DeploymentPing.html)
 
 <a name="getjourneyoutcome"></a>
 
@@ -2533,6 +2603,63 @@ namespace Example
 
 [**ActionTemplate**](ActionTemplate.html)
 
+<a name="postjourneydeploymentactionevent"></a>
+
+## void PostJourneyDeploymentActionevent (string deploymentId, ActionEventRequest body)
+
+
+
+Sends an action event, which is used for changing the state of actions that have been offered to the user.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyDeploymentActioneventExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new JourneyApi();
+            var deploymentId = deploymentId_example;  // string | The ID of the deployment sending the beacon.
+            var body = new ActionEventRequest(); // ActionEventRequest | 
+
+            try
+            { 
+                // Sends an action event, which is used for changing the state of actions that have been offered to the user.
+                apiInstance.PostJourneyDeploymentActionevent(deploymentId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyDeploymentActionevent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| The ID of the deployment sending the beacon. |  |
+| **body** | [**ActionEventRequest**](ActionEventRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postjourneydeploymentappevents"></a>
 
 ## [**AppEventResponse**](AppEventResponse.html) PostJourneyDeploymentAppevents (string deploymentId, AppEventRequest body = null)
@@ -2540,8 +2667,6 @@ namespace Example
 
 
 Send a journey app event, used for tracking customer activity on an application.
-
-PostJourneyDeploymentAppevents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires NO permissions: 
 

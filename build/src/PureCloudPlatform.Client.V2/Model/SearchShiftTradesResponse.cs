@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SearchShiftTradesResponse" /> class.
         /// </summary>
         /// <param name="Trades">The shift trades that match the search criteria.</param>
-        public SearchShiftTradesResponse(List<SearchShiftTradeResponse> Trades = null)
+        /// <param name="DownloadUrl">URL from which to fetch results for requests with a large result set. If populated, the downloaded data will conform to the same schema as would normally be returned, excepting downloaded data will never itself contain a downloadUrl.</param>
+        public SearchShiftTradesResponse(List<SearchShiftTradeResponse> Trades = null, string DownloadUrl = null)
         {
             this.Trades = Trades;
+            this.DownloadUrl = DownloadUrl;
             
         }
         
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<SearchShiftTradeResponse> Trades { get; set; }
 
 
+
+        /// <summary>
+        /// URL from which to fetch results for requests with a large result set. If populated, the downloaded data will conform to the same schema as would normally be returned, excepting downloaded data will never itself contain a downloadUrl
+        /// </summary>
+        /// <value>URL from which to fetch results for requests with a large result set. If populated, the downloaded data will conform to the same schema as would normally be returned, excepting downloaded data will never itself contain a downloadUrl</value>
+        [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
+        public string DownloadUrl { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SearchShiftTradesResponse {\n");
 
             sb.Append("  Trades: ").Append(Trades).Append("\n");
+            sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Trades == other.Trades ||
                     this.Trades != null &&
                     this.Trades.SequenceEqual(other.Trades)
+                ) &&
+                (
+                    this.DownloadUrl == other.DownloadUrl ||
+                    this.DownloadUrl != null &&
+                    this.DownloadUrl.Equals(other.DownloadUrl)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Trades != null)
                     hash = hash * 59 + this.Trades.GetHashCode();
+
+                if (this.DownloadUrl != null)
+                    hash = hash * 59 + this.DownloadUrl.GetHashCode();
 
                 return hash;
             }

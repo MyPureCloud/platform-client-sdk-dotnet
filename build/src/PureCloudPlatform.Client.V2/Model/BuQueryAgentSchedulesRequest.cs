@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuQueryAgentSchedulesRequest" /> class.
         /// </summary>
         /// <param name="ManagementUnitId">The ID of the management unit to query (required).</param>
-        /// <param name="UserIds">The IDs of the users to query.  Omit to query all user schedules in the management unit. .</param>
+        /// <param name="UserIds">The IDs of the users to query.  Omit to query all user schedules in the management unit. Note: If teamIds is also specified, only schedules for users in the requested teams will be returned.</param>
         /// <param name="TeamIds">The teamIds to request. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit.</param>
         public BuQueryAgentSchedulesRequest(string ManagementUnitId = null, List<string> UserIds = null, List<string> TeamIds = null)
         {
@@ -50,9 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The IDs of the users to query.  Omit to query all user schedules in the management unit. 
+        /// The IDs of the users to query.  Omit to query all user schedules in the management unit. Note: If teamIds is also specified, only schedules for users in the requested teams will be returned
         /// </summary>
-        /// <value>The IDs of the users to query.  Omit to query all user schedules in the management unit. </value>
+        /// <value>The IDs of the users to query.  Omit to query all user schedules in the management unit. Note: If teamIds is also specified, only schedules for users in the requested teams will be returned</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
 

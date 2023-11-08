@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AgentlessEmailSendRequestDto" /> class.
         /// </summary>
         /// <param name="SenderType">The direction of the message. (required).</param>
-        /// <param name="ConversationId">The identifier of the conversation..</param>
+        /// <param name="ConversationId">The identifier of the conversation. This must be an email interaction..</param>
         /// <param name="FromAddress">The sender of the message. (required).</param>
         /// <param name="ToAddresses">The recipient of the message. We currently support one recipient only. (required).</param>
         /// <param name="ReplyToAddress">The address to use for reply..</param>
@@ -92,9 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The identifier of the conversation.
+        /// The identifier of the conversation. This must be an email interaction.
         /// </summary>
-        /// <value>The identifier of the conversation.</value>
+        /// <value>The identifier of the conversation. This must be an email interaction.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
 

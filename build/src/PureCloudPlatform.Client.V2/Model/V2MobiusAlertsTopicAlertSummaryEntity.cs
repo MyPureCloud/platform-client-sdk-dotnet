@@ -83,18 +83,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="V2MobiusAlertsTopicAlertSummaryEntity" /> class.
         /// </summary>
         /// <param name="EntityType">EntityType.</param>
-        /// <param name="UserDisplayName">UserDisplayName.</param>
-        /// <param name="GroupDisplayName">GroupDisplayName.</param>
-        /// <param name="QueueDisplayName">QueueDisplayName.</param>
-        /// <param name="TeamDisplayName">TeamDisplayName.</param>
+        /// <param name="User">User.</param>
+        /// <param name="Group">Group.</param>
+        /// <param name="Queue">Queue.</param>
+        /// <param name="Team">Team.</param>
         /// <param name="Alerting">Alerting.</param>
-        public V2MobiusAlertsTopicAlertSummaryEntity(EntityTypeEnum? EntityType = null, string UserDisplayName = null, string GroupDisplayName = null, string QueueDisplayName = null, string TeamDisplayName = null, bool? Alerting = null)
+        public V2MobiusAlertsTopicAlertSummaryEntity(EntityTypeEnum? EntityType = null, V2MobiusAlertsTopicAddressableEntityRef User = null, V2MobiusAlertsTopicAddressableEntityRef Group = null, V2MobiusAlertsTopicAddressableEntityRef Queue = null, V2MobiusAlertsTopicAddressableEntityRef Team = null, bool? Alerting = null)
         {
             this.EntityType = EntityType;
-            this.UserDisplayName = UserDisplayName;
-            this.GroupDisplayName = GroupDisplayName;
-            this.QueueDisplayName = QueueDisplayName;
-            this.TeamDisplayName = TeamDisplayName;
+            this.User = User;
+            this.Group = Group;
+            this.Queue = Queue;
+            this.Team = Team;
             this.Alerting = Alerting;
             
         }
@@ -104,34 +104,34 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets UserDisplayName
+        /// Gets or Sets User
         /// </summary>
-        [DataMember(Name="userDisplayName", EmitDefaultValue=false)]
-        public string UserDisplayName { get; set; }
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public V2MobiusAlertsTopicAddressableEntityRef User { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets GroupDisplayName
+        /// Gets or Sets Group
         /// </summary>
-        [DataMember(Name="groupDisplayName", EmitDefaultValue=false)]
-        public string GroupDisplayName { get; set; }
+        [DataMember(Name="group", EmitDefaultValue=false)]
+        public V2MobiusAlertsTopicAddressableEntityRef Group { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets QueueDisplayName
+        /// Gets or Sets Queue
         /// </summary>
-        [DataMember(Name="queueDisplayName", EmitDefaultValue=false)]
-        public string QueueDisplayName { get; set; }
+        [DataMember(Name="queue", EmitDefaultValue=false)]
+        public V2MobiusAlertsTopicAddressableEntityRef Queue { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets TeamDisplayName
+        /// Gets or Sets Team
         /// </summary>
-        [DataMember(Name="teamDisplayName", EmitDefaultValue=false)]
-        public string TeamDisplayName { get; set; }
+        [DataMember(Name="team", EmitDefaultValue=false)]
+        public V2MobiusAlertsTopicAddressableEntityRef Team { get; set; }
 
 
 
@@ -152,10 +152,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class V2MobiusAlertsTopicAlertSummaryEntity {\n");
 
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
-            sb.Append("  UserDisplayName: ").Append(UserDisplayName).Append("\n");
-            sb.Append("  GroupDisplayName: ").Append(GroupDisplayName).Append("\n");
-            sb.Append("  QueueDisplayName: ").Append(QueueDisplayName).Append("\n");
-            sb.Append("  TeamDisplayName: ").Append(TeamDisplayName).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Group: ").Append(Group).Append("\n");
+            sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  Alerting: ").Append(Alerting).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -203,24 +203,24 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntityType.Equals(other.EntityType)
                 ) &&
                 (
-                    this.UserDisplayName == other.UserDisplayName ||
-                    this.UserDisplayName != null &&
-                    this.UserDisplayName.Equals(other.UserDisplayName)
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
                 ) &&
                 (
-                    this.GroupDisplayName == other.GroupDisplayName ||
-                    this.GroupDisplayName != null &&
-                    this.GroupDisplayName.Equals(other.GroupDisplayName)
+                    this.Group == other.Group ||
+                    this.Group != null &&
+                    this.Group.Equals(other.Group)
                 ) &&
                 (
-                    this.QueueDisplayName == other.QueueDisplayName ||
-                    this.QueueDisplayName != null &&
-                    this.QueueDisplayName.Equals(other.QueueDisplayName)
+                    this.Queue == other.Queue ||
+                    this.Queue != null &&
+                    this.Queue.Equals(other.Queue)
                 ) &&
                 (
-                    this.TeamDisplayName == other.TeamDisplayName ||
-                    this.TeamDisplayName != null &&
-                    this.TeamDisplayName.Equals(other.TeamDisplayName)
+                    this.Team == other.Team ||
+                    this.Team != null &&
+                    this.Team.Equals(other.Team)
                 ) &&
                 (
                     this.Alerting == other.Alerting ||
@@ -243,17 +243,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
 
-                if (this.UserDisplayName != null)
-                    hash = hash * 59 + this.UserDisplayName.GetHashCode();
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
 
-                if (this.GroupDisplayName != null)
-                    hash = hash * 59 + this.GroupDisplayName.GetHashCode();
+                if (this.Group != null)
+                    hash = hash * 59 + this.Group.GetHashCode();
 
-                if (this.QueueDisplayName != null)
-                    hash = hash * 59 + this.QueueDisplayName.GetHashCode();
+                if (this.Queue != null)
+                    hash = hash * 59 + this.Queue.GetHashCode();
 
-                if (this.TeamDisplayName != null)
-                    hash = hash * 59 + this.TeamDisplayName.GetHashCode();
+                if (this.Team != null)
+                    hash = hash * 59 + this.Team.GetHashCode();
 
                 if (this.Alerting != null)
                     hash = hash * 59 + this.Alerting.GetHashCode();

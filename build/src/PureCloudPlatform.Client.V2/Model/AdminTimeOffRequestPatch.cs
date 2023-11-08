@@ -68,17 +68,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Status">The status of this time off request.</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category.</param>
+        /// <param name="Paid">Whether this is a paid time off request.</param>
         /// <param name="Notes">Notes about the time off request.</param>
-        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone..</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone..</param>
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests..</param>
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
         /// <param name="DurationMinutes">Daily durations for each day of this time off request in minutes.</param>
         /// <param name="PayableMinutes">Payable minutes for each day of this time off request.</param>
         /// <param name="Metadata">Version metadata for the time off request (required).</param>
-        public AdminTimeOffRequestPatch(StatusEnum? Status = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, WfmVersionedEntityMetadata Metadata = null)
+        public AdminTimeOffRequestPatch(StatusEnum? Status = null, string ActivityCodeId = null, bool? Paid = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Status = Status;
             this.ActivityCodeId = ActivityCodeId;
+            this.Paid = Paid;
             this.Notes = Notes;
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
@@ -103,6 +105,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether this is a paid time off request
+        /// </summary>
+        /// <value>Whether this is a paid time off request</value>
+        [DataMember(Name="paid", EmitDefaultValue=false)]
+        public bool? Paid { get; set; }
+
+
+
+        /// <summary>
         /// Notes about the time off request
         /// </summary>
         /// <value>Notes about the time off request</value>
@@ -112,9 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.
+        /// A set of dates in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.
         /// </summary>
-        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.</value>
+        /// <value>A set of dates in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone.</value>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
 
@@ -175,6 +186,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
+            sb.Append("  Paid: ").Append(Paid).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
@@ -233,6 +245,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActivityCodeId.Equals(other.ActivityCodeId)
                 ) &&
                 (
+                    this.Paid == other.Paid ||
+                    this.Paid != null &&
+                    this.Paid.Equals(other.Paid)
+                ) &&
+                (
                     this.Notes == other.Notes ||
                     this.Notes != null &&
                     this.Notes.Equals(other.Notes)
@@ -285,6 +302,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
+
+                if (this.Paid != null)
+                    hash = hash * 59 + this.Paid.GetHashCode();
 
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();

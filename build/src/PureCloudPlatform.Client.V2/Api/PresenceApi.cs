@@ -99,9 +99,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        OrganizationPresenceDefinition GetPresenceDefinition0 (string definitionId);
+        OrganizationPresenceDefinition GetPresenceDefinition0 (string definitionId, string localeCode = null);
 
         /// <summary>
         /// Get a Presence Definition
@@ -112,9 +113,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        ApiResponse<OrganizationPresenceDefinition> GetPresenceDefinition0WithHttpInfo (string definitionId);
+        ApiResponse<OrganizationPresenceDefinition> GetPresenceDefinition0WithHttpInfo (string definitionId, string localeCode = null);
 
         /// <summary>
         /// Get a list of Presence Definitions
@@ -126,9 +128,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceDefinitionEntityListing</returns>
         
-        OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null);
+        OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
         /// Get a list of Presence Definitions
@@ -140,9 +143,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinitionEntityListing</returns>
         
-        ApiResponse<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0WithHttpInfo (string deactivated = null, List<string> divisionId = null);
+        ApiResponse<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0WithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
         /// Get the presence settings
@@ -684,7 +688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>List&lt;UserPresence&gt;</returns>
         
-        List<UserPresence> PutUsersPresencesBulk (List<UserPresence> body);
+        List<UserPresence> PutUsersPresencesBulk (List<MutableUserPresence> body);
 
         /// <summary>
         /// Update bulk user Presences
@@ -696,7 +700,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>ApiResponse of List&lt;UserPresence&gt;</returns>
         
-        ApiResponse<List<UserPresence>> PutUsersPresencesBulkWithHttpInfo (List<UserPresence> body);
+        ApiResponse<List<UserPresence>> PutUsersPresencesBulkWithHttpInfo (List<MutableUserPresence> body);
 
         #endregion Synchronous Operations
 
@@ -785,9 +789,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetPresenceDefinition0Async (string definitionId);
+        System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetPresenceDefinition0Async (string definitionId, string localeCode = null);
 
         /// <summary>
         /// Get a Presence Definition
@@ -798,9 +803,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId, string localeCode = null);
 
         /// <summary>
         /// Get a list of Presence Definitions
@@ -812,9 +818,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinitionEntityListing</returns>
         
-        System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null);
+        System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
         /// Get a list of Presence Definitions
@@ -826,9 +833,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinitionEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
         /// Get the presence settings
@@ -1370,7 +1378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>Task of List&lt;UserPresence&gt;</returns>
         
-        System.Threading.Tasks.Task<List<UserPresence>> PutUsersPresencesBulkAsync (List<UserPresence> body);
+        System.Threading.Tasks.Task<List<UserPresence>> PutUsersPresencesBulkAsync (List<MutableUserPresence> body);
 
         /// <summary>
         /// Update bulk user Presences
@@ -1382,7 +1390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>Task of ApiResponse (List&lt;UserPresence&gt;)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<List<UserPresence>>> PutUsersPresencesBulkAsyncWithHttpInfo (List<UserPresence> body);
+        System.Threading.Tasks.Task<ApiResponse<List<UserPresence>>> PutUsersPresencesBulkAsyncWithHttpInfo (List<MutableUserPresence> body);
 
         #endregion Asynchronous Operations
 
@@ -2114,11 +2122,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceDefinition</returns>
         
-        public OrganizationPresenceDefinition GetPresenceDefinition0 (string definitionId)
+        public OrganizationPresenceDefinition GetPresenceDefinition0 (string definitionId, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceDefinition> localVarResponse = GetPresenceDefinition0WithHttpInfo(definitionId);
+             ApiResponse<OrganizationPresenceDefinition> localVarResponse = GetPresenceDefinition0WithHttpInfo(definitionId, localeCode);
              return localVarResponse.Data;
         }
 
@@ -2129,9 +2138,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinition</returns>
         
-        public ApiResponse< OrganizationPresenceDefinition > GetPresenceDefinition0WithHttpInfo (string definitionId)
+        public ApiResponse< OrganizationPresenceDefinition > GetPresenceDefinition0WithHttpInfo (string definitionId, string localeCode = null)
         { 
             // verify the required parameter 'definitionId' is set
             if (definitionId == null)
@@ -2170,6 +2180,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (definitionId != null) localVarPathParams.Add("definitionId", this.Configuration.ApiClient.ParameterToString(definitionId));
 
             // Query params
+            if (localeCode != null) localVarQueryParams.Add(new Tuple<string, string>("localeCode", this.Configuration.ApiClient.ParameterToString(localeCode)));
 
             // Header params
 
@@ -2220,11 +2231,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinition</returns>
         
-        public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetPresenceDefinition0Async (string definitionId)
+        public async System.Threading.Tasks.Task<OrganizationPresenceDefinition> GetPresenceDefinition0Async (string definitionId, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceDefinition> localVarResponse = await GetPresenceDefinition0AsyncWithHttpInfo(definitionId);
+             ApiResponse<OrganizationPresenceDefinition> localVarResponse = await GetPresenceDefinition0AsyncWithHttpInfo(definitionId, localeCode);
              return localVarResponse.Data;
 
         }
@@ -2236,9 +2248,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinition)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId, string localeCode = null)
         { 
             // verify the required parameter 'definitionId' is set
             if (definitionId == null)
@@ -2278,6 +2291,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (definitionId != null) localVarPathParams.Add("definitionId", this.Configuration.ApiClient.ParameterToString(definitionId));
 
             // Query params
+            if (localeCode != null) localVarQueryParams.Add(new Tuple<string, string>("localeCode", this.Configuration.ApiClient.ParameterToString(localeCode)));
 
             // Header params
 
@@ -2330,11 +2344,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceDefinitionEntityListing</returns>
         
-        public OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null)
+        public OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = GetPresenceDefinitions0WithHttpInfo(deactivated, divisionId);
+             ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = GetPresenceDefinitions0WithHttpInfo(deactivated, divisionId, localeCode);
              return localVarResponse.Data;
         }
 
@@ -2346,9 +2361,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceDefinitionEntityListing</returns>
         
-        public ApiResponse< OrganizationPresenceDefinitionEntityListing > GetPresenceDefinitions0WithHttpInfo (string deactivated = null, List<string> divisionId = null)
+        public ApiResponse< OrganizationPresenceDefinitionEntityListing > GetPresenceDefinitions0WithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null)
         { 
 
             var localVarPath = "/api/v2/presence/definitions";
@@ -2385,6 +2401,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (deactivated != null) localVarQueryParams.Add(new Tuple<string, string>("deactivated", this.Configuration.ApiClient.ParameterToString(deactivated)));
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (localeCode != null) localVarQueryParams.Add(new Tuple<string, string>("localeCode", this.Configuration.ApiClient.ParameterToString(localeCode)));
 
             // Header params
 
@@ -2436,11 +2453,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceDefinitionEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null)
+        public async System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = await GetPresenceDefinitions0AsyncWithHttpInfo(deactivated, divisionId);
+             ApiResponse<OrganizationPresenceDefinitionEntityListing> localVarResponse = await GetPresenceDefinitions0AsyncWithHttpInfo(deactivated, divisionId, localeCode);
              return localVarResponse.Data;
 
         }
@@ -2453,9 +2471,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <param name="divisionId">One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceDefinitionEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo (string deactivated = null, List<string> divisionId = null, string localeCode = null)
         { 
 
             var localVarPath = "/api/v2/presence/definitions";
@@ -2492,6 +2511,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (deactivated != null) localVarQueryParams.Add(new Tuple<string, string>("deactivated", this.Configuration.ApiClient.ParameterToString(deactivated)));
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (localeCode != null) localVarQueryParams.Add(new Tuple<string, string>("localeCode", this.Configuration.ApiClient.ParameterToString(localeCode)));
 
             // Header params
 
@@ -7170,7 +7190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>List&lt;UserPresence&gt;</returns>
         
-        public List<UserPresence> PutUsersPresencesBulk (List<UserPresence> body)
+        public List<UserPresence> PutUsersPresencesBulk (List<MutableUserPresence> body)
         {
              ApiResponse<List<UserPresence>> localVarResponse = PutUsersPresencesBulkWithHttpInfo(body);
              return localVarResponse.Data;
@@ -7184,7 +7204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>ApiResponse of List&lt;UserPresence&gt;</returns>
         
-        public ApiResponse< List<UserPresence> > PutUsersPresencesBulkWithHttpInfo (List<UserPresence> body)
+        public ApiResponse< List<UserPresence> > PutUsersPresencesBulkWithHttpInfo (List<MutableUserPresence> body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7279,7 +7299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>Task of List&lt;UserPresence&gt;</returns>
         
-        public async System.Threading.Tasks.Task<List<UserPresence>> PutUsersPresencesBulkAsync (List<UserPresence> body)
+        public async System.Threading.Tasks.Task<List<UserPresence>> PutUsersPresencesBulkAsync (List<MutableUserPresence> body)
         {
              ApiResponse<List<UserPresence>> localVarResponse = await PutUsersPresencesBulkAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -7294,7 +7314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of User presences</param>
         /// <returns>Task of ApiResponse (List&lt;UserPresence&gt;)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<List<UserPresence>>> PutUsersPresencesBulkAsyncWithHttpInfo (List<UserPresence> body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserPresence>>> PutUsersPresencesBulkAsyncWithHttpInfo (List<MutableUserPresence> body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)

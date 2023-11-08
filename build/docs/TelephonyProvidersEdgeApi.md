@@ -78,6 +78,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesSiteNumberplansClassifications**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessitenumberplansclassifications) | **Get** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications | Get a list of Classifications for this Site |
 | [**GetTelephonyProvidersEdgesSiteOutboundroute**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessiteoutboundroute) | **Get** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} | Get an outbound route |
 | [**GetTelephonyProvidersEdgesSiteOutboundroutes**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessiteoutboundroutes) | **Get** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes | Get outbound routes |
+| [**GetTelephonyProvidersEdgesSiteSiteconnections**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessitesiteconnections) | **Get** /api/v2/telephony/providers/edges/sites/{siteId}/siteconnections | Get site connections for a site. |
 | [**GetTelephonyProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessites) | **Get** /api/v2/telephony/providers/edges/sites | Get the list of Sites. |
 | [**GetTelephonyProvidersEdgesTimezones**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestimezones) | **Get** /api/v2/telephony/providers/edges/timezones | Get a list of Edge-compatible time zones |
 | [**GetTelephonyProvidersEdgesTrunk**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunk) | **Get** /api/v2/telephony/providers/edges/trunks/{trunkId} | Get a Trunk by ID |
@@ -89,6 +90,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesTrunks**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunks) | **Get** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
 | [**GetTelephonyProvidersEdgesTrunksMetrics**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunksmetrics) | **Get** /api/v2/telephony/providers/edges/trunks/metrics | Get the metrics for a list of trunks. |
 | [**GetTelephonyProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgestrunkswithrecording) | **Get** /api/v2/telephony/providers/edges/trunkswithrecording | Get Counts of trunks that have recording disabled or enabled |
+| [**PatchTelephonyProvidersEdgesSiteSiteconnections**](TelephonyProvidersEdgeApi.html#patchtelephonyprovidersedgessitesiteconnections) | **Patch** /api/v2/telephony/providers/edges/sites/{siteId}/siteconnections | Disable site connections for a site. |
 | [**PostTelephonyProvidersEdgeDiagnosticNslookup**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticnslookup) | **Post** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup | Nslookup request command to collect networking-related information from an Edge for a target IP or host. |
 | [**PostTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticping) | **Post** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping | Ping Request command to collect networking-related information from an Edge for a target IP or host. |
 | [**PostTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgediagnosticroute) | **Post** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route | Route request command to collect networking-related information from an Edge for a target IP or host. |
@@ -125,6 +127,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgessite) | **Put** /api/v2/telephony/providers/edges/sites/{siteId} | Update a Site by ID. |
 | [**PutTelephonyProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgessitenumberplans) | **Put** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Update the list of Number Plans. A user can update maximum 200 number plans at a time. |
 | [**PutTelephonyProvidersEdgesSiteOutboundroute**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgessiteoutboundroute) | **Put** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} | Update outbound route |
+| [**PutTelephonyProvidersEdgesSiteSiteconnections**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgessitesiteconnections) | **Put** /api/v2/telephony/providers/edges/sites/{siteId}/siteconnections | Update site connections for a site. |
 | [**PutTelephonyProvidersEdgesTrunkbasesetting**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgestrunkbasesetting) | **Put** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Update a Trunk Base Settings object by ID |
 {: class="table table-striped"}
 
@@ -4788,6 +4791,70 @@ namespace Example
 
 [**OutboundRouteBaseEntityListing**](OutboundRouteBaseEntityListing.html)
 
+<a name="gettelephonyprovidersedgessitesiteconnections"></a>
+
+## [**SiteConnections**](SiteConnections.html) GetTelephonyProvidersEdgesSiteSiteconnections (string siteId)
+
+
+
+Get site connections for a site.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesSiteSiteconnectionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+
+            try
+            { 
+                // Get site connections for a site.
+                SiteConnections result = apiInstance.GetTelephonyProvidersEdgesSiteSiteconnections(siteId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesSiteSiteconnections: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SiteConnections**](SiteConnections.html)
+
 <a name="gettelephonyprovidersedgessites"></a>
 
 ## [**SiteEntityListing**](SiteEntityListing.html) GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
@@ -5533,6 +5600,71 @@ namespace Example
 ### Return type
 
 [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html)
+
+<a name="patchtelephonyprovidersedgessitesiteconnections"></a>
+
+## [**SiteConnections**](SiteConnections.html) PatchTelephonyProvidersEdgesSiteSiteconnections (string siteId, DisableSiteConnectionsRequest body)
+
+
+
+Disable site connections for a site.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchTelephonyProvidersEdgesSiteSiteconnectionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+            var body = new DisableSiteConnectionsRequest(); // DisableSiteConnectionsRequest | Site
+
+            try
+            { 
+                // Disable site connections for a site.
+                SiteConnections result = apiInstance.PatchTelephonyProvidersEdgesSiteSiteconnections(siteId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PatchTelephonyProvidersEdgesSiteSiteconnections: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+| **body** | [**DisableSiteConnectionsRequest**](DisableSiteConnectionsRequest.html)| Site |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SiteConnections**](SiteConnections.html)
 
 <a name="posttelephonyprovidersedgediagnosticnslookup"></a>
 
@@ -7852,6 +7984,71 @@ namespace Example
 ### Return type
 
 [**OutboundRouteBase**](OutboundRouteBase.html)
+
+<a name="puttelephonyprovidersedgessitesiteconnections"></a>
+
+## [**SiteConnections**](SiteConnections.html) PutTelephonyProvidersEdgesSiteSiteconnections (string siteId, SiteConnections body)
+
+
+
+Update site connections for a site.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutTelephonyProvidersEdgesSiteSiteconnectionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+            var body = new SiteConnections(); // SiteConnections | Site
+
+            try
+            { 
+                // Update site connections for a site.
+                SiteConnections result = apiInstance.PutTelephonyProvidersEdgesSiteSiteconnections(siteId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutTelephonyProvidersEdgesSiteSiteconnections: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+| **body** | [**SiteConnections**](SiteConnections.html)| Site |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SiteConnections**](SiteConnections.html)
 
 <a name="puttelephonyprovidersedgestrunkbasesetting"></a>
 

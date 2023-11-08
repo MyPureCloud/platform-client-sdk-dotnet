@@ -626,9 +626,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>BusinessUnitActivityCodeListing</returns>
         
-        BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string businessUnitId);
+        BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get activity codes
@@ -638,9 +639,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCodeListing</returns>
         
-        ApiResponse<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId);
+        ApiResponse<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get intraday planning groups for the given date
@@ -1848,9 +1850,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
         
-        WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
+        WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets all the shift trades for a given week
@@ -1862,9 +1865,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
         
-        ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
+        ApiResponse<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get a work plan
@@ -3830,10 +3834,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestListing</returns>
         
-        TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null);
+        TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null);
 
         /// <summary>
         /// Fetches time off requests matching the conditions specified in the request body
@@ -3843,10 +3848,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
         
-        ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
+        ApiResponse<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null);
 
         /// <summary>
         /// Retrieves daily waitlist position for a list of time off requests
@@ -4026,9 +4032,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>SearchShiftTradesResponse</returns>
         
-        SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
+        SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null);
 
         /// <summary>
         /// Searches for potential shift trade matches for the current agent
@@ -4040,9 +4047,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
         
-        ApiResponse<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
+        ApiResponse<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null);
 
         /// <summary>
         /// Updates the state of a batch of shift trades
@@ -5126,9 +5134,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of BusinessUnitActivityCodeListing</returns>
         
-        System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId);
+        System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get activity codes
@@ -5138,9 +5147,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCodeListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId);
+        System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get intraday planning groups for the given date
@@ -6348,9 +6358,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
         
-        System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
+        System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Gets all the shift trades for a given week
@@ -6362,9 +6373,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null);
+        System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get a work plan
@@ -8330,10 +8342,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestListing</returns>
         
-        System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null);
+        System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null);
 
         /// <summary>
         /// Fetches time off requests matching the conditions specified in the request body
@@ -8343,10 +8356,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null);
 
         /// <summary>
         /// Retrieves daily waitlist position for a list of time off requests
@@ -8526,9 +8540,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of SearchShiftTradesResponse</returns>
         
-        System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
+        System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null);
 
         /// <summary>
         /// Searches for potential shift trade matches for the current agent
@@ -8540,9 +8555,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body);
+        System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null);
 
         /// <summary>
         /// Updates the state of a batch of shift trades
@@ -14312,11 +14328,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>BusinessUnitActivityCodeListing</returns>
         
-        public BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string businessUnitId)
+        public BusinessUnitActivityCodeListing GetWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, bool? forceDownloadService = null)
         {
-             ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo(businessUnitId);
+             ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo(businessUnitId, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -14326,9 +14343,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of BusinessUnitActivityCodeListing</returns>
         
-        public ApiResponse< BusinessUnitActivityCodeListing > GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId)
+        public ApiResponse< BusinessUnitActivityCodeListing > GetWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -14367,6 +14385,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
 
             // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -14416,11 +14435,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of BusinessUnitActivityCodeListing</returns>
         
-        public async System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId)
+        public async System.Threading.Tasks.Task<BusinessUnitActivityCodeListing> GetWorkforcemanagementBusinessunitActivitycodesAsync (string businessUnitId, bool? forceDownloadService = null)
         {
-             ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = await GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo(businessUnitId);
+             ApiResponse<BusinessUnitActivityCodeListing> localVarResponse = await GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo(businessUnitId, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -14431,9 +14451,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (BusinessUnitActivityCodeListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId)
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCodeListing>> GetWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -14473,6 +14494,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
 
             // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -24592,11 +24614,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>WeekShiftTradeListResponse</returns>
         
-        public WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
+        public WeekShiftTradeListResponse GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
         {
-             ApiResponse<WeekShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, evaluateMatches);
+             ApiResponse<WeekShiftTradeListResponse> localVarResponse = GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo(managementUnitId, weekDateId, evaluateMatches, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -24608,9 +24631,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WeekShiftTradeListResponse</returns>
         
-        public ApiResponse< WeekShiftTradeListResponse > GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
+        public ApiResponse< WeekShiftTradeListResponse > GetWorkforcemanagementManagementunitWeekShifttradesWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24654,6 +24678,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (evaluateMatches != null) localVarQueryParams.Add(new Tuple<string, string>("evaluateMatches", this.Configuration.ApiClient.ParameterToString(evaluateMatches)));
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -24705,11 +24730,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of WeekShiftTradeListResponse</returns>
         
-        public async System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
+        public async System.Threading.Tasks.Task<WeekShiftTradeListResponse> GetWorkforcemanagementManagementunitWeekShifttradesAsync (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
         {
-             ApiResponse<WeekShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, evaluateMatches);
+             ApiResponse<WeekShiftTradeListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo(managementUnitId, weekDateId, evaluateMatches, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -24722,9 +24748,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="evaluateMatches">Whether to evaluate the matches for violations (optional, default to true)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WeekShiftTradeListResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WeekShiftTradeListResponse>> GetWorkforcemanagementManagementunitWeekShifttradesAsyncWithHttpInfo (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -24770,6 +24797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (evaluateMatches != null) localVarQueryParams.Add(new Tuple<string, string>("evaluateMatches", this.Configuration.ApiClient.ParameterToString(evaluateMatches)));
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -41671,12 +41699,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>TimeOffRequestListing</returns>
         
-        public TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, TimeOffRequestQueryBody body = null)
+        public TimeOffRequestListing PostWorkforcemanagementManagementunitTimeoffrequestsQuery (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null)
         {
-             ApiResponse<TimeOffRequestListing> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo(managementUnitId, body);
+             ApiResponse<TimeOffRequestListing> localVarResponse = PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo(managementUnitId, forceDownloadService, body);
              return localVarResponse.Data;
         }
 
@@ -41686,10 +41715,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of TimeOffRequestListing</returns>
         
-        public ApiResponse< TimeOffRequestListing > PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null)
+        public ApiResponse< TimeOffRequestListing > PostWorkforcemanagementManagementunitTimeoffrequestsQueryWithHttpInfo (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -41729,6 +41759,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -41783,12 +41814,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of TimeOffRequestListing</returns>
         
-        public async System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, TimeOffRequestQueryBody body = null)
+        public async System.Threading.Tasks.Task<TimeOffRequestListing> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsync (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null)
         {
-             ApiResponse<TimeOffRequestListing> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo(managementUnitId, body);
+             ApiResponse<TimeOffRequestListing> localVarResponse = await PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo(managementUnitId, forceDownloadService, body);
              return localVarResponse.Data;
 
         }
@@ -41799,10 +41831,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, TimeOffRequestQueryBody body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestListing>> PostWorkforcemanagementManagementunitTimeoffrequestsQueryAsyncWithHttpInfo (string managementUnitId, bool? forceDownloadService = null, TimeOffRequestQueryBody body = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -41843,6 +41876,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
 
             // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -43358,11 +43392,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>SearchShiftTradesResponse</returns>
         
-        public SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
+        public SearchShiftTradesResponse PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null)
         {
-             ApiResponse<SearchShiftTradesResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo(managementUnitId, weekDateId, body);
+             ApiResponse<SearchShiftTradesResponse> localVarResponse = PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo(managementUnitId, weekDateId, body, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -43374,9 +43409,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of SearchShiftTradesResponse</returns>
         
-        public ApiResponse< SearchShiftTradesResponse > PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
+        public ApiResponse< SearchShiftTradesResponse > PostWorkforcemanagementManagementunitWeekShifttradesSearchWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -43423,6 +43459,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
 
             // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -43479,11 +43516,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of SearchShiftTradesResponse</returns>
         
-        public async System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
+        public async System.Threading.Tasks.Task<SearchShiftTradesResponse> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsync (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null)
         {
-             ApiResponse<SearchShiftTradesResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo(managementUnitId, weekDateId, body);
+             ApiResponse<SearchShiftTradesResponse> localVarResponse = await PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo(managementUnitId, weekDateId, body, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -43496,9 +43534,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="weekDateId">The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="body">body</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (SearchShiftTradesResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<SearchShiftTradesResponse>> PostWorkforcemanagementManagementunitWeekShifttradesSearchAsyncWithHttpInfo (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -43548,6 +43587,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
 
             // Query params
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 

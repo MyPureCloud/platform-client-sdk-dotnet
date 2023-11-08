@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserRoutingskill**](UsersApi.html#deleteuserroutingskill) | **Delete** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**DeleteUserStationAssociatedstation**](UsersApi.html#deleteuserstationassociatedstation) | **Delete** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
 | [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **Delete** /api/v2/users/{userId}/station/defaultstation | Clear default station |
+| [**DeleteUserVerifier**](UsersApi.html#deleteuserverifier) | **Delete** /api/v2/users/{userId}/verifiers/{verifierId} | Delete a verifier |
 | [**GetAnalyticsUsersAggregatesJob**](UsersApi.html#getanalyticsusersaggregatesjob) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId} | Get status for async query for user aggregates |
 | [**GetAnalyticsUsersAggregatesJobResults**](UsersApi.html#getanalyticsusersaggregatesjobresults) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsUsersDetailsJob**](UsersApi.html#getanalyticsusersdetailsjob) | **Get** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
@@ -47,6 +48,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserStation**](UsersApi.html#getuserstation) | **Get** /api/v2/users/{userId}/station | Get station information for user |
 | [**GetUserSuperiors**](UsersApi.html#getusersuperiors) | **Get** /api/v2/users/{userId}/superiors | Get superiors |
 | [**GetUserTrustors**](UsersApi.html#getusertrustors) | **Get** /api/v2/users/{userId}/trustors | List the organizations that have authorized/trusted the user. |
+| [**GetUserVerifiers**](UsersApi.html#getuserverifiers) | **Get** /api/v2/users/{userId}/verifiers | Get a list of verifiers |
 | [**GetUsers**](UsersApi.html#getusers) | **Get** /api/v2/users | Get the list of available users. |
 | [**GetUsersDevelopmentActivities**](UsersApi.html#getusersdevelopmentactivities) | **Get** /api/v2/users/development/activities | Get list of Development Activities |
 | [**GetUsersDevelopmentActivitiesMe**](UsersApi.html#getusersdevelopmentactivitiesme) | **Get** /api/v2/users/development/activities/me | Get list of Development Activities for current user |
@@ -61,7 +63,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserRoutinglanguage**](UsersApi.html#patchuserroutinglanguage) | **Patch** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
 | [**PatchUserRoutinglanguagesBulk**](UsersApi.html#patchuserroutinglanguagesbulk) | **Patch** /api/v2/users/{userId}/routinglanguages/bulk | Add bulk routing language to user. Max limit 50 languages |
 | [**PatchUserRoutingskillsBulk**](UsersApi.html#patchuserroutingskillsbulk) | **Patch** /api/v2/users/{userId}/routingskills/bulk | Bulk add routing skills to user |
-| [**PatchUsersBulk**](UsersApi.html#patchusersbulk) | **Patch** /api/v2/users/bulk | Update bulk acd autoanswer on users |
+| [**PatchUsersBulk**](UsersApi.html#patchusersbulk) | **Patch** /api/v2/users/bulk | Update bulk acd autoanswer on users. Max 50 users can be updated at a time. |
 | [**PostAnalyticsUsersActivityQuery**](UsersApi.html#postanalyticsusersactivityquery) | **Post** /api/v2/analytics/users/activity/query | Query for user activity observations |
 | [**PostAnalyticsUsersAggregatesJobs**](UsersApi.html#postanalyticsusersaggregatesjobs) | **Post** /api/v2/analytics/users/aggregates/jobs | Query for user aggregates asynchronously |
 | [**PostAnalyticsUsersAggregatesQuery**](UsersApi.html#postanalyticsusersaggregatesquery) | **Post** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
@@ -95,6 +97,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserState**](UsersApi.html#putuserstate) | **Put** /api/v2/users/{userId}/state | Update user state information. |
 | [**PutUserStationAssociatedstationStationId**](UsersApi.html#putuserstationassociatedstationstationid) | **Put** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
 | [**PutUserStationDefaultstationStationId**](UsersApi.html#putuserstationdefaultstationstationid) | **Put** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
+| [**PutUserVerifier**](UsersApi.html#putuserverifier) | **Put** /api/v2/users/{userId}/verifiers/{verifierId} | Update a verifier |
 {: class="table table-striped"}
 
 <a name="deleteanalyticsusersdetailsjob"></a>
@@ -598,6 +601,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteuserverifier"></a>
+
+## void DeleteUserVerifier (string userId, string verifierId)
+
+
+
+Delete a verifier
+
+Requires ANY permissions: 
+
+* mfa:verifier:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteUserVerifierExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var verifierId = verifierId_example;  // string | Verifier ID
+
+            try
+            { 
+                // Delete a verifier
+                apiInstance.DeleteUserVerifier(userId, verifierId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteUserVerifier: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **verifierId** | **string**| Verifier ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2692,6 +2759,69 @@ namespace Example
 
 [**TrustorEntityListing**](TrustorEntityListing.html)
 
+<a name="getuserverifiers"></a>
+
+## [**VerifierEntityListing**](VerifierEntityListing.html) GetUserVerifiers (string userId)
+
+
+
+Get a list of verifiers
+
+Requires ANY permissions: 
+
+* mfa:verifier:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserVerifiersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Get a list of verifiers
+                VerifierEntityListing result = apiInstance.GetUserVerifiers(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserVerifiers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VerifierEntityListing**](VerifierEntityListing.html)
+
 <a name="getusers"></a>
 
 ## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
@@ -3681,7 +3811,7 @@ namespace Example
 
 
 
-Update bulk acd autoanswer on users
+Update bulk acd autoanswer on users. Max 50 users can be updated at a time.
 
 Requires ANY permissions: 
 
@@ -3714,7 +3844,7 @@ namespace Example
 
             try
             { 
-                // Update bulk acd autoanswer on users
+                // Update bulk acd autoanswer on users. Max 50 users can be updated at a time.
                 UserEntityListing result = apiInstance.PatchUsersBulk(body);
                 Debug.WriteLine(result);
             }
@@ -5880,4 +6010,71 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="putuserverifier"></a>
+
+## [**Verifier**](Verifier.html) PutUserVerifier (string userId, string verifierId, UpdateVerifierRequest body)
+
+
+
+Update a verifier
+
+Requires ANY permissions: 
+
+* mfa:verifier:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutUserVerifierExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var verifierId = verifierId_example;  // string | Verifier ID
+            var body = new UpdateVerifierRequest(); // UpdateVerifierRequest | Verifier Update
+
+            try
+            { 
+                // Update a verifier
+                Verifier result = apiInstance.PutUserVerifier(userId, verifierId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PutUserVerifier: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **verifierId** | **string**| Verifier ID |  |
+| **body** | [**UpdateVerifierRequest**](UpdateVerifierRequest.html)| Verifier Update |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Verifier**](Verifier.html)
 

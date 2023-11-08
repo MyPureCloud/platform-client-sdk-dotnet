@@ -179,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReleaseDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="RevisionCreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Queue">Queue.</param>
         /// <param name="MediaType">List of different communication types used in conversation..</param>
         /// <param name="Rescore">Is only true when evaluation is re-scored..</param>
@@ -193,7 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn't execute successfully.</param>
-        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -209,6 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ReleaseDate = ReleaseDate;
             this.AssignedDate = AssignedDate;
             this.ChangedDate = ChangedDate;
+            this.RevisionCreatedDate = RevisionCreatedDate;
             this.Queue = Queue;
             this.MediaType = MediaType;
             this.Rescore = Rescore;
@@ -345,6 +347,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="changedDate", EmitDefaultValue=false)]
         public DateTime? ChangedDate { get; set; }
+
+
+
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="revisionCreatedDate", EmitDefaultValue=false)]
+        public DateTime? RevisionCreatedDate { get; set; }
 
 
 
@@ -506,6 +517,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ReleaseDate: ").Append(ReleaseDate).Append("\n");
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
+            sb.Append("  RevisionCreatedDate: ").Append(RevisionCreatedDate).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Rescore: ").Append(Rescore).Append("\n");
@@ -636,6 +648,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ChangedDate == other.ChangedDate ||
                     this.ChangedDate != null &&
                     this.ChangedDate.Equals(other.ChangedDate)
+                ) &&
+                (
+                    this.RevisionCreatedDate == other.RevisionCreatedDate ||
+                    this.RevisionCreatedDate != null &&
+                    this.RevisionCreatedDate.Equals(other.RevisionCreatedDate)
                 ) &&
                 (
                     this.Queue == other.Queue ||
@@ -774,6 +791,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ChangedDate != null)
                     hash = hash * 59 + this.ChangedDate.GetHashCode();
+
+                if (this.RevisionCreatedDate != null)
+                    hash = hash * 59 + this.RevisionCreatedDate.GetHashCode();
 
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();

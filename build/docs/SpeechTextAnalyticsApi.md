@@ -367,9 +367,10 @@ void (empty response body)
 
 Get Speech and Text Analytics for a specific conversation
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * recording:recording:view
+* speechAndTextAnalytics:data:view
 
 ### Example
 ```{"language":"csharp"}
@@ -430,9 +431,10 @@ namespace Example
 
 Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * recording:recording:view
+* speechAndTextAnalytics:data:view
 
 ### Example
 ```{"language":"csharp"}

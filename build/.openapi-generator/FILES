@@ -29,6 +29,7 @@ docs/ActionContract.md
 docs/ActionContractInput.md
 docs/ActionEntityListing.md
 docs/ActionEventActionMap.md
+docs/ActionEventRequest.md
 docs/ActionInput.md
 docs/ActionMap.md
 docs/ActionMapAction.md
@@ -167,7 +168,6 @@ docs/ApiUsageRow.md
 docs/ApiUsageSimpleSearch.md
 docs/AppEvent.md
 docs/AppEventRequest.md
-docs/AppEventRequestSession.md
 docs/AppEventResponse.md
 docs/AppEventResponseSession.md
 docs/AppendToDncActionSettings.md
@@ -1302,6 +1302,7 @@ docs/DeleteUserRoutingskill-example.txt
 docs/DeleteUserRoutingskill-example.txt
 docs/DeleteUserStationAssociatedstation-example.txt
 docs/DeleteUserStationDefaultstation-example.txt
+docs/DeleteUserVerifier-example.txt
 docs/DeleteUserrecording-example.txt
 docs/DeleteVoicemailMessage-example.txt
 docs/DeleteVoicemailMessages-example.txt
@@ -1332,6 +1333,8 @@ docs/DependencyObjectEntityListing.md
 docs/DependencyStatus.md
 docs/DependencyType.md
 docs/DependencyTypeEntityListing.md
+docs/DeploymentPing.md
+docs/DeploymentWebAction.md
 docs/Destination.md
 docs/Detail.md
 docs/DetectedDialogAct.md
@@ -1444,6 +1447,7 @@ docs/Digits.md
 docs/DirectRouting.md
 docs/DirectRoutingMediaSettings.md
 docs/DirectoryUserDevicesListing.md
+docs/DisableSiteConnectionsRequest.md
 docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
 docs/DisconnectReason.md
@@ -1700,6 +1704,8 @@ docs/EvaluatorActivityEntityListing.md
 docs/Event.md
 docs/EventAction.md
 docs/EventCondition.md
+docs/EventDefinition.md
+docs/EventDefinitionListing.md
 docs/EventError.md
 docs/EventListing.md
 docs/EventLog.md
@@ -1857,6 +1863,8 @@ docs/FlowObservationQueryFilter.md
 docs/FlowObservationQueryPredicate.md
 docs/FlowObservationQueryResponse.md
 docs/FlowOutcome.md
+docs/FlowOutcomeDetailEventTopicFlowMilestone.md
+docs/FlowOutcomeDetailEventTopicFlowOutcomeEvent.md
 docs/FlowOutcomeDivisionView.md
 docs/FlowOutcomeDivisionViewEntityListing.md
 docs/FlowOutcomeListing.md
@@ -2062,7 +2070,6 @@ docs/GetAuthorizationSubjectsRolecounts-example.txt
 docs/GetBillingReportsBillableusage-example.txt
 docs/GetBillingTrusteebillingoverviewTrustorOrgId-example.txt
 docs/GetCarrierservicesIntegrationsEmergencylocationsMe-example.txt
-docs/GetChatSettings-example.txt
 docs/GetChatsMessage-example.txt
 docs/GetChatsRoom-example.txt
 docs/GetChatsRoomMessage-example.txt
@@ -2393,6 +2400,7 @@ docs/GetJourneyActiontarget-example.txt
 docs/GetJourneyActiontargets-example.txt
 docs/GetJourneyActiontemplate-example.txt
 docs/GetJourneyActiontemplates-example.txt
+docs/GetJourneyDeploymentCustomerPing-example.txt
 docs/GetJourneyOutcome-example.txt
 docs/GetJourneyOutcomes-example.txt
 docs/GetJourneyOutcomesAttributionsJob-example.txt
@@ -2859,6 +2867,7 @@ docs/GetTelephonyProvidersEdgesSiteNumberplans-example.txt
 docs/GetTelephonyProvidersEdgesSiteNumberplansClassifications-example.txt
 docs/GetTelephonyProvidersEdgesSiteOutboundroute-example.txt
 docs/GetTelephonyProvidersEdgesSiteOutboundroutes-example.txt
+docs/GetTelephonyProvidersEdgesSiteSiteconnections-example.txt
 docs/GetTelephonyProvidersEdgesSites-example.txt
 docs/GetTelephonyProvidersEdgesTimezones-example.txt
 docs/GetTelephonyProvidersEdgesTrunk-example.txt
@@ -2879,6 +2888,8 @@ docs/GetTextbotsBotsSearch-example.txt
 docs/GetTimezones-example.txt
 docs/GetTokensMe-example.txt
 docs/GetTokensTimeout-example.txt
+docs/GetUsageEventsDefinition-example.txt
+docs/GetUsageEventsDefinitions-example.txt
 docs/GetUsageQueryExecutionIdResults-example.txt
 docs/GetUsageSimplesearchExecutionIdResults-example.txt
 docs/GetUser-example.txt
@@ -2910,6 +2921,7 @@ docs/GetUserState-example.txt
 docs/GetUserStation-example.txt
 docs/GetUserSuperiors-example.txt
 docs/GetUserTrustors-example.txt
+docs/GetUserVerifiers-example.txt
 docs/GetUserrecording-example.txt
 docs/GetUserrecordingMedia-example.txt
 docs/GetUserrecordings-example.txt
@@ -3667,6 +3679,7 @@ docs/MoveAgentsResponse.md
 docs/MoveManagementUnitRequest.md
 docs/MoveManagementUnitResponse.md
 docs/MuRescheduleResultWrapper.md
+docs/MutableUserPresence.md
 docs/MuteSnoozeFields.md
 docs/NTPSettings.md
 docs/NamedEntity.md
@@ -3745,6 +3758,7 @@ docs/ObservationValue.md
 docs/Okta.md
 docs/OneLogin.md
 docs/OpenActionFields.md
+docs/OpenActionProperties.md
 docs/OpenContentAttachment.md
 docs/OpenEvent.md
 docs/OpenEventNormalizedMessage.md
@@ -3770,6 +3784,8 @@ docs/OpenReceiptNormalizedMessage.md
 docs/Operation.md
 docs/OperationalEventNotificationTopicEventEntity.md
 docs/OperationalEventNotificationTopicOperationalEventNotification.md
+docs/OperationalEventsApi.json
+docs/OperationalEventsApi.md
 docs/OptInSettings.md
 docs/OrgAuthSettings.md
 docs/OrgOAuthClient.md
@@ -3877,7 +3893,6 @@ docs/PatchBuScheduleRunRequest.md
 docs/PatchCallToAction.md
 docs/PatchCallbackRequest.md
 docs/PatchCallbackResponse.md
-docs/PatchChatSettings-example.txt
 docs/PatchChatsRoom-example.txt
 docs/PatchChatsRoomMessage-example.txt
 docs/PatchChatsSettings-example.txt
@@ -3926,6 +3941,7 @@ docs/PatchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
+docs/PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/PatchConversationsMessagingSetting-example.txt
 docs/PatchConversationsMessagingSupportedcontentSupportedContentId-example.txt
@@ -4005,6 +4021,7 @@ docs/PatchTaskmanagementWorkitemUsersMeWrapups-example.txt
 docs/PatchTaskmanagementWorktype-example.txt
 docs/PatchTaskmanagementWorktypeStatus-example.txt
 docs/PatchTeam-example.txt
+docs/PatchTelephonyProvidersEdgesSiteSiteconnections-example.txt
 docs/PatchTextStyleProperties.md
 docs/PatchUser-example.txt
 docs/PatchUser.md
@@ -4281,6 +4298,7 @@ docs/PostConversationsMessagingIntegrationsLine-example.txt
 docs/PostConversationsMessagingIntegrationsOpen-example.txt
 docs/PostConversationsMessagingIntegrationsTwitter-example.txt
 docs/PostConversationsMessagingIntegrationsWhatsapp-example.txt
+docs/PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup-example.txt
 docs/PostConversationsMessagingSettings-example.txt
 docs/PostConversationsMessagingSupportedcontent-example.txt
 docs/PostConversationsParticipantsAttributesSearch-example.txt
@@ -4377,6 +4395,7 @@ docs/PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate-example.t
 docs/PostJourneyActionmaps-example.txt
 docs/PostJourneyActionmapsEstimatesJobs-example.txt
 docs/PostJourneyActiontemplates-example.txt
+docs/PostJourneyDeploymentActionevent-example.txt
 docs/PostJourneyDeploymentAppevents-example.txt
 docs/PostJourneyOutcomes-example.txt
 docs/PostJourneyOutcomesAttributionsJobs-example.txt
@@ -4781,7 +4800,6 @@ docs/PutAuthorizationRole-example.txt
 docs/PutAuthorizationRoleUsersAdd-example.txt
 docs/PutAuthorizationRoleUsersRemove-example.txt
 docs/PutAuthorizationRolesDefault-example.txt
-docs/PutChatSettings-example.txt
 docs/PutChatsSettings-example.txt
 docs/PutContentmanagementWorkspace-example.txt
 docs/PutContentmanagementWorkspaceMember-example.txt
@@ -4942,6 +4960,7 @@ docs/PutTelephonyProvidersEdgesPhonebasesetting-example.txt
 docs/PutTelephonyProvidersEdgesSite-example.txt
 docs/PutTelephonyProvidersEdgesSiteNumberplans-example.txt
 docs/PutTelephonyProvidersEdgesSiteOutboundroute-example.txt
+docs/PutTelephonyProvidersEdgesSiteSiteconnections-example.txt
 docs/PutTelephonyProvidersEdgesTrunkbasesetting-example.txt
 docs/PutTokensTimeout-example.txt
 docs/PutUserCallforwarding-example.txt
@@ -4958,6 +4977,7 @@ docs/PutUserRoutingstatus-example.txt
 docs/PutUserState-example.txt
 docs/PutUserStationAssociatedstationStationId-example.txt
 docs/PutUserStationDefaultstationStationId-example.txt
+docs/PutUserVerifier-example.txt
 docs/PutUserrecording-example.txt
 docs/PutUsersPresencesBulk-example.txt
 docs/PutVoicemailMessage-example.txt
@@ -5561,6 +5581,7 @@ docs/SipDownloadResponse.md
 docs/SipSearchResult.md
 docs/Site.md
 docs/SiteConnection.md
+docs/SiteConnections.md
 docs/SiteEntityListing.md
 docs/SkillEntityListing.md
 docs/SkillGroup.md
@@ -5942,6 +5963,7 @@ docs/UpdateTimeOffLimitRequest.md
 docs/UpdateTimeOffPlanRequest.md
 docs/UpdateTriggerRequest.md
 docs/UpdateUser.md
+docs/UpdateVerifierRequest.md
 docs/UpdateWorkPlanRotationAgentRequest.md
 docs/UpdateWorkPlanRotationRequest.md
 docs/UploadUrlRequest.md
@@ -6124,6 +6146,7 @@ docs/V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTem
 docs/V2ConversationMessageTypingEventForWorkflowTopicConversationReason.md
 docs/V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier.md
 docs/V2ConversationMessageTypingEventForWorkflowTopicMessageData.md
+docs/V2MobiusAlertsTopicAddressableEntityRef.md
 docs/V2MobiusAlertsTopicAlert.md
 docs/V2MobiusAlertsTopicAlertNotification.md
 docs/V2MobiusAlertsTopicAlertRuleProperties.md
@@ -6132,6 +6155,7 @@ docs/V2MobiusAlertsTopicAlertSummaryEntity.md
 docs/V2MobiusAlertsTopicCondition.md
 docs/V2MobiusAlertsTopicConditionRulePredicate.md
 docs/V2MobiusAlertsTopicEntityProperties.md
+docs/V2MobiusRulesTopicAddressableEntityRef.md
 docs/V2MobiusRulesTopicAlertNotification.md
 docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
@@ -6149,6 +6173,8 @@ docs/ValueWrapperHrisTimeOffType.md
 docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/VerificationResult.md
+docs/Verifier.md
+docs/VerifierEntityListing.md
 docs/Video.md
 docs/VideoConferenceDetails.md
 docs/VideoConferenceUpdateTopicParticipantInfo.md
@@ -6226,6 +6252,7 @@ docs/WebMessagingGeneric.md
 docs/WebMessagingMessage.md
 docs/WebMessagingMessageEntityList.md
 docs/WebMessagingOfferFields.md
+docs/WebMessagingOfferProperties.md
 docs/WebMessagingQuickReply.md
 docs/WebMessagingRecipient.md
 docs/WeekSchedule.md
@@ -6390,6 +6417,8 @@ docs/WfmVersionedEntityMetadata.md
 docs/WhatsAppAvailablePhoneNumberDetails.md
 docs/WhatsAppAvailablePhoneNumberDetailsListing.md
 docs/WhatsAppDefinition.md
+docs/WhatsAppEmbeddedSignupIntegrationActivationRequest.md
+docs/WhatsAppEmbeddedSignupIntegrationRequest.md
 docs/WhatsAppId.md
 docs/WhatsAppIntegration.md
 docs/WhatsAppIntegrationEntityListing.md
@@ -6564,6 +6593,7 @@ src/PureCloudPlatform.Client.V2/Api/MobileDevicesApi.cs
 src/PureCloudPlatform.Client.V2/Api/NotificationsApi.cs
 src/PureCloudPlatform.Client.V2/Api/OAuthApi.cs
 src/PureCloudPlatform.Client.V2/Api/ObjectsApi.cs
+src/PureCloudPlatform.Client.V2/Api/OperationalEventsApi.cs
 src/PureCloudPlatform.Client.V2/Api/OrganizationApi.cs
 src/PureCloudPlatform.Client.V2/Api/OrganizationAuthorizationApi.cs
 src/PureCloudPlatform.Client.V2/Api/OutboundApi.cs
@@ -6628,6 +6658,7 @@ src/PureCloudPlatform.Client.V2/Model/ActionContract.cs
 src/PureCloudPlatform.Client.V2/Model/ActionContractInput.cs
 src/PureCloudPlatform.Client.V2/Model/ActionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ActionEventActionMap.cs
+src/PureCloudPlatform.Client.V2/Model/ActionEventRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ActionInput.cs
 src/PureCloudPlatform.Client.V2/Model/ActionMap.cs
 src/PureCloudPlatform.Client.V2/Model/ActionMapAction.cs
@@ -6762,7 +6793,6 @@ src/PureCloudPlatform.Client.V2/Model/ApiUsageRow.cs
 src/PureCloudPlatform.Client.V2/Model/ApiUsageSimpleSearch.cs
 src/PureCloudPlatform.Client.V2/Model/AppEvent.cs
 src/PureCloudPlatform.Client.V2/Model/AppEventRequest.cs
-src/PureCloudPlatform.Client.V2/Model/AppEventRequestSession.cs
 src/PureCloudPlatform.Client.V2/Model/AppEventResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AppEventResponseSession.cs
 src/PureCloudPlatform.Client.V2/Model/AppendToDncActionSettings.cs
@@ -7656,6 +7686,8 @@ src/PureCloudPlatform.Client.V2/Model/DependencyObjectEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DependencyStatus.cs
 src/PureCloudPlatform.Client.V2/Model/DependencyType.cs
 src/PureCloudPlatform.Client.V2/Model/DependencyTypeEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/DeploymentPing.cs
+src/PureCloudPlatform.Client.V2/Model/DeploymentWebAction.cs
 src/PureCloudPlatform.Client.V2/Model/Destination.cs
 src/PureCloudPlatform.Client.V2/Model/Detail.cs
 src/PureCloudPlatform.Client.V2/Model/DetectedDialogAct.cs
@@ -7768,6 +7800,7 @@ src/PureCloudPlatform.Client.V2/Model/Digits.cs
 src/PureCloudPlatform.Client.V2/Model/DirectRouting.cs
 src/PureCloudPlatform.Client.V2/Model/DirectRoutingMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/DirectoryUserDevicesListing.cs
+src/PureCloudPlatform.Client.V2/Model/DisableSiteConnectionsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentItem.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentReference.cs
 src/PureCloudPlatform.Client.V2/Model/DisconnectReason.cs
@@ -8020,6 +8053,8 @@ src/PureCloudPlatform.Client.V2/Model/EvaluatorActivityEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Event.cs
 src/PureCloudPlatform.Client.V2/Model/EventAction.cs
 src/PureCloudPlatform.Client.V2/Model/EventCondition.cs
+src/PureCloudPlatform.Client.V2/Model/EventDefinition.cs
+src/PureCloudPlatform.Client.V2/Model/EventDefinitionListing.cs
 src/PureCloudPlatform.Client.V2/Model/EventError.cs
 src/PureCloudPlatform.Client.V2/Model/EventListing.cs
 src/PureCloudPlatform.Client.V2/Model/EventLog.cs
@@ -8171,6 +8206,8 @@ src/PureCloudPlatform.Client.V2/Model/FlowObservationQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/FlowObservationQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/FlowObservationQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/FlowOutcome.cs
+src/PureCloudPlatform.Client.V2/Model/FlowOutcomeDetailEventTopicFlowMilestone.cs
+src/PureCloudPlatform.Client.V2/Model/FlowOutcomeDetailEventTopicFlowOutcomeEvent.cs
 src/PureCloudPlatform.Client.V2/Model/FlowOutcomeDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/FlowOutcomeDivisionViewEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/FlowOutcomeListing.cs
@@ -8839,6 +8876,7 @@ src/PureCloudPlatform.Client.V2/Model/MoveAgentsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/MoveManagementUnitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MoveManagementUnitResponse.cs
 src/PureCloudPlatform.Client.V2/Model/MuRescheduleResultWrapper.cs
+src/PureCloudPlatform.Client.V2/Model/MutableUserPresence.cs
 src/PureCloudPlatform.Client.V2/Model/MuteSnoozeFields.cs
 src/PureCloudPlatform.Client.V2/Model/NTPSettings.cs
 src/PureCloudPlatform.Client.V2/Model/NamedEntity.cs
@@ -8911,6 +8949,7 @@ src/PureCloudPlatform.Client.V2/Model/ObservationValue.cs
 src/PureCloudPlatform.Client.V2/Model/Okta.cs
 src/PureCloudPlatform.Client.V2/Model/OneLogin.cs
 src/PureCloudPlatform.Client.V2/Model/OpenActionFields.cs
+src/PureCloudPlatform.Client.V2/Model/OpenActionProperties.cs
 src/PureCloudPlatform.Client.V2/Model/OpenContentAttachment.cs
 src/PureCloudPlatform.Client.V2/Model/OpenEvent.cs
 src/PureCloudPlatform.Client.V2/Model/OpenEventNormalizedMessage.cs
@@ -9720,6 +9759,7 @@ src/PureCloudPlatform.Client.V2/Model/SipDownloadResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SipSearchResult.cs
 src/PureCloudPlatform.Client.V2/Model/Site.cs
 src/PureCloudPlatform.Client.V2/Model/SiteConnection.cs
+src/PureCloudPlatform.Client.V2/Model/SiteConnections.cs
 src/PureCloudPlatform.Client.V2/Model/SiteEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SkillEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SkillGroup.cs
@@ -10083,6 +10123,7 @@ src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffLimitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffPlanRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateTriggerRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateUser.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateVerifierRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateWorkPlanRotationAgentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateWorkPlanRotationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UploadUrlRequest.cs
@@ -10255,6 +10296,7 @@ src/PureCloudPlatform.Client.V2/Model/V2ConversationMessageTypingEventForWorkflo
 src/PureCloudPlatform.Client.V2/Model/V2ConversationMessageTypingEventForWorkflowTopicConversationReason.cs
 src/PureCloudPlatform.Client.V2/Model/V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/V2ConversationMessageTypingEventForWorkflowTopicMessageData.cs
+src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlert.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertNotification.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertRuleProperties.cs
@@ -10263,6 +10305,7 @@ src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertSummaryEntity.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicCondition.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicConditionRulePredicate.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicEntityProperties.cs
+src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicAlertNotification.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicCondition.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicConditionRulePredicate.cs
@@ -10280,6 +10323,8 @@ src/PureCloudPlatform.Client.V2/Model/ValueWrapperHrisTimeOffType.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperPlanningPeriodSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperString.cs
 src/PureCloudPlatform.Client.V2/Model/VerificationResult.cs
+src/PureCloudPlatform.Client.V2/Model/Verifier.cs
+src/PureCloudPlatform.Client.V2/Model/VerifierEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Video.cs
 src/PureCloudPlatform.Client.V2/Model/VideoConferenceDetails.cs
 src/PureCloudPlatform.Client.V2/Model/VideoConferenceUpdateTopicParticipantInfo.cs
@@ -10349,6 +10394,7 @@ src/PureCloudPlatform.Client.V2/Model/WebMessagingGeneric.cs
 src/PureCloudPlatform.Client.V2/Model/WebMessagingMessage.cs
 src/PureCloudPlatform.Client.V2/Model/WebMessagingMessageEntityList.cs
 src/PureCloudPlatform.Client.V2/Model/WebMessagingOfferFields.cs
+src/PureCloudPlatform.Client.V2/Model/WebMessagingOfferProperties.cs
 src/PureCloudPlatform.Client.V2/Model/WebMessagingQuickReply.cs
 src/PureCloudPlatform.Client.V2/Model/WebMessagingRecipient.cs
 src/PureCloudPlatform.Client.V2/Model/WeekSchedule.cs
@@ -10513,6 +10559,8 @@ src/PureCloudPlatform.Client.V2/Model/WfmVersionedEntityMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppAvailablePhoneNumberDetails.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppAvailablePhoneNumberDetailsListing.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppDefinition.cs
+src/PureCloudPlatform.Client.V2/Model/WhatsAppEmbeddedSignupIntegrationActivationRequest.cs
+src/PureCloudPlatform.Client.V2/Model/WhatsAppEmbeddedSignupIntegrationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppId.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegrationEntityListing.cs

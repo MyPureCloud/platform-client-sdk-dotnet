@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Recipient" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Flow">An automate flow object which defines the set of actions to be taken, when a message is received by this provisioned phone number..</param>
+        /// <param name="Flow">An automate flow object which defines the set of actions to be taken, when a message is received by this recipient..</param>
         /// <param name="DateCreated">Date this recipient was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date this recipient was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">User that created this recipient.</param>
@@ -129,9 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An automate flow object which defines the set of actions to be taken, when a message is received by this provisioned phone number.
+        /// An automate flow object which defines the set of actions to be taken, when a message is received by this recipient.
         /// </summary>
-        /// <value>An automate flow object which defines the set of actions to be taken, when a message is received by this provisioned phone number.</value>
+        /// <value>An automate flow object which defines the set of actions to be taken, when a message is received by this recipient.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public Flow Flow { get; set; }
 

@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.detail.events.conversation.{id}.customer.end", typeof(CustomerEndDetailEventTopicCustomerEndEvent)},
               {"v2.detail.events.conversation.{id}.customer.start", typeof(CustomerStartDetailEventTopicCustomerStartEvent)},
               {"v2.detail.events.conversation.{id}.flow.end", typeof(FlowEndDetailEventTopicFlowEndEvent)},
+              {"v2.detail.events.conversation.{id}.flow.outcome", typeof(FlowOutcomeDetailEventTopicFlowOutcomeEvent)},
               {"v2.detail.events.conversation.{id}.flow.start", typeof(FlowStartDetailEventTopicFlowStartEvent)},
               {"v2.detail.events.conversation.{id}.outbound", typeof(OutboundDetailEventTopicOutboundInitEvent)},
               {"v2.detail.events.conversation.{id}.user.end", typeof(UserEndDetailEventTopicUserEndEvent)},

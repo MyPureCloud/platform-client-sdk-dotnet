@@ -11,7 +11,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteChatsRoomParticipant**](ChatApi.html#deletechatsroomparticipant) | **Delete** /api/v2/chats/rooms/{roomJid}/participants/{userId} | Remove a user from a room. |
 | [**DeleteChatsRoomPinnedmessage**](ChatApi.html#deletechatsroompinnedmessage) | **Delete** /api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId} | Remove a pinned message from a room |
 | [**DeleteChatsUserMessage**](ChatApi.html#deletechatsusermessage) | **Delete** /api/v2/chats/users/{userId}/messages/{messageId} | Delete a message to a user |
-| [**GetChatSettings**](ChatApi.html#getchatsettings) | **Get** /api/v2/chat/settings | Get Chat Settings. |
 | [**GetChatsMessage**](ChatApi.html#getchatsmessage) | **Get** /api/v2/chats/messages/{messageId} | Get a message |
 | [**GetChatsRoom**](ChatApi.html#getchatsroom) | **Get** /api/v2/chats/rooms/{roomJid} | Get a room |
 | [**GetChatsRoomMessage**](ChatApi.html#getchatsroommessage) | **Get** /api/v2/chats/rooms/{roomJid}/messages/{messageIds} | Get messages by id(s) from a room |
@@ -20,7 +19,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetChatsThreadMessages**](ChatApi.html#getchatsthreadmessages) | **Get** /api/v2/chats/threads/{threadId}/messages | Get history by thread |
 | [**GetChatsUserMessage**](ChatApi.html#getchatsusermessage) | **Get** /api/v2/chats/users/{userId}/messages/{messageIds} | Get messages by id(s) from a 1on1 |
 | [**GetChatsUserMessages**](ChatApi.html#getchatsusermessages) | **Get** /api/v2/chats/users/{userId}/messages | Get 1on1 History between a user |
-| [**PatchChatSettings**](ChatApi.html#patchchatsettings) | **Patch** /api/v2/chat/settings | Patch Chat Settings. |
 | [**PatchChatsRoom**](ChatApi.html#patchchatsroom) | **Patch** /api/v2/chats/rooms/{roomJid} | Set properties for a room |
 | [**PatchChatsRoomMessage**](ChatApi.html#patchchatsroommessage) | **Patch** /api/v2/chats/rooms/{roomJid}/messages/{messageId} | Edit a message in a room |
 | [**PatchChatsSettings**](ChatApi.html#patchchatssettings) | **Patch** /api/v2/chats/settings | Patch Chat Settings. |
@@ -30,7 +28,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostChatsRoomPinnedmessages**](ChatApi.html#postchatsroompinnedmessages) | **Post** /api/v2/chats/rooms/{roomJid}/pinnedmessages | Add pinned messages for a room, up to a maximum of 5 pinned messages |
 | [**PostChatsRooms**](ChatApi.html#postchatsrooms) | **Post** /api/v2/chats/rooms | Create an adhoc room |
 | [**PostChatsUserMessages**](ChatApi.html#postchatsusermessages) | **Post** /api/v2/chats/users/{userId}/messages | Send a message to a user |
-| [**PutChatSettings**](ChatApi.html#putchatsettings) | **Put** /api/v2/chat/settings | Update Chat Settings. |
 | [**PutChatsSettings**](ChatApi.html#putchatssettings) | **Put** /api/v2/chats/settings | Update Chat Settings. |
 {: class="table table-striped"}
 
@@ -301,67 +298,6 @@ namespace Example
 ### Return type
 
 void (empty response body)
-
-<a name="getchatsettings"></a>
-
-## [**ChatSettings**](ChatSettings.html) GetChatSettings ()
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get Chat Settings.
-
-This route is deprecated, please use /chats/settings instead
-
-Requires ANY permissions: 
-
-* chat:setting:view
-* chat:setting:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetChatSettingsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ChatApi();
-
-            try
-            { 
-                // Get Chat Settings.
-                ChatSettings result = apiInstance.GetChatSettings();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ChatApi.GetChatSettings: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-
-
-### Return type
-
-[**ChatSettings**](ChatSettings.html)
 
 <a name="getchatsmessage"></a>
 
@@ -942,71 +878,6 @@ namespace Example
 ### Return type
 
 [**ChatMessageResponse**](ChatMessageResponse.html)
-
-<a name="patchchatsettings"></a>
-
-## [**ChatSettings**](ChatSettings.html) PatchChatSettings (ChatSettings body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Patch Chat Settings.
-
-This route is deprecated, please use /chats/settings instead
-
-Requires ANY permissions: 
-
-* chat:setting:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PatchChatSettingsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ChatApi();
-            var body = new ChatSettings(); // ChatSettings | Chat
-
-            try
-            { 
-                // Patch Chat Settings.
-                ChatSettings result = apiInstance.PatchChatSettings(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ChatApi.PatchChatSettings: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**ChatSettings**](ChatSettings.html)| Chat |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ChatSettings**](ChatSettings.html)
 
 <a name="patchchatsroom"></a>
 
@@ -1613,71 +1484,6 @@ namespace Example
 ### Return type
 
 [**ChatSendMessageResponse**](ChatSendMessageResponse.html)
-
-<a name="putchatsettings"></a>
-
-## [**ChatSettings**](ChatSettings.html) PutChatSettings (ChatSettings body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Update Chat Settings.
-
-This route is deprecated, please use /chats/settings instead
-
-Requires ANY permissions: 
-
-* chat:setting:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutChatSettingsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ChatApi();
-            var body = new ChatSettings(); // ChatSettings | Chat
-
-            try
-            { 
-                // Update Chat Settings.
-                ChatSettings result = apiInstance.PutChatSettings(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ChatApi.PutChatSettings: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**ChatSettings**](ChatSettings.html)| Chat |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ChatSettings**](ChatSettings.html)
 
 <a name="putchatssettings"></a>
 

@@ -59,14 +59,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="V2MobiusAlertsTopicAlertSummary" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        /// <param name="ConversationId">ConversationId.</param>
+        /// <param name="Conversation">Conversation.</param>
         /// <param name="MetricType">MetricType.</param>
         /// <param name="IsTeamMemberRuleSummary">IsTeamMemberRuleSummary.</param>
         /// <param name="TeamMemberRuleSummary">TeamMemberRuleSummary.</param>
-        public V2MobiusAlertsTopicAlertSummary(List<V2MobiusAlertsTopicAlertSummaryEntity> Entities = null, Guid? ConversationId = null, MetricTypeEnum? MetricType = null, bool? IsTeamMemberRuleSummary = null, bool? TeamMemberRuleSummary = null)
+        public V2MobiusAlertsTopicAlertSummary(List<V2MobiusAlertsTopicAlertSummaryEntity> Entities = null, V2MobiusAlertsTopicAddressableEntityRef Conversation = null, MetricTypeEnum? MetricType = null, bool? IsTeamMemberRuleSummary = null, bool? TeamMemberRuleSummary = null)
         {
             this.Entities = Entities;
-            this.ConversationId = ConversationId;
+            this.Conversation = Conversation;
             this.MetricType = MetricType;
             this.IsTeamMemberRuleSummary = IsTeamMemberRuleSummary;
             this.TeamMemberRuleSummary = TeamMemberRuleSummary;
@@ -84,10 +84,10 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets ConversationId
+        /// Gets or Sets Conversation
         /// </summary>
-        [DataMember(Name="conversationId", EmitDefaultValue=false)]
-        public Guid? ConversationId { get; set; }
+        [DataMember(Name="conversation", EmitDefaultValue=false)]
+        public V2MobiusAlertsTopicAddressableEntityRef Conversation { get; set; }
 
 
 
@@ -118,7 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class V2MobiusAlertsTopicAlertSummary {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
-            sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  MetricType: ").Append(MetricType).Append("\n");
             sb.Append("  IsTeamMemberRuleSummary: ").Append(IsTeamMemberRuleSummary).Append("\n");
             sb.Append("  TeamMemberRuleSummary: ").Append(TeamMemberRuleSummary).Append("\n");
@@ -168,9 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entities.SequenceEqual(other.Entities)
                 ) &&
                 (
-                    this.ConversationId == other.ConversationId ||
-                    this.ConversationId != null &&
-                    this.ConversationId.Equals(other.ConversationId)
+                    this.Conversation == other.Conversation ||
+                    this.Conversation != null &&
+                    this.Conversation.Equals(other.Conversation)
                 ) &&
                 (
                     this.MetricType == other.MetricType ||
@@ -203,8 +203,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
 
-                if (this.ConversationId != null)
-                    hash = hash * 59 + this.ConversationId.GetHashCode();
+                if (this.Conversation != null)
+                    hash = hash * 59 + this.Conversation.GetHashCode();
 
                 if (this.MetricType != null)
                     hash = hash * 59 + this.MetricType.GetHashCode();

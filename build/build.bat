@@ -8,7 +8,7 @@ if not exist ".\nuget.exe" powershell -Command "(new-object System.Net.WebClient
 
 if not exist ".\bin" mkdir bin
 
-copy packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
+copy packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
 copy packages\RestSharp.110.2.0\lib\net45\RestSharp.dll bin\RestSharp.dll
 copy packages\ini-parser.2.5.2\lib\net20\net45\INIFileParser.dll bin\INIFileParser.dll;
 copy packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll bin\websocket-sharp.dll;

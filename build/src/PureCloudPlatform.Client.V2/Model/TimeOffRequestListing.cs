@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TimeOffRequestListing" /> class.
         /// </summary>
         /// <param name="Entities">List of time off requests (required).</param>
-        public TimeOffRequestListing(List<TimeOffRequest> Entities = null)
+        /// <param name="DownloadUrl">URL from which to fetch results for requests with a large result set. If populated, the downloaded data will conform to the same schema as would normally be returned, excepting downloaded data will never itself contain a downloadUrl.</param>
+        public TimeOffRequestListing(List<TimeOffRequest> Entities = null, string DownloadUrl = null)
         {
             this.Entities = Entities;
+            this.DownloadUrl = DownloadUrl;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<TimeOffRequest> Entities { get; set; }
 
 
+
+        /// <summary>
+        /// URL from which to fetch results for requests with a large result set. If populated, the downloaded data will conform to the same schema as would normally be returned, excepting downloaded data will never itself contain a downloadUrl
+        /// </summary>
+        /// <value>URL from which to fetch results for requests with a large result set. If populated, the downloaded data will conform to the same schema as would normally be returned, excepting downloaded data will never itself contain a downloadUrl</value>
+        [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
+        public string DownloadUrl { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class TimeOffRequestListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
+                ) &&
+                (
+                    this.DownloadUrl == other.DownloadUrl ||
+                    this.DownloadUrl != null &&
+                    this.DownloadUrl.Equals(other.DownloadUrl)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+
+                if (this.DownloadUrl != null)
+                    hash = hash * 59 + this.DownloadUrl.GetHashCode();
 
                 return hash;
             }

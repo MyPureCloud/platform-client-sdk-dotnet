@@ -23,6 +23,8 @@ title: TrunkBase
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **TrunkType** | **string** | The type of this trunk base. | |
 | **Managed** | **bool?** | Is this trunk being managed remotely. This property is synchronized with the managed property of the Edge Group to which it is assigned. | [optional] |
+| **Site** | [**DomainEntityRef**](DomainEntityRef.html) | Used to determine the media regions for inbound and outbound calls through a trunk. Also determines the dial plan to use for calls that came in on a trunk and have to be sent out on it as well. | [optional] |
+| **InboundSite** | [**DomainEntityRef**](DomainEntityRef.html) | Allows a customer to set the site to which inbound calls will be routed | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ServiceGoalTemplateList" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        public ServiceGoalTemplateList(List<ServiceGoalTemplate> Entities = null)
+        /// <param name="Metadata">Version metadata for the service goal templates.</param>
+        public ServiceGoalTemplateList(List<ServiceGoalTemplate> Entities = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Entities = Entities;
+            this.Metadata = Metadata;
             
         }
         
@@ -37,6 +39,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ServiceGoalTemplate> Entities { get; set; }
 
 
+
+        /// <summary>
+        /// Version metadata for the service goal templates
+        /// </summary>
+        /// <value>Version metadata for the service goal templates</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ServiceGoalTemplateList {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +103,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
                 );
         }
 
@@ -107,6 +124,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
 
                 return hash;
             }

@@ -27,6 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrganizationRoleUpdate" /> class.
         /// </summary>
+        /// <param name="Id">role id.</param>
         /// <param name="Name">The name of the role (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="DefaultRoleId">DefaultRoleId.</param>
@@ -36,8 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
         /// <param name="Base">Base.</param>
         /// <param name="Default">Default.</param>
-        public DomainOrganizationRoleUpdate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? Base = null, bool? Default = null)
+        public DomainOrganizationRoleUpdate(string Id = null, string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? Base = null, bool? Default = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Description = Description;
             this.DefaultRoleId = DefaultRoleId;
@@ -53,11 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// role id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>role id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

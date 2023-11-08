@@ -241,6 +241,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Monitoring,
             
             /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked,
+            
+            /// <summary>
             /// Enum Scheduled for "scheduled"
             /// </summary>
             [EnumMember(Value = "scheduled")]

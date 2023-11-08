@@ -22,10 +22,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CallbackMediaSettings" /> class.
         /// </summary>
         /// <param name="EnableAutoAnswer">Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings..</param>
-        /// <param name="AlertingTimeoutSeconds">AlertingTimeoutSeconds.</param>
-        /// <param name="ServiceLevel">ServiceLevel.</param>
-        /// <param name="AutoAnswerAlertToneSeconds">AutoAnswerAlertToneSeconds.</param>
-        /// <param name="ManualAnswerAlertToneSeconds">ManualAnswerAlertToneSeconds.</param>
+        /// <param name="AlertingTimeoutSeconds">The alerting timeout for the media type, in seconds.</param>
+        /// <param name="ServiceLevel">The targeted service level for the media type.</param>
+        /// <param name="AutoAnswerAlertToneSeconds">How long to play the alerting tone for an auto-answer interaction.</param>
+        /// <param name="ManualAnswerAlertToneSeconds">How long to play the alerting tone for a manual-answer interaction.</param>
         /// <param name="SubTypeSettings">Map of media subtype to media subtype specific settings..</param>
         public CallbackMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, BaseMediaSettings> SubTypeSettings = null)
         {
@@ -50,32 +50,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets AlertingTimeoutSeconds
+        /// The alerting timeout for the media type, in seconds
         /// </summary>
+        /// <value>The alerting timeout for the media type, in seconds</value>
         [DataMember(Name="alertingTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertingTimeoutSeconds { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets ServiceLevel
+        /// The targeted service level for the media type
         /// </summary>
+        /// <value>The targeted service level for the media type</value>
         [DataMember(Name="serviceLevel", EmitDefaultValue=false)]
         public ServiceLevel ServiceLevel { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets AutoAnswerAlertToneSeconds
+        /// How long to play the alerting tone for an auto-answer interaction
         /// </summary>
+        /// <value>How long to play the alerting tone for an auto-answer interaction</value>
         [DataMember(Name="autoAnswerAlertToneSeconds", EmitDefaultValue=false)]
         public double? AutoAnswerAlertToneSeconds { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets ManualAnswerAlertToneSeconds
+        /// How long to play the alerting tone for a manual-answer interaction
         /// </summary>
+        /// <value>How long to play the alerting tone for a manual-answer interaction</value>
         [DataMember(Name="manualAnswerAlertToneSeconds", EmitDefaultValue=false)]
         public double? ManualAnswerAlertToneSeconds { get; set; }
 

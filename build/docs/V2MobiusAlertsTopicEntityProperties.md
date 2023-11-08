@@ -8,10 +8,10 @@ title: V2MobiusAlertsTopicEntityProperties
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EntityType** | **string** |  | [optional] |
-| **UserDisplayName** | **string** |  | [optional] |
-| **GroupDisplayName** | **string** |  | [optional] |
-| **QueueDisplayName** | **string** |  | [optional] |
-| **TeamDisplayName** | **string** |  | [optional] |
+| **User** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
+| **Group** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
+| **Queue** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
+| **Team** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
 {: class="table table-striped"}
 
 

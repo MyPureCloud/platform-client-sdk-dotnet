@@ -8,7 +8,7 @@ mono nuget.exe install src/PureCloudPlatform.Client.V2/packages.config -o packag
 mkdir -p bin;
 
 cp packages/ini-parser.2.5.2/lib/net20/INIFileParser.dll bin/INIFileParser.dll;
-cp packages/Newtonsoft.Json.11.0.2/lib/net45/Newtonsoft.Json.dll bin/Newtonsoft.Json.dll;
+cp packages/Newtonsoft.Json.13.0.3/lib/net45/Newtonsoft.Json.dll bin/Newtonsoft.Json.dll;
 cp packages/RestSharp.110.2.0/lib/net45/RestSharp.dll bin/RestSharp.dll;
 cp packages/WebSocketSharp.1.0.3-rc11/lib/websocket-sharp.dll bin/websocket-sharp.dll;
 cp packages/System.Text.Json.7.0.2/lib/net462/System.Text.Json.dll bin/System.Text.Json.dll;

@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecipientRequest" /> class.
         /// </summary>
-        /// <param name="Flow">An automate flow object which defines the set of actions to be taken, when a message is received by this provisioned phone number..</param>
+        /// <param name="Flow">An automate flow object which defines the set of actions to be taken, when a message is received by this recipient..</param>
         public RecipientRequest(RecipientFlow Flow = null)
         {
             this.Flow = Flow;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An automate flow object which defines the set of actions to be taken, when a message is received by this provisioned phone number.
+        /// An automate flow object which defines the set of actions to be taken, when a message is received by this recipient.
         /// </summary>
-        /// <value>An automate flow object which defines the set of actions to be taken, when a message is received by this provisioned phone number.</value>
+        /// <value>An automate flow object which defines the set of actions to be taken, when a message is received by this recipient.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public RecipientFlow Flow { get; set; }
 

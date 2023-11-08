@@ -112,7 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TrunkMetabase">The meta-base this trunk is based on. (required).</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="TrunkType">The type of this trunk base. (required).</param>
-        public EdgeTrunkBase(string Name = null, Division Division = null, string Description = null, int? Version = null, DomainEntityRef TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null)
+        /// <param name="Site">Used to determine the media regions for inbound and outbound calls through a trunk. Also determines the dial plan to use for calls that came in on a trunk and have to be sent out on it as well..</param>
+        /// <param name="InboundSite">Allows a customer to set the site to which inbound calls will be routed.</param>
+        public EdgeTrunkBase(string Name = null, Division Division = null, string Description = null, int? Version = null, DomainEntityRef TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null, DomainEntityRef Site = null, DomainEntityRef InboundSite = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -121,6 +123,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TrunkMetabase = TrunkMetabase;
             this.Properties = Properties;
             this.TrunkType = TrunkType;
+            this.Site = Site;
+            this.InboundSite = InboundSite;
             
         }
         
@@ -247,6 +251,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Used to determine the media regions for inbound and outbound calls through a trunk. Also determines the dial plan to use for calls that came in on a trunk and have to be sent out on it as well.
+        /// </summary>
+        /// <value>Used to determine the media regions for inbound and outbound calls through a trunk. Also determines the dial plan to use for calls that came in on a trunk and have to be sent out on it as well.</value>
+        [DataMember(Name="site", EmitDefaultValue=false)]
+        public DomainEntityRef Site { get; set; }
+
+
+
+        /// <summary>
+        /// Allows a customer to set the site to which inbound calls will be routed
+        /// </summary>
+        /// <value>Allows a customer to set the site to which inbound calls will be routed</value>
+        [DataMember(Name="inboundSite", EmitDefaultValue=false)]
+        public DomainEntityRef InboundSite { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -278,6 +300,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TrunkMetabase: ").Append(TrunkMetabase).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("  TrunkType: ").Append(TrunkType).Append("\n");
+            sb.Append("  Site: ").Append(Site).Append("\n");
+            sb.Append("  InboundSite: ").Append(InboundSite).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -395,6 +419,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TrunkType.Equals(other.TrunkType)
                 ) &&
                 (
+                    this.Site == other.Site ||
+                    this.Site != null &&
+                    this.Site.Equals(other.Site)
+                ) &&
+                (
+                    this.InboundSite == other.InboundSite ||
+                    this.InboundSite != null &&
+                    this.InboundSite.Equals(other.InboundSite)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -456,6 +490,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TrunkType != null)
                     hash = hash * 59 + this.TrunkType.GetHashCode();
+
+                if (this.Site != null)
+                    hash = hash * 59 + this.Site.GetHashCode();
+
+                if (this.InboundSite != null)
+                    hash = hash * 59 + this.InboundSite.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

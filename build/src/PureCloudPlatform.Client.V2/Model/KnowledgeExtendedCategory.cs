@@ -235,7 +235,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Dadk for "da-DK"
             /// </summary>
             [EnumMember(Value = "da-DK")]
-            Dadk
+            Dadk,
+            
+            /// <summary>
+            /// Enum Jajp for "ja-JP"
+            /// </summary>
+            [EnumMember(Value = "ja-JP")]
+            Jajp
         }
         /// <summary>
         /// Actual language of the category

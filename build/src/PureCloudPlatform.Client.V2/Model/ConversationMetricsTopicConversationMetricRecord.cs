@@ -286,6 +286,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tnotresponding,
             
             /// <summary>
+            /// Enum Tpark for "tPark"
+            /// </summary>
+            [EnumMember(Value = "tPark")]
+            Tpark,
+            
+            /// <summary>
+            /// Enum Tparkcomplete for "tParkComplete"
+            /// </summary>
+            [EnumMember(Value = "tParkComplete")]
+            Tparkcomplete,
+            
+            /// <summary>
             /// Enum Ttalk for "tTalk"
             /// </summary>
             [EnumMember(Value = "tTalk")]

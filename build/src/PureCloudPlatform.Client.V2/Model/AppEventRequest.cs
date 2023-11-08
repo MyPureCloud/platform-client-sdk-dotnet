@@ -34,13 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SdkLibrary">SDK library used to generate the event..</param>
         /// <param name="NetworkConnectivity">Information relating to the device's network connectivity..</param>
         /// <param name="ReferrerUrl">The referrer URL of the first event in the app session..</param>
-        /// <param name="Session">Contains information about the app session the event belongs to. A session is expected to end once the application is closed or a customer has been idle for more than 30 minutes. Each session is tied to a single customer and a customer can be linked to multiple unique sessions. (required).</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. These attributes provide additional context about the event. For example, items_in_cart or subscription_level..</param>
         /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events, (e.g. email, lastName, cellPhone). Traits are used to collect information for identity resolution. For example, the same person might be using an application on different devices which might create two sessions with different customerIds. Additional information can be provided as traits to help link those two sessions and customers to a single external contact through common identifiers that were submitted via a form fill, message, or other input in both sessions..</param>
         /// <param name="CustomerCookieId">Cookie ID of the customer associated with the app event. This is expected to be set per application install or device and can be used to identify a single customer across multiple sessions. This identifier, along with others passed as traits, is used for identity resolution. (required).</param>
-        /// <param name="CreatedDate">Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        public AppEventRequest(string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, string ReferrerUrl = null, AppEventRequestSession Session = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, string CustomerCookieId = null, DateTime? CreatedDate = null)
+        /// <param name="CreatedDate">UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        public AppEventRequest(string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, string ReferrerUrl = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, string CustomerCookieId = null, DateTime? CreatedDate = null)
         {
             this.EventName = EventName;
             this.ScreenName = ScreenName;
@@ -49,7 +48,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SdkLibrary = SdkLibrary;
             this.NetworkConnectivity = NetworkConnectivity;
             this.ReferrerUrl = ReferrerUrl;
-            this.Session = Session;
             this.SearchQuery = SearchQuery;
             this.Attributes = Attributes;
             this.Traits = Traits;
@@ -124,15 +122,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Contains information about the app session the event belongs to. A session is expected to end once the application is closed or a customer has been idle for more than 30 minutes. Each session is tied to a single customer and a customer can be linked to multiple unique sessions.
-        /// </summary>
-        /// <value>Contains information about the app session the event belongs to. A session is expected to end once the application is closed or a customer has been idle for more than 30 minutes. Each session is tied to a single customer and a customer can be linked to multiple unique sessions.</value>
-        [DataMember(Name="session", EmitDefaultValue=false)]
-        public AppEventRequestSession Session { get; set; }
-
-
-
-        /// <summary>
         /// Represents the keywords in a customer search query.
         /// </summary>
         /// <value>Represents the keywords in a customer search query.</value>
@@ -169,9 +158,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
 
@@ -192,7 +181,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SdkLibrary: ").Append(SdkLibrary).Append("\n");
             sb.Append("  NetworkConnectivity: ").Append(NetworkConnectivity).Append("\n");
             sb.Append("  ReferrerUrl: ").Append(ReferrerUrl).Append("\n");
-            sb.Append("  Session: ").Append(Session).Append("\n");
             sb.Append("  SearchQuery: ").Append(SearchQuery).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Traits: ").Append(Traits).Append("\n");
@@ -274,11 +262,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ReferrerUrl.Equals(other.ReferrerUrl)
                 ) &&
                 (
-                    this.Session == other.Session ||
-                    this.Session != null &&
-                    this.Session.Equals(other.Session)
-                ) &&
-                (
                     this.SearchQuery == other.SearchQuery ||
                     this.SearchQuery != null &&
                     this.SearchQuery.Equals(other.SearchQuery)
@@ -336,9 +319,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ReferrerUrl != null)
                     hash = hash * 59 + this.ReferrerUrl.GetHashCode();
-
-                if (this.Session != null)
-                    hash = hash * 59 + this.Session.GetHashCode();
 
                 if (this.SearchQuery != null)
                     hash = hash * 59 + this.SearchQuery.GetHashCode();

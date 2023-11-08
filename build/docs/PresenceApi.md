@@ -228,7 +228,7 @@ void (empty response body)
 
 <a name="getpresencedefinition0"></a>
 
-## [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html) GetPresenceDefinition0 (string definitionId)
+## [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition.html) GetPresenceDefinition0 (string definitionId, string localeCode = null)
 
 
 
@@ -263,11 +263,12 @@ namespace Example
 
             var apiInstance = new PresenceApi();
             var definitionId = definitionId_example;  // string | Presence Definition ID
+            var localeCode = localeCode_example;  // string | The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional) 
 
             try
             { 
                 // Get a Presence Definition
-                OrganizationPresenceDefinition result = apiInstance.GetPresenceDefinition0(definitionId);
+                OrganizationPresenceDefinition result = apiInstance.GetPresenceDefinition0(definitionId, localeCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -285,6 +286,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **definitionId** | **string**| Presence Definition ID |  |
+| **localeCode** | **string**| The locale code to fetch for the presence definition. Use ALL to fetch everything. | [optional] <br />**Values**: ALL, he, fr, en_US, da, de, it, cs, es, fi, ar, ja, ko, nl, no, pl, pt_BR, pt_PT, ru, sv, th, tr, uk, zh_CN, zh_TW |
 {: class="table table-striped"}
 
 ### Return type
@@ -293,7 +295,7 @@ namespace Example
 
 <a name="getpresencedefinitions0"></a>
 
-## [**OrganizationPresenceDefinitionEntityListing**](OrganizationPresenceDefinitionEntityListing.html) GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null)
+## [**OrganizationPresenceDefinitionEntityListing**](OrganizationPresenceDefinitionEntityListing.html) GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null)
 
 
 
@@ -329,11 +331,12 @@ namespace Example
             var apiInstance = new PresenceApi();
             var deactivated = deactivated_example;  // string | Deactivated query can be TRUE or FALSE (optional)  (default to "false")
             var divisionId = new List<string>(); // List<string> | One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional) 
+            var localeCode = localeCode_example;  // string | The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional) 
 
             try
             { 
                 // Get a list of Presence Definitions
-                OrganizationPresenceDefinitionEntityListing result = apiInstance.GetPresenceDefinitions0(deactivated, divisionId);
+                OrganizationPresenceDefinitionEntityListing result = apiInstance.GetPresenceDefinitions0(deactivated, divisionId, localeCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -352,6 +355,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deactivated** | **string**| Deactivated query can be TRUE or FALSE | [optional] [default to "false"] |
 | **divisionId** | [**List<string>**](string.html)| One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. | [optional]  |
+| **localeCode** | **string**| The locale code to fetch for the presence definition. Use ALL to fetch everything. | [optional] <br />**Values**: ALL, he, fr, en_US, da, de, it, cs, es, fi, ar, ja, ko, nl, no, pl, pt_BR, pt_PT, ru, sv, th, tr, uk, zh_CN, zh_TW |
 {: class="table table-striped"}
 
 ### Return type
@@ -1703,7 +1707,7 @@ namespace Example
 
 <a name="putuserspresencesbulk"></a>
 
-## [**List&lt;UserPresence&gt;**](UserPresence.html) PutUsersPresencesBulk (List<UserPresence> body)
+## [**List&lt;UserPresence&gt;**](UserPresence.html) PutUsersPresencesBulk (List<MutableUserPresence> body)
 
 
 
@@ -1735,7 +1739,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new PresenceApi();
-            var body = new List<UserPresence>(); // List<UserPresence> | List of User presences
+            var body = new List<MutableUserPresence>(); // List<MutableUserPresence> | List of User presences
 
             try
             { 
@@ -1757,7 +1761,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**List<UserPresence>**](UserPresence.html)| List of User presences |  |
+| **body** | [**List<MutableUserPresence>**](MutableUserPresence.html)| List of User presences |  |
 {: class="table table-striped"}
 
 ### Return type

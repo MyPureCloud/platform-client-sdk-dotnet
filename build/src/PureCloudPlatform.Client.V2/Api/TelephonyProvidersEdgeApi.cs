@@ -1919,6 +1919,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OutboundRouteBaseEntityListing> GetTelephonyProvidersEdgesSiteOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
+        /// Get site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <returns>SiteConnections</returns>
+        
+        SiteConnections GetTelephonyProvidersEdgesSiteSiteconnections (string siteId);
+
+        /// <summary>
+        /// Get site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <returns>ApiResponse of SiteConnections</returns>
+        
+        ApiResponse<SiteConnections> GetTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo (string siteId);
+
+        /// <summary>
         /// Get the list of Sites.
         /// </summary>
         /// <remarks>
@@ -2229,6 +2253,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of TrunkRecordingEnabledCount</returns>
         
         ApiResponse<TrunkRecordingEnabledCount> GetTelephonyProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null);
+
+        /// <summary>
+        /// Disable site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>SiteConnections</returns>
+        
+        SiteConnections PatchTelephonyProvidersEdgesSiteSiteconnections (string siteId, DisableSiteConnectionsRequest body);
+
+        /// <summary>
+        /// Disable site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>ApiResponse of SiteConnections</returns>
+        
+        ApiResponse<SiteConnections> PatchTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo (string siteId, DisableSiteConnectionsRequest body);
 
         /// <summary>
         /// Nslookup request command to collect networking-related information from an Edge for a target IP or host.
@@ -3147,6 +3197,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OutboundRouteBase</returns>
         
         ApiResponse<OutboundRouteBase> PutTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId, OutboundRouteBase body);
+
+        /// <summary>
+        /// Update site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>SiteConnections</returns>
+        
+        SiteConnections PutTelephonyProvidersEdgesSiteSiteconnections (string siteId, SiteConnections body);
+
+        /// <summary>
+        /// Update site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>ApiResponse of SiteConnections</returns>
+        
+        ApiResponse<SiteConnections> PutTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo (string siteId, SiteConnections body);
 
         /// <summary>
         /// Update a Trunk Base Settings object by ID
@@ -5081,6 +5157,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetTelephonyProvidersEdgesSiteOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string externalTrunkBasesIds = null, string sortBy = null);
 
         /// <summary>
+        /// Get site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <returns>Task of SiteConnections</returns>
+        
+        System.Threading.Tasks.Task<SiteConnections> GetTelephonyProvidersEdgesSiteSiteconnectionsAsync (string siteId);
+
+        /// <summary>
+        /// Get site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <returns>Task of ApiResponse (SiteConnections)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SiteConnections>> GetTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo (string siteId);
+
+        /// <summary>
         /// Get the list of Sites.
         /// </summary>
         /// <remarks>
@@ -5391,6 +5491,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TrunkRecordingEnabledCount)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetTelephonyProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null);
+
+        /// <summary>
+        /// Disable site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>Task of SiteConnections</returns>
+        
+        System.Threading.Tasks.Task<SiteConnections> PatchTelephonyProvidersEdgesSiteSiteconnectionsAsync (string siteId, DisableSiteConnectionsRequest body);
+
+        /// <summary>
+        /// Disable site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>Task of ApiResponse (SiteConnections)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SiteConnections>> PatchTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo (string siteId, DisableSiteConnectionsRequest body);
 
         /// <summary>
         /// Nslookup request command to collect networking-related information from an Edge for a target IP or host.
@@ -6309,6 +6435,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> PutTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId, OutboundRouteBase body);
+
+        /// <summary>
+        /// Update site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>Task of SiteConnections</returns>
+        
+        System.Threading.Tasks.Task<SiteConnections> PutTelephonyProvidersEdgesSiteSiteconnectionsAsync (string siteId, SiteConnections body);
+
+        /// <summary>
+        /// Update site connections for a site.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>Task of ApiResponse (SiteConnections)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SiteConnections>> PutTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo (string siteId, SiteConnections body);
 
         /// <summary>
         /// Update a Trunk Base Settings object by ID
@@ -21918,6 +22070,217 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <returns>SiteConnections</returns>
+        
+        public SiteConnections GetTelephonyProvidersEdgesSiteSiteconnections (string siteId)
+        {
+             ApiResponse<SiteConnections> localVarResponse = GetTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo(siteId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <returns>ApiResponse of SiteConnections</returns>
+        
+        public ApiResponse< SiteConnections > GetTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo (string siteId)
+        { 
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteSiteconnections");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (siteId != null) localVarPathParams.Add("siteId", this.Configuration.ApiClient.ParameterToString(siteId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SiteConnections>(localVarStatusCode,
+                localVarHeaders,
+                (SiteConnections) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SiteConnections)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <returns>Task of SiteConnections</returns>
+        
+        public async System.Threading.Tasks.Task<SiteConnections> GetTelephonyProvidersEdgesSiteSiteconnectionsAsync (string siteId)
+        {
+             ApiResponse<SiteConnections> localVarResponse = await GetTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo(siteId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <returns>Task of ApiResponse (SiteConnections)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SiteConnections>> GetTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo (string siteId)
+        { 
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteSiteconnections");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (siteId != null) localVarPathParams.Add("siteId", this.Configuration.ApiClient.ParameterToString(siteId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SiteConnections>(localVarStatusCode,
+                localVarHeaders,
+                (SiteConnections) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SiteConnections)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get the list of Sites. 
         /// 
         /// </summary>
@@ -24334,6 +24697,240 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TrunkRecordingEnabledCount>(localVarStatusCode,
                 localVarHeaders,
                 (TrunkRecordingEnabledCount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkRecordingEnabledCount)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Disable site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>SiteConnections</returns>
+        
+        public SiteConnections PatchTelephonyProvidersEdgesSiteSiteconnections (string siteId, DisableSiteConnectionsRequest body)
+        {
+             ApiResponse<SiteConnections> localVarResponse = PatchTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo(siteId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Disable site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>ApiResponse of SiteConnections</returns>
+        
+        public ApiResponse< SiteConnections > PatchTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo (string siteId, DisableSiteConnectionsRequest body)
+        { 
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesSiteSiteconnections");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesSiteSiteconnections");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (siteId != null) localVarPathParams.Add("siteId", this.Configuration.ApiClient.ParameterToString(siteId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SiteConnections>(localVarStatusCode,
+                localVarHeaders,
+                (SiteConnections) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SiteConnections)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Disable site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>Task of SiteConnections</returns>
+        
+        public async System.Threading.Tasks.Task<SiteConnections> PatchTelephonyProvidersEdgesSiteSiteconnectionsAsync (string siteId, DisableSiteConnectionsRequest body)
+        {
+             ApiResponse<SiteConnections> localVarResponse = await PatchTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo(siteId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Disable site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>Task of ApiResponse (SiteConnections)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SiteConnections>> PatchTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo (string siteId, DisableSiteConnectionsRequest body)
+        { 
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesSiteSiteconnections");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesSiteSiteconnections");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (siteId != null) localVarPathParams.Add("siteId", this.Configuration.ApiClient.ParameterToString(siteId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SiteConnections>(localVarStatusCode,
+                localVarHeaders,
+                (SiteConnections) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SiteConnections)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32601,6 +33198,240 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OutboundRouteBase>(localVarStatusCode,
                 localVarHeaders,
                 (OutboundRouteBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRouteBase)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>SiteConnections</returns>
+        
+        public SiteConnections PutTelephonyProvidersEdgesSiteSiteconnections (string siteId, SiteConnections body)
+        {
+             ApiResponse<SiteConnections> localVarResponse = PutTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo(siteId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>ApiResponse of SiteConnections</returns>
+        
+        public ApiResponse< SiteConnections > PutTelephonyProvidersEdgesSiteSiteconnectionsWithHttpInfo (string siteId, SiteConnections body)
+        { 
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteSiteconnections");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteSiteconnections");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (siteId != null) localVarPathParams.Add("siteId", this.Configuration.ApiClient.ParameterToString(siteId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SiteConnections>(localVarStatusCode,
+                localVarHeaders,
+                (SiteConnections) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SiteConnections)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>Task of SiteConnections</returns>
+        
+        public async System.Threading.Tasks.Task<SiteConnections> PutTelephonyProvidersEdgesSiteSiteconnectionsAsync (string siteId, SiteConnections body)
+        {
+             ApiResponse<SiteConnections> localVarResponse = await PutTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo(siteId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update site connections for a site. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">Site</param>
+        /// <returns>Task of ApiResponse (SiteConnections)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SiteConnections>> PutTelephonyProvidersEdgesSiteSiteconnectionsAsyncWithHttpInfo (string siteId, SiteConnections body)
+        { 
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteSiteconnections");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteSiteconnections");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (siteId != null) localVarPathParams.Add("siteId", this.Configuration.ApiClient.ParameterToString(siteId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesSiteSiteconnections: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SiteConnections>(localVarStatusCode,
+                localVarHeaders,
+                (SiteConnections) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SiteConnections)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
