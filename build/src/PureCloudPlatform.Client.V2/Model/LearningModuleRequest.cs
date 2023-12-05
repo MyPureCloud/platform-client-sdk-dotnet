@@ -79,7 +79,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type for the learning module.</param>
         /// <param name="AssessmentForm">The assessment form for learning module.</param>
         /// <param name="CoverArt">The cover art for the learning module.</param>
-        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null, LearningModuleCoverArtRequest CoverArt = null)
+        /// <param name="LengthInMinutes">The recommended time in minutes to complete the module.</param>
+        /// <param name="ExcludedFromCatalog">If true, learning module is excluded when retrieving modules for manual assignment.</param>
+        /// <param name="ExternalId">The external ID of the learning module. Maximum length: 50 characters..</param>
+        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null, LearningModuleCoverArtRequest CoverArt = null, int? LengthInMinutes = null, bool? ExcludedFromCatalog = null, string ExternalId = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -88,6 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Type = Type;
             this.AssessmentForm = AssessmentForm;
             this.CoverArt = CoverArt;
+            this.LengthInMinutes = LengthInMinutes;
+            this.ExcludedFromCatalog = ExcludedFromCatalog;
+            this.ExternalId = ExternalId;
             
         }
         
@@ -148,6 +154,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public LearningModuleCoverArtRequest CoverArt { get; set; }
 
 
+
+        /// <summary>
+        /// The recommended time in minutes to complete the module
+        /// </summary>
+        /// <value>The recommended time in minutes to complete the module</value>
+        [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
+        public int? LengthInMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// If true, learning module is excluded when retrieving modules for manual assignment
+        /// </summary>
+        /// <value>If true, learning module is excluded when retrieving modules for manual assignment</value>
+        [DataMember(Name="excludedFromCatalog", EmitDefaultValue=false)]
+        public bool? ExcludedFromCatalog { get; set; }
+
+
+
+        /// <summary>
+        /// The external ID of the learning module. Maximum length: 50 characters.
+        /// </summary>
+        /// <value>The external ID of the learning module. Maximum length: 50 characters.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -164,6 +197,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
             sb.Append("  CoverArt: ").Append(CoverArt).Append("\n");
+            sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
+            sb.Append("  ExcludedFromCatalog: ").Append(ExcludedFromCatalog).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -238,6 +274,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CoverArt == other.CoverArt ||
                     this.CoverArt != null &&
                     this.CoverArt.Equals(other.CoverArt)
+                ) &&
+                (
+                    this.LengthInMinutes == other.LengthInMinutes ||
+                    this.LengthInMinutes != null &&
+                    this.LengthInMinutes.Equals(other.LengthInMinutes)
+                ) &&
+                (
+                    this.ExcludedFromCatalog == other.ExcludedFromCatalog ||
+                    this.ExcludedFromCatalog != null &&
+                    this.ExcludedFromCatalog.Equals(other.ExcludedFromCatalog)
+                ) &&
+                (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
                 );
         }
 
@@ -272,6 +323,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CoverArt != null)
                     hash = hash * 59 + this.CoverArt.GetHashCode();
+
+                if (this.LengthInMinutes != null)
+                    hash = hash * 59 + this.LengthInMinutes.GetHashCode();
+
+                if (this.ExcludedFromCatalog != null)
+                    hash = hash * 59 + this.ExcludedFromCatalog.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 return hash;
             }

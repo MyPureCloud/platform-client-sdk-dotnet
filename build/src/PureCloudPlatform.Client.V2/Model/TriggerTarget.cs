@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">The entity type to target.</param>
         /// <param name="Id">The ID of the entity to target.</param>
-        /// <param name="WorkflowTargetSettings">Optional config for the target. Until the feature gets enabled will always operate in TopLevelPrimitives mode..</param>
+        /// <param name="WorkflowTargetSettings">Optional config for the target..</param>
         public TriggerTarget(TypeEnum? Type = null, string Id = null, WorkflowTargetSettings WorkflowTargetSettings = null)
         {
             this.Type = Type;
@@ -73,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Optional config for the target. Until the feature gets enabled will always operate in TopLevelPrimitives mode.
+        /// Optional config for the target.
         /// </summary>
-        /// <value>Optional config for the target. Until the feature gets enabled will always operate in TopLevelPrimitives mode.</value>
+        /// <value>Optional config for the target.</value>
         [DataMember(Name="workflowTargetSettings", EmitDefaultValue=false)]
         public WorkflowTargetSettings WorkflowTargetSettings { get; set; }
 

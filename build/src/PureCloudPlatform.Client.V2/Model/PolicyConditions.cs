@@ -114,8 +114,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Duration">Duration.</param>
         /// <param name="WrapupCodes">WrapupCodes.</param>
         /// <param name="TimeAllowed">TimeAllowed.</param>
+        /// <param name="Teams">Teams to match conversations against.</param>
         /// <param name="CustomerParticipation">This condition is to filter out conversation with and without customer participation..</param>
-        public PolicyConditions(List<User> ForUsers = null, List<DirectionsEnum> Directions = null, List<string> DateRanges = null, List<MediaTypesEnum> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null, CustomerParticipationEnum? CustomerParticipation = null)
+        public PolicyConditions(List<User> ForUsers = null, List<DirectionsEnum> Directions = null, List<string> DateRanges = null, List<MediaTypesEnum> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null, List<Team> Teams = null, CustomerParticipationEnum? CustomerParticipation = null)
         {
             this.ForUsers = ForUsers;
             this.Directions = Directions;
@@ -125,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Duration = Duration;
             this.WrapupCodes = WrapupCodes;
             this.TimeAllowed = TimeAllowed;
+            this.Teams = Teams;
             this.CustomerParticipation = CustomerParticipation;
             
         }
@@ -195,6 +197,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Teams to match conversations against
+        /// </summary>
+        /// <value>Teams to match conversations against</value>
+        [DataMember(Name="teams", EmitDefaultValue=false)]
+        public List<Team> Teams { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -213,6 +224,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
+            sb.Append("  Teams: ").Append(Teams).Append("\n");
             sb.Append("  CustomerParticipation: ").Append(CustomerParticipation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -295,6 +307,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeAllowed.Equals(other.TimeAllowed)
                 ) &&
                 (
+                    this.Teams == other.Teams ||
+                    this.Teams != null &&
+                    this.Teams.SequenceEqual(other.Teams)
+                ) &&
+                (
                     this.CustomerParticipation == other.CustomerParticipation ||
                     this.CustomerParticipation != null &&
                     this.CustomerParticipation.Equals(other.CustomerParticipation)
@@ -335,6 +352,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeAllowed != null)
                     hash = hash * 59 + this.TimeAllowed.GetHashCode();
+
+                if (this.Teams != null)
+                    hash = hash * 59 + this.Teams.GetHashCode();
 
                 if (this.CustomerParticipation != null)
                     hash = hash * 59 + this.CustomerParticipation.GetHashCode();

@@ -399,6 +399,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Userprompt,
             
             /// <summary>
+            /// Enum Utilizationlabel for "UTILIZATIONLABEL"
+            /// </summary>
+            [EnumMember(Value = "UTILIZATIONLABEL")]
+            Utilizationlabel,
+            
+            /// <summary>
             /// Enum Voiceflow for "VOICEFLOW"
             /// </summary>
             [EnumMember(Value = "VOICEFLOW")]

@@ -121,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OnHoldPrompt">The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play..</param>
         /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
         /// <param name="EnableTranscription">Indicates whether voice transcription is enabled for this queue..</param>
+        /// <param name="EnableAudioMonitoring">Indicates whether audio monitoring is enabled for this queue..</param>
         /// <param name="EnableManualAssignment">Indicates whether manual assignment is enabled for this queue..</param>
         /// <param name="AgentOwnedRouting">The Agent Owned Routing settings for the queue.</param>
         /// <param name="DirectRouting">The Direct Routing settings for the queue.</param>
@@ -131,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
-        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null)
+        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -155,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OnHoldPrompt = OnHoldPrompt;
             this.AutoAnswerOnly = AutoAnswerOnly;
             this.EnableTranscription = EnableTranscription;
+            this.EnableAudioMonitoring = EnableAudioMonitoring;
             this.EnableManualAssignment = EnableManualAssignment;
             this.AgentOwnedRouting = AgentOwnedRouting;
             this.DirectRouting = DirectRouting;
@@ -391,6 +393,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates whether audio monitoring is enabled for this queue.
+        /// </summary>
+        /// <value>Indicates whether audio monitoring is enabled for this queue.</value>
+        [DataMember(Name="enableAudioMonitoring", EmitDefaultValue=false)]
+        public bool? EnableAudioMonitoring { get; set; }
+
+
+
+        /// <summary>
         /// Indicates whether manual assignment is enabled for this queue.
         /// </summary>
         /// <value>Indicates whether manual assignment is enabled for this queue.</value>
@@ -522,6 +533,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OnHoldPrompt: ").Append(OnHoldPrompt).Append("\n");
             sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
             sb.Append("  EnableTranscription: ").Append(EnableTranscription).Append("\n");
+            sb.Append("  EnableAudioMonitoring: ").Append(EnableAudioMonitoring).Append("\n");
             sb.Append("  EnableManualAssignment: ").Append(EnableManualAssignment).Append("\n");
             sb.Append("  AgentOwnedRouting: ").Append(AgentOwnedRouting).Append("\n");
             sb.Append("  DirectRouting: ").Append(DirectRouting).Append("\n");
@@ -704,6 +716,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EnableTranscription.Equals(other.EnableTranscription)
                 ) &&
                 (
+                    this.EnableAudioMonitoring == other.EnableAudioMonitoring ||
+                    this.EnableAudioMonitoring != null &&
+                    this.EnableAudioMonitoring.Equals(other.EnableAudioMonitoring)
+                ) &&
+                (
                     this.EnableManualAssignment == other.EnableManualAssignment ||
                     this.EnableManualAssignment != null &&
                     this.EnableManualAssignment.Equals(other.EnableManualAssignment)
@@ -848,6 +865,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EnableTranscription != null)
                     hash = hash * 59 + this.EnableTranscription.GetHashCode();
+
+                if (this.EnableAudioMonitoring != null)
+                    hash = hash * 59 + this.EnableAudioMonitoring.GetHashCode();
 
                 if (this.EnableManualAssignment != null)
                     hash = hash * 59 + this.EnableManualAssignment.GetHashCode();

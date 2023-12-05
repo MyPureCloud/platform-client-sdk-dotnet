@@ -204,7 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomFields">Custom fields defined in the schema referenced by the Workitem..</param>
         /// <param name="AutoStatusTransitionDetail">Auto status transition details of Workitem..</param>
         /// <param name="ScoredAgents">A list of scored agents for the Workitem..</param>
-        public Workitem(string Name = null, Division Division = null, WorktypeReference Type = null, string Description = null, LanguageReference Language = null, int? Priority = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, WorkitemStatusReference Status = null, StatusCategoryEnum? StatusCategory = null, DateTime? DateStatusChanged = null, DateTime? DateClosed = null, WorkbinReference Workbin = null, UserReferenceWithName Reporter = null, UserReferenceWithName Assignee = null, ExternalContactReference ExternalContact = null, string ExternalTag = null, UserReference ModifiedBy = null, QueueReference Queue = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssignmentStateChanged = null, int? AlertTimeoutSeconds = null, List<RoutingSkillReference> Skills = null, List<UserReference> PreferredAgents = null, bool? AutoStatusTransition = null, WorkitemSchema Schema = null, Dictionary<string, Object> CustomFields = null, AutoStatusTransitionDetail AutoStatusTransitionDetail = null, List<WorkitemScoredAgent> ScoredAgents = null)
+        public Workitem(string Name = null, Division Division = null, WorktypeReference Type = null, string Description = null, LanguageReference Language = null, int? Priority = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, WorkitemStatusReference Status = null, StatusCategoryEnum? StatusCategory = null, DateTime? DateStatusChanged = null, DateTime? DateClosed = null, WorkbinReference Workbin = null, UserReferenceWithName Reporter = null, UserReferenceWithName Assignee = null, ExternalContactReference ExternalContact = null, string ExternalTag = null, UserReference ModifiedBy = null, WorkitemQueueReference Queue = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssignmentStateChanged = null, int? AlertTimeoutSeconds = null, List<RoutingSkillReference> Skills = null, List<UserReference> PreferredAgents = null, bool? AutoStatusTransition = null, WorkitemSchema Schema = null, Dictionary<string, Object> CustomFields = null, AutoStatusTransitionDetail AutoStatusTransitionDetail = null, List<WorkitemScoredAgent> ScoredAgents = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -449,7 +449,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The Workitems queue.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public QueueReference Queue { get; set; }
+        public WorkitemQueueReference Queue { get; set; }
 
 
 

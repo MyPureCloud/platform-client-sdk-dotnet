@@ -44,48 +44,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete an interaction stats alert
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteAlertingInteractionstatsAlert (string alertId);
 
         /// <summary>
         /// Delete an interaction stats alert
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteAlertingInteractionstatsAlertWithHttpInfo (string alertId);
 
         /// <summary>
-        /// Delete an interaction stats rule.
+        /// Delete an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteAlertingInteractionstatsRule (string ruleId);
 
         /// <summary>
-        /// Delete an interaction stats rule.
+        /// Delete an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteAlertingInteractionstatsRuleWithHttpInfo (string ruleId);
 
         /// <summary>
@@ -137,147 +137,147 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CommonAlert> GetAlertingAlertWithHttpInfo (string alertId);
 
         /// <summary>
-        /// Gets active alert count for a user.
+        /// Gets active alert count for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ActiveAlertCount</returns>
-        
+        [Obsolete]
         ActiveAlertCount GetAlertingAlertsActive ();
 
         /// <summary>
-        /// Gets active alert count for a user.
+        /// Gets active alert count for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ActiveAlertCount</returns>
-        
+        [Obsolete]
         ApiResponse<ActiveAlertCount> GetAlertingAlertsActiveWithHttpInfo ();
 
         /// <summary>
         /// Get an interaction stats alert
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsAlert</returns>
-        
+        [Obsolete]
         InteractionStatsAlert GetAlertingInteractionstatsAlert (string alertId, List<string> expand = null);
 
         /// <summary>
         /// Get an interaction stats alert
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsAlert</returns>
-        
+        [Obsolete]
         ApiResponse<InteractionStatsAlert> GetAlertingInteractionstatsAlertWithHttpInfo (string alertId, List<string> expand = null);
 
         /// <summary>
-        /// Get interaction stats alert list.
+        /// Get interaction stats alert list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsAlertContainer</returns>
-        
+        [Obsolete]
         InteractionStatsAlertContainer GetAlertingInteractionstatsAlerts (List<string> expand = null);
 
         /// <summary>
-        /// Get interaction stats alert list.
+        /// Get interaction stats alert list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsAlertContainer</returns>
-        
+        [Obsolete]
         ApiResponse<InteractionStatsAlertContainer> GetAlertingInteractionstatsAlertsWithHttpInfo (List<string> expand = null);
 
         /// <summary>
-        /// Gets user unread count of interaction stats alerts.
+        /// Gets user unread count of interaction stats alerts
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UnreadMetric</returns>
-        
+        [Obsolete]
         UnreadMetric GetAlertingInteractionstatsAlertsUnread ();
 
         /// <summary>
-        /// Gets user unread count of interaction stats alerts.
+        /// Gets user unread count of interaction stats alerts
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UnreadMetric</returns>
-        
+        [Obsolete]
         ApiResponse<UnreadMetric> GetAlertingInteractionstatsAlertsUnreadWithHttpInfo ();
 
         /// <summary>
-        /// Get an interaction stats rule.
+        /// Get an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
-        
+        [Obsolete]
         InteractionStatsRule GetAlertingInteractionstatsRule (string ruleId, List<string> expand = null);
 
         /// <summary>
-        /// Get an interaction stats rule.
+        /// Get an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
-        
+        [Obsolete]
         ApiResponse<InteractionStatsRule> GetAlertingInteractionstatsRuleWithHttpInfo (string ruleId, List<string> expand = null);
 
         /// <summary>
-        /// Get an interaction stats rule list.
+        /// Get an interaction stats rule list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/rules/query.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRuleContainer</returns>
-        
+        [Obsolete]
         InteractionStatsRuleContainer GetAlertingInteractionstatsRules (List<string> expand = null);
 
         /// <summary>
-        /// Get an interaction stats rule list.
+        /// Get an interaction stats rule list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/rules/query.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRuleContainer</returns>
-        
+        [Obsolete]
         ApiResponse<InteractionStatsRuleContainer> GetAlertingInteractionstatsRulesWithHttpInfo (List<string> expand = null);
 
         /// <summary>
@@ -403,29 +403,29 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AlertListing> PostAlertingAlertsQueryWithHttpInfo (GetAlertQuery body = null);
 
         /// <summary>
-        /// Create an interaction stats rule.
+        /// Create an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/rules.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
-        
+        [Obsolete]
         InteractionStatsRule PostAlertingInteractionstatsRules (InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
-        /// Create an interaction stats rule.
+        /// Create an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/rules.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
-        
+        [Obsolete]
         ApiResponse<InteractionStatsRule> PostAlertingInteractionstatsRulesWithHttpInfo (InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
@@ -530,56 +530,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update an interaction stats alert read status
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UnreadStatus</returns>
-        
+        [Obsolete]
         UnreadStatus PutAlertingInteractionstatsAlert (string alertId, UnreadStatus body, List<string> expand = null);
 
         /// <summary>
         /// Update an interaction stats alert read status
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UnreadStatus</returns>
-        
+        [Obsolete]
         ApiResponse<UnreadStatus> PutAlertingInteractionstatsAlertWithHttpInfo (string alertId, UnreadStatus body, List<string> expand = null);
 
         /// <summary>
         /// Update an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
-        
+        [Obsolete]
         InteractionStatsRule PutAlertingInteractionstatsRule (string ruleId, InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
         /// Update an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
-        
+        [Obsolete]
         ApiResponse<InteractionStatsRule> PutAlertingInteractionstatsRuleWithHttpInfo (string ruleId, InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
@@ -640,48 +640,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete an interaction stats alert
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteAlertingInteractionstatsAlertAsync (string alertId);
 
         /// <summary>
         /// Delete an interaction stats alert
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId);
 
         /// <summary>
-        /// Delete an interaction stats rule.
+        /// Delete an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteAlertingInteractionstatsRuleAsync (string ruleId);
 
         /// <summary>
-        /// Delete an interaction stats rule.
+        /// Delete an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId);
 
         /// <summary>
@@ -733,147 +733,147 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CommonAlert>> GetAlertingAlertAsyncWithHttpInfo (string alertId);
 
         /// <summary>
-        /// Gets active alert count for a user.
+        /// Gets active alert count for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ActiveAlertCount</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ActiveAlertCount> GetAlertingAlertsActiveAsync ();
 
         /// <summary>
-        /// Gets active alert count for a user.
+        /// Gets active alert count for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ActiveAlertCount)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ActiveAlertCount>> GetAlertingAlertsActiveAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get an interaction stats alert
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsAlert</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<InteractionStatsAlert> GetAlertingInteractionstatsAlertAsync (string alertId, List<string> expand = null);
 
         /// <summary>
         /// Get an interaction stats alert
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsAlert)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlert>> GetAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId, List<string> expand = null);
 
         /// <summary>
-        /// Get interaction stats alert list.
+        /// Get interaction stats alert list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsAlertContainer</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<InteractionStatsAlertContainer> GetAlertingInteractionstatsAlertsAsync (List<string> expand = null);
 
         /// <summary>
-        /// Get interaction stats alert list.
+        /// Get interaction stats alert list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsAlertContainer)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlertContainer>> GetAlertingInteractionstatsAlertsAsyncWithHttpInfo (List<string> expand = null);
 
         /// <summary>
-        /// Gets user unread count of interaction stats alerts.
+        /// Gets user unread count of interaction stats alerts
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UnreadMetric</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UnreadMetric> GetAlertingInteractionstatsAlertsUnreadAsync ();
 
         /// <summary>
-        /// Gets user unread count of interaction stats alerts.
+        /// Gets user unread count of interaction stats alerts
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UnreadMetric)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UnreadMetric>> GetAlertingInteractionstatsAlertsUnreadAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get an interaction stats rule.
+        /// Get an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<InteractionStatsRule> GetAlertingInteractionstatsRuleAsync (string ruleId, List<string> expand = null);
 
         /// <summary>
-        /// Get an interaction stats rule.
+        /// Get an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId, List<string> expand = null);
 
         /// <summary>
-        /// Get an interaction stats rule list.
+        /// Get an interaction stats rule list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/rules/query.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRuleContainer</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<InteractionStatsRuleContainer> GetAlertingInteractionstatsRulesAsync (List<string> expand = null);
 
         /// <summary>
-        /// Get an interaction stats rule list.
+        /// Get an interaction stats rule list
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/rules/query.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRuleContainer)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRuleContainer>> GetAlertingInteractionstatsRulesAsyncWithHttpInfo (List<string> expand = null);
 
         /// <summary>
@@ -999,29 +999,29 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AlertListing>> PostAlertingAlertsQueryAsyncWithHttpInfo (GetAlertQuery body = null);
 
         /// <summary>
-        /// Create an interaction stats rule.
+        /// Create an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/rules.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<InteractionStatsRule> PostAlertingInteractionstatsRulesAsync (InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
-        /// Create an interaction stats rule.
+        /// Create an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use POST /api/v2/alerting/rules.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PostAlertingInteractionstatsRulesAsyncWithHttpInfo (InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
@@ -1126,56 +1126,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update an interaction stats alert read status
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UnreadStatus</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UnreadStatus> PutAlertingInteractionstatsAlertAsync (string alertId, UnreadStatus body, List<string> expand = null);
 
         /// <summary>
         /// Update an interaction stats alert read status
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UnreadStatus)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UnreadStatus>> PutAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId, UnreadStatus body, List<string> expand = null);
 
         /// <summary>
         /// Update an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<InteractionStatsRule> PutAlertingInteractionstatsRuleAsync (string ruleId, InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
         /// Update an interaction stats rule
         /// </summary>
         /// <remarks>
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PutAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId, InteractionStatsRule body, List<string> expand = null);
 
         /// <summary>
@@ -1507,12 +1507,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an interaction stats alert 
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteAlertingInteractionstatsAlert (string alertId)
         {
              DeleteAlertingInteractionstatsAlertWithHttpInfo(alertId);
@@ -1520,12 +1520,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an interaction stats alert 
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteAlertingInteractionstatsAlertWithHttpInfo (string alertId)
         { 
             // verify the required parameter 'alertId' is set
@@ -1610,12 +1610,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an interaction stats alert 
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteAlertingInteractionstatsAlertAsync (string alertId)
         {
              await DeleteAlertingInteractionstatsAlertAsyncWithHttpInfo(alertId);
@@ -1624,12 +1624,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete an interaction stats alert 
-        /// 
+        /// Apps should migrate to use DELETE /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId)
         { 
             // verify the required parameter 'alertId' is set
@@ -1715,26 +1715,26 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an interaction stats rule. 
-        /// 
+        /// Delete an interaction stats rule 
+        /// Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteAlertingInteractionstatsRule (string ruleId)
         {
              DeleteAlertingInteractionstatsRuleWithHttpInfo(ruleId);
         }
 
         /// <summary>
-        /// Delete an interaction stats rule. 
-        /// 
+        /// Delete an interaction stats rule 
+        /// Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteAlertingInteractionstatsRuleWithHttpInfo (string ruleId)
         { 
             // verify the required parameter 'ruleId' is set
@@ -1818,13 +1818,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an interaction stats rule. 
-        /// 
+        /// Delete an interaction stats rule 
+        /// Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteAlertingInteractionstatsRuleAsync (string ruleId)
         {
              await DeleteAlertingInteractionstatsRuleAsyncWithHttpInfo(ruleId);
@@ -1832,13 +1832,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an interaction stats rule. 
-        /// 
+        /// Delete an interaction stats rule 
+        /// Apps should migrate to use DELETE /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId)
         { 
             // verify the required parameter 'ruleId' is set
@@ -2344,12 +2344,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets active alert count for a user. 
-        /// 
+        /// Gets active alert count for a user 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ActiveAlertCount</returns>
-        
+        [Obsolete]
         public ActiveAlertCount GetAlertingAlertsActive ()
         {
              ApiResponse<ActiveAlertCount> localVarResponse = GetAlertingAlertsActiveWithHttpInfo();
@@ -2357,12 +2357,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets active alert count for a user. 
-        /// 
+        /// Gets active alert count for a user 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ActiveAlertCount</returns>
-        
+        [Obsolete]
         public ApiResponse< ActiveAlertCount > GetAlertingAlertsActiveWithHttpInfo ()
         { 
 
@@ -2442,12 +2442,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets active alert count for a user. 
-        /// 
+        /// Gets active alert count for a user 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ActiveAlertCount</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ActiveAlertCount> GetAlertingAlertsActiveAsync ()
         {
              ApiResponse<ActiveAlertCount> localVarResponse = await GetAlertingAlertsActiveAsyncWithHttpInfo();
@@ -2456,12 +2456,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets active alert count for a user. 
-        /// 
+        /// Gets active alert count for a user 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and alertStatus to 'Active' in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ActiveAlertCount)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ActiveAlertCount>> GetAlertingAlertsActiveAsyncWithHttpInfo ()
         { 
 
@@ -2543,13 +2543,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an interaction stats alert 
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsAlert</returns>
-        
+        [Obsolete]
         public InteractionStatsAlert GetAlertingInteractionstatsAlert (string alertId, List<string> expand = null)
         {
              ApiResponse<InteractionStatsAlert> localVarResponse = GetAlertingInteractionstatsAlertWithHttpInfo(alertId, expand);
@@ -2558,13 +2558,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an interaction stats alert 
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsAlert</returns>
-        
+        [Obsolete]
         public ApiResponse< InteractionStatsAlert > GetAlertingInteractionstatsAlertWithHttpInfo (string alertId, List<string> expand = null)
         { 
             // verify the required parameter 'alertId' is set
@@ -2650,13 +2650,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an interaction stats alert 
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsAlert</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<InteractionStatsAlert> GetAlertingInteractionstatsAlertAsync (string alertId, List<string> expand = null)
         {
              ApiResponse<InteractionStatsAlert> localVarResponse = await GetAlertingInteractionstatsAlertAsyncWithHttpInfo(alertId, expand);
@@ -2666,13 +2666,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get an interaction stats alert 
-        /// 
+        /// Apps should migrate to use GET /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsAlert)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlert>> GetAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId, List<string> expand = null)
         { 
             // verify the required parameter 'alertId' is set
@@ -2759,13 +2759,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get interaction stats alert list. 
-        /// 
+        /// Get interaction stats alert list 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsAlertContainer</returns>
-        
+        [Obsolete]
         public InteractionStatsAlertContainer GetAlertingInteractionstatsAlerts (List<string> expand = null)
         {
              ApiResponse<InteractionStatsAlertContainer> localVarResponse = GetAlertingInteractionstatsAlertsWithHttpInfo(expand);
@@ -2773,13 +2773,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get interaction stats alert list. 
-        /// 
+        /// Get interaction stats alert list 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsAlertContainer</returns>
-        
+        [Obsolete]
         public ApiResponse< InteractionStatsAlertContainer > GetAlertingInteractionstatsAlertsWithHttpInfo (List<string> expand = null)
         { 
 
@@ -2860,13 +2860,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get interaction stats alert list. 
-        /// 
+        /// Get interaction stats alert list 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsAlertContainer</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<InteractionStatsAlertContainer> GetAlertingInteractionstatsAlertsAsync (List<string> expand = null)
         {
              ApiResponse<InteractionStatsAlertContainer> localVarResponse = await GetAlertingInteractionstatsAlertsAsyncWithHttpInfo(expand);
@@ -2875,13 +2875,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get interaction stats alert list. 
-        /// 
+        /// Get interaction stats alert list 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsAlertContainer)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlertContainer>> GetAlertingInteractionstatsAlertsAsyncWithHttpInfo (List<string> expand = null)
         { 
 
@@ -2963,12 +2963,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets user unread count of interaction stats alerts. 
-        /// 
+        /// Gets user unread count of interaction stats alerts 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UnreadMetric</returns>
-        
+        [Obsolete]
         public UnreadMetric GetAlertingInteractionstatsAlertsUnread ()
         {
              ApiResponse<UnreadMetric> localVarResponse = GetAlertingInteractionstatsAlertsUnreadWithHttpInfo();
@@ -2976,12 +2976,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets user unread count of interaction stats alerts. 
-        /// 
+        /// Gets user unread count of interaction stats alerts 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UnreadMetric</returns>
-        
+        [Obsolete]
         public ApiResponse< UnreadMetric > GetAlertingInteractionstatsAlertsUnreadWithHttpInfo ()
         { 
 
@@ -3061,12 +3061,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets user unread count of interaction stats alerts. 
-        /// 
+        /// Gets user unread count of interaction stats alerts 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UnreadMetric</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UnreadMetric> GetAlertingInteractionstatsAlertsUnreadAsync ()
         {
              ApiResponse<UnreadMetric> localVarResponse = await GetAlertingInteractionstatsAlertsUnreadAsyncWithHttpInfo();
@@ -3075,12 +3075,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets user unread count of interaction stats alerts. 
-        /// 
+        /// Gets user unread count of interaction stats alerts 
+        /// Apps should migrate to use POST /api/v2/alerting/alerts/query with the queryType set to 'Count' and viewStatus to 'Unread' in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UnreadMetric)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UnreadMetric>> GetAlertingInteractionstatsAlertsUnreadAsyncWithHttpInfo ()
         { 
 
@@ -3161,14 +3161,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an interaction stats rule. 
-        /// 
+        /// Get an interaction stats rule 
+        /// Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
-        
+        [Obsolete]
         public InteractionStatsRule GetAlertingInteractionstatsRule (string ruleId, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = GetAlertingInteractionstatsRuleWithHttpInfo(ruleId, expand);
@@ -3176,14 +3176,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an interaction stats rule. 
-        /// 
+        /// Get an interaction stats rule 
+        /// Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
-        
+        [Obsolete]
         public ApiResponse< InteractionStatsRule > GetAlertingInteractionstatsRuleWithHttpInfo (string ruleId, List<string> expand = null)
         { 
             // verify the required parameter 'ruleId' is set
@@ -3268,14 +3268,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an interaction stats rule. 
-        /// 
+        /// Get an interaction stats rule 
+        /// Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<InteractionStatsRule> GetAlertingInteractionstatsRuleAsync (string ruleId, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = await GetAlertingInteractionstatsRuleAsyncWithHttpInfo(ruleId, expand);
@@ -3284,14 +3284,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an interaction stats rule. 
-        /// 
+        /// Get an interaction stats rule 
+        /// Apps should migrate to use GET /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId, List<string> expand = null)
         { 
             // verify the required parameter 'ruleId' is set
@@ -3378,13 +3378,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an interaction stats rule list. 
-        /// 
+        /// Get an interaction stats rule list 
+        /// Apps should migrate to use POST /api/v2/alerting/rules/query.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRuleContainer</returns>
-        
+        [Obsolete]
         public InteractionStatsRuleContainer GetAlertingInteractionstatsRules (List<string> expand = null)
         {
              ApiResponse<InteractionStatsRuleContainer> localVarResponse = GetAlertingInteractionstatsRulesWithHttpInfo(expand);
@@ -3392,13 +3392,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an interaction stats rule list. 
-        /// 
+        /// Get an interaction stats rule list 
+        /// Apps should migrate to use POST /api/v2/alerting/rules/query.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRuleContainer</returns>
-        
+        [Obsolete]
         public ApiResponse< InteractionStatsRuleContainer > GetAlertingInteractionstatsRulesWithHttpInfo (List<string> expand = null)
         { 
 
@@ -3479,13 +3479,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an interaction stats rule list. 
-        /// 
+        /// Get an interaction stats rule list 
+        /// Apps should migrate to use POST /api/v2/alerting/rules/query.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRuleContainer</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<InteractionStatsRuleContainer> GetAlertingInteractionstatsRulesAsync (List<string> expand = null)
         {
              ApiResponse<InteractionStatsRuleContainer> localVarResponse = await GetAlertingInteractionstatsRulesAsyncWithHttpInfo(expand);
@@ -3494,13 +3494,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an interaction stats rule list. 
-        /// 
+        /// Get an interaction stats rule list 
+        /// Apps should migrate to use POST /api/v2/alerting/rules/query.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRuleContainer)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRuleContainer>> GetAlertingInteractionstatsRulesAsyncWithHttpInfo (List<string> expand = null)
         { 
 
@@ -4676,14 +4676,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create an interaction stats rule. 
-        /// 
+        /// Create an interaction stats rule 
+        /// Apps should migrate to use POST /api/v2/alerting/rules.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
-        
+        [Obsolete]
         public InteractionStatsRule PostAlertingInteractionstatsRules (InteractionStatsRule body, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = PostAlertingInteractionstatsRulesWithHttpInfo(body, expand);
@@ -4691,14 +4691,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create an interaction stats rule. 
-        /// 
+        /// Create an interaction stats rule 
+        /// Apps should migrate to use POST /api/v2/alerting/rules.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
-        
+        [Obsolete]
         public ApiResponse< InteractionStatsRule > PostAlertingInteractionstatsRulesWithHttpInfo (InteractionStatsRule body, List<string> expand = null)
         { 
             // verify the required parameter 'body' is set
@@ -4788,14 +4788,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create an interaction stats rule. 
-        /// 
+        /// Create an interaction stats rule 
+        /// Apps should migrate to use POST /api/v2/alerting/rules.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<InteractionStatsRule> PostAlertingInteractionstatsRulesAsync (InteractionStatsRule body, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = await PostAlertingInteractionstatsRulesAsyncWithHttpInfo(body, expand);
@@ -4804,14 +4804,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create an interaction stats rule. 
-        /// 
+        /// Create an interaction stats rule 
+        /// Apps should migrate to use POST /api/v2/alerting/rules.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PostAlertingInteractionstatsRulesAsyncWithHttpInfo (InteractionStatsRule body, List<string> expand = null)
         { 
             // verify the required parameter 'body' is set
@@ -5787,14 +5787,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an interaction stats alert read status 
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UnreadStatus</returns>
-        
+        [Obsolete]
         public UnreadStatus PutAlertingInteractionstatsAlert (string alertId, UnreadStatus body, List<string> expand = null)
         {
              ApiResponse<UnreadStatus> localVarResponse = PutAlertingInteractionstatsAlertWithHttpInfo(alertId, body, expand);
@@ -5803,14 +5803,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an interaction stats alert read status 
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UnreadStatus</returns>
-        
+        [Obsolete]
         public ApiResponse< UnreadStatus > PutAlertingInteractionstatsAlertWithHttpInfo (string alertId, UnreadStatus body, List<string> expand = null)
         { 
             // verify the required parameter 'alertId' is set
@@ -5905,14 +5905,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an interaction stats alert read status 
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UnreadStatus</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UnreadStatus> PutAlertingInteractionstatsAlertAsync (string alertId, UnreadStatus body, List<string> expand = null)
         {
              ApiResponse<UnreadStatus> localVarResponse = await PutAlertingInteractionstatsAlertAsyncWithHttpInfo(alertId, body, expand);
@@ -5922,14 +5922,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an interaction stats alert read status 
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/alerts/{alertId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UnreadStatus)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UnreadStatus>> PutAlertingInteractionstatsAlertAsyncWithHttpInfo (string alertId, UnreadStatus body, List<string> expand = null)
         { 
             // verify the required parameter 'alertId' is set
@@ -6027,14 +6027,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an interaction stats rule 
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>InteractionStatsRule</returns>
-        
+        [Obsolete]
         public InteractionStatsRule PutAlertingInteractionstatsRule (string ruleId, InteractionStatsRule body, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = PutAlertingInteractionstatsRuleWithHttpInfo(ruleId, body, expand);
@@ -6043,14 +6043,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an interaction stats rule 
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
-        
+        [Obsolete]
         public ApiResponse< InteractionStatsRule > PutAlertingInteractionstatsRuleWithHttpInfo (string ruleId, InteractionStatsRule body, List<string> expand = null)
         { 
             // verify the required parameter 'ruleId' is set
@@ -6145,14 +6145,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an interaction stats rule 
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of InteractionStatsRule</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<InteractionStatsRule> PutAlertingInteractionstatsRuleAsync (string ruleId, InteractionStatsRule body, List<string> expand = null)
         {
              ApiResponse<InteractionStatsRule> localVarResponse = await PutAlertingInteractionstatsRuleAsyncWithHttpInfo(ruleId, body, expand);
@@ -6162,14 +6162,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update an interaction stats rule 
-        /// 
+        /// Apps should migrate to use PUT /api/v2/alerting/rules/{ruleId}.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PutAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId, InteractionStatsRule body, List<string> expand = null)
         { 
             // verify the required parameter 'ruleId' is set

@@ -139,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LearningModule" /> class.
         /// </summary>
         /// <param name="Name">The name of learning module (required).</param>
+        /// <param name="ExcludedFromCatalog">If true, learning module is excluded when retrieving modules for manual assignment.</param>
         /// <param name="Description">The description of learning module.</param>
         /// <param name="CompletionTimeInDays">The completion time of learning module in days (required).</param>
         /// <param name="Type">The type for the learning module.</param>
@@ -147,10 +148,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SummaryData">The learning module summary data.</param>
         /// <param name="ReassignSummaryData">The learning module reassign summary data.</param>
         /// <param name="CoverArt">The cover art for the learning module.</param>
+        /// <param name="LengthInMinutes">The recommended time in minutes to complete the module.</param>
         /// <param name="ArchivalMode">The mode of archival for learning module.</param>
-        public LearningModule(string Name = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleReassignSummary ReassignSummaryData = null, LearningModuleCoverArtResponse CoverArt = null, ArchivalModeEnum? ArchivalMode = null)
+        public LearningModule(string Name = null, bool? ExcludedFromCatalog = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleReassignSummary ReassignSummaryData = null, LearningModuleCoverArtResponse CoverArt = null, int? LengthInMinutes = null, ArchivalModeEnum? ArchivalMode = null)
         {
             this.Name = Name;
+            this.ExcludedFromCatalog = ExcludedFromCatalog;
             this.Description = Description;
             this.CompletionTimeInDays = CompletionTimeInDays;
             this.Type = Type;
@@ -159,6 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SummaryData = SummaryData;
             this.ReassignSummaryData = ReassignSummaryData;
             this.CoverArt = CoverArt;
+            this.LengthInMinutes = LengthInMinutes;
             this.ArchivalMode = ArchivalMode;
             
         }
@@ -180,6 +184,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of learning module</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// If true, learning module is excluded when retrieving modules for manual assignment
+        /// </summary>
+        /// <value>If true, learning module is excluded when retrieving modules for manual assignment</value>
+        [DataMember(Name="excludedFromCatalog", EmitDefaultValue=false)]
+        public bool? ExcludedFromCatalog { get; set; }
 
 
 
@@ -340,6 +353,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// The recommended time in minutes to complete the module
+        /// </summary>
+        /// <value>The recommended time in minutes to complete the module</value>
+        [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
+        public int? LengthInMinutes { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -352,6 +374,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ExcludedFromCatalog: ").Append(ExcludedFromCatalog).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
@@ -371,6 +394,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SummaryData: ").Append(SummaryData).Append("\n");
             sb.Append("  ReassignSummaryData: ").Append(ReassignSummaryData).Append("\n");
             sb.Append("  CoverArt: ").Append(CoverArt).Append("\n");
+            sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("  ArchivalMode: ").Append(ArchivalMode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -421,6 +445,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.ExcludedFromCatalog == other.ExcludedFromCatalog ||
+                    this.ExcludedFromCatalog != null &&
+                    this.ExcludedFromCatalog.Equals(other.ExcludedFromCatalog)
                 ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
@@ -518,6 +547,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CoverArt.Equals(other.CoverArt)
                 ) &&
                 (
+                    this.LengthInMinutes == other.LengthInMinutes ||
+                    this.LengthInMinutes != null &&
+                    this.LengthInMinutes.Equals(other.LengthInMinutes)
+                ) &&
+                (
                     this.ArchivalMode == other.ArchivalMode ||
                     this.ArchivalMode != null &&
                     this.ArchivalMode.Equals(other.ArchivalMode)
@@ -540,6 +574,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.ExcludedFromCatalog != null)
+                    hash = hash * 59 + this.ExcludedFromCatalog.GetHashCode();
 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
@@ -597,6 +634,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CoverArt != null)
                     hash = hash * 59 + this.CoverArt.GetHashCode();
+
+                if (this.LengthInMinutes != null)
+                    hash = hash * 59 + this.LengthInMinutes.GetHashCode();
 
                 if (this.ArchivalMode != null)
                     hash = hash * 59 + this.ArchivalMode.GetHashCode();

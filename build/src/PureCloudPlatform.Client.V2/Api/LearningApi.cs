@@ -313,9 +313,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
+        /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>LearningModulesDomainEntityListing</returns>
         
-        LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null);
+        LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null);
 
         /// <summary>
         /// Get all learning modules of an organization
@@ -334,9 +335,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
+        /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>ApiResponse of LearningModulesDomainEntityListing</returns>
         
-        ApiResponse<LearningModulesDomainEntityListing> GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null);
+        ApiResponse<LearningModulesDomainEntityListing> GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null);
 
         /// <summary>
         /// Get all learning modules of an organization including assignments for a specific user
@@ -449,6 +451,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LearningAssignment</returns>
         
         ApiResponse<LearningAssignment> PatchLearningAssignmentRescheduleWithHttpInfo (string assignmentId, LearningAssignmentReschedule body = null);
+
+        /// <summary>
+        /// Update an external assignment for a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">Key identifier for the module</param>
+        /// <param name="userId">Key identifier for the user</param>
+        /// <param name="body">The learning request for updating the assignment</param>
+        /// <returns>LearningAssignment</returns>
+        
+        LearningAssignment PatchLearningModuleUserAssignments (string moduleId, string userId, LearningAssignmentExternalUpdate body);
+
+        /// <summary>
+        /// Update an external assignment for a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">Key identifier for the module</param>
+        /// <param name="userId">Key identifier for the user</param>
+        /// <param name="body">The learning request for updating the assignment</param>
+        /// <returns>ApiResponse of LearningAssignment</returns>
+        
+        ApiResponse<LearningAssignment> PatchLearningModuleUserAssignmentsWithHttpInfo (string moduleId, string userId, LearningAssignmentExternalUpdate body);
 
         /// <summary>
         /// Score learning assessment for preview
@@ -1099,9 +1131,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
+        /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>Task of LearningModulesDomainEntityListing</returns>
         
-        System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null);
+        System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null);
 
         /// <summary>
         /// Get all learning modules of an organization
@@ -1120,9 +1153,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
+        /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>Task of ApiResponse (LearningModulesDomainEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null);
+        System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null);
 
         /// <summary>
         /// Get all learning modules of an organization including assignments for a specific user
@@ -1235,6 +1269,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningAssignmentRescheduleAsyncWithHttpInfo (string assignmentId, LearningAssignmentReschedule body = null);
+
+        /// <summary>
+        /// Update an external assignment for a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">Key identifier for the module</param>
+        /// <param name="userId">Key identifier for the user</param>
+        /// <param name="body">The learning request for updating the assignment</param>
+        /// <returns>Task of LearningAssignment</returns>
+        
+        System.Threading.Tasks.Task<LearningAssignment> PatchLearningModuleUserAssignmentsAsync (string moduleId, string userId, LearningAssignmentExternalUpdate body);
+
+        /// <summary>
+        /// Update an external assignment for a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">Key identifier for the module</param>
+        /// <param name="userId">Key identifier for the user</param>
+        /// <param name="body">The learning request for updating the assignment</param>
+        /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningModuleUserAssignmentsAsyncWithHttpInfo (string moduleId, string userId, LearningAssignmentExternalUpdate body);
 
         /// <summary>
         /// Score learning assessment for preview
@@ -3778,11 +3842,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
+        /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>LearningModulesDomainEntityListing</returns>
         
-        public LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
+        public LearningModulesDomainEntityListing GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
         {
-             ApiResponse<LearningModulesDomainEntityListing> localVarResponse = GetLearningModulesWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses);
+             ApiResponse<LearningModulesDomainEntityListing> localVarResponse = GetLearningModulesWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds);
              return localVarResponse.Data;
         }
 
@@ -3801,9 +3866,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
+        /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>ApiResponse of LearningModulesDomainEntityListing</returns>
         
-        public ApiResponse< LearningModulesDomainEntityListing > GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
+        public ApiResponse< LearningModulesDomainEntityListing > GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
         { 
 
             var localVarPath = "/api/v2/learning/modules";
@@ -3848,6 +3914,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (isPublished != null) localVarQueryParams.Add(new Tuple<string, string>("isPublished", this.Configuration.ApiClient.ParameterToString(isPublished)));
             if (statuses != null) statuses.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("statuses", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (externalIds != null) externalIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("externalIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -3906,11 +3973,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
+        /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>Task of LearningModulesDomainEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
+        public async System.Threading.Tasks.Task<LearningModulesDomainEntityListing> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
         {
-             ApiResponse<LearningModulesDomainEntityListing> localVarResponse = await GetLearningModulesAsyncWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses);
+             ApiResponse<LearningModulesDomainEntityListing> localVarResponse = await GetLearningModulesAsyncWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds);
              return localVarResponse.Data;
 
         }
@@ -3930,9 +3998,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
+        /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>Task of ApiResponse (LearningModulesDomainEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
         { 
 
             var localVarPath = "/api/v2/learning/modules";
@@ -3977,6 +4046,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (isPublished != null) localVarQueryParams.Add(new Tuple<string, string>("isPublished", this.Configuration.ApiClient.ParameterToString(isPublished)));
             if (statuses != null) statuses.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("statuses", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (externalIds != null) externalIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("externalIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -4923,6 +4993,257 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PatchLearningAssignmentReschedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchLearningAssignmentReschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignment>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an external assignment for a specific user 
+        /// 
+        /// PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">Key identifier for the module</param>
+        /// <param name="userId">Key identifier for the user</param>
+        /// <param name="body">The learning request for updating the assignment</param>
+        /// <returns>LearningAssignment</returns>
+        
+        public LearningAssignment PatchLearningModuleUserAssignments (string moduleId, string userId, LearningAssignmentExternalUpdate body)
+        {
+             ApiResponse<LearningAssignment> localVarResponse = PatchLearningModuleUserAssignmentsWithHttpInfo(moduleId, userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an external assignment for a specific user 
+        /// 
+        /// PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">Key identifier for the module</param>
+        /// <param name="userId">Key identifier for the user</param>
+        /// <param name="body">The learning request for updating the assignment</param>
+        /// <returns>ApiResponse of LearningAssignment</returns>
+        
+        public ApiResponse< LearningAssignment > PatchLearningModuleUserAssignmentsWithHttpInfo (string moduleId, string userId, LearningAssignmentExternalUpdate body)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PatchLearningModuleUserAssignments");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling LearningApi->PatchLearningModuleUserAssignments");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PatchLearningModuleUserAssignments");
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/users/{userId}/assignments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLearningModuleUserAssignments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLearningModuleUserAssignments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignment>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an external assignment for a specific user 
+        /// 
+        /// PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">Key identifier for the module</param>
+        /// <param name="userId">Key identifier for the user</param>
+        /// <param name="body">The learning request for updating the assignment</param>
+        /// <returns>Task of LearningAssignment</returns>
+        
+        public async System.Threading.Tasks.Task<LearningAssignment> PatchLearningModuleUserAssignmentsAsync (string moduleId, string userId, LearningAssignmentExternalUpdate body)
+        {
+             ApiResponse<LearningAssignment> localVarResponse = await PatchLearningModuleUserAssignmentsAsyncWithHttpInfo(moduleId, userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an external assignment for a specific user 
+        /// 
+        /// PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">Key identifier for the module</param>
+        /// <param name="userId">Key identifier for the user</param>
+        /// <param name="body">The learning request for updating the assignment</param>
+        /// <returns>Task of ApiResponse (LearningAssignment)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningModuleUserAssignmentsAsyncWithHttpInfo (string moduleId, string userId, LearningAssignmentExternalUpdate body)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PatchLearningModuleUserAssignments");
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling LearningApi->PatchLearningModuleUserAssignments");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PatchLearningModuleUserAssignments");
+            
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/users/{userId}/assignments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLearningModuleUserAssignments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLearningModuleUserAssignments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LearningAssignment>(localVarStatusCode,
                 localVarHeaders,

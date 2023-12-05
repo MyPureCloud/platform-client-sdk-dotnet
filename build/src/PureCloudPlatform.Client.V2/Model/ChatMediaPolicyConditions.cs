@@ -27,8 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupCodes">WrapupCodes.</param>
         /// <param name="Languages">Languages.</param>
         /// <param name="TimeAllowed">TimeAllowed.</param>
+        /// <param name="Teams">Teams to match conversations against.</param>
         /// <param name="Duration">Duration.</param>
-        public ChatMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, List<Language> Languages = null, TimeAllowed TimeAllowed = null, DurationCondition Duration = null)
+        public ChatMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, List<Language> Languages = null, TimeAllowed TimeAllowed = null, List<Team> Teams = null, DurationCondition Duration = null)
         {
             this.ForUsers = ForUsers;
             this.DateRanges = DateRanges;
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapupCodes = WrapupCodes;
             this.Languages = Languages;
             this.TimeAllowed = TimeAllowed;
+            this.Teams = Teams;
             this.Duration = Duration;
             
         }
@@ -91,6 +93,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Teams to match conversations against
+        /// </summary>
+        /// <value>Teams to match conversations against</value>
+        [DataMember(Name="teams", EmitDefaultValue=false)]
+        public List<Team> Teams { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Duration
         /// </summary>
         [DataMember(Name="duration", EmitDefaultValue=false)]
@@ -112,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
+            sb.Append("  Teams: ").Append(Teams).Append("\n");
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -184,6 +196,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeAllowed.Equals(other.TimeAllowed)
                 ) &&
                 (
+                    this.Teams == other.Teams ||
+                    this.Teams != null &&
+                    this.Teams.SequenceEqual(other.Teams)
+                ) &&
+                (
                     this.Duration == other.Duration ||
                     this.Duration != null &&
                     this.Duration.Equals(other.Duration)
@@ -218,6 +235,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeAllowed != null)
                     hash = hash * 59 + this.TimeAllowed.GetHashCode();
+
+                if (this.Teams != null)
+                    hash = hash * 59 + this.Teams.GetHashCode();
 
                 if (this.Duration != null)
                     hash = hash * 59 + this.Duration.GetHashCode();

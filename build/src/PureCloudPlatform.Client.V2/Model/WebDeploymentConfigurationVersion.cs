@@ -86,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomI18nLabels">The localization settings for homescreen app.</param>
         /// <param name="Messenger">The settings for messenger.</param>
         /// <param name="Position">The settings for position.</param>
-        /// <param name="SupportCenter">The settings for support center.</param>
+        /// <param name="SupportCenter">The settings for knowledge portal (previously support center).</param>
         /// <param name="Cobrowse">The settings for cobrowse.</param>
         /// <param name="JourneyEvents">The settings for journey events.</param>
         /// <param name="AuthenticationSettings">The settings for authenticated deployments.</param>
@@ -202,9 +202,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The settings for support center
+        /// The settings for knowledge portal (previously support center)
         /// </summary>
-        /// <value>The settings for support center</value>
+        /// <value>The settings for knowledge portal (previously support center)</value>
         [DataMember(Name="supportCenter", EmitDefaultValue=false)]
         public SupportCenterSettings SupportCenter { get; set; }
 

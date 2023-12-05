@@ -26,13 +26,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DurationMs">DurationMs.</param>
         /// <param name="Transcript">Transcript.</param>
         /// <param name="Words">Words.</param>
-        public TranscriptionTopicTranscriptAlternative(double? Confidence = null, int? OffsetMs = null, int? DurationMs = null, string Transcript = null, List<TranscriptionTopicTranscriptWord> Words = null)
+        /// <param name="DecoratedTranscript">DecoratedTranscript.</param>
+        /// <param name="DecoratedWords">DecoratedWords.</param>
+        public TranscriptionTopicTranscriptAlternative(double? Confidence = null, int? OffsetMs = null, int? DurationMs = null, string Transcript = null, List<TranscriptionTopicTranscriptWord> Words = null, string DecoratedTranscript = null, List<TranscriptionTopicTranscriptWord> DecoratedWords = null)
         {
             this.Confidence = Confidence;
             this.OffsetMs = OffsetMs;
             this.DurationMs = DurationMs;
             this.Transcript = Transcript;
             this.Words = Words;
+            this.DecoratedTranscript = DecoratedTranscript;
+            this.DecoratedWords = DecoratedWords;
             
         }
         
@@ -77,6 +81,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<TranscriptionTopicTranscriptWord> Words { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets DecoratedTranscript
+        /// </summary>
+        [DataMember(Name="decoratedTranscript", EmitDefaultValue=false)]
+        public string DecoratedTranscript { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DecoratedWords
+        /// </summary>
+        [DataMember(Name="decoratedWords", EmitDefaultValue=false)]
+        public List<TranscriptionTopicTranscriptWord> DecoratedWords { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -91,6 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
             sb.Append("  Transcript: ").Append(Transcript).Append("\n");
             sb.Append("  Words: ").Append(Words).Append("\n");
+            sb.Append("  DecoratedTranscript: ").Append(DecoratedTranscript).Append("\n");
+            sb.Append("  DecoratedWords: ").Append(DecoratedWords).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,6 +177,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Words == other.Words ||
                     this.Words != null &&
                     this.Words.SequenceEqual(other.Words)
+                ) &&
+                (
+                    this.DecoratedTranscript == other.DecoratedTranscript ||
+                    this.DecoratedTranscript != null &&
+                    this.DecoratedTranscript.Equals(other.DecoratedTranscript)
+                ) &&
+                (
+                    this.DecoratedWords == other.DecoratedWords ||
+                    this.DecoratedWords != null &&
+                    this.DecoratedWords.SequenceEqual(other.DecoratedWords)
                 );
         }
 
@@ -183,6 +215,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Words != null)
                     hash = hash * 59 + this.Words.GetHashCode();
+
+                if (this.DecoratedTranscript != null)
+                    hash = hash * 59 + this.DecoratedTranscript.GetHashCode();
+
+                if (this.DecoratedWords != null)
+                    hash = hash * 59 + this.DecoratedWords.GetHashCode();
 
                 return hash;
             }

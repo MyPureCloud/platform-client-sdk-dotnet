@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterImage" /> class.
         /// </summary>
-        /// <param name="Source">Source.</param>
+        /// <param name="Source">Source URLs for image.</param>
         public SupportCenterImage(SupportCenterImageSource Source = null)
         {
             this.Source = Source;
@@ -31,8 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Source
+        /// Source URLs for image
         /// </summary>
+        /// <value>Source URLs for image</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public SupportCenterImageSource Source { get; set; }
 

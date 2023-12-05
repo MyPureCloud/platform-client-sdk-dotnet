@@ -702,7 +702,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ExportEmailFileSizeExceededLimit for "EXPORT_EMAIL_FILE_SIZE_EXCEEDED_LIMIT"
             /// </summary>
             [EnumMember(Value = "EXPORT_EMAIL_FILE_SIZE_EXCEEDED_LIMIT")]
-            ExportEmailFileSizeExceededLimit
+            ExportEmailFileSizeExceededLimit,
+            
+            /// <summary>
+            /// Enum CircuitBreakerOpenForViewType for "CIRCUIT_BREAKER_OPEN_FOR_VIEW_TYPE"
+            /// </summary>
+            [EnumMember(Value = "CIRCUIT_BREAKER_OPEN_FOR_VIEW_TYPE")]
+            CircuitBreakerOpenForViewType
         }
         /// <summary>
         /// Gets or Sets Inner

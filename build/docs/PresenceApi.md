@@ -44,8 +44,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a Presence Definition
 
-DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * presence:presenceDefinition:delete
@@ -234,8 +232,6 @@ void (empty response body)
 
 Get a Presence Definition
 
-GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * presence:presenceDefinition:view
@@ -300,8 +296,6 @@ namespace Example
 
 
 Get a list of Presence Definitions
-
-GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1197,8 +1191,6 @@ namespace Example
 
 Create a Presence Definition
 
-PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * presence:presenceDefinition:add
@@ -1387,8 +1379,6 @@ namespace Example
 
 
 Update a Presence Definition
-
-PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 

@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sms,
             
             /// <summary>
+            /// Enum Push for "Push"
+            /// </summary>
+            [EnumMember(Value = "Push")]
+            Push,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

@@ -21,7 +21,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -34,7 +33,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -95,7 +93,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -109,7 +106,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -123,7 +119,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
@@ -138,7 +133,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
@@ -479,7 +473,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
@@ -492,7 +485,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
@@ -553,7 +545,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -567,7 +558,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -711,7 +701,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -724,7 +713,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -785,7 +773,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -799,7 +786,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -813,7 +799,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
@@ -828,7 +813,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
@@ -1169,7 +1153,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
@@ -1182,7 +1165,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
@@ -1243,7 +1225,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -1257,7 +1238,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -1487,7 +1467,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Presence Definition 
         /// 
-        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -1501,7 +1480,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Presence Definition 
         /// 
-        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -1592,7 +1570,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Presence Definition 
         /// 
-        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -1607,7 +1584,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Presence Definition 
         /// 
-        /// DeletePresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -2118,7 +2094,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Presence Definition 
         /// 
-        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -2134,7 +2109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Presence Definition 
         /// 
-        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -2227,7 +2201,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Presence Definition 
         /// 
-        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -2244,7 +2217,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Presence Definition 
         /// 
-        /// GetPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -2339,7 +2311,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Presence Definitions 
         /// 
-        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
@@ -2356,7 +2327,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Presence Definitions 
         /// 
-        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
@@ -2448,7 +2418,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Presence Definitions 
         /// 
-        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
@@ -2466,7 +2435,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Presence Definitions 
         /// 
-        /// GetPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
@@ -5357,7 +5325,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Presence Definition 
         /// 
-        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
@@ -5372,7 +5339,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Presence Definition 
         /// 
-        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
@@ -5468,7 +5434,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Presence Definition 
         /// 
-        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
@@ -5484,7 +5449,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Presence Definition 
         /// 
-        /// PostPresenceDefinitions0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
@@ -6024,7 +5988,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a Presence Definition 
         /// 
-        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -6040,7 +6003,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a Presence Definition 
         /// 
-        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -6141,7 +6103,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a Presence Definition 
         /// 
-        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>
@@ -6158,7 +6119,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a Presence Definition 
         /// 
-        /// PutPresenceDefinition0 is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionId">Presence Definition ID</param>

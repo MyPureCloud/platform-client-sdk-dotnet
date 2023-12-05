@@ -24,7 +24,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuestionGroupId">QuestionGroupId.</param>
         /// <param name="TotalScore">Score of all questions in the group.</param>
         /// <param name="MaxTotalScore">Maximum possible score of all questions in the group.</param>
-        /// <param name="MarkedNA">MarkedNA.</param>
+        /// <param name="MarkedNA">True when the evaluation is submitted with a question group that does not have any answers. Only allowed when naEnabled is true or if set by the system.</param>
+        /// <param name="SystemMarkedNA">If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false..</param>
         /// <param name="TotalCriticalScore">Score of only the critical questions in the group.</param>
         /// <param name="MaxTotalCriticalScore">Maximum possible score of only the critical questions in the group.</param>
         /// <param name="TotalNonCriticalScore">Score of only the non critical questions in the group.</param>
@@ -36,12 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TotalNonCriticalScoreUnweighted">Unweighted score of only the non critical questions in the group.</param>
         /// <param name="MaxTotalNonCriticalScoreUnweighted">Maximum possible unweighted score of only the non critical questions in the group.</param>
         /// <param name="QuestionScores">QuestionScores.</param>
-        public EvaluationQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalNonCriticalScore = null, float? MaxTotalNonCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, float? TotalNonCriticalScoreUnweighted = null, float? MaxTotalNonCriticalScoreUnweighted = null, List<EvaluationQuestionScore> QuestionScores = null)
+        public EvaluationQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, bool? SystemMarkedNA = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalNonCriticalScore = null, float? MaxTotalNonCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, float? TotalNonCriticalScoreUnweighted = null, float? MaxTotalNonCriticalScoreUnweighted = null, List<EvaluationQuestionScore> QuestionScores = null)
         {
             this.QuestionGroupId = QuestionGroupId;
             this.TotalScore = TotalScore;
             this.MaxTotalScore = MaxTotalScore;
             this.MarkedNA = MarkedNA;
+            this.SystemMarkedNA = SystemMarkedNA;
             this.TotalCriticalScore = TotalCriticalScore;
             this.MaxTotalCriticalScore = MaxTotalCriticalScore;
             this.TotalNonCriticalScore = TotalNonCriticalScore;
@@ -85,10 +87,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MarkedNA
+        /// True when the evaluation is submitted with a question group that does not have any answers. Only allowed when naEnabled is true or if set by the system
         /// </summary>
+        /// <value>True when the evaluation is submitted with a question group that does not have any answers. Only allowed when naEnabled is true or if set by the system</value>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
+
+
+
+        /// <summary>
+        /// If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.
+        /// </summary>
+        /// <value>If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.</value>
+        [DataMember(Name="systemMarkedNA", EmitDefaultValue=false)]
+        public bool? SystemMarkedNA { get; set; }
 
 
 
@@ -202,6 +214,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  MaxTotalScore: ").Append(MaxTotalScore).Append("\n");
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
+            sb.Append("  SystemMarkedNA: ").Append(SystemMarkedNA).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
             sb.Append("  MaxTotalCriticalScore: ").Append(MaxTotalCriticalScore).Append("\n");
             sb.Append("  TotalNonCriticalScore: ").Append(TotalNonCriticalScore).Append("\n");
@@ -272,6 +285,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MarkedNA == other.MarkedNA ||
                     this.MarkedNA != null &&
                     this.MarkedNA.Equals(other.MarkedNA)
+                ) &&
+                (
+                    this.SystemMarkedNA == other.SystemMarkedNA ||
+                    this.SystemMarkedNA != null &&
+                    this.SystemMarkedNA.Equals(other.SystemMarkedNA)
                 ) &&
                 (
                     this.TotalCriticalScore == other.TotalCriticalScore ||
@@ -352,6 +370,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
+
+                if (this.SystemMarkedNA != null)
+                    hash = hash * 59 + this.SystemMarkedNA.GetHashCode();
 
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();

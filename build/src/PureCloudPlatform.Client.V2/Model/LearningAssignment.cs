@@ -85,7 +85,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Module">The Learning module object associated with this assignment.</param>
         /// <param name="User">The user to whom the assignment is assigned.</param>
         /// <param name="AssessmentForm">The assessment form associated with this assignment.</param>
-        public LearningAssignment(LearningAssessment Assessment = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, int? Version = null, LearningModule Module = null, UserReference User = null, AssessmentForm AssessmentForm = null)
+        /// <param name="LengthInMinutes">The length in minutes of the assignment.</param>
+        public LearningAssignment(LearningAssessment Assessment = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, int? Version = null, LearningModule Module = null, UserReference User = null, AssessmentForm AssessmentForm = null, int? LengthInMinutes = null)
         {
             this.Assessment = Assessment;
             this.State = State;
@@ -94,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Module = Module;
             this.User = User;
             this.AssessmentForm = AssessmentForm;
+            this.LengthInMinutes = LengthInMinutes;
             
         }
         
@@ -262,6 +264,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public AssessmentForm AssessmentForm { get; set; }
 
 
+
+        /// <summary>
+        /// The length in minutes of the assignment
+        /// </summary>
+        /// <value>The length in minutes of the assignment</value>
+        [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
+        public int? LengthInMinutes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -290,6 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Module: ").Append(Module).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
+            sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -424,6 +436,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AssessmentForm == other.AssessmentForm ||
                     this.AssessmentForm != null &&
                     this.AssessmentForm.Equals(other.AssessmentForm)
+                ) &&
+                (
+                    this.LengthInMinutes == other.LengthInMinutes ||
+                    this.LengthInMinutes != null &&
+                    this.LengthInMinutes.Equals(other.LengthInMinutes)
                 );
         }
 
@@ -494,6 +511,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AssessmentForm != null)
                     hash = hash * 59 + this.AssessmentForm.GetHashCode();
+
+                if (this.LengthInMinutes != null)
+                    hash = hash * 59 + this.LengthInMinutes.GetHashCode();
 
                 return hash;
             }

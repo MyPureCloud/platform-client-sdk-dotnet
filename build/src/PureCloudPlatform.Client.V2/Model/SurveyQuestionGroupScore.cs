@@ -24,14 +24,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuestionGroupId">QuestionGroupId.</param>
         /// <param name="TotalScore">Score of all questions in the group.</param>
         /// <param name="MaxTotalScore">Maximum possible score of all questions in the group.</param>
-        /// <param name="MarkedNA">MarkedNA.</param>
+        /// <param name="MarkedNA">True when the evaluation is submitted with a question group that does not have any answers. Only allowed when naEnabled is true or if set by the system.</param>
+        /// <param name="SystemMarkedNA">If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false..</param>
         /// <param name="QuestionScores">QuestionScores.</param>
-        public SurveyQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, List<SurveyQuestionScore> QuestionScores = null)
+        public SurveyQuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, bool? MarkedNA = null, bool? SystemMarkedNA = null, List<SurveyQuestionScore> QuestionScores = null)
         {
             this.QuestionGroupId = QuestionGroupId;
             this.TotalScore = TotalScore;
             this.MaxTotalScore = MaxTotalScore;
             this.MarkedNA = MarkedNA;
+            this.SystemMarkedNA = SystemMarkedNA;
             this.QuestionScores = QuestionScores;
             
         }
@@ -65,10 +67,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MarkedNA
+        /// True when the evaluation is submitted with a question group that does not have any answers. Only allowed when naEnabled is true or if set by the system
         /// </summary>
+        /// <value>True when the evaluation is submitted with a question group that does not have any answers. Only allowed when naEnabled is true or if set by the system</value>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
+
+
+
+        /// <summary>
+        /// If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.
+        /// </summary>
+        /// <value>If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.</value>
+        [DataMember(Name="systemMarkedNA", EmitDefaultValue=false)]
+        public bool? SystemMarkedNA { get; set; }
 
 
 
@@ -92,6 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  MaxTotalScore: ").Append(MaxTotalScore).Append("\n");
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
+            sb.Append("  SystemMarkedNA: ").Append(SystemMarkedNA).Append("\n");
             sb.Append("  QuestionScores: ").Append(QuestionScores).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -154,6 +167,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MarkedNA.Equals(other.MarkedNA)
                 ) &&
                 (
+                    this.SystemMarkedNA == other.SystemMarkedNA ||
+                    this.SystemMarkedNA != null &&
+                    this.SystemMarkedNA.Equals(other.SystemMarkedNA)
+                ) &&
+                (
                     this.QuestionScores == other.QuestionScores ||
                     this.QuestionScores != null &&
                     this.QuestionScores.SequenceEqual(other.QuestionScores)
@@ -182,6 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
+
+                if (this.SystemMarkedNA != null)
+                    hash = hash * 59 + this.SystemMarkedNA.GetHashCode();
 
                 if (this.QuestionScores != null)
                     hash = hash * 59 + this.QuestionScores.GetHashCode();

@@ -21,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLearningModulesCoverartCoverArtId**](LearningApi.html#getlearningmodulescoverartcoverartid) | **Get** /api/v2/learning/modules/coverart/{coverArtId} | Get a specific Learning Module cover art using ID |
 | [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **Patch** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
 | [**PatchLearningAssignmentReschedule**](LearningApi.html#patchlearningassignmentreschedule) | **Patch** /api/v2/learning/assignments/{assignmentId}/reschedule | Reschedule Learning Assignment |
+| [**PatchLearningModuleUserAssignments**](LearningApi.html#patchlearningmoduleuserassignments) | **Patch** /api/v2/learning/modules/{moduleId}/users/{userId}/assignments | Update an external assignment for a specific user |
 | [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **Post** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
 | [**PostLearningAssignmentReassign**](LearningApi.html#postlearningassignmentreassign) | **Post** /api/v2/learning/assignments/{assignmentId}/reassign | Reassign Learning Assignment |
 | [**PostLearningAssignmentReset**](LearningApi.html#postlearningassignmentreset) | **Post** /api/v2/learning/assignments/{assignmentId}/reset | Reset Learning Assignment |
@@ -673,7 +674,7 @@ namespace Example
 
 <a name="getlearningmodules"></a>
 
-## [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing.html) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
+## [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing.html) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
 
 
 
@@ -715,11 +716,12 @@ namespace Example
             var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) 
             var isPublished = isPublished_example;  // string | Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned (optional)  (default to Any)
             var statuses = new List<string>(); // List<string> | Specifies the module statuses to filter by (optional) 
+            var externalIds = new List<string>(); // List<string> | Specifies the module external IDs to filter by. Only one ID is allowed (optional) 
 
             try
             { 
                 // Get all learning modules of an organization
-                LearningModulesDomainEntityListing result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses);
+                LearningModulesDomainEntityListing result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -746,6 +748,7 @@ namespace Example
 | **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: rule, summaryData |
 | **isPublished** | **string**| Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
 | **statuses** | [**List<string>**](string.html)| Specifies the module statuses to filter by | [optional] <br />**Values**: Unpublished, Published, Archived |
+| **externalIds** | [**List<string>**](string.html)| Specifies the module external IDs to filter by. Only one ID is allowed | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1014,6 +1017,75 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **assignmentId** | **string**| The ID of Learning Assignment |  |
 | **body** | [**LearningAssignmentReschedule**](LearningAssignmentReschedule.html)| The Learning assignment reschedule model | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningAssignment**](LearningAssignment.html)
+
+<a name="patchlearningmoduleuserassignments"></a>
+
+## [**LearningAssignment**](LearningAssignment.html) PatchLearningModuleUserAssignments (string moduleId, string userId, LearningAssignmentExternalUpdate body)
+
+
+
+Update an external assignment for a specific user
+
+PatchLearningModuleUserAssignments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* learning:externalAssignment:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchLearningModuleUserAssignmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var moduleId = moduleId_example;  // string | Key identifier for the module
+            var userId = userId_example;  // string | Key identifier for the user
+            var body = new LearningAssignmentExternalUpdate(); // LearningAssignmentExternalUpdate | The learning request for updating the assignment
+
+            try
+            { 
+                // Update an external assignment for a specific user
+                LearningAssignment result = apiInstance.PatchLearningModuleUserAssignments(moduleId, userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PatchLearningModuleUserAssignments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **moduleId** | **string**| Key identifier for the module |  |
+| **userId** | **string**| Key identifier for the user |  |
+| **body** | [**LearningAssignmentExternalUpdate**](LearningAssignmentExternalUpdate.html)| The learning request for updating the assignment |  |
 {: class="table table-striped"}
 
 ### Return type

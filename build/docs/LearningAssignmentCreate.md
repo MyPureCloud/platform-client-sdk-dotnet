@@ -10,6 +10,7 @@ title: LearningAssignmentCreate
 | **ModuleId** | **string** | The Learning module Id associated with this assignment | |
 | **UserId** | **string** | The User for whom the assignment is assigned | |
 | **RecommendedCompletionDate** | **DateTime?** | The recommended completion date of assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **LengthInMinutes** | **int?** | The length in minutes of assignment | [optional] |
 {: class="table table-striped"}
 
 

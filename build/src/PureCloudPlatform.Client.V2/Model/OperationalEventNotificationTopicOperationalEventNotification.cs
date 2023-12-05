@@ -24,11 +24,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventEntity">EventEntity.</param>
         /// <param name="EntityId">EntityId.</param>
         /// <param name="EntityName">EntityName.</param>
-        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, string EntityId = null, string EntityName = null)
+        /// <param name="PreviousValue">PreviousValue.</param>
+        /// <param name="CurrentValue">CurrentValue.</param>
+        /// <param name="ErrorCode">ErrorCode.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="ParentEntity">ParentEntity.</param>
+        /// <param name="EntityType">EntityType.</param>
+        /// <param name="ConversationId">ConversationId.</param>
+        /// <param name="Timestamp">Timestamp.</param>
+        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, string EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, string ParentEntity = null, string EntityType = null, string ConversationId = null, DateTime? Timestamp = null)
         {
             this.EventEntity = EventEntity;
             this.EntityId = EntityId;
             this.EntityName = EntityName;
+            this.PreviousValue = PreviousValue;
+            this.CurrentValue = CurrentValue;
+            this.ErrorCode = ErrorCode;
+            this.Version = Version;
+            this.ParentEntity = ParentEntity;
+            this.EntityType = EntityType;
+            this.ConversationId = ConversationId;
+            this.Timestamp = Timestamp;
             
         }
         
@@ -57,6 +73,70 @@ namespace PureCloudPlatform.Client.V2.Model
         public string EntityName { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets PreviousValue
+        /// </summary>
+        [DataMember(Name="previousValue", EmitDefaultValue=false)]
+        public string PreviousValue { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets CurrentValue
+        /// </summary>
+        [DataMember(Name="currentValue", EmitDefaultValue=false)]
+        public string CurrentValue { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ErrorCode
+        /// </summary>
+        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        public string ErrorCode { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Version
+        /// </summary>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public string Version { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ParentEntity
+        /// </summary>
+        [DataMember(Name="parentEntity", EmitDefaultValue=false)]
+        public string ParentEntity { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets EntityType
+        /// </summary>
+        [DataMember(Name="entityType", EmitDefaultValue=false)]
+        public string EntityType { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ConversationId
+        /// </summary>
+        [DataMember(Name="conversationId", EmitDefaultValue=false)]
+        public string ConversationId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Timestamp
+        /// </summary>
+        [DataMember(Name="timestamp", EmitDefaultValue=false)]
+        public DateTime? Timestamp { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -69,6 +149,14 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EventEntity: ").Append(EventEntity).Append("\n");
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
+            sb.Append("  PreviousValue: ").Append(PreviousValue).Append("\n");
+            sb.Append("  CurrentValue: ").Append(CurrentValue).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  ParentEntity: ").Append(ParentEntity).Append("\n");
+            sb.Append("  EntityType: ").Append(EntityType).Append("\n");
+            sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +211,46 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntityName == other.EntityName ||
                     this.EntityName != null &&
                     this.EntityName.Equals(other.EntityName)
+                ) &&
+                (
+                    this.PreviousValue == other.PreviousValue ||
+                    this.PreviousValue != null &&
+                    this.PreviousValue.Equals(other.PreviousValue)
+                ) &&
+                (
+                    this.CurrentValue == other.CurrentValue ||
+                    this.CurrentValue != null &&
+                    this.CurrentValue.Equals(other.CurrentValue)
+                ) &&
+                (
+                    this.ErrorCode == other.ErrorCode ||
+                    this.ErrorCode != null &&
+                    this.ErrorCode.Equals(other.ErrorCode)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.ParentEntity == other.ParentEntity ||
+                    this.ParentEntity != null &&
+                    this.ParentEntity.Equals(other.ParentEntity)
+                ) &&
+                (
+                    this.EntityType == other.EntityType ||
+                    this.EntityType != null &&
+                    this.EntityType.Equals(other.EntityType)
+                ) &&
+                (
+                    this.ConversationId == other.ConversationId ||
+                    this.ConversationId != null &&
+                    this.ConversationId.Equals(other.ConversationId)
+                ) &&
+                (
+                    this.Timestamp == other.Timestamp ||
+                    this.Timestamp != null &&
+                    this.Timestamp.Equals(other.Timestamp)
                 );
         }
 
@@ -145,6 +273,30 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
+
+                if (this.PreviousValue != null)
+                    hash = hash * 59 + this.PreviousValue.GetHashCode();
+
+                if (this.CurrentValue != null)
+                    hash = hash * 59 + this.CurrentValue.GetHashCode();
+
+                if (this.ErrorCode != null)
+                    hash = hash * 59 + this.ErrorCode.GetHashCode();
+
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
+
+                if (this.ParentEntity != null)
+                    hash = hash * 59 + this.ParentEntity.GetHashCode();
+
+                if (this.EntityType != null)
+                    hash = hash * 59 + this.EntityType.GetHashCode();
+
+                if (this.ConversationId != null)
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
+
+                if (this.Timestamp != null)
+                    hash = hash * 59 + this.Timestamp.GetHashCode();
 
                 return hash;
             }

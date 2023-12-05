@@ -24,17 +24,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuestionId">QuestionId.</param>
         /// <param name="AnswerId">AnswerId.</param>
         /// <param name="Score">Unweighted score of the question.</param>
-        /// <param name="MarkedNA">MarkedNA.</param>
+        /// <param name="MarkedNA">True when the evaluation is submitted with a question that does not have an answer. Only allowed when naEnabled is true or if set by the system.</param>
+        /// <param name="SystemMarkedNA">If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false..</param>
         /// <param name="AssistedAnswerId">AnswerId found with evaluation assistance conditions.</param>
         /// <param name="NpsScore">NpsScore.</param>
         /// <param name="NpsTextAnswer">NpsTextAnswer.</param>
         /// <param name="FreeTextAnswer">FreeTextAnswer.</param>
-        public SurveyQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, string AssistedAnswerId = null, int? NpsScore = null, string NpsTextAnswer = null, string FreeTextAnswer = null)
+        public SurveyQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? SystemMarkedNA = null, string AssistedAnswerId = null, int? NpsScore = null, string NpsTextAnswer = null, string FreeTextAnswer = null)
         {
             this.QuestionId = QuestionId;
             this.AnswerId = AnswerId;
             this.Score = Score;
             this.MarkedNA = MarkedNA;
+            this.SystemMarkedNA = SystemMarkedNA;
             this.AssistedAnswerId = AssistedAnswerId;
             this.NpsScore = NpsScore;
             this.NpsTextAnswer = NpsTextAnswer;
@@ -70,10 +72,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MarkedNA
+        /// True when the evaluation is submitted with a question that does not have an answer. Only allowed when naEnabled is true or if set by the system
         /// </summary>
+        /// <value>True when the evaluation is submitted with a question that does not have an answer. Only allowed when naEnabled is true or if set by the system</value>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
+
+
+
+        /// <summary>
+        /// If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.
+        /// </summary>
+        /// <value>If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.</value>
+        [DataMember(Name="systemMarkedNA", EmitDefaultValue=false)]
+        public bool? SystemMarkedNA { get; set; }
 
 
 
@@ -122,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
+            sb.Append("  SystemMarkedNA: ").Append(SystemMarkedNA).Append("\n");
             sb.Append("  AssistedAnswerId: ").Append(AssistedAnswerId).Append("\n");
             sb.Append("  NpsScore: ").Append(NpsScore).Append("\n");
             sb.Append("  NpsTextAnswer: ").Append(NpsTextAnswer).Append("\n");
@@ -187,6 +200,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MarkedNA.Equals(other.MarkedNA)
                 ) &&
                 (
+                    this.SystemMarkedNA == other.SystemMarkedNA ||
+                    this.SystemMarkedNA != null &&
+                    this.SystemMarkedNA.Equals(other.SystemMarkedNA)
+                ) &&
+                (
                     this.AssistedAnswerId == other.AssistedAnswerId ||
                     this.AssistedAnswerId != null &&
                     this.AssistedAnswerId.Equals(other.AssistedAnswerId)
@@ -230,6 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
+
+                if (this.SystemMarkedNA != null)
+                    hash = hash * 59 + this.SystemMarkedNA.GetHashCode();
 
                 if (this.AssistedAnswerId != null)
                     hash = hash * 59 + this.AssistedAnswerId.GetHashCode();

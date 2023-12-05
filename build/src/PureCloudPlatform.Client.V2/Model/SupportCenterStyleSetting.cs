@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterStyleSetting" /> class.
         /// </summary>
-        /// <param name="HeroStyle">Support center hero customizations.</param>
-        /// <param name="GlobalStyle">Support center global customizations.</param>
+        /// <param name="HeroStyle">Knowledge portal (previously support center) hero customizations.</param>
+        /// <param name="GlobalStyle">Knowledge portal (previously support center) global customizations.</param>
         public SupportCenterStyleSetting(SupportCenterHeroStyle HeroStyle = null, SupportCenterGlobalStyle GlobalStyle = null)
         {
             this.HeroStyle = HeroStyle;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Support center hero customizations
+        /// Knowledge portal (previously support center) hero customizations
         /// </summary>
-        /// <value>Support center hero customizations</value>
+        /// <value>Knowledge portal (previously support center) hero customizations</value>
         [DataMember(Name="heroStyle", EmitDefaultValue=false)]
         public SupportCenterHeroStyle HeroStyle { get; set; }
 
 
 
         /// <summary>
-        /// Support center global customizations
+        /// Knowledge portal (previously support center) global customizations
         /// </summary>
-        /// <value>Support center global customizations</value>
+        /// <value>Knowledge portal (previously support center) global customizations</value>
         [DataMember(Name="globalStyle", EmitDefaultValue=false)]
         public SupportCenterGlobalStyle GlobalStyle { get; set; }
 

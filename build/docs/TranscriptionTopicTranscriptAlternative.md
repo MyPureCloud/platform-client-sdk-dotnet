@@ -12,6 +12,8 @@ title: TranscriptionTopicTranscriptAlternative
 | **DurationMs** | **int?** |  | [optional] |
 | **Transcript** | **string** |  | [optional] |
 | **Words** | [**List&lt;TranscriptionTopicTranscriptWord&gt;**](TranscriptionTopicTranscriptWord.html) |  | [optional] |
+| **DecoratedTranscript** | **string** |  | [optional] |
+| **DecoratedWords** | [**List&lt;TranscriptionTopicTranscriptWord&gt;**](TranscriptionTopicTranscriptWord.html) |  | [optional] |
 {: class="table table-striped"}
 
 

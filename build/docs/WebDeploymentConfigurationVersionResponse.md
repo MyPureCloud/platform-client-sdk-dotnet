@@ -17,7 +17,7 @@ title: WebDeploymentConfigurationVersionResponse
 | **CustomI18nLabels** | [**List&lt;CustomI18nLabels&gt;**](CustomI18nLabels.html) | The localization settings for homescreen app | [optional] |
 | **Messenger** | [**MessengerSettings**](MessengerSettings.html) | The settings for messenger | [optional] |
 | **Position** | [**PositionSettings**](PositionSettings.html) | The settings for position | [optional] |
-| **SupportCenter** | [**SupportCenterSettings**](SupportCenterSettings.html) | The settings for support center | [optional] |
+| **SupportCenter** | [**SupportCenterSettings**](SupportCenterSettings.html) | The settings for knowledge portal (previously support center) | [optional] |
 | **Cobrowse** | [**CobrowseSettings**](CobrowseSettings.html) | The settings for cobrowse | [optional] |
 | **JourneyEvents** | [**JourneyEventsSettings**](JourneyEventsSettings.html) | The settings for journey events | [optional] |
 | **AuthenticationSettings** | [**AuthenticationSettings**](AuthenticationSettings.html) | The settings for authenticated deployments | [optional] |

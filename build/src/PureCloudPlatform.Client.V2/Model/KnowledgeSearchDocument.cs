@@ -241,7 +241,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Jajp for "ja-JP"
             /// </summary>
             [EnumMember(Value = "ja-JP")]
-            Jajp
+            Jajp,
+            
+            /// <summary>
+            /// Enum Arae for "ar-AE"
+            /// </summary>
+            [EnumMember(Value = "ar-AE")]
+            Arae
         }
         /// <summary>
         /// Document type

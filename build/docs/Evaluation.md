@@ -34,6 +34,7 @@ title: Evaluation
 | **ResourceId** | **string** | Only used for email evaluations. Will be null for all other evaluations. | [optional] |
 | **ResourceType** | **string** | The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources. | [optional] |
 | **Redacted** | **bool?** | Is only true when the user making the request does not have sufficient permissions to see evaluation | [optional] |
+| **AgentTeam** | [**Team**](Team.html) | Team of the evaluation agent | [optional] |
 | **IsScoringIndex** | **bool?** |  | [optional] |
 | **AuthorizedActions** | **List&lt;string&gt;** | List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit | [optional] |
 | **HasAssistanceFailed** | **bool?** | Is true when evaluation assistance didn&#39;t execute successfully | [optional] |

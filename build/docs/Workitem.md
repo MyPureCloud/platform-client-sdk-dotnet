@@ -30,7 +30,7 @@ title: Workitem
 | **ExternalContact** | [**ExternalContactReference**](ExternalContactReference.html) | The external contact of the Workitem. | [optional] |
 | **ExternalTag** | **string** | The external tag of the Workitem. | [optional] |
 | **ModifiedBy** | [**UserReference**](UserReference.html) | The User who modified the Workitem. | [optional] |
-| **Queue** | [**QueueReference**](QueueReference.html) | The Workitems queue. | [optional] |
+| **Queue** | [**WorkitemQueueReference**](WorkitemQueueReference.html) | The Workitems queue. | [optional] |
 | **AssignmentState** | **string** | The assignment state of the workitem. | [optional] |
 | **DateAssignmentStateChanged** | **DateTime?** | The assignment state change date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **AlertTimeoutSeconds** | **int?** | The duration in seconds before an alert will timeout. | [optional] |

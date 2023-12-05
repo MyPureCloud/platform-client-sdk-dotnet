@@ -91,7 +91,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Answers">Answers.</param>
         /// <param name="CompletedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SurveyErrorDetails">Additional information about what happened when the survey is in Error status..</param>
-        public Survey(string Name = null, ConversationReference Conversation = null, SurveyForm SurveyForm = null, DomainEntityRef Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null, SurveyErrorDetails SurveyErrorDetails = null)
+        /// <param name="AgentTeam">The team that the agent belongs to.</param>
+        public Survey(string Name = null, ConversationReference Conversation = null, SurveyForm SurveyForm = null, DomainEntityRef Agent = null, StatusEnum? Status = null, QueueReference Queue = null, SurveyScoringSet Answers = null, DateTime? CompletedDate = null, SurveyErrorDetails SurveyErrorDetails = null, Team AgentTeam = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -102,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Answers = Answers;
             this.CompletedDate = CompletedDate;
             this.SurveyErrorDetails = SurveyErrorDetails;
+            this.AgentTeam = AgentTeam;
             
         }
         
@@ -186,6 +188,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The team that the agent belongs to
+        /// </summary>
+        /// <value>The team that the agent belongs to</value>
+        [DataMember(Name="agentTeam", EmitDefaultValue=false)]
+        public Team AgentTeam { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -212,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Answers: ").Append(Answers).Append("\n");
             sb.Append("  CompletedDate: ").Append(CompletedDate).Append("\n");
             sb.Append("  SurveyErrorDetails: ").Append(SurveyErrorDetails).Append("\n");
+            sb.Append("  AgentTeam: ").Append(AgentTeam).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -304,6 +316,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyErrorDetails.Equals(other.SurveyErrorDetails)
                 ) &&
                 (
+                    this.AgentTeam == other.AgentTeam ||
+                    this.AgentTeam != null &&
+                    this.AgentTeam.Equals(other.AgentTeam)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -350,6 +367,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SurveyErrorDetails != null)
                     hash = hash * 59 + this.SurveyErrorDetails.GetHashCode();
+
+                if (this.AgentTeam != null)
+                    hash = hash * 59 + this.AgentTeam.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestConfig" /> class.
         /// </summary>
-        /// <param name="RequestUrlTemplate">URL that may include placeholders for requests to 3rd party service.</param>
+        /// <param name="RequestUrlTemplate">URL that may include placeholders for requests to 3rd party service. This value is read only for Function Integrations and will be set when a draft is created..</param>
         /// <param name="RequestTemplate">Velocity template to define request body sent to 3rd party service..</param>
         /// <param name="RequestTemplateUri">URI to retrieve requestTemplate.</param>
         /// <param name="RequestType">HTTP method to use for request.</param>
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// URL that may include placeholders for requests to 3rd party service
+        /// URL that may include placeholders for requests to 3rd party service. This value is read only for Function Integrations and will be set when a draft is created.
         /// </summary>
-        /// <value>URL that may include placeholders for requests to 3rd party service</value>
+        /// <value>URL that may include placeholders for requests to 3rd party service. This value is read only for Function Integrations and will be set when a draft is created.</value>
         [DataMember(Name="requestUrlTemplate", EmitDefaultValue=false)]
         public string RequestUrlTemplate { get; set; }
 

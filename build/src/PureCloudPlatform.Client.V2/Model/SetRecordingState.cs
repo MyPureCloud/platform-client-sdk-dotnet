@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class SetRecordingState :  IEquatable<SetRecordingState>
     {
         /// <summary>
-        /// The value of the recordingState to set.
+        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings.
         /// </summary>
-        /// <value>The value of the recordingState to set.</value>
+        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum RecordingStateEnum
         {
@@ -52,15 +52,15 @@ namespace PureCloudPlatform.Client.V2.Model
             None
         }
         /// <summary>
-        /// The value of the recordingState to set.
+        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings.
         /// </summary>
-        /// <value>The value of the recordingState to set.</value>
+        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings.</value>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SetRecordingState" /> class.
         /// </summary>
-        /// <param name="RecordingState">The value of the recordingState to set..</param>
+        /// <param name="RecordingState">On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings..</param>
         public SetRecordingState(RecordingStateEnum? RecordingState = null)
         {
             this.RecordingState = RecordingState;

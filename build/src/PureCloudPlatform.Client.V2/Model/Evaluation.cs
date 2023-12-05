@@ -191,10 +191,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
+        /// <param name="AgentTeam">Team of the evaluation agent.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn't execute successfully.</param>
-        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, Team AgentTeam = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -222,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ResourceId = ResourceId;
             this.ResourceType = ResourceType;
             this.Redacted = Redacted;
+            this.AgentTeam = AgentTeam;
             this.IsScoringIndex = IsScoringIndex;
             this.AuthorizedActions = AuthorizedActions;
             this.HasAssistanceFailed = HasAssistanceFailed;
@@ -451,6 +453,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Team of the evaluation agent
+        /// </summary>
+        /// <value>Team of the evaluation agent</value>
+        [DataMember(Name="agentTeam", EmitDefaultValue=false)]
+        public Team AgentTeam { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets IsScoringIndex
         /// </summary>
         [DataMember(Name="isScoringIndex", EmitDefaultValue=false)]
@@ -529,6 +540,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
+            sb.Append("  AgentTeam: ").Append(AgentTeam).Append("\n");
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
             sb.Append("  AuthorizedActions: ").Append(AuthorizedActions).Append("\n");
             sb.Append("  HasAssistanceFailed: ").Append(HasAssistanceFailed).Append("\n");
@@ -710,6 +722,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Redacted.Equals(other.Redacted)
                 ) &&
                 (
+                    this.AgentTeam == other.AgentTeam ||
+                    this.AgentTeam != null &&
+                    this.AgentTeam.Equals(other.AgentTeam)
+                ) &&
+                (
                     this.IsScoringIndex == other.IsScoringIndex ||
                     this.IsScoringIndex != null &&
                     this.IsScoringIndex.Equals(other.IsScoringIndex)
@@ -827,6 +844,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Redacted != null)
                     hash = hash * 59 + this.Redacted.GetHashCode();
+
+                if (this.AgentTeam != null)
+                    hash = hash * 59 + this.AgentTeam.GetHashCode();
 
                 if (this.IsScoringIndex != null)
                     hash = hash * 59 + this.IsScoringIndex.GetHashCode();

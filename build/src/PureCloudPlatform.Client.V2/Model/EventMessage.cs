@@ -459,6 +459,18 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportListNoLongerExists,
             
             /// <summary>
+            /// Enum ImportNoListsCreatedNoContactsMatchFilter for "IMPORT_NO_LISTS_CREATED_NO_CONTACTS_MATCH_FILTER"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_NO_LISTS_CREATED_NO_CONTACTS_MATCH_FILTER")]
+            ImportNoListsCreatedNoContactsMatchFilter,
+            
+            /// <summary>
+            /// Enum ImportTargetContactListNameExists for "IMPORT_TARGET_CONTACT_LIST_NAME_EXISTS"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_TARGET_CONTACT_LIST_NAME_EXISTS")]
+            ImportTargetContactListNameExists,
+            
+            /// <summary>
             /// Enum ImportFailedContactZipCodeColumnValueInvalid for "IMPORT_FAILED_CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID"
             /// </summary>
             [EnumMember(Value = "IMPORT_FAILED_CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID")]
@@ -493,6 +505,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "IMPORT_TOO_MANY_EXTRA_COLUMNS")]
             ImportTooManyExtraColumns,
+            
+            /// <summary>
+            /// Enum ImportContactListNameLengthExceeded for "IMPORT_CONTACT_LIST_NAME_LENGTH_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_CONTACT_LIST_NAME_LENGTH_EXCEEDED")]
+            ImportContactListNameLengthExceeded,
             
             /// <summary>
             /// Enum OrganizationHasNoDomainSet for "ORGANIZATION_HAS_NO_DOMAIN_SET"

@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterImageSource" /> class.
         /// </summary>
-        /// <param name="DefaultUrl">DefaultUrl.</param>
+        /// <param name="DefaultUrl">Default URL for image.</param>
         public SupportCenterImageSource(string DefaultUrl = null)
         {
             this.DefaultUrl = DefaultUrl;
@@ -31,8 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets DefaultUrl
+        /// Default URL for image
         /// </summary>
+        /// <value>Default URL for image</value>
         [DataMember(Name="defaultUrl", EmitDefaultValue=false)]
         public string DefaultUrl { get; set; }
 

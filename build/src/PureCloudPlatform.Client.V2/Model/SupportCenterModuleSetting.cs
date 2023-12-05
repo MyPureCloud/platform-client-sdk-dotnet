@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SupportCenterModuleSetting" /> class.
         /// </summary>
         /// <param name="Type">Screen module type.</param>
-        /// <param name="Enabled">Whether or not support center screen module is enabled.</param>
+        /// <param name="Enabled">Whether or not knowledge portal (previously support center) screen module is enabled.</param>
         /// <param name="CompactCategoryModuleTemplate">Compact category module template.</param>
         /// <param name="DetailedCategoryModuleTemplate">Detailed category module template.</param>
         public SupportCenterModuleSetting(TypeEnum? Type = null, bool? Enabled = null, SupportCenterCompactCategoryModuleTemplate CompactCategoryModuleTemplate = null, SupportCenterDetailedCategoryModuleTemplate DetailedCategoryModuleTemplate = null)
@@ -102,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether or not support center screen module is enabled
+        /// Whether or not knowledge portal (previously support center) screen module is enabled
         /// </summary>
-        /// <value>Whether or not support center screen module is enabled</value>
+        /// <value>Whether or not knowledge portal (previously support center) screen module is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 

@@ -451,14 +451,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The ID of the deployment sending the ping.</param>
         /// <param name="customerCookieId">ID of the customer associated with the ping.</param>
-        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session</param>
         /// <param name="dl">Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)</param>
         /// <param name="dt">Document Title.  A human readable name for the page or screen (optional)</param>
         /// <param name="appNamespace">Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)</param>
+        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)</param>
         /// <param name="sinceLastBeaconMilliseconds">How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)</param>
         /// <returns>DeploymentPing</returns>
         
-        DeploymentPing GetJourneyDeploymentCustomerPing (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null);
+        DeploymentPing GetJourneyDeploymentCustomerPing (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null);
 
         /// <summary>
         /// Send a ping.
@@ -469,14 +469,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The ID of the deployment sending the ping.</param>
         /// <param name="customerCookieId">ID of the customer associated with the ping.</param>
-        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session</param>
         /// <param name="dl">Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)</param>
         /// <param name="dt">Document Title.  A human readable name for the page or screen (optional)</param>
         /// <param name="appNamespace">Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)</param>
+        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)</param>
         /// <param name="sinceLastBeaconMilliseconds">How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)</param>
         /// <returns>ApiResponse of DeploymentPing</returns>
         
-        ApiResponse<DeploymentPing> GetJourneyDeploymentCustomerPingWithHttpInfo (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null);
+        ApiResponse<DeploymentPing> GetJourneyDeploymentCustomerPingWithHttpInfo (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null);
 
         /// <summary>
         /// Retrieve a single outcome.
@@ -1647,14 +1647,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The ID of the deployment sending the ping.</param>
         /// <param name="customerCookieId">ID of the customer associated with the ping.</param>
-        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session</param>
         /// <param name="dl">Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)</param>
         /// <param name="dt">Document Title.  A human readable name for the page or screen (optional)</param>
         /// <param name="appNamespace">Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)</param>
+        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)</param>
         /// <param name="sinceLastBeaconMilliseconds">How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)</param>
         /// <returns>Task of DeploymentPing</returns>
         
-        System.Threading.Tasks.Task<DeploymentPing> GetJourneyDeploymentCustomerPingAsync (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null);
+        System.Threading.Tasks.Task<DeploymentPing> GetJourneyDeploymentCustomerPingAsync (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null);
 
         /// <summary>
         /// Send a ping.
@@ -1665,14 +1665,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The ID of the deployment sending the ping.</param>
         /// <param name="customerCookieId">ID of the customer associated with the ping.</param>
-        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session</param>
         /// <param name="dl">Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)</param>
         /// <param name="dt">Document Title.  A human readable name for the page or screen (optional)</param>
         /// <param name="appNamespace">Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)</param>
+        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)</param>
         /// <param name="sinceLastBeaconMilliseconds">How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)</param>
         /// <returns>Task of ApiResponse (DeploymentPing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DeploymentPing>> GetJourneyDeploymentCustomerPingAsyncWithHttpInfo (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null);
+        System.Threading.Tasks.Task<ApiResponse<DeploymentPing>> GetJourneyDeploymentCustomerPingAsyncWithHttpInfo (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null);
 
         /// <summary>
         /// Retrieve a single outcome.
@@ -5970,16 +5970,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The ID of the deployment sending the ping.</param>
         /// <param name="customerCookieId">ID of the customer associated with the ping.</param>
-        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session</param>
         /// <param name="dl">Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)</param>
         /// <param name="dt">Document Title.  A human readable name for the page or screen (optional)</param>
         /// <param name="appNamespace">Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)</param>
+        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)</param>
         /// <param name="sinceLastBeaconMilliseconds">How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)</param>
         /// <returns>DeploymentPing</returns>
         
-        public DeploymentPing GetJourneyDeploymentCustomerPing (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null)
+        public DeploymentPing GetJourneyDeploymentCustomerPing (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null)
         {
-             ApiResponse<DeploymentPing> localVarResponse = GetJourneyDeploymentCustomerPingWithHttpInfo(deploymentId, customerCookieId, sessionId, dl, dt, appNamespace, sinceLastBeaconMilliseconds);
+             ApiResponse<DeploymentPing> localVarResponse = GetJourneyDeploymentCustomerPingWithHttpInfo(deploymentId, customerCookieId, dl, dt, appNamespace, sessionId, sinceLastBeaconMilliseconds);
              return localVarResponse.Data;
         }
 
@@ -5990,14 +5990,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The ID of the deployment sending the ping.</param>
         /// <param name="customerCookieId">ID of the customer associated with the ping.</param>
-        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session</param>
         /// <param name="dl">Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)</param>
         /// <param name="dt">Document Title.  A human readable name for the page or screen (optional)</param>
         /// <param name="appNamespace">Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)</param>
+        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)</param>
         /// <param name="sinceLastBeaconMilliseconds">How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)</param>
         /// <returns>ApiResponse of DeploymentPing</returns>
         
-        public ApiResponse< DeploymentPing > GetJourneyDeploymentCustomerPingWithHttpInfo (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null)
+        public ApiResponse< DeploymentPing > GetJourneyDeploymentCustomerPingWithHttpInfo (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null)
         { 
             // verify the required parameter 'deploymentId' is set
             if (deploymentId == null)
@@ -6005,9 +6005,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'customerCookieId' is set
             if (customerCookieId == null)
                 throw new ApiException(400, "Missing required parameter 'customerCookieId' when calling JourneyApi->GetJourneyDeploymentCustomerPing");
-            // verify the required parameter 'sessionId' is set
-            if (sessionId == null)
-                throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneyDeploymentCustomerPing");
 
             var localVarPath = "/api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6091,16 +6088,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The ID of the deployment sending the ping.</param>
         /// <param name="customerCookieId">ID of the customer associated with the ping.</param>
-        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session</param>
         /// <param name="dl">Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)</param>
         /// <param name="dt">Document Title.  A human readable name for the page or screen (optional)</param>
         /// <param name="appNamespace">Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)</param>
+        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)</param>
         /// <param name="sinceLastBeaconMilliseconds">How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)</param>
         /// <returns>Task of DeploymentPing</returns>
         
-        public async System.Threading.Tasks.Task<DeploymentPing> GetJourneyDeploymentCustomerPingAsync (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null)
+        public async System.Threading.Tasks.Task<DeploymentPing> GetJourneyDeploymentCustomerPingAsync (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null)
         {
-             ApiResponse<DeploymentPing> localVarResponse = await GetJourneyDeploymentCustomerPingAsyncWithHttpInfo(deploymentId, customerCookieId, sessionId, dl, dt, appNamespace, sinceLastBeaconMilliseconds);
+             ApiResponse<DeploymentPing> localVarResponse = await GetJourneyDeploymentCustomerPingAsyncWithHttpInfo(deploymentId, customerCookieId, dl, dt, appNamespace, sessionId, sinceLastBeaconMilliseconds);
              return localVarResponse.Data;
 
         }
@@ -6112,14 +6109,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">The ID of the deployment sending the ping.</param>
         /// <param name="customerCookieId">ID of the customer associated with the ping.</param>
-        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session</param>
         /// <param name="dl">Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. &#39;home&#39; or &#39;help. Pings without this parameter will not return actions. (optional)</param>
         /// <param name="dt">Document Title.  A human readable name for the page or screen (optional)</param>
         /// <param name="appNamespace">Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional)</param>
+        /// <param name="sessionId">UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional)</param>
         /// <param name="sinceLastBeaconMilliseconds">How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional)</param>
         /// <returns>Task of ApiResponse (DeploymentPing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DeploymentPing>> GetJourneyDeploymentCustomerPingAsyncWithHttpInfo (string deploymentId, string customerCookieId, string sessionId, string dl = null, string dt = null, string appNamespace = null, long? sinceLastBeaconMilliseconds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DeploymentPing>> GetJourneyDeploymentCustomerPingAsyncWithHttpInfo (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null)
         { 
             // verify the required parameter 'deploymentId' is set
             if (deploymentId == null)
@@ -6128,10 +6125,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'customerCookieId' is set
             if (customerCookieId == null)
                 throw new ApiException(400, "Missing required parameter 'customerCookieId' when calling JourneyApi->GetJourneyDeploymentCustomerPing");
-            
-            // verify the required parameter 'sessionId' is set
-            if (sessionId == null)
-                throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneyDeploymentCustomerPing");
             
 
             var localVarPath = "/api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping";

@@ -30,11 +30,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModuleId">The Learning module Id associated with this assignment (required).</param>
         /// <param name="UserId">The User for whom the assignment is assigned (required).</param>
         /// <param name="RecommendedCompletionDate">The recommended completion date of assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public LearningAssignmentCreate(string ModuleId = null, string UserId = null, DateTime? RecommendedCompletionDate = null)
+        /// <param name="LengthInMinutes">The length in minutes of assignment.</param>
+        public LearningAssignmentCreate(string ModuleId = null, string UserId = null, DateTime? RecommendedCompletionDate = null, int? LengthInMinutes = null)
         {
             this.ModuleId = ModuleId;
             this.UserId = UserId;
             this.RecommendedCompletionDate = RecommendedCompletionDate;
+            this.LengthInMinutes = LengthInMinutes;
             
         }
         
@@ -66,6 +68,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? RecommendedCompletionDate { get; set; }
 
 
+
+        /// <summary>
+        /// The length in minutes of assignment
+        /// </summary>
+        /// <value>The length in minutes of assignment</value>
+        [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
+        public int? LengthInMinutes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModuleId: ").Append(ModuleId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  RecommendedCompletionDate: ").Append(RecommendedCompletionDate).Append("\n");
+            sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +144,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecommendedCompletionDate == other.RecommendedCompletionDate ||
                     this.RecommendedCompletionDate != null &&
                     this.RecommendedCompletionDate.Equals(other.RecommendedCompletionDate)
+                ) &&
+                (
+                    this.LengthInMinutes == other.LengthInMinutes ||
+                    this.LengthInMinutes != null &&
+                    this.LengthInMinutes.Equals(other.LengthInMinutes)
                 );
         }
 
@@ -154,6 +171,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecommendedCompletionDate != null)
                     hash = hash * 59 + this.RecommendedCompletionDate.GetHashCode();
+
+                if (this.LengthInMinutes != null)
+                    hash = hash * 59 + this.LengthInMinutes.GetHashCode();
 
                 return hash;
             }

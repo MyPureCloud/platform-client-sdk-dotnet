@@ -13,15 +13,15 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Settings concerning support center
+    /// Settings concerning knowledge portal (previously support center)
     /// </summary>
     [DataContract]
     public partial class SupportCenterSettings :  IEquatable<SupportCenterSettings>
     {
         /// <summary>
-        /// Router type for support center
+        /// Router type for knowledge portal (previously support center)
         /// </summary>
-        /// <value>Router type for support center</value>
+        /// <value>Router type for knowledge portal (previously support center)</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum RouterTypeEnum
         {
@@ -46,21 +46,21 @@ namespace PureCloudPlatform.Client.V2.Model
             Browser
         }
         /// <summary>
-        /// Router type for support center
+        /// Router type for knowledge portal (previously support center)
         /// </summary>
-        /// <value>Router type for support center</value>
+        /// <value>Router type for knowledge portal (previously support center)</value>
         [DataMember(Name="routerType", EmitDefaultValue=false)]
         public RouterTypeEnum? RouterType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterSettings" /> class.
         /// </summary>
-        /// <param name="Enabled">Whether or not support center is enabled.</param>
-        /// <param name="KnowledgeBase">The knowledge base for support center.</param>
-        /// <param name="CustomMessages">Customizable display texts for support center.</param>
-        /// <param name="RouterType">Router type for support center.</param>
-        /// <param name="Screens">Available screens for the support center with its modules.</param>
-        /// <param name="EnabledCategories">Enabled article categories for support center.</param>
-        /// <param name="StyleSetting">Style attributes for support center.</param>
+        /// <param name="Enabled">Whether or not knowledge portal (previously support center) is enabled.</param>
+        /// <param name="KnowledgeBase">The knowledge base for knowledge portal (previously support center).</param>
+        /// <param name="CustomMessages">Customizable display texts for knowledge portal (previously support center).</param>
+        /// <param name="RouterType">Router type for knowledge portal (previously support center).</param>
+        /// <param name="Screens">Available screens for the knowledge portal (previously support center) with its modules.</param>
+        /// <param name="EnabledCategories">Featured categories for knowledge portal (previously support center) home screen.</param>
+        /// <param name="StyleSetting">Style attributes for knowledge portal (previously support center).</param>
         /// <param name="Feedback">Customer feedback settings.</param>
         public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<SupportCenterCategory> EnabledCategories = null, SupportCenterStyleSetting StyleSetting = null, SupportCenterFeedbackSettings Feedback = null)
         {
@@ -78,27 +78,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether or not support center is enabled
+        /// Whether or not knowledge portal (previously support center) is enabled
         /// </summary>
-        /// <value>Whether or not support center is enabled</value>
+        /// <value>Whether or not knowledge portal (previously support center) is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 
 
 
         /// <summary>
-        /// The knowledge base for support center
+        /// The knowledge base for knowledge portal (previously support center)
         /// </summary>
-        /// <value>The knowledge base for support center</value>
+        /// <value>The knowledge base for knowledge portal (previously support center)</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public AddressableEntityRef KnowledgeBase { get; set; }
 
 
 
         /// <summary>
-        /// Customizable display texts for support center
+        /// Customizable display texts for knowledge portal (previously support center)
         /// </summary>
-        /// <value>Customizable display texts for support center</value>
+        /// <value>Customizable display texts for knowledge portal (previously support center)</value>
         [DataMember(Name="customMessages", EmitDefaultValue=false)]
         public List<SupportCenterCustomMessage> CustomMessages { get; set; }
 
@@ -107,27 +107,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Available screens for the support center with its modules
+        /// Available screens for the knowledge portal (previously support center) with its modules
         /// </summary>
-        /// <value>Available screens for the support center with its modules</value>
+        /// <value>Available screens for the knowledge portal (previously support center) with its modules</value>
         [DataMember(Name="screens", EmitDefaultValue=false)]
         public List<SupportCenterScreen> Screens { get; set; }
 
 
 
         /// <summary>
-        /// Enabled article categories for support center
+        /// Featured categories for knowledge portal (previously support center) home screen
         /// </summary>
-        /// <value>Enabled article categories for support center</value>
+        /// <value>Featured categories for knowledge portal (previously support center) home screen</value>
         [DataMember(Name="enabledCategories", EmitDefaultValue=false)]
         public List<SupportCenterCategory> EnabledCategories { get; set; }
 
 
 
         /// <summary>
-        /// Style attributes for support center
+        /// Style attributes for knowledge portal (previously support center)
         /// </summary>
-        /// <value>Style attributes for support center</value>
+        /// <value>Style attributes for knowledge portal (previously support center)</value>
         [DataMember(Name="styleSetting", EmitDefaultValue=false)]
         public SupportCenterStyleSetting StyleSetting { get; set; }
 

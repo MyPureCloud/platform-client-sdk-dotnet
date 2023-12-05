@@ -7,7 +7,7 @@ title: SupportCenterImageSource
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **DefaultUrl** | **string** |  | [optional] |
+| **DefaultUrl** | **string** | Default URL for image | [optional] |
 {: class="table table-striped"}
 
 

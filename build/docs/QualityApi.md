@@ -654,7 +654,7 @@ namespace Example
 
 <a name="getqualityagentsactivity"></a>
 
-## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string formContextId = null)
+## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null)
 
 
 
@@ -700,12 +700,13 @@ namespace Example
             var evaluatorUserId = evaluatorUserId_example;  // string | user id of the evaluator (optional) 
             var name = name_example;  // string | name (optional) 
             var group = group_example;  // string | group id (optional) 
+            var agentTeamId = agentTeamId_example;  // string | team id of agents requested (optional) 
             var formContextId = formContextId_example;  // string | shared id between form versions (optional) 
 
             try
             { 
                 // Gets a list of Agent Activities
-                AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, formContextId);
+                AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -734,6 +735,7 @@ namespace Example
 | **evaluatorUserId** | **string**| user id of the evaluator | [optional]  |
 | **name** | **string**| name | [optional]  |
 | **group** | **string**| group id | [optional]  |
+| **agentTeamId** | **string**| team id of agents requested | [optional]  |
 | **formContextId** | **string**| shared id between form versions | [optional]  |
 {: class="table table-striped"}
 
@@ -1155,7 +1157,7 @@ namespace Example
 
 <a name="getqualityevaluationsquery"></a>
 
-## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
 
 
 
@@ -1197,6 +1199,7 @@ namespace Example
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var conversationId = conversationId_example;  // string | conversationId specified (optional) 
             var agentUserId = agentUserId_example;  // string | user id of the agent (optional) 
+            var agentTeamId = agentTeamId_example;  // string | team id of the agent (optional) 
             var evaluatorUserId = evaluatorUserId_example;  // string | evaluator user id (optional) 
             var assigneeUserId = assigneeUserId_example;  // string | assignee user id (optional) 
             var queueId = queueId_example;  // string | queue id (optional) 
@@ -1213,7 +1216,7 @@ namespace Example
             try
             { 
                 // Queries Evaluations and returns a paged list
-                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1238,6 +1241,7 @@ namespace Example
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **conversationId** | **string**| conversationId specified | [optional]  |
 | **agentUserId** | **string**| user id of the agent | [optional]  |
+| **agentTeamId** | **string**| team id of the agent | [optional]  |
 | **evaluatorUserId** | **string**| evaluator user id | [optional]  |
 | **assigneeUserId** | **string**| assignee user id | [optional]  |
 | **queueId** | **string**| queue id | [optional]  |
@@ -1258,7 +1262,7 @@ namespace Example
 
 <a name="getqualityevaluatorsactivity"></a>
 
-## [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+## [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null, string agentTeamId = null)
 
 
 
@@ -1301,11 +1305,12 @@ namespace Example
             var name = name_example;  // string | Evaluator name (optional) 
             var permission = new List<string>(); // List<string> | permission strings (optional) 
             var group = group_example;  // string | group id (optional) 
+            var agentTeamId = agentTeamId_example;  // string | team id of agents to be considered (optional) 
 
             try
             { 
                 // Get an evaluator activity
-                EvaluatorActivityEntityListing result = apiInstance.GetQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
+                EvaluatorActivityEntityListing result = apiInstance.GetQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group, agentTeamId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1333,6 +1338,7 @@ namespace Example
 | **name** | **string**| Evaluator name | [optional]  |
 | **permission** | [**List<string>**](string.html)| permission strings | [optional]  |
 | **group** | **string**| group id | [optional]  |
+| **agentTeamId** | **string**| team id of agents to be considered | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

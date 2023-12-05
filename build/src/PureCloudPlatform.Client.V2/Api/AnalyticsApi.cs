@@ -146,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -165,7 +165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -179,6 +179,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
         
         ApiResponse<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+
+        /// <summary>
+        /// Get Bot Flow Sessions.
+        /// </summary>
+        /// <remarks>
+        /// Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="botResultCategories">Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)</param>
+        /// <param name="endLanguage">Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)</param>
+        /// <returns>SessionsResponse</returns>
+        
+        SessionsResponse GetAnalyticsBotflowSessions (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null);
+
+        /// <summary>
+        /// Get Bot Flow Sessions.
+        /// </summary>
+        /// <remarks>
+        /// Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="botResultCategories">Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)</param>
+        /// <param name="endLanguage">Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)</param>
+        /// <returns>ApiResponse of SessionsResponse</returns>
+        
+        ApiResponse<SessionsResponse> GetAnalyticsBotflowSessionsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null);
 
         /// <summary>
         /// Get status for async query for bot aggregates
@@ -1898,48 +1932,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Place a scheduled report immediately into the reporting queue
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>RunNowResponse</returns>
-        
+        [Obsolete]
         RunNowResponse PostAnalyticsReportingScheduleRunreport (string scheduleId);
 
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of RunNowResponse</returns>
-        
+        [Obsolete]
         ApiResponse<RunNowResponse> PostAnalyticsReportingScheduleRunreportWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Create a scheduled report job
         /// </summary>
         /// <remarks>
-        /// Create a scheduled report job.
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        
+        [Obsolete]
         ReportSchedule PostAnalyticsReportingSchedules (ReportSchedule body);
 
         /// <summary>
         /// Create a scheduled report job
         /// </summary>
         /// <remarks>
-        /// Create a scheduled report job.
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        
+        [Obsolete]
         ApiResponse<ReportSchedule> PostAnalyticsReportingSchedulesWithHttpInfo (ReportSchedule body);
 
         /// <summary>
@@ -2360,26 +2394,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a scheduled report job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        
+        [Obsolete]
         ReportSchedule PutAnalyticsReportingSchedule (string scheduleId, ReportSchedule body);
 
         /// <summary>
         /// Update a scheduled report job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        
+        [Obsolete]
         ApiResponse<ReportSchedule> PutAnalyticsReportingScheduleWithHttpInfo (string scheduleId, ReportSchedule body);
 
         #endregion Synchronous Operations
@@ -2516,7 +2550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -2535,7 +2569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -2549,6 +2583,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+
+        /// <summary>
+        /// Get Bot Flow Sessions.
+        /// </summary>
+        /// <remarks>
+        /// Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="botResultCategories">Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)</param>
+        /// <param name="endLanguage">Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)</param>
+        /// <returns>Task of SessionsResponse</returns>
+        
+        System.Threading.Tasks.Task<SessionsResponse> GetAnalyticsBotflowSessionsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null);
+
+        /// <summary>
+        /// Get Bot Flow Sessions.
+        /// </summary>
+        /// <remarks>
+        /// Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="botResultCategories">Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)</param>
+        /// <param name="endLanguage">Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)</param>
+        /// <returns>Task of ApiResponse (SessionsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SessionsResponse>> GetAnalyticsBotflowSessionsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null);
 
         /// <summary>
         /// Get status for async query for bot aggregates
@@ -4268,48 +4336,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Place a scheduled report immediately into the reporting queue
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of RunNowResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<RunNowResponse> PostAnalyticsReportingScheduleRunreportAsync (string scheduleId);
 
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (RunNowResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostAnalyticsReportingScheduleRunreportAsyncWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Create a scheduled report job
         /// </summary>
         /// <remarks>
-        /// Create a scheduled report job.
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ReportSchedule> PostAnalyticsReportingSchedulesAsync (ReportSchedule body);
 
         /// <summary>
         /// Create a scheduled report job
         /// </summary>
         /// <remarks>
-        /// Create a scheduled report job.
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostAnalyticsReportingSchedulesAsyncWithHttpInfo (ReportSchedule body);
 
         /// <summary>
@@ -4730,26 +4798,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a scheduled report job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ReportSchedule> PutAnalyticsReportingScheduleAsync (string scheduleId, ReportSchedule body);
 
         /// <summary>
         /// Update a scheduled report job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId, ReportSchedule body);
 
         #endregion Asynchronous Operations
@@ -5909,7 +5977,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -5930,7 +5998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -6034,7 +6102,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -6056,7 +6124,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint do not persist indefinitely, as they auto delete after a predefined period.
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -6154,6 +6222,247 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ReportingTurnsResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ReportingTurnsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportingTurnsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Bot Flow Sessions. 
+        /// Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="botResultCategories">Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)</param>
+        /// <param name="endLanguage">Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)</param>
+        /// <returns>SessionsResponse</returns>
+        
+        public SessionsResponse GetAnalyticsBotflowSessions (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null)
+        {
+             ApiResponse<SessionsResponse> localVarResponse = GetAnalyticsBotflowSessionsWithHttpInfo(botFlowId, after, pageSize, interval, botResultCategories, endLanguage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Bot Flow Sessions. 
+        /// Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="botResultCategories">Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)</param>
+        /// <param name="endLanguage">Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)</param>
+        /// <returns>ApiResponse of SessionsResponse</returns>
+        
+        public ApiResponse< SessionsResponse > GetAnalyticsBotflowSessionsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null)
+        { 
+            // verify the required parameter 'botFlowId' is set
+            if (botFlowId == null)
+                throw new ApiException(400, "Missing required parameter 'botFlowId' when calling AnalyticsApi->GetAnalyticsBotflowSessions");
+
+            var localVarPath = "/api/v2/analytics/botflows/{botFlowId}/sessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (botFlowId != null) localVarPathParams.Add("botFlowId", this.Configuration.ApiClient.ParameterToString(botFlowId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
+            if (botResultCategories != null) localVarQueryParams.Add(new Tuple<string, string>("botResultCategories", this.Configuration.ApiClient.ParameterToString(botResultCategories)));
+            if (endLanguage != null) localVarQueryParams.Add(new Tuple<string, string>("endLanguage", this.Configuration.ApiClient.ParameterToString(endLanguage)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowSessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowSessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SessionsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SessionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Bot Flow Sessions. 
+        /// Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="botResultCategories">Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)</param>
+        /// <param name="endLanguage">Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)</param>
+        /// <returns>Task of SessionsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<SessionsResponse> GetAnalyticsBotflowSessionsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null)
+        {
+             ApiResponse<SessionsResponse> localVarResponse = await GetAnalyticsBotflowSessionsAsyncWithHttpInfo(botFlowId, after, pageSize, interval, botResultCategories, endLanguage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Bot Flow Sessions. 
+        /// Returns the bot flow sessions in reverse chronological order from the date they were created. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="botResultCategories">Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. (optional)</param>
+        /// <param name="endLanguage">Optional case-insensitive language code to filter sessions by the language the sessions ended in. (optional)</param>
+        /// <returns>Task of ApiResponse (SessionsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SessionsResponse>> GetAnalyticsBotflowSessionsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null)
+        { 
+            // verify the required parameter 'botFlowId' is set
+            if (botFlowId == null)
+                throw new ApiException(400, "Missing required parameter 'botFlowId' when calling AnalyticsApi->GetAnalyticsBotflowSessions");
+            
+
+            var localVarPath = "/api/v2/analytics/botflows/{botFlowId}/sessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (botFlowId != null) localVarPathParams.Add("botFlowId", this.Configuration.ApiClient.ParameterToString(botFlowId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
+            if (botResultCategories != null) localVarQueryParams.Add(new Tuple<string, string>("botResultCategories", this.Configuration.ApiClient.ParameterToString(botResultCategories)));
+            if (endLanguage != null) localVarQueryParams.Add(new Tuple<string, string>("endLanguage", this.Configuration.ApiClient.ParameterToString(endLanguage)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowSessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowSessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SessionsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SessionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -20730,12 +21039,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue 
-        /// 
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>RunNowResponse</returns>
-        
+        [Obsolete]
         public RunNowResponse PostAnalyticsReportingScheduleRunreport (string scheduleId)
         {
              ApiResponse<RunNowResponse> localVarResponse = PostAnalyticsReportingScheduleRunreportWithHttpInfo(scheduleId);
@@ -20744,12 +21053,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue 
-        /// 
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of RunNowResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< RunNowResponse > PostAnalyticsReportingScheduleRunreportWithHttpInfo (string scheduleId)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -20834,12 +21143,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue 
-        /// 
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of RunNowResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<RunNowResponse> PostAnalyticsReportingScheduleRunreportAsync (string scheduleId)
         {
              ApiResponse<RunNowResponse> localVarResponse = await PostAnalyticsReportingScheduleRunreportAsyncWithHttpInfo(scheduleId);
@@ -20849,12 +21158,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue 
-        /// 
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (RunNowResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostAnalyticsReportingScheduleRunreportAsyncWithHttpInfo (string scheduleId)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -20941,12 +21250,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a scheduled report job 
-        /// Create a scheduled report job.
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        
+        [Obsolete]
         public ReportSchedule PostAnalyticsReportingSchedules (ReportSchedule body)
         {
              ApiResponse<ReportSchedule> localVarResponse = PostAnalyticsReportingSchedulesWithHttpInfo(body);
@@ -20955,12 +21264,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a scheduled report job 
-        /// Create a scheduled report job.
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        
+        [Obsolete]
         public ApiResponse< ReportSchedule > PostAnalyticsReportingSchedulesWithHttpInfo (ReportSchedule body)
         { 
             // verify the required parameter 'body' is set
@@ -21050,12 +21359,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a scheduled report job 
-        /// Create a scheduled report job.
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ReportSchedule> PostAnalyticsReportingSchedulesAsync (ReportSchedule body)
         {
              ApiResponse<ReportSchedule> localVarResponse = await PostAnalyticsReportingSchedulesAsyncWithHttpInfo(body);
@@ -21065,12 +21374,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a scheduled report job 
-        /// Create a scheduled report job.
+        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostAnalyticsReportingSchedulesAsyncWithHttpInfo (ReportSchedule body)
         { 
             // verify the required parameter 'body' is set
@@ -24770,13 +25079,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a scheduled report job. 
-        /// 
+        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        
+        [Obsolete]
         public ReportSchedule PutAnalyticsReportingSchedule (string scheduleId, ReportSchedule body)
         {
              ApiResponse<ReportSchedule> localVarResponse = PutAnalyticsReportingScheduleWithHttpInfo(scheduleId, body);
@@ -24785,13 +25094,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a scheduled report job. 
-        /// 
+        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        
+        [Obsolete]
         public ApiResponse< ReportSchedule > PutAnalyticsReportingScheduleWithHttpInfo (string scheduleId, ReportSchedule body)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -24885,13 +25194,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a scheduled report job. 
-        /// 
+        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ReportSchedule> PutAnalyticsReportingScheduleAsync (string scheduleId, ReportSchedule body)
         {
              ApiResponse<ReportSchedule> localVarResponse = await PutAnalyticsReportingScheduleAsyncWithHttpInfo(scheduleId, body);
@@ -24901,13 +25210,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a scheduled report job. 
-        /// 
+        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId, ReportSchedule body)
         { 
             // verify the required parameter 'scheduleId' is set

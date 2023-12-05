@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultSkills">The default skills for Workitems created from the Worktype..</param>
         /// <param name="AssignmentEnabled">When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false..</param>
         /// <param name="Schema">The schema defining the custom attributes for Workitems created from the Worktype..</param>
-        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, QueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null)
+        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -215,7 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The default queue for Workitems created from the Worktype.</value>
         [DataMember(Name="defaultQueue", EmitDefaultValue=false)]
-        public QueueReference DefaultQueue { get; set; }
+        public WorkitemQueueReference DefaultQueue { get; set; }
 
 
 

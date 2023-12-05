@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="SelfUri">SelfUri.</param>
-        /// <param name="Image">Image.</param>
+        /// <param name="Image">Image attributes for a featured category.</param>
         public SupportCenterCategory(string Id = null, string SelfUri = null, SupportCenterImage Image = null)
         {
             this.Id = Id;
@@ -51,8 +51,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Image
+        /// Image attributes for a featured category
         /// </summary>
+        /// <value>Image attributes for a featured category</value>
         [DataMember(Name="image", EmitDefaultValue=false)]
         public SupportCenterImage Image { get; set; }
 

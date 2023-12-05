@@ -326,11 +326,13 @@ docs/BotAggregationQuery.md
 docs/BotAggregationView.md
 docs/BotAsyncAggregateQueryResponse.md
 docs/BotAsyncAggregationQuery.md
+docs/BotChannel.md
 docs/BotConnectorBot.md
 docs/BotConnectorBotSummaryEntityListing.md
 docs/BotConnectorBotVersion.md
 docs/BotConnectorBotVersionSummaryEntityListing.md
 docs/BotExecutionConfiguration.md
+docs/BotFlowSession.md
 docs/BotIntent.md
 docs/BotList.md
 docs/BotMessengerProfile.md
@@ -1938,6 +1940,7 @@ docs/GetAlertingRule-example.txt
 docs/GetAnalyticsActionsAggregatesJob-example.txt
 docs/GetAnalyticsActionsAggregatesJobResults-example.txt
 docs/GetAnalyticsBotflowReportingturns-example.txt
+docs/GetAnalyticsBotflowSessions-example.txt
 docs/GetAnalyticsBotsAggregatesJob-example.txt
 docs/GetAnalyticsBotsAggregatesJobResults-example.txt
 docs/GetAnalyticsConversationDetails-example.txt
@@ -3449,6 +3452,7 @@ docs/LearningAssignmentBulkAddResponse.md
 docs/LearningAssignmentBulkRemoveResponse.md
 docs/LearningAssignmentCreate.md
 docs/LearningAssignmentEntity.md
+docs/LearningAssignmentExternalUpdate.md
 docs/LearningAssignmentItem.md
 docs/LearningAssignmentReassign.md
 docs/LearningAssignmentReference.md
@@ -3980,6 +3984,7 @@ docs/PatchLanguageunderstandingDomain-example.txt
 docs/PatchLanguageunderstandingMinerDraft-example.txt
 docs/PatchLearningAssignment-example.txt
 docs/PatchLearningAssignmentReschedule-example.txt
+docs/PatchLearningModuleUserAssignments-example.txt
 docs/PatchLocation-example.txt
 docs/PatchMessagingSetting-example.txt
 docs/PatchMessagingSupportedcontentSupportedContentId-example.txt
@@ -5538,6 +5543,7 @@ docs/SessionEndDetails.md
 docs/SessionLastEvent.md
 docs/SessionListing.md
 docs/SessionSegmentAssignment.md
+docs/SessionsResponse.md
 docs/SetContentTemplateActionSettings.md
 docs/SetRecordingState.md
 docs/SetSmsPhoneNumberActionSettings.md
@@ -6481,6 +6487,7 @@ docs/WorkitemManualAssign.md
 docs/WorkitemPostQueryEntityListing.md
 docs/WorkitemQueryPostRequest.md
 docs/WorkitemQuerySort.md
+docs/WorkitemQueueReference.md
 docs/WorkitemReference.md
 docs/WorkitemSchema.md
 docs/WorkitemScoredAgent.md
@@ -6943,11 +6950,13 @@ src/PureCloudPlatform.Client.V2/Model/BotAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/BotAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/BotAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BotAsyncAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/BotChannel.cs
 src/PureCloudPlatform.Client.V2/Model/BotConnectorBot.cs
 src/PureCloudPlatform.Client.V2/Model/BotConnectorBotSummaryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/BotConnectorBotVersion.cs
 src/PureCloudPlatform.Client.V2/Model/BotConnectorBotVersionSummaryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/BotExecutionConfiguration.cs
+src/PureCloudPlatform.Client.V2/Model/BotFlowSession.cs
 src/PureCloudPlatform.Client.V2/Model/BotIntent.cs
 src/PureCloudPlatform.Client.V2/Model/BotList.cs
 src/PureCloudPlatform.Client.V2/Model/BotMessengerProfile.cs
@@ -8654,6 +8663,7 @@ src/PureCloudPlatform.Client.V2/Model/LearningAssignmentBulkAddResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentBulkRemoveResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentCreate.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentEntity.cs
+src/PureCloudPlatform.Client.V2/Model/LearningAssignmentExternalUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentItem.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentReassign.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentReference.cs
@@ -9718,6 +9728,7 @@ src/PureCloudPlatform.Client.V2/Model/SessionEndDetails.cs
 src/PureCloudPlatform.Client.V2/Model/SessionLastEvent.cs
 src/PureCloudPlatform.Client.V2/Model/SessionListing.cs
 src/PureCloudPlatform.Client.V2/Model/SessionSegmentAssignment.cs
+src/PureCloudPlatform.Client.V2/Model/SessionsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SetContentTemplateActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SetRecordingState.cs
 src/PureCloudPlatform.Client.V2/Model/SetSmsPhoneNumberActionSettings.cs
@@ -10619,6 +10630,7 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemManualAssign.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemPostQueryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQueryPostRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemQuerySort.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemQueueReference.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemReference.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemSchema.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemScoredAgent.cs
